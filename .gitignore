@@ -1,0 +1,34 @@
+# Python and uv
+.venv/
+__pycache__/
+*.pyc
+.uv-cache/
+.cache/
+.pytest_cache/
+
+# Generated test scratch
+.fresh-copy-smoke-tmp/
+.suite-tmp/
+**/unit-tmp*/
+**/test-tmp*/
+**/.pytest-*/
+
+# Downloaded hull data and separately published model weights
+/data/raw/kcs/
+/models/
+*.safetensors
+*.gguf
+
+# Credentials, signing keys and local metadata
+.env*
+.keys/
+.DS_Store
+
+# User recordings; keep the camera folder's recording instructions
+/experiments/mvp/video/record-kit/vo/*.wav
+/experiments/mvp/video/record-kit/cam/*
+!/experiments/mvp/video/record-kit/cam/README.md
+
+# Local video tools and the unmodified third-party checkout
+/experiments/mvp/video/.tools/
+/experiments/mvp/video/brag-vendor/
