@@ -1,0 +1,245 @@
+{
+  "model_calls": [
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "7937ad13-731b-4984-bf83-ef4b79f2ac57",
+      "status": "completed",
+      "cost_usd": "0.00306675",
+      "usage": {
+        "input_tokens": 1957,
+        "output_tokens": 146,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "5eb56c334d9fb01c6d9391501ee32004ca349d3e003f1ed14bd285c94e528db7"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "e42d2f2f-71f7-4aa7-af48-7c288e4d6626",
+      "status": "completed",
+      "cost_usd": "0.00322",
+      "usage": {
+        "input_tokens": 2100,
+        "output_tokens": 140,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "b509f312d160633fe263dfdf8221ed31e5403bfb03ee9fc4e0a3e9aa597cbad4"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-reader",
+      "request_id": "43911a8b-5a31-4ca2-a72b-e34be6cb511a",
+      "status": "completed",
+      "cost_usd": "0.001798",
+      "usage": {
+        "input_tokens": 636,
+        "output_tokens": 236,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "073a00969c257d20ca49e2d619a7aa55bc66b00317cc89e4c626f16eded2d03f"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-reader",
+      "request_id": "f8ff04c7-7ed4-4775-85c2-5093155f2f23",
+      "status": "completed",
+      "cost_usd": "0.00266925",
+      "usage": {
+        "input_tokens": 636,
+        "output_tokens": 441,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "6463d57e8ab91025a210751520af1d47cdcb0022934fe823c7f293fed148328b"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "0c6e6446-1a39-4e41-bdfc-f9b8461d5393",
+      "status": "completed",
+      "cost_usd": "0.07026525",
+      "usage": {
+        "input_tokens": 55386,
+        "output_tokens": 243,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "5581f979b1527dc55ef5e2edc453ab722ce2dbb6f9ebf0102cb733b37af0a7e0"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "e661e970-546d-4e3d-9158-f55c00c9694e",
+      "status": "completed",
+      "cost_usd": "0.00904005",
+      "usage": {
+        "input_tokens": 55493,
+        "output_tokens": 110,
+        "cached_tokens": 55267
+      },
+      "prompt_sha256": "b3bcbe20bb93fbeb854105245c73ce7d9a996b55afe8e6900671df2372197b08"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "80c0cfdb-da3f-4303-8588-777037bca8ec",
+      "status": "completed",
+      "cost_usd": "0.118266",
+      "usage": {
+        "input_tokens": 92039,
+        "output_tokens": 757,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "8249d334e6be5dbf01ff3b0ba6f58f07dcf1c5ede8860627b7fa1598ddd79f31"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "5f71e67d-c7f7-498f-894f-6b699649856a",
+      "status": "completed",
+      "cost_usd": "0.0016198",
+      "usage": {
+        "input_tokens": 2418,
+        "output_tokens": 60,
+        "cached_tokens": 1507
+      },
+      "prompt_sha256": "8cd1968c31a64e82bcf965c5f24a3d2dc7a0dc6b6e6f8822604e44b86a083621"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "241831b5-170f-4c17-b942-676bf850651b",
+      "status": "completed",
+      "cost_usd": "0.05125925",
+      "usage": {
+        "input_tokens": 38964,
+        "output_tokens": 601,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "a080d3653879c36117f25434bbf15bb612923c9ff4b2c6fdbadbd859bdd55ed0"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "63871538-6878-496f-a567-f9bb9b83041f",
+      "status": "completed",
+      "cost_usd": "0.00372025",
+      "usage": {
+        "input_tokens": 2490,
+        "output_tokens": 143,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "15d13888b50501728bb048a13bc237344a3e917ff0182c137bc90efb40c58597"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "f5a6466b-348a-4b8c-85e2-b992721b33e7",
+      "status": "completed",
+      "cost_usd": "0.051787",
+      "usage": {
+        "input_tokens": 39036,
+        "output_tokens": 704,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "f787f6613527f751d549f6fc67ee6e4b0bc36ba6cccee2689f34253884c1ddc1"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "3ede0848-2d95-43dc-96ab-9c4a5dd27a39",
+      "status": "completed",
+      "cost_usd": "0.00428975",
+      "usage": {
+        "input_tokens": 2779,
+        "output_tokens": 192,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "fffc6773451cb43825ba8ae9637989c4eb319c36e82cbe740a1323330083f00b"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-reader",
+      "request_id": "9fda7be4-2e6c-4950-9613-287392882855",
+      "status": "completed",
+      "cost_usd": "0.00163925",
+      "usage": {
+        "input_tokens": 645,
+        "output_tokens": 196,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "0fd2b99acbe5c4ee24516e654062046ede7369e773a13ee18860afe0a832d855"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "ec722157-7c4b-4893-b70c-24cb6c4da73f",
+      "status": "completed",
+      "cost_usd": "0.016611",
+      "usage": {
+        "input_tokens": 11684,
+        "output_tokens": 472,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "1b180802ffb6b61b88360cdf36915b79e4d49b99a6a22e91a61103b443fd3195"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "5198f86b-a311-497b-8832-9cd1716a70b0",
+      "status": "completed",
+      "cost_usd": "0.0040905",
+      "usage": {
+        "input_tokens": 2487,
+        "output_tokens": 231,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "92dab81f92fa1b7ac511e5569329632d4ba7cd84f81455c2f86bf9546a894217"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "50174474-1cb5-43b0-83c8-c5c94404c359",
+      "status": "completed",
+      "cost_usd": "0.01444575",
+      "usage": {
+        "input_tokens": 11033,
+        "output_tokens": 154,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "2f4c3b2b46bfa5006d6adbd3baec25e5cef693569645c26b436583d2ccdfabde"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "2b0ac647-e46e-41d9-8414-79e42fba42bc",
+      "status": "completed",
+      "cost_usd": "0.01466875",
+      "usage": {
+        "input_tokens": 11140,
+        "output_tokens": 175,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "ef1730a2d5827ac97464dfc3e1d59fb979e2932fe019b69c761e4d09f25925ba"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "4e1287fd-76b1-4375-b95f-002e16294e03",
+      "status": "completed",
+      "cost_usd": "0.02535675",
+      "usage": {
+        "input_tokens": 19313,
+        "output_tokens": 286,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "72e95840b8b467696b446c5532168bc0f0ef7522abbe8e7f1616c15c5f2b3009"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "283bc1ac-e3e4-46a6-9020-2ef0f9c86f9c",
+      "status": "completed",
+      "cost_usd": "0.02452625",
+      "usage": {
+        "input_tokens": 19417,
+        "output_tokens": 60,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "d78c90ad64a1ecb1b568a5d7de37d60781767804a70f4b8289c9c62b0bc101af"
+    },
+    {
+      "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+      "request_id": "506d6a99-af2e-4f26-a959-907a57ff3c25",
+      "status": "completed",
+      "cost_usd": "0.02972625",
+      "usage": {
+        "input_tokens": 20687,
+        "output_tokens": 910,
+        "cached_tokens": 0
+      },
+      "prompt_sha256": "051c7f3141dc8e334ac33b1865d8c332aa920cbc0ec33ae463af7203f516ce41"
+    }
+  ],
+  "measured_cost_usd": "0.45206585"
+}

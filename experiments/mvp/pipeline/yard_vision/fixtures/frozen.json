@@ -1,0 +1,56 @@
+{
+  "synthetic": true,
+  "mode": "generated",
+  "sampling": "First six quick_small paths; first two development, next four held out. Full source yard states.",
+  "arms": [
+    "clean_render",
+    "repainted_photo"
+  ],
+  "held_out_policy": "Freeze before scoring; one read per arm, no prompt or validator tuning after development.",
+  "pair_gate": "Inspect repaint against clean render: exact box count and per-stack height/position. Discard changed or unverifiable scenes; count discards separately.",
+  "ship_gate": "No silent wrong complete stacks on held out; all ambiguity becomes Questions. A tiny synthetic pilot is not real-photo validation.",
+  "budget_usd": 5,
+  "sam_usd_per_call": 0.0025,
+  "muse_image_usd_per_call": 0.01,
+  "deadline_utc": "2026-11-02T03:46:33+00:00",
+  "cases": [
+    {
+      "id": "case-01",
+      "split": "development",
+      "source": "experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100011.json",
+      "source_sha256": "dd634e69d9b6bfda657cd9c8eeb9d71a25463d915ae6340739d9a023e96d6419"
+    },
+    {
+      "id": "case-02",
+      "split": "development",
+      "source": "experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100023.json",
+      "source_sha256": "aab66d2030467cff06fde634a34a6bf1366d94d259319f2fb1a0fb2374e09805"
+    },
+    {
+      "id": "case-03",
+      "split": "held_out",
+      "source": "experiments/mvp/corpus/val/small/feeder_500/random_yard/seed-040100036.json",
+      "source_sha256": "5ae8fee1545bfa76c64dfb1a9a92caf0482d89312a70af4aff9787b49f935c13"
+    },
+    {
+      "id": "case-04",
+      "split": "held_out",
+      "source": "experiments/mvp/corpus/val/small/feeder_1700/random_yard/seed-041100002.json",
+      "source_sha256": "85d89c2a0af36d0e426294f6aa1cea9b479917261e911c41f73c359698e913ae"
+    },
+    {
+      "id": "case-05",
+      "split": "held_out",
+      "source": "experiments/mvp/corpus/val/small/feeder_1700/random_yard/seed-041100018.json",
+      "source_sha256": "c70156ff7499de0f4f4989d50d437a7214a2c2927ee1e542a0d1dab526fc7afd"
+    },
+    {
+      "id": "case-06",
+      "split": "held_out",
+      "source": "experiments/mvp/corpus/val/small/feeder_500/simulated_yard/seed-040100010.json",
+      "source_sha256": "e18262fd9af7cf86a5d6deb29c6212d956d96e3b55d2db4018f49668e81908d0"
+    }
+  ],
+  "frozen_utc": "2026-11-02T00:48:06.497099+00:00",
+  "config_sha256": "adae84d2d06d46eb74ed384aea843ea13a4306afd247cefd5647b3ed82e62500"
+}

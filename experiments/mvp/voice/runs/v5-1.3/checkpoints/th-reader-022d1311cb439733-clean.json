@@ -1,0 +1,45 @@
+{
+  "answer": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 10080,
+    "audio_seconds": 10.008,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00050",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "b164d025cfb146e289914d54d022569a",
+    "session_id": "voyager/transcribe/582CB292706D464EBC3D5F18DDD2E105"
+  },
+  "asr_latency_s": 2.260059208027087,
+  "audio_sha256": "f14361ca1d95e58bd00fca5775a9730941c2ab7dfac5957b369e40826d6cea31",
+  "canonical": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "clean",
+  "end_to_end_s": 3.4659985409816727,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00100575",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "8317afef350ccdd555f5729cb8bb9a901267a6be7cfe17a095779e0b910733ba",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "fb205e73-b565-4446-aa03-6469cb44b99d"
+  },
+  "parser_latency_s": 1.1001857910305262,
+  "script": "สำหรับการบรรทุกครั้งนี้ ตู้สินค้าบนฝาระวางและในระวางใต้ฝา ต้องมีท่าเรือปลายทางเดียวกัน",
+  "source_id": "reader-022d1311cb439733",
+  "started_utc": "2026-11-01T01:36:20.171564+00:00",
+  "status": "complete",
+  "transcript": "สำหรับการบรรทุกครั้งนี้ตู้สินค้าบนฝาระวางและในระวางใต้ฝาต้องมีท่าเรือปลายทางเดียวกัน"
+}

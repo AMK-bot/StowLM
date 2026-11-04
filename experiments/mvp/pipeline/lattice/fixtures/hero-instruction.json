@@ -1,0 +1,30 @@
+{
+  "binding_source_sha256": "9fbd6d4bb006bdb8e4f9e04c25b0eb2990324cd431dc2f60088826dcc0743fec",
+  "boxes_moved": 83,
+  "canonical_rules": [
+    {
+      "constraint": {
+        "away_from": {
+          "kind": "accommodation"
+        },
+        "imdg_class": "2.2",
+        "min_bays": 3,
+        "type": "dg_keep_away"
+      },
+      "schema_version": "stowlm.reader/2"
+    }
+  ],
+  "computed_utc": "2026-11-02T03:48:39.429777+00:00",
+  "engine_manifest_sha256": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+  "entry_sha256": "fad04566c3c3a1f1f14c36099b135d01a8c2e5983cd2bc09b9b808637965af89",
+  "instance_path": "experiments/mvp/strategy/fillsweep/maps/train/medium/feeder_500/f60-low/seed-192200002.json",
+  "instance_sha256": "cabff3d68d56e64ba9956761bcd0ca2abfa5077d41296db35b630efc11b04678",
+  "lifts_after": 70.0,
+  "lifts_before": 66.0,
+  "mode": "stored",
+  "path": "experiments/mvp/pipeline/lattice/fixtures/hero-replan.json",
+  "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+  "sentences": [
+    "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation."
+  ]
+}

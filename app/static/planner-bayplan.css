@@ -1,0 +1,114 @@
+/* BayPlan: the SVG uses presentation attributes too, so exported plans stand alone.
+ * Polish follows unslop by Damir Sokolovsky (@heydamir), CC BY 4.0:
+ * https://heydamir.design/unslop */
+.bp-host {
+  --bp-ink: #233747;
+  --bp-muted: #61717d;
+  --bp-line: #dce3e8;
+  --bp-blue: #17618d;
+  position: relative;
+  min-width: 0;
+  background: #fff;
+  color: var(--bp-ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.bp-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  font-family: inherit;
+  font-variant-numeric: tabular-nums;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.bp-svg text { user-select: none; }
+.bp-svg .bp-slot { vector-effect: non-scaling-stroke; }
+.bp-svg .bp-box { cursor: pointer; outline: none; }
+.bp-host.bp-drag-enabled .bp-box { cursor: grab; touch-action: none; }
+.bp-svg .bp-box:focus-visible { outline: none; }
+.bp-svg .bp-box:focus-visible > rect:first-of-type,
+.bp-svg .bp-box:hover > rect:first-of-type {
+  stroke: #233747;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.bp-svg .bp-profile-bay { cursor: pointer; outline: none; }
+.bp-svg[data-pre-generate="true"] .bp-profile-bay { cursor: default; }
+.bp-svg .bp-profile-frame { vector-effect: non-scaling-stroke; }
+.bp-svg .bp-profile-bay[role="button"]:focus-visible > .bp-profile-frame,
+.bp-svg .bp-profile-bay[role="button"]:hover > .bp-profile-frame { stroke: #176698; }
+.bp-svg .bp-closed { pointer-events: none; }
+.bp-svg .bp-size-label { font-variant-numeric: tabular-nums; }
+.bp-svg .bp-hatch { vector-effect: non-scaling-stroke; }
+.bp-svg .bp-drag-ghost,
+.bp-svg .bp-moving-box,
+.bp-svg .bp-tooltip { pointer-events: none; }
+.bp-svg .bp-drag-ghost { cursor: grabbing; }
+.bp-svg .bp-snap { pointer-events: none; }
+.bp-svg .bp-state { pointer-events: none; vector-effect: non-scaling-stroke; }
+.bp-svg .bp-selected { stroke: #176698; }
+.bp-svg .bp-forced { stroke: #926317; }
+.bp-svg .bp-moved { stroke: #137c79; }
+.bp-svg .bp-violation { stroke: #bf3e29; }
+
+.bp-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 8px 0;
+  color: #465967;
+  font: 12px/1.4 Inter, ui-sans-serif, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.bp-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.bp-legend-swatch {
+  display: inline-block;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 12px;
+  border: 1px solid #6b7c88;
+  border-radius: 2px;
+}
+.bp-legend-symbol { display: inline-block; width: 24px; text-align: center; }
+.bp-legend-symbol.bp-selected,
+.bp-legend-symbol.bp-forced,
+.bp-legend-symbol.bp-moved,
+.bp-legend-symbol.bp-violation {
+  box-sizing: border-box;
+  width: 20px;
+  height: 14px;
+  border: 2px solid;
+  border-radius: 2px;
+  background: #fff;
+  font-size: 0;
+}
+.bp-legend .bp-selected { border-color: #176698; }
+.bp-legend .bp-forced { border-color: #926317; border-style: dashed; }
+.bp-legend .bp-moved { border-color: #137c79; border-style: double; border-width: 3px; }
+.bp-legend .bp-violation { border-color: #bf3e29; }
+.bp-legend-symbol.bp-violation::after {
+  content: "!";
+  display: block;
+  color: #bf3e29;
+  font: 700 10px/10px ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bp-svg * { transition: none !important; animation: none !important; }
+}
+@media print {
+  .bp-host { break-inside: avoid; }
+  .bp-svg { width: 100%; }
+  .bp-tooltip, .bp-drag-ghost { display: none; }
+}

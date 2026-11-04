@@ -1,0 +1,1153 @@
+{
+  "type": "dg_keep_away",
+  "input": "experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100003.json",
+  "baseline_file": "experiments/mvp/frontier/runs/val-0.9/random.small.40100003.0.2.json",
+  "instance_id": "random.small.40100003.0.2",
+  "sentence": "Class 3 \u2014 sorry, class 8 \u2014 one bay from bay 1 at minimum.",
+  "sealed_id": "sealed-052",
+  "expected": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "dg_keep_away",
+      "imdg_class": "8",
+      "min_bays": 1,
+      "away_from": {
+        "kind": "bay",
+        "bay": 1
+      }
+    }
+  },
+  "context": {
+    "id": "random.small.40100003.0.2",
+    "bays": [
+      1,
+      2,
+      3
+    ],
+    "max_tiers": {
+      "hold": 3,
+      "deck": 5
+    },
+    "max_tiers_by_bay": {
+      "1": {
+        "hold": 3,
+        "deck": 5
+      },
+      "2": {
+        "hold": 3,
+        "deck": 5
+      },
+      "3": {
+        "hold": 3,
+        "deck": 5
+      }
+    },
+    "has_accommodation": true,
+    "hatch_covers": [
+      "HC-002-P",
+      "HC-002-S"
+    ],
+    "ports": [
+      "SGSIN",
+      "MYPKG",
+      "THLCH"
+    ]
+  },
+  "baseline_weighted": 12.0,
+  "baseline_violations": [
+    "load QZXU0000122 -> 0010282: instruction: QZXU0000122 may not be stowed at 0010282"
+  ],
+  "baseline_violation_count": 1,
+  "capacity_screen": "necessary open-cell and surviving 40ft-pair screens passed; not a feasibility certificate",
+  "n_load": 18,
+  "input_sha256": "0ef1a72eaad061cf96cef568bcfbecd575e4e74dd1e44c3b59b574247bd8c981",
+  "case_id": "dg_keep_away-04",
+  "selection_rationale": "Openly baseline-screened, binding-enriched validation cohort: prefer violating stored best plans, then smaller load lists, then larger baseline weighted move count; one literal sealed sentence per distinct map. necessary open-cell and surviving 40ft-pair screens passed; not a feasibility certificate",
+  "baseline_sha256": "31bcbdb0c51a256788587ad38cf39c756670046cbc6dda354a7b69a7478bbb55",
+  "parsed": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "dg_keep_away",
+      "imdg_class": "8",
+      "min_bays": 1,
+      "away_from": {
+        "kind": "bay",
+        "bay": 1
+      }
+    }
+  },
+  "parser": {
+    "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":1}}}",
+    "request_id": "4fb537f2-5bbc-4c3e-869d-6c24cec44b93",
+    "cost_usd": "0.00200225",
+    "usage": {
+      "input_tokens": 544,
+      "output_tokens": 403,
+      "cached_tokens": 355
+    },
+    "prompt_sha256": "af4333aa3263118b83818f4a8472bcb399e35bcfe6b2e53e5cb103a9de9d5a49",
+    "reservation_context_bound_tokens": 32768
+  },
+  "parse_exact": true,
+  "parse_wall_s": 1.8380404580384493,
+  "planner_pid": 11570,
+  "repaired": false,
+  "passed": true,
+  "unconstrained_passed": true,
+  "unconstrained_moves": 12.0,
+  "unconstrained_violations": [
+    "load QZXU0000122 -> 0010282: instruction: QZXU0000122 may not be stowed at 0010282"
+  ],
+  "baseline_plan_signature": "861898bb89f273f2503abaa64a0e0dc6ab249b9968c441198149de2de7ed5a07",
+  "compilation": {
+    "method": "production tighten-only apply",
+    "constraint": {
+      "schema_version": "stowlm.reader/2",
+      "constraint": {
+        "type": "dg_keep_away",
+        "imdg_class": "8",
+        "min_bays": 1,
+        "away_from": {
+          "kind": "bay",
+          "bay": 1
+        }
+      }
+    }
+  },
+  "record": {
+    "tries": [
+      {
+        "label": "blocked",
+        "finalize_status": "ok",
+        "finalize_s": 37.7,
+        "passed": true,
+        "message": "",
+        "weighted": 12.0,
+        "instruction_violations": [],
+        "instruction_passed": true,
+        "search_objective": 12.0,
+        "origin": "blocked",
+        "search_changed": false,
+        "seed_decisions": {
+          "QZXU0000009": "0020882",
+          "QZXU0000014": "0020284",
+          "QZXU0000020": "0020102",
+          "QZXU0000035": "0020204",
+          "QZXU0000040": "0030282",
+          "QZXU0000056": "0010282",
+          "QZXU0000061": "0020206",
+          "QZXU0000077": "0020104",
+          "QZXU0000082": "0020582",
+          "QZXU0000098": "0010482",
+          "QZXU0000101": "0020484",
+          "QZXU0000117": "0020682",
+          "QZXU0000122": "0030482",
+          "QZXU0000138": "0020106",
+          "QZXU0000143": "0020684",
+          "QZXU0000159": "0030782",
+          "QZXU0000164": "0020884",
+          "QZXU0000170": "0020202"
+        }
+      }
+    ],
+    "search_s": 108.0,
+    "final_origin": "blocked",
+    "final_search_changed": false,
+    "final_search_origin": "blocked",
+    "final_seed_decisions": {
+      "QZXU0000009": "0020882",
+      "QZXU0000014": "0020284",
+      "QZXU0000020": "0020102",
+      "QZXU0000035": "0020204",
+      "QZXU0000040": "0030282",
+      "QZXU0000056": "0010282",
+      "QZXU0000061": "0020206",
+      "QZXU0000077": "0020104",
+      "QZXU0000082": "0020582",
+      "QZXU0000098": "0010482",
+      "QZXU0000101": "0020484",
+      "QZXU0000117": "0020682",
+      "QZXU0000122": "0030482",
+      "QZXU0000138": "0020106",
+      "QZXU0000143": "0020684",
+      "QZXU0000159": "0030782",
+      "QZXU0000164": "0020884",
+      "QZXU0000170": "0020202"
+    },
+    "final_contribution": {
+      "measure": "load-list-box-slot-retention-v1",
+      "seed_origin": "blocked",
+      "load_boxes": [
+        "QZXU0000009",
+        "QZXU0000014",
+        "QZXU0000020",
+        "QZXU0000035",
+        "QZXU0000040",
+        "QZXU0000056",
+        "QZXU0000061",
+        "QZXU0000077",
+        "QZXU0000082",
+        "QZXU0000098",
+        "QZXU0000101",
+        "QZXU0000117",
+        "QZXU0000122",
+        "QZXU0000138",
+        "QZXU0000143",
+        "QZXU0000159",
+        "QZXU0000164",
+        "QZXU0000170"
+      ],
+      "seed_decisions": {
+        "QZXU0000009": "0020882",
+        "QZXU0000014": "0020284",
+        "QZXU0000020": "0020102",
+        "QZXU0000035": "0020204",
+        "QZXU0000040": "0030282",
+        "QZXU0000056": "0010282",
+        "QZXU0000061": "0020206",
+        "QZXU0000077": "0020104",
+        "QZXU0000082": "0020582",
+        "QZXU0000098": "0010482",
+        "QZXU0000101": "0020484",
+        "QZXU0000117": "0020682",
+        "QZXU0000122": "0030482",
+        "QZXU0000138": "0020106",
+        "QZXU0000143": "0020684",
+        "QZXU0000159": "0030782",
+        "QZXU0000164": "0020884",
+        "QZXU0000170": "0020202"
+      },
+      "final_decisions": {
+        "QZXU0000009": "0020882",
+        "QZXU0000014": "0020284",
+        "QZXU0000020": "0020102",
+        "QZXU0000035": "0020204",
+        "QZXU0000040": "0030282",
+        "QZXU0000056": "0010282",
+        "QZXU0000061": "0020206",
+        "QZXU0000077": "0020104",
+        "QZXU0000082": "0020582",
+        "QZXU0000098": "0010482",
+        "QZXU0000101": "0020484",
+        "QZXU0000117": "0020682",
+        "QZXU0000122": "0030482",
+        "QZXU0000138": "0020106",
+        "QZXU0000143": "0020684",
+        "QZXU0000159": "0030782",
+        "QZXU0000164": "0020884",
+        "QZXU0000170": "0020202"
+      },
+      "retained_pairs": [
+        {
+          "box": "QZXU0000009",
+          "slot": "0020882"
+        },
+        {
+          "box": "QZXU0000014",
+          "slot": "0020284"
+        },
+        {
+          "box": "QZXU0000020",
+          "slot": "0020102"
+        },
+        {
+          "box": "QZXU0000035",
+          "slot": "0020204"
+        },
+        {
+          "box": "QZXU0000040",
+          "slot": "0030282"
+        },
+        {
+          "box": "QZXU0000056",
+          "slot": "0010282"
+        },
+        {
+          "box": "QZXU0000061",
+          "slot": "0020206"
+        },
+        {
+          "box": "QZXU0000077",
+          "slot": "0020104"
+        },
+        {
+          "box": "QZXU0000082",
+          "slot": "0020582"
+        },
+        {
+          "box": "QZXU0000098",
+          "slot": "0010482"
+        },
+        {
+          "box": "QZXU0000101",
+          "slot": "0020484"
+        },
+        {
+          "box": "QZXU0000117",
+          "slot": "0020682"
+        },
+        {
+          "box": "QZXU0000122",
+          "slot": "0030482"
+        },
+        {
+          "box": "QZXU0000138",
+          "slot": "0020106"
+        },
+        {
+          "box": "QZXU0000143",
+          "slot": "0020684"
+        },
+        {
+          "box": "QZXU0000159",
+          "slot": "0030782"
+        },
+        {
+          "box": "QZXU0000164",
+          "slot": "0020884"
+        },
+        {
+          "box": "QZXU0000170",
+          "slot": "0020202"
+        }
+      ],
+      "retained_count": 18,
+      "total_load_boxes": 18,
+      "retained_fraction": 1.0
+    },
+    "final_load_list": [
+      "QZXU0000009",
+      "QZXU0000014",
+      "QZXU0000020",
+      "QZXU0000035",
+      "QZXU0000040",
+      "QZXU0000056",
+      "QZXU0000061",
+      "QZXU0000077",
+      "QZXU0000082",
+      "QZXU0000098",
+      "QZXU0000101",
+      "QZXU0000117",
+      "QZXU0000122",
+      "QZXU0000138",
+      "QZXU0000143",
+      "QZXU0000159",
+      "QZXU0000164",
+      "QZXU0000170"
+    ],
+    "final_reaching_runs": [
+      {
+        "run": 0,
+        "origin": "blocked",
+        "seed_decisions": {
+          "QZXU0000009": "0020882",
+          "QZXU0000014": "0020284",
+          "QZXU0000020": "0020102",
+          "QZXU0000035": "0020204",
+          "QZXU0000040": "0030282",
+          "QZXU0000056": "0010282",
+          "QZXU0000061": "0020206",
+          "QZXU0000077": "0020104",
+          "QZXU0000082": "0020582",
+          "QZXU0000098": "0010482",
+          "QZXU0000101": "0020484",
+          "QZXU0000117": "0020682",
+          "QZXU0000122": "0030482",
+          "QZXU0000138": "0020106",
+          "QZXU0000143": "0020684",
+          "QZXU0000159": "0030782",
+          "QZXU0000164": "0020884",
+          "QZXU0000170": "0020202"
+        }
+      }
+    ],
+    "final_shared_stow": false,
+    "twostep_status": "ok",
+    "twostep_plan_s": 0.97,
+    "twostep_objective": 22.0,
+    "twostep_finish": {
+      "label": "twostep",
+      "finalize_status": "ok",
+      "finalize_s": 45.92,
+      "passed": true,
+      "message": "",
+      "weighted": 22.0,
+      "instruction_violations": [],
+      "instruction_passed": true,
+      "search_objective": 22.0,
+      "origin": "twostep",
+      "search_changed": false,
+      "seed_decisions": {
+        "QZXU0000009": "0020582",
+        "QZXU0000014": "0020782",
+        "QZXU0000020": "0020102",
+        "QZXU0000035": "0020104",
+        "QZXU0000040": "0030182",
+        "QZXU0000056": "0030682",
+        "QZXU0000061": "0020482",
+        "QZXU0000077": "0020202",
+        "QZXU0000082": "0020106",
+        "QZXU0000098": "0010182",
+        "QZXU0000101": "0020882",
+        "QZXU0000117": "0020382",
+        "QZXU0000122": "0030282",
+        "QZXU0000138": "0020206",
+        "QZXU0000143": "0020884",
+        "QZXU0000159": "0010282",
+        "QZXU0000164": "0020184",
+        "QZXU0000170": "0020204"
+      }
+    },
+    "blocked_status": "ok",
+    "blocked_plan_s": 0.9,
+    "blocked_objective": 12.0,
+    "blocked_finish": {
+      "label": "blocked",
+      "finalize_status": "ok",
+      "finalize_s": 37.7,
+      "passed": true,
+      "message": "",
+      "weighted": 12.0,
+      "instruction_violations": [],
+      "instruction_passed": true,
+      "search_objective": 12.0,
+      "origin": "blocked",
+      "search_changed": false,
+      "seed_decisions": {
+        "QZXU0000009": "0020882",
+        "QZXU0000014": "0020284",
+        "QZXU0000020": "0020102",
+        "QZXU0000035": "0020204",
+        "QZXU0000040": "0030282",
+        "QZXU0000056": "0010282",
+        "QZXU0000061": "0020206",
+        "QZXU0000077": "0020104",
+        "QZXU0000082": "0020582",
+        "QZXU0000098": "0010482",
+        "QZXU0000101": "0020484",
+        "QZXU0000117": "0020682",
+        "QZXU0000122": "0030482",
+        "QZXU0000138": "0020106",
+        "QZXU0000143": "0020684",
+        "QZXU0000159": "0030782",
+        "QZXU0000164": "0020884",
+        "QZXU0000170": "0020202"
+      }
+    },
+    "yard_first_attempts": 26,
+    "yard_first_built": 7,
+    "yard_first_clear": 1,
+    "yard_first_best": 18.0,
+    "masters": [
+      {
+        "deck_tiers": 4,
+        "status": "time_limit",
+        "surrogate": null,
+        "bound": null,
+        "cuts": 3,
+        "seconds": 13.2
+      },
+      {
+        "deck_tiers": 3,
+        "status": "time_limit",
+        "surrogate": null,
+        "bound": null,
+        "cuts": 3,
+        "seconds": 13.3
+      },
+      {
+        "deck_tiers": 2,
+        "status": "time_limit",
+        "surrogate": null,
+        "bound": null,
+        "cuts": 7,
+        "seconds": 12.8
+      },
+      {
+        "deck_tiers": 1,
+        "status": "INFEASIBLE",
+        "surrogate": null,
+        "bound": null,
+        "cuts": 0,
+        "seconds": 0.6
+      }
+    ],
+    "extra_starts": [],
+    "starts": [
+      {
+        "origin": "blocked",
+        "objective": 12.0,
+        "seed_decisions": {
+          "QZXU0000009": "0020882",
+          "QZXU0000014": "0020284",
+          "QZXU0000020": "0020102",
+          "QZXU0000035": "0020204",
+          "QZXU0000040": "0030282",
+          "QZXU0000056": "0010282",
+          "QZXU0000061": "0020206",
+          "QZXU0000077": "0020104",
+          "QZXU0000082": "0020582",
+          "QZXU0000098": "0010482",
+          "QZXU0000101": "0020484",
+          "QZXU0000117": "0020682",
+          "QZXU0000122": "0030482",
+          "QZXU0000138": "0020106",
+          "QZXU0000143": "0020684",
+          "QZXU0000159": "0030782",
+          "QZXU0000164": "0020884",
+          "QZXU0000170": "0020202"
+        }
+      },
+      {
+        "origin": "yard_first",
+        "objective": 18.0,
+        "seed_decisions": {
+          "QZXU0000009": "0020782",
+          "QZXU0000014": "0020784",
+          "QZXU0000020": "0020102",
+          "QZXU0000035": "0020882",
+          "QZXU0000040": "0030582",
+          "QZXU0000056": "0010582",
+          "QZXU0000061": "0020482",
+          "QZXU0000077": "0020104",
+          "QZXU0000082": "0020204",
+          "QZXU0000098": "0010382",
+          "QZXU0000101": "0020182",
+          "QZXU0000117": "0020202",
+          "QZXU0000122": "0030382",
+          "QZXU0000138": "0020106",
+          "QZXU0000143": "0020384",
+          "QZXU0000159": "0010682",
+          "QZXU0000164": "0020282",
+          "QZXU0000170": "0020884"
+        }
+      },
+      {
+        "origin": "twostep",
+        "objective": 22.0,
+        "seed_decisions": {
+          "QZXU0000009": "0020582",
+          "QZXU0000014": "0020782",
+          "QZXU0000020": "0020102",
+          "QZXU0000035": "0020104",
+          "QZXU0000040": "0030182",
+          "QZXU0000056": "0030682",
+          "QZXU0000061": "0020482",
+          "QZXU0000077": "0020202",
+          "QZXU0000082": "0020106",
+          "QZXU0000098": "0010182",
+          "QZXU0000101": "0020882",
+          "QZXU0000117": "0020382",
+          "QZXU0000122": "0030282",
+          "QZXU0000138": "0020206",
+          "QZXU0000143": "0020884",
+          "QZXU0000159": "0010282",
+          "QZXU0000164": "0020184",
+          "QZXU0000170": "0020204"
+        }
+      }
+    ],
+    "runs": [
+      {
+        "start": "blocked",
+        "origin": "blocked",
+        "candidates": [
+          {
+            "objective": 12.0,
+            "origin": "blocked",
+            "search_changed": false,
+            "seed_decisions": {
+              "QZXU0000009": "0020882",
+              "QZXU0000014": "0020284",
+              "QZXU0000020": "0020102",
+              "QZXU0000035": "0020204",
+              "QZXU0000040": "0030282",
+              "QZXU0000056": "0010282",
+              "QZXU0000061": "0020206",
+              "QZXU0000077": "0020104",
+              "QZXU0000082": "0020582",
+              "QZXU0000098": "0010482",
+              "QZXU0000101": "0020484",
+              "QZXU0000117": "0020682",
+              "QZXU0000122": "0030482",
+              "QZXU0000138": "0020106",
+              "QZXU0000143": "0020684",
+              "QZXU0000159": "0030782",
+              "QZXU0000164": "0020884",
+              "QZXU0000170": "0020202"
+            }
+          }
+        ],
+        "start_objective": 12.0,
+        "best": 12.0,
+        "iterations": 841,
+        "accepted": 153,
+        "infeasible": 204,
+        "wall_s": 72.3,
+        "trace": [
+          [
+            0.0,
+            12.0
+          ]
+        ],
+        "gains": {
+          "swap": 69.5,
+          "swap_across_pods": 3.0,
+          "swap_yard_mates": 0.0,
+          "swap_columns": 2.0,
+          "relocate_top": 2.0
+        }
+      },
+      {
+        "start": "yard_first",
+        "origin": "yard_first",
+        "candidates": [
+          {
+            "objective": 12.0,
+            "origin": "yard_first",
+            "search_changed": true,
+            "seed_decisions": {
+              "QZXU0000009": "0020782",
+              "QZXU0000014": "0020784",
+              "QZXU0000020": "0020102",
+              "QZXU0000035": "0020882",
+              "QZXU0000040": "0030582",
+              "QZXU0000056": "0010582",
+              "QZXU0000061": "0020482",
+              "QZXU0000077": "0020104",
+              "QZXU0000082": "0020204",
+              "QZXU0000098": "0010382",
+              "QZXU0000101": "0020182",
+              "QZXU0000117": "0020202",
+              "QZXU0000122": "0030382",
+              "QZXU0000138": "0020106",
+              "QZXU0000143": "0020384",
+              "QZXU0000159": "0010682",
+              "QZXU0000164": "0020282",
+              "QZXU0000170": "0020884"
+            }
+          },
+          {
+            "objective": 14.0,
+            "origin": "yard_first",
+            "search_changed": true,
+            "seed_decisions": {
+              "QZXU0000009": "0020782",
+              "QZXU0000014": "0020784",
+              "QZXU0000020": "0020102",
+              "QZXU0000035": "0020882",
+              "QZXU0000040": "0030582",
+              "QZXU0000056": "0010582",
+              "QZXU0000061": "0020482",
+              "QZXU0000077": "0020104",
+              "QZXU0000082": "0020204",
+              "QZXU0000098": "0010382",
+              "QZXU0000101": "0020182",
+              "QZXU0000117": "0020202",
+              "QZXU0000122": "0030382",
+              "QZXU0000138": "0020106",
+              "QZXU0000143": "0020384",
+              "QZXU0000159": "0010682",
+              "QZXU0000164": "0020282",
+              "QZXU0000170": "0020884"
+            }
+          },
+          {
+            "objective": 16.0,
+            "origin": "yard_first",
+            "search_changed": true,
+            "seed_decisions": {
+              "QZXU0000009": "0020782",
+              "QZXU0000014": "0020784",
+              "QZXU0000020": "0020102",
+              "QZXU0000035": "0020882",
+              "QZXU0000040": "0030582",
+              "QZXU0000056": "0010582",
+              "QZXU0000061": "0020482",
+              "QZXU0000077": "0020104",
+              "QZXU0000082": "0020204",
+              "QZXU0000098": "0010382",
+              "QZXU0000101": "0020182",
+              "QZXU0000117": "0020202",
+              "QZXU0000122": "0030382",
+              "QZXU0000138": "0020106",
+              "QZXU0000143": "0020384",
+              "QZXU0000159": "0010682",
+              "QZXU0000164": "0020282",
+              "QZXU0000170": "0020884"
+            }
+          }
+        ],
+        "start_objective": 18.0,
+        "best": 12.0,
+        "iterations": 63,
+        "accepted": 10,
+        "infeasible": 17,
+        "wall_s": 37.4,
+        "trace": [
+          [
+            0.0,
+            18.0
+          ],
+          [
+            17.01,
+            16.0
+          ],
+          [
+            30.75,
+            14.0
+          ],
+          [
+            37.39,
+            12.0
+          ]
+        ],
+        "gains": {
+          "swap": 5.0,
+          "swap_across_pods": 4.0,
+          "swap_yard_mates": 0.0,
+          "swap_columns": 0.5,
+          "relocate_top": 0.0
+        }
+      }
+    ],
+    "final_instruction_violations": [],
+    "instruction_audit": {
+      "scored": 682,
+      "rejected": 145,
+      "finished": 2,
+      "finish_rejected": 0
+    },
+    "reader_wall_s": 313.58,
+    "portfolio_source": "experiments.mvp.hybrid.planner.plan_and_check",
+    "frontier_version": "0.9.0",
+    "workers": 1,
+    "constructor_s": 120.0
+  },
+  "search_s": 108.0,
+  "finalize_s": 300.0,
+  "plan": {
+    "schema_version": "1.9",
+    "id": "random.small.40100003.0.2.boxslot",
+    "instance_id": "random.small.40100003.0.2",
+    "call_index": 0,
+    "moves": [
+      {
+        "call_index": 0,
+        "kind": "hatch_cover_off",
+        "cover_id": "HC-002-S",
+        "dst": "quay"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000020",
+        "src": "B024-021-04-01",
+        "dst": "0020102"
+      },
+      {
+        "call_index": 0,
+        "kind": "relocate",
+        "container_id": "QZWU0000005",
+        "src": "B024-001-03-02",
+        "dst": "B024-001-02-01"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000077",
+        "src": "B024-001-03-01",
+        "dst": "0020104"
+      },
+      {
+        "call_index": 0,
+        "kind": "hatch_cover_off",
+        "cover_id": "HC-002-P",
+        "dst": "quay"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000170",
+        "src": "B024-013-02-01",
+        "dst": "0020202"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000035",
+        "src": "B024-017-03-01",
+        "dst": "0020204"
+      },
+      {
+        "call_index": 0,
+        "kind": "relocate",
+        "container_id": "QZWU0000026",
+        "src": "B024-003-01-02",
+        "dst": "B024-003-02-01"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000138",
+        "src": "B024-003-01-01",
+        "dst": "0020106"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000061",
+        "src": "B024-017-01-01",
+        "dst": "0020206"
+      },
+      {
+        "call_index": 0,
+        "kind": "hatch_cover_on",
+        "cover_id": "HC-002-P"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000040",
+        "src": "B024-021-01-01",
+        "dst": "0030282"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000122",
+        "src": "B024-003-04-01",
+        "dst": "0030482"
+      },
+      {
+        "call_index": 0,
+        "kind": "relocate",
+        "container_id": "QZWU0000010",
+        "src": "B024-001-04-02",
+        "dst": "B024-001-03-01"
+      },
+      {
+        "call_index": 0,
+        "kind": "hatch_cover_on",
+        "cover_id": "HC-002-S"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000082",
+        "src": "B024-001-04-01",
+        "dst": "0020582"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000117",
+        "src": "B024-019-04-01",
+        "dst": "0020682"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000009",
+        "src": "B024-023-02-01",
+        "dst": "0020882"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000056",
+        "src": "B024-013-01-01",
+        "dst": "0010282"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000098",
+        "src": "B024-005-03-01",
+        "dst": "0010482"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000014",
+        "src": "B024-011-02-01",
+        "dst": "0020284"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000101",
+        "src": "B024-007-03-01",
+        "dst": "0020484"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000143",
+        "src": "B024-015-01-01",
+        "dst": "0020684"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000164",
+        "src": "B024-001-01-01",
+        "dst": "0020884"
+      },
+      {
+        "call_index": 0,
+        "kind": "relocate",
+        "container_id": "QZWU0000031",
+        "src": "B024-019-03-02",
+        "dst": "B024-019-02-01"
+      },
+      {
+        "call_index": 0,
+        "kind": "load",
+        "container_id": "QZXU0000159",
+        "src": "B024-019-03-01",
+        "dst": "0030782"
+      }
+    ],
+    "ballast": {
+      "tank_masses_kg": {
+        "APT-P": 0.0,
+        "APT-S": 0.0,
+        "DB-A-P": 0.0,
+        "DB-A-S": 0.0,
+        "DB-F-P": 0.0,
+        "DB-F-S": 0.0,
+        "DB-M-P": 0.0,
+        "DB-M-S": 0.0,
+        "FPT-P": 0.0,
+        "FPT-S": 0.0,
+        "FWD-DEEP-P": 0.0,
+        "FWD-DEEP-S": 0.0,
+        "HEEL-P": 0.0,
+        "HEEL-S": 0.0,
+        "WING-A-P": 0.0,
+        "WING-A-S": 0.0,
+        "WING-F-P": 0.0,
+        "WING-F-S": 0.0
+      },
+      "source": "finisher"
+    },
+    "action_space": "boxslot@1.0.1",
+    "actions": [
+      {
+        "op": "P",
+        "box": "QZXU0000020",
+        "slot": "0020102"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000077",
+        "slot": "0020104"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000170",
+        "slot": "0020202"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000035",
+        "slot": "0020204"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000138",
+        "slot": "0020106"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000061",
+        "slot": "0020206"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000040",
+        "slot": "0030282"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000122",
+        "slot": "0030482"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000082",
+        "slot": "0020582"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000117",
+        "slot": "0020682"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000009",
+        "slot": "0020882"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000056",
+        "slot": "0010282"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000098",
+        "slot": "0010482"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000014",
+        "slot": "0020284"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000101",
+        "slot": "0020484"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000143",
+        "slot": "0020684"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000164",
+        "slot": "0020884"
+      },
+      {
+        "op": "P",
+        "box": "QZXU0000159",
+        "slot": "0030782"
+      }
+    ],
+    "provenance": {
+      "versions": {
+        "schema": "1.9",
+        "move_engine": "2.0",
+        "checker": "2.2",
+        "feasibility": "2.5",
+        "linear_model": "3.5",
+        "ballast": "4.0",
+        "action_space": "1.0.1",
+        "infrastructure": "3.0",
+        "solver.scalable": "3.0.0",
+        "rule_catalogue": "sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae"
+      },
+      "stubs": {},
+      "seed": 0,
+      "created_by": "solver.finish_ballast",
+      "created_at": null,
+      "git_commit": null,
+      "parents": [
+        "APPROXIMATION D50: departure/arrival endpoints only; actual worst intermediate condition is not searched.",
+        "APPROXIMATION: D50 checks declared departure/arrival endpoints; no worst-intermediate-consumables claim",
+        "APPROXIMATION: D57 requires departure, midpoint and arrival samples; these samples do not search the true worst continuous-voyage state",
+        "APPROXIMATION: synthetic D29 equivalent cell mass represented as a standard-height ISO20 box",
+        "ASSUMPTION Q9: row 1 in every block has reefer plugs; final block permits DG, including reefer DG; detailed DG segregation remains mandatory.",
+        "ASSUMPTION: LOCODE labels THLCH/SGSIN/THBKK/USLAX identify synthetic scenarios, not real terminals.",
+        "ASSUMPTION: Synthetic governing crane height derived from the existing quay max_on_deck_tier_count; yard/equipment limits remain separate lower caps. Expert Q3 does not establish this port value.",
+        "ASSUMPTION: dock water density 1025 kg/m3 (seawater); no measured density is supplied.",
+        "ASSUMPTION: legacy documentation only: retained order uses descending full-sounding LCG and canonical tank ID to break ties; it does not control D57 proportional tank fills; no service-tank roles or usual operating practice are inferred.",
+        "ASSUMPTION: synthetic consumable draw-down is globally forward first and aft last, using descending full-sounding LCG and canonical tank ID to break ties; no service-tank roles or usual operating practice are inferred.",
+        "ASSUMPTION: synthetic lane at the row-1 side of every block; no yard survey is supplied.",
+        "ASSUMPTION: synthetic port-side berthing default; no berth survey is supplied.",
+        "D27: tank geometry and explicit Tank.kind are declared synthetic design inputs",
+        "D34: port labels and profile water densities describe synthetic scenarios, not measured real docks.",
+        "D50 default arrival quantity retained by D57: 10% of departure contents",
+        "D50 default rule: data/raw/is-code/msc267-85.pdf Part B 3.4.1.2-.3, PDF p.41.",
+        "D50: consumption=None selects the vessel policy's default 10% remaining per consumable group.",
+        "D50: each declared consumable group retains 0.1 of departure contents unless complete explicit consumption replaces it",
+        "D50: no voyage ballast operations are declared or permitted.",
+        "D57 DECLARATION: proportional draw-down applies to every consumable tank: mass(r) = departure mass * one common remaining fraction r; symmetric pairs drain together. Default arrival r=0.10; explicit group consumption must imply the same r across all nonempty groups.",
+        "DECLARATION: Tank.kind=diesel_oil",
+        "DECLARATION: Tank.kind=fresh_water",
+        "DECLARATION: Tank.kind=fuel_oil",
+        "DECLARATION: absent from supplied tank catalog: lube_oil, stores",
+        "Rule freeze v1: off; catalogue sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae",
+        "UNVERIFIED: berth/channel draught limit is unknown (None), not an assertion of unlimited draught.",
+        "conv_C2_feeder_1000",
+        "conv_C2_feeder_1000.convergence-restore",
+        "data/raw/is-code/msc267-85.pdf: Part B 3.4.1.2 and 3.4.1.3, PDF p41",
+        "dock-water:THBKK:a656aac3bc05c55fbe9fdf2ebf68599486710887d3524382b341f7a30d8b4227",
+        "dock-water:THLCH:76a5bae4f1802a0c342bb2628c4d0051b0f7c38456bedefb76a671f7825fb15c",
+        "docs/decisions.md:D27",
+        "docs/decisions.md:D34",
+        "docs/decisions.md:D50",
+        "docs/decisions.md:D56",
+        "docs/decisions.md:D57",
+        "experiments/physics-review/convergence/harness.py:place",
+        "experiments/physics-review/convergence/post_d30/harness2.py:build",
+        "experiments/physics-review/convergence/post_d30/search_feeder_1000_C1.json sha256:8505a20a575e9e07a50cd77449288ec5430baa7985c5b8610bd909b89dc3cce8",
+        "experiments/physics-review/convergence/post_d30/search_feeder_1000_C2.json sha256:3cc53fd5ca1a69a4eebb9e5ad2b8750cbd9f05bd5a7070242149fadad5dad1ad",
+        "experiments/physics-review/convergence/post_d30/search_feeder_1000_C2.json sha256:3cc53fd5ca1a69a4eebb9e5ad2b8750cbd9f05bd5a7070242149fadad5dad1ad; current dual-phase full-checker witness: experiments/physics-review/rerun/fix-t2-vessel/restore/unchanged-v2/feeder_1000_C2/result.json sha256:4b91f00dd4ba93d5091331e49e6123c1974c82d4d1f8e19ce9d064b563443dc4",
+        "experiments/physics-review/convergence/post_d30/search_feeder_1000_C3.json sha256:68cc097c7611f25bb00436d69474a20b0800a5d8c4ac1b22b7e2bd6ce95b43cb",
+        "experiments/physics-review/design/harness.py:C3",
+        "feeder_1000",
+        "feeder_800",
+        "imdg-42-24:UN1789-II",
+        "params/cargo/feeder_export.toml sha256:87b202dc38c497462608173085803065755f73301df10410338b5e36580bd0e2",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-P]",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-P].table[-1].lcg_m=26.265996232377745",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-S]",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-S].table[-1].lcg_m=26.265996232377734",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-P]",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-P].table[-1].lcg_m=17.336421896156274",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-S]",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-S].table[-1].lcg_m=17.33642189615627",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-P]",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-P].table[-1].lcg_m=103.71889399970796",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-S]",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-S].table[-1].lcg_m=103.71889399970796",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-P]",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-P].table[-1].lcg_m=22.773510741855596",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-S]",
+        "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-S].table[-1].lcg_m=22.773510741855596",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-P]",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-P].table[-1].lcg_m=26.265996232377745",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-S]",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-S].table[-1].lcg_m=26.265996232377734",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-P]",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-P].table[-1].lcg_m=17.336421896156274",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-S]",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-S].table[-1].lcg_m=17.33642189615627",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-P]",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-P].table[-1].lcg_m=103.71889399970796",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-S]",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-S].table[-1].lcg_m=103.71889399970796",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-P]",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-P].table[-1].lcg_m=22.773510741855596",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-S]",
+        "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-S].table[-1].lcg_m=22.773510741855596",
+        "params/ports/singapore_like.toml sha256:56ac0001aeb471a594d417cf8476303a9d5ee634736583ed3223ed70225b938e",
+        "params/ports/small_feeder.toml sha256:b3ccc9cddb40e9b6a8e81d5f3776323756a23c359853ead9b46178ae76ea8b31",
+        "random.small.40100003.0.2",
+        "random.small.40100003.0.2.boxslot",
+        "rotation straits call 0 LOCODE SGSIN",
+        "rotation straits call 1 LOCODE SGSIN",
+        "rotation:synthetic_thai_coastal:call:0:THLCH",
+        "rotation:synthetic_thai_coastal:call:1:THBKK",
+        "src/stowage/model/fixtures.py: historical manual route THLCH->THBKK->THSGZ",
+        "synthetic fixture; no actual terminal operating limits",
+        "synthetic port profile singapore_like sha256:7e84e5ae9e5374e20d90ecec6261c506c815628f6cf6e09b58ccfe771a464005",
+        "synthetic port profile singapore_like sha256:b457d1da4f7b67310281307243c1ef0e53875a5cedd95d090ac7410153639b9c",
+        "synthetic-dg-shipment-policy-v1",
+        "synthetic-port:laem_chabang_like:317aa928fbcbf14935bc1a595025b9fe8cce4bf731ef836acaf3110dd5ee88fe",
+        "synthetic-port:small_feeder:a9b9b9d6b81c732b8a20d6892b98c259bc35fb36f388f794648c1cca5a8b429c"
+      ],
+      "input_versions": {}
+    }
+  },
+  "constrained_moves": 12.0,
+  "constrained_passed": true,
+  "instruction_violations": [],
+  "allocation_violations": [],
+  "plan_changed": true,
+  "wall_s": 368.9602097920142
+}

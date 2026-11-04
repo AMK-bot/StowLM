@@ -1,0 +1,15 @@
+{
+  "completed_utc": "2026-11-02T02:40:53.126312+00:00",
+  "preserved_requests_sha256": "9d2b994ca2d0d8a072864c0b696ab3d78ff98d6c5952912dee3538ee9981c1b2",
+  "candidate_full_checks_started": 0,
+  "stable_gate_pins": {
+    "experiments.mvp.pipeline.sandbox.moves.prepare_move": "c26215e6c140e97d180cfd2d03dcf129acf5ad43d7a9f43dc2befc4f428649f3",
+    "experiments.mvp.pipeline.sandbox.moves._screen": "9d4d9bf6986c403042a0690f44dc3f91ee6463aa4d06ede3b02fb14389b93932",
+    "experiments.mvp.pipeline.sandbox.moves.try_move": "fc0197b56a1ed0c4e95566c8de2ff578fab240762581ad1c043213b99afedd75",
+    "experiments.mvp.pipeline.sandbox.physics.fast_check": "a9e63b4c62bf1f33e1637f979deeb3eacad8f9bcbda3d662bac0a46c23a69eae",
+    "experiments.mvp.pipeline.sandbox.securing.screen_securing": "87456965e5a8e0a42827c8f78e0ef2eadd0eb90518b62e2455d84ab198277ffb",
+    "experiments.mvp.pipeline.sandbox.visibility.screen_visibility": "22c305584f7cbc5952cf28d0d0477c0d2523c8b099f0680625f86e6c421bc9ff"
+  },
+  "scope": "No resampling or replacement. Original40 recorded v3 screens retained.",
+  "rescreen_policy": "Root approved no redundant40 rescreen: all original gate bytes and six loaded/compiled code contents match. Initial recovery rescreen was interrupted at admission during low-load hold; no candidate fulls."
+}

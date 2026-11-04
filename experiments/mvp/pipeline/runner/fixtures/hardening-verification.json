@@ -1,0 +1,63 @@
+{
+  "label": "Measured offline synthetic hardening verification",
+  "measured_utc": "2026-11-02T00:53:34.355310+00:00",
+  "command": "pytest experiments/mvp/pipeline/runner -x -o faulthandler_timeout=75 --junitxml=experiments/mvp/pipeline/runner/fixtures/hardening-pytest.xml",
+  "environment": {
+    "python": "3.12",
+    "uv": "--offline --no-sync",
+    "PYTHONPATH": "src:experiments/mvp/frontier:experiments/mvp/frontier/lab",
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1,
+    "RUNNER_RECORD_FAILURES": 1
+  },
+  "admission": {
+    "mask": 4095,
+    "enabled_cores": 12,
+    "load1": 42.88,
+    "telemetry_t": 1793580581
+  },
+  "tests": {
+    "passed": 143,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "deselected": 1,
+    "wall_s": 206.752
+  },
+  "failure_observations": 40,
+  "failure_cases": 28,
+  "source_sha256": {
+    "__init__.py": "14c6d40081b89800606f3d1dde6650bddaa2abb08eaf3a3fcc349739b210bfc9",
+    "__main__.py": "8c08cd0fb152968161a54713974dde387fdeda6b00bbd5b0debc1c29c445cd45",
+    "assembly.py": "da92d3809cab0489cc6a58538eda18b7808dc9389f15c43e8a7e0a579f8504d1",
+    "benchmark.py": "342b8110ae44b25c4f36dd3d2e184f76dafabdbcfb5b86ee3c31ba3676cde724",
+    "cold_start.py": "f49a0b34bd98cd349ef93a2e6740c565426ddf99cdefd088d48a243fbbaba432",
+    "conftest.py": "91abf4c6185d91378d8d5e0d62d505e2f6e35360359b2945c0ddc393ee61516c",
+    "core.py": "7a28dd3eca7090f7827e7deac9dab3dcfc9af7e24ab6a9defa68fd4a0a2666a2",
+    "envelope.py": "39cfee1474546183db89f71650805b9a0bc41c580e28dfa62c63ee7161006eb1",
+    "limits.py": "6ec0c14a7319faa3acb7e5cc8184b04543c9eccce25f25eff56dfd1dbf1ffee8",
+    "offline.py": "1cd0b2a488c0f65bea9b2e7c931d8cbcdbbe4c3b98aedf3ccbb7d782156cc53d",
+    "preflight.py": "c7a451ce523af58111c968d3226cbb4125c49402a45a7914142a33bb7603fb5b",
+    "profiles.py": "953d9caee2e535595e71fe05040d771166253f4d8af7278208905f93c08e3f1f",
+    "runtime.py": "635a22839f52386123d093fe55297100bdc36188f56f499f2a966cf4688e2527",
+    "test_assembly.py": "345514034301f1cf9fde586da474d07efaa94f8dfe00fadb80e682000965f069",
+    "test_cli_profiles.py": "cebb22d90a14ea22588491057404b3714e805c00333e6590c8012cfdeda9d373",
+    "test_cold_start.py": "87476e46330b5b45f77e95b278486c33add6f7d08b7e19ebb55c6b916bbf3a1d",
+    "test_envelope.py": "35d9c3866f389e888a9f3b2d73b0c6509ec6c53d7de56520d640a8977078600c",
+    "test_failures.py": "5def592bd7d94d814126f6a01caba7522d34cd577f00bf5784fec13b2950cee7",
+    "test_limits.py": "42f5b90918287f0a8f14cadffca27187c56c4a2efa8d03a3d568e6a7fb9830b2",
+    "test_offline.py": "7c72f22b8616b64ec9220684acdfb24061308f1336ef6db0703900391f7e1079",
+    "test_preflight.py": "544491a752cd4f42acf197e198d10040b1dee9bc13e638179ecafe273c1028c0",
+    "test_runner.py": "10ea082814227acbe6cba433f580b74b2cb2361414ef3b234a5894a52144f11e",
+    "test_runtime.py": "4a7624b004d748b8249d30f8f55107bd6beac76183f5439a422693f884821201"
+  },
+  "spend_usd": 0,
+  "limitations": [
+    "Synthetic failure injection; no live provider outage, GPU or live search.",
+    "Impossible instruction uses a binding-result seam; real authenticated readings and deterministic validators still run.",
+    "Reader deadlines require the main thread of a dedicated runner process.",
+    "SIGKILL of an engine cannot clean up its descendants; only exact owned processes are signalled.",
+    "Cold process timing keeps filesystem and vessel caches warm; see cold-start.json."
+  ]
+}

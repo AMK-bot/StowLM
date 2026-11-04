@@ -1,0 +1,209 @@
+{
+  "adopted": {
+    "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+    "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+    "name": "swa-last-5",
+    "adapter_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+    "decoding_policy": "reader-v3-schema-mask/2-d224"
+  },
+  "sources": [
+    "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/lattice/hero-instruction-candidates.json",
+    "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/lattice/hero-wordings.json"
+  ],
+  "kept": [
+    {
+      "sentence": "Bay 09 has damaged cell guides, so load nothing there.",
+      "rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "binds": true,
+      "verdict": "binds_exactly",
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "1fe34869b587bdd98a6c6893a139376c87286beb638f78866dce8dc90ee32f89",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.396954875031952
+      }
+    },
+    {
+      "sentence": "Nothing goes into bay nine on this call.",
+      "rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "binds": true,
+      "verdict": "binds_exactly",
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "f5874c7e950f1b8ccefe3dbb4f809ab8d6a6231c787fe7e5e95a21ed23c2fc76",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.0905025000101887
+      }
+    },
+    {
+      "sentence": "Planner, bay 09 is closed today.",
+      "rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "binds": true,
+      "verdict": "binds_exactly",
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "06edb80352c88731d7249b1e8d149c15153a0ce90380d8668d8a7678ecbc646f",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.9974822500371374
+      }
+    },
+    {
+      "sentence": "Leave bay 9 completely empty.",
+      "rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "binds": true,
+      "verdict": "binds_exactly",
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "908ded5cd72148cc2cbe9443674b7411a873a894ccf105513e2d85c4433ce719",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.960229333024472
+      }
+    }
+  ],
+  "misread": [
+    {
+      "sentence": "Keep bay 09 empty: that space is held for the next port.",
+      "rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "binds": false,
+      "verdict": "misread",
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "fe287f97b917ad375bfe9e4d4e5c8b9488f511697a08e6b43bb91333fdcfe258",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.419776291004382
+      }
+    },
+    {
+      "sentence": "Keep bay 09 empty this call, hold and deck.",
+      "rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "binds": false,
+      "verdict": "misread",
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "0cfd182fe08e521e3ded51fa77d823b4cdac4e0cf3127e2fd3a66966956337b7",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.5906467079767026
+      }
+    },
+    {
+      "sentence": "Skip bay 09 entirely.",
+      "rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "binds": false,
+      "verdict": "misread",
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "05dc34652a5ed8d252befde8baaec5e4cd020b541d85097e16ca0ba04887c742",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.43128625000827
+      }
+    }
+  ],
+  "read": 7,
+  "trained_on_these": false
+}

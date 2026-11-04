@@ -1,0 +1,1 @@
+`capacity-train4.txt` is copied from `lab/c2/c2-layout/train4.txt`; `capacity-bound-results.json` is copied from `lab/c3/c2-layout/bound_results.json`. They identify fixed TRAIN regression maps only. Old numerical certificate values never supply a production bound.

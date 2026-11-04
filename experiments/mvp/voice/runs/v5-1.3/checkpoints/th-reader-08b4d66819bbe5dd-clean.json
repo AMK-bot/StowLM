@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "unsupported",
+      "reason": "request does not match any supported constraint type",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 4560,
+    "audio_seconds": 4.536,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00020",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "235d631c8800406e8d627e9309b7ff94",
+    "session_id": "voyager/transcribe/26AAD8EE8C0D449C929140F29D0DD406"
+  },
+  "asr_latency_s": 1.429299124982208,
+  "audio_sha256": "9cd5ea993d75aa326aadad159bd5f966466e70c51601e9862abcc413a5835921",
+  "canonical": {
+    "refusal": {
+      "code": "unsupported",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "clean",
+  "end_to_end_s": 3.043734249949921,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0016762",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "9943194a717c03af412f58d017319f33b36d13dc21b775a2553d11ffd976e997",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "bdb969f8-c53f-46aa-ac0d-e475eb7fd402"
+  },
+  "parser_latency_s": 1.5159704170073383,
+  "script": "ห้ามใช้เบย์เก้าในการบรรทุกตู้สินค้าทุกครั้ง",
+  "source_id": "reader-08b4d66819bbe5dd",
+  "started_utc": "2026-11-01T01:35:37.221457+00:00",
+  "status": "complete",
+  "transcript": "ห้ามใช้เบก้าในการบรรทุกตู้สินค้าทุกครั้ง"
+}

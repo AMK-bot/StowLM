@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "2",
+      "min_bays": 20,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 7040,
+    "audio_seconds": 6.984,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00035",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "bca1fdce9dd74668be2d4f9c5771ba38",
+    "session_id": "voyager/transcribe/1A467CB791314EA2B7F19E2701ED6B02"
+  },
+  "asr_latency_s": 1.486262833001092,
+  "audio_sha256": "767e578ae3c6db2dd8d163bad47e117edc2c22a999b11bca79addd200b7615cf",
+  "canonical": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "2",
+      "min_bays": 20,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "clean",
+  "end_to_end_s": 2.8177815419621766,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00127945",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "64f5eaa1aa1615c46bfcff62cd0de1010b3d72ad7cb9c2aacf1a3eed41167ea5",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "9744a369-fcf1-4e18-af94-02e3dfc6e3c1"
+  },
+  "parser_latency_s": 1.2161719580180943,
+  "script": "ให้สินค้าอันตรายประเภทสอง อยู่ห่างจากที่พักลูกเรืออย่างน้อยยี่สิบเบย์",
+  "source_id": "reader-0568618c46569454",
+  "started_utc": "2026-11-01T01:36:04.074968+00:00",
+  "status": "complete",
+  "transcript": "ให้สินค้าอันตรายประเภทสองอยู่อยู่ห่างจากที่พักลูกเรืออย่างน้อยยี่สิบเบ"
+}

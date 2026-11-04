@@ -1,0 +1,71 @@
+"""Recover a committed schema-valid draw after bookkeeping-only cleanup failure.
+Never invokes a producer, planner or checker, never changes saved map bytes.
+"""
+import argparse,hashlib,importlib.machinery,importlib.util,json,os,shutil,time
+from pathlib import Path
+HOME=Path(__file__).resolve().parent;ROOT=HOME.parents[5];WORK=HOME/'map-generation'
+loader=importlib.machinery.SourceFileLoader('ext1_recovery_routing',str(HOME/'map_generate.py.txt'));spec=importlib.util.spec_from_loader(loader.name,loader);gen=importlib.util.module_from_spec(spec);loader.exec_module(gen)
+def atomic(path,value):
+ path.parent.mkdir(parents=True,exist_ok=True);tmp=path.with_name(path.name+'.recover.tmp');tmp.write_text(json.dumps(value,indent=2)+'\n');os.replace(tmp,path)
+def main():
+ parser=argparse.ArgumentParser();parser.add_argument('--summary-name',default='recovery-summary.json');args=parser.parse_args()
+ summary=WORK/'cleanup-incident'/args.summary_name
+ if Path(args.summary_name).name!=args.summary_name or summary.exists():raise RuntimeError('Refuse replacing an incident summary')
+ gen.configure(gen.specs()[0])
+ from stowage.io import load_instance
+ from stowage.frozen import require_clean
+ recovered=[];unrecoverable=[]
+ for row in gen.specs():
+  seed=row['seed'];status=WORK/'status'/f'{seed}.json'
+  if not status.exists():continue
+  failed_raw=status.read_bytes();failed=json.loads(failed_raw)
+  if failed.get('generation_status')!='failed':continue
+  archive=WORK/'cleanup-incident/original-status'/status.name;archive.parent.mkdir(parents=True,exist_ok=True)
+  if not archive.exists():
+   with archive.open('xb') as stream:stream.write(failed_raw)
+   shutil.copystat(status,archive)
+  if archive.read_bytes()!=failed_raw:raise RuntimeError('Immutable failed status archive differs')
+  target=ROOT/row['path'];claim_path=WORK/'claims'/f'{seed}.json'
+  try:
+   claim=json.loads(claim_path.read_text());events=[json.loads(line) for line in (WORK/f'writes-{seed}.jsonl').read_text().splitlines()]
+   denied=[event for event in events if event.get('allowed') is False]
+   if len(denied)!=1 or denied[0]['event']!='os.remove' or denied[0]['path']!=f"worker-{claim['pid']}.json":raise RuntimeError('Not the documented fd-relative cleanup classification')
+   expected_partial=str((WORK/'status'/f'{seed}.partial').relative_to(ROOT));expected_status=str(status.relative_to(ROOT))
+   if not any(event['event']=='os.rename' and event.get('path')==expected_partial for event in events):raise RuntimeError('No original accepted-status commit observed')
+   if not any(event['event']=='os.rename' and event.get('path')==expected_status for event in events):raise RuntimeError('No original status target commit observed')
+   private_worker=WORK/'tmp'/f'parent-{seed}'/'.runtime'/f"worker-{claim['pid']}.json"
+   if not private_worker.is_file():raise RuntimeError('Private fd-relative target evidence missing')
+   before=target.stat();saved_sha=gen.sha(target)
+   if not claim['started']<=before.st_mtime<=status.stat().st_mtime:raise RuntimeError('Saved draw is not chronologically before cleanup failure')
+   if claim['row']!=row:raise RuntimeError('Root claim differs from registered request')
+   child=load_instance(target);require_clean(child,what='Committed extension input schema recovery')
+   if child.id!=f"pipeline.ext1.{target.stem}.s{seed}" or child.provenance.seed!=seed:raise RuntimeError('Committed map root identity differs')
+   # These are the original envelope generation assertions, not a planner/checker.
+   if child.stage!='A' or child.onboard.placements or child.discharge_list or child.forecasts or child.plan_calls:raise RuntimeError('Committed input schema/envelope invariants differ')
+   if child.family.get('envelope_cohort')!='ext1':raise RuntimeError('Wrong generation cohort identity')
+   payload=child.model_dump(mode='json');canonical_sha=hashlib.sha256(gen.canonical(payload)).hexdigest();ascii_sha=hashlib.sha256(gen.canonical(payload,ensure_ascii=True)).hexdigest()
+   after=target.stat()
+   if saved_sha!=gen.sha(target) or before.st_mtime_ns!=after.st_mtime_ns or before.st_size!=after.st_size:raise RuntimeError('Recovery altered saved map bytes')
+   evidence=dict(seed=seed,classification='Valid draw committed; fd-relative private cleanup was mistaken for repository-CWD write',
+    original_failed_status=str(archive.relative_to(ROOT)),original_failed_status_sha256=hashlib.sha256(failed_raw).hexdigest(),
+    claim_path=str(claim_path.relative_to(ROOT)),claim_sha256=gen.sha(claim_path),claim_started=claim['started'],
+    map_path=row['path'],map_sha256=saved_sha,map_mtime_ns=before.st_mtime_ns,failed_status_mtime_ns=status.stat().st_mtime_ns,
+    canonical_instance_sha256=canonical_sha,private_worker_metadata_path=str(private_worker.relative_to(ROOT)),private_worker_metadata_sha256=gen.sha(private_worker),
+    old_guard_denial=denied[0],actual_target_inside_excluded_fence=True,producer_invocations=1,producer_redraws=0,
+    recovery_schema_reads=1,planners_run=0,checkers_run=0,map_bytes_unchanged=True,recovered=time.time())
+   atomic(WORK/'cleanup-incident'/f'recovery-{seed}.json',evidence)
+   result=dict(row,sha256=saved_sha,schema_valid=True,generation_status='accepted',canonical_instance_sha256=canonical_sha,
+    canonical_ascii_instance_sha256=ascii_sha,instance_id=child.id,map_id='ext-1:'+str(seed),cohort='envelope24',ship_id=row['ship'],parent_root_seed=seed,
+    generator_source_sha256=gen.sha(gen.ORIGINAL/'generate.py'),wrapper_sha256=gen.sha(HOME/('map_generate_paused.py.txt' if claim['started']>=json.loads((WORK/'PAUSE-RECEIPT.json').read_text())['time'] else 'map_generate_initial.py.txt')),prereg_sha256=gen.PREREG_SHA,
+    mode='held-out-extension-generation',plan_checked=False,planner_called=False,generation_wall_s=failed.get('generation_wall_s'),
+    cleanup_bookkeeping_recovered=True,producer_redrawn=False,preparation_incident_evidence=str((WORK/'cleanup-incident'/f'recovery-{seed}.json').relative_to(ROOT)))
+   # Original private parent/audit payloads are removed by the corrected routing, as registered.
+   shutil.rmtree(WORK/'tmp'/f'parent-{seed}')
+   atomic(status,result);recovered.append(seed)
+  except Exception as error:
+   unrecoverable.append(dict(seed=seed,error_type=type(error).__name__,reason=str(error)))
+ report=dict(recovered_now=recovered,unrecoverable=unrecoverable,all_recovered_evidence=sorted(str(p.relative_to(ROOT)) for p in (WORK/'cleanup-incident').glob('recovery-*.json')),
+  maps_regenerated=0,planners_run=0,source_file_changed=False,completed=time.time())
+ atomic(summary,report);print(json.dumps(report))
+ return 0 if not unrecoverable else 2
+if __name__=='__main__':raise SystemExit(main())

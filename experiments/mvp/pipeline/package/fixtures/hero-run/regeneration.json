@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "selection": "hero",
+  "instance_id": "D192.medium-feeder_500-f60-low-s192200002",
+  "boxes": 87,
+  "engine_version": "0.13.0",
+  "package_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/package/fixtures/hero-run/package",
+  "runner_receipt_sha256": "690b3b367d21e248b7b74b35f8adfe05e2badcf2c99433849a7a23aa645c36b2",
+  "plan_sha256": "f66c8301b6c7d83ec1b0f593a07c764fecab5c7288fce1cf72602cb8527a0f2d",
+  "verification_wall_s": 1.3610459580086172,
+  "wall_s": 92.44011691701598,
+  "reader": {
+    "name": "swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+    "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+    "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+    "decoding_policy": "reader-v3-schema-mask/2-d224",
+    "mode": "live",
+    "display_name": "StowLM Reader swa-last-5",
+    "model": "muse-glimmer-30b",
+    "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+    "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+    "selection_sha256": "95eec0e65e1200e44e4fcae4c58f62958c33a88c9fcb78bd5454758a023fc764",
+    "measured_timing": {
+      "sentences": 200,
+      "model_load_s": 2.543505208042916,
+      "cold_start_s": 6.796538583061192,
+      "warm_median_s": 3.4370462500373833,
+      "warm_p90_s": 4.639892207982484
+    },
+    "timing_source_sha256": "83b6d88136ba6a83116c4e3372d7c7ac37e4943ebad79f449cf4693d3f7bb864"
+  },
+  "hero_sentence": "Nothing goes into bay nine on this call.",
+  "rule": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "close_bay",
+      "bay": 9
+    }
+  },
+  "pipeline_sha256": "acf2f275efa73f45c43709f4a52807dd480390e1497f085cab11d3604265bbec",
+  "confirmation_source": "user-authorised batch regeneration, no planner present (demo fixture)",
+  "print_check": "Leader will run outside sandbox"
+}

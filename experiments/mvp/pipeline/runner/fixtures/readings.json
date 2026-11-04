@@ -1,0 +1,94 @@
+{
+  "label": "Recorded answers; synthetic ship and cargo",
+  "readings": [
+    {
+      "sentence": "A physical cover and its hold space must serve the same single discharge port.",
+      "envelope": {
+        "constraint": {
+          "type": "one_port_per_hatch"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "evidence": {
+        "adapter_sha256": null,
+        "cost_usd": "0.00144425",
+        "model": "muse-spark-1.3",
+        "parser": "SparkParser",
+        "prompt_sha256": "c7df21a96f7b78a8a8fb230f89ad46c2be1f7876f9b13464c51be85dd4fe8c34",
+        "purpose": "voice-v5-1.3-parser",
+        "request_id": "de4d791a-154f-4bed-ba98-cb54acf3f832",
+        "source_sha256": "d230fd3725c5996427c6129b102d86ee164c3df59d6952b91003b1962457a790"
+      },
+      "seconds": 0.72656341700349,
+      "ship": null,
+      "context": null,
+      "source": "experiments/mvp/voice/runs/v5-1.3/checkpoints/en-reader-0d33e36e565f04e5-typed.json"
+    },
+    {
+      "sentence": "No containers on deck in bay 2.",
+      "envelope": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 2,
+          "zone": "deck",
+          "max_tiers": 0
+        }
+      },
+      "evidence": {
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":2,\"zone\":\"deck\",\"max_tiers\":0}}",
+        "request_id": "24c4d09d-54ec-4265-98c3-206469e7dc82",
+        "cost_usd": "0.00132175",
+        "usage": {
+          "input_tokens": 530,
+          "output_tokens": 247,
+          "cached_tokens": 355
+        },
+        "prompt_sha256": "da4f27bb25df1327e13e3b6d455ace8685ebecb4e0dfc0a7958b91428aad835c",
+        "reservation_context_bound_tokens": 32768,
+        "parser": "SparkParser",
+        "model": "muse-spark-1.3",
+        "adapter_sha256": null,
+        "source_sha256": "9792ff751f8eef1bfc5dfc53045301e906442232453603359f16802b12f11afd"
+      },
+      "seconds": 1.4204143329989165,
+      "ship": "random.tiny.20000008.0.5",
+      "context": {
+        "id": "random.tiny.20000008.0.5",
+        "bays": [
+          1,
+          2,
+          3
+        ],
+        "max_tiers": {
+          "hold": 2,
+          "deck": 1
+        },
+        "max_tiers_by_bay": {
+          "1": {
+            "hold": 2,
+            "deck": 1
+          },
+          "2": {
+            "hold": 2,
+            "deck": 1
+          },
+          "3": {
+            "hold": 2,
+            "deck": 1
+          }
+        },
+        "has_accommodation": true,
+        "hatch_covers": [
+          "HC-002-P"
+        ],
+        "ports": [
+          "SGSIN",
+          "MYPKG",
+          "THLCH"
+        ]
+      },
+      "source": "experiments/mvp/reader/runs/binding/parser/max_tiers-05.json"
+    }
+  ]
+}

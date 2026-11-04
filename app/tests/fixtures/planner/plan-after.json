@@ -1,0 +1,44 @@
+{
+  "plan_id": "fixture-after",
+  "label": "Synthetic fixture after instruction",
+  "slots": [
+    {
+      "bay": 1,
+      "row": 2,
+      "tier": 82,
+      "deck": true,
+      "box_id": "TEST0000001"
+    },
+    {
+      "bay": 2,
+      "row": 0,
+      "tier": 2,
+      "deck": false,
+      "box_id": "TEST0000002"
+    },
+    {
+      "bay": 5,
+      "row": 2,
+      "tier": 4,
+      "deck": false,
+      "box_id": "TEST0000004"
+    },
+    {
+      "bay": 3,
+      "row": 3,
+      "tier": 82,
+      "deck": true,
+      "box_id": "TEST0000005"
+    }
+  ],
+  "counts": {
+    "boxes": 4
+  },
+  "source": {
+    "kind": "synthetic_unit_fixture",
+    "paths": [
+      "app/tests/fixtures/planner/fixture-source.txt"
+    ],
+    "sha256": "3ebdaf54f17cf296f4b591c2848c8520639cb04d16a57048a56b0d17b9a68e09"
+  }
+}

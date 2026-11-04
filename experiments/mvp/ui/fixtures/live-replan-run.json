@@ -1,0 +1,54 @@
+{
+ "schema_version": "stowlm.v6-live-replan-run/1",
+ "synthetic": true,
+ "mode": "live",
+ "sentence": "Planner, restrict Bay 10 deck to three max.",
+ "rule": "At most 3 tiers per stack on deck in bay 10.",
+ "reader": "Muse Spark \u00b7 Meta Model API \u00b7 cloud",
+ "reading_source": "recorded reading, no call made",
+ "endpoint": "POST /api/v6/confirm then POST /api/v6/replan under --brief-live-replan",
+ "elapsed_s": 1817.3,
+ "load1_start": 29.33,
+ "load1_end": 26.74,
+ "status": "checked_plan",
+ "lifts": 70.0,
+ "passed": true,
+ "exit_code": 0,
+ "message": "Plan passed the full checker and every confirmed instruction recheck. Runner engine deadline reached; returning the best checked incumbent after rechecking it. First legal plan: 1030.5 s; total wall time: 1814.0 s.",
+ "error": null,
+ "first_checked_s": 1030.520793417003,
+ "boxes_moved": 86,
+ "boxes_forced": 2,
+ "instruction_violations": 0,
+ "incumbents": [
+  {
+   "t_s": 1030.521707625012,
+   "lifts": 70.0,
+   "lane": "native_full_checker_observer"
+  }
+ ],
+ "job": "19f23aac8de64444b387bb4010d02bc9",
+ "finished_utc": "2026-11-02T05:23:26Z",
+ "attempts_before_this": [
+  {
+   "elapsed_s": 5.6,
+   "load1_start": 30.03,
+   "load1_end": 30.11,
+   "status": "error",
+   "passed": false,
+   "message": "Reader could not complete (ValueError). Check the input or attached service and retry. First legal plan: not found; total wall time: 1.8 s.",
+   "fixed": "the worker refused the runner's read of the empty standing line"
+  },
+  {
+   "elapsed_s": 727.1,
+   "load1_start": 20.53,
+   "load1_end": 37.27,
+   "status": "no_checked_plan",
+   "passed": false,
+   "message": "Runner engine deadline reached; no checked plan was found. Retry with a longer deadline or reduce the load. First legal plan: not found; total wall time: 723.8 s.",
+   "fixed": "engine deadline raised from the live profile's 720 s to 1800 s"
+  }
+ ],
+ "engine_deadline_s": 1800,
+ "scope": "Full checker and rule recheck passed. Every-frame crane gauges were not walked for this plan. Shared machine under load."
+}

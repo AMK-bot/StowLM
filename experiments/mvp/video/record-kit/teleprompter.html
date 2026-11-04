@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StowLM Teleprompter</title>
+<style>
+:root{--bg:#101214;--fg:#f4f4f2;--muted:#b9bcc2;--card:#1c1f23;--accent:#7cc4ff;--ok:#3ecf6e;--amber:#ffb020;--red:#ff5a4f;--fs:64px}
+body.light{--bg:#fbfaf7;--fg:#111;--muted:#444a52;--card:#ecebe6;--accent:#0b5cad;--ok:#1f8a44;--amber:#a86400;--red:#c0271c}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;display:flex;flex-direction:column}
+main{flex:1;display:flex;flex-direction:column;padding:24px 4vw 12px;overflow:auto}
+main.mirror{transform:scaleX(-1)}
+.top{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;font-size:22px;color:var(--muted)}
+.top b{color:var(--fg)}
+.file{font-family:ui-monospace,Menlo,monospace;color:var(--accent);font-size:24px}
+.line{font-size:var(--fs);line-height:1.35;font-weight:600;margin:28px 0 20px;max-width:30ch}
+.delivery{font-size:20px;color:var(--muted);margin:4px 0}
+.hint{font-size:20px;margin:8px 0;padding:8px 12px;border-left:4px solid var(--amber);background:var(--card)}
+.note{font-size:20px;margin:8px 0;padding:8px 12px;border-left:4px solid var(--accent);background:var(--card)}
+.keys{font-size:24px;line-height:1.6}
+.keys kbd{font-family:ui-monospace,Menlo,monospace;background:var(--card);border:1px solid var(--muted);border-radius:6px;padding:1px 8px}
+footer{padding:10px 4vw 18px;background:var(--card)}
+.bar{height:22px;border-radius:11px;background:var(--bg);overflow:hidden;border:1px solid var(--muted)}
+.fill{height:100%;width:0;background:var(--ok)}
+.fill.amber{background:var(--amber)} .fill.red{background:var(--red)}
+.status{display:flex;justify-content:space-between;font-size:20px;margin-top:6px;color:var(--muted)}
+.status b{color:var(--fg);font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<main id="m"></main>
+<footer id="f"><div class="bar"><div class="fill" id="fill"></div></div>
+<div class="status"><span id="st">Space to start the timer</span><span><b id="el">0.0</b> / <b id="tg">0.0</b> s</span></div></footer>
+<script>
+var SCREENS = [{"kind": "keys", "html": "<p>One shot per screen. Read the big line; save the take under the file name shown.<\/p><p><kbd>&rarr;<\/kbd> <kbd>&darr;<\/kbd> <kbd>PageDown<\/kbd> <kbd>Enter<\/kbd> next &nbsp; <kbd>&larr;<\/kbd> <kbd>&uarr;<\/kbd> <kbd>PageUp<\/kbd> back<\/p><p><kbd>Space<\/kbd> start / stop the timer &nbsp; <kbd>R<\/kbd> reset the timer<\/p><p><kbd>+<\/kbd> / <kbd>-<\/kbd> text size &nbsp; <kbd>M<\/kbd> mirror (glass prompter) &nbsp; <kbd>D<\/kbd> dark / light<\/p><p>The bar fills over the target time: amber past 90 %, red past 100 %. Target = shot length minus any lead-in minus 0.5 s. A little over is fine: the build can slow a shot to 0.8x.<\/p><p>The last three screens are optional: face-cam intro, face-cam outro, hero sentence.<\/p><p>Press <kbd>&rarr;<\/kbd> to begin. Your place and text size are remembered.<\/p>"}, {"kind": "shot", "label": "Shot 01 of 12", "title": "Cold open", "file": "vo/shot-01.wav", "line": "One sentence, over a noisy, simulated radio line. The plan changes, and the full checker passes it. Now try to break it.", "words": 22, "est": 9.2, "target": 9.3, "video": 12.4, "delivery": "Start after the radio voice ends (about 2.6 s in). Punchy, three beats. Keep 'simulated'.", "hints": ["If over time, drop 'Now', then 'and'; never 'simulated' (logic15)."], "notes": ["Voice starts 2.6 s into the shot (after the radio clip). Record only your line."]}, {"kind": "shot", "label": "Shot 02 of 12", "title": "The stake", "file": "vo/shot-02.wav", "line": "My family works in Thai freight forwarding. Every ship at Laem Chabang, Thailand's main port, needs a load plan. A bad one means extra lifts.", "words": 25, "est": 10.4, "target": 9.9, "video": 10.4, "delivery": "Warm, personal. This is your line: say it like you'd tell a friend.", "hints": ["If over time, drop 'heavy low, dangerous cargo apart' (script trim order 3)."], "notes": ["If you record the face-cam intro (cam/intro.mov), its audio replaces this line. Record this anyway as a fallback."]}, {"kind": "shot", "label": "Shot 03 of 12", "title": "Mess in", "file": "vo/shot-03.wav", "line": "Muse Spark reads the papers and finds where they disagree. Where it isn't sure it asks, and on hard documents most boxes stop for a person.", "words": 26, "est": 10.8, "target": 9.8, "video": 10.3, "delivery": "Matter-of-fact. Never cut 'most boxes stop for a person'.", "hints": [], "notes": []}, {"kind": "shot", "label": "Shot 04 of 12", "title": "Bad radio line", "file": "vo/shot-04.wav", "line": "Muse Voice Transcribe hears it through the static. The planner sees the words first.", "words": 14, "est": 5.8, "target": 5.4, "video": 9.2, "delivery": "Start after the radio clip ends (about 3.5 s in). Calm.", "hints": [], "notes": ["Voice starts 3.3 s into the shot (after the radio clip). Record only your line."]}, {"kind": "shot", "label": "Shot 05 of 12", "title": "The reader", "file": "vo/shot-05.wav", "line": "StowLM Reader, Muse Glimmer fine-tuned by us, read it on this laptop, with no cloud call. Same model, same laptop: without our fine-tune, 47 percent on a locked test. With it, 92. It missed two stricter gates.", "words": 37, "est": 15.4, "target": 16.6, "video": 17.1, "delivery": "The proudest line. Slow down on '47' and '92'. Never cut 'It missed two stricter gates'.", "hints": [], "notes": []}, {"kind": "shot", "label": "Shot 06 of 12", "title": "X-ray and confirm", "file": "vo/shot-06.wav", "line": "Inside the model as it writes. Before fine-tuning, the mask overrode it on 182 of 200 sentences, almost all on format. After: 2, both sentences it should have refused. Legal, and still wrong. So a person confirms.", "words": 37, "est": 15.4, "target": 14.7, "video": 15.2, "delivery": "Curious, then firm on 'So a person confirms'.", "hints": [], "notes": []}, {"kind": "shot", "label": "Shot 07 of 12", "title": "The plan changes", "file": "vo/shot-07.wav", "line": "The search software replans 87 boxes in a half-ship section. That rule forced 36; the search moved 48 more. It replans from scratch; keeping changes small isn't built yet. The gauges stay green.", "words": 33, "est": 13.8, "target": 12.8, "video": 13.3, "delivery": "Steady. If over time, drop 'It replans from scratch; keeping changes small isn't built yet.' (trim order 1).", "hints": ["Trim order 1."], "notes": []}, {"kind": "shot", "label": "Shot 08 of 12", "title": "Drag a box", "file": "vo/shot-08.wav", "line": "Now break it. Drag any box anywhere. A fast screen answers in seconds. Then the full checker rules: it passes, the crane order can't reach it, or it breaks a named rule.", "words": 32, "est": 13.3, "target": 11.8, "video": 12.3, "delivery": "A dare. A little faster.", "hints": [], "notes": []}, {"kind": "shot", "label": "Shot 09 of 12", "title": "The copilot", "file": "vo/shot-09.wav", "line": "A one-tier deck limit needs 143 spaces, with 96 allowed, so the answer is no. On real tools, it negotiates two checked alternatives. Spark's raw text gets strict flags, and software holds back every flagged line.", "words": 36, "est": 15.0, "target": 14.6, "video": 15.1, "delivery": "Brisk, clear numbers. Pause after '12 left'.", "hints": ["The small-section beat was cut (film-judge edit 3; trim order 2).", "Conditional: 'On real tools, it negotiates two checked alternatives.' stays only if the delivered real-tools beat is in the re-recorded take (D293). Otherwise drop that sentence."], "notes": []}, {"kind": "shot", "label": "Shot 10 of 12", "title": "Receipt", "file": "vo/shot-10.wav", "line": "A handover package and a signed receipt, every step tied to its model and verdict. Verify it against our published key, after setup, with no model and no network. Change one digit and it fails.", "words": 35, "est": 14.6, "target": 12.7, "video": 13.2, "delivery": "Confident. Land 'it fails' with a small smile.", "hints": [], "notes": []}, {"kind": "shot", "label": "Shot 11 of 12", "title": "Held-out test", "file": "vo/shot-11.wav", "line": "On held-out test voyages we never tuned on, 24 of 24 inside our design limit passed the full checker.", "words": 19, "est": 7.9, "target": 8.4, "video": 8.9, "delivery": "Plain. Don't oversell it; the card carries the limits.", "hints": [], "notes": []}, {"kind": "shot", "label": "Shot 12 of 12", "title": "Forward pilot", "file": "vo/shot-12.wav", "line": "It's for the planners who load feeder ships at ports like Laem Chabang. Port calls cost about ninety billion dollars a year, so every one percent is about a billion. The pool a better plan can act on: about seven billion a year. That's a projection, not a result. A forward pilot, built to scale: more compute for the search, a larger model for reading.", "words": 65, "est": 27.1, "target": 22.8, "video": 23.3, "delivery": "Lead with who it's for, then the $90 billion bill, then the pool. Never cut 'That's a projection, not a result'.", "hints": [], "notes": ["Optional face-cam outro plays later, over the credits; this line is still needed."]}, {"kind": "extra", "label": "Optional · face-cam intro", "title": "Intro on camera (plays over shot 2)", "file": "cam/intro.mov", "line": "I'm [your first name]. My family works in Thai freight forwarding. At Laem Chabang, Thailand's main port, every ship needs a plan: which box goes where, safely.", "words": 27, "est": 11.2, "target": 11.5, "video": 12, "delivery": "Look into the camera, not the screen. Warm, like telling a friend.", "hints": [], "notes": ["A suggestion: rewrite it in your own words. Its audio replaces shot 2's line, so cover the same ground: who you are, the Thai freight-forwarding family, why the plan matters at Laem Chabang.", "Say only what you're happy to publish: no addresses, employer or customer names."]}, {"kind": "extra", "label": "Optional · face-cam outro", "title": "Outro on camera (plays over the credits)", "file": "cam/outro.mov", "line": "I built StowLM between 26 October and 4 November 2026. Search software plans, our fine-tuned Muse Glimmer reads the instructions, and the checker decides. Drag a box and try to break it.", "words": 32, "est": 13.3, "target": 14.5, "video": 15, "delivery": "Relaxed, a small smile on the dare. 10 to 15 s is fine.", "hints": [], "notes": ["A suggestion: rewrite it, but keep it honest (no 'industry level', no new numbers)."]}, {"kind": "extra", "label": "Optional · hero sentence", "title": "The radio sentence in your voice", "file": "vo/hero-sentence.wav", "line": "Nothing goes into bay nine on this call.", "words": 8, "est": 3.3, "target": 3.0, "video": 3.5, "delivery": "Like a planner on a bad line: clear, a little clipped.", "hints": [], "notes": ["Caveat: this can NOT replace the generated radio clip yet. It needs a fresh Muse Voice transcription and a reader read first (user item 134), which this kit doesn't do. Record it now only so it's ready."]}];
+var i = 0, fs = 64, mirror = false, light = false, t0 = null, acc = 0, raf = null;
+try { var s = JSON.parse(localStorage.getItem("stowlm-prompter") || "{}"); if (typeof s.i === "number") i = s.i; if (typeof s.fs === "number") fs = s.fs; } catch (e) {}
+var m = document.getElementById("m"), fill = document.getElementById("fill"), el = document.getElementById("el"), tg = document.getElementById("tg"), st = document.getElementById("st"), foot = document.getElementById("f");
+function save(){ try { localStorage.setItem("stowlm-prompter", JSON.stringify({i:i, fs:fs})); } catch (e) {} }
+function esc(x){ return String(x).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+function cur(){ return SCREENS[i]; }
+function render(){
+  if (i < 0) i = 0; if (i >= SCREENS.length) i = SCREENS.length - 1;
+  document.documentElement.style.setProperty("--fs", fs + "px");
+  var s = cur(), h = "";
+  if (s.kind === "keys") {
+    h = '<div class="top"><b>StowLM voice-over teleprompter</b><span>' + (SCREENS.length - 1) + ' screens follow</span></div>' +
+      '<div class="keys" style="margin-top:28px">' + s.html + '</div>';
+    foot.style.visibility = "hidden";
+  } else {
+    h = '<div class="top"><b>' + esc(s.label) + '</b><span>' + esc(s.title) + '</span><span>Save as <span class="file">' + esc(s.file) + '</span></span></div>' +
+      '<div class="top" style="margin-top:6px"><span>Target <b>' + s.target.toFixed(1) + ' s</b> (video ' + s.video + ' s)</span><span>' + s.words + ' words &asymp; <b>' + s.est.toFixed(1) + ' s</b> at 2.4 words/s</span></div>' +
+      '<p class="line">' + esc(s.line) + '</p>' +
+      (s.delivery ? '<p class="delivery">Delivery: ' + esc(s.delivery) + '</p>' : '');
+    s.notes.forEach(function(n){ h += '<p class="note">' + esc(n) + '</p>'; });
+    s.hints.forEach(function(n){ h += '<p class="hint">If over time: ' + esc(n) + '</p>'; });
+    foot.style.visibility = "visible";
+  }
+  m.innerHTML = h; m.className = mirror ? "mirror" : ""; document.body.className = light ? "light" : "";
+  resetTimer(); save();
+}
+function elapsed(){ return acc + (t0 === null ? 0 : (performance.now() - t0) / 1000); }
+function tick(){
+  var s = cur(); if (!s.target) return;
+  var e = elapsed(), p = e / s.target;
+  fill.style.width = Math.min(p, 1) * 100 + "%";
+  fill.className = "fill" + (p > 1 ? " red" : p > 0.9 ? " amber" : "");
+  el.textContent = e.toFixed(1); tg.textContent = s.target.toFixed(1);
+  st.textContent = t0 === null ? (e > 0 ? "Paused. Space to resume, R to reset" : "Space to start the timer") : (p > 1 ? "Over time" : "Recording...");
+  if (t0 !== null) raf = requestAnimationFrame(tick);
+}
+function toggle(){ if (t0 === null) { t0 = performance.now(); tick(); } else { acc = elapsed(); t0 = null; cancelAnimationFrame(raf); tick(); } }
+function resetTimer(){ t0 = null; acc = 0; cancelAnimationFrame(raf); tick(); }
+document.addEventListener("keydown", function(ev){
+  var k = ev.key;
+  if (k === "ArrowRight" || k === "ArrowDown" || k === "PageDown" || k === "Enter") { i++; render(); }
+  else if (k === "ArrowLeft" || k === "ArrowUp" || k === "PageUp") { i--; render(); }
+  else if (k === " ") { toggle(); }
+  else if (k === "r" || k === "R") { resetTimer(); }
+  else if (k === "+" || k === "=") { fs = Math.min(fs + 6, 160); render(); }
+  else if (k === "-" || k === "_") { fs = Math.max(fs - 6, 24); render(); }
+  else if (k === "m" || k === "M") { mirror = !mirror; render(); }
+  else if (k === "d" || k === "D") { light = !light; render(); }
+  else return;
+  ev.preventDefault();
+});
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "answer": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.0665736660012044,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00119425",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "fd230e1ac79a75f87a52af863e32ce2be3d0bc561a0053e72ca91ebdbe4f83a8",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "a4e3ac7a-66c9-4abe-9b1c-ec7e7395bee1"
+  },
+  "parser_latency_s": 1.0665547089884058,
+  "script": "Planner instruction: Radio: cover must share one port in hold and on deck. Apply this throughout loading.",
+  "source_id": "reader-150a0f295ae9473a",
+  "started_utc": "2026-11-01T01:31:17.707126+00:00",
+  "status": "complete"
+}

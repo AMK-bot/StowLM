@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StowLM Planner</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/planner.css">
+<link rel="stylesheet" href="/planner-bayplan.css">
+<link rel="stylesheet" href="/planner-intake.css">
+<link rel="stylesheet" href="/planner-instruct.css">
+<link rel="stylesheet" href="/planner-plan.css">
+<link rel="stylesheet" href="/planner-stress.css">
+<link rel="stylesheet" href="/planner-copilot.css">
+<link rel="stylesheet" href="/planner-handover.css">
+<link rel="stylesheet" href="/planner-evidence.css">
+<link rel="stylesheet" href="/planner-impact.css">
+<!-- Functional app (?live=1): live stylesheets stay off (media="not all") unless the shell runs in live mode. -->
+<link rel="stylesheet" href="/planner-live.css" media="not all" data-live-css>
+<link rel="stylesheet" href="/planner-live-intake.css" media="not all" data-live-css>
+<link rel="stylesheet" href="/planner-live-instruct.css" media="not all" data-live-css>
+<!-- Deferred, run in order: the pacing table, the bay-plan component, the load list, the shell (window.Planner), then the steps. -->
+<script src="/studio-pacing.js" defer></script>
+<script src="/planner-bayplan.js" defer></script>
+<script src="/planner-loadlist.js" defer></script>
+<script src="/planner.js" defer></script>
+<script src="/planner-voyage.js" defer></script>
+<script src="/planner-intake.js" defer></script>
+<script src="/planner-instruct.js" defer></script>
+<script src="/planner-plan.js" defer></script>
+<script src="/planner-stress.js" defer></script>
+<script src="/planner-copilot.js" defer></script>
+<script src="/planner-handover.js" defer></script>
+<script src="/planner-evidence.js" defer></script>
+<script src="/planner-impact.js" defer></script>
+<!-- Functional app stages (mode 'live'): the shell ignores them in the Demo app. -->
+<script src="/planner-live-voyage.js" defer></script>
+<script src="/planner-live-intake.js" defer></script>
+<script src="/planner-live-instruct.js" defer></script>
+<script src="/planner-live-plan.js" defer></script>
+<script src="/planner-live-review.js" defer></script>
+</head>
+<body>
+<div id="pl-app">
+  <header id="pl-header">
+    <div class="pl-call">
+      <b id="pl-call-title">Laem Chabang · call 412</b>
+      <span id="pl-call-sub">Synthetic feeder · simulated port</span>
+    </div>
+    <!-- Demo app label (functional-app CONTRACT.md): absolutely placed, so the header controls keep their positions. -->
+    <div class="pl-demo-tag" id="pl-demo-tag">
+      <span class="pl-demo-badge" title="Replays a stored Engine 0.13.0 plan, computed on 2 Nov 2026 (recheck status shown with the plan), and recorded AI answers">Demo app</span>
+      <span class="pl-demo-line">Replays a stored Engine 0.13.0 plan, computed on 2 Nov 2026 (recheck status shown with the plan), and recorded AI answers</span>
+      <span class="pl-demo-short">stored plan and recorded answers; checks you trigger run live</span>
+      <a class="pl-demo-link" href="/functional">Open the Functional app</a>
+    </div>
+    <div class="pl-seg pl-nav" id="pl-nav" role="tablist" aria-label="Views" hidden>
+      <button type="button" data-view="plan" class="on">Plan</button>
+      <button type="button" data-view="evidence">Evaluation</button>
+      <button type="button" data-view="impact">Forward pilot</button>
+    </div>
+    <div class="pl-head-right">
+      <span class="pl-chip actor" style="--c:var(--pl-c-reader)" title="StowLM Reader: fine-tuned Muse Glimmer 30B, loaded on this laptop">StowLM Reader · on this laptop</span>
+      <button type="button" class="pl-icon-btn" id="pl-bell" title="Radio calls" aria-label="Radio calls"></button>
+    </div>
+  </header>
+
+  <aside id="pl-left" aria-label="Inputs">
+    <div class="pl-inputs" id="pl-inputs">
+      <div class="pl-col-title"><b>Inputs</b><span id="pl-inputs-sum"></span></div>
+      <div id="pl-sections"></div>
+    </div>
+    <div class="pl-llview" id="pl-llview" hidden>
+      <div class="pl-col-title"><button type="button" class="pl-btn ghost pl-back" id="pl-ll-back">Inputs</button></div>
+      <div id="pl-loadlist"></div>
+    </div>
+  </aside>
+
+  <main id="pl-center" aria-label="The plan">
+    <div class="pl-legend" id="pl-legend" aria-label="Legend"></div>
+    <div class="pl-result" id="pl-result" hidden></div>
+    <div id="pl-bay" aria-label="Bay plan"></div>
+    <section class="pl-hero" id="pl-hero" aria-label="Generate plan">
+      <div class="pl-hero-card">
+        <h2>Generate the load plan</h2>
+        <p class="pl-hero-sub">Engine 0.13.0 plans the fewest extra crane lifts; the full checker decides</p>
+        <ul class="pl-hero-chips" id="pl-hero-chips"></ul>
+        <button type="button" class="pl-btn primary pl-generate" id="pl-generate" disabled>Generate plan</button>
+        <p class="pl-hero-why" id="pl-hero-why"></p>
+      </div>
+    </section>
+    <div class="pl-stamp" id="pl-stamp" hidden></div>
+    <section class="pl-sheet" id="pl-sheet" hidden aria-label="Sheet">
+      <header class="pl-sheet-head"><b id="pl-sheet-title"></b><button type="button" class="pl-icon-btn" id="pl-sheet-close" aria-label="Close and return to the plan" title="Back to the plan"></button></header>
+      <div class="pl-sheet-body" id="pl-sheet-body"></div>
+    </section>
+  </main>
+
+  <aside id="pl-right" aria-label="Review">
+    <div class="pl-tabs" id="pl-tabs" role="tablist" aria-label="Review"></div>
+    <div id="pl-panels"></div>
+    <div class="pl-review-lock" id="pl-review-lock"><b>Review</b><span>Generate a plan first. Then check it, try to break it, ask the copilot and export it.</span></div>
+  </aside>
+
+  <footer id="pl-status" aria-label="Ship condition">
+    <div class="pl-meters" id="pl-meters"></div>
+    <div class="pl-scrub" id="pl-scrub" hidden><span id="pl-scrub-label">Move 0 of 0</span><input type="range" id="pl-scrub-range" min="0" max="0" value="0" step="1" aria-label="Move"></div>
+  </footer>
+
+  <section id="pl-report" hidden aria-label="Reports"><div class="pl-report-inner" id="pl-report-inner"></div></section>
+</div>
+<div id="pl-toasts" aria-live="polite"></div>
+<div id="pl-cursor" aria-hidden="true"><svg viewBox="0 0 22 28"><path d="M2.5 1.8v20.6l5.3-5.1 3.4 8 3.6-1.5-3.3-7.9h7.3z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "measurement": "measured",
+  "map": {
+    "path": "experiments/mvp/corpus/val/tiny/feeder_1700/random_yard/seed-020000008.json",
+    "sha256": "37c8c1b1ba1920ef4aefcf71b44caec7b56d03a4ce1d2b14059b9405c6456d64"
+  },
+  "boxes": 3,
+  "calls": 1000,
+  "mean_s": 2.896503894589841e-06,
+  "max_s": 3.658398054540157e-05,
+  "load": {
+    "mask": 4095,
+    "load1": 54.37,
+    "t": 1793579097
+  },
+  "result": {
+    "in_envelope": true,
+    "size_class": "tiny",
+    "reasons": [],
+    "numbers": {
+      "boxes_to_load": 3,
+      "box_limit": 195,
+      "physical_cell_demand": 3,
+      "physical_cell_capacity": 6,
+      "physical_cell_fill": 0.5,
+      "fill_limit": 0.7,
+      "onboard_boxes": 0,
+      "loading_calls": 1,
+      "discharge_boxes": 0,
+      "ship": "feeder_1700",
+      "stage": "A"
+    }
+  }
+}

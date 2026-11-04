@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "unsupported",
+      "reason": "unknown cover reference",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 7920,
+    "audio_seconds": 7.92,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00035",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "320b035a82a74f3d85fbb820d8d54e73",
+    "session_id": "voyager/transcribe/26785ACDE471452583594D2E92B84BDD"
+  },
+  "asr_latency_s": 1.528422374976799,
+  "audio_sha256": "11f7d7eca9acde651aa60a0970278e4de8d017e188487ddff8354735239917c6",
+  "canonical": {
+    "refusal": {
+      "code": "unsupported",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "clean",
+  "end_to_end_s": 4.617632457986474,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00327375",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "5e69252ceba150e352e218a85d5bc86850166d4ecfe237d56eca4fa7359f5602",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "e3dcddcb-42a9-4916-9c3b-8973391deaab"
+  },
+  "parser_latency_s": 3.000536999956239,
+  "script": "For this loading call, Radio: cover must share one port in hold and on deck. This is mandatory.",
+  "source_id": "reader-09189b48b686c53b",
+  "started_utc": "2026-11-01T01:32:41.757653+00:00",
+  "status": "complete",
+  "transcript": "For this loading call, radio cover must share one port in hold and on deck. This is mandatory."
+}

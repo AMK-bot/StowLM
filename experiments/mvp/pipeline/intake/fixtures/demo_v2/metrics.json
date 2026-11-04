@@ -1,0 +1,141 @@
+{
+  "label": "measured",
+  "split": "demo_v2",
+  "reading_sha256": "baee5098ed9f887bb44beb73d31975238dd9fc2c0a0f79902879b2b4d915e241",
+  "before_answers": {
+    "fields_correct": 216,
+    "fields_total": 269,
+    "fields_accepted": 216,
+    "field_accuracy": 0.8029739776951673,
+    "rows_exact": 3,
+    "rows_total": 13,
+    "row_exact_accuracy": 0.23076923076923078,
+    "silent_wrong_values": 0
+  },
+  "after_answers": {
+    "fields_correct": 269,
+    "fields_total": 269,
+    "fields_accepted": 269,
+    "field_accuracy": 1.0,
+    "rows_exact": 13,
+    "rows_total": 13,
+    "row_exact_accuracy": 1.0,
+    "silent_wrong_values": 0
+  },
+  "traps_caught": 7,
+  "traps_total": 7,
+  "traps": [
+    {
+      "trap": {
+        "kind": "conflict_between_documents",
+        "row_id": "QZXU0000009",
+        "field": "pod",
+        "expected": "question_or_rejection",
+        "reason": "cross_document_conflict"
+      },
+      "caught": true,
+      "questions": [
+        "QZXU0000009:pod:unverified_transcription"
+      ]
+    },
+    {
+      "trap": {
+        "kind": "missing_vgm",
+        "row_id": "QZXU0000014",
+        "field": "gross_mass_kg",
+        "expected": "question_or_rejection",
+        "reason": "missing_vgm"
+      },
+      "caught": true,
+      "questions": [
+        "QZXU0000014:gross_mass_kg:unsupported_source"
+      ]
+    },
+    {
+      "trap": {
+        "kind": "unknown_un",
+        "row_id": "QZXU0000020",
+        "field": "dg",
+        "expected": "question_or_rejection",
+        "reason": "unknown_un_number"
+      },
+      "caught": true,
+      "questions": [
+        "QZXU0000020:dg.un_number:unsupported_source",
+        "QZXU0000020:dg.shipment_provenance:missing_field",
+        "QZXU0000020:dg:unknown_un"
+      ]
+    },
+    {
+      "trap": {
+        "kind": "impossible_weight",
+        "row_id": "QZXU0000035",
+        "field": "gross_mass_kg",
+        "expected": "question_or_rejection",
+        "reason": "invalid_container"
+      },
+      "caught": true,
+      "questions": [
+        "QZXU0000035:gross_mass_kg:container_validation",
+        "QZXU0000035:gross_mass_kg:ship_capability"
+      ]
+    },
+    {
+      "trap": {
+        "kind": "reefer_without_setpoint",
+        "row_id": "QZXU0000098",
+        "field": "reefer_setpoint_c",
+        "expected": "question_or_rejection",
+        "reason": "missing_reefer_setpoint"
+      },
+      "caught": true,
+      "questions": [
+        "QZXU0000098:reefer_setpoint_c:unsupported_source",
+        "QZXU0000098:reefer_setpoint_c:missing_reefer_setpoint"
+      ]
+    },
+    {
+      "trap": {
+        "kind": "port_outside_rotation",
+        "row_id": "QZXU0000040",
+        "field": "pod",
+        "expected": "question_or_rejection",
+        "reason": "pod_not_on_rotation"
+      },
+      "caught": true,
+      "questions": [
+        "QZXU0000040:pod:unsupported_source",
+        "QZXU0000040:pod:pod_not_on_rotation"
+      ]
+    },
+    {
+      "trap": {
+        "kind": "duplicate_id",
+        "row_id": "QZXU0000056",
+        "field": "id",
+        "expected": "question_or_rejection",
+        "reason": "duplicate_id"
+      },
+      "caught": true,
+      "questions": [
+        "QZXU0000056:id:unverified_transcription",
+        "QZXU0000056:id:duplicate_id"
+      ]
+    }
+  ],
+  "assembled_sha256_equals_base": true,
+  "reading_wall_s": 46.884747125033755,
+  "reading_cost_usd": 0.0831265,
+  "clean_controls": {
+    "rows_exact": 3,
+    "rows_total": 6
+  },
+  "fixture_design": {
+    "trap_rows": 7,
+    "rows_requiring_questions": 7,
+    "safe_row_exact_ceiling_before_answers": 6,
+    "source": "expected.json traps; every planted trap requires a question or rejection"
+  },
+  "offline_validation_wall_s": 1.4730618330067955,
+  "status": "complete"
+}

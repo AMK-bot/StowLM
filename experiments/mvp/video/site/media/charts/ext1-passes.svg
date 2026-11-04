@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1260" viewBox="0 0 1320 1260" role="img" aria-labelledby="title desc">
+<title id="title">Envelope full-checker passes: original and fresh extension</title>
+<desc id="desc">held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim. fresh held-out extension, run after the freeze; not the pre-registered sealed claim. SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif} line,rect,circle,path{vector-effect:non-scaling-stroke}</style>
+<rect width="1320" height="1260" fill="#ffffff"/>
+<text x="40" y="46" font-size="29" fill="#17212b" text-anchor="start" font-weight="bold">Envelope full-checker passes: original and fresh extension</text>
+<text x="40" y="82" font-size="16" fill="#17212b" text-anchor="start" font-weight="normal">Synthetic ships and cargo, simulated port · planning step from a clean load list</text>
+<text x="40" y="109" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">3.1 on frozen v3 (a11b4202…); ext-1 on v4 (acf2f275…), planning code byte-identical</text>
+<circle cx="48" cy="145" r="6" fill="#0072b2"/>
+<text x="64" y="151" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">Pipeline (no voyage instruction)</text>
+<rect x="380" y="140" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="399" y="151" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">Simple two-step planner</text>
+<text x="40" y="191" font-size="16" fill="#17212b" text-anchor="start" font-weight="bold">Separate experiments / secondary sum</text>
+<text x="960" y="191" font-size="15" fill="#17212b" text-anchor="start" font-weight="bold">Passes / maps · n · exact 95% interval</text>
+<line x1="390.0" y1="210" x2="390.0" y2="730" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="390.0" y="755" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">0</text>
+<line x1="496.0" y1="210" x2="496.0" y2="730" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="496.0" y="755" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">20</text>
+<line x1="602.0" y1="210" x2="602.0" y2="730" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="602.0" y="755" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">40</text>
+<line x1="708.0" y1="210" x2="708.0" y2="730" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="708.0" y="755" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">60</text>
+<line x1="814.0" y1="210" x2="814.0" y2="730" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="814.0" y="755" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">80</text>
+<line x1="920.0" y1="210" x2="920.0" y2="730" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="920.0" y="755" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">100</text>
+<line x1="390" y1="730" x2="920" y2="730" stroke="#657487" stroke-width="1"/>
+<text x="655.0" y="785" font-size="17" fill="#17212b" text-anchor="middle" font-weight="normal">Full-checker pass rate (%)</text>
+<g id="passes-original_3_1">
+<text x="40" y="246" font-size="21" fill="#17212b" text-anchor="start" font-weight="bold">Original 3.1</text>
+<line x1="844.4889932070614" y1="232" x2="920.0" y2="232" stroke="#0072b2" stroke-width="3"/>
+<line x1="844.4889932070614" y1="226" x2="844.4889932070614" y2="238" stroke="#0072b2" stroke-width="2"/>
+<line x1="920.0" y1="226" x2="920.0" y2="238" stroke="#0072b2" stroke-width="2"/>
+<circle cx="920.0" cy="232" r="6" fill="#0072b2"/>
+<text x="960" y="237" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">24/24 · n = 24 · 85.8–100.0%</text>
+<line x1="390.0" y1="258" x2="465.51100679293864" y2="258" stroke="#b54700" stroke-width="3"/>
+<line x1="390.0" y1="252" x2="390.0" y2="264" stroke="#b54700" stroke-width="2"/>
+<line x1="465.51100679293864" y1="252" x2="465.51100679293864" y2="264" stroke="#b54700" stroke-width="2"/>
+<rect x="385.0" y="253" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="263" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">0/24 · n = 24 · 0.0–14.2%</text>
+<text x="40" y="307" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim</text>
+</g>
+<g id="passes-ext1">
+<text x="40" y="416" font-size="21" fill="#17212b" text-anchor="start" font-weight="bold">Fresh Ext-1</text>
+<line x1="844.4889932070614" y1="402" x2="920.0" y2="402" stroke="#0072b2" stroke-width="3"/>
+<line x1="844.4889932070614" y1="396" x2="844.4889932070614" y2="408" stroke="#0072b2" stroke-width="2"/>
+<line x1="920.0" y1="396" x2="920.0" y2="408" stroke="#0072b2" stroke-width="2"/>
+<circle cx="920.0" cy="402" r="6" fill="#0072b2"/>
+<text x="960" y="407" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">24/24 · n = 24 · 85.8–100.0%</text>
+<line x1="390.55880679609896" y1="428" x2="501.93689223219576" y2="428" stroke="#b54700" stroke-width="3"/>
+<line x1="390.55880679609896" y1="422" x2="390.55880679609896" y2="434" stroke="#b54700" stroke-width="2"/>
+<line x1="501.93689223219576" y1="422" x2="501.93689223219576" y2="434" stroke="#b54700" stroke-width="2"/>
+<rect x="407.0833333333333" y="423" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="433" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">1/24 · n = 24 · 0.1–21.1%</text>
+<text x="40" y="477" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">fresh held-out extension, run after the freeze; not the pre-registered sealed claim</text>
+</g>
+<line x1="40" y1="552" x2="1280" y2="552" stroke="#cbd5e1" stroke-width="1"/>
+<text x="40" y="580" font-size="16" fill="#17212b" text-anchor="start" font-weight="bold">Secondary description of the two completed experiments above</text>
+<g id="passes-secondary_pooled">
+<text x="40" y="636" font-size="21" fill="#17212b" text-anchor="start" font-weight="bold">SECONDARY pooled</text>
+<line x1="880.7944237659415" y1="622" x2="920.0" y2="622" stroke="#0072b2" stroke-width="3"/>
+<line x1="880.7944237659415" y1="616" x2="880.7944237659415" y2="628" stroke="#0072b2" stroke-width="2"/>
+<line x1="920.0" y1="616" x2="920.0" y2="628" stroke="#0072b2" stroke-width="2"/>
+<circle cx="920.0" cy="622" r="6" fill="#0072b2"/>
+<text x="960" y="627" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">48/48 · n = 48 · 92.6–100.0%</text>
+<line x1="390.27947708431424" y1="648" x2="448.6689651143707" y2="648" stroke="#b54700" stroke-width="3"/>
+<line x1="390.27947708431424" y1="642" x2="390.27947708431424" y2="654" stroke="#b54700" stroke-width="2"/>
+<line x1="448.6689651143707" y1="642" x2="448.6689651143707" y2="654" stroke="#b54700" stroke-width="2"/>
+<rect x="396.0416666666667" y="643" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="653" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">1/48 · n = 48 · 0.1–11.1%</text>
+<text x="40" y="697" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim</text>
+</g>
+<text x="40" y="821" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Dots / squares show observed rates; bars show recorded exact two-sided Clopper–Pearson 95% intervals.</text>
+<text x="40" y="849" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Pass means L0: full checker and completion. Relaxed plans are not passes. All registered maps remain in each denominator.</text>
+<text x="40" y="877" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Two-step: a simple two-step planner, modelled from one field expert&#x27;s description.</text>
+<text x="40" y="919" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Envelope: up to 195 boxes in a half-ship section of 500–800 TEU feeder ships, at most 70% of that section; empty section on arrival, one loading</text>
+<text x="40" y="941" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">call. Other bays hold fixed synthetic cargo.</text>
+<text x="40" y="972" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Confirmation is exact expected-rule match, not a human planner confirmation. These are templated sentences.</text>
+<text x="40" y="1003" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">SECONDARY pooling combines completed 3.1 and ext-1 envelope maps only; it is not one experiment. No tiny/small maps or interrupted attempts enter</text>
+<text x="40" y="1025" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">the sum.</text>
+<text x="40" y="1056" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Same synthetic generator family, not new voyage types, independent replication, or recovery of a sealed claim.</text>
+<text x="40" y="1091" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Two earlier attempts on the same maps stopped early when our own frozen-code guard tripped. In the first, a test rewrote a pinned fixture; in the</text>
+<text x="40" y="1113" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">second, the engine wrote scratch files inside its pinned folder. No planning code changed. They completed 36 and 91 rows; both are published as</text>
+<text x="40" y="1135" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">they are and not pooled with the final run. Where the same rows ran again in the final run, attempt 1 matched the final run on 36 of the 38 rows</text>
+<text x="40" y="1157" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">it opened (status and lifts; 37 of 38 on verdict alone) and attempt 2 on 91 of 91, reported separately.</text>
+<text x="40" y="1192" font-size="14" fill="#465568" text-anchor="start" font-weight="normal">Source: measurements/ext-1/FIGURES.json · recorded results only; no planning or checker rerun</text>
+<metadata id="chart-data">{&quot;chart&quot;: &quot;ext1-passes&quot;, &quot;facts&quot;: {&quot;label&quot;: &quot;fresh held-out extension, run after the freeze; not the pre-registered sealed claim&quot;, &quot;original_label&quot;: &quot;held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim&quot;, &quot;rows&quot;: [{&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;original_3_1&quot;, &quot;exact95&quot;: [0.8575264022774742, 1.0], &quot;n&quot;: 24, &quot;passes&quot;: 24, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/separate_original_3_1/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;original_3_1&quot;, &quot;exact95&quot;: [0.0, 0.1424735977225257], &quot;n&quot;: 24, &quot;passes&quot;: 0, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/separate_original_3_1/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;}}, {&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;ext1&quot;, &quot;exact95&quot;: [0.8575264022774742, 1.0], &quot;n&quot;: 24, &quot;passes&quot;: 24, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/primary/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;ext1&quot;, &quot;exact95&quot;: [0.0010543524454697459, 0.21120168345697315], &quot;n&quot;: 24, &quot;passes&quot;: 1, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/primary/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;}}, {&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;secondary_pooled&quot;, &quot;exact95&quot;: [0.9260272146527198, 1.0], &quot;n&quot;: 48, &quot;passes&quot;: 48, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/secondary_pooled/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;secondary_pooled&quot;, &quot;exact95&quot;: [0.0005273152534231193, 0.11069616059315218], &quot;n&quot;: 48, &quot;passes&quot;: 1, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/secondary_pooled/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;}}], &quot;secondary_label&quot;: &quot;SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim&quot;}, &quot;sources&quot;: [{&quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;, &quot;sha256&quot;: &quot;3d47d1f602dc2b25cc5e69aa7d154c1a9989038aec4479897ca2ac5d58ee6627&quot;}, {&quot;path&quot;: &quot;docs/headline.md&quot;, &quot;sha256&quot;: &quot;48f8315729481c665f15807dc468911ac313ad7f71a07bad5e505573348f3d06&quot;}]}</metadata>
+</svg>

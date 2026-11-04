@@ -1,0 +1,15 @@
+{
+  "schema_version": "stowlm.copilot-hero-goal-scorer-freeze/1",
+  "created_utc": "2026-11-02T05:07:45.522583+00:00",
+  "files": {
+    "hero_goal_scores.py": "8407057580cb9f3b94e37276f3b0c3d0e1f794d3fb021cb662b260b730d265c5",
+    "test_hero_goal_scores.py": "9630d2c3b5deaa2ae71825d5041f877c986e76e3eac5a0159d321d39f018e50a",
+    "fixtures/hero-scenarios.json": "35c994769bd7d7cc67c8292276c2eb809f88f0c218f89c3cdab4f72d774ace14",
+    "fixtures/hero-scenarios-freeze.json": "a20690cd60dda42a8c91a719252333d01b34435613752b9d071224cdb257faf9"
+  },
+  "label": "Fresh semantic criteria and scoring implementation frozen before hero model calls; tests are cheap injected receipts, not native checker measurements.",
+  "offline_tests": "33 hero goal tests;91 combined hero goal and independent raw-behavior tests passed.",
+  "scope": "No prescribed route, no paid calls, no native CPU; incomplete/unavailable turns N/A; protocol repairs reported separately.",
+  "superseded_freeze": "fixtures/hero-goal-scorer-pre-warmup-audit/hero-goal-scorer-freeze.json",
+  "change_reason": "Pre-paid integration audit: hidden host warmup failure cannot count as model recovery. Require a model-visible check_plan failure bound to the selected unchanged original via matching native gauge steps/frame count/checker verdict, and raw explanation of the observed failure. No model outputs consulted."
+}

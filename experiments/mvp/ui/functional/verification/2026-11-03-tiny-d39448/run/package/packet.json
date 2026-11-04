@@ -1,0 +1,85 @@
+{
+  "schema_version": "stowlm.voyage-packet/1",
+  "packet_id": "c20261103-212953-d39448",
+  "created_utc": "2026-11-03T21:32:18.788522Z",
+  "synthetic": true,
+  "base_instance": {
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/ui/functional/calls/c20261103-212953-d39448/base-instance.json",
+    "sha256": "fb845953b24cc075a7c5a67a664b37703a38aa434da7fae92170cbe53c5f0cbc"
+  },
+  "load_list": {
+    "origin": "intake",
+    "rows": [
+      {
+        "category": "SGSIN:22G1:L:empty",
+        "dg": null,
+        "direct_delivery": false,
+        "empty": true,
+        "gross_mass_kg": 2350.0,
+        "height_m": 2.591,
+        "id": "QZXU0000009",
+        "iso_type": "22G1",
+        "length_ft": 20,
+        "max_gross_mass_kg": 30480.0,
+        "oog": null,
+        "pod": "SGSIN",
+        "pol": "THLCH",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "special_stowage": [],
+        "tare_kg": 2350.0,
+        "weight_class": "L"
+      },
+      {
+        "category": "SGSIN:22G1:M:loaded",
+        "dg": null,
+        "direct_delivery": false,
+        "empty": false,
+        "gross_mass_kg": 18165.20344448115,
+        "height_m": 2.591,
+        "id": "QZXU0000020",
+        "iso_type": "22G1",
+        "length_ft": 20,
+        "max_gross_mass_kg": 30480.0,
+        "oog": null,
+        "pod": "SGSIN",
+        "pol": "THLCH",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "special_stowage": [],
+        "tare_kg": 2350.0,
+        "weight_class": "M"
+      },
+      {
+        "category": "SGSIN:22G1:H:loaded",
+        "dg": null,
+        "direct_delivery": false,
+        "empty": false,
+        "gross_mass_kg": 20899.768219933678,
+        "height_m": 2.591,
+        "id": "QZXU0000035",
+        "iso_type": "22G1",
+        "length_ft": 20,
+        "max_gross_mass_kg": 30480.0,
+        "oog": null,
+        "pod": "SGSIN",
+        "pol": "THLCH",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "special_stowage": [],
+        "tare_kg": 2350.0,
+        "weight_class": "H"
+      }
+    ],
+    "intake_receipt_sha256": "a3c1365c3a98738a96aef856ca16425a22ac9440db09813f1aa13c06e4a6ab85"
+  },
+  "yard_state": null,
+  "standing": "",
+  "voyage_sentences": [
+    {
+      "text": "Leave Bay one empty on this call..",
+      "origin": "voice"
+    }
+  ],
+  "profile": "standard"
+}

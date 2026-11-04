@@ -1,0 +1,172 @@
+{
+  "verified_utc": "2026-11-02T03:12:09.008807+00:00",
+  "tests": {
+    "full_suite": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "0",
+      "tests": "283",
+      "time": "439.732",
+      "timestamp": "2026-11-01T21:48:59.248188-05:00",
+      "hostname": "Andamans-MacBook-Pro.local"
+    },
+    "budget_assertion_rerun": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "1",
+      "time": "0.285",
+      "timestamp": "2026-11-01T21:58:03.080740-05:00",
+      "hostname": "Andamans-MacBook-Pro.local"
+    },
+    "resolved_cases": [
+      "experiments.mvp.pipeline.runner.test_admission.test_provisional_live_cap_preserves_recorded_demo_and_budgets"
+    ],
+    "unresolved_cases": [],
+    "explanation": "The initial obsolete budget assertion was corrected. A subsequent complete 283-case runner suite passed with zero failures. Later portfolio normalization and study-metadata compatibility changes passed their focused regression suites.",
+    "new_earlier_plan_cases": 25,
+    "targeted_ladder_and_finalize_cases": 18,
+    "commands": [
+      "pytest experiments/mvp/pipeline/runner -q --junitxml=experiments/mvp/pipeline/runner/fixtures/logic3-pytest.xml",
+      "pytest experiments/mvp/pipeline/runner/test_admission.py::test_provisional_live_cap_preserves_recorded_demo_and_budgets -q -o cache_dir=experiments/mvp/pipeline/runner/cache/pytest-logic3-budget --junitxml=experiments/mvp/pipeline/runner/fixtures/logic3-budget-pytest.xml",
+      "pytest experiments/mvp/pipeline/runner --lf -q --junitxml=experiments/mvp/pipeline/runner/fixtures/logic3-rerun-pytest.xml (shared cache selected the complete 283-case suite)"
+    ],
+    "final_full_suite": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "283",
+      "time": "483.989",
+      "timestamp": "2026-11-01T21:56:38.643729-05:00",
+      "hostname": "Andamans-MacBook-Pro.local"
+    },
+    "post_suite_ladder_cases": 14,
+    "post_suite_study_finalize_cases": 43,
+    "final_registration_guard_cases": 6
+  },
+  "profile": {
+    "live_peel_proposal_s": 70,
+    "live_engine_deadline_s": 720,
+    "measurement": "projection",
+    "reason": "Nominal L3 partial allowance is 30% of 70 = 21 seconds, above the assignment loop 20-second stop; setup overhead can still prevent a trial. Only applies after L0 fails.",
+    "study_configurations_unchanged": true
+  },
+  "api": {
+    "earlier": "Optional checked no-rule runner outcome on identical instance; fresh full check once plus one intrinsic check per newly confirmed limit; no extra search.",
+    "cli": "--earlier OUTCOME.json",
+    "timing": "first_checked_wall_s and wall_s share runner-start clock; native engine wall_s retains its scope and runner_wall_s gives matching evidence duration."
+  },
+  "study": {
+    "preserved_finished_row_sha256": {
+      "3479998c6030682a72cf8ee2.json": "2fa142b5b0f764b8eb5558a50799945e80b245e3b46f94cf9b55ea67166d9a8d",
+      "c1b334b09aaca0540f9b79ea.json": "008c355ca21a5f2e328d5c573dbe7bd31c76414dddddcabeb09a04fa74864095",
+      "327ff51b41f17d55013f1a10.json": "001fba5cc0fb43a6ec89cb64ac019e71c1bfdbd657a43d63c4b006b91731b676",
+      "07227eb274ad4334137a9e38.json": "8dca7c1c46beb4f3da525327e22644949441e88b60475f2e6ecfbd84275d1afc",
+      "5f292d86cf7d9608e9d76fdb.json": "1a0d67635267f13fb4b92b8b7d368d773abee08970c0ae9655dc5cd42f7cf6f6",
+      "649556c31ede1060cf76f9a1.json": "7f1ab61709bbead8c2446de02f3a0847f28581fae902bdb6c99470dbb98b6733",
+      "2acb9e087cd720507a02ff5c.json": "fec134df8358c153b8e8390fa17fdfa318feaf20a61c7ff3e75451ff9f8fbade",
+      "c62aa13233caeaf21a83a620.json": "47540f4682146455b1ba1b8fa65429e36af41961724a12f2790bd9a66c87ad37",
+      "056d0bc52b5752080738a994.json": "702ed38197db6ca2319b5681c62da1fd77017c3cb14533a393439c66dce0f732"
+    },
+    "finished_rows_unchanged": true,
+    "activity": {
+      "updated_utc": "2026-11-02T03:12:08.282073+00:00",
+      "active": [
+        {
+          "pid": 94284,
+          "job_id": "2ebe9e6c8c90eafc0459349a"
+        },
+        {
+          "pid": 94285,
+          "job_id": "8346a8e024f0fb0b7e01d33b"
+        },
+        {
+          "pid": 97487,
+          "job_id": "e94294568be34c009fdc648d"
+        },
+        {
+          "pid": 99561,
+          "job_id": "16a94e89e6740b323ae414e3"
+        },
+        {
+          "pid": 1727,
+          "job_id": "828c43e99aac7e7be499a106"
+        },
+        {
+          "pid": 1728,
+          "job_id": "a7c539b17ac19b4e61f4f19c"
+        }
+      ],
+      "detached": [],
+      "pending": 221,
+      "expected": 256,
+      "telemetry": {
+        "observed_utc": "2026-11-02T03:12:08.276127+00:00",
+        "valid": true,
+        "load1": 46.41,
+        "enabled_cores": 12,
+        "mask": 4095,
+        "reading_age_s": 10.27620816230774,
+        "reading_t": 1793589118
+      },
+      "worker_limit": 4
+    },
+    "repair_tail_alive": true,
+    "frozen_job_payload_sha256": "f8d9bbaa2ad286b976053d5e5f02f7489555db7f30876bdaa8cde0f766a0756a",
+    "frozen_jobs_unchanged": true,
+    "source_baseline_bridge": {
+      "kind": "reviewed_source_baseline_bridge/1",
+      "from_source_sha256": "b44a90105290e54d6b749885aadc419d7d06073b1651ecf3a9d571b23b8e5c9a",
+      "to_source_sha256": "09f61cb8e8fb8b4c69709c284c7fed6d231c6a17dae97cf8f885c3622d41c157",
+      "archived_manifest_sha256": "c1f6eea3f59bece59609b625ca3e349295a840435c410cce388df724f1b67031",
+      "archived_manifest": "manifest-history/c1f6eea3f59bece59609b625ca3e349295a840435c410cce388df724f1b67031.json",
+      "recorded_utc": "2026-11-02T03:08:01.044359+00:00",
+      "job_payload_sha256": "f8d9bbaa2ad286b976053d5e5f02f7489555db7f30876bdaa8cde0f766a0756a",
+      "affected_workers": [
+        {
+          "pid": 97487,
+          "job_id": "e94294568be34c009fdc648d"
+        },
+        {
+          "pid": 99561,
+          "job_id": "16a94e89e6740b323ae414e3"
+        },
+        {
+          "pid": 1727,
+          "job_id": "828c43e99aac7e7be499a106"
+        },
+        {
+          "pid": 1728,
+          "job_id": "a7c539b17ac19b4e61f4f19c"
+        }
+      ],
+      "loaded_metadata_version_caveat": "Reviewed source-baseline compatibility bridge: affected worker metadata helpers were loaded before runner B2/B6 changes. Their frozen study configurations are unchanged; binding imports after the source gate are fresh. The source snapshot identifies the reviewed files on disk, while the metadata helper itself remains the earlier loaded version.",
+      "policy_dependencies_sha256": "4c8c2be90208e1a18d5c20cfaaec0b6b0ce9d5addb03493b8fb76673813be3e3",
+      "hatch_policy_epoch_caveat": "Reviewed logic3 hatch portfolio is a new numerical search epoch: at most three sequential strict mappings, with additive configured work per mapping. Legacy single-mapping hatch rows remain immutable and cannot be pooled with portfolio rows to calibrate profiles. A fresh quiet study is required for clean budget comparisons.",
+      "approved_reason": "Explicit executive decision: unblock idle legacy source-gate metadata helpers without signals, optimizer restarts, job/config changes, or finished-row edits."
+    },
+    "source_baseline_bridge_sha256": "1e6b6aef3d1d80e49581741ab5080a3b37a7e1890e6533af3264146b106c5992",
+    "policy_dependencies_sha256": "c13c9aa2ad8018151e0761ced14cbfe8dac0353f737821e4adc71d4d2c02b065",
+    "calibration": "Mixed single-mapping and hatch-portfolio policy epochs remain pending; the fresh-study rerun command gives a comparable current-policy cohort."
+  },
+  "source_sha256": {
+    "core.py": "32f3b842ca9b8b50ae50da9877aab7798c0265fc301122ea894da897e459ca9a",
+    "__main__.py": "a62418e09a3762a6abfeb3c31802e8561e19f3f4fe93a847defc087301594f5c",
+    "profiles.py": "b65500e581009dc94913600a8f4f3bdb2e711e7e1f1fd1492af801ff30fda02a",
+    "evidence.py": "3203139b2b6ded28b7bff4de9b886d8777b9dba326449733b9f1df16e8ed33af",
+    "profile_study.py": "836a33f63fc854cd287d512236b2355aa1c20661634a058e285b5d9825197047",
+    "test_admission.py": "3a2f9853a4564ea777a2b703af94f7f862ee42992ca1b39c5da521a183257114",
+    "test_ladder_work.py": "5fa12f569c2e72bb05df17041b729c682dda48b22a9fab2419a7c413cc634023",
+    "test_earlier_plan.py": "b77094a229713c313596cddfc8da037db97befa6174871df689984646253e704",
+    "test_profile_finalize.py": "b94fc3b0d18c3e2cde80d08ffb4b7f9982741e459ff4b965e2ead4dc99ed6f09",
+    "README.md": "d5811f2d4d0f2299df9c64826d6bd3ef90d0064a8cde569e6bf85263f112d404",
+    "profile_finalize.py": "4575b81291976c27e02c8ab0d3c16ea6245a5ed3eb1aff318938000453f4ddd3",
+    "test_profile_study.py": "e2ed928eb80bfbf976c8f5290760e98ad2bdb1d8da719b39e18f748e2f839a7e"
+  },
+  "network_calls": 0,
+  "gpu_calls": 0,
+  "spend_usd": 0
+}

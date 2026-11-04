@@ -1,0 +1,34 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 9,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "bay": 9,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.71101800003089,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00133375",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "5ba043571f91b6bc71094ea2b492d5f190d454ee88ccdb8bb9ce4861b796acde",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "aca74731-055f-4c4c-b295-80da12947b36"
+  },
+  "parser_latency_s": 1.7109983749687672,
+  "script": "ห้ามใช้เบย์เก้าในการบรรทุกตู้สินค้าทุกครั้ง",
+  "source_id": "reader-08b4d66819bbe5dd",
+  "started_utc": "2026-11-01T01:35:09.434366+00:00",
+  "status": "complete"
+}

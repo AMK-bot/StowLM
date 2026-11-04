@@ -1,0 +1,94 @@
+{
+  "arms": [
+    "pipeline",
+    "twostep",
+    "instruction"
+  ],
+  "cells": [
+    {
+      "fill_target": 60,
+      "generator": "random_yard",
+      "replicates": 3,
+      "ship": "feeder_500"
+    },
+    {
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "replicates": 3,
+      "ship": "feeder_500"
+    },
+    {
+      "fill_target": 70,
+      "generator": "random_yard",
+      "replicates": 3,
+      "ship": "feeder_500"
+    },
+    {
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "replicates": 3,
+      "ship": "feeder_500"
+    },
+    {
+      "fill_target": 60,
+      "generator": "random_yard",
+      "replicates": 3,
+      "ship": "feeder_800"
+    },
+    {
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "replicates": 3,
+      "ship": "feeder_800"
+    },
+    {
+      "fill_target": 70,
+      "generator": "random_yard",
+      "replicates": 3,
+      "ship": "feeder_800"
+    },
+    {
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "replicates": 3,
+      "ship": "feeder_800"
+    }
+  ],
+  "decision": "D320A",
+  "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim",
+  "manifest_sha256": "acf2f275efa73f45c43709f4a52807dd480390e1497f085cab11d3604265bbec",
+  "maps": 24,
+  "pooled_figure": "secondary only: complete3.1envelope24 plus ext1envelope24,48maps; component counts and epochs retained",
+  "preregistration_sha256": "ba3dcc46f4b773b484d156288d8ee5c5fe682b2fc8f4d5096ee2e37de211e206",
+  "registered_utc": "2026-11-03T03:02:27.594695+00:00",
+  "sealed_claim_eligible": false,
+  "seeds": [
+    306320000,
+    306320001,
+    306320002,
+    306320100,
+    306320101,
+    306320102,
+    306320200,
+    306320201,
+    306320202,
+    306320300,
+    306320301,
+    306320302,
+    306320400,
+    306320401,
+    306320402,
+    306320500,
+    306320501,
+    306320502,
+    306320600,
+    306320601,
+    306320602,
+    306320700,
+    306320701,
+    306320702
+  ],
+  "trials": 72,
+  "wall_times_quotable": false,
+  "workers": 4
+}

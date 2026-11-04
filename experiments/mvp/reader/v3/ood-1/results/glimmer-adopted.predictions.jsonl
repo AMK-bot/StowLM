@@ -1,0 +1,100 @@
+{"id": "ood1-001", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}"}
+{"id": "ood1-002", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":13}}"}
+{"id": "ood1-003", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}"}
+{"id": "ood1-004", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-005", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":31}}"}
+{"id": "ood1-006", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":17}}"}
+{"id": "ood1-007", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":21}}"}
+{"id": "ood1-008", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":5}}"}
+{"id": "ood1-009", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-010", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":22}}"}
+{"id": "ood1-011", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}"}
+{"id": "ood1-012", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":27}}"}
+{"id": "ood1-013", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":13}}"}
+{"id": "ood1-014", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":3}}"}
+{"id": "ood1-015", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":6}}"}
+{"id": "ood1-016", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":1}}"}
+{"id": "ood1-017", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":26}}"}
+{"id": "ood1-018", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":35}}"}
+{"id": "ood1-019", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":10}}"}
+{"id": "ood1-020", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":9,\"zone\":\"deck\",\"max_tiers\":2}}"}
+{"id": "ood1-021", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":13,\"zone\":\"hold\",\"max_tiers\":1}}"}
+{"id": "ood1-022", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":5,\"zone\":\"deck\",\"max_tiers\":3}}"}
+{"id": "ood1-023", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"hold\",\"max_tiers\":3}}"}
+{"id": "ood1-024", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"deck\",\"max_tiers\":4}}"}
+{"id": "ood1-025", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":21,\"zone\":\"hold\",\"max_tiers\":1}}"}
+{"id": "ood1-026", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":17,\"zone\":\"deck\",\"max_tiers\":2}}"}
+{"id": "ood1-027", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":10,\"zone\":\"deck\",\"max_tiers\":0}}"}
+{"id": "ood1-028", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":9,\"zone\":\"hold\",\"max_tiers\":0}}"}
+{"id": "ood1-029", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":25,\"zone\":\"hold\",\"max_tiers\":2}}"}
+{"id": "ood1-030", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":29,\"zone\":\"deck\",\"max_tiers\":3}}"}
+{"id": "ood1-031", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":11,\"zone\":\"deck\",\"max_tiers\":4}}"}
+{"id": "ood1-032", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"deck\",\"max_tiers\":3}}"}
+{"id": "ood1-033", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":15,\"zone\":\"deck\",\"max_tiers\":2}}"}
+{"id": "ood1-034", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"hold\",\"max_tiers\":2}}"}
+{"id": "ood1-035", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":7,\"zone\":\"deck\",\"max_tiers\":1}}"}
+{"id": "ood1-036", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":33,\"zone\":\"hold\",\"max_tiers\":2}}"}
+{"id": "ood1-037", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":14,\"zone\":\"deck\",\"max_tiers\":3}}"}
+{"id": "ood1-038", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":1,\"zone\":\"hold\",\"max_tiers\":2}}"}
+{"id": "ood1-039", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":2,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-040", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":9}}}"}
+{"id": "ood1-041", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":1,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-042", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"6.1\",\"min_bays\":2,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-043", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":11}}}"}
+{"id": "ood1-044", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.1\",\"min_bays\":4,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-045", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"1\",\"min_bays\":5,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-046", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"5.1\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":15}}}"}
+{"id": "ood1-047", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"6.1\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-048", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.1\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":21}}}"}
+{"id": "ood1-049", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.3\",\"min_bays\":1,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-050", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}"}
+{"id": "ood1-051", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"7\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":9}}}"}
+{"id": "ood1-052", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"4.1\",\"min_bays\":1,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-053", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-054", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"5.2\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":13}}}"}
+{"id": "ood1-055", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":1,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-056", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":2,\"away_from\":{\"kind\":\"accommodation\"}}}"}
+{"id": "ood1-057", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-058", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-059", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-060", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-061", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-062", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-063", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-064", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-065", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-066", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}"}
+{"id": "ood1-067", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}"}
+{"id": "ood1-068", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}"}
+{"id": "ood1-069", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":13,\"zone\":\"hold\",\"max_tiers\":2}}"}
+{"id": "ood1-070", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-071", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}"}
+{"id": "ood1-072", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-073", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}"}
+{"id": "ood1-074", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":9}}}"}
+{"id": "ood1-075", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-076", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-077", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}"}
+{"id": "ood1-078", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":9,\"zone\":\"hold\",\"max_tiers\":2}}"}
+{"id": "ood1-079", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-080", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-081", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-082", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":13,\"zone\":\"hold\",\"max_tiers\":3}}"}
+{"id": "ood1-083", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-084", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"hold\",\"max_tiers\":4}}"}
+{"id": "ood1-085", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}"}
+{"id": "ood1-086", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}"}
+{"id": "ood1-087", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"The instruction would relax a constraint.\"}}"}
+{"id": "ood1-088", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"The instruction would relax a constraint.\"}}"}
+{"id": "ood1-089", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"The instruction would relax a constraint.\"}}"}
+{"id": "ood1-090", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"The instruction would relax a constraint.\"}}"}
+{"id": "ood1-091", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"The instruction would relax a constraint.\"}}"}
+{"id": "ood1-092", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"The instruction would relax a constraint.\"}}"}
+{"id": "ood1-093", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"The instruction would relax a constraint.\"}}"}
+{"id": "ood1-094", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"The instruction would relax a constraint.\"}}"}
+{"id": "ood1-095", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}"}
+{"id": "ood1-096", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}"}
+{"id": "ood1-097", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}"}
+{"id": "ood1-098", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}"}
+{"id": "ood1-099", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}"}
+{"id": "ood1-100", "prediction": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}"}

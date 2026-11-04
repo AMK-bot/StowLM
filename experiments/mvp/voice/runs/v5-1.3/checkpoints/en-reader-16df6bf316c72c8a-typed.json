@@ -1,0 +1,32 @@
+{
+  "answer": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.4102400420233607,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0013285",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "f19a3f569fc99d9e3743f3c3f7eac655f764d23fc8ea74946915b67b796a15a3",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "ee573b1e-a8d6-41a8-a19b-e2c14b0a949f"
+  },
+  "parser_latency_s": 1.4102213750011288,
+  "script": "Planner instruction: A physical cover and its hold space must serve the same single discharge port. This is mandatory.",
+  "source_id": "reader-16df6bf316c72c8a",
+  "started_utc": "2026-11-01T01:31:18.775348+00:00",
+  "status": "complete"
+}

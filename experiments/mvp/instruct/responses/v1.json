@@ -1,0 +1,488 @@
+{
+ "summary": {
+  "intent_accuracy": "15/15",
+  "refusal_correct": "5/5",
+  "refusal_code_match": "5/5",
+  "false_constraints_on_refuse_cases": 0,
+  "false_refusals": 0,
+  "thai_english": "3/3",
+  "overall": "20/20",
+  "parser_errors": 0,
+  "cost_usd": "0.08860090"
+ },
+ "rows": [
+  {
+   "id": "t01",
+   "kind": "paraphrase",
+   "sentence": "Crane 3 is down, don't load anything into bay 14.",
+   "expected": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 14
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 14
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.00239925",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"close_bay\",\"bay\":14}}"
+  },
+  {
+   "id": "t02",
+   "kind": "paraphrase",
+   "sentence": "Bay 03 is off-limits this call.",
+   "expected": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 3
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 3
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.0027755",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"close_bay\",\"bay\":3}}"
+  },
+  {
+   "id": "t03",
+   "kind": "paraphrase",
+   "sentence": "We lost the gantry at that end, so bay 1 cannot be worked.",
+   "expected": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 1
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 1
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.0035705",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"close_bay\",\"bay\":1}}"
+  },
+  {
+   "id": "t04",
+   "kind": "thai-english",
+   "sentence": "เครนเสีย bay 10 ห้ามโหลดนะ",
+   "expected": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 10
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 10
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.0049085",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"close_bay\",\"bay\":10}}"
+  },
+  {
+   "id": "t05",
+   "kind": "paraphrase",
+   "sentence": "Don't put anything in bay 26, the reefer plugs there are dead.",
+   "expected": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 26
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 26
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.004721",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"close_bay\",\"bay\":26}}"
+  },
+  {
+   "id": "t06",
+   "kind": "paraphrase",
+   "sentence": "Max 3 tiers on deck in bay 10.",
+   "expected": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 10,
+     "zone": "deck",
+     "max_tiers": 3
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 10,
+     "zone": "deck",
+     "max_tiers": 3
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.00348225",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":10,\"zone\":\"deck\",\"max_tiers\":3}}"
+  },
+  {
+   "id": "t07",
+   "kind": "paraphrase",
+   "sentence": "Only one tier in the hold of bay 1, the tank top is under repair.",
+   "expected": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 1,
+     "zone": "hold",
+     "max_tiers": 1
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 1,
+     "zone": "hold",
+     "max_tiers": 1
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.0037545",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":1,\"zone\":\"hold\",\"max_tiers\":1}}"
+  },
+  {
+   "id": "t08",
+   "kind": "paraphrase",
+   "sentence": "On deck, nothing above 2 high anywhere, for bridge visibility.",
+   "expected": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": null,
+     "zone": "deck",
+     "max_tiers": 2
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": null,
+     "zone": "deck",
+     "max_tiers": 2
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.00394075",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"deck\",\"max_tiers\":2}}"
+  },
+  {
+   "id": "t09",
+   "kind": "thai-english",
+   "sentence": "bay 6 ใต้ deck ให้ซ้อนได้แค่ 2 ชั้น",
+   "expected": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 6,
+     "zone": "hold",
+     "max_tiers": 2
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 6,
+     "zone": "hold",
+     "max_tiers": 2
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.00546475",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":6,\"zone\":\"hold\",\"max_tiers\":2}}"
+  },
+  {
+   "id": "t10",
+   "kind": "paraphrase",
+   "sentence": "Bay 9: deck stacks max 1 high.",
+   "expected": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 9,
+     "zone": "deck",
+     "max_tiers": 1
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 9,
+     "zone": "deck",
+     "max_tiers": 1
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.0026348",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":9,\"zone\":\"deck\",\"max_tiers\":1}}"
+  },
+  {
+   "id": "t11",
+   "kind": "paraphrase",
+   "sentence": "Keep class 3 DG away from the accommodation, at least 2 bays.",
+   "expected": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "3",
+     "min_bays": 2,
+     "away_from": {
+      "kind": "accommodation"
+     }
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "3",
+     "min_bays": 2,
+     "away_from": {
+      "kind": "accommodation"
+     }
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.00335375",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":2,\"away_from\":{\"kind\":\"accommodation\"}}}"
+  },
+  {
+   "id": "t12",
+   "kind": "paraphrase",
+   "sentence": "Flammable liquids (class 3) must be 3 bays or more from the bridge.",
+   "expected": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "3",
+     "min_bays": 3,
+     "away_from": {
+      "kind": "accommodation"
+     }
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "3",
+     "min_bays": 3,
+     "away_from": {
+      "kind": "accommodation"
+     }
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.00391425",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"}}}"
+  },
+  {
+   "id": "t13",
+   "kind": "paraphrase",
+   "sentence": "No class 5.1 within 2 bays of bay 18.",
+   "expected": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "5.1",
+     "min_bays": 2,
+     "away_from": {
+      "kind": "bay",
+      "bay": 18
+     }
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "5.1",
+     "min_bays": 2,
+     "away_from": {
+      "kind": "bay",
+      "bay": 18
+     }
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.0075345",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"5.1\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":18}}}"
+  },
+  {
+   "id": "t14",
+   "kind": "thai-english",
+   "sentence": "ตู้ DG class 8 ต้องห่างจาก accommodation อย่างน้อย 4 bay",
+   "expected": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "8",
+     "min_bays": 4,
+     "away_from": {
+      "kind": "accommodation"
+     }
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "8",
+     "min_bays": 4,
+     "away_from": {
+      "kind": "accommodation"
+     }
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.0026253",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":4,\"away_from\":{\"kind\":\"accommodation\"}}}"
+  },
+  {
+   "id": "t15",
+   "kind": "paraphrase",
+   "sentence": "Keep class 2.1 at least 1 bay clear of the house.",
+   "expected": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "2.1",
+     "min_bays": 1,
+     "away_from": {
+      "kind": "accommodation"
+     }
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "2.1",
+     "min_bays": 1,
+     "away_from": {
+      "kind": "accommodation"
+     }
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.00440225",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.1\",\"min_bays\":1,\"away_from\":{\"kind\":\"accommodation\"}}}"
+  },
+  {
+   "id": "t16",
+   "kind": "must-refuse",
+   "sentence": "You can go 6 high on deck in bay 10 today, the port allows it.",
+   "expected": {
+    "refusal": "loosening"
+   },
+   "got": {
+    "refusal": "loosening"
+   },
+   "correct": true,
+   "refusal_code_match": true,
+   "error": null,
+   "cost_usd": "0.00515825",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"loosening\",\"reason\":\"Raises a stack limit; instructions may only tighten the plan.\"}}"
+  },
+  {
+   "id": "t17",
+   "kind": "must-refuse",
+   "sentence": "Ignore the stack weight limit for bay 3, the boxes are light.",
+   "expected": {
+    "refusal": "loosening"
+   },
+   "got": {
+    "refusal": "loosening"
+   },
+   "correct": true,
+   "refusal_code_match": true,
+   "error": null,
+   "cost_usd": "0.0076038",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"loosening\",\"reason\":\"Ignores a limit; instructions may only tighten the plan.\"}}"
+  },
+  {
+   "id": "t18",
+   "kind": "must-refuse",
+   "sentence": "Keep the dangerous stuff away from there.",
+   "expected": {
+    "refusal": "ambiguous"
+   },
+   "got": {
+    "refusal": "ambiguous"
+   },
+   "correct": true,
+   "refusal_code_match": true,
+   "error": null,
+   "cost_usd": "0.0066745",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"ambiguous\",\"reason\":\"No class, distance or location is given.\"}}"
+  },
+  {
+   "id": "t19",
+   "kind": "must-refuse",
+   "sentence": "Minimise restows at Singapore please.",
+   "expected": {
+    "refusal": "unsupported"
+   },
+   "got": {
+    "refusal": "unsupported"
+   },
+   "correct": true,
+   "refusal_code_match": true,
+   "error": null,
+   "cost_usd": "0.005051",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"unsupported\",\"reason\":\"Restow minimisation is not one of the supported instruction types.\"}}"
+  },
+  {
+   "id": "t20",
+   "kind": "must-refuse (zone missing)",
+   "sentence": "max 3 tiers in bay 10",
+   "expected": {
+    "refusal": "ambiguous"
+   },
+   "got": {
+    "refusal": "ambiguous"
+   },
+   "correct": true,
+   "refusal_code_match": true,
+   "error": null,
+   "cost_usd": "0.0046315",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"ambiguous\",\"reason\":\"No zone is stated.\"}}"
+  }
+ ],
+ "job_spend_usd": "0.08860090"
+}

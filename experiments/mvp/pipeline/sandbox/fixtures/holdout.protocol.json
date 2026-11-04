@@ -1,0 +1,51 @@
+{
+  "schema": "stowlm.sandbox-holdout-protocol/1",
+  "synthetic": true,
+  "created_utc": "2026-11-02T02:32:03.594560+00:00",
+  "created_unix": 1793586723.5945852,
+  "seed": 177017,
+  "source_row": "experiments/mvp/pipeline/lattice/screening/current-v3/084ffe943b997966.json",
+  "source_row_sha256": "8bdbd7c87730875fba8d47b49c97f284bdd3147c4d91744027a9a8daaef1b567",
+  "instance_source": "experiments/mvp/strategy/fillsweep/maps/train/medium/feeder_800/f60-low/seed-192200100.json",
+  "instance_sha256": "084ffe943b9979665a16f21f613767afd5f5d0a623a1fa39eda8d299bc16730e",
+  "plan_sha256": "5db9f301b442c86848acf283b54cda44c8ad822aaa7e5dd6617a2e50de5fcb18",
+  "n_boxes": 163,
+  "different_from": [
+    {
+      "fixture": "envelope190.json",
+      "instance_sha256": "4f4cf93fbb1ac9aade754ce3942988357cfcd54ec93c8a66ee81f4901a1fc016",
+      "plan_sha256": "8d47fff76cbf4edfdd931e842ec5b1731d63889e5354579f3628508b089e8efd"
+    },
+    {
+      "fixture": "largest354.json",
+      "instance_sha256": "b3c114f37b69742632c1d181063f18e239f387402ae5f711fd3eba329b5433d6",
+      "plan_sha256": "c3d1fccee6abf1efd9b8ad6af64c4b662148b4633a5208c375b1941173286f9a"
+    },
+    {
+      "fixture": "demo_source190.json",
+      "instance_sha256": "b666025819a55058b5f534b714d36bd3ca184e7353cdf56b435efeca070468d1",
+      "plan_sha256": "b19095dce1109a80e4f1b19969206536fe2133d72eced980964573634b7aa2e8"
+    },
+    {
+      "fixture": "demo_source190.final.json",
+      "instance_sha256": "e35a5be95f8b97f97a9e9f5ee202f98f212bddef1fd80bad44ea156c441cd74c",
+      "plan_sha256": "b19095dce1109a80e4f1b19969206536fe2133d72eced980964573634b7aa2e8"
+    }
+  ],
+  "target_requests": 40,
+  "quotas": {
+    "swap": 20,
+    "empty": 20
+  },
+  "max_requests_per_box": 2,
+  "minimum_distinct_boxes": 20,
+  "selection": "Seeded permutation of all geometry/replay candidate requests; replay and current v3 fast gates only. No candidate full outcome is available during selection. No replacement after freeze.",
+  "primary": "Fresh full-check disagreement among these 40 frozen screen-cleared requests; no reused candidate verdicts.",
+  "post_outcome_policy": "No gates or features tuned from holdout full outcomes; report actual misses and rule families.",
+  "pid": 4948,
+  "native_thread_caps": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

@@ -1,0 +1,33 @@
+SYNTHETIC DOCUMENT — invented forwarder and cargo, no customer data
+From: Nida / Demo Forwarding <ops@example.invalid>
+To: Export desk <load@example.invalid>
+Subject: RE: FWD: urgent load advice / HELDOUT-BKK-117 / vessel DEMO FEEDER
+Date: Sun, 01 Nov 2026 07:35:00 +0700
+
+พี่คะ รบกวนเช็ค VGM อีกทีค่ะ — pls hold anything unclear, do not assume.
+Attached CSV is gate-in export. Photo is tally scribble from quay; PODs on it are not all in EDI.
+Abbrev: POL=load port, POD=discharge, MT=metric tonne, RF=operating reefer.
+The weight column is gross INCLUDING tare. EDI_VGM_kg preserves the scale export precision.
+QZXU0000020: VGM ยังไม่มา / certificate pending, DO NOT use last voyage weight.
+QZXU0000082: RF=yes; temperature ??? — shipper has not sent set point.
+QZXU0000009: DG desk typed UN9999; check before loading please.
+QZXU0000040: POD USLAX shown by booking; service rotation may be wrong.
+
+----- Forwarded message -----
+From: Somchai <gate@example.invalid>
+Sent: 31/10/26 18.10 ICT
+Subject: gate slips / short landed?
+As booked below. Tally and booking disagree on one destination; planner to confirm.
+QZXU0000009 // POL SGSIN > POD SGSIN // ETD 02-Nov-26
+QZXU0000014 // POL SGSIN > POD VNSGN // ETD 02-Nov-26
+QZXU0000020 // POL SGSIN > POD VNSGN // ETD 02-Nov-26
+QZXU0000035 // POL SGSIN > POD SGSIN // ETD 02-Nov-26
+QZXU0000040 // POL SGSIN > POD USLAX // ETD 02-Nov-26
+QZXU0000056 // POL SGSIN > POD VNSGN // ETD 02-Nov-26
+QZXU0000082 // POL SGSIN > POD SGSIN // ETD 02-Nov-26
+QZXU0000101 // POL SGSIN > POD VNSGN // ETD 02-Nov-26
+QZXU0000117 // POL SGSIN > POD SGSIN // ETD 02-Nov-26
+
+----- Original message -----
+Synthetic old reply: qty indicative only; final export in attachment. ขอบคุณค่ะ
+Do not treat this email as a dangerous-goods clearance.

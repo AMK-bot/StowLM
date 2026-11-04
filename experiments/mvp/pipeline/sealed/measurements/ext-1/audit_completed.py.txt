@@ -1,0 +1,184 @@
+"""Audit published aggregate reports, without maps, planners, or the recount."""
+from __future__ import annotations
+
+from collections import Counter
+import csv
+import hashlib
+import json
+import math
+from pathlib import Path
+
+from scipy.stats import beta
+from experiments.mvp.pipeline.sealed import report as protocol
+
+ROOT = Path(__file__).resolve().parents[6]
+HOME = Path(__file__).resolve().parent
+BASE = ROOT/'experiments/mvp/pipeline/sealed'
+LABEL = 'fresh held-out extension, run after the freeze; not the pre-registered sealed claim'
+
+
+def sha(path):
+    with path.open('rb') as stream:
+        return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
+def interval(k, n):
+    if not n:
+        return None
+    return [0.0 if k == 0 else float(beta.ppf(.025, k, n-k+1)),
+            1.0 if k == n else float(beta.ppf(.975, k+1, n-k))]
+
+
+def same_interval(actual, k, n):
+    expected = interval(k, n)
+    assert actual is None if expected is None else len(actual) == 2 and all(
+        math.isclose(a, b, rel_tol=0, abs_tol=2e-12) for a, b in zip(actual, expected))
+
+
+def checks(values, expected):
+    return dict(passed=sum(v is True for v in values), failed=sum(v is False for v in values),
+                unavailable=sum(v is None for v in values)+max(0, expected-len(values)))
+
+
+def arm_audit(rows, cell, expected):
+    assert len(rows) == cell['rows'] == cell['expected_maps'] == expected
+    yes = [r for r in rows if protocol.passed(r)]
+    assert cell['passes_L0'] == len(yes)
+    same_interval(cell['passes_L0_exact95'], len(yes), expected)
+    assert cell['statuses'] == dict(Counter(r['status'] for r in rows))
+    assert cell['out_of_envelope'] == sum(r['status'] == 'out_of_envelope' for r in rows)
+    relaxed = Counter(protocol._level(r.get('level')) for r in rows if r['status'] == 'relaxed_plan')
+    assert cell['relaxed_by_level'] == dict(relaxed)
+    for key in ('instruction_recheck', 'counterfactual_instruction_recheck'):
+        target = cell[key]
+        expected_checks = checks([r.get(key) for r in rows], expected)
+        assert all(target[k] == v for k, v in expected_checks.items())
+        assert target['passed_denominator'] == expected
+        same_interval(target['passed_exact95'], target['passed'], expected)
+    assert cell['reader_failures'] == sum(protocol._reader_failed(r) for r in rows)
+    assert cell['engine_failures'] == sum(protocol._engine_failed(r) for r in rows)
+    for metric in protocol.METRICS:
+        values = [r[metric] for r in yes if protocol._number(r.get(metric))]
+        observed = cell['lift_means_over_passes'][metric]
+        assert observed['n'] == len(values)
+        if values:
+            assert math.isclose(observed['mean'], sum(values)/len(values), abs_tol=1e-10)
+        else:
+            assert observed['mean'] is None
+    deadline_passes = []
+    for row in yes:
+        assert row.get('complete') is True and row.get('all_loaded') is True and row.get('replay_legal') is True
+        assert row['audit_pid'] != row.get('planning_pid') and row.get('audited_target_sha256')
+        assert row['status'] != 'relaxed_plan'
+        if row['status'] == 'deadline_exceeded':
+            assert row.get('deadline_incumbent_verified') is True
+            publication = row['deadline_publication']
+            assert 0 <= publication['published_wall_s'] <= row['hard_wall_s']
+            assert row['child_cleanup_failed'] is False
+            deadline_passes.append(row['map_id'])
+    return dict(passes=len(yes), denominator=expected, exact95=cell['passes_L0_exact95'],
+                deadline_incumbent_passes=len(deadline_passes), deadline_incumbent_map_ids=deadline_passes,
+                relaxed_by_level=dict(relaxed), statuses=cell['statuses'])
+
+
+def binding_audit(baseline, instructed, value, expected):
+    broken = {i for i, r in baseline.items() if protocol._audited_plan(r)
+              and r.get('counterfactual_instruction_recheck') is False}
+    already = {i for i, r in baseline.items() if protocol._audited_plan(r)
+               and r.get('counterfactual_instruction_recheck') is True}
+    obedient = {i for i in broken if protocol.passed(instructed[i])}
+    assert value['rule_broken_maps'] == len(broken) and set(value['rule_broken_map_ids']) == broken
+    assert value['binding_obedient_passes'] == len(obedient) and set(value['binding_obedient_map_ids']) == obedient
+    assert value['already_obeyed'] == len(already) and set(value['already_obeyed_map_ids']) == already
+    assert value['counterfactual_unavailable'] == expected-len(broken)-len(already)
+    same_interval(value['binding_obedient_exact95'], len(obedient), len(broken))
+    same_interval(value['already_obeyed_exact95'], len(already), expected)
+    diffs = {i:protocol._plan_difference(baseline[i], instructed[i]) for i in baseline}
+    assert value['plan_difference']['by_map'] == diffs
+    assert value['plan_difference']['n'] == sum(v is not None for v in diffs.values())
+    for field in ('signed_lift_change', 'already_obeyed_noise_floor'):
+        for metric in protocol.METRICS:
+            left = instructed if field == 'signed_lift_change' else {i:instructed[i] for i in already}
+            right = baseline if field == 'signed_lift_change' else {i:baseline[i] for i in already}
+            recomputed = protocol.compare(left, right, field=metric,
+                expected=expected if field == 'signed_lift_change' else len(already))
+            assert value[field][metric] == recomputed
+    return dict(binding_obedient_passes=len(obedient), rule_broken_maps=len(broken),
+                already_obeyed=len(already), counterfactual_unavailable=expected-len(broken)-len(already))
+
+
+def audit_run(name):
+    folder = BASE/'runs'/name
+    paths = {k:folder/k for k in ('report.json', 'rows.json', 'REPORT.md', 'COMPLETE.json')}
+    before = {k:sha(p) for k, p in paths.items()}
+    report = json.loads(paths['report.json'].read_text())
+    rows = json.loads(paths['rows.json'].read_text())
+    assert report['complete'] and report['population_accounted'] and report['fresh_audits_complete']
+    assert report['rows'] == report['expected_rows'] == len(rows)
+    assert report['sealed_claim_eligible'] is False and report['instruction_assignment_complete']
+    assert all(r.get('audit_verified') is True and r.get('audit_fresh_process') is True for r in rows)
+    assert not any(r['status'] in ('error', 'not_run') for r in rows)
+    envelope = [r for r in rows if r['cohort'] == 'envelope24' and r['arm'] != 'twostep_300']
+    assert len(envelope) == 72 and len({(r['map_id'], r['arm']) for r in envelope}) == 72
+    cohort = report if name == 'ext-1' else report['cohorts']['envelope24']
+    cells = {a:{r['map_id']:r for r in envelope if r['arm'] == a} for a in ('pipeline', 'instruction', 'twostep')}
+    arms = {a:arm_audit(list(v.values()), cohort['arms'][a], 24) for a, v in cells.items()}
+    binding = binding_audit(cells['pipeline'], cells['instruction'],
+        cohort['instruction'] if name == 'ext-1' else cohort['instruction_binding'], 24)
+    if name == 'ext-1':
+        assert report['label'] == LABEL and LABEL in paths['REPORT.md'].read_text()
+        assert report['verified_complete'] and not report['provisional'] and report['fresh_audited_rows'] == 72
+        assert report['wall_times_quotable'] is False and report['lift_saving_quotable'] is False
+        assert 'instruction' in report['cohorts']['envelope24']['arms']
+        for ship in ('feeder_500', 'feeder_800'):
+            for arm, values in cells.items():
+                arm_audit([r for r in values.values() if r['ship_id'] == ship], report['by_ship'][ship]['arms'][arm], 12)
+        assert set(report['instruction_types']) == set(protocol.RULE_TYPES)
+        for kind in protocol.RULE_TYPES:
+            ids = {i for i, r in cells['instruction'].items() if r['instruction_type'] == kind}
+            assert len(ids) == 6
+            arm_audit([cells['instruction'][i] for i in ids], report['instruction_types'][kind], 6)
+            binding_audit({i:cells['pipeline'][i] for i in ids}, {i:cells['instruction'][i] for i in ids},
+                          report['instruction_by_type'][kind], 6)
+        with (folder/'per-map.csv').open() as stream:
+            reader = csv.DictReader(stream)
+            required = {'map_id','cohort','arm','status','level','passed','audit_verified','audit_fresh_process',
+                        'instruction_recheck','counterfactual_instruction_recheck','manifest_sha256','label'}
+            assert required <= set(reader.fieldnames)
+            published = list(reader)
+        assert len(published) == 72
+        for row in published:
+            raw = cells[row['arm']][row['map_id']]
+            assert row['passed'] == str(protocol.passed(raw)) and row['status'] == raw['status'] and row['label'] == LABEL
+        for arm, cell in report['arms'].items():
+            assert f"{cell['passes_L0']}/24; exact95% {cell['passes_L0_exact95']}" in paths['REPORT.md'].read_text()
+    else:
+        assert report['protocol_deviation'] == 'D284' and report['post_registration'] is True
+    assert before == {k:sha(p) for k, p in paths.items()}, 'Published input bytes changed during audit'
+    return dict(verified=True, report_sha256=before['report.json'], rows_sha256=before['rows.json'],
+                report_path=paths['report.json'].relative_to(ROOT).as_posix(),
+                rows_path=paths['rows.json'].relative_to(ROOT).as_posix(),
+                arms=arms, binding=binding, source_hashes=before,
+                note='Aggregate/row/CSV consistency and published fresh-audit evidence, not a rerun of the checker or independent recount')
+
+
+def main():
+    reports = {'ext1':audit_run('ext-1'), 'final3':audit_run('final-3')}
+    evidence = dict(verified=True, scope='Both complete published reports match their unmodified fresh-audited rows; no map opened, no planner/checker run, no independent recount read',
+                    reports=reports, preregistration_sha256=sha(HOME/'PREREG.md'), discrepancies=[],
+                    independent_recount_consulted=False)
+    (HOME/'POOL-VERIFICATION.json').write_text(json.dumps(evidence, sort_keys=True, indent=2)+'\n')
+    audit = dict(evidence, registered_metrics=dict(
+        full_L0_and_exact_intervals=True, all_map_denominators=True, by_ship=True,
+        deadline_incumbents_proved_before_wall=True, relaxed_never_pass=True,
+        relaxed_levels_and_out_of_envelope=True, reader_engine_failures_by_type=True,
+        binding_overall_and_type=True, already_obeyed_and_unavailable=True,
+        instruction_rechecks=True, plan_difference=True, signed_current_and_later_lifts=True,
+        per_map_csv=True, exact_label=True, no_wall_benchmark=True),
+        presentation_additions='Secondary pooled descriptive figures and concise source-cited story figures added separately; original run report and rows retained unchanged')
+    (HOME/'REPORT-AUDIT.json').write_text(json.dumps(audit, sort_keys=True, indent=2)+'\n')
+    print(json.dumps(dict(status='VERIFIED', discrepancies=[], reports={k:dict(arms=v['arms'],binding=v['binding']) for k,v in reports.items()})))
+
+
+if __name__ == '__main__':
+    main()

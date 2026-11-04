@@ -1,0 +1,1503 @@
+[
+  {
+    "box_id": "QZXU0000478",
+    "target_slot": "0100688",
+    "static": [],
+    "securing": [
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.2560732132214936,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_racking_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.501295887995794,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.76623045646564,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4250060450679118,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_lashing_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0107430373963673,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.2560732132214936,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_racking_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.501295887995794,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.76623045646564,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4250060450679118,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_lashing_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0107430373963673,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000478",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      }
+    ],
+    "replay_legal": true,
+    "admission": {
+      "mask": 4095,
+      "load1": 38.97,
+      "t": 1793588195,
+      "age_s": 14.411207914352417
+    }
+  },
+  {
+    "box_id": "QZXU0000354",
+    "target_slot": "0100588",
+    "static": [],
+    "securing": [
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "slots": [
+          "0100582",
+          "0100584",
+          "0100586",
+          "0100588"
+        ],
+        "yard_addresses": [],
+        "measured": 1.2776182625243875,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_racking_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "slots": [
+          "0100582",
+          "0100584",
+          "0100586",
+          "0100588"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4877021309693492,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "slots": [
+          "0100582",
+          "0100584",
+          "0100586",
+          "0100588"
+        ],
+        "yard_addresses": [],
+        "measured": 1.750237801140411,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "slots": [
+          "0100582",
+          "0100584",
+          "0100586",
+          "0100588"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4405422815860531,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_lashing_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "slots": [
+          "0100582",
+          "0100584",
+          "0100586",
+          "0100588"
+        ],
+        "yard_addresses": [],
+        "measured": 1.2776182625243875,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_racking_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "slots": [
+          "0100582",
+          "0100584",
+          "0100586",
+          "0100588"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4877021309693492,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "slots": [
+          "0100582",
+          "0100584",
+          "0100586",
+          "0100588"
+        ],
+        "yard_addresses": [],
+        "measured": 1.750237801140411,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "slots": [
+          "0100582",
+          "0100584",
+          "0100586",
+          "0100588"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4405422815860531,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_lashing_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000478",
+          "QZXU0001052",
+          "QZXU0001200"
+        ],
+        "source": "departure_securing"
+      }
+    ],
+    "replay_legal": false,
+    "admission": {
+      "mask": 4095,
+      "load1": 38.81,
+      "t": 1793588215,
+      "age_s": 8.644388198852539
+    }
+  },
+  {
+    "box_id": "QZXU0000478",
+    "target_slot": "0220688",
+    "static": [],
+    "securing": [
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.2443771144272102,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_racking_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.530643169446841,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.8007566699374598,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4302775247817254,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_lashing_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0424745001950593,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.2443771144272102,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_racking_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.530643169446841,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.8007566699374598,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4302775247817254,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_lashing_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "slots": [
+          "0220682",
+          "0220684",
+          "0220686",
+          "0220688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0424745001950593,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000400",
+          "QZXU0000478",
+          "QZXU0000689",
+          "QZXU0000992"
+        ],
+        "source": "departure_securing"
+      }
+    ],
+    "replay_legal": false,
+    "admission": {
+      "mask": 4095,
+      "load1": 38.81,
+      "t": 1793588215,
+      "age_s": 19.871472120285034
+    }
+  },
+  {
+    "box_id": "QZXU0000992",
+    "target_slot": "0100688",
+    "static": [],
+    "securing": [
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.3073128003148473,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_racking_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0290129722893167,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_post_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.642572641753695,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.9324384020631706,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0108906335613013,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4975543354882073,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_lashing_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0290129722893167,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_post_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.1384884649735587,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.3073128003148473,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_racking_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0290129722893167,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_post_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.642572641753695,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.9324384020631706,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0108906335613013,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.4975543354882073,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_lashing_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.0290129722893167,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_corner_post_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      },
+      {
+        "rule_id": "iacs.member_irs.container_securing",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "slots": [
+          "0100682",
+          "0100684",
+          "0100686",
+          "0100688"
+        ],
+        "yard_addresses": [],
+        "measured": 1.1384884649735587,
+        "limit": 1.0,
+        "unit": "ratio",
+        "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+        "inherited": false,
+        "boxes": [
+          "QZXU0000354",
+          "QZXU0000415",
+          "QZXU0000992",
+          "QZXU0001113"
+        ],
+        "source": "departure_securing"
+      }
+    ],
+    "replay_legal": true,
+    "admission": {
+      "mask": 4095,
+      "load1": 38.77,
+      "t": 1793588235,
+      "age_s": 9.835071086883545
+    }
+  },
+  {
+    "box_id": "QZXU0001005",
+    "target_slot": "0220488",
+    "static": [
+      {
+        "rule_id": "expert.moves.bottom_up",
+        "message": "Stack contains an unsupported tier or gap.",
+        "measured": null,
+        "limit": null,
+        "unit": null,
+        "boxes": [
+          "QZXU0000349",
+          "QZXU0000550",
+          "QZXU0001005"
+        ],
+        "slots": [
+          "0210482",
+          "0210484",
+          "0220488"
+        ],
+        "severity": "hard"
+      },
+      {
+        "rule_id": "expert.moves.bottom_up",
+        "message": "Stack contains an unsupported tier or gap.",
+        "measured": null,
+        "limit": null,
+        "unit": null,
+        "boxes": [
+          "QZXU0000251",
+          "QZXU0000420",
+          "QZXU0001005"
+        ],
+        "slots": [
+          "0220488",
+          "0230482",
+          "0230484"
+        ],
+        "severity": "hard"
+      },
+      {
+        "rule_id": "expert.physical.size_fit",
+        "message": "Container length does not match slot footprint.",
+        "measured": null,
+        "limit": null,
+        "unit": null,
+        "boxes": [
+          "QZXU0001005"
+        ],
+        "slots": [
+          "0220488"
+        ],
+        "severity": "hard"
+      }
+    ],
+    "securing": [
+      {
+        "rule_id": "checker.missing_vessel_data",
+        "severity": "hard",
+        "call_index": 0,
+        "move_index": null,
+        "containers": [],
+        "slots": [],
+        "yard_addresses": [],
+        "measured": null,
+        "limit": null,
+        "unit": null,
+        "message": "Lashing cannot evaluate missing/invalid securing geometry: cargo length disagrees with physical supports",
+        "inherited": false,
+        "boxes": [],
+        "source": "departure_securing"
+      }
+    ],
+    "replay_legal": false,
+    "admission": {
+      "mask": 4095,
+      "load1": 38.77,
+      "t": 1793588235,
+      "age_s": 17.88962984085083
+    }
+  }
+]

@@ -1,0 +1,119 @@
+"""Offline archive tests: no experimental rows/maps or planner imports."""
+import gzip
+import hashlib
+import importlib.machinery
+import importlib.util
+import json
+import os
+from pathlib import Path
+import tempfile
+import unittest
+
+HERE = Path(__file__).resolve().parent
+loader = importlib.machinery.SourceFileLoader('ext1_archive_rows', str(HERE/'archive_rows.py.txt'))
+spec = importlib.util.spec_from_loader(loader.name, loader)
+archive = importlib.util.module_from_spec(spec)
+loader.exec_module(archive)
+
+
+class ArchiveTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+
+    def make(self, payload, chunk=1024, limit=2000):
+        source = self.root/'rows.json'
+        source.write_bytes(payload)
+        before = source.stat().st_mtime_ns
+        dest = self.root/'archive'
+        data = archive.build(source, dest, chunk_bytes=chunk, strict_limit=limit)
+        self.assertEqual(source.read_bytes(), payload)
+        self.assertEqual(source.stat().st_mtime_ns, before)
+        return source, dest, data
+
+    def rewrite_manifest(self, dest, data):
+        (dest/'manifest.json').write_text(json.dumps(data))
+
+    def test_incompressible_multivolume_exact_roundtrip_and_strict_sizes(self):
+        payload = os.urandom(10_273)
+        source, dest, data = self.make(payload)
+        self.assertEqual(len(data['volumes']), 11)
+        self.assertTrue(all(v['compressed_bytes'] < 2000 for v in data['volumes']))
+        combined = b''.join((dest/v['file']).read_bytes() for v in data['volumes'])
+        self.assertEqual(gzip.decompress(combined), payload)
+        self.assertEqual(archive.verify(dest/'manifest.json', source)['sha256'], hashlib.sha256(payload).hexdigest())
+        self.assertEqual(data['original_before'], data['original_after'])
+
+    def test_empty_and_single_byte_streams(self):
+        for index, payload in enumerate((b'', b'x')):
+            root = self.root/str(index)
+            root.mkdir()
+            source = root/'rows.json'
+            source.write_bytes(payload)
+            data = archive.build(source, root/'archive', chunk_bytes=1, strict_limit=100)
+            self.assertEqual(len(data['volumes']), 1)
+            self.assertEqual(archive.verify(root/'archive/manifest.json')['bytes'], len(payload))
+
+    def test_truncated_volume_rejected_even_if_compressed_identity_updated(self):
+        _, dest, data = self.make(os.urandom(20))
+        path = dest/data['volumes'][0]['file']
+        path.write_bytes(path.read_bytes()[:-5])
+        with self.assertRaisesRegex(ValueError, 'identity'):
+            archive.verify(dest/'manifest.json')
+        changed = archive.identity(path)
+        data['volumes'][0].update(compressed_bytes=changed['bytes'], sha256=changed['sha256'])
+        self.rewrite_manifest(dest, data)
+        with self.assertRaises((EOFError, gzip.BadGzipFile)):
+            archive.verify(dest/'manifest.json')
+
+    def test_missing_or_reordered_volumes_rejected(self):
+        _, dest, data = self.make(os.urandom(3000))
+        original = data['volumes'][:]
+        data['volumes'] = original[:-1]
+        self.rewrite_manifest(dest, data)
+        with self.assertRaisesRegex(ValueError, 'Missing'):
+            archive.verify(dest/'manifest.json')
+        data['volumes'] = list(reversed(original))
+        self.rewrite_manifest(dest, data)
+        with self.assertRaisesRegex(ValueError, 'order'):
+            archive.verify(dest/'manifest.json')
+
+    def test_strict_limit_rejects_equality_and_publishes_no_manifest(self):
+        source = self.root/'rows.json'
+        source.write_bytes(b'x')
+        size = len(gzip.compress(b'x', mtime=0, compresslevel=6))
+        with self.assertRaisesRegex(ValueError, 'strict'):
+            archive.build(source, self.root/'archive', chunk_bytes=1, strict_limit=size)
+        self.assertFalse((self.root/'archive/manifest.json').exists())
+        self.assertEqual(source.read_bytes(), b'x')
+
+    def test_existing_destination_and_original_hash_mismatch_rejected(self):
+        source, dest, _ = self.make(b'original')
+        manifest_before = (dest/'manifest.json').read_bytes()
+        with self.assertRaises(FileExistsError):
+            archive.build(source, dest)
+        self.assertEqual((dest/'manifest.json').read_bytes(), manifest_before)
+        source.write_bytes(b'changed')
+        with self.assertRaisesRegex(ValueError, 'Original'):
+            archive.verify(dest/'manifest.json', source)
+
+    def test_path_escape_and_symlink_volume_rejected(self):
+        _, dest, data = self.make(b'x')
+        name = data['volumes'][0]['file']
+        data['volumes'][0]['file'] = '../rows.json'
+        self.rewrite_manifest(dest, data)
+        with self.assertRaisesRegex(ValueError, 'filename'):
+            archive.verify(dest/'manifest.json')
+        data['volumes'][0]['file'] = name
+        self.rewrite_manifest(dest, data)
+        path = dest/name
+        copy = self.root/'copy.gz'
+        path.rename(copy)
+        path.symlink_to(copy)
+        with self.assertRaisesRegex(ValueError, 'Symlink'):
+            archive.verify(dest/'manifest.json')
+
+
+if __name__ == '__main__':
+    unittest.main()

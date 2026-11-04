@@ -1,0 +1,51 @@
+{
+  "schema_version": "stowlm.historical-engine-manifest/1",
+  "synthetic": true,
+  "mode": "generated",
+  "description": "Generated provenance manifest for a historical c6 development TRAIN plan; not the frozen Engine 0.13.0 manifest.",
+  "frozen_engine_0_13_0": false,
+  "engine_version": "historical-c6-development-not-frozen-0.13.0",
+  "historical_engine_version": null,
+  "historical_source_sha256": "54c4a017ce3c51804d91695f026450334072b53a0f28c7abef4dd577115eb765",
+  "source_hash_scope": "Source snapshot digest recorded by the historical c6 run; the original complete file inventory is unavailable here.",
+  "candidate": {
+    "path": "experiments/mvp/frontier/lab/c6/c6-lifts/results/candidate-all48/D192.medium-feeder_800-f70-low-s192200100.json",
+    "sha256": "48c57d5a7e16f923f0cd0031ffa709ff5df5f13c4f395b92155bb98c2bfbfba0"
+  },
+  "instance": {
+    "path": "experiments/mvp/strategy/fillsweep/maps/train/medium/feeder_800/f70-low/seed-192200100.json",
+    "sha256": "96a1c1332b57547ecb2e0593f31eb932c3113dc6e162ad64632e2bf057e2de1c"
+  },
+  "components": {
+    "propose": {
+      "function": "propose",
+      "path": "experiments/mvp/frontier/lab/c6/c6-lifts/method.py",
+      "sha256": "d65b71890e00ab52b9ac9c4f29a096b36b0e983e9a26cc897fbce4c2a58ee689"
+    },
+    "finish": {
+      "function": "finish",
+      "path": "experiments/mvp/frontier/lab/c6/c6-lifts/method.py",
+      "sha256": "d65b71890e00ab52b9ac9c4f29a096b36b0e983e9a26cc897fbce4c2a58ee689"
+    }
+  },
+  "recorded_component_versions": {
+    "action_space": "1.0.1",
+    "ballast": "4.0",
+    "checker": "2.2",
+    "feasibility": "2.5",
+    "infrastructure": "3.0",
+    "linear_model": "3.5",
+    "move_engine": "2.0",
+    "rule_catalogue": "sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae",
+    "schema": "1.9",
+    "solver.scalable": "3.0.0"
+  },
+  "seed": 0,
+  "budget_s": 240.0,
+  "finalize_s": 120.0,
+  "limitations": [
+    "Generated after the historical run from recorded result metadata.",
+    "This manifest is not a source freeze or an assertion that current engine files reproduce the historical search.",
+    "A current full checker rerun gates the exact stored plan; it does not rerun planning."
+  ]
+}

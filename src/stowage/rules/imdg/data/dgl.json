@@ -1,0 +1,4584 @@
+{
+  "schema_version": 1,
+  "edition": "IMDG 42-24",
+  "table_name": "imdg_42_24.dangerous_goods_list_3_2",
+  "provisions_table_name": "imdg_42_24.stowage_and_handling_provisions",
+  "sample_rationale": "53 entries / 41 UN numbers cover every class/division and PG I/II/III plus unassigned PG, named common container cargo, explosives compatibility groups, multiple subsidiary risks and conditional SW/H/SG provisions. Includes all PG variants for the generator follow-up UN set. Curated sample, not the complete DGL.",
+  "entries": [
+    {
+      "id": "UN0004-none",
+      "un_number": 4,
+      "proper_shipping_name": "AMMONIUM PICRATE dry or wetted with less than 10% water, by mass",
+      "hazard_class": "1.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": "D",
+      "packing_group": null,
+      "stowage_category": "04",
+      "stowage_codes": [
+        "SW1"
+      ],
+      "segregation_codes": [
+        "SGG2",
+        "SG27",
+        "SG31"
+      ],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 581,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 0004; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 4,
+            "proper_shipping_name": "Ammonium picrate, dry or wetted with less than 10 percent water, by mass",
+            "hazard_class": "1.1D",
+            "packing_group": null,
+            "labels": "1.1D",
+            "stowage_category": "04",
+            "vessel_provisions": "25, 5E, 19E",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 260,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN0007-none",
+      "un_number": 7,
+      "proper_shipping_name": "CARTRIDGES FOR WEAPONS with bursting charge",
+      "hazard_class": "1.2",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": "F",
+      "packing_group": null,
+      "stowage_category": "03",
+      "stowage_codes": [
+        "SW1"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 581,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 0007; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 7,
+            "proper_shipping_name": "Cartridges for weapons, with bursting charge",
+            "hazard_class": "1.2F",
+            "packing_group": null,
+            "labels": "1.2F",
+            "stowage_category": "03",
+            "vessel_provisions": "25",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 733,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN0010-none",
+      "un_number": 10,
+      "proper_shipping_name": "AMMUNITION, INCENDIARY with or without burster, expelling charge or propelling charge",
+      "hazard_class": "1.3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": "G",
+      "packing_group": null,
+      "stowage_category": "03",
+      "stowage_codes": [
+        "SW1"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 581,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 0010; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 10,
+            "proper_shipping_name": "Ammunition, incendiary with or without burster, expelling charge, or propelling charge",
+            "hazard_class": "1.3G",
+            "packing_group": null,
+            "labels": "1.3G",
+            "stowage_category": "03",
+            "vessel_provisions": "25",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 276,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN0012-none",
+      "un_number": 12,
+      "proper_shipping_name": "CARTRIDGES FOR WEAPONS, INERT PROJECTILE or CARTRIDGES, SMALL ARMS",
+      "hazard_class": "1.4",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": "S",
+      "packing_group": null,
+      "stowage_category": "01",
+      "stowage_codes": [
+        "SW1"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "364"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 581,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 0012; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 12,
+            "proper_shipping_name": "Cartridges for weapons, inert projectile or Cartridges, small arms",
+            "hazard_class": "1.4S",
+            "packing_group": null,
+            "labels": "None",
+            "stowage_category": "01",
+            "vessel_provisions": "25",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 728,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN0331-none",
+      "un_number": 331,
+      "proper_shipping_name": "EXPLOSIVE, BLASTING, TYPE B (AGENT, BLASTING, TYPE B)",
+      "hazard_class": "1.5",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": "D",
+      "packing_group": null,
+      "stowage_category": "03",
+      "stowage_codes": [
+        "SW1"
+      ],
+      "segregation_codes": [
+        "SG34"
+      ],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 590,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 0331; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 331,
+            "proper_shipping_name": "Explosive, blasting, type B or Agent blasting, Type B",
+            "hazard_class": "1.5D",
+            "packing_group": null,
+            "labels": "1.5D",
+            "stowage_category": "03",
+            "vessel_provisions": "25, 19E",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1515,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN0336-none",
+      "un_number": 336,
+      "proper_shipping_name": "FIREWORKS",
+      "hazard_class": "1.4",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": "G",
+      "packing_group": null,
+      "stowage_category": "02",
+      "stowage_codes": [
+        "SW1"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 590,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 0336; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 336,
+            "proper_shipping_name": "Fireworks",
+            "hazard_class": "1.4G",
+            "packing_group": null,
+            "labels": "1.4G",
+            "stowage_category": "02",
+            "vessel_provisions": "25",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1552,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN0486-none",
+      "un_number": 486,
+      "proper_shipping_name": "ARTICLES, EXPLOSIVE, EXTREMELY INSENSITIVE (ARTICLES, EEI)",
+      "hazard_class": "1.6",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": "N",
+      "packing_group": null,
+      "stowage_category": "03",
+      "stowage_codes": [
+        "SW1"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 596,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 0486; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 486,
+            "proper_shipping_name": "Articles, explosive, extremely insensitive or Articles, EEI",
+            "hazard_class": "1.6N",
+            "packing_group": null,
+            "labels": "1.6N",
+            "stowage_category": "03",
+            "vessel_provisions": "25",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 381,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1005-none",
+      "un_number": 1005,
+      "proper_shipping_name": "AMMONIA, ANHYDROUS",
+      "hazard_class": "2.3",
+      "subsidiary_risks": [
+        "8"
+      ],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "D",
+      "stowage_codes": [
+        "SW2"
+      ],
+      "segregation_codes": [
+        "SGG18",
+        "SG35",
+        "SG46"
+      ],
+      "special_provisions": [
+        "23",
+        "379"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 598,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1005; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1005,
+            "proper_shipping_name": "Ammonia, anhydrous",
+            "hazard_class": "2.3",
+            "packing_group": null,
+            "labels": "2.3, 8",
+            "stowage_category": "D",
+            "vessel_provisions": "40, 52, 57",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 222,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1005,
+            "proper_shipping_name": "Ammonia, anhydrous",
+            "hazard_class": "2.2",
+            "packing_group": null,
+            "labels": "2.2",
+            "stowage_category": "D",
+            "vessel_provisions": "40, 52, 57",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 223,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1006-none",
+      "un_number": 1006,
+      "proper_shipping_name": "ARGON, COMPRESSED",
+      "hazard_class": "2.2",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "A",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "378",
+        "392",
+        "406"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 598,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1006; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1006,
+            "proper_shipping_name": "Argon, compressed",
+            "hazard_class": "2.2",
+            "packing_group": null,
+            "labels": "2.2",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 335,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1017-none",
+      "un_number": 1017,
+      "proper_shipping_name": "CHLORINE",
+      "hazard_class": "2.3",
+      "subsidiary_risks": [
+        "5.1",
+        "8"
+      ],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "D",
+      "stowage_codes": [
+        "SW2"
+      ],
+      "segregation_codes": [
+        "SG6",
+        "SG19"
+      ],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 598,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1017; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1017,
+            "proper_shipping_name": "Chlorine",
+            "hazard_class": "2.3",
+            "packing_group": null,
+            "labels": "2.3, 5.1, 8",
+            "stowage_category": "D",
+            "vessel_provisions": "40, 51, 55, 62, 68, 89, 90",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 818,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1057-none",
+      "un_number": 1057,
+      "proper_shipping_name": "LIGHTERS or LIGHTER REFILLS containing flammable gas",
+      "hazard_class": "2.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "B",
+      "stowage_codes": [
+        "SW2"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "201"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 600,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1057; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1057,
+            "proper_shipping_name": "Lighters containing flammable gas",
+            "hazard_class": "2.1",
+            "packing_group": null,
+            "labels": "2.1",
+            "stowage_category": "B",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1975,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1057,
+            "proper_shipping_name": "Lighter refills containing flammable gas not exceeding 4 fluid ounces (7.22 cubic inches) and 65 grams of flammable gas",
+            "hazard_class": "2.1",
+            "packing_group": null,
+            "labels": "2.1",
+            "stowage_category": "B",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1978,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1090-II",
+      "un_number": 1090,
+      "proper_shipping_name": "ACETONE",
+      "hazard_class": "3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "E",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 602,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1090; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "differences",
+        "differences": [
+          "vessel stowage category differs"
+        ],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1090,
+            "proper_shipping_name": "Acetone",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 46,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1202-III",
+      "un_number": 1202,
+      "proper_shipping_name": "GAS OIL or DIESEL FUEL or HEATING OIL, LIGHT",
+      "hazard_class": "3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "A",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 607,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1202; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1202,
+            "proper_shipping_name": "Diesel fuel",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1253,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1202,
+            "proper_shipping_name": "Gas oil",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1669,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1202,
+            "proper_shipping_name": "Heating oil, light",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1713,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1263-I",
+      "un_number": 1263,
+      "proper_shipping_name": "PAINT (including paint, lacquer, enamel, stain, shellac, varnish, polish, liquid filler and liquid lacquer base) or PAINT RELATED MATERIAL (including paint thinning or reducing compound)",
+      "hazard_class": "3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "I",
+      "stowage_category": "E",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "163",
+        "367"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 610,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1263; PG I",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint (including paint, lacquer, enamel, stain, shellac solutions, varnish, polish, liquid filler and liquid lacquer base)",
+            "hazard_class": "3",
+            "packing_group": "I",
+            "labels": "3",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2618,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint (including paint, lacquer, enamel, stain, shellac solutions, varnish, polish, liquid filler and liquid lacquer base)",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2619,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint (including paint, lacquer, enamel, stain, shellac solutions, varnish, polish, liquid filler and liquid lacquer base)",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2620,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint related material including paint thinning, drying, removing, or reducing compound",
+            "hazard_class": "3",
+            "packing_group": "I",
+            "labels": "3",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2627,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint related material including paint thinning, drying, removing, or reducing compound",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2628,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint related material including paint thinning, drying, removing, or reducing compound",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2629,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1263-II",
+      "un_number": 1263,
+      "proper_shipping_name": "PAINT (including paint, lacquer, enamel, stain, shellac, varnish, polish, liquid filler and liquid lacquer base) or PAINT RELATED MATERIAL (including paint thinning or reducing compound)",
+      "hazard_class": "3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "B",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "163",
+        "367"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 610,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1263; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint (including paint, lacquer, enamel, stain, shellac solutions, varnish, polish, liquid filler and liquid lacquer base)",
+            "hazard_class": "3",
+            "packing_group": "I",
+            "labels": "3",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2618,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint (including paint, lacquer, enamel, stain, shellac solutions, varnish, polish, liquid filler and liquid lacquer base)",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2619,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint (including paint, lacquer, enamel, stain, shellac solutions, varnish, polish, liquid filler and liquid lacquer base)",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2620,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint related material including paint thinning, drying, removing, or reducing compound",
+            "hazard_class": "3",
+            "packing_group": "I",
+            "labels": "3",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2627,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint related material including paint thinning, drying, removing, or reducing compound",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2628,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint related material including paint thinning, drying, removing, or reducing compound",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2629,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1263-III",
+      "un_number": 1263,
+      "proper_shipping_name": "PAINT (including paint, lacquer, enamel, stain, shellac, varnish, polish, liquid filler and liquid lacquer base) or PAINT RELATED MATERIAL (including paint thinning or reducing compound)",
+      "hazard_class": "3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "A",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "163",
+        "223",
+        "367",
+        "955"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 610,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1263; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint (including paint, lacquer, enamel, stain, shellac solutions, varnish, polish, liquid filler and liquid lacquer base)",
+            "hazard_class": "3",
+            "packing_group": "I",
+            "labels": "3",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2618,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint (including paint, lacquer, enamel, stain, shellac solutions, varnish, polish, liquid filler and liquid lacquer base)",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2619,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint (including paint, lacquer, enamel, stain, shellac solutions, varnish, polish, liquid filler and liquid lacquer base)",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2620,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint related material including paint thinning, drying, removing, or reducing compound",
+            "hazard_class": "3",
+            "packing_group": "I",
+            "labels": "3",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2627,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint related material including paint thinning, drying, removing, or reducing compound",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2628,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1263,
+            "proper_shipping_name": "Paint related material including paint thinning, drying, removing, or reducing compound",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2629,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1325-II",
+      "un_number": 1325,
+      "proper_shipping_name": "FLAMMABLE SOLID, ORGANIC, N.O.S.",
+      "hazard_class": "4.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "B",
+      "stowage_codes": [],
+      "segregation_codes": [
+        "SG72"
+      ],
+      "special_provisions": [
+        "274"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 614,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1325; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1325,
+            "proper_shipping_name": "Flammable solids, organic, n.o.s.",
+            "hazard_class": "4.1",
+            "packing_group": "II",
+            "labels": "4.1",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1583,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1325,
+            "proper_shipping_name": "Flammable solids, organic, n.o.s.",
+            "hazard_class": "4.1",
+            "packing_group": "III",
+            "labels": "4.1",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1584,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1325-III",
+      "un_number": 1325,
+      "proper_shipping_name": "FLAMMABLE SOLID, ORGANIC, N.O.S.",
+      "hazard_class": "4.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "B",
+      "stowage_codes": [],
+      "segregation_codes": [
+        "SG72"
+      ],
+      "special_provisions": [
+        "223",
+        "274"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 614,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1325; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1325,
+            "proper_shipping_name": "Flammable solids, organic, n.o.s.",
+            "hazard_class": "4.1",
+            "packing_group": "II",
+            "labels": "4.1",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1583,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1325,
+            "proper_shipping_name": "Flammable solids, organic, n.o.s.",
+            "hazard_class": "4.1",
+            "packing_group": "III",
+            "labels": "4.1",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1584,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1333-II",
+      "un_number": 1333,
+      "proper_shipping_name": "CERIUM, slabs, ingots or rods",
+      "hazard_class": "4.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "A",
+      "stowage_codes": [
+        "H1"
+      ],
+      "segregation_codes": [
+        "SG17",
+        "SG25",
+        "SG26"
+      ],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 614,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1333; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1333,
+            "proper_shipping_name": "Cerium, slabs, ingots, or rods",
+            "hazard_class": "4.1",
+            "packing_group": "II",
+            "labels": "4.1",
+            "stowage_category": "A",
+            "vessel_provisions": "13, 74, 91, 147, 148",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 764,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1361-II",
+      "un_number": 1361,
+      "proper_shipping_name": "CARBON, animal or vegetable origin",
+      "hazard_class": "4.2",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "A",
+      "stowage_codes": [
+        "SW1",
+        "SW27",
+        "H2"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "978"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 616,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1361; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1361,
+            "proper_shipping_name": "Carbon, animal or vegetable origin",
+            "hazard_class": "4.2",
+            "packing_group": "II",
+            "labels": "4.2",
+            "stowage_category": "A",
+            "vessel_provisions": "12, 25",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 702,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1361,
+            "proper_shipping_name": "Carbon, animal or vegetable origin",
+            "hazard_class": "4.2",
+            "packing_group": "III",
+            "labels": "4.2",
+            "stowage_category": "A",
+            "vessel_provisions": "12, 25",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 703,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1361-III",
+      "un_number": 1361,
+      "proper_shipping_name": "CARBON, animal or vegetable origin",
+      "hazard_class": "4.2",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "A",
+      "stowage_codes": [
+        "SW1",
+        "SW27",
+        "H2"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "978"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 616,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1361; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1361,
+            "proper_shipping_name": "Carbon, animal or vegetable origin",
+            "hazard_class": "4.2",
+            "packing_group": "II",
+            "labels": "4.2",
+            "stowage_category": "A",
+            "vessel_provisions": "12, 25",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 702,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1361,
+            "proper_shipping_name": "Carbon, animal or vegetable origin",
+            "hazard_class": "4.2",
+            "packing_group": "III",
+            "labels": "4.2",
+            "stowage_category": "A",
+            "vessel_provisions": "12, 25",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 703,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1381-I",
+      "un_number": 1381,
+      "proper_shipping_name": "PHOSPHORUS, WHITE or YELLOW, DRY or UNDER WATER or IN SOLUTION",
+      "hazard_class": "4.2",
+      "subsidiary_risks": [
+        "6.1"
+      ],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "I",
+      "stowage_category": "E",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 617,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1381; PG I",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1381,
+            "proper_shipping_name": "Phosphorus, white dry or Phosphorus, white, under water or Phosphorus white, in solution or Phosphorus, yellow dry or Phosphorus, yellow, under water or Phosphorus, yellow, in solution",
+            "hazard_class": "4.2",
+            "packing_group": "I",
+            "labels": "4.2, 6.1",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2779,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1402-I",
+      "un_number": 1402,
+      "proper_shipping_name": "CALCIUM CARBIDE",
+      "hazard_class": "4.3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "I",
+      "stowage_category": "B",
+      "stowage_codes": [
+        "H1"
+      ],
+      "segregation_codes": [
+        "SG26",
+        "SG35"
+      ],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 619,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1402; PG I",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1402,
+            "proper_shipping_name": "Calcium carbide",
+            "hazard_class": "4.3",
+            "packing_group": "I",
+            "labels": "4.3",
+            "stowage_category": "B",
+            "vessel_provisions": "13, 52, 148",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 648,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1402,
+            "proper_shipping_name": "Calcium carbide",
+            "hazard_class": "4.3",
+            "packing_group": "II",
+            "labels": "4.3",
+            "stowage_category": "B",
+            "vessel_provisions": "13, 52, 148",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 649,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1402-II",
+      "un_number": 1402,
+      "proper_shipping_name": "CALCIUM CARBIDE",
+      "hazard_class": "4.3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "B",
+      "stowage_codes": [
+        "H1"
+      ],
+      "segregation_codes": [
+        "SG26",
+        "SG35"
+      ],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 619,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1402; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1402,
+            "proper_shipping_name": "Calcium carbide",
+            "hazard_class": "4.3",
+            "packing_group": "I",
+            "labels": "4.3",
+            "stowage_category": "B",
+            "vessel_provisions": "13, 52, 148",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 648,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1402,
+            "proper_shipping_name": "Calcium carbide",
+            "hazard_class": "4.3",
+            "packing_group": "II",
+            "labels": "4.3",
+            "stowage_category": "B",
+            "vessel_provisions": "13, 52, 148",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 649,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1428-I",
+      "un_number": 1428,
+      "proper_shipping_name": "SODIUM",
+      "hazard_class": "4.3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "I",
+      "stowage_category": "D",
+      "stowage_codes": [
+        "H1"
+      ],
+      "segregation_codes": [
+        "SG26",
+        "SG35"
+      ],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 620,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1428; PG I",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1428,
+            "proper_shipping_name": "Sodium",
+            "hazard_class": "4.3",
+            "packing_group": "I",
+            "labels": "4.3",
+            "stowage_category": "D",
+            "vessel_provisions": "13, 52, 148",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3162,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1689-I",
+      "un_number": 1689,
+      "proper_shipping_name": "SODIUM CYANIDE, SOLID",
+      "hazard_class": "6.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "I",
+      "stowage_category": "B",
+      "stowage_codes": [],
+      "segregation_codes": [
+        "SGG6",
+        "SG35"
+      ],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 635,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1689; PG I",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1689,
+            "proper_shipping_name": "Sodium cyanide, solid",
+            "hazard_class": "6.1",
+            "packing_group": "I",
+            "labels": "6.1",
+            "stowage_category": "B",
+            "vessel_provisions": "52",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3191,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1748-II",
+      "un_number": 1748,
+      "proper_shipping_name": "CALCIUM HYPOCHLORITE, DRY or CALCIUM HYPOCHLORITE MIXTURE, DRY with more than 39% available chlorine (8.8% available oxygen)",
+      "hazard_class": "5.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "D",
+      "stowage_codes": [
+        "SW1",
+        "SW11"
+      ],
+      "segregation_codes": [
+        "SGG8",
+        "SG35",
+        "SG38",
+        "SG49",
+        "SG53",
+        "SG60"
+      ],
+      "special_provisions": [
+        "314"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 639,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1748; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1748,
+            "proper_shipping_name": "Calcium hypochlorite, dry or Calcium hypochlorite mixture dry with more than 39% available chlorine (8.8% available oxygen)",
+            "hazard_class": "5.1",
+            "packing_group": "II",
+            "labels": "5.1",
+            "stowage_category": "D",
+            "vessel_provisions": "4, 25, 52, 56, 58, 69, 142",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 660,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1748,
+            "proper_shipping_name": "Calcium hypochlorite, dry or Calcium hypochlorite mixture dry with more than 39% available chlorine (8.8% available oxygen)",
+            "hazard_class": "5.1",
+            "packing_group": "III",
+            "labels": "5.1",
+            "stowage_category": "D",
+            "vessel_provisions": "4, 25, 52, 56, 58, 69, 142",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 661,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1748-III",
+      "un_number": 1748,
+      "proper_shipping_name": "CALCIUM HYPOCHLORITE, DRY or CALCIUM HYPOCHLORITE MIXTURE, DRY with more than 39% available chlorine (8.8% available oxygen)",
+      "hazard_class": "5.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "D",
+      "stowage_codes": [
+        "SW1",
+        "SW11"
+      ],
+      "segregation_codes": [
+        "SGG8",
+        "SG35",
+        "SG38",
+        "SG49",
+        "SG53",
+        "SG60"
+      ],
+      "special_provisions": [
+        "316"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 639,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1748; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1748,
+            "proper_shipping_name": "Calcium hypochlorite, dry or Calcium hypochlorite mixture dry with more than 39% available chlorine (8.8% available oxygen)",
+            "hazard_class": "5.1",
+            "packing_group": "II",
+            "labels": "5.1",
+            "stowage_category": "D",
+            "vessel_provisions": "4, 25, 52, 56, 58, 69, 142",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 660,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1748,
+            "proper_shipping_name": "Calcium hypochlorite, dry or Calcium hypochlorite mixture dry with more than 39% available chlorine (8.8% available oxygen)",
+            "hazard_class": "5.1",
+            "packing_group": "III",
+            "labels": "5.1",
+            "stowage_category": "D",
+            "vessel_provisions": "4, 25, 52, 56, 58, 69, 142",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 661,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1789-II",
+      "un_number": 1789,
+      "proper_shipping_name": "HYDROCHLORIC ACID",
+      "hazard_class": "8",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "C",
+      "stowage_codes": [],
+      "segregation_codes": [
+        "SGG1",
+        "SG36",
+        "SG49"
+      ],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 642,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1789; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1789,
+            "proper_shipping_name": "Hydrochloric acid",
+            "hazard_class": "8",
+            "packing_group": "II",
+            "labels": "8",
+            "stowage_category": "C",
+            "vessel_provisions": "53, 58",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1794,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1789,
+            "proper_shipping_name": "Hydrochloric acid",
+            "hazard_class": "8",
+            "packing_group": "III",
+            "labels": "8",
+            "stowage_category": "C",
+            "vessel_provisions": "8, 53, 58",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1795,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1789-III",
+      "un_number": 1789,
+      "proper_shipping_name": "HYDROCHLORIC ACID",
+      "hazard_class": "8",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "C",
+      "stowage_codes": [],
+      "segregation_codes": [
+        "SGG1",
+        "SG36",
+        "SG49"
+      ],
+      "special_provisions": [
+        "223"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 642,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1789; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1789,
+            "proper_shipping_name": "Hydrochloric acid",
+            "hazard_class": "8",
+            "packing_group": "II",
+            "labels": "8",
+            "stowage_category": "C",
+            "vessel_provisions": "53, 58",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1794,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1789,
+            "proper_shipping_name": "Hydrochloric acid",
+            "hazard_class": "8",
+            "packing_group": "III",
+            "labels": "8",
+            "stowage_category": "C",
+            "vessel_provisions": "8, 53, 58",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1795,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1845-none",
+      "un_number": 1845,
+      "proper_shipping_name": "CARBON DIOXIDE, SOLID (DRY ICE)",
+      "hazard_class": "9",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "C",
+      "stowage_codes": [
+        "SW2"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 647,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1845; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1845,
+            "proper_shipping_name": "Carbon dioxide, solid or Dry ice",
+            "hazard_class": "9",
+            "packing_group": null,
+            "labels": "None",
+            "stowage_category": "C",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 707,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1978-none",
+      "un_number": 1978,
+      "proper_shipping_name": "PROPANE",
+      "hazard_class": "2.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "E",
+      "stowage_codes": [
+        "SW2"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "392"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 652,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1978; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1978,
+            "proper_shipping_name": "Propane, see also Petroleum gases, liquefied",
+            "hazard_class": "2.1",
+            "packing_group": null,
+            "labels": "2.1",
+            "stowage_category": "E",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2900,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1993-I",
+      "un_number": 1993,
+      "proper_shipping_name": "FLAMMABLE LIQUID, N.O.S.",
+      "hazard_class": "3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "I",
+      "stowage_category": "E",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "274"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 653,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1993; PG I",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1993,
+            "proper_shipping_name": "Flammable liquids, n.o.s.",
+            "hazard_class": "3",
+            "packing_group": "I",
+            "labels": "3",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1565,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1993,
+            "proper_shipping_name": "Flammable liquids, n.o.s.",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1566,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1993,
+            "proper_shipping_name": "Flammable liquids, n.o.s.",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1567,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1993-II",
+      "un_number": 1993,
+      "proper_shipping_name": "FLAMMABLE LIQUID, N.O.S.",
+      "hazard_class": "3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "B",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "274"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 653,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1993; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1993,
+            "proper_shipping_name": "Flammable liquids, n.o.s.",
+            "hazard_class": "3",
+            "packing_group": "I",
+            "labels": "3",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1565,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1993,
+            "proper_shipping_name": "Flammable liquids, n.o.s.",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1566,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1993,
+            "proper_shipping_name": "Flammable liquids, n.o.s.",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1567,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN1993-III",
+      "un_number": 1993,
+      "proper_shipping_name": "FLAMMABLE LIQUID, N.O.S.",
+      "hazard_class": "3",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "A",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "223",
+        "274",
+        "955"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 653,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 1993; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 1993,
+            "proper_shipping_name": "Flammable liquids, n.o.s.",
+            "hazard_class": "3",
+            "packing_group": "I",
+            "labels": "3",
+            "stowage_category": "E",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1565,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1993,
+            "proper_shipping_name": "Flammable liquids, n.o.s.",
+            "hazard_class": "3",
+            "packing_group": "II",
+            "labels": "3",
+            "stowage_category": "B",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1566,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 1993,
+            "proper_shipping_name": "Flammable liquids, n.o.s.",
+            "hazard_class": "3",
+            "packing_group": "III",
+            "labels": "3",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1567,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2211-III",
+      "un_number": 2211,
+      "proper_shipping_name": "POLYMERIC BEADS, EXPANDABLE, evolving flammable vapour",
+      "hazard_class": "9",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "E",
+      "stowage_codes": [
+        "SW1",
+        "SW6"
+      ],
+      "segregation_codes": [
+        "SG5",
+        "SG14"
+      ],
+      "special_provisions": [
+        "382",
+        "965"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 660,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2211; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2211,
+            "proper_shipping_name": "Polymeric beads expandable, evolving flammable vapor",
+            "hazard_class": "9",
+            "packing_group": "III",
+            "labels": "9",
+            "stowage_category": "E",
+            "vessel_provisions": "21, 25, 87, 144",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2807,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2794-none",
+      "un_number": 2794,
+      "proper_shipping_name": "BATTERIES, WET, FILLED WITH ACID, electric storage",
+      "hazard_class": "8",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "A",
+      "stowage_codes": [
+        "SW16"
+      ],
+      "segregation_codes": [
+        "SGG1",
+        "SG36",
+        "SG49"
+      ],
+      "special_provisions": [
+        "295"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 693,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2794; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2794,
+            "proper_shipping_name": "Batteries, wet, filled with acid, electric storage",
+            "hazard_class": "8",
+            "packing_group": null,
+            "labels": "8",
+            "stowage_category": "A",
+            "vessel_provisions": "53, 58, 146",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 452,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2810-I",
+      "un_number": 2810,
+      "proper_shipping_name": "TOXIC LIQUID, ORGANIC, N.O.S.",
+      "hazard_class": "6.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "I",
+      "stowage_category": "B",
+      "stowage_codes": [
+        "SW2"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "274",
+        "315"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 694,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2810; PG I",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2810,
+            "proper_shipping_name": "Toxic, liquids, organic, n.o.s.",
+            "hazard_class": "6.1",
+            "packing_group": "I",
+            "labels": "6.1",
+            "stowage_category": "B",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3450,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 2810,
+            "proper_shipping_name": "Toxic, liquids, organic, n.o.s.",
+            "hazard_class": "6.1",
+            "packing_group": "II",
+            "labels": "6.1",
+            "stowage_category": "B",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3451,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 2810,
+            "proper_shipping_name": "Toxic, liquids, organic, n.o.s.",
+            "hazard_class": "6.1",
+            "packing_group": "III",
+            "labels": "6.1",
+            "stowage_category": "A",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3452,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2810-II",
+      "un_number": 2810,
+      "proper_shipping_name": "TOXIC LIQUID, ORGANIC, N.O.S.",
+      "hazard_class": "6.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "B",
+      "stowage_codes": [
+        "SW2"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "274"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 694,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2810; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2810,
+            "proper_shipping_name": "Toxic, liquids, organic, n.o.s.",
+            "hazard_class": "6.1",
+            "packing_group": "I",
+            "labels": "6.1",
+            "stowage_category": "B",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3450,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 2810,
+            "proper_shipping_name": "Toxic, liquids, organic, n.o.s.",
+            "hazard_class": "6.1",
+            "packing_group": "II",
+            "labels": "6.1",
+            "stowage_category": "B",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3451,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 2810,
+            "proper_shipping_name": "Toxic, liquids, organic, n.o.s.",
+            "hazard_class": "6.1",
+            "packing_group": "III",
+            "labels": "6.1",
+            "stowage_category": "A",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3452,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2810-III",
+      "un_number": 2810,
+      "proper_shipping_name": "TOXIC LIQUID, ORGANIC, N.O.S.",
+      "hazard_class": "6.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "A",
+      "stowage_codes": [
+        "SW2"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "223",
+        "274"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 694,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2810; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2810,
+            "proper_shipping_name": "Toxic, liquids, organic, n.o.s.",
+            "hazard_class": "6.1",
+            "packing_group": "I",
+            "labels": "6.1",
+            "stowage_category": "B",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3450,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 2810,
+            "proper_shipping_name": "Toxic, liquids, organic, n.o.s.",
+            "hazard_class": "6.1",
+            "packing_group": "II",
+            "labels": "6.1",
+            "stowage_category": "B",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3451,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 2810,
+            "proper_shipping_name": "Toxic, liquids, organic, n.o.s.",
+            "hazard_class": "6.1",
+            "packing_group": "III",
+            "labels": "6.1",
+            "stowage_category": "A",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3452,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2814-none",
+      "un_number": 2814,
+      "proper_shipping_name": "INFECTIOUS SUBSTANCE, AFFECTING HUMANS",
+      "hazard_class": "6.2",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "E",
+      "stowage_codes": [
+        "SW2",
+        "H1",
+        "H5"
+      ],
+      "segregation_codes": [
+        "SG50"
+      ],
+      "special_provisions": [
+        "318",
+        "341"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 694,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2814; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2814,
+            "proper_shipping_name": "Infectious substances, affecting humans",
+            "hazard_class": "6.2",
+            "packing_group": null,
+            "labels": "6.2",
+            "stowage_category": "E",
+            "vessel_provisions": "13, 40, 95, 155",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1850,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2880-II",
+      "un_number": 2880,
+      "proper_shipping_name": "CALCIUM HYPOCHLORITE, HYDRATED or CALCIUM HYPOCHLORITE, HYDRATED MIXTURE with not less than 5.5% but not more than 16% water",
+      "hazard_class": "5.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "II",
+      "stowage_category": "D",
+      "stowage_codes": [
+        "SW1",
+        "SW11"
+      ],
+      "segregation_codes": [
+        "SGG8",
+        "SG35",
+        "SG38",
+        "SG49",
+        "SG53",
+        "SG60"
+      ],
+      "special_provisions": [
+        "314",
+        "322"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 698,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2880; PG II",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2880,
+            "proper_shipping_name": "Calcium hypochlorite, hydrated or Calcium hypochlorite, hydrated mixture, with not less than 5.5% but not more than 16% water",
+            "hazard_class": "5.1",
+            "packing_group": "II",
+            "labels": "5.1",
+            "stowage_category": "D",
+            "vessel_provisions": "4, 25, 52, 56, 58, 69, 142",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 664,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 2880,
+            "proper_shipping_name": "Calcium hypochlorite, hydrated or Calcium hypochlorite, hydrated mixture, with not less than 5.5% but not more than 16% water",
+            "hazard_class": "5.1",
+            "packing_group": "III",
+            "labels": "5.1",
+            "stowage_category": "D",
+            "vessel_provisions": "4, 25, 52, 56, 58, 69, 142",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 665,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2880-III",
+      "un_number": 2880,
+      "proper_shipping_name": "CALCIUM HYPOCHLORITE, HYDRATED or CALCIUM HYPOCHLORITE, HYDRATED MIXTURE with not less than 5.5% but not more than 16% water",
+      "hazard_class": "5.1",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "D",
+      "stowage_codes": [
+        "SW1",
+        "SW11"
+      ],
+      "segregation_codes": [
+        "SGG8",
+        "SG35",
+        "SG38",
+        "SG49",
+        "SG53",
+        "SG60"
+      ],
+      "special_provisions": [
+        "223",
+        "314"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 698,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2880; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2880,
+            "proper_shipping_name": "Calcium hypochlorite, hydrated or Calcium hypochlorite, hydrated mixture, with not less than 5.5% but not more than 16% water",
+            "hazard_class": "5.1",
+            "packing_group": "II",
+            "labels": "5.1",
+            "stowage_category": "D",
+            "vessel_provisions": "4, 25, 52, 56, 58, 69, 142",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 664,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 2880,
+            "proper_shipping_name": "Calcium hypochlorite, hydrated or Calcium hypochlorite, hydrated mixture, with not less than 5.5% but not more than 16% water",
+            "hazard_class": "5.1",
+            "packing_group": "III",
+            "labels": "5.1",
+            "stowage_category": "D",
+            "vessel_provisions": "4, 25, 52, 56, 58, 69, 142",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 665,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2910-none",
+      "un_number": 2910,
+      "proper_shipping_name": "RADIOACTIVE MATERIAL, EXCEPTED PACKAGE - LIMITED QUANTITY OF MATERIAL",
+      "hazard_class": "7",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": "See SP290; subsidiary hazard depends on contents, not an unconditional empty list.",
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "A",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "290",
+        "368"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 699,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2910; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2910,
+            "proper_shipping_name": "Radioactive material, excepted package-limited quantity of material",
+            "hazard_class": "7",
+            "packing_group": null,
+            "labels": "None",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2976,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN2915-none",
+      "un_number": 2915,
+      "proper_shipping_name": "RADIOACTIVE MATERIAL, TYPE A PACKAGE, non-special form, non fissile or fissile-excepted",
+      "hazard_class": "7",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": "See SP172; subsidiary hazard depends on contents, not an unconditional empty list.",
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "A",
+      "stowage_codes": [
+        "SW20",
+        "SW21"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "172",
+        "317",
+        "325"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 699,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 2915; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 2915,
+            "proper_shipping_name": "Radioactive material, Type A package non-special form, non fissile or fissile-excepted",
+            "hazard_class": "7",
+            "packing_group": null,
+            "labels": "7",
+            "stowage_category": "A",
+            "vessel_provisions": "95, 130",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2984,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN3077-III",
+      "un_number": 3077,
+      "proper_shipping_name": "ENVIRONMENTALLY HAZARDOUS SUBSTANCE, SOLID, N.O.S.",
+      "hazard_class": "9",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "A",
+      "stowage_codes": [
+        "SW23"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "274",
+        "335",
+        "375",
+        "966",
+        "967",
+        "969"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 709,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 3077; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 3077,
+            "proper_shipping_name": "Environmentally hazardous substance, solid, n.o.s.",
+            "hazard_class": "9",
+            "packing_group": "III",
+            "labels": "9",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1409,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN3082-III",
+      "un_number": 3082,
+      "proper_shipping_name": "ENVIRONMENTALLY HAZARDOUS SUBSTANCE, LIQUID, N.O.S.",
+      "hazard_class": "9",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": "III",
+      "stowage_category": "A",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "274",
+        "335",
+        "375",
+        "969"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 709,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 3082; PG III",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 3082,
+            "proper_shipping_name": "Environmentally hazardous substance, liquid, n.o.s.",
+            "hazard_class": "9",
+            "packing_group": "III",
+            "labels": "9",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 1408,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN3105-none",
+      "un_number": 3105,
+      "proper_shipping_name": "ORGANIC PEROXIDE TYPE D, LIQUID",
+      "hazard_class": "5.2",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "D",
+      "stowage_codes": [
+        "SW1"
+      ],
+      "segregation_codes": [
+        "SG35",
+        "SG36",
+        "SG72"
+      ],
+      "special_provisions": [
+        "122",
+        "274"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 712,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 3105; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 3105,
+            "proper_shipping_name": "Organic peroxide type D, liquid",
+            "hazard_class": "5.2",
+            "packing_group": null,
+            "labels": "5.2",
+            "stowage_category": "D",
+            "vessel_provisions": "12, 25, 52, 53",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2491,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN3109-none",
+      "un_number": 3109,
+      "proper_shipping_name": "ORGANIC PEROXIDE TYPE F, LIQUID",
+      "hazard_class": "5.2",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "D",
+      "stowage_codes": [
+        "SW1"
+      ],
+      "segregation_codes": [
+        "SG35",
+        "SG36",
+        "SG72"
+      ],
+      "special_provisions": [
+        "122",
+        "274"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 712,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 3109; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 3109,
+            "proper_shipping_name": "Organic peroxide type F, liquid",
+            "hazard_class": "5.2",
+            "packing_group": null,
+            "labels": "5.2",
+            "stowage_category": "D",
+            "vessel_provisions": "12, 25, 52, 53",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2499,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN3166-none",
+      "un_number": 3166,
+      "proper_shipping_name": "VEHICLE, FLAMMABLE GAS POWERED or VEHICLE, FLAMMABLE LIQUID POWERED or VEHICLE, FUEL CELL, FLAMMABLE GAS POWERED or VEHICLE, FUEL CELL, FLAMMABLE LIQUID POWERED",
+      "hazard_class": "9",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "A",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "special_provisions": [
+        "356",
+        "388",
+        "961",
+        "962"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 717,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 3166; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 3166,
+            "proper_shipping_name": "Vehicle, flammable gas powered or Vehicle, fuel cell, flammable gas powered",
+            "hazard_class": "9",
+            "packing_group": null,
+            "labels": "9",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3616,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 3166,
+            "proper_shipping_name": "Vehicle, flammable liquid powered or Vehicle, fuel cell, flammable liquid powered",
+            "hazard_class": "9",
+            "packing_group": null,
+            "labels": "9",
+            "stowage_category": "A",
+            "vessel_provisions": "",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 3617,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN3373-none",
+      "un_number": 3373,
+      "proper_shipping_name": "BIOLOGICAL SUBSTANCE, CATEGORY B",
+      "hazard_class": "6.2",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "C",
+      "stowage_codes": [
+        "SW2",
+        "SW18"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "319",
+        "341"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 736,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 3373; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "differences",
+        "differences": [
+          "vessel stowage category differs"
+        ],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 3373,
+            "proper_shipping_name": "Biological substance, Category B",
+            "hazard_class": "6.2",
+            "packing_group": null,
+            "labels": "",
+            "stowage_category": "A",
+            "vessel_provisions": "40",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 491,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN3480-none",
+      "un_number": 3480,
+      "proper_shipping_name": "LITHIUM ION BATTERIES (including lithium ion polymer batteries)",
+      "hazard_class": "9",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "A",
+      "stowage_codes": [
+        "SW19"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "188",
+        "230",
+        "310",
+        "348",
+        "376",
+        "377",
+        "384",
+        "387"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 746,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 3480; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 3480,
+            "proper_shipping_name": "Lithium ion batteries including lithium ion polymer batteries",
+            "hazard_class": "9",
+            "packing_group": null,
+            "labels": "9",
+            "stowage_category": "A",
+            "vessel_provisions": "156",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2028,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "UN3481-none",
+      "un_number": 3481,
+      "proper_shipping_name": "LITHIUM ION BATTERIES CONTAINED IN EQUIPMENT or LITHIUM ION BATTERIES PACKED WITH EQUIPMENT (including lithium ion polymer batteries)",
+      "hazard_class": "9",
+      "subsidiary_risks": [],
+      "subsidiary_hazard_note": null,
+      "compatibility_group": null,
+      "packing_group": null,
+      "stowage_category": "A",
+      "stowage_codes": [
+        "SW19"
+      ],
+      "segregation_codes": [],
+      "special_provisions": [
+        "188",
+        "230",
+        "310",
+        "348",
+        "360",
+        "376",
+        "377",
+        "384",
+        "387",
+        "390"
+      ],
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 746,
+        "table": "3.2 Dangerous Goods List",
+        "row": "UN 3481; PG not assigned",
+        "columns": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "16a",
+          "16b"
+        ]
+      },
+      "cfr_cross_check": {
+        "status": "matched",
+        "differences": [],
+        "authority": "IMDG 42-24 wins for this model",
+        "rows": [
+          {
+            "un_number": 3481,
+            "proper_shipping_name": "Lithium ion batteries contained in equipment including lithium ion polymer batteries",
+            "hazard_class": "9",
+            "packing_group": null,
+            "labels": "9",
+            "stowage_category": "A",
+            "vessel_provisions": "156",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2029,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          },
+          {
+            "un_number": 3481,
+            "proper_shipping_name": "Lithium ion batteries packed with equipment including lithium ion polymer batteries",
+            "hazard_class": "9",
+            "packing_group": null,
+            "labels": "9",
+            "stowage_category": "A",
+            "vessel_provisions": "156",
+            "source": {
+              "document": "49 CFR 172.101, 2026-10-23 snapshot",
+              "xml_row": 2030,
+              "columns": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "10A",
+                "10B"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "provisions": [
+    {
+      "code": "SW1",
+      "meaning": "Protected from sources of heat.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 484,
+        "table": "7.1.5",
+        "row": "SW1",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW2",
+      "meaning": "Clear of living quarters.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 484,
+        "table": "7.1.5",
+        "row": "SW2",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW6",
+      "meaning": "When under deck, mechanical ventilation must meet SOLAS II-2/19 (II-2/54) requirements for flammable liquids with flashpoint below 23 degrees C closed cup.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 484,
+        "table": "7.1.5",
+        "row": "SW6",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW11",
+      "meaning": "Shade cargo transport units from direct sunlight; arrange packages to allow adequate air circulation throughout the cargo.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.5",
+        "row": "SW11",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW16",
+      "meaning": "Unit loads in open cargo transport units use stowage category B.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.5",
+        "row": "SW16",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW18",
+      "meaning": "Category A applies when transported in accordance with P650.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.5",
+        "row": "SW18",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW19",
+      "meaning": "Batteries transported under special provisions 376 or 377 use category C unless on a short international voyage.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.5",
+        "row": "SW19",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW20",
+      "meaning": "Uranyl nitrate hexahydrate solution uses stowage category D.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.5",
+        "row": "SW20",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW21",
+      "meaning": "Pyrophoric uranium metal and pyrophoric thorium metal use stowage category D.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.5",
+        "row": "SW21",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW23",
+      "meaning": "For BK3 bulk containers consult 7.6.2.12 and 7.7.3.9.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.5",
+        "row": "SW23",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "SW27",
+      "meaning": "For special stowage provisions consult 7.6.2.7.2.1.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.5",
+        "row": "SW27",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "H1",
+      "meaning": "Keep as dry as reasonably practicable.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.6",
+        "row": "H1",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "H2",
+      "meaning": "Keep as cool as reasonably practicable.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.6",
+        "row": "H2",
+        "column": "Description"
+      }
+    },
+    {
+      "code": "H5",
+      "meaning": "Minimize handling of packaging or large packaging; inform the appropriate public health or veterinary authority if people or animals may have been exposed.",
+      "source": {
+        "document": "MSC.556(108), IMDG 42-24",
+        "pdf_page": 485,
+        "table": "7.1.6",
+        "row": "H5",
+        "column": "Description"
+      }
+    }
+  ]
+}

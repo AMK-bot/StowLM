@@ -1,0 +1,12 @@
+{
+  "label": "Historical synthetic development TRAIN plan, rechecked now",
+  "candidate_path": "experiments/mvp/frontier/lab/c6/c6-lifts/results/candidate-all48/D192.medium-feeder_800-f70-low-s192200100.json",
+  "candidate_sha256": "48c57d5a7e16f923f0cd0031ffa709ff5df5f13c4f395b92155bb98c2bfbfba0",
+  "instance_source_path": "experiments/mvp/strategy/fillsweep/maps/train/medium/feeder_800/f70-low/seed-192200100.json",
+  "recorded_utc": "2026-11-02T00:13:23.277265+00:00",
+  "load_list_boxes": 190,
+  "arrival_placements": 0,
+  "checker_version": "2.2",
+  "checker_wall_s_measured": 66.14416975004133,
+  "mapping": "Runner was under construction. Explicit fixture adapter: source.plan -> plan; current check(instance, plan) -> checker; source.wall_s and config.source_sha256 -> historical plan stage. No reading or confirmed instruction exists; standing is empty. Arrival placement count is measured separately."
+}

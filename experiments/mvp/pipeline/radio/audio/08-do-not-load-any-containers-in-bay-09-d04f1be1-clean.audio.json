@@ -1,0 +1,15 @@
+{
+  "script": "Do not load any containers in bay 09.",
+  "language": "en",
+  "tts_provider": "Google Translate public TTS stock synthetic voice",
+  "real_person_recording": false,
+  "person_imitation": false,
+  "sha256": "ea0c729bb35b1722d5d4de777cbdfed61399d3ca220dcf6f1ee347db1d7fb6eb",
+  "duration_s": 3.24,
+  "frames": 77760,
+  "channels": 1,
+  "sample_rate": 24000,
+  "sample_width": 2,
+  "decoder": "miniaudio 1.71 synchronous decode",
+  "mp3_sha256": "f0b059c71568d0ab7b1cc55b557567beb2a2ebf1af055d8f844c82473cbbf05e"
+}

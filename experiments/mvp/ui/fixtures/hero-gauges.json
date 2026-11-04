@@ -1,0 +1,33 @@
+{
+ "schema_version": "stowlm.v6-hero-gauges/1",
+ "slot": "hero",
+ "instance_sha256": "cabff3d68d56e64ba9956761bcd0ca2abfa5077d41296db35b630efc11b04678",
+ "physics_epoch": "b2e90d4b8cfc665bd52c723ec814459558d74dfe4ab64eccb0281d85d99737f5",
+ "plans": {
+  "before": {
+   "plan_sha256": "5d422db3a813cb0127f5718ce368a172628685ab1c032f7ea11bcc5e379edb99",
+   "lifts": 143,
+   "frames": 144,
+   "max_abs_heel_deg": 1.99536,
+   "max_shear_ratio": 0.20378,
+   "max_bending_ratio": 0.16637
+  },
+  "after": {
+   "plan_sha256": "f66c8301b6c7d83ec1b0f593a07c764fecab5c7288fce1cf72602cb8527a0f2d",
+   "lifts": 145,
+   "frames": 146,
+   "max_abs_heel_deg": 1.63793,
+   "max_shear_ratio": 0.20612,
+   "max_bending_ratio": 0.18072
+  }
+ },
+ "walk": {
+  "frames": 290,
+  "played_frames": 146,
+  "outside": [],
+  "every_frame": true,
+  "stay_green": true,
+  "ends_green": true,
+  "line": "The gauges stay green"
+ }
+}

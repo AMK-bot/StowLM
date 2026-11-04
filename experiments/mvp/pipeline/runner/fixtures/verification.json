@@ -1,0 +1,20 @@
+{
+  "measurement": "measured",
+  "suite": "experiments/mvp/pipeline/runner",
+  "suites": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "69",
+      "time": "175.504",
+      "timestamp": "2026-11-01T19:31:11.490421-05:00",
+      "hostname": "Andamans-MacBook-Pro.local"
+    }
+  ],
+  "junit_sha256": "83ac25d203936a7115af52f563f1454bd7aa3f82c7b496cd24bfc1e88f2f4403",
+  "network_calls": 0,
+  "gpu_calls": 0,
+  "spend_this_task_usd": 0
+}

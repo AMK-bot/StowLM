@@ -1,0 +1,23 @@
+{
+  "version": "kpi-v2",
+  "scenario": "mid",
+  "basis": "docs/impact.md mid scenario; experiments/impact-estimate/impact.py SCENARIOS[mid] and QUAY_MOVES_PER_RESTOW; constants copied here and pinned by app/tests/test_stage.py",
+  "yard_usd_per_move": 20.0,
+  "quay_usd_per_move": 75.0,
+  "yard_minutes_per_move": 3.0,
+  "quay_minutes_per_move": 2.4,
+  "berth_critical_path_fraction": 0.5,
+  "quay_moves_per_restow": 2,
+  "thb_per_usd": 33.0,
+  "thb_per_usd_note": "ASSUMPTION (29 Oct 2026): round illustrative rate near the 2025-26 THB/USD range; not a Bank of Thailand fixing (no network access when written). Change here only.",
+  "notes": [
+    "ASSUMPTION: all per-move USD and minute values are impact.py's labelled mid-scenario assumptions (expert Q8 pending), not measured local tariffs.",
+    "Quay moves saved = restow lifts now + projected later-port restow lifts (each via-quay restow is off + on = QUAY_MOVES_PER_RESTOW lifts). Hatch-cover lifts saved = hatch lifts now + projected later-port hatch lifts, valued at hatch_usd_per_move and counted as quay-crane time (D85).",
+    "Yard moves saved = yard rehandles (relocations).",
+    "crane_hours = quay moves saved x quay minutes / 60 (quay-crane work, not elapsed berth time); berth_hours applies the critical-path fraction.",
+    "The '10 % saving' in docs/impact.md is an illustrative placeholder; the demo KPI values the measured per-instance difference, and the headline uses 9.1's measured paired saving once it exists."
+  ],
+  "hatch_usd_per_move": 75.0,
+  "hatch_minutes_per_move": 2.4,
+  "hatch_note": "D85 (leader, open for veto) ASSUMPTION: one hatch-cover lift = one quay-crane move, priced and timed like quay_usd_per_move / quay_minutes_per_move (impact.py SCENARIOS[mid]). Anchor: a public container-terminal tariff charges USD 140 per hatch-cover handling with quay landing (~USD 70/lift), https://www.adaniports.com/-/media/project/ports/portsandterminals/mundra-documents/tariff/aictpl_ct3-tariff-booklet-wef-16th-june-2026.pdf (read 30 Oct 2026)."
+}

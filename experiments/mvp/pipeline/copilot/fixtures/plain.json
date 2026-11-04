@@ -1,0 +1,496 @@
+{
+  "schema_version": "stowlm.copilot-conversation/1",
+  "mode": "recorded",
+  "label": "Recorded answer: offline current-guard replay of historical Spark actions over synthetic tools; no new model or native result.",
+  "original_model_mode": "live",
+  "guard_replayed": true,
+  "original_recording_sha256": "a554a3ac51552a2de802fba7273560cce7fe6183264f4ef81a7defcea49fa22b",
+  "runtime_sha256": "7793879c059621bc4fd5d1a5f727c00e0c6c41a2a8062209903814aeb1399d00",
+  "policy": "Host-authorized tools only; document inspection grants no operation.",
+  "historical_sequence_compatibility": true,
+  "document_attack_zero_tools": null,
+  "conversation": {
+    "id": "plain_read_confirm_replan",
+    "kind": "plain",
+    "scores": {
+      "right_tool_sequence": true,
+      "no_unchecked_plan": true,
+      "no_invented_number": true,
+      "reader_only_rules": true
+    },
+    "passed": true,
+    "strict_action_playback_complete": true,
+    "expected_historical_tool_sequence": [
+      "read_instruction",
+      "replan",
+      "check_plan"
+    ],
+    "actual_tool_sequence": [
+      "read_instruction",
+      "replan",
+      "check_plan"
+    ],
+    "recorded_actions": 5,
+    "consumed_actions": 5,
+    "unconsumed_actions": 0,
+    "errors": [],
+    "authorization_denials": 0,
+    "turns": [
+      {
+        "message": "In bay 2, use at most 2 occupied tiers per deck stack.",
+        "turn": {
+          "say": "Please confirm the proposed reading before replanning.",
+          "tool_calls": [
+            {
+              "name": "read_instruction",
+              "arguments": {
+                "sentence": "In bay 2, use at most 2 occupied tiers per deck stack."
+              },
+              "result_sha256": "3d60afc700617fb8ac55733190f0b301536ab6ed771edf4dd3d10fb7cc2a8893",
+              "wall_s": 7.06670107319951e-05,
+              "result": {
+                "evidence_kind": "synthetic_tool_double",
+                "passed": false,
+                "proposed_reading": {
+                  "confirmed": false,
+                  "parsed": {
+                    "constraint": {
+                      "bay": 2,
+                      "max_tiers": 2,
+                      "type": "max_tiers",
+                      "zone": "deck"
+                    },
+                    "schema_version": "stowlm.reader/2"
+                  },
+                  "reading_id": "r1",
+                  "sentence": "In bay 2, use at most 2 occupied tiers per deck stack.",
+                  "source": "synthetic_reader_double"
+                },
+                "reading_id": "r1",
+                "status": "needs_confirmation",
+                "text": "Please confirm the proposed reading before replanning."
+              }
+            }
+          ],
+          "proposed_reading": {
+            "confirmed": false,
+            "parsed": {
+              "constraint": {
+                "bay": 2,
+                "max_tiers": 2,
+                "type": "max_tiers",
+                "zone": "deck"
+              },
+              "schema_version": "stowlm.reader/2"
+            },
+            "reading_id": "r1",
+            "sentence": "In bay 2, use at most 2 occupied tiers per deck stack.",
+            "source": "synthetic_reader_double"
+          },
+          "plan_sha256": null,
+          "mode": "recorded"
+        },
+        "tools": [
+          {
+            "name": "read_instruction",
+            "arguments": {
+              "sentence": "In bay 2, use at most 2 occupied tiers per deck stack."
+            },
+            "result": {
+              "status": "needs_confirmation",
+              "text": "Please confirm the proposed reading before replanning.",
+              "reading_id": "r1",
+              "proposed_reading": {
+                "reading_id": "r1",
+                "sentence": "In bay 2, use at most 2 occupied tiers per deck stack.",
+                "confirmed": false,
+                "parsed": {
+                  "schema_version": "stowlm.reader/2",
+                  "constraint": {
+                    "type": "max_tiers",
+                    "bay": 2,
+                    "zone": "deck",
+                    "max_tiers": 2
+                  }
+                },
+                "source": "synthetic_reader_double"
+              },
+              "passed": false,
+              "evidence_kind": "synthetic_tool_double"
+            },
+            "confirmed_at_call": [],
+            "reader_rules_at_call": [
+              {
+                "schema_version": "stowlm.reader/2",
+                "constraint": {
+                  "type": "max_tiers",
+                  "bay": 2,
+                  "zone": "deck",
+                  "max_tiers": 2
+                }
+              },
+              {
+                "type": "max_tiers",
+                "bay": 2,
+                "zone": "deck",
+                "max_tiers": 2
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "no_unchecked_plan": true,
+          "no_invented_number": true,
+          "reader_only_rules": true
+        },
+        "trace": [
+          {
+            "role": "context",
+            "content": {
+              "confirmed_rules": [],
+              "current_reading": null,
+              "readings": {},
+              "confirmed_reading_ids": [],
+              "plan_available": true,
+              "active_job_id": null,
+              "synthetic": true,
+              "label": "Synthetic tool doubles; not engine or reader evidence"
+            }
+          },
+          {
+            "role": "user",
+            "content": "In bay 2, use at most 2 occupied tiers per deck stack."
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"tool\":\"read_instruction\",\"arguments\":{\"sentence\":\"In bay 2, use at most 2 occupied tiers per deck stack.\"}}"
+          },
+          {
+            "role": "tool",
+            "name": "read_instruction",
+            "content": {
+              "evidence_kind": "synthetic_tool_double",
+              "passed": false,
+              "proposed_reading": {
+                "confirmed": false,
+                "parsed": {
+                  "constraint": {
+                    "bay": 2,
+                    "max_tiers": 2,
+                    "type": "max_tiers",
+                    "zone": "deck"
+                  },
+                  "schema_version": "stowlm.reader/2"
+                },
+                "reading_id": "r1",
+                "sentence": "In bay 2, use at most 2 occupied tiers per deck stack.",
+                "source": "synthetic_reader_double"
+              },
+              "reading_id": "r1",
+              "status": "needs_confirmation",
+              "text": "Please confirm the proposed reading before replanning."
+            }
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"say\":\"Please confirm the proposed reading before replanning.\"}"
+          },
+          {
+            "role": "final_gate",
+            "content": {
+              "reasons": [],
+              "raw_say": "Please confirm the proposed reading before replanning.",
+              "candidate_say": "Please confirm the proposed reading before replanning.",
+              "final_say": "Please confirm the proposed reading before replanning.",
+              "rewritten": false,
+              "termination": "model_say"
+            }
+          }
+        ],
+        "recorded_actions": 2,
+        "consumed_actions": 2,
+        "unconsumed_raw_actions": [],
+        "unconsumed_actions": 0,
+        "exhausted": false,
+        "original_actions_sha256": "69f27b930218ee83fd4c019966fdeaa1dc18f25e02a73c0f8207ec1fe7ae7f23",
+        "host_events": [],
+        "source_turn_sha256": "8feedfb52ac7859c6e880fcb8395230ebcec3dfffdcd8300556e3000c8e0c7ec",
+        "host_request_source": "current_conservative_message_authorization"
+      },
+      {
+        "message": "The host planner confirmed the reading. Replan and check it.",
+        "turn": {
+          "say": "Synthetic checker double: the test plan passed the full checker double.",
+          "tool_calls": [
+            {
+              "name": "replan",
+              "arguments": {
+                "reading_id": "r1"
+              },
+              "result_sha256": "a828d5c17a845a97a054cd919362332969911e10363f5790f2bd1b15246be55b",
+              "wall_s": 5.941599374637008e-05,
+              "result": {
+                "checker": {
+                  "passed": true,
+                  "screen": "full",
+                  "synthetic": true
+                },
+                "evidence_kind": "synthetic_tool_double",
+                "label": "Synthetic tool doubles; not engine or reader evidence",
+                "lifts": 42,
+                "passed": true,
+                "plan_sha256": "83804540ec721f9330d8a5b6a5fdff05459562ad90f319c241288ab98fb083d4",
+                "status": "checked_plan",
+                "text": "Synthetic checker double: the test plan passed the full checker double."
+              }
+            },
+            {
+              "name": "check_plan",
+              "arguments": {},
+              "result_sha256": "3f28d2904b58c7ed3811a7f122b51bfc93bfd6e8101c499c6ddf0796030c537c",
+              "wall_s": 4.68750367872417e-05,
+              "result": {
+                "checker": {
+                  "passed": true,
+                  "screen": "full",
+                  "synthetic": true
+                },
+                "evidence_kind": "synthetic_tool_double",
+                "label": "Synthetic tool doubles; not engine or reader evidence",
+                "lifts": 42,
+                "passed": true,
+                "plan_sha256": "78d6706ae51d456d88c2ed62342b131fee505aec5c5a55360f3cbc767eb9d8a4",
+                "status": "checked_plan",
+                "text": "Synthetic checker double: the test plan passed the full checker double."
+              }
+            }
+          ],
+          "proposed_reading": null,
+          "plan_sha256": "78d6706ae51d456d88c2ed62342b131fee505aec5c5a55360f3cbc767eb9d8a4",
+          "mode": "recorded"
+        },
+        "tools": [
+          {
+            "name": "replan",
+            "arguments": {
+              "reading_id": "r1"
+            },
+            "result": {
+              "status": "checked_plan",
+              "text": "Synthetic checker double: the test plan passed the full checker double.",
+              "checker": {
+                "passed": true,
+                "screen": "full",
+                "synthetic": true
+              },
+              "passed": true,
+              "plan_sha256": "83804540ec721f9330d8a5b6a5fdff05459562ad90f319c241288ab98fb083d4",
+              "lifts": 42,
+              "label": "Synthetic tool doubles; not engine or reader evidence",
+              "evidence_kind": "synthetic_tool_double"
+            },
+            "confirmed_at_call": [
+              "r1"
+            ],
+            "reader_rules_at_call": [
+              {
+                "schema_version": "stowlm.reader/2",
+                "constraint": {
+                  "type": "max_tiers",
+                  "bay": 2,
+                  "zone": "deck",
+                  "max_tiers": 2
+                }
+              },
+              {
+                "type": "max_tiers",
+                "bay": 2,
+                "zone": "deck",
+                "max_tiers": 2
+              }
+            ]
+          },
+          {
+            "name": "check_plan",
+            "arguments": {},
+            "result": {
+              "status": "checked_plan",
+              "text": "Synthetic checker double: the test plan passed the full checker double.",
+              "checker": {
+                "passed": true,
+                "screen": "full",
+                "synthetic": true
+              },
+              "passed": true,
+              "plan_sha256": "78d6706ae51d456d88c2ed62342b131fee505aec5c5a55360f3cbc767eb9d8a4",
+              "lifts": 42,
+              "label": "Synthetic tool doubles; not engine or reader evidence",
+              "evidence_kind": "synthetic_tool_double"
+            },
+            "confirmed_at_call": [
+              "r1"
+            ],
+            "reader_rules_at_call": [
+              {
+                "schema_version": "stowlm.reader/2",
+                "constraint": {
+                  "type": "max_tiers",
+                  "bay": 2,
+                  "zone": "deck",
+                  "max_tiers": 2
+                }
+              },
+              {
+                "type": "max_tiers",
+                "bay": 2,
+                "zone": "deck",
+                "max_tiers": 2
+              }
+            ]
+          }
+        ],
+        "scores": {
+          "no_unchecked_plan": true,
+          "no_invented_number": true,
+          "reader_only_rules": true
+        },
+        "trace": [
+          {
+            "role": "context",
+            "content": {
+              "confirmed_rules": [
+                {
+                  "constraint": {
+                    "bay": 2,
+                    "max_tiers": 2,
+                    "type": "max_tiers",
+                    "zone": "deck"
+                  },
+                  "schema_version": "stowlm.reader/2"
+                }
+              ],
+              "current_reading": {
+                "confirmed": true,
+                "parsed": {
+                  "constraint": {
+                    "bay": 2,
+                    "max_tiers": 2,
+                    "type": "max_tiers",
+                    "zone": "deck"
+                  },
+                  "schema_version": "stowlm.reader/2"
+                },
+                "reading_id": "r1",
+                "sentence": "In bay 2, use at most 2 occupied tiers per deck stack.",
+                "source": "synthetic_reader_double"
+              },
+              "readings": {
+                "r1": {
+                  "confirmed": true,
+                  "parsed": {
+                    "constraint": {
+                      "bay": 2,
+                      "max_tiers": 2,
+                      "type": "max_tiers",
+                      "zone": "deck"
+                    },
+                    "schema_version": "stowlm.reader/2"
+                  },
+                  "reading_id": "r1",
+                  "sentence": "In bay 2, use at most 2 occupied tiers per deck stack.",
+                  "source": "synthetic_reader_double"
+                }
+              },
+              "confirmed_reading_ids": [
+                "r1"
+              ],
+              "plan_available": true,
+              "active_job_id": null,
+              "synthetic": true,
+              "label": "Synthetic tool doubles; not engine or reader evidence"
+            }
+          },
+          {
+            "role": "user",
+            "content": "The host planner confirmed the reading. Replan and check it."
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"tool\":\"replan\",\"arguments\":{\"reading_id\":\"r1\"}}"
+          },
+          {
+            "role": "tool",
+            "name": "replan",
+            "content": {
+              "checker": {
+                "passed": true,
+                "screen": "full",
+                "synthetic": true
+              },
+              "evidence_kind": "synthetic_tool_double",
+              "label": "Synthetic tool doubles; not engine or reader evidence",
+              "lifts": 42,
+              "passed": true,
+              "plan_sha256": "83804540ec721f9330d8a5b6a5fdff05459562ad90f319c241288ab98fb083d4",
+              "status": "checked_plan",
+              "text": "Synthetic checker double: the test plan passed the full checker double."
+            }
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"tool\":\"check_plan\",\"arguments\":{}}"
+          },
+          {
+            "role": "tool",
+            "name": "check_plan",
+            "content": {
+              "checker": {
+                "passed": true,
+                "screen": "full",
+                "synthetic": true
+              },
+              "evidence_kind": "synthetic_tool_double",
+              "label": "Synthetic tool doubles; not engine or reader evidence",
+              "lifts": 42,
+              "passed": true,
+              "plan_sha256": "78d6706ae51d456d88c2ed62342b131fee505aec5c5a55360f3cbc767eb9d8a4",
+              "status": "checked_plan",
+              "text": "Synthetic checker double: the test plan passed the full checker double."
+            }
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"say\":\"Synthetic checker double: the test plan passed the full checker double.\"}"
+          },
+          {
+            "role": "final_gate",
+            "content": {
+              "reasons": [],
+              "raw_say": "Synthetic checker double: the test plan passed the full checker double.",
+              "candidate_say": "Synthetic checker double: the test plan passed the full checker double.",
+              "final_say": "Synthetic checker double: the test plan passed the full checker double.",
+              "rewritten": false,
+              "termination": "model_say"
+            }
+          }
+        ],
+        "recorded_actions": 3,
+        "consumed_actions": 3,
+        "unconsumed_raw_actions": [],
+        "unconsumed_actions": 0,
+        "exhausted": false,
+        "original_actions_sha256": "85cf72910403d6737bd27f85f9b3363aefbdd3d9e96b909a330685ab4f2bcf50",
+        "host_events": [
+          {
+            "event": "planner_confirmation",
+            "reading_id": "r1",
+            "applied": true,
+            "source": "recorded_host_context"
+          }
+        ],
+        "source_turn_sha256": "9148694356b7b9e053d10c074e43fc192d29c7e0c1f8769f67208014ccbc24b1",
+        "host_request_source": "current_conservative_message_authorization"
+      }
+    ]
+  }
+}

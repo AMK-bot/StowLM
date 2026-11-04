@@ -1,0 +1,5 @@
+$ uv run python -m llm.instructions.demo --instance experiments/mvp/corpus/test/tiny/feeder_500/random_yard/seed-008000000.json "Crane 3 is down, don't load anything into bay 14." --save experiments/mvp/instruct/demo/demo4.json
+Planner: "Crane 3 is down, don't load anything into bay 14."
+Parser: Muse Spark (muse-spark-1.3), measured cost $0.00273925
+Constraint (schema stowlm.instruction/1, validated): {"type": "close_bay", "bay": 14}
+Refused (not applicable to this ship): bay 14 is not on this vessel (bays here: 01, 03). Nothing applied.

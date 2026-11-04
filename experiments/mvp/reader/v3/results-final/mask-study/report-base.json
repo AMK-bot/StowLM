@@ -1,0 +1,53 @@
+{
+  "sample_sha256": "f1bb4d3fbd0d87a7904babb680ea637276b47ce876937f1ec5d007b2705c0d64",
+  "untrained": {
+    "sentences": 200,
+    "recorded": 200,
+    "errors": 0,
+    "tokens": 7346,
+    "tokens_top_changed": 1259,
+    "end_token_swaps_excluded": 200,
+    "sentences_top_changed": 182,
+    "sentences_real_block": 182,
+    "by_reason": {
+      "bay_not_on_ship": 0,
+      "tier_over_cap": 0,
+      "not_in_grammar": 1259
+    },
+    "exact_match_count": 90,
+    "accepted_loosening": 0,
+    "loosening_rows": 18
+  },
+  "fine_tuned": {
+    "sentences": 200,
+    "recorded": 200,
+    "errors": 0,
+    "tokens": 6980,
+    "tokens_top_changed": 2,
+    "end_token_swaps_excluded": 200,
+    "sentences_top_changed": 2,
+    "sentences_real_block": 2,
+    "by_reason": {
+      "bay_not_on_ship": 0,
+      "tier_over_cap": 0,
+      "not_in_grammar": 2
+    },
+    "exact_match_count": 183,
+    "accepted_loosening": 0,
+    "loosening_rows": 18
+  },
+  "fine_tuned_adapter": {
+    "name": "swa-last-5",
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57"
+  },
+  "block_shown": {
+    "step": 41,
+    "token": "essel",
+    "reason": "not_in_grammar",
+    "probability": 0.9955800578661167,
+    "chosen": "oca"
+  },
+  "trace": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/xray/fixtures/before-fine-tuning-trace.json",
+  "line": "untrained 182 of 200, fine-tuned 2 of 200"
+}

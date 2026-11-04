@@ -1,0 +1,2002 @@
+{
+  "schema_version": "stowlm.copilot-conversation/1",
+  "mode": "recorded",
+  "label": "Recorded answer: offline current-guard replay of historical Spark actions over synthetic tools; no new model or native result.",
+  "original_model_mode": "live",
+  "guard_replayed": true,
+  "original_recording_sha256": "a554a3ac51552a2de802fba7273560cce7fe6183264f4ef81a7defcea49fa22b",
+  "runtime_sha256": "7793879c059621bc4fd5d1a5f727c00e0c6c41a2a8062209903814aeb1399d00",
+  "policy": "Host-authorized tools only; document inspection grants no operation.",
+  "historical_sequence_compatibility": true,
+  "document_attack_zero_tools": null,
+  "conversation": {
+    "id": "impossible_tiers_historical_alternative",
+    "kind": "impossible_tiers",
+    "scores": {
+      "right_tool_sequence": true,
+      "no_unchecked_plan": true,
+      "no_invented_number": true,
+      "reader_only_rules": true
+    },
+    "passed": true,
+    "strict_action_playback_complete": true,
+    "expected_historical_tool_sequence": [
+      "read_instruction"
+    ],
+    "actual_tool_sequence": [
+      "read_instruction"
+    ],
+    "recorded_actions": 2,
+    "consumed_actions": 2,
+    "unconsumed_actions": 0,
+    "errors": [],
+    "authorization_denials": 0,
+    "turns": [
+      {
+        "message": "Across the vessel, use at most zero occupied tiers per deck stack.",
+        "turn": {
+          "say": "The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately.\nThe parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists.",
+          "tool_calls": [
+            {
+              "name": "read_instruction",
+              "arguments": {
+                "sentence": "Across the vessel, use at most zero occupied tiers per deck stack."
+              },
+              "result_sha256": "d794175ce606cd9dc970f9c6ae71b0924079f7a293981a7938c5b9b1d6d5710c",
+              "wall_s": 0.0014944999711588025,
+              "result": {
+                "alternatives": [
+                  {
+                    "applied": false,
+                    "certificate": "stored_checked_witness",
+                    "checked": false,
+                    "constraint": {
+                      "constraint": {
+                        "bay": null,
+                        "max_tiers": 2,
+                        "type": "max_tiers",
+                        "zone": "deck"
+                      },
+                      "schema_version": "stowlm.reader/2"
+                    },
+                    "fresh_audit": {
+                      "audit_file": "experiments/mvp/reader/runs/refusals/witness-audit.json",
+                      "audit_sha256": "f0bf0d000cd0824b32a8d4ba0b094e9efb6c2bda9f273d9e3de7aa280ff75cb2",
+                      "passed": true
+                    },
+                    "id": "alternative-1",
+                    "label": "Historical witness; not checked for this synthetic scenario",
+                    "numeric_distance": 2,
+                    "relaxation": true,
+                    "requires_user_choice": true,
+                    "screen_passed": true,
+                    "sentence": "In every bay, use at most 2 occupied tiers per deck stack.",
+                    "static_proof": {
+                      "demand_cells": 31,
+                      "demand_teu": 31,
+                      "load_box_count": 18,
+                      "load_boxes": [
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000009",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000014",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000020",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000035",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000040",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000056",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000061",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000077",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000082",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000098",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000101",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000117",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000122",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000138",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000143",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000159",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000164",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000170",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        }
+                      ],
+                      "nofit_ids": [],
+                      "open_cells": 44,
+                      "per_box_open_cells": {
+                        "QZXU0000009": 44,
+                        "QZXU0000014": 44,
+                        "QZXU0000020": 44,
+                        "QZXU0000035": 44,
+                        "QZXU0000040": 44,
+                        "QZXU0000056": 44,
+                        "QZXU0000061": 44,
+                        "QZXU0000077": 44,
+                        "QZXU0000082": 44,
+                        "QZXU0000098": 44,
+                        "QZXU0000101": 44,
+                        "QZXU0000117": 44,
+                        "QZXU0000122": 44,
+                        "QZXU0000138": 44,
+                        "QZXU0000143": 44,
+                        "QZXU0000159": 44,
+                        "QZXU0000164": 44,
+                        "QZXU0000170": 44
+                      },
+                      "physical_cells": 92,
+                      "proof_reasons": [],
+                      "proven_impossible": false,
+                      "retained_conflicts": []
+                    },
+                    "stored_witness": {
+                      "fresh_audit": false,
+                      "full_checker_passed": true,
+                      "input_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100003.json",
+                      "input_sha256": "0ef1a72eaad061cf96cef568bcfbecd575e4e74dd1e44c3b59b574247bd8c981",
+                      "instance_id": "random.small.40100003.0.2",
+                      "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/frontier/runs/val-0.9/random.small.40100003.0.2.json",
+                      "sha256": "[unchecked plan reference withheld]"
+                    },
+                    "text": "Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically.",
+                    "would_work": false
+                  }
+                ],
+                "checker": {
+                  "called": false,
+                  "passed": false,
+                  "screen": "none"
+                },
+                "evidence_kind": "synthetic_tool_double",
+                "passed": false,
+                "proof": {
+                  "alternatives": [
+                    {
+                      "applied": false,
+                      "certificate": "stored_checked_witness",
+                      "constraint": {
+                        "constraint": {
+                          "bay": null,
+                          "max_tiers": 2,
+                          "type": "max_tiers",
+                          "zone": "deck"
+                        },
+                        "schema_version": "stowlm.reader/2"
+                      },
+                      "fresh_audit": {
+                        "audit_file": "experiments/mvp/reader/runs/refusals/witness-audit.json",
+                        "audit_sha256": "f0bf0d000cd0824b32a8d4ba0b094e9efb6c2bda9f273d9e3de7aa280ff75cb2",
+                        "passed": true
+                      },
+                      "id": "alternative-1",
+                      "numeric_distance": 2,
+                      "relaxation": true,
+                      "requires_user_choice": true,
+                      "screen_passed": true,
+                      "sentence": "In every bay, use at most 2 occupied tiers per deck stack.",
+                      "static_proof": {
+                        "demand_cells": 31,
+                        "demand_teu": 31,
+                        "load_box_count": 18,
+                        "load_boxes": [
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000009",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000014",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000020",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000035",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 44,
+                            "container_id": "QZXU0000040",
+                            "demand_cells": 1,
+                            "length_ft": 20,
+                            "size_compatible_footprints": 92
+                          },
+                          {
+                            "allowed_footprints": 44,
+                            "container_id": "QZXU0000056",
+                            "demand_cells": 1,
+                            "length_ft": 20,
+                            "size_compatible_footprints": 92
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000061",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000077",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000082",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 44,
+                            "container_id": "QZXU0000098",
+                            "demand_cells": 1,
+                            "length_ft": 20,
+                            "size_compatible_footprints": 92
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000101",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000117",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 44,
+                            "container_id": "QZXU0000122",
+                            "demand_cells": 1,
+                            "length_ft": 20,
+                            "size_compatible_footprints": 92
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000138",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000143",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 44,
+                            "container_id": "QZXU0000159",
+                            "demand_cells": 1,
+                            "length_ft": 20,
+                            "size_compatible_footprints": 92
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000164",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          },
+                          {
+                            "allowed_footprints": 22,
+                            "container_id": "QZXU0000170",
+                            "demand_cells": 2,
+                            "length_ft": 40,
+                            "size_compatible_footprints": 46
+                          }
+                        ],
+                        "nofit_ids": [],
+                        "open_cells": 44,
+                        "per_box_open_cells": {
+                          "QZXU0000009": 44,
+                          "QZXU0000014": 44,
+                          "QZXU0000020": 44,
+                          "QZXU0000035": 44,
+                          "QZXU0000040": 44,
+                          "QZXU0000056": 44,
+                          "QZXU0000061": 44,
+                          "QZXU0000077": 44,
+                          "QZXU0000082": 44,
+                          "QZXU0000098": 44,
+                          "QZXU0000101": 44,
+                          "QZXU0000117": 44,
+                          "QZXU0000122": 44,
+                          "QZXU0000138": 44,
+                          "QZXU0000143": 44,
+                          "QZXU0000159": 44,
+                          "QZXU0000164": 44,
+                          "QZXU0000170": 44
+                        },
+                        "physical_cells": 92,
+                        "proof_reasons": [],
+                        "proven_impossible": false,
+                        "retained_conflicts": []
+                      },
+                      "stored_witness": {
+                        "fresh_audit": false,
+                        "full_checker_passed": true,
+                        "input_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100003.json",
+                        "input_sha256": "0ef1a72eaad061cf96cef568bcfbecd575e4e74dd1e44c3b59b574247bd8c981",
+                        "instance_id": "random.small.40100003.0.2",
+                        "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/frontier/runs/val-0.9/random.small.40100003.0.2.json",
+                        "sha256": "[unchecked plan reference withheld]"
+                      },
+                      "text": "Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically.",
+                      "would_work": false
+                    }
+                  ],
+                  "automatically_applied": false,
+                  "checker_called": false,
+                  "checker_report": null,
+                  "clarifications": [],
+                  "facts": [
+                    {
+                      "id": "preplanning-proof",
+                      "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+                    },
+                    {
+                      "id": "cell-capacity",
+                      "text": "The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+                    }
+                  ],
+                  "nearest_alternative_id": "alternative-1",
+                  "parsed": {
+                    "constraint": {
+                      "bay": null,
+                      "max_tiers": 0,
+                      "type": "max_tiers",
+                      "zone": "deck"
+                    },
+                    "schema_version": "stowlm.reader/2"
+                  },
+                  "proof": {
+                    "checker_called": false,
+                    "checker_report": null,
+                    "constraint": {
+                      "constraint": {
+                        "bay": null,
+                        "max_tiers": 0,
+                        "type": "max_tiers",
+                        "zone": "deck"
+                      },
+                      "schema_version": "stowlm.reader/2"
+                    },
+                    "demand_cells": 31,
+                    "demand_teu": 31,
+                    "load_box_count": 18,
+                    "load_boxes": [
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000009",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000014",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000020",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000035",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 12,
+                        "container_id": "QZXU0000040",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 12,
+                        "container_id": "QZXU0000056",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000061",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000077",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000082",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 12,
+                        "container_id": "QZXU0000098",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000101",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000117",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 12,
+                        "container_id": "QZXU0000122",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000138",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000143",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 12,
+                        "container_id": "QZXU0000159",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000164",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 6,
+                        "container_id": "QZXU0000170",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      }
+                    ],
+                    "nofit_ids": [],
+                    "open_cells": 12,
+                    "per_box_open_cells": {
+                      "QZXU0000009": 12,
+                      "QZXU0000014": 12,
+                      "QZXU0000020": 12,
+                      "QZXU0000035": 12,
+                      "QZXU0000040": 12,
+                      "QZXU0000056": 12,
+                      "QZXU0000061": 12,
+                      "QZXU0000077": 12,
+                      "QZXU0000082": 12,
+                      "QZXU0000098": 12,
+                      "QZXU0000101": 12,
+                      "QZXU0000117": 12,
+                      "QZXU0000122": 12,
+                      "QZXU0000138": 12,
+                      "QZXU0000143": 12,
+                      "QZXU0000159": 12,
+                      "QZXU0000164": 12,
+                      "QZXU0000170": 12
+                    },
+                    "physical_cells": 92,
+                    "planning_attempted": false,
+                    "proof_reasons": [
+                      "total_open_cell_shortfall"
+                    ],
+                    "proven_impossible": true,
+                    "retained_conflicts": [],
+                    "scope": "necessary geometry only; screen pass does not guarantee a plan"
+                  },
+                  "required_fact_ids": [
+                    "preplanning-proof",
+                    "cell-capacity"
+                  ],
+                  "schema_version": "stowlm.refusal-evidence/1",
+                  "status": "static_impossible"
+                },
+                "recorded_reading": {
+                  "constraint": {
+                    "bay": null,
+                    "max_tiers": 0,
+                    "type": "max_tiers",
+                    "zone": "deck"
+                  },
+                  "schema_version": "stowlm.reader/2"
+                },
+                "source": "experiments/mvp/reader/runs/refusals/examples/impossible-tier-with-alternative.json",
+                "source_sha256": "478238ee293af9889125f35aef505dc14a3e7b2911ec91065b31c4bb78cdcd75",
+                "status": "constraint_unavailable",
+                "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified."
+              }
+            }
+          ],
+          "proposed_reading": null,
+          "plan_sha256": null,
+          "mode": "recorded"
+        },
+        "tools": [
+          {
+            "name": "read_instruction",
+            "arguments": {
+              "sentence": "Across the vessel, use at most zero occupied tiers per deck stack."
+            },
+            "result": {
+              "status": "constraint_unavailable",
+              "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified.",
+              "proof": {
+                "schema_version": "stowlm.refusal-evidence/1",
+                "parsed": {
+                  "schema_version": "stowlm.reader/2",
+                  "constraint": {
+                    "type": "max_tiers",
+                    "bay": null,
+                    "zone": "deck",
+                    "max_tiers": 0
+                  }
+                },
+                "facts": [
+                  {
+                    "id": "preplanning-proof",
+                    "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+                  },
+                  {
+                    "id": "cell-capacity",
+                    "text": "The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+                  }
+                ],
+                "required_fact_ids": [
+                  "preplanning-proof",
+                  "cell-capacity"
+                ],
+                "alternatives": [
+                  {
+                    "id": "alternative-1",
+                    "text": "Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically.",
+                    "sentence": "In every bay, use at most 2 occupied tiers per deck stack.",
+                    "constraint": {
+                      "schema_version": "stowlm.reader/2",
+                      "constraint": {
+                        "type": "max_tiers",
+                        "bay": null,
+                        "zone": "deck",
+                        "max_tiers": 2
+                      }
+                    },
+                    "numeric_distance": 2,
+                    "screen_passed": true,
+                    "certificate": "stored_checked_witness",
+                    "would_work": false,
+                    "requires_user_choice": true,
+                    "applied": false,
+                    "relaxation": true,
+                    "static_proof": {
+                      "load_boxes": [
+                        {
+                          "container_id": "QZXU0000009",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000014",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000020",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000035",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000040",
+                          "length_ft": 20,
+                          "demand_cells": 1,
+                          "size_compatible_footprints": 92,
+                          "allowed_footprints": 44
+                        },
+                        {
+                          "container_id": "QZXU0000056",
+                          "length_ft": 20,
+                          "demand_cells": 1,
+                          "size_compatible_footprints": 92,
+                          "allowed_footprints": 44
+                        },
+                        {
+                          "container_id": "QZXU0000061",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000077",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000082",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000098",
+                          "length_ft": 20,
+                          "demand_cells": 1,
+                          "size_compatible_footprints": 92,
+                          "allowed_footprints": 44
+                        },
+                        {
+                          "container_id": "QZXU0000101",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000117",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000122",
+                          "length_ft": 20,
+                          "demand_cells": 1,
+                          "size_compatible_footprints": 92,
+                          "allowed_footprints": 44
+                        },
+                        {
+                          "container_id": "QZXU0000138",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000143",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000159",
+                          "length_ft": 20,
+                          "demand_cells": 1,
+                          "size_compatible_footprints": 92,
+                          "allowed_footprints": 44
+                        },
+                        {
+                          "container_id": "QZXU0000164",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        },
+                        {
+                          "container_id": "QZXU0000170",
+                          "length_ft": 40,
+                          "demand_cells": 2,
+                          "size_compatible_footprints": 46,
+                          "allowed_footprints": 22
+                        }
+                      ],
+                      "load_box_count": 18,
+                      "demand_cells": 31,
+                      "demand_teu": 31,
+                      "physical_cells": 92,
+                      "open_cells": 44,
+                      "nofit_ids": [],
+                      "retained_conflicts": [],
+                      "proven_impossible": false,
+                      "proof_reasons": [],
+                      "per_box_open_cells": {
+                        "QZXU0000009": 44,
+                        "QZXU0000014": 44,
+                        "QZXU0000020": 44,
+                        "QZXU0000035": 44,
+                        "QZXU0000040": 44,
+                        "QZXU0000056": 44,
+                        "QZXU0000061": 44,
+                        "QZXU0000077": 44,
+                        "QZXU0000082": 44,
+                        "QZXU0000098": 44,
+                        "QZXU0000101": 44,
+                        "QZXU0000117": 44,
+                        "QZXU0000122": 44,
+                        "QZXU0000138": 44,
+                        "QZXU0000143": 44,
+                        "QZXU0000159": 44,
+                        "QZXU0000164": 44,
+                        "QZXU0000170": 44
+                      }
+                    },
+                    "stored_witness": {
+                      "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/frontier/runs/val-0.9/random.small.40100003.0.2.json",
+                      "sha256": "31bcbdb0c51a256788587ad38cf39c756670046cbc6dda354a7b69a7478bbb55",
+                      "instance_id": "random.small.40100003.0.2",
+                      "full_checker_passed": true,
+                      "fresh_audit": false,
+                      "input_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100003.json",
+                      "input_sha256": "0ef1a72eaad061cf96cef568bcfbecd575e4e74dd1e44c3b59b574247bd8c981",
+                      "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969"
+                    },
+                    "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969",
+                    "fresh_audit": {
+                      "passed": true,
+                      "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969",
+                      "audit_file": "experiments/mvp/reader/runs/refusals/witness-audit.json",
+                      "audit_sha256": "f0bf0d000cd0824b32a8d4ba0b094e9efb6c2bda9f273d9e3de7aa280ff75cb2"
+                    }
+                  }
+                ],
+                "clarifications": [],
+                "nearest_alternative_id": "alternative-1",
+                "checker_called": false,
+                "checker_report": null,
+                "automatically_applied": false,
+                "status": "static_impossible",
+                "proof": {
+                  "load_boxes": [
+                    {
+                      "container_id": "QZXU0000009",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000014",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000020",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000035",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000040",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 92,
+                      "allowed_footprints": 12
+                    },
+                    {
+                      "container_id": "QZXU0000056",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 92,
+                      "allowed_footprints": 12
+                    },
+                    {
+                      "container_id": "QZXU0000061",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000077",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000082",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000098",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 92,
+                      "allowed_footprints": 12
+                    },
+                    {
+                      "container_id": "QZXU0000101",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000117",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000122",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 92,
+                      "allowed_footprints": 12
+                    },
+                    {
+                      "container_id": "QZXU0000138",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000143",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000159",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 92,
+                      "allowed_footprints": 12
+                    },
+                    {
+                      "container_id": "QZXU0000164",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    },
+                    {
+                      "container_id": "QZXU0000170",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 46,
+                      "allowed_footprints": 6
+                    }
+                  ],
+                  "load_box_count": 18,
+                  "demand_cells": 31,
+                  "demand_teu": 31,
+                  "physical_cells": 92,
+                  "open_cells": 12,
+                  "nofit_ids": [],
+                  "retained_conflicts": [],
+                  "proven_impossible": true,
+                  "proof_reasons": [
+                    "total_open_cell_shortfall"
+                  ],
+                  "per_box_open_cells": {
+                    "QZXU0000009": 12,
+                    "QZXU0000014": 12,
+                    "QZXU0000020": 12,
+                    "QZXU0000035": 12,
+                    "QZXU0000040": 12,
+                    "QZXU0000056": 12,
+                    "QZXU0000061": 12,
+                    "QZXU0000077": 12,
+                    "QZXU0000082": 12,
+                    "QZXU0000098": 12,
+                    "QZXU0000101": 12,
+                    "QZXU0000117": 12,
+                    "QZXU0000122": 12,
+                    "QZXU0000138": 12,
+                    "QZXU0000143": 12,
+                    "QZXU0000159": 12,
+                    "QZXU0000164": 12,
+                    "QZXU0000170": 12
+                  },
+                  "constraint": {
+                    "schema_version": "stowlm.reader/2",
+                    "constraint": {
+                      "type": "max_tiers",
+                      "bay": null,
+                      "zone": "deck",
+                      "max_tiers": 0
+                    }
+                  },
+                  "planning_attempted": false,
+                  "checker_called": false,
+                  "checker_report": null,
+                  "scope": "necessary geometry only; screen pass does not guarantee a plan"
+                }
+              },
+              "recorded_reading": {
+                "schema_version": "stowlm.reader/2",
+                "constraint": {
+                  "type": "max_tiers",
+                  "bay": null,
+                  "zone": "deck",
+                  "max_tiers": 0
+                }
+              },
+              "source": "experiments/mvp/reader/runs/refusals/examples/impossible-tier-with-alternative.json",
+              "source_sha256": "478238ee293af9889125f35aef505dc14a3e7b2911ec91065b31c4bb78cdcd75",
+              "alternatives": [
+                {
+                  "id": "alternative-1",
+                  "text": "Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically.",
+                  "sentence": "In every bay, use at most 2 occupied tiers per deck stack.",
+                  "constraint": {
+                    "schema_version": "stowlm.reader/2",
+                    "constraint": {
+                      "type": "max_tiers",
+                      "bay": null,
+                      "zone": "deck",
+                      "max_tiers": 2
+                    }
+                  },
+                  "numeric_distance": 2,
+                  "screen_passed": true,
+                  "certificate": "stored_checked_witness",
+                  "would_work": false,
+                  "requires_user_choice": true,
+                  "applied": false,
+                  "relaxation": true,
+                  "static_proof": {
+                    "load_boxes": [
+                      {
+                        "container_id": "QZXU0000009",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000014",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000020",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000035",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000040",
+                        "length_ft": 20,
+                        "demand_cells": 1,
+                        "size_compatible_footprints": 92,
+                        "allowed_footprints": 44
+                      },
+                      {
+                        "container_id": "QZXU0000056",
+                        "length_ft": 20,
+                        "demand_cells": 1,
+                        "size_compatible_footprints": 92,
+                        "allowed_footprints": 44
+                      },
+                      {
+                        "container_id": "QZXU0000061",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000077",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000082",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000098",
+                        "length_ft": 20,
+                        "demand_cells": 1,
+                        "size_compatible_footprints": 92,
+                        "allowed_footprints": 44
+                      },
+                      {
+                        "container_id": "QZXU0000101",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000117",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000122",
+                        "length_ft": 20,
+                        "demand_cells": 1,
+                        "size_compatible_footprints": 92,
+                        "allowed_footprints": 44
+                      },
+                      {
+                        "container_id": "QZXU0000138",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000143",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000159",
+                        "length_ft": 20,
+                        "demand_cells": 1,
+                        "size_compatible_footprints": 92,
+                        "allowed_footprints": 44
+                      },
+                      {
+                        "container_id": "QZXU0000164",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      },
+                      {
+                        "container_id": "QZXU0000170",
+                        "length_ft": 40,
+                        "demand_cells": 2,
+                        "size_compatible_footprints": 46,
+                        "allowed_footprints": 22
+                      }
+                    ],
+                    "load_box_count": 18,
+                    "demand_cells": 31,
+                    "demand_teu": 31,
+                    "physical_cells": 92,
+                    "open_cells": 44,
+                    "nofit_ids": [],
+                    "retained_conflicts": [],
+                    "proven_impossible": false,
+                    "proof_reasons": [],
+                    "per_box_open_cells": {
+                      "QZXU0000009": 44,
+                      "QZXU0000014": 44,
+                      "QZXU0000020": 44,
+                      "QZXU0000035": 44,
+                      "QZXU0000040": 44,
+                      "QZXU0000056": 44,
+                      "QZXU0000061": 44,
+                      "QZXU0000077": 44,
+                      "QZXU0000082": 44,
+                      "QZXU0000098": 44,
+                      "QZXU0000101": 44,
+                      "QZXU0000117": 44,
+                      "QZXU0000122": 44,
+                      "QZXU0000138": 44,
+                      "QZXU0000143": 44,
+                      "QZXU0000159": 44,
+                      "QZXU0000164": 44,
+                      "QZXU0000170": 44
+                    }
+                  },
+                  "stored_witness": {
+                    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/frontier/runs/val-0.9/random.small.40100003.0.2.json",
+                    "sha256": "31bcbdb0c51a256788587ad38cf39c756670046cbc6dda354a7b69a7478bbb55",
+                    "instance_id": "random.small.40100003.0.2",
+                    "full_checker_passed": true,
+                    "fresh_audit": false,
+                    "input_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100003.json",
+                    "input_sha256": "0ef1a72eaad061cf96cef568bcfbecd575e4e74dd1e44c3b59b574247bd8c981",
+                    "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969"
+                  },
+                  "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969",
+                  "fresh_audit": {
+                    "passed": true,
+                    "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969",
+                    "audit_file": "experiments/mvp/reader/runs/refusals/witness-audit.json",
+                    "audit_sha256": "f0bf0d000cd0824b32a8d4ba0b094e9efb6c2bda9f273d9e3de7aa280ff75cb2"
+                  },
+                  "checked": false,
+                  "label": "Historical witness; not checked for this synthetic scenario"
+                }
+              ],
+              "passed": false,
+              "checker": {
+                "passed": false,
+                "screen": "none",
+                "called": false
+              },
+              "evidence_kind": "synthetic_tool_double"
+            },
+            "confirmed_at_call": [],
+            "reader_rules_at_call": []
+          }
+        ],
+        "scores": {
+          "no_unchecked_plan": true,
+          "no_invented_number": true,
+          "reader_only_rules": true
+        },
+        "trace": [
+          {
+            "role": "context",
+            "content": {
+              "confirmed_rules": [],
+              "current_reading": null,
+              "readings": {},
+              "confirmed_reading_ids": [],
+              "plan_available": true,
+              "active_job_id": null,
+              "synthetic": true,
+              "label": "Synthetic tool doubles; not engine or reader evidence"
+            }
+          },
+          {
+            "role": "user",
+            "content": "Across the vessel, use at most zero occupied tiers per deck stack."
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"tool\":\"read_instruction\",\"arguments\":{\"sentence\":\"Across the vessel, use at most zero occupied tiers per deck stack.\"}}"
+          },
+          {
+            "role": "tool",
+            "name": "read_instruction",
+            "content": {
+              "alternatives": [
+                {
+                  "applied": false,
+                  "certificate": "stored_checked_witness",
+                  "checked": false,
+                  "constraint": {
+                    "constraint": {
+                      "bay": null,
+                      "max_tiers": 2,
+                      "type": "max_tiers",
+                      "zone": "deck"
+                    },
+                    "schema_version": "stowlm.reader/2"
+                  },
+                  "fresh_audit": {
+                    "audit_file": "experiments/mvp/reader/runs/refusals/witness-audit.json",
+                    "audit_sha256": "f0bf0d000cd0824b32a8d4ba0b094e9efb6c2bda9f273d9e3de7aa280ff75cb2",
+                    "passed": true,
+                    "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969"
+                  },
+                  "id": "alternative-1",
+                  "label": "Historical witness; not checked for this synthetic scenario",
+                  "numeric_distance": 2,
+                  "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969",
+                  "relaxation": true,
+                  "requires_user_choice": true,
+                  "screen_passed": true,
+                  "sentence": "In every bay, use at most 2 occupied tiers per deck stack.",
+                  "static_proof": {
+                    "demand_cells": 31,
+                    "demand_teu": 31,
+                    "load_box_count": 18,
+                    "load_boxes": [
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000009",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000014",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000020",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000035",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 44,
+                        "container_id": "QZXU0000040",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 44,
+                        "container_id": "QZXU0000056",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000061",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000077",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000082",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 44,
+                        "container_id": "QZXU0000098",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000101",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000117",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 44,
+                        "container_id": "QZXU0000122",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000138",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000143",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 44,
+                        "container_id": "QZXU0000159",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 92
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000164",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      },
+                      {
+                        "allowed_footprints": 22,
+                        "container_id": "QZXU0000170",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 46
+                      }
+                    ],
+                    "nofit_ids": [],
+                    "open_cells": 44,
+                    "per_box_open_cells": {
+                      "QZXU0000009": 44,
+                      "QZXU0000014": 44,
+                      "QZXU0000020": 44,
+                      "QZXU0000035": 44,
+                      "QZXU0000040": 44,
+                      "QZXU0000056": 44,
+                      "QZXU0000061": 44,
+                      "QZXU0000077": 44,
+                      "QZXU0000082": 44,
+                      "QZXU0000098": 44,
+                      "QZXU0000101": 44,
+                      "QZXU0000117": 44,
+                      "QZXU0000122": 44,
+                      "QZXU0000138": 44,
+                      "QZXU0000143": 44,
+                      "QZXU0000159": 44,
+                      "QZXU0000164": 44,
+                      "QZXU0000170": 44
+                    },
+                    "physical_cells": 92,
+                    "proof_reasons": [],
+                    "proven_impossible": false,
+                    "retained_conflicts": []
+                  },
+                  "stored_witness": {
+                    "fresh_audit": false,
+                    "full_checker_passed": true,
+                    "input_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100003.json",
+                    "input_sha256": "0ef1a72eaad061cf96cef568bcfbecd575e4e74dd1e44c3b59b574247bd8c981",
+                    "instance_id": "random.small.40100003.0.2",
+                    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/frontier/runs/val-0.9/random.small.40100003.0.2.json",
+                    "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969",
+                    "sha256": "31bcbdb0c51a256788587ad38cf39c756670046cbc6dda354a7b69a7478bbb55"
+                  },
+                  "text": "Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically.",
+                  "would_work": false
+                }
+              ],
+              "checker": {
+                "called": false,
+                "passed": false,
+                "screen": "none"
+              },
+              "evidence_kind": "synthetic_tool_double",
+              "passed": false,
+              "proof": {
+                "alternatives": [
+                  {
+                    "applied": false,
+                    "certificate": "stored_checked_witness",
+                    "constraint": {
+                      "constraint": {
+                        "bay": null,
+                        "max_tiers": 2,
+                        "type": "max_tiers",
+                        "zone": "deck"
+                      },
+                      "schema_version": "stowlm.reader/2"
+                    },
+                    "fresh_audit": {
+                      "audit_file": "experiments/mvp/reader/runs/refusals/witness-audit.json",
+                      "audit_sha256": "f0bf0d000cd0824b32a8d4ba0b094e9efb6c2bda9f273d9e3de7aa280ff75cb2",
+                      "passed": true,
+                      "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969"
+                    },
+                    "id": "alternative-1",
+                    "numeric_distance": 2,
+                    "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969",
+                    "relaxation": true,
+                    "requires_user_choice": true,
+                    "screen_passed": true,
+                    "sentence": "In every bay, use at most 2 occupied tiers per deck stack.",
+                    "static_proof": {
+                      "demand_cells": 31,
+                      "demand_teu": 31,
+                      "load_box_count": 18,
+                      "load_boxes": [
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000009",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000014",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000020",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000035",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000040",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000056",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000061",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000077",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000082",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000098",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000101",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000117",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000122",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000138",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000143",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 44,
+                          "container_id": "QZXU0000159",
+                          "demand_cells": 1,
+                          "length_ft": 20,
+                          "size_compatible_footprints": 92
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000164",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        },
+                        {
+                          "allowed_footprints": 22,
+                          "container_id": "QZXU0000170",
+                          "demand_cells": 2,
+                          "length_ft": 40,
+                          "size_compatible_footprints": 46
+                        }
+                      ],
+                      "nofit_ids": [],
+                      "open_cells": 44,
+                      "per_box_open_cells": {
+                        "QZXU0000009": 44,
+                        "QZXU0000014": 44,
+                        "QZXU0000020": 44,
+                        "QZXU0000035": 44,
+                        "QZXU0000040": 44,
+                        "QZXU0000056": 44,
+                        "QZXU0000061": 44,
+                        "QZXU0000077": 44,
+                        "QZXU0000082": 44,
+                        "QZXU0000098": 44,
+                        "QZXU0000101": 44,
+                        "QZXU0000117": 44,
+                        "QZXU0000122": 44,
+                        "QZXU0000138": 44,
+                        "QZXU0000143": 44,
+                        "QZXU0000159": 44,
+                        "QZXU0000164": 44,
+                        "QZXU0000170": 44
+                      },
+                      "physical_cells": 92,
+                      "proof_reasons": [],
+                      "proven_impossible": false,
+                      "retained_conflicts": []
+                    },
+                    "stored_witness": {
+                      "fresh_audit": false,
+                      "full_checker_passed": true,
+                      "input_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100003.json",
+                      "input_sha256": "0ef1a72eaad061cf96cef568bcfbecd575e4e74dd1e44c3b59b574247bd8c981",
+                      "instance_id": "random.small.40100003.0.2",
+                      "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/frontier/runs/val-0.9/random.small.40100003.0.2.json",
+                      "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969",
+                      "sha256": "31bcbdb0c51a256788587ad38cf39c756670046cbc6dda354a7b69a7478bbb55"
+                    },
+                    "text": "Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically.",
+                    "would_work": false
+                  }
+                ],
+                "automatically_applied": false,
+                "checker_called": false,
+                "checker_report": null,
+                "clarifications": [],
+                "facts": [
+                  {
+                    "id": "preplanning-proof",
+                    "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+                  },
+                  {
+                    "id": "cell-capacity",
+                    "text": "The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+                  }
+                ],
+                "nearest_alternative_id": "alternative-1",
+                "parsed": {
+                  "constraint": {
+                    "bay": null,
+                    "max_tiers": 0,
+                    "type": "max_tiers",
+                    "zone": "deck"
+                  },
+                  "schema_version": "stowlm.reader/2"
+                },
+                "proof": {
+                  "checker_called": false,
+                  "checker_report": null,
+                  "constraint": {
+                    "constraint": {
+                      "bay": null,
+                      "max_tiers": 0,
+                      "type": "max_tiers",
+                      "zone": "deck"
+                    },
+                    "schema_version": "stowlm.reader/2"
+                  },
+                  "demand_cells": 31,
+                  "demand_teu": 31,
+                  "load_box_count": 18,
+                  "load_boxes": [
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000009",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000014",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000020",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000035",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 12,
+                      "container_id": "QZXU0000040",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 92
+                    },
+                    {
+                      "allowed_footprints": 12,
+                      "container_id": "QZXU0000056",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 92
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000061",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000077",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000082",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 12,
+                      "container_id": "QZXU0000098",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 92
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000101",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000117",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 12,
+                      "container_id": "QZXU0000122",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 92
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000138",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000143",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 12,
+                      "container_id": "QZXU0000159",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 92
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000164",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    },
+                    {
+                      "allowed_footprints": 6,
+                      "container_id": "QZXU0000170",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 46
+                    }
+                  ],
+                  "nofit_ids": [],
+                  "open_cells": 12,
+                  "per_box_open_cells": {
+                    "QZXU0000009": 12,
+                    "QZXU0000014": 12,
+                    "QZXU0000020": 12,
+                    "QZXU0000035": 12,
+                    "QZXU0000040": 12,
+                    "QZXU0000056": 12,
+                    "QZXU0000061": 12,
+                    "QZXU0000077": 12,
+                    "QZXU0000082": 12,
+                    "QZXU0000098": 12,
+                    "QZXU0000101": 12,
+                    "QZXU0000117": 12,
+                    "QZXU0000122": 12,
+                    "QZXU0000138": 12,
+                    "QZXU0000143": 12,
+                    "QZXU0000159": 12,
+                    "QZXU0000164": 12,
+                    "QZXU0000170": 12
+                  },
+                  "physical_cells": 92,
+                  "planning_attempted": false,
+                  "proof_reasons": [
+                    "total_open_cell_shortfall"
+                  ],
+                  "proven_impossible": true,
+                  "retained_conflicts": [],
+                  "scope": "necessary geometry only; screen pass does not guarantee a plan"
+                },
+                "required_fact_ids": [
+                  "preplanning-proof",
+                  "cell-capacity"
+                ],
+                "schema_version": "stowlm.refusal-evidence/1",
+                "status": "static_impossible"
+              },
+              "recorded_reading": {
+                "constraint": {
+                  "bay": null,
+                  "max_tiers": 0,
+                  "type": "max_tiers",
+                  "zone": "deck"
+                },
+                "schema_version": "stowlm.reader/2"
+              },
+              "source": "experiments/mvp/reader/runs/refusals/examples/impossible-tier-with-alternative.json",
+              "source_sha256": "478238ee293af9889125f35aef505dc14a3e7b2911ec91065b31c4bb78cdcd75",
+              "status": "constraint_unavailable",
+              "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified."
+            }
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"say\": \"The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified.\"}"
+          },
+          {
+            "role": "final_gate",
+            "content": {
+              "reasons": [
+                "unsupported_acceptance"
+              ],
+              "raw_say": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified.",
+              "candidate_say": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Alternative requiring your choice: In every bay, use at most 2 occupied tiers per deck stack. A stored plan passed a fresh full check and satisfies this alternative. That is a historical witness, not a guarantee for a new plan. This relaxes at least part of your original instruction; it will not be applied automatically. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified.",
+              "final_say": "The load needs 31 TEU of cells; 12 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately.\nThe parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists.",
+              "rewritten": true,
+              "termination": "model_say"
+            }
+          }
+        ],
+        "recorded_actions": 2,
+        "consumed_actions": 2,
+        "unconsumed_raw_actions": [],
+        "unconsumed_actions": 0,
+        "exhausted": false,
+        "original_actions_sha256": "f3dabf3b71648e7576e3b52f338b94c8e16e1ef88d042955b33ac1a5514afd60",
+        "host_events": [],
+        "source_turn_sha256": "6c87b70ab73f7c2b7197c809819402a7e8a24c977f206fdd84147aacd3dedabb",
+        "host_request_source": "current_conservative_message_authorization"
+      }
+    ]
+  }
+}

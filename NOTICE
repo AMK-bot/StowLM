@@ -1,0 +1,81 @@
+StowLM — third-party notices
+
+Copyright 2026 AMK-bot.
+Project source is licensed under Apache-2.0; see LICENSE.
+Third-party terms and notices remain applicable.
+
+Models and services
+
+Meta Muse Glimmer 30B is the pre-existing base model for StowLM Reader. The
+project's LoRA adapter and its training/provenance record are separate releases.
+Base model: https://huggingface.co/meta-models/Muse-Glimmer-30B
+Upstream licence: https://huggingface.co/meta-models/Muse-Glimmer-30B/raw/main/LICENSE
+The adapter release must retain the applicable licence, change attribution and
+NOTICE material. Meta is not claimed to endorse this project.
+
+Muse Spark and Muse Voice Transcribe are Meta API services used by the pipeline.
+These services and models are pre-existing Meta work.
+
+Dependencies
+
+The Python environment uses third-party packages including Hugging Face Hub,
+MLX/MLX-LM/MLX-VLM, NumPy, OR-Tools, Pydantic and SciPy. Their authors retain
+their rights. Record exact versions from the released uv.lock and preserve
+applicable notices when redistributing covered material or binaries. Additional
+transitive components include MPL-covered packages and binary components with
+LGPL or GCC runtime-exception terms; a new source-code licence does not replace
+those obligations. Do not publish a copied virtual environment.
+
+Video kit, site and rendered media (D303–D305)
+
+brag 0.5.0 — latent-spaces/brag, commit 669ab9286a, MIT.
+Copyright (c) 2026 Shunit Haviv Hakimi.
+https://github.com/latent-spaces/brag
+The StowLM video kit and site adapt its workflow and presentation. The full
+upstream MIT permission and warranty notice is retained unchanged in
+experiments/mvp/video/stowlm-brag/NOTICE.md. The brag-vendor tree is not shipped.
+
+HyperFrames 0.8.190 — HeyGen, Apache-2.0.
+https://www.apache.org/licenses/LICENSE-2.0
+Used to check and render the supplied compositions. Its installed runtime and
+node_modules under video/.tools are not shipped; the adapted kit contains the
+rendering entry points, and the selected media are rendered outputs.
+
+Music: Sascha Ende, ende.app (CC BY 4.0).
+"Happy Beats / Business Moves" (Vol. 1, 10 and 11, per experiments/mvp/video/stowlm-brag/NOTICE.md) is used as background music in the
+selected launch/social drafts and the site's launch video. Audio is trimmed
+and mixed with the rendered presentation.
+https://ende.app/en
+https://creativecommons.org/licenses/by/4.0/
+This music is not covered by brag's MIT licence. Keep the credit above in video
+descriptions and posts as well as these notices. No standalone vendor music
+files are included in this selection.
+
+Sound-effect provenance: Kenney, CC0; OpenGameArt, Keyboard Soundpack #1 by unicae_games, CC0.
+https://kenney.nl/
+https://opengameart.org/
+https://creativecommons.org/publicdomain/zero/1.0/
+No standalone SFX assets are selected and the current render builders add no
+new SFX layer. This credits upstream Kenney provenance for any effects retained
+in recorded clips; it does not claim that all upstream SFX are redistributed.
+
+Reference data and research
+
+KCS hull data (NMRI): downloaded at setup with a SHA256 check; not redistributed.
+
+Credits: Meta Muse Glimmer 30B, Muse Spark and Muse Voice Transcribe; brag (MIT);
+HyperFrames (Apache-2.0); Sascha Ende (CC BY 4.0); CC0 SFX provenance from Kenney
+and OpenGameArt; KCS downloaded, not redistributed; UN/LOCODE (CC BY 4.0).
+
+Synthetic generators draw on public ship particulars, regulatory facts and
+published research. Credit only the source extracts actually redistributed,
+using exact attribution and licence links. Examples requiring provenance review
+include Larsen–Pacino data (CC0), UN/LOCODE extracts (CC BY 4.0), US government
+dangerous-goods references, and Singapore/Thai open-data sources. Public ship
+brochures and standards are not automatically licensed for redistribution.
+Do not include original company/customer documents, raw operational stowage,
+ambiguous-licence benchmark archives or research PDFs without permission.
+
+Voice assets
+
+The development radio clips used Google's consumer Translate TTS endpoint. No redistribution licence was found, so the audio is withheld from this copy; the radio chapter shows the transcript.

@@ -1,0 +1,236 @@
+{
+  "schema": "stowlm.test-generator-record-b2/1",
+  "source": {
+    "label": "Synthetic booking intake excerpt; a test fixture, never a live-app fallback",
+    "synthetic": true,
+    "call_id": "c20261103-212438-199686",
+    "booking_ref": "SYN-149c026dbad8683a-B2",
+    "record_path": "experiments/mvp/ui/functional/calls/c20261103-212438-199686/intake/bookings/SYN-149c026dbad8683a-B2-c5c4b49fb95c293c.json",
+    "record_sha256": "213d5d2f31fbf945735f5aa682421adbc13105b547d5cd412df0d1b9c8c5786f",
+    "record_bytes": 4408078,
+    "receipt_sha256": "c6651a05e03e276caf6826f9eb3a40a6ce75c88bb7b032a1e20e082e0c328a45",
+    "base_instance_path": "experiments/mvp/ui/functional/calls/c20261103-212438-199686/base-instance.json",
+    "base_instance_file_sha256": "8805709f1b6c563ac305eb03eb8ffb3a218a271563215f35f30d6b5139cb5b10",
+    "retained_intake_fields": [
+      "mode",
+      "model",
+      "boxes",
+      "complete",
+      "conflicts",
+      "questions",
+      "rows",
+      "wall_s",
+      "cost_usd",
+      "read_wall_s",
+      "read_cost_usd",
+      "receipt_sha256"
+    ],
+    "omitted": [
+      "raw.field_sources",
+      "raw.records",
+      "raw.rows"
+    ],
+    "note": "Public intake fields and raw question metadata are copied exactly. The reduced fixture is not a full backend validation receipt.",
+    "raw_questions": [
+      {
+        "candidates": [],
+        "field": "iso_type",
+        "id": "QZXU0000117:iso_type:unsupported_equipment",
+        "prompt": "QZXU0000117: 45P3 needs equipment review; this intake supports general purpose and reefer groups.",
+        "reason": "unsupported_equipment",
+        "row": 2
+      }
+    ]
+  },
+  "intake": {
+    "mode": "live",
+    "model": "muse-spark-1.3",
+    "boxes": 6,
+    "complete": false,
+    "conflicts": [],
+    "questions": [
+      {
+        "box": "QZXU0000117",
+        "field": "iso_type",
+        "id": "QZXU0000117:iso_type:unsupported_equipment",
+        "text": "QZXU0000117: 45P3 needs equipment review; this intake supports general purpose and reefer groups."
+      }
+    ],
+    "rows": [
+      {
+        "category": "SGSIN:22G1:L:empty",
+        "dg": null,
+        "direct_delivery": false,
+        "empty": true,
+        "gross_mass_kg": 2350.0,
+        "height_m": 2.591,
+        "id": "QZXU0000082",
+        "iso_type": "22G1",
+        "length_ft": 20,
+        "max_gross_mass_kg": 30480.0,
+        "oog": null,
+        "pod": "SGSIN",
+        "pol": "THLCH",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "special_stowage": [],
+        "tare_kg": 2350.0,
+        "weight_class": "L"
+      },
+      {
+        "category": "SGSIN:45G1:M:loaded",
+        "dg": null,
+        "direct_delivery": false,
+        "empty": false,
+        "gross_mass_kg": 10709.808064404602,
+        "height_m": 2.896,
+        "id": "QZXU0000098",
+        "iso_type": "45G1",
+        "length_ft": 40,
+        "max_gross_mass_kg": 32500.0,
+        "oog": null,
+        "pod": "SGSIN",
+        "pol": "THLCH",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "special_stowage": [],
+        "tare_kg": 3900.0,
+        "weight_class": "M"
+      },
+      {
+        "category": "SGSIN:45P3:H:loaded",
+        "dg": null,
+        "direct_delivery": false,
+        "empty": false,
+        "gross_mass_kg": 22283.295311011098,
+        "height_m": 2.896,
+        "id": "QZXU0000117",
+        "iso_type": "45P3",
+        "length_ft": 40,
+        "max_gross_mass_kg": 55000.0,
+        "oog": null,
+        "pod": "SGSIN",
+        "pol": "THLCH",
+        "reefer": false,
+        "special_stowage": [],
+        "tare_kg": 5900.0,
+        "weight_class": "H"
+      },
+      {
+        "category": "MYPKG:45G1:H:loaded",
+        "dg": null,
+        "direct_delivery": false,
+        "empty": false,
+        "gross_mass_kg": 23482.84807317329,
+        "height_m": 2.896,
+        "id": "QZXU0000122",
+        "iso_type": "45G1",
+        "length_ft": 40,
+        "max_gross_mass_kg": 32500.0,
+        "oog": null,
+        "pod": "MYPKG",
+        "pol": "THLCH",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "special_stowage": [],
+        "tare_kg": 3900.0,
+        "weight_class": "H"
+      },
+      {
+        "category": "MYPKG:42G1:H:loaded",
+        "dg": null,
+        "direct_delivery": false,
+        "empty": false,
+        "gross_mass_kg": 27393.93221168987,
+        "height_m": 2.591,
+        "id": "QZXU0000138",
+        "iso_type": "42G1",
+        "length_ft": 40,
+        "max_gross_mass_kg": 32500.0,
+        "oog": null,
+        "pod": "MYPKG",
+        "pol": "THLCH",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "special_stowage": [],
+        "tare_kg": 3750.0,
+        "weight_class": "H"
+      },
+      {
+        "category": "SGSIN:22G1:L:empty",
+        "dg": null,
+        "direct_delivery": false,
+        "empty": true,
+        "gross_mass_kg": 2350.0,
+        "height_m": 2.591,
+        "id": "QZXU0000143",
+        "iso_type": "22G1",
+        "length_ft": 20,
+        "max_gross_mass_kg": 30480.0,
+        "oog": null,
+        "pod": "SGSIN",
+        "pol": "THLCH",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "special_stowage": [],
+        "tare_kg": 2350.0,
+        "weight_class": "L"
+      }
+    ],
+    "wall_s": 71.18353354092687,
+    "cost_usd": 0.0777575,
+    "read_wall_s": 71.18353354092687,
+    "read_cost_usd": 0.0777575,
+    "receipt_sha256": "c6651a05e03e276caf6826f9eb3a40a6ce75c88bb7b032a1e20e082e0c328a45"
+  },
+  "generator_record": {
+    "category": "SGSIN:45P3:H:loaded",
+    "dg": null,
+    "direct_delivery": false,
+    "empty": false,
+    "gross_mass_kg": 22283.295311011098,
+    "height_m": 2.896,
+    "id": "QZXU0000117",
+    "iso_type": "45P3",
+    "length_ft": 40,
+    "max_gross_mass_kg": 55000.0,
+    "oog": null,
+    "pod": "SGSIN",
+    "pol": "THLCH",
+    "reefer": false,
+    "reefer_setpoint_c": null,
+    "special_stowage": [],
+    "tare_kg": 5900.0,
+    "weight_class": "H"
+  },
+  "expected": {
+    "eligible_box_ids": [
+      "QZXU0000117"
+    ],
+    "papers_body": {
+      "use_generator_records_for": [
+        "QZXU0000117"
+      ]
+    },
+    "closed_question_ids": [
+      "QZXU0000117:iso_type:unsupported_equipment"
+    ],
+    "remaining_spark_box_ids": [
+      "QZXU0000082",
+      "QZXU0000098",
+      "QZXU0000122",
+      "QZXU0000138",
+      "QZXU0000143"
+    ],
+    "intake_row_origins": {
+      "chosen": "generator",
+      "other": "spark"
+    },
+    "call_load_list_row_origins": {
+      "chosen": "generator, not read by a model",
+      "other": "muse_spark"
+    },
+    "call_load_list_origin": "Muse Spark, with 1 boxes from the generator (not read by a model)",
+    "incremental_cost_usd": 0.0
+  }
+}

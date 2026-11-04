@@ -1,0 +1,28 @@
+{
+  "loaded": [
+    {
+      "module": "experiments.mvp.pipeline.copilot.agent",
+      "source_file": "agent.py",
+      "import_source_sha256": "2ef231d6c6eaa5f73004979df64674f3777a13ec5bfd62012deb41890448f87c",
+      "frozen_source_sha256": "2ef231d6c6eaa5f73004979df64674f3777a13ec5bfd62012deb41890448f87c"
+    },
+    {
+      "module": "experiments.mvp.pipeline.copilot.authorization",
+      "source_file": "authorization.py",
+      "import_source_sha256": "53c3b9f8bee7aec62aefd21ecb6ef6711feb6bac3ff6d94a79e78749c3352437",
+      "frozen_source_sha256": "53c3b9f8bee7aec62aefd21ecb6ef6711feb6bac3ff6d94a79e78749c3352437"
+    },
+    {
+      "module": "experiments.mvp.pipeline.copilot.tools",
+      "source_file": "tools.py",
+      "import_source_sha256": "487839664d4a4479466a89cd0675ca47df2b94bbb0a6a6d2c6e8f21c886a19b7",
+      "frozen_source_sha256": "487839664d4a4479466a89cd0675ca47df2b94bbb0a6a6d2c6e8f21c886a19b7"
+    },
+    {
+      "module": "experiments.mvp.pipeline.copilot.hero_run",
+      "source_file": "hero_run.py",
+      "import_source_sha256": "6ff8995f5f6cb25388d57cfc5464c95fb4c79370039deba9afc584eab98c7131",
+      "frozen_source_sha256": "6ff8995f5f6cb25388d57cfc5464c95fb4c79370039deba9afc584eab98c7131"
+    }
+  ]
+}

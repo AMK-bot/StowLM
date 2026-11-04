@@ -1,0 +1,66 @@
+"""Metadata-only post-generation verification. Never generates or plans a map."""
+import hashlib,json,os,time
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[6];HOME=Path(__file__).resolve().parent;WORK=HOME/'map-generation';ORIGINAL=ROOT/'experiments/mvp/pipeline/maps'
+def sha(path):
+ h=hashlib.sha256()
+ with path.open('rb') as stream:
+  for block in iter(lambda:stream.read(1024*1024),b''):h.update(block)
+ return h.hexdigest()
+def read(path):return json.loads(path.read_text())
+def atomic(path,data):
+ temporary=path.with_name(path.name+'.tmp');temporary.write_text(json.dumps(data,indent=2)+'\n');os.replace(temporary,path)
+def main():
+ manifest=read(HOME/'maps-manifest.json');rows=manifest['maps'];snapshot=read(ORIGINAL/'runtime-snapshot.json');requests=read(ORIGINAL/'requests.json')
+ assert len(rows)==24 and len({r['seed'] for r in rows})==24
+ claims={int(path.stem):read(path) for path in (WORK/'claims').glob('*.json')}
+ assert len(claims)==24 and set(claims)=={r['seed'] for r in rows}
+ ledger=[json.loads(line) for line in (WORK/'owned-pids.jsonl').read_text().splitlines()]
+ assert len(ledger)==24 and len({r['seed'] for r in ledger})==24
+ all_paths=[];denials=[]
+ for row in rows:
+  assert row['generation_status']=='accepted' and row['schema_valid'] and not row['planner_called']
+  assert claims[row['seed']]['row']['path']==row['path'] and sha(ROOT/row['path'])==row['sha256']
+  events=[json.loads(line) for line in (WORK/f"writes-{row['seed']}.jsonl").read_text().splitlines()]
+  for event in events:
+   if event['allowed']:
+    assert event['path'].startswith(str(HOME.relative_to(ROOT))+'/')
+    all_paths.append(event['path'])
+   else:
+    evidence=read(WORK/'cleanup-incident'/f"recovery-{row['seed']}.json")
+    assert evidence['old_guard_denial']==event and evidence['map_bytes_unchanged'] and evidence['producer_redraws']==0
+    assert event['event']=='os.remove' and event['path']==f"worker-{claims[row['seed']]['pid']}.json"
+    assert sha(ROOT/evidence['original_failed_status'])==evidence['original_failed_status_sha256']
+    assert (ROOT/row['path']).stat().st_mtime_ns==evidence['map_mtime_ns']
+    denials.append(dict(seed=row['seed'],evidence=str((WORK/'cleanup-incident'/f"recovery-{row['seed']}.json").relative_to(ROOT))))
+ source_drift=[]
+ for name,digest in snapshot['files'].items():
+  if sha(ORIGINAL/'runtime'/name)!=digest:source_drift.append('runtime/'+name)
+ for name,digest in requests['source_files'].items():
+  if sha(ROOT/name)!=digest:source_drift.append(name)
+ assert not source_drift,source_drift
+ from experiments.mvp.pipeline.freeze import product_outputs
+ frozen=read(ROOT/'experiments/mvp/pipeline/freeze/manifest-pipeline.json');closure=frozen['selection'].get('import_closure',{}).get('paths',[])
+ output_files=[p for p in HOME.rglob('*') if p.is_file()]
+ not_excluded=[str(p.relative_to(ROOT)) for p in output_files if str(p.relative_to(ROOT)) in frozen['files'] or not product_outputs.excluded_pipeline(str(p.relative_to(ROOT)),import_closure=closure)]
+ assert not not_excluded,dict(count=len(not_excluded),sample=not_excluded[:10])
+ digest=read(HOME/'map-digest-proof.json');assert digest['ready'] and digest['accepted']==24 and not digest['collisions']
+ incident=dict(schema_version='stowlm.ext1.cleanup-incident-final/1',producer_invocations=24,maps_committed=24,maps_regenerated=0,
+  recovered_post_commit_cleanup_rows=len(denials),normal_terminal_rows=24-len(denials),unrecoverable_rows=0,
+  first_summary_sha256=sha(WORK/'cleanup-incident/recovery-summary.json'),second_summary_sha256=sha(WORK/'cleanup-incident/recovery-summary-2.json'),
+  bookkeeping_only=True,old_false_positive_denials=denials,failed_statuses_preserved=True,new_map_bytes_unchanged=True,
+  initial_wrapper_sha256=sha(HOME/'map_generate_initial.py.txt'),paused_wrapper_sha256=sha(HOME/'map_generate_paused.py.txt'),fixed_wrapper_sha256=sha(HOME/'map_generate.py.txt'),
+  corrected_fd_resolution='macOS fcntl F_GETPATH; Linux /proc/self/fd; resolved absolute target must be inside excluded extension fence',
+  regression_proof_sha256=sha(HOME/'map-guard-regression.json'),planners_run=0,old_map_payloads_opened=0,completed_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()))
+ incident_path=WORK/'cleanup-incident/final-summary.json';assert not incident_path.exists();atomic(incident_path,incident)
+ proof=dict(schema_version='stowlm.ext1.final-verification/1',ready=True,accepted=24,failed=0,claims=24,owned_child_spawns=24,
+  producer_redraws=0,planners_run=0,old_map_payloads_opened=0,source_files_checked=len(snapshot['files'])+len(requests['source_files']),source_drifts=source_drift,
+  excluded_files_checked=len(output_files),nonexcluded_files=not_excluded,allowed_write_events=len(all_paths),unknown_write_denials=[],
+  recovered_false_positive_cleanup_denials=len(denials),map_bytes_hash_checked=24,claim_map_mtime_rechecked=len(denials),
+  canonical_digest_comparison='Both canonical serializers captured on actual first save; compared to all recorded external digest metadata',
+  tests=dict(offline_tests=9,passed=9,regression_failed_before_passed_after=True),
+  pins={name:sha(HOME/name) for name in ['PREREG.md','maps-manifest.json','map-seed-proof.json','map-prior-identities.json','map-digest-proof.json','map-runtime-source-proof.json','map-exclusion-proof.json','map-guard-regression.json','map_final_verify.py.txt','map_recover_cleanup.py.txt']},
+  incident_summary_sha256=sha(incident_path),verification_completed_utc=incident['completed_utc'],coverage_limits=read(HOME/'map-seed-proof.json')['coverage_limits'])
+ atomic(HOME/'map-final-verification.json',proof)
+ print(json.dumps(dict(ready=True,accepted=24,recovered=len(denials),normal=24-len(denials),source_files_checked=proof['source_files_checked'],excluded_files_checked=len(output_files),pins=proof['pins'],final_verification_sha256=sha(HOME/'map-final-verification.json'),incident_final_summary_sha256=sha(incident_path))))
+if __name__=='__main__':main()

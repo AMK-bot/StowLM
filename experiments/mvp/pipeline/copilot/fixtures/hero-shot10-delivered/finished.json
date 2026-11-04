@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-11-02T06:48:35.005512+00:00",
+  "spend": {
+    "purpose": "pipeline-t1.6-copilot",
+    "measured_cost_usd": "9.12395475",
+    "held_usd": "1.319936",
+    "cap_usd": "12",
+    "completed_calls": 889,
+    "accounting": "Canonical managed shared ledger; all task-prefixed original, tuning and fresh attempts, including incomplete responses and holds.",
+    "created_utc": "2026-11-02T06:48:35.037006+00:00",
+    "by_phase": {
+      "original-work": {
+        "measured_cost_usd": "0.36134320",
+        "held_usd": "0"
+      },
+      "tuned-v2": {
+        "measured_cost_usd": "0.34847070",
+        "held_usd": "0"
+      },
+      "tuned-v3": {
+        "measured_cost_usd": "0.30904990",
+        "held_usd": "0"
+      },
+      "fresh-v3": {
+        "measured_cost_usd": "0.11207540",
+        "held_usd": "0"
+      },
+      "agency-v4-tuned": {
+        "measured_cost_usd": "0.42849835",
+        "held_usd": "1.319936"
+      },
+      "agency-v5-tuned": {
+        "measured_cost_usd": "2.33421220",
+        "held_usd": "0"
+      },
+      "native-recovery": {
+        "measured_cost_usd": "0.56909970",
+        "held_usd": "0"
+      },
+      "agency-v6-frozen-first": {
+        "measured_cost_usd": "0.66731095",
+        "held_usd": "0"
+      },
+      "agency-v6-native-explain": {
+        "measured_cost_usd": "0.35631395",
+        "held_usd": "0"
+      },
+      "shot10": {
+        "measured_cost_usd": "2.93368310",
+        "held_usd": "0"
+      },
+      "hero-final": {
+        "measured_cost_usd": "0.70389730",
+        "held_usd": "0"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "case_id": "dg_keep_away-04",
+  "fresh_process": true,
+  "audit_pid": 19706,
+  "passed": true,
+  "binding": true,
+  "repaired": false,
+  "plan_record_sha256": "964b9181c3fe132af48958990896cc4552aadf7a16f64449195055ef8a14e704",
+  "unconstrained_passed": true,
+  "unconstrained_moves": 12.0,
+  "unconstrained_violations": [
+    "load QZXU0000122 -> 0010282: instruction: QZXU0000122 may not be stowed at 0010282"
+  ],
+  "checker_passed": true,
+  "replay_legal": true,
+  "mask_legal": true,
+  "mask_complete": true,
+  "all_loaded": true,
+  "instruction_violations": [],
+  "allocation_violations": [],
+  "constrained_moves": 12.0,
+  "stored_moves_match": true,
+  "changed_final_placements": 6,
+  "plan_changed": true,
+  "mask_actions_checked": 18,
+  "checker_violations": [],
+  "restows_now": 0,
+  "relocations": 4,
+  "hatches_now": 4,
+  "restows_later": 0,
+  "hatches_later": 4,
+  "wall_s": 96.57301741599804
+}

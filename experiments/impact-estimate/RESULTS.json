@@ -1,0 +1,1012 @@
+{
+  "unit": "avoided non-productive lifts per matched small map, not per real vessel call",
+  "inputs": {
+    "name": "BLIND_TWO_STEP_V0_8_1_PROVISIONAL_REPLACE_WITH_TEST_V3",
+    "baseline_lifts_per_map": 23.4,
+    "avoided_fraction": 0.39,
+    "this_port_share_of_saved_lifts": 0.18571428571428572,
+    "mutual_maps": 25,
+    "provenance": "docs/headline.md; experiments/mvp/frontier/RESULTS.md blind pooled-30 row",
+    "split_status": "ASSUMPTION: transfer the exact v0.9 14-map test saving split to the blind pooled cohort"
+  },
+  "observed_test_decomposition_context_only": {
+    "version": "0.9.0",
+    "maps": 14,
+    "sources": [
+      "experiments/mvp/frontier/runs/test-0.9/AUDIT.json",
+      "experiments/mvp/strategy/move_breakdown.json"
+    ],
+    "instance_ids": [
+      "random.small.28100001.0.2",
+      "random.small.28100002.0.2",
+      "random.small.28100005.0.5",
+      "random.small.28100006.0.5",
+      "random.small.28100009.0.8",
+      "random.small.28100010.0.2",
+      "random.small.28100012.0.5",
+      "random.small.28100014.0.8",
+      "sim.small.28100000",
+      "sim.small.28100003",
+      "sim.small.28100004",
+      "sim.small.28100007",
+      "sim.small.28100008",
+      "sim.small.28100013"
+    ],
+    "totals": {
+      "frontier": {
+        "this_port_lifts": 124,
+        "projected_later_lifts": 56,
+        "total_lifts": 180
+      },
+      "two_step": {
+        "this_port_lifts": 150,
+        "projected_later_lifts": 170,
+        "total_lifts": 320
+      }
+    },
+    "saved_this_port_lifts_per_map": 1.8571428571428572,
+    "saved_projected_later_lifts_per_map": 8.142857142857142,
+    "saved_total_lifts_per_map": 10.0,
+    "this_port_share_of_saved_lifts": 0.18571428571428572
+  },
+  "cases": {
+    "low": {
+      "projected_later_credit": 0.0,
+      "modelled_this_port_saved_lifts_per_map": 1.6948285714285714,
+      "projected_later_saved_lifts_per_map": 7.431171428571428,
+      "credited_projected_later_lifts_per_map": 0.0,
+      "credited_saved_lifts_per_map": 1.6948285714285714,
+      "credited_reduction_vs_baseline": 0.07242857142857144
+    },
+    "mid": {
+      "projected_later_credit": 0.5,
+      "modelled_this_port_saved_lifts_per_map": 1.6948285714285714,
+      "projected_later_saved_lifts_per_map": 7.431171428571428,
+      "credited_projected_later_lifts_per_map": 3.715585714285714,
+      "credited_saved_lifts_per_map": 5.410414285714285,
+      "credited_reduction_vs_baseline": 0.23121428571428573
+    },
+    "high": {
+      "projected_later_credit": 1.0,
+      "modelled_this_port_saved_lifts_per_map": 1.6948285714285714,
+      "projected_later_saved_lifts_per_map": 7.431171428571428,
+      "credited_projected_later_lifts_per_map": 7.431171428571428,
+      "credited_saved_lifts_per_map": 9.126,
+      "credited_reduction_vs_baseline": 0.39
+    }
+  },
+  "assumptions": [
+    "ASSUMPTION: transfer the exact v0.9 14-map test saving split to the blind pooled cohort",
+    "Mid credits 50% of projected later-port savings; sensitivity only, not a probability.",
+    "39% and 23.40 are rounded published inputs; their product is 9.126, not the unrounded paired difference."
+  ],
+  "limits": [
+    "12\u201322 boxes, two discharge ports, two hatch covers; no medium/full-ship result.",
+    "This-port savings are modelled, not realised operational savings; later lifts assume no future loads and fixed coordinates.",
+    "Cases are not confidence bounds; blind paired bootstrap reduction interval is 30.3\u201347.3%.",
+    "No local sourced marginal move costs, replan time saved, or measured berth-time change: dollars and elapsed hours not estimated.",
+    "Replace avoided fraction, baseline, mutual cohort and now/later split together after test v3.",
+    "No port-wide or annual scaling: a small map is not a representative Laem Chabang call."
+  ],
+  "scenario_layer": {
+    "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+    "as_of": "2026-10-31",
+    "relationship_to_measured_layer": "Separate optional scenario. Original measured/provisional bundle is unchanged.",
+    "sources": {
+      "esco": {
+        "url": "https://www.esco.co.th/escotariff/consignee.html",
+        "source_date": "2026-04-01",
+        "date_kind": "tariff page updated",
+        "access_date": "2026-10-31",
+        "locator": "Consignee sheet, item 8; excludes VAT",
+        "scope": "20-foot extra movement requested by consignee/customs, not export-rehandle marginal cost"
+      },
+      "chennai": {
+        "url": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+        "source_date": "2025-05-01",
+        "date_kind": "tariff effective date",
+        "access_date": "2026-10-31",
+        "locator": "PDF page 8, sections 3.7 and 3.8",
+        "scope": "Historical 2025 Indian foreign-going retail charges subject to annual indexation; not a current 2026 quote or Thai marginal resource cost"
+      },
+      "hutchison": {
+        "url": "https://hutchisonports.co.th/hpt-celebrates-the-long-anticipated-official-opening-of-terminal-d-at-laem-chabang-port/",
+        "source_date": "2021-12-09",
+        "date_kind": "CMS publication date; opening event 2019-01-30",
+        "publication_date_evidence_url": "https://hutchisonports.co.th/wp-json/wp/v2/posts/403?_fields=date,date_gmt,modified,link,title",
+        "access_date": "2026-10-31",
+        "locator": "Push for Innovation, QC productivity paragraph",
+        "scope": "Operator says remote-control QC handles 30 or more moves/hour; not a restow/hatch cycle measurement"
+      },
+      "contex": {
+        "url": "https://www.vhbs.de/index.php?id=28&L=1",
+        "source_date": "2026-10-29",
+        "date_kind": "rate assessment date",
+        "access_date": "2026-10-31",
+        "locator": "New ConTex table, 29.10.2026 row",
+        "scope": "Daily charter market assessments; not actual avoided cash expenditure"
+      },
+      "bsaa": {
+        "url": "https://thaibsaa.com/images/documents/Annual24-25_Final.pdf",
+        "source_date": "2024-2025",
+        "date_kind": "report edition; statistics calendar 2024",
+        "access_date": "2026-10-31",
+        "locator": "Report page 6 (PDF page 6), Laem Chabang paragraph",
+        "scope": "All container-vessel calls, not a feeder-only eligibility count; TEU context only"
+      },
+      "world_bank": {
+        "url": "https://documents1.worldbank.org/curated/en/099091925073051415/pdf/P509479-9781ba16-3dbc-4064-9d8f-8eaf9951e09d.pdf",
+        "source_date": "2025",
+        "date_kind": "publication year; statistics 2024",
+        "access_date": "2026-10-31",
+        "locator": "Table 5.1, printed page 44 (PDF page 60), Thailand row",
+        "scope": "Thailand-wide time in port by call size, not Laem Chabang-only or a reducible baseline"
+      },
+      "planner_context": {
+        "url": "https://www.jstage.jst.go.jp/article/pjsai/JSAI2019/0/JSAI2019_2C5E502/_pdf/-char/ja",
+        "source_date": "2019",
+        "date_kind": "conference year",
+        "access_date": "2026-10-31",
+        "locator": "Page 2, stowage-planning paragraph",
+        "scope": "2\u20133 hours to allocate all containers for each port; whole task, not time per replan"
+      },
+      "headline": {
+        "url": null,
+        "source_path": "docs/headline.md; experiments/mvp/frontier/RESULTS.md",
+        "source_date": "2026-10-31",
+        "date_kind": "headline-contract date",
+        "access_date": "2026-10-31",
+        "locator": "Provisional blind pooled-30 comparison; 25 mutually passed maps",
+        "scope": "Rounded 39% reduction versus common two-step practice on synthetic small maps"
+      },
+      "decomposition": {
+        "url": null,
+        "source_path": [
+          "experiments/mvp/frontier/runs/test-0.9/AUDIT.json",
+          "experiments/mvp/strategy/move_breakdown.json"
+        ],
+        "source_date": null,
+        "date_kind": "original artifact date not established; repository snapshot accessed below",
+        "access_date": "2026-10-31",
+        "locator": "14 mutually passed small test maps, same filter as frontier/dev/test_tables.py",
+        "scope": "v0.9 category decomposition, a different cohort/version from provisional blind result"
+      }
+    },
+    "inputs": {
+      "export_boxes_per_call": {
+        "value": 500,
+        "unit": "physical boxes/call",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Illustrative export exchange; not vessel capacity or TEU."
+      },
+      "boxes_per_section": {
+        "value": 22,
+        "unit": "physical boxes/section",
+        "status": "sourced",
+        "source_id": "headline",
+        "url": null,
+        "source_path": "docs/headline.md; experiments/mvp/frontier/RESULTS.md",
+        "source_date": "2026-10-31",
+        "date_kind": "headline-contract date",
+        "access_date": "2026-10-31",
+        "locator": "Provisional blind pooled-30 comparison; 25 mutually passed maps",
+        "scope": "Rounded 39% reduction versus common two-step practice on synthetic small maps",
+        "note": "Upper measured size (range 12\u201322); using it as section denominator is a transfer assumption below."
+      },
+      "transfer_retention": {
+        "value": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 0.5
+        },
+        "unit": "share",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Retained small-map effect after scaling; unvalidated at 500 boxes."
+      },
+      "later_credit": {
+        "value": {
+          "low": 0.0,
+          "mid": 0.5,
+          "high": 1.0
+        },
+        "unit": "share of projected later savings",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "0/50/100% credit; not probabilities or confidence limits."
+      },
+      "section_scaling": {
+        "value": true,
+        "unit": "enabled",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Scale each small-map category by 500/22 and retention; neither independent sections nor linear benefits are established."
+      },
+      "category_transfer": {
+        "value": true,
+        "unit": "enabled",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Transfer v0.9 category-saving shares to blind 39% bundle and then to larger calls."
+      },
+      "blind_baseline_lifts_per_map": {
+        "value": 23.4,
+        "unit": "lifts/map",
+        "status": "sourced",
+        "source_id": "headline",
+        "url": null,
+        "source_path": "docs/headline.md; experiments/mvp/frontier/RESULTS.md",
+        "source_date": "2026-10-31",
+        "date_kind": "headline-contract date",
+        "access_date": "2026-10-31",
+        "locator": "Provisional blind pooled-30 comparison; 25 mutually passed maps",
+        "scope": "Rounded 39% reduction versus common two-step practice on synthetic small maps",
+        "note": "Provisional rounded baseline; replace complete bundle after test v3."
+      },
+      "blind_avoided_fraction": {
+        "value": 0.39,
+        "unit": "share",
+        "status": "sourced",
+        "source_id": "headline",
+        "url": null,
+        "source_path": "docs/headline.md; experiments/mvp/frontier/RESULTS.md",
+        "source_date": "2026-10-31",
+        "date_kind": "headline-contract date",
+        "access_date": "2026-10-31",
+        "locator": "Provisional blind pooled-30 comparison; 25 mutually passed maps",
+        "scope": "Rounded 39% reduction versus common two-step practice on synthetic small maps",
+        "note": "Provisional rounded reduction; not an operational improvement rate."
+      },
+      "blind_mutual_maps": {
+        "value": 25,
+        "unit": "maps",
+        "status": "sourced",
+        "source_id": "headline",
+        "url": null,
+        "source_path": "docs/headline.md; experiments/mvp/frontier/RESULTS.md",
+        "source_date": "2026-10-31",
+        "date_kind": "headline-contract date",
+        "access_date": "2026-10-31",
+        "locator": "Provisional blind pooled-30 comparison; 25 mutually passed maps",
+        "scope": "Rounded 39% reduction versus common two-step practice on synthetic small maps",
+        "note": "Matched blind maps both arms passed."
+      },
+      "raw_category_counts": {
+        "value": {
+          "maps": 14,
+          "instance_ids": [
+            "random.small.28100001.0.2",
+            "random.small.28100002.0.2",
+            "random.small.28100005.0.5",
+            "random.small.28100006.0.5",
+            "random.small.28100009.0.8",
+            "random.small.28100010.0.2",
+            "random.small.28100012.0.5",
+            "random.small.28100014.0.8",
+            "sim.small.28100000",
+            "sim.small.28100003",
+            "sim.small.28100004",
+            "sim.small.28100007",
+            "sim.small.28100008",
+            "sim.small.28100013"
+          ],
+          "unit": "lifts summed across maps",
+          "totals": {
+            "frontier": {
+              "relocations": 74,
+              "restow_now": 0,
+              "hatch_now": 50,
+              "restow_later": 0,
+              "hatch_later": 56
+            },
+            "two_step": {
+              "relocations": 94,
+              "restow_now": 0,
+              "hatch_now": 56,
+              "restow_later": 80,
+              "hatch_later": 90
+            }
+          },
+          "saved": {
+            "relocations": 20,
+            "restow_now": 0,
+            "hatch_now": 6,
+            "restow_later": 80,
+            "hatch_later": 34
+          },
+          "note": "Restow values already count off-and-back-on lifts; do not multiply by two again."
+        },
+        "unit": "lifts",
+        "status": "sourced",
+        "source_id": "decomposition",
+        "url": null,
+        "source_path": [
+          "experiments/mvp/frontier/runs/test-0.9/AUDIT.json",
+          "experiments/mvp/strategy/move_breakdown.json"
+        ],
+        "source_date": null,
+        "date_kind": "original artifact date not established; repository snapshot accessed below",
+        "access_date": "2026-10-31",
+        "locator": "14 mutually passed small test maps, same filter as frontier/dev/test_tables.py",
+        "scope": "v0.9 category decomposition, a different cohort/version from provisional blind result",
+        "note": "Reconstructed source totals and exact saved category shares."
+      },
+      "yard_charge_thb_per_lift": {
+        "value": 350,
+        "unit": "THB/lift",
+        "status": "sourced",
+        "source_id": "esco",
+        "url": "https://www.esco.co.th/escotariff/consignee.html",
+        "source_date": "2026-04-01",
+        "date_kind": "tariff page updated",
+        "access_date": "2026-10-31",
+        "locator": "Consignee sheet, item 8; excludes VAT",
+        "scope": "20-foot extra movement requested by consignee/customs, not export-rehandle marginal cost",
+        "note": "20-foot extra movement, consignee/customs request; excluding VAT."
+      },
+      "fx_thb_per_usd": {
+        "value": 35,
+        "unit": "THB/USD",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Named FX assumption; not a live quote or sourced exchange rate."
+      },
+      "restow_charge_usd_per_event": {
+        "value": 41.72,
+        "unit": "USD/20-foot via-quay restow",
+        "status": "sourced",
+        "source_id": "chennai",
+        "url": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+        "source_date": "2025-05-01",
+        "date_kind": "tariff effective date",
+        "access_date": "2026-10-31",
+        "locator": "PDF page 8, sections 3.7 and 3.8",
+        "scope": "Historical 2025 Indian foreign-going retail charges subject to annual indexation; not a current 2026 quote or Thai marginal resource cost",
+        "note": "Landing on quay and reshipping, one complete event."
+      },
+      "restow_lifts_per_event": {
+        "value": 2,
+        "unit": "lifts/event",
+        "status": "sourced",
+        "source_id": "chennai",
+        "url": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+        "source_date": "2025-05-01",
+        "date_kind": "tariff effective date",
+        "access_date": "2026-10-31",
+        "locator": "PDF page 8, sections 3.7 and 3.8",
+        "scope": "Historical 2025 Indian foreign-going retail charges subject to annual indexation; not a current 2026 quote or Thai marginal resource cost",
+        "note": "Via-quay event has landing and reshipping; divide price by two, not multiply source counts."
+      },
+      "hatch_charge_usd_per_cycle": {
+        "value": 56.78,
+        "unit": "USD/open-close cycle",
+        "status": "sourced",
+        "source_id": "chennai",
+        "url": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+        "source_date": "2025-05-01",
+        "date_kind": "tariff effective date",
+        "access_date": "2026-10-31",
+        "locator": "PDF page 8, sections 3.7 and 3.8",
+        "scope": "Historical 2025 Indian foreign-going retail charges subject to annual indexation; not a current 2026 quote or Thai marginal resource cost",
+        "note": "With quay landing; tariff explicitly covers opening and closing."
+      },
+      "hatch_lifts_per_cycle": {
+        "value": 2,
+        "unit": "lifts/cycle",
+        "status": "sourced",
+        "source_id": "chennai",
+        "url": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+        "source_date": "2025-05-01",
+        "date_kind": "tariff effective date",
+        "access_date": "2026-10-31",
+        "locator": "PDF page 8, sections 3.7 and 3.8",
+        "scope": "Historical 2025 Indian foreign-going retail charges subject to annual indexation; not a current 2026 quote or Thai marginal resource cost",
+        "note": "Tariff explicitly charges half for opening or closing alone."
+      },
+      "retail_proxy_transfer": {
+        "value": true,
+        "unit": "enabled",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Apply 20-foot retail prices to saved work at all ports; actual box mix and marginal cost unknown. Hatch proxy is per cover, not box size."
+      },
+      "qc_lifts_per_hour": {
+        "value": 30,
+        "unit": "lifts/crane-hour",
+        "status": "sourced",
+        "source_id": "hutchison",
+        "url": "https://hutchisonports.co.th/hpt-celebrates-the-long-anticipated-official-opening-of-terminal-d-at-laem-chabang-port/",
+        "source_date": "2021-12-09",
+        "date_kind": "CMS publication date; opening event 2019-01-30",
+        "publication_date_evidence_url": "https://hutchisonports.co.th/wp-json/wp/v2/posts/403?_fields=date,date_gmt,modified,link,title",
+        "access_date": "2026-10-31",
+        "locator": "Push for Innovation, QC productivity paragraph",
+        "scope": "Operator says remote-control QC handles 30 or more moves/hour; not a restow/hatch cycle measurement",
+        "note": "Use lower endpoint of operator's 30+ claim."
+      },
+      "qc_cycle_transfer": {
+        "value": true,
+        "unit": "enabled",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Apply container-move rate to restows and hatch lifts at current and later ports; not measured cycle times."
+      },
+      "yard_minutes_per_lift": {
+        "value": 2,
+        "unit": "equipment minutes/lift",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "No sourced local yard cycle; keep separate from elapsed vessel time."
+      },
+      "quay_critical_path_fraction": {
+        "value": {
+          "low": 0,
+          "mid": 0.25,
+          "high": 0.5
+        },
+        "unit": "share of quay work",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Only this fraction becomes elapsed berth time; no crane schedule simulated. Yard time never added."
+      },
+      "charter_usd_per_day": {
+        "value": {
+          "low": 17855,
+          "mid": 18495,
+          "high": 35982
+        },
+        "unit": "USD/day",
+        "status": "sourced",
+        "source_id": "contex",
+        "url": "https://www.vhbs.de/index.php?id=28&L=1",
+        "source_date": "2026-10-29",
+        "date_kind": "rate assessment date",
+        "access_date": "2026-10-31",
+        "locator": "New ConTex table, 29.10.2026 row",
+        "scope": "Daily charter market assessments; not actual avoided cash expenditure",
+        "note": "Low 1,100 TEU 12-month; mid 1,100 TEU 6-month; high 1,800 TEU 12-month assessments; types/tenors differ."
+      },
+      "charter_transfer": {
+        "value": true,
+        "unit": "enabled",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Value released berth time at charter hire/24; opportunity value, not automatically avoided cash or revenue."
+      },
+      "planner_before_minutes_per_replan": {
+        "value": {
+          "low": 30,
+          "mid": 60,
+          "high": 120
+        },
+        "unit": "planner minutes/replan",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Assumed time per replan, not sourced whole-planning hours."
+      },
+      "planner_after_minutes_per_replan": {
+        "value": {
+          "low": 30,
+          "mid": 30,
+          "high": 60
+        },
+        "unit": "planner minutes/replan",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "End-to-end human task assumption; includes review. No runtime subtracted from whole-task hours."
+      },
+      "replans_per_call": {
+        "value": 1,
+        "unit": "replans/eligible call",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Illustrative frequency, not measured."
+      },
+      "operating_weeks_per_year": {
+        "value": 52,
+        "unit": "weeks/year",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "No cancellations or skipped weeks."
+      },
+      "eligible_calls_per_week": {
+        "value": 1,
+        "unit": "eligible calls/week",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "One assumed eligible directional stream, not both visits or a vessel-count multiplier."
+      },
+      "port_container_calls_per_year": {
+        "value": 9325,
+        "unit": "container-vessel calls/calendar 2024",
+        "status": "sourced",
+        "source_id": "bsaa",
+        "url": "https://thaibsaa.com/images/documents/Annual24-25_Final.pdf",
+        "source_date": "2024-2025",
+        "date_kind": "report edition; statistics calendar 2024",
+        "access_date": "2026-10-31",
+        "locator": "Report page 6 (PDF page 6), Laem Chabang paragraph",
+        "scope": "All container-vessel calls, not a feeder-only eligibility count; TEU context only",
+        "note": "Scale population only; actual eligible/adopting subset not known."
+      },
+      "port_teu_context_only": {
+        "value": 9554673,
+        "unit": "TEU/calendar 2024",
+        "status": "sourced",
+        "source_id": "bsaa",
+        "url": "https://thaibsaa.com/images/documents/Annual24-25_Final.pdf",
+        "source_date": "2024-2025",
+        "date_kind": "report edition; statistics calendar 2024",
+        "access_date": "2026-10-31",
+        "locator": "Report page 6 (PDF page 6), Laem Chabang paragraph",
+        "scope": "All container-vessel calls, not a feeder-only eligibility count; TEU context only",
+        "note": "Context only; never multiplied by per-box or per-call benefit."
+      },
+      "port_eligible_adoption_share": {
+        "value": {
+          "low": 0.01,
+          "mid": 0.05,
+          "high": 0.1
+        },
+        "unit": "share of calls",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Combined eligibility and uptake assumption; floor to whole calls, never 100% scaling."
+      },
+      "annual_identical_calls": {
+        "value": true,
+        "unit": "enabled",
+        "status": "ASSUMPTION",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Every eligible adopted call has identical illustrative exchange, category savings and prices; later benefits attributed once to originating call."
+      },
+      "thailand_port_stay_context_only": {
+        "value": {
+          "under_500_moves": 23.0,
+          "501_to_1000_moves": 28.2,
+          "1001_to_1500_moves": 25.4
+        },
+        "unit": "hours in port/call, 2024",
+        "status": "sourced",
+        "source_id": "world_bank",
+        "url": "https://documents1.worldbank.org/curated/en/099091925073051415/pdf/P509479-9781ba16-3dbc-4064-9d8f-8eaf9951e09d.pdf",
+        "source_date": "2025",
+        "date_kind": "publication year; statistics 2024",
+        "access_date": "2026-10-31",
+        "locator": "Table 5.1, printed page 44 (PDF page 60), Thailand row",
+        "scope": "Thailand-wide time in port by call size, not Laem Chabang-only or a reducible baseline",
+        "note": "Context only; includes wider port time, not a reducible berth baseline or used in calculations."
+      },
+      "whole_planning_context_only": {
+        "value": [
+          2,
+          3
+        ],
+        "unit": "hours/whole port allocation task",
+        "status": "sourced",
+        "source_id": "planner_context",
+        "url": "https://www.jstage.jst.go.jp/article/pjsai/JSAI2019/0/JSAI2019_2C5E502/_pdf/-char/ja",
+        "source_date": "2019",
+        "date_kind": "conference year",
+        "access_date": "2026-10-31",
+        "locator": "Page 2, stowage-planning paragraph",
+        "scope": "2\u20133 hours to allocate all containers for each port; whole task, not time per replan",
+        "note": "Context only; not a replan measurement and never used in savings calculations."
+      },
+      "minutes_per_hour": {
+        "value": 60,
+        "unit": "minutes/hour",
+        "status": "unit definition",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Unit conversion."
+      },
+      "hours_per_day": {
+        "value": 24,
+        "unit": "hours/day",
+        "status": "unit definition",
+        "url": null,
+        "source_date": null,
+        "access_date": null,
+        "declared_date": "2026-10-31",
+        "note": "Unit conversion."
+      }
+    },
+    "raw_category_reconstruction": {
+      "maps": 14,
+      "instance_ids": [
+        "random.small.28100001.0.2",
+        "random.small.28100002.0.2",
+        "random.small.28100005.0.5",
+        "random.small.28100006.0.5",
+        "random.small.28100009.0.8",
+        "random.small.28100010.0.2",
+        "random.small.28100012.0.5",
+        "random.small.28100014.0.8",
+        "sim.small.28100000",
+        "sim.small.28100003",
+        "sim.small.28100004",
+        "sim.small.28100007",
+        "sim.small.28100008",
+        "sim.small.28100013"
+      ],
+      "unit": "lifts summed across maps",
+      "totals": {
+        "frontier": {
+          "relocations": 74,
+          "restow_now": 0,
+          "hatch_now": 50,
+          "restow_later": 0,
+          "hatch_later": 56
+        },
+        "two_step": {
+          "relocations": 94,
+          "restow_now": 0,
+          "hatch_now": 56,
+          "restow_later": 80,
+          "hatch_later": 90
+        }
+      },
+      "saved": {
+        "relocations": 20,
+        "restow_now": 0,
+        "hatch_now": 6,
+        "restow_later": 80,
+        "hatch_later": 34
+      },
+      "note": "Restow values already count off-and-back-on lifts; do not multiply by two again."
+    },
+    "derived_price_proxies": {
+      "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+      "yard_usd_per_lift": 10.0,
+      "restow_usd_per_lift": 20.86,
+      "hatch_usd_per_lift": 28.39
+    },
+    "per_section_components_before_extrapolation": {
+      "unit": "provisional allocated saved lifts/map",
+      "relocations": 1.3037142857142856,
+      "restow_now": 0.0,
+      "hatch_now": 0.3911142857142857,
+      "restow_later": 5.214857142857142,
+      "hatch_later": 2.2163142857142857
+    },
+    "formulas": [
+      "section_total_saved = blind_baseline_lifts_per_map * blind_avoided_fraction",
+      "section_category = section_total_saved * raw_category_saved / sum(raw_category_saved)",
+      "call_category = section_category * (export_boxes_per_call / boxes_per_section) * transfer_retention; later categories additionally * later_credit",
+      "handling_charge_proxy = yard_lifts * (350 / 35) + restow_lifts * (41.72 / 2) + hatch_lifts * (56.78 / 2)",
+      "quay_work_hours = (restow_lifts + hatch_lifts) / 30; berth_hours = quay_work_hours * critical_path_fraction",
+      "ship_time_opportunity = berth_hours * charter_usd_per_day / 24",
+      "planner_hours = (assumed_before_minutes - assumed_after_minutes) / 60 * replans_per_call",
+      "annual_stream_calls = 52 operating weeks * 1 eligible call/week; adoption_calls = floor(9325 * assumed_eligible_adoption_share)",
+      "annual quantity = per_call quantity * eligible adopted calls; later-port savings counted once at origin"
+    ],
+    "cases": {
+      "low": {
+        "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+        "section_scale_after_retention": 2.272727272727273,
+        "per_call": {
+          "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+          "yard_lifts": 2.962987012987013,
+          "restow_now_lifts": 0.0,
+          "hatch_now_lifts": 0.888896103896104,
+          "credited_restow_later_lifts": 0.0,
+          "credited_hatch_later_lifts": 0.0,
+          "this_port_lifts": 3.851883116883117,
+          "credited_projected_later_lifts": 0.0,
+          "total_credited_lifts": 3.851883116883117,
+          "this_port_handling_charge_proxy_usd": 54.86563051948052,
+          "credited_later_handling_charge_proxy_usd": 0.0,
+          "handling_charge_proxy_usd": 54.86563051948052,
+          "yard_equipment_hours": 0.09876623376623377,
+          "this_port_quay_work_hours": 0.02962987012987013,
+          "credited_later_quay_work_hours": 0.0,
+          "quay_work_hours": 0.02962987012987013,
+          "this_port_berth_hours": 0.0,
+          "credited_later_berth_hours": 0.0,
+          "berth_hours": 0.0,
+          "this_port_ship_time_opportunity_usd": 0.0,
+          "credited_later_ship_time_opportunity_usd": 0.0,
+          "ship_time_opportunity_usd": 0.0,
+          "combined_proxy_usd": 54.86563051948052,
+          "planner_hours": 0.0
+        },
+        "annual_52_call_stream": {
+          "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+          "calls": 52,
+          "unit": "annual totals over assumed identical eligible adopted calls",
+          "yard_lifts": 154.07532467532468,
+          "restow_now_lifts": 0.0,
+          "hatch_now_lifts": 46.22259740259741,
+          "credited_restow_later_lifts": 0.0,
+          "credited_hatch_later_lifts": 0.0,
+          "this_port_lifts": 200.29792207792207,
+          "credited_projected_later_lifts": 0.0,
+          "total_credited_lifts": 200.29792207792207,
+          "this_port_handling_charge_proxy_usd": 2853.012787012987,
+          "credited_later_handling_charge_proxy_usd": 0.0,
+          "handling_charge_proxy_usd": 2853.012787012987,
+          "yard_equipment_hours": 5.135844155844156,
+          "this_port_quay_work_hours": 1.5407532467532468,
+          "credited_later_quay_work_hours": 0.0,
+          "quay_work_hours": 1.5407532467532468,
+          "this_port_berth_hours": 0.0,
+          "credited_later_berth_hours": 0.0,
+          "berth_hours": 0.0,
+          "this_port_ship_time_opportunity_usd": 0.0,
+          "credited_later_ship_time_opportunity_usd": 0.0,
+          "ship_time_opportunity_usd": 0.0,
+          "combined_proxy_usd": 2853.012787012987,
+          "planner_hours": 0.0
+        },
+        "annual_adoption_subset": {
+          "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+          "calls": 93,
+          "unit": "annual totals over assumed identical eligible adopted calls",
+          "yard_lifts": 275.5577922077922,
+          "restow_now_lifts": 0.0,
+          "hatch_now_lifts": 82.66733766233767,
+          "credited_restow_later_lifts": 0.0,
+          "credited_hatch_later_lifts": 0.0,
+          "this_port_lifts": 358.2251298701299,
+          "credited_projected_later_lifts": 0.0,
+          "total_credited_lifts": 358.2251298701299,
+          "this_port_handling_charge_proxy_usd": 5102.5036383116885,
+          "credited_later_handling_charge_proxy_usd": 0.0,
+          "handling_charge_proxy_usd": 5102.5036383116885,
+          "yard_equipment_hours": 9.18525974025974,
+          "this_port_quay_work_hours": 2.755577922077922,
+          "credited_later_quay_work_hours": 0.0,
+          "quay_work_hours": 2.755577922077922,
+          "this_port_berth_hours": 0.0,
+          "credited_later_berth_hours": 0.0,
+          "berth_hours": 0.0,
+          "this_port_ship_time_opportunity_usd": 0.0,
+          "credited_later_ship_time_opportunity_usd": 0.0,
+          "ship_time_opportunity_usd": 0.0,
+          "combined_proxy_usd": 5102.5036383116885,
+          "planner_hours": 0.0
+        }
+      },
+      "mid": {
+        "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+        "section_scale_after_retention": 5.681818181818182,
+        "per_call": {
+          "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+          "yard_lifts": 7.407467532467532,
+          "restow_now_lifts": 0.0,
+          "hatch_now_lifts": 2.2222402597402597,
+          "credited_restow_later_lifts": 14.814935064935064,
+          "credited_hatch_later_lifts": 6.296347402597402,
+          "this_port_lifts": 9.629707792207792,
+          "credited_projected_later_lifts": 21.111282467532465,
+          "total_credited_lifts": 30.740990259740258,
+          "this_port_handling_charge_proxy_usd": 137.1640762987013,
+          "credited_later_handling_charge_proxy_usd": 487.79284821428564,
+          "handling_charge_proxy_usd": 624.9569245129869,
+          "yard_equipment_hours": 0.2469155844155844,
+          "this_port_quay_work_hours": 0.07407467532467532,
+          "credited_later_quay_work_hours": 0.7037094155844155,
+          "quay_work_hours": 0.7777840909090908,
+          "this_port_berth_hours": 0.01851866883116883,
+          "credited_later_berth_hours": 0.17592735389610387,
+          "berth_hours": 0.19444602272727268,
+          "this_port_ship_time_opportunity_usd": 14.270949168019479,
+          "credited_later_ship_time_opportunity_usd": 135.57401709618503,
+          "ship_time_opportunity_usd": 149.84496626420452,
+          "combined_proxy_usd": 774.8018907771914,
+          "planner_hours": 0.5
+        },
+        "annual_52_call_stream": {
+          "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+          "calls": 52,
+          "unit": "annual totals over assumed identical eligible adopted calls",
+          "yard_lifts": 385.18831168831167,
+          "restow_now_lifts": 0.0,
+          "hatch_now_lifts": 115.55649350649351,
+          "credited_restow_later_lifts": 770.3766233766233,
+          "credited_hatch_later_lifts": 327.41006493506495,
+          "this_port_lifts": 500.7448051948052,
+          "credited_projected_later_lifts": 1097.7866883116883,
+          "total_credited_lifts": 1598.5314935064935,
+          "this_port_handling_charge_proxy_usd": 7132.531967532468,
+          "credited_later_handling_charge_proxy_usd": 25365.22810714285,
+          "handling_charge_proxy_usd": 32497.76007467532,
+          "yard_equipment_hours": 12.839610389610389,
+          "this_port_quay_work_hours": 3.8518831168831165,
+          "credited_later_quay_work_hours": 36.592889610389605,
+          "quay_work_hours": 40.44477272727272,
+          "this_port_berth_hours": 0.9629707792207791,
+          "credited_later_berth_hours": 9.148222402597401,
+          "berth_hours": 10.11119318181818,
+          "this_port_ship_time_opportunity_usd": 742.089356737013,
+          "credited_later_ship_time_opportunity_usd": 7049.8488890016215,
+          "ship_time_opportunity_usd": 7791.938245738635,
+          "combined_proxy_usd": 40289.698320413954,
+          "planner_hours": 26.0
+        },
+        "annual_adoption_subset": {
+          "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+          "calls": 466,
+          "unit": "annual totals over assumed identical eligible adopted calls",
+          "yard_lifts": 3451.8798701298697,
+          "restow_now_lifts": 0.0,
+          "hatch_now_lifts": 1035.563961038961,
+          "credited_restow_later_lifts": 6903.759740259739,
+          "credited_hatch_later_lifts": 2934.0978896103898,
+          "this_port_lifts": 4487.443831168831,
+          "credited_projected_later_lifts": 9837.857629870128,
+          "total_credited_lifts": 14325.30146103896,
+          "this_port_handling_charge_proxy_usd": 63918.45955519481,
+          "credited_later_handling_charge_proxy_usd": 227311.4672678571,
+          "handling_charge_proxy_usd": 291229.9268230519,
+          "yard_equipment_hours": 115.06266233766233,
+          "this_port_quay_work_hours": 34.5187987012987,
+          "credited_later_quay_work_hours": 327.92858766233763,
+          "quay_work_hours": 362.4473863636363,
+          "this_port_berth_hours": 8.629699675324675,
+          "credited_later_berth_hours": 81.98214691558441,
+          "berth_hours": 90.61184659090907,
+          "this_port_ship_time_opportunity_usd": 6650.262312297077,
+          "credited_later_ship_time_opportunity_usd": 63177.49196682222,
+          "ship_time_opportunity_usd": 69827.7542791193,
+          "combined_proxy_usd": 361057.6811021712,
+          "planner_hours": 233.0
+        }
+      },
+      "high": {
+        "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+        "section_scale_after_retention": 11.363636363636363,
+        "per_call": {
+          "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+          "yard_lifts": 14.814935064935064,
+          "restow_now_lifts": 0.0,
+          "hatch_now_lifts": 4.4444805194805195,
+          "credited_restow_later_lifts": 59.259740259740255,
+          "credited_hatch_later_lifts": 25.18538961038961,
+          "this_port_lifts": 19.259415584415585,
+          "credited_projected_later_lifts": 84.44512987012986,
+          "total_credited_lifts": 103.70454545454545,
+          "this_port_handling_charge_proxy_usd": 274.3281525974026,
+          "credited_later_handling_charge_proxy_usd": 1951.1713928571426,
+          "handling_charge_proxy_usd": 2225.499545454545,
+          "yard_equipment_hours": 0.4938311688311688,
+          "this_port_quay_work_hours": 0.14814935064935064,
+          "credited_later_quay_work_hours": 2.814837662337662,
+          "quay_work_hours": 2.962987012987013,
+          "this_port_berth_hours": 0.07407467532467532,
+          "credited_later_berth_hours": 1.407418831168831,
+          "berth_hours": 1.4814935064935062,
+          "this_port_ship_time_opportunity_usd": 111.05645698051947,
+          "credited_later_ship_time_opportunity_usd": 2110.0726826298696,
+          "ship_time_opportunity_usd": 2221.1291396103893,
+          "combined_proxy_usd": 4446.628685064934,
+          "planner_hours": 1.0
+        },
+        "annual_52_call_stream": {
+          "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+          "calls": 52,
+          "unit": "annual totals over assumed identical eligible adopted calls",
+          "yard_lifts": 770.3766233766233,
+          "restow_now_lifts": 0.0,
+          "hatch_now_lifts": 231.11298701298702,
+          "credited_restow_later_lifts": 3081.5064935064934,
+          "credited_hatch_later_lifts": 1309.6402597402598,
+          "this_port_lifts": 1001.4896103896104,
+          "credited_projected_later_lifts": 4391.146753246753,
+          "total_credited_lifts": 5392.636363636364,
+          "this_port_handling_charge_proxy_usd": 14265.063935064936,
+          "credited_later_handling_charge_proxy_usd": 101460.9124285714,
+          "handling_charge_proxy_usd": 115725.97636363635,
+          "yard_equipment_hours": 25.679220779220778,
+          "this_port_quay_work_hours": 7.703766233766233,
+          "credited_later_quay_work_hours": 146.37155844155842,
+          "quay_work_hours": 154.07532467532468,
+          "this_port_berth_hours": 3.8518831168831165,
+          "credited_later_berth_hours": 73.18577922077921,
+          "berth_hours": 77.03766233766233,
+          "this_port_ship_time_opportunity_usd": 5774.935762987013,
+          "credited_later_ship_time_opportunity_usd": 109723.77949675322,
+          "ship_time_opportunity_usd": 115498.71525974025,
+          "combined_proxy_usd": 231224.69162337657,
+          "planner_hours": 52.0
+        },
+        "annual_adoption_subset": {
+          "label": "EXTRAPOLATION from 12\u201322 boxes; not measured operational savings",
+          "calls": 932,
+          "unit": "annual totals over assumed identical eligible adopted calls",
+          "yard_lifts": 13807.519480519479,
+          "restow_now_lifts": 0.0,
+          "hatch_now_lifts": 4142.255844155844,
+          "credited_restow_later_lifts": 55230.077922077915,
+          "credited_hatch_later_lifts": 23472.783116883118,
+          "this_port_lifts": 17949.775324675324,
+          "credited_projected_later_lifts": 78702.86103896103,
+          "total_credited_lifts": 96652.63636363637,
+          "this_port_handling_charge_proxy_usd": 255673.83822077923,
+          "credited_later_handling_charge_proxy_usd": 1818491.7381428569,
+          "handling_charge_proxy_usd": 2074165.576363636,
+          "yard_equipment_hours": 460.2506493506493,
+          "this_port_quay_work_hours": 138.0751948051948,
+          "credited_later_quay_work_hours": 2623.428701298701,
+          "quay_work_hours": 2761.503896103896,
+          "this_port_berth_hours": 69.0375974025974,
+          "credited_later_berth_hours": 1311.7143506493505,
+          "berth_hours": 1380.7519480519477,
+          "this_port_ship_time_opportunity_usd": 103504.61790584415,
+          "credited_later_ship_time_opportunity_usd": 1966587.7402110384,
+          "ship_time_opportunity_usd": 2070092.3581168829,
+          "combined_proxy_usd": 4144257.9344805186,
+          "planner_hours": 932.0
+        }
+      }
+    },
+    "limits": [
+      "Every scaled result is EXTRAPOLATION from 12\u201322 boxes, not a measurement at 500 boxes. Medium/full-ship calls are not solved.",
+      "Low credits only this-port modelled work; none of the scenarios establishes realised deployment savings.",
+      "Mid/high include projected later-port work; no future loads and fixed coordinates remain assumptions in those projections.",
+      "Handling retail-charge proxies and ship-time opportunity values concern different parties; combined figure is not one party's cash saving or profit.",
+      "No wage, fuel, extra intake, accident probability, safety dollars, instruction-loss dollars or software implementation cost is estimated.",
+      "Planner hours are an explicit assumed before/after replan task; safety and instruction-following remain unmonetized.",
+      "Context port-stay and whole-planning hours are never used as reducible baselines. TEU never scales benefits.",
+      "Adoption cases assume eligibility and uptake together; they are not a forecast, confidence interval or 100% port extrapolation."
+    ]
+  }
+}

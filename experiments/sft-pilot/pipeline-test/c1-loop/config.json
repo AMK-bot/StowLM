@@ -1,0 +1,53 @@
+{
+ "driver": "eval-c1/run_c1.py loose",
+ "diagnostic": true,
+ "official": false,
+ "planner": "stowlm",
+ "planner_version": "glimmer-30b-4bit+adapter+best-of-8@T1",
+ "planner_parameters": {
+  "model_path": "/Users/anda/Projects/meta-hackathon-stowage/models/glimmer-30b-4bit",
+  "adapter_path": "experiments/sft-pilot/pipeline-test/adapter",
+  "temperature": 1.0,
+  "n_samples": 8,
+  "max_tokens": 20000,
+  "selection": "rank-order first full-checker pass (= min weighted_nonproductive over feasible)",
+  "decoder_backend": "process-pool-1",
+  "mask_config": null,
+  "engine_config": null,
+  "model_content_sha256": "4f1b662295ab863be30b4bcac9def5b9eed005960f8d47320f3c9fdcbfa48f6d",
+  "adapter_content_sha256": "dac25576ec45bc231f5141c64bd51ec3e2ac2e46f567acd38d21e7986fea86f1",
+  "mask_backend": "process-pool-1"
+ },
+ "seed": 0,
+ "time_limit_s": 900.0,
+ "allow_repair": true,
+ "versions": {
+  "schema": "1.9",
+  "move_engine": "2.0",
+  "checker": "2.2",
+  "feasibility": "2.5",
+  "linear_model": "3.5",
+  "ballast": "4.0",
+  "action_space": "1.0.1",
+  "infrastructure": "3.0",
+  "solver.scalable": "3.0.0",
+  "rule_catalogue": "sha256:91a1804264ddec40f005536e102798fab4d4612574c7cc4a9044ef72ac863eb0"
+ },
+ "active_stubs": {
+  "feasibility.make_engine": "C1 dry run: 3.7 linear policy epoch may be stale during requalification, so the engine's C2 global screen is off (extra global_screen=0); L1/L2 local checks and C1 stay on; the full checker judges every plan"
+ },
+ "inputs": [
+  {
+   "path": "experiments/solver-diag-1028/pilot-d58/generation/instances/random_yard/tiny/seed-110280000.json",
+   "sha256": "2e6161e3c784c71415335eebcdf7af25323cb66d940f257fcfa7f9f6c33aa136"
+  },
+  {
+   "path": "experiments/solver-diag-1028/pilot-d58/generation/instances/random_yard/tiny/seed-110280001.json",
+   "sha256": "5a3919e5f13b85fd38b35ca48a5767628f2c9f6a8d18aea28f4dbcaef1fe36ad"
+  },
+  {
+   "path": "experiments/solver-diag-1028/pilot-d58/generation/instances/random_yard/tiny/seed-110280002.json",
+   "sha256": "edff3459e666d67ce09eafea015a3fad0e52daaad8c80d52f954ea64de9b9773"
+  }
+ ]
+}

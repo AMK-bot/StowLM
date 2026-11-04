@@ -1,0 +1,39 @@
+{
+  "schema_version": "stowlm.plan-package/1",
+  "packet_sha256": "f5887d046864963d4e2e6898fb4e1d9639bb8e24ce7b1ae7578826a8dea66869",
+  "status": "checked_plan",
+  "label": "stored",
+  "synthetic": true,
+  "pipeline_sha256": "not frozen yet",
+  "presentation": "development_fixture",
+  "banner": "Half-ship section: 190 boxes planned in 8 of 14 bays. Other bays hold 268 fixed synthetic background boxes (3,856 t). Stability and strength include them. No ship can sail on this plan alone. Synthetic ships and cargo, simulated port. Full checker passed; local demo receipt. Stored plan; original computation date unrecorded; rechecked now. Stored synthetic development fixture; source provenance is recorded separately. Pipeline: not frozen yet. Checker coverage: 54 active, 8 inactive.",
+  "exchange_format": {
+    "status": "cut",
+    "reason": "BAPLIE omitted: synthetic identifiers and incomplete exchange metadata; see package/BAPLIE.md."
+  },
+  "files": {
+    "ballast-plan.csv": "22515e4bb99df59dc5b52807e651b3cc84784e0c2d81130881f3d30accea8876",
+    "bay-plan.html": "c1f821b0221fbf53353b23880e680f313fe8165b68746af0aacef8c11c2a50a5",
+    "cargo-work.json": "96622e5843757dc71e1d07c0f5b51f3aa6dbf33256030dd2b432b6831af3c08c",
+    "checker-report.json": "95528ce165cbfdbc8f7f2b5e8bf81514e43774768e51befd14ec2238aa8f1ed4",
+    "crane-sequence.csv": "d983b9cd2a8a2ae4110bf73aa7eceb72fff9ba4d1a2ad31b2d7e949ab4baaf26",
+    "engine-manifest.json": "f5e88d87fea4076635f5ed192b35e5149ca0410ec243bdd78bd5c1115f7f3860",
+    "handover-scope.json": "cb673d51f41d100dd74ffa62b48da5031b8395dfe493091def6c8268bb0ece45",
+    "instance.json": "c5abc7f681ff503aec798e45e9347442a59af42e107c7df937992bf5d0cd3698",
+    "manifest.csv": "76ef66e08b7dfd7583626ab4dbe6dd4bb3e0d162f4de6552138e92eb359a01f3",
+    "not-included.html": "2bb6767a971dabae7948be96c8e722043211c82e1d609a3bcd0b3237324e2f54",
+    "note-evidence.json": "e592c9e5ee90d80a22886aaefa42f4858163113934003a83761319ac65c49d94",
+    "note-to-master.md": "921fc5df3b4a5d0333b9abb1bdbe50c8e5fe3fedfefe5242bfc84f5cb347c1ae",
+    "packet.json": "d6748ea8d81e3a05b9d1d1b98d306163c4313849aadbcccf540ee683a266798c",
+    "plan.json": "717b862b1a7cf6c6abf38db2b5bd01616020b0d58a7c57f1e98da1cb27e97c1b",
+    "provenance.json": "55ab5a53c0c553ed7a31da154f8da5fed41fe4d0c0cba9c9ccfb5cd4af07e54e",
+    "restows.csv": "c04352a840793e5077ed0e9170332faac55a5b2a7083e3e21a190e49a1d26575",
+    "rule-coverage.json": "0acd766ce207ca9df380ec64e9a8a123376b0bb349701210d0d94c036efc0a39",
+    "stability-summary.md": "d3f64054b85d71f32664f10d167ca3a5d42b3b50c072b59ccef389559d50daaf",
+    "stability.json": "4b6dbdafcad8d50385dca9e9dacde0c4baf560a66026904a1991089a10e49663",
+    "tank-plan.csv": "ca8a4293e758cbc4e9d20372e4b8c0e4ce79c1f9bd3995332d4961bd8bb857d4",
+    "weight-by-port.csv": "84b4da6cb4d428fc9283d94531c132c6ce7271ff94d0b171ad2459e8ee443632",
+    "yard-sequence.csv": "3568700b5ee23044618220863fb01c96b5398d7c497e1d44d5ce95d71073db29",
+    "receipt.json": "9c8ab698ef4c3db47d7a4c2bf9f07e22e6cf460015ceff4f717e46f2c31ab30a"
+  }
+}

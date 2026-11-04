@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "id": "closed-bay",
+      "box_id": "TEST0000001",
+      "from": {
+        "bay": 1,
+        "row": 4,
+        "tier": 82,
+        "deck": true
+      },
+      "to": {
+        "bay": 5,
+        "row": 1,
+        "tier": 82,
+        "deck": true
+      },
+      "fast": {
+        "ok": false,
+        "violations": [
+          "closed bay"
+        ]
+      },
+      "full": {
+        "ok": false,
+        "violations": [
+          "closed bay"
+        ]
+      },
+      "rule": {
+        "kind": "close_bay",
+        "bay": 5
+      },
+      "label": "Bay 5 is closed"
+    }
+  ],
+  "source": {
+    "kind": "synthetic_unit_fixture",
+    "paths": [
+      "app/tests/fixtures/planner/fixture-source.txt"
+    ],
+    "sha256": "3ebdaf54f17cf296f4b591c2848c8520639cb04d16a57048a56b0d17b9a68e09"
+  }
+}

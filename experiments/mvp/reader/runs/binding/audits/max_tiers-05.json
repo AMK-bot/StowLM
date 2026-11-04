@@ -1,0 +1,33 @@
+{
+  "case_id": "max_tiers-05",
+  "fresh_process": true,
+  "audit_pid": 18976,
+  "passed": true,
+  "binding": true,
+  "repaired": false,
+  "plan_record_sha256": "02b257b49ad27f702ee2064e22e56072c70227135fad72388889259f02864dbd",
+  "unconstrained_passed": true,
+  "unconstrained_moves": 6.0,
+  "unconstrained_violations": [
+    "load QZXU0000009 -> 0010282: instruction: slot 0010282 is closed"
+  ],
+  "checker_passed": true,
+  "replay_legal": true,
+  "mask_legal": true,
+  "mask_complete": true,
+  "all_loaded": true,
+  "instruction_violations": [],
+  "allocation_violations": [],
+  "constrained_moves": 8.0,
+  "stored_moves_match": true,
+  "changed_final_placements": 3,
+  "plan_changed": true,
+  "mask_actions_checked": 3,
+  "checker_violations": [],
+  "restows_now": 0,
+  "relocations": 2,
+  "hatches_now": 2,
+  "restows_later": 0,
+  "hatches_later": 4,
+  "wall_s": 63.47096175001934
+}

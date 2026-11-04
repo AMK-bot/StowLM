@@ -1,0 +1,46 @@
+{
+  "version": "reader-v3-selection/1",
+  "rule_sha256": "97f68998a213864238d5abd5c3deb7e165c1dc77021a3a75043bcb67f36c109b",
+  "sample_sha256": "f933692b51d655c457d7705e8b59e996e4a050000369668d0f27b17021463227",
+  "rule": "highest exact match on the 400-row sample; ties to the simplest: final < best-val-loss < swa-last-3 < swa-last-5",
+  "scores": {
+    "final": {
+      "count": 400,
+      "exact_match_count": 363,
+      "exact_match": 0.9075,
+      "malformed_count": 0,
+      "loosening_count": 50,
+      "false_acceptance_count": 0
+    },
+    "best-val-loss": {
+      "count": 400,
+      "exact_match_count": 372,
+      "exact_match": 0.93,
+      "malformed_count": 0,
+      "loosening_count": 50,
+      "false_acceptance_count": 0
+    },
+    "swa-last-3": {
+      "count": 400,
+      "exact_match_count": 363,
+      "exact_match": 0.9075,
+      "malformed_count": 0,
+      "loosening_count": 50,
+      "false_acceptance_count": 0
+    },
+    "swa-last-5": {
+      "count": 400,
+      "exact_match_count": 373,
+      "exact_match": 0.9325,
+      "malformed_count": 0,
+      "loosening_count": 50,
+      "false_acceptance_count": 0
+    }
+  },
+  "selected": {
+    "name": "swa-last-5",
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57"
+  },
+  "caveat": "Validation overstates sealed: v2 read 91.25 % on validation and 80.47 % sealed. These scores choose an adapter; they are not an accuracy claim."
+}

@@ -1,0 +1,47 @@
+{
+  "archive": "experiments/mvp/pipeline/sealed/runs/interrupted-1",
+  "archive_authorization": {
+    "field": "/archives/0/files",
+    "path": "experiments/mvp/pipeline/sealed/measurements/d284/precommit.json",
+    "sha256": "f0215f28c216b905d7b35936c9dda24593bbf980cab8261faf2c59c7a1e55dd2"
+  },
+  "archive_file_count": 1317,
+  "archive_files_sha256": "6376cdb80d2f1254127d905e8a78552853c1e3c3d02ba085b9be8e0c18e39952",
+  "archive_inventory_hash_encoding": "sorted-key compact UTF-8 JSON mapping relative path to SHA-256",
+  "archive_original_bytes_unchanged": true,
+  "archive_report_sha256": "e8237543363451e40096150a8244da95d6f51dbc78a378c29f8beeeeeea83931",
+  "archive_rows_sha256": "d8543f6848a1c545ae508ece9263191eb3578c9fd4e220a43e6ead467691a9a6",
+  "attestation_accurate": false,
+  "concurrent_work": [
+    {
+      "cores": 1,
+      "work": "pipeline freeze suite"
+    },
+    {
+      "cores": 1,
+      "work": "app freeze suite"
+    },
+    {
+      "cores": 1,
+      "work": "p99 tests/ triage suite"
+    },
+    {
+      "until": "about 2026-11-02 05:13 EST",
+      "work": "one draining lattice row"
+    }
+  ],
+  "decision": "D278",
+  "decision_source": {
+    "heading": "D278",
+    "paragraph_sha256": "eaf4d9dbc7f5b5d79d77fad6df3eac0397d7018a47cc7f63e91254fe6acba504",
+    "path": "docs/decisions.md"
+  },
+  "gpu_job_ran_beside_it": false,
+  "printed_attestation": "other fleet work stopped",
+  "published_at": "2026-11-02T17:56:06.484012+00:00",
+  "published_for": "D288 post-run disclosure",
+  "results_unchanged": true,
+  "schema_version": 1,
+  "sealed_claim_eligible": false,
+  "timing_interpretation": "Measured under contention during the first hour; not a quiet-machine benchmark. D278 describes these wall times as upper bounds."
+}

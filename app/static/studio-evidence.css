@@ -1,0 +1,30 @@
+.st-evidence-root { width: 100%; max-width: 1000px; margin: 0 auto; padding: 28px 24px 36px; box-sizing: border-box; }
+.st-evidence-header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; margin-bottom: 26px; }
+.st-evidence-header h1, .st-evidence-header p { margin: 0; }
+.st-evidence-toggle { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 20px; }
+.st-evidence-envelope { margin: 0 0 20px; text-align: center; }
+.st-evidence-grid { align-items: start; }
+.st-evidence-card { min-width: 0; }
+.st-evidence-card-heading { display: flex; align-items: flex-start; gap: 16px; }
+.st-evidence-card-heading > div { min-width: 0; flex: 1; }
+.st-evidence-card-heading h2 { margin: 0 0 8px; }
+.st-evidence-card-heading p { margin: 0; }
+.st-evidence-icon-tile { width: 40px; height: 40px; background: color-mix(in srgb, var(--c) 12%, transparent); }
+.st-evidence-icon-reader { --c: var(--st-c-reader); }
+.st-evidence-icon-checker { --c: var(--st-c-checker); }
+.st-evidence-card-icon { width: 26px; height: 26px; flex: none; }
+.st-evidence-figures { display: grid; gap: 18px; margin: 18px 0 12px; }
+.st-evidence-group { min-width: 0; }
+.st-evidence-group > p { margin: 0 0 8px; }
+.st-evidence-row { display: grid; grid-template-columns: minmax(110px, 1.25fr) minmax(65px, 1fr) 72px; align-items: center; gap: 10px; min-height: 32px; }
+.st-evidence-plot { display: block; width: 100%; height: 24px; overflow: visible; }
+.st-evidence-count { white-space: nowrap; text-align: right; }
+.st-evidence-details { margin-top: 16px; }
+.st-evidence-details summary { min-height: 32px; display: flex; align-items: center; }
+.st-evidence-reading { padding-top: 12px; }
+.st-evidence-reading > p { margin: 0 0 16px; }
+.st-evidence-source { padding: 8px 0; }
+.st-evidence-source p { margin: 0 0 6px; }
+.st-evidence-source pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.st-evidence-footer { margin-top: 24px; text-align: right; }
+@media (max-width: 900px) { .st-evidence-root { padding: 24px 16px; } .st-evidence-row { grid-template-columns: minmax(90px, 1.25fr) minmax(50px, 1fr) 64px; gap: 7px; } }

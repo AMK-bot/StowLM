@@ -1,0 +1,115 @@
+{
+  "kind": "documentation_note",
+  "synthetic": true,
+  "this_is_a_runner_measurement": false,
+  "decision": "D261",
+  "anytime_policy": {
+    "release_gate": "Full checker pass and every confirmed instruction recheck passed",
+    "first_plan_message": "First legal plan available. Continuing to improve.",
+    "before_first_plan_message": "Searching for a legal plan; full checker and every confirmed instruction recheck must pass.",
+    "continue_after_first_pass": true,
+    "arrival_time_guaranteed": false
+  },
+  "lp_first_full_checker_pass": {
+    "label": "historical reported LP-stage observation",
+    "scope": "Eight in-envelope engine benchmark maps under heavy shared load; not packet-start latency",
+    "range_s": [
+      103,
+      202
+    ],
+    "range_min_source_label": "user_handover",
+    "range_min_independently_reproduced_here": false,
+    "evaluation_mean_s": 139,
+    "evaluation_median_s": 131,
+    "evaluation_max_s": 202,
+    "evaluation_source": "docs/evaluation.md:446-485",
+    "load1_range": [
+      30,
+      80
+    ],
+    "load1_spikes_to": 90,
+    "limitation": "Historical stage observation only; not a deadline, guarantee, new runner measurement, demo speed claim or reader/instruction pipeline latency"
+  },
+  "engine_overrun_diagnostic": {
+    "label": "historical reported diagnostic; not engine speed",
+    "nominal_work_budgets_s": [
+      900,
+      600
+    ],
+    "observed_total_wall_range_s": [
+      1511,
+      7830
+    ],
+    "dominant_stage": "starts",
+    "starts_mean_s": 3007,
+    "starts_max_s": 7251,
+    "cause_investigated": false,
+    "source": "docs/evaluation.md:446-485"
+  },
+  "runner_deadlines": {
+    "label": "user-selected engine allowances from a stopped partial development study; not whole-run guarantees",
+    "live_s": 720,
+    "standard_s": 1800,
+    "source": "experiments/mvp/pipeline/runner/profiles.py",
+    "budget_s_semantics": "Additive engine work; not a wall-clock cap",
+    "admission": "Completes before the owned engine deadline starts",
+    "after_engine_deadline": "Outside the engine cap, after its stage returns: independent final checker, confirmed-instruction rechecks and package writing; total wall time can be longer"
+  },
+  "profile_selection": {
+    "selected_by": "user",
+    "basis": "stopped_partial_development_study",
+    "measured_rows": 68,
+    "planned_jobs": 256,
+    "complete_grid": false,
+    "source_summary": "experiments/mvp/pipeline/runner/measurements/profile-study-20261101/summary.json",
+    "source_data_sha256": "4676f3927cf9cfdc7f4608f2c1fa94639ee8536fd71bade85655b0b31ff07afc",
+    "selection_artifact": "experiments/mvp/pipeline/runner/fixtures/profile-selection.json",
+    "unmeasured_peel_override": false,
+    "live": {
+      "study_arm": "120",
+      "budget_s": 120,
+      "finalize_s": 40,
+      "engine_deadline_s": 720,
+      "medium_no_rule_attempts": 9,
+      "medium_no_rule_full_passes": 7,
+      "first_legal_median_s_passing": 132.74029012501705,
+      "first_legal_max_s_passing": 1022.9371175420238,
+      "limitation": "These observations do not measure the pass rate under the new 720 s runtime cap. On timeout, release only a previously checked incumbent that passes fresh final gates."
+    },
+    "standard": {
+      "study_arm": "300",
+      "budget_s": 300,
+      "finalize_s": 100,
+      "engine_deadline_s": 1800,
+      "medium_no_rule_attempts": 9,
+      "medium_no_rule_full_passes": 9,
+      "default_paired_maps": 8,
+      "default_paired_passes_lost": 0,
+      "study_call_median_s": 691.2326064159861,
+      "study_call_max_s": 1715.4894255829859
+    },
+    "timing_scope": "Study calls include synthetic reading, binding and independent release checks; exclude assembly, model inference and handover rendering",
+    "loaded_machine": {
+      "gpu_training_active": true,
+      "fleet_work_active": true,
+      "selected_arms_start_load1_range": [21.42, 44.78],
+      "selected_arms_enabled_cores_range": [10, 18],
+      "selected_arms_end_load1_max": 87.09,
+      "leader_interpretation": "Conservative planning upper bounds, not statistical bounds or timing guarantees",
+      "quiet_machine_rerun_optional": true,
+      "quiet_machine_speedup_measured": false
+    }
+  },
+  "historical_tiny_runner_fixture": {
+    "first_checked_incumbent_s": 536.1251680409769,
+    "source": "experiments/mvp/pipeline/runner/fixtures/cli-measurement.json",
+    "unchanged": true
+  },
+  "sources": [
+    "docs/evaluation.md:446-485",
+    "docs/decisions.md:D261",
+    "User-provided engine handover: 103 s lower endpoint",
+    "User selection of exact 120/40 live and 300/100 standard arms from the stopped 68-row study",
+    "experiments/mvp/pipeline/runner/measurements/profile-study-20261101/summary.json"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+ "sentence": "The port says we can stack 4 high on deck in bay 3 today, go ahead.",
+ "instance": "experiments/mvp/corpus/test/tiny/feeder_500/random_yard/seed-008000000.json",
+ "parse": {
+  "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"loosening\",\"reason\":\"Grants permission to stack higher; that is not a tighter limit.\"}}",
+  "cost_usd": "0.0049145",
+  "error": null,
+  "outcome": {
+   "refused": true,
+   "code": "loosening",
+   "reason": "Grants permission to stack higher; that is not a tighter limit."
+  }
+ }
+}

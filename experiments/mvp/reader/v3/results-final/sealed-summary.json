@@ -1,0 +1,32 @@
+{
+  "selected": {
+    "name": "swa-last-5",
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57"
+  },
+  "R1": true,
+  "R2": false,
+  "R3": false,
+  "all_gates_pass": false,
+  "no_regression_exact": false,
+  "no_regression_loosening": true,
+  "adoption_status": "retain_v2",
+  "adopt_v3": false,
+  "gates": {
+    "R1": true,
+    "R2": false,
+    "R3": false,
+    "gain_over_untrained_pp": 45.3125,
+    "difference_from_spark_pp": -6.25,
+    "criteria": {
+      "R1_min_exact_pct": 90,
+      "R2_max_false_acceptances": 0,
+      "R3_max_shortfall_from_spark_pp": 3,
+      "min_count": 120,
+      "min_loosening_count": 40
+    },
+    "spark_comparison": "Fixed original sealed-v3 Spark reference; not rerun under the updated decoder.",
+    "all_pass": false
+  },
+  "caveat": "Validation overstates sealed: v2 read 91.25 % on validation and 80.47 % sealed. These scores choose an adapter; they are not an accuracy claim."
+}

@@ -1,0 +1,38 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 33,
+      "max_tiers": 3,
+      "type": "max_tiers",
+      "zone": "deck"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "bay": 33,
+      "max_tiers": 3,
+      "type": "max_tiers",
+      "zone": "deck"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.0900946669862606,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.001551",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "e0cda66b239bb440347f4c683a8d6d79fe8e8152c7770d21fc2ad7a469b79594",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "5934b65f-883a-419e-9f8f-f726fefc3ce5"
+  },
+  "parser_latency_s": 1.090073833009228,
+  "script": "Planner: restrict bay 33 deck to 3 max.",
+  "source_id": "reader-0ba347c6833e0cb9",
+  "started_utc": "2026-11-01T01:30:53.443062+00:00",
+  "status": "complete"
+}

@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "label": "Historical development evidence, normalized; no new search",
+  "source": "experiments/mvp/pipeline/runner/fixtures/relaxed-review/initial-short-budget-run/outcome.json",
+  "source_sha256": "57b86145c25576621c428180ab437aa415630ef558993d96a254ee276a2bbce9",
+  "ladder_work": "none",
+  "ladder_trials": 0,
+  "searched_levels": [],
+  "unsearched_levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "ladder_message": "L1-L3 weren't searched on the live profile. This is the best candidate already found."
+}

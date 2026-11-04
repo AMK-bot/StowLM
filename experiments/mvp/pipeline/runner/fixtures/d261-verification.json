@@ -1,0 +1,133 @@
+{
+  "kind": "synthetic subprocess regression verification; not engine performance",
+  "synthetic": true,
+  "assumptions": [
+    "Engine deadline starts after admission, independently of native budget_s.",
+    "Synchronous incumbent checks, cleanup, final checker, instruction rechecks and package writing can extend total wall time.",
+    "Historical heavy-load LP-stage 103\u2013202 s range is user handover evidence, not packet-start latency or an arrival guarantee."
+  ],
+  "deadline_tests": {
+    "xml": "experiments/mvp/pipeline/runner/fixtures/d261-deadline-pytest.xml",
+    "results": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "16",
+        "time": "32.646",
+        "timestamp": "2026-11-01T22:17:27.117618-05:00",
+        "hostname": "Andamans-MacBook-Pro.local"
+      }
+    ],
+    "cases": [
+      {
+        "profile": "live",
+        "has_incumbents": "False",
+        "engine_wall_s": "0.5607718329993077",
+        "engine_deadline_s": "0.5",
+        "internal_budget_s": "10000.0",
+        "owned_worker_pid": "26927"
+      },
+      {
+        "profile": "standard",
+        "has_incumbents": "False",
+        "engine_wall_s": "0.5582264169934206",
+        "engine_deadline_s": "0.5",
+        "internal_budget_s": "10000.0",
+        "owned_worker_pid": "26979"
+      },
+      {
+        "profile": "live",
+        "has_incumbents": "True",
+        "engine_wall_s": "0.683548790984787",
+        "engine_deadline_s": "0.5",
+        "internal_budget_s": "10000.0",
+        "owned_worker_pid": "27023"
+      },
+      {
+        "profile": "standard",
+        "has_incumbents": "True",
+        "engine_wall_s": "0.5614044579560868",
+        "engine_deadline_s": "0.5",
+        "internal_budget_s": "10000.0",
+        "owned_worker_pid": "27077"
+      }
+    ]
+  },
+  "study": {
+    "saved_pids": {
+      "80306": "alive, sandbox denied signal probe",
+      "81469": "alive, sandbox denied signal probe",
+      "92176": "alive, sandbox denied signal probe"
+    },
+    "preserved_finished_rows": 17,
+    "all_finished_row_sha256_unchanged": true,
+    "activity": {
+      "updated_utc": "2026-11-02T03:20:29.806279+00:00",
+      "active": [
+        {
+          "pid": 94284,
+          "job_id": "2ebe9e6c8c90eafc0459349a"
+        },
+        {
+          "pid": 94285,
+          "job_id": "8346a8e024f0fb0b7e01d33b"
+        },
+        {
+          "pid": 97487,
+          "job_id": "e94294568be34c009fdc648d"
+        },
+        {
+          "pid": 99561,
+          "job_id": "16a94e89e6740b323ae414e3"
+        },
+        {
+          "pid": 1727,
+          "job_id": "828c43e99aac7e7be499a106"
+        },
+        {
+          "pid": 1728,
+          "job_id": "a7c539b17ac19b4e61f4f19c"
+        }
+      ],
+      "detached": [],
+      "pending": 221,
+      "expected": 256,
+      "telemetry": {
+        "observed_utc": "2026-11-02T03:20:29.799243+00:00",
+        "valid": true,
+        "load1": 57.18,
+        "enabled_cores": 12,
+        "mask": 4095,
+        "reading_age_s": 9.799670934677124,
+        "reading_t": 1793589620
+      },
+      "worker_limit": 4
+    }
+  },
+  "source_sha256": {
+    "core.py": "c5470eaec9f4b238b1f6c76c923733efc4de8823f74a0617466598ae83adfb57",
+    "limits.py": "4acfbbdcb4ae816023c0182bb7820a1c044b81de33d3c6123119f7eb24423250",
+    "profiles.py": "b65500e581009dc94913600a8f4f3bdb2e711e7e1f1fd1492af801ff30fda02a",
+    "test_logic_review.py": "f6367369b27bd3a772bd2ea28aeece8ed49a6fc77ab73c37d3ddcbadede77768",
+    "profile_study.py": "c9f956b81b3914e176eba1f36f37b658997610e802796401fc771be2d8865faa",
+    "README.md": "fb1e5e019503b856f30fb1a47eca74f24d020fa966a5377d4eb061e107b32168",
+    "fixtures/anytime-handover.json": "6e5721819611d96420fd9f398dcafa7ed343aa8e6559bc92ae933d75c009d3fa"
+  },
+  "core_regression_tests": {
+    "xml": "experiments/mvp/pipeline/runner/fixtures/d261-core-pytest.xml",
+    "results": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "68",
+        "time": "203.359",
+        "timestamp": "2026-11-01T22:17:03.938200-05:00",
+        "hostname": "Andamans-MacBook-Pro.local"
+      }
+    ]
+  }
+}

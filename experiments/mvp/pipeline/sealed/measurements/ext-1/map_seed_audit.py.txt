@@ -1,0 +1,100 @@
+"""D320A metadata-only seed/digest census; never load an old map or plan."""
+from __future__ import annotations
+import argparse,hashlib,json,os,re,time
+from collections import Counter,defaultdict
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[6]
+HOME=Path(__file__).resolve().parent
+CELLS=[(s,f,g) for s in ('feeder_500','feeder_800') for f in (60,70) for g in ('random_yard','simulated_yard')]
+SEEDS=[306320000+100*c+r for c in range(8) for r in range(3)]
+PREFIX='experiments/mvp/pipeline/sealed/measurements/ext-1'
+PRUNED=('experiments/mvp/pipeline/maps/sealed','experiments/mvp/reader/v3/sealed','experiments/mvp/testv3',
+ 'experiments/mvp/valsplit','data/raw/rcsppsuite')
+ENV={'.git','.venv','.uv-cache','node_modules','__pycache__','.pytest_cache','.keys'}
+SAFE=re.compile(r'manifest|cohort|request|prereg|seed[-_].*audit|seed.*reserv|(?:^|[-_.])seeds?(?:[-_.]|$)|splits?|(?:^|[-_.])index(?:[-_.]|$)|freeze',re.I)
+RAW=re.compile(r'(?:seed[-_.]?\d|\.s\d|random\.(?:tiny|small|medium)|simulated\.(?:tiny|small|medium))',re.I)
+HEX=re.compile(r'(?<![a-fA-F0-9])[a-fA-F0-9]{64}(?![a-fA-F0-9])')
+PATH_SEED=re.compile(r'(?:seed[-_.]?|(?:^|[./_-])s)(\d{4,12})(?!\d)',re.I)
+FIELD_SEED=re.compile(r'["\']?(?:root_|parent_)?seed(?:s|_base|_start|_end)?["\']?\s*[:=]\s*["\']?(\d[\d_]{0,14})(?![.\d])',re.I)
+PROPOSED=re.compile(r'(?<![\d.])(?:'+'|'.join('_?'.join(str(s)) for s in SEEDS)+r')(?!\d)')
+
+def sha(path):
+ h=hashlib.sha256()
+ with Path(path).open('rb') as stream:
+  for block in iter(lambda:stream.read(1024*1024),b''):h.update(block)
+ return h.hexdigest()
+def write(path,value):
+ tmp=path.with_name(path.name+'.tmp');tmp.write_text(json.dumps(value,indent=2)+'\n');os.replace(tmp,path)
+def forbidden(name):return name==PREFIX or name.startswith(PREFIX+'/') or any(name==p or name.startswith(p+'/') for p in PRUNED)
+def candidate(name):
+ parts=Path(name).parts;base=parts[-1]
+ if forbidden(name) or RAW.search(base) or any(p in ('jobs','plans','parents','rows') for p in parts):return False
+ if base in ('row.json','rows.json','outcome.json','instance.json','plan.json','instruction-allocation.json'):return False
+ if base in ('opened-maps.jsonl','per-map.csv') and 'runs' in parts:return True
+ if 'runs' in parts or 'run' in parts:
+  return base in ('manifest.json','config.json','freeze.json','requests.json','preregistration.json','index.json')
+ if Path(base).suffix.lower() not in ('.json','.jsonl','.ndjson','.txt','.list','.csv','.tsv','.toml','.yaml','.yml','.md','.py'):return False
+ return bool(SAFE.search(base)) or ('sets' in parts and Path(base).suffix in ('.txt','.list','.csv','.json'))
+def proposed_hits(text):return sorted({int(m.group().replace('_','')) for m in PROPOSED.finditer(text)})
+def audit(root=ROOT):
+ root=Path(root);started=time.time();path_hash=hashlib.sha256();paths=0;files=[];collisions=[];errors=[];skipped=Counter();seeds=defaultdict(set);digests=defaultdict(set)
+ for base,dirs,names in os.walk(root,followlinks=False):
+  relative=Path(base).relative_to(root)
+  keep=[]
+  for name in sorted(dirs):
+   rel=(relative/name).as_posix();path=Path(base)/name
+   if name in ENV:skipped['environment_dirs']+=1
+   elif forbidden(rel):skipped['closed_or_own_dirs']+=1
+   elif name.startswith(('unit-tmp','test-tmp','pytest-')):skipped['synthetic_test_workspace_dirs']+=1
+   elif path.is_symlink():skipped['symlink_dirs']+=1
+   else:keep.append(name)
+  dirs[:]=keep
+  for name in sorted(names):
+   rel=(relative/name).as_posix();paths+=1;path_hash.update((rel+'\n').encode('utf-8','surrogateescape'))
+   hits=proposed_hits(rel)
+   if hits:collisions.append(dict(path=rel,source='path',seeds=hits))
+   for match in PATH_SEED.finditer(rel):seeds[int(match.group(1))].add(rel)
+   if not candidate(rel):continue
+   path=Path(base)/name
+   if path.is_symlink():skipped['symlink_metadata']+=1;continue
+   try:raw=path.read_bytes();text=raw.decode('utf-8')
+   except (OSError,UnicodeError) as error:errors.append(dict(path=rel,error=type(error).__name__));continue
+   hits=proposed_hits(text)
+   if hits:collisions.append(dict(path=rel,source='metadata',seeds=hits))
+   for match in FIELD_SEED.finditer(text):seeds[int(match.group(1).replace('_',''))].add(rel)
+   for match in PATH_SEED.finditer(text):seeds[int(match.group(1))].add(rel)
+   for match in HEX.finditer(text):digests[match.group().lower()].add(rel)
+   files.append(dict(path=rel,sha256=hashlib.sha256(raw).hexdigest(),bytes=len(raw)))
+  if paths and paths%200000==0:print(json.dumps(dict(paths=paths,metadata=len(files))),flush=True)
+ # Required public identity inventories must be explicitly covered, not inferred from old audit exclusions.
+ required=['experiments/mvp/pipeline/maps/MANIFEST.json','experiments/mvp/pipeline/maps/cohort.json','experiments/mvp/pipeline/maps/requests.json',
+ 'experiments/mvp/corpus/manifest.json','experiments/mvp/corpus/train.requested.json','experiments/mvp/corpus/val.requested.json','experiments/mvp/corpus/test.requested.json',
+ 'experiments/mvp/corpus/test-v3/manifest.json','experiments/mvp/corpus/test-v3/requested.json']
+ opened={entry['path'] for entry in files}
+ missing=[name for name in required if name not in opened]
+ for name in missing:errors.append(dict(path=name,error='required_metadata_not_covered'))
+ inventory=dict(schema_version='stowlm.ext1.prior-identities/1',scope='Accessible repository path names and explicitly selected public identity metadata; all 64-hex metadata values are a conservative superset of recorded instance/file digests.',
+  seeds={str(seed):sorted(sources) for seed,sources in sorted(seeds.items())},
+  digests={digest:sorted(sources) for digest,sources in sorted(digests.items())})
+ proof=dict(schema_version='stowlm.ext1.seed-audit/1',decision='D320A',started=started,finished=time.time(),proposed_seeds=SEEDS,
+  seed_formula='306320000 + 100*cell_index + rep; 8 cells in original order, rep=0..2',
+  no_seed_collision=not collisions and not errors,paths_checked=paths,metadata_files_checked=len(files),
+  path_inventory_sha256=path_hash.hexdigest(),metadata_inventory_sha256=hashlib.sha256(json.dumps(files,sort_keys=True,separators=(',',':')).encode()).hexdigest(),
+  prior_seed_count=len(seeds),prior_digest_count=len(digests),required_metadata=required,required_metadata_missing=missing,
+  files=files,collisions=collisions,errors=errors,skipped=dict(skipped),forbidden_raw_roots=list(PRUNED),
+  unopened_payload_policy='No prior map, instance, plan, row or job payload is opened. Root-level public run config/freeze/opened-map logs and per-map CSV are identity metadata only.',
+  coverage_limits=['A closed-world statement about recorded external identity metadata, not unknown unrecorded payload contents.',
+   'Forbidden raw trees are not entered. Their public corpus/envelope manifests and requested lists are explicitly covered.',
+   'Plan/job/row payloads and symlinks are not opened. Identity values recorded only there are outside directly auditable metadata coverage.',
+   'Synthetic test workspaces and tool environments are excluded; their fake seeds are not experimental cohorts.',
+   'All hexadecimal metadata values are retained conservatively; an unknown recorded canonical identity outside selected metadata cannot be certified.'])
+ return proof,inventory
+
+def main():
+ parser=argparse.ArgumentParser();parser.add_argument('--root',type=Path,default=ROOT);args=parser.parse_args()
+ proof,inventory=audit(args.root)
+ write(HOME/'map-prior-identities.json',inventory);proof['prior_identities_sha256']=sha(HOME/'map-prior-identities.json')
+ write(HOME/'map-seed-proof.json',proof)
+ print(json.dumps({key:proof[key] for key in ('no_seed_collision','paths_checked','metadata_files_checked','prior_seed_count','prior_digest_count','collisions','errors')}),flush=True)
+ return 0 if proof['no_seed_collision'] else 2
+if __name__=='__main__':raise SystemExit(main())

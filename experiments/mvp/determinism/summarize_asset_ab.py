@@ -1,0 +1,20 @@
+"""Summarize the measured three-seed data-only causal contrast."""
+import json,hashlib
+from pathlib import Path
+from datetime import datetime,timezone
+H=Path(__file__).resolve().parent;D=H/'asset-ab';c=json.loads((D/'controller.json').read_text())
+def digest(x):return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+rows=[]
+for job in c['jobs']:
+ p=Path(job['result']);r=json.loads(p.read_text())
+ if not r.get('completed'):continue
+ actual={key:r.get(key)for key in('legal_actions','native_legal_actions','token_sets','expander_prefix_state')};cache=r.get('securing_cache_entries',[]);force=[e for e in cache if not e['passed']];audits=[f for m in r.get('loaded_code_audit',{}).values()for f in m['functions']];l=r.get('public_lashing',{});report=l.get('report',{})
+ rows.append(dict(hashseed=job['hashseed'],treatment=job['treatment'],artifact=str(p),pid=job['pid'],reaped=job.get('reaped'),exit_code=job.get('exit_code'),error=r.get('error'),source_after_valid=r.get('source_after_valid'),params_repo_root=r.get('params_repo_root'),bounds_available=r.get('screen_initialization',{}).get('bounds_available'),unavailable_reason=r.get('screen_initialization',{}).get('unavailable_reason'),condition_signature=r.get('screen_initialization',{}).get('condition_signature'),native_actions=r.get('native_legal_actions'),legal_actions=r.get('legal_actions'),root_tokens=r.get('token_sets',{}).get(''),action_token_fingerprint=digest(actual),force_rejections=force,all_code_matches_source=all(f['matches_source']for f in audits),code_functions=len(audits),public_lashing=dict(ran=report.get('ran'),error=report.get('error'),violations=len(report.get('violations',[])),metrics=report.get('metrics',{}),cpu_s=l.get('cpu_s'),wall_s=l.get('wall_s')),cpu_s=r.get('cpu_s'),wall_s=r.get('wall_s'),sleep_s=r.get('cooperative_sleep_s'),peak_rss_bytes=r.get('peak_rss_bytes')))
+final=c['completed'];valid=final and len(rows)==6 and all(not r['error']and r['source_after_valid']and r['reaped']and r['exit_code']==0 and r['all_code_matches_source']for r in rows)
+contrasts=[]
+for seed in(0,1,42):
+ rr={r['treatment']:r for r in rows if r['hashseed']==seed}
+ if len(rr)!=2:continue
+ a,b=rr['missing'],rr['provided'];matches=a['native_actions']==b['native_actions']and len(a['native_actions'])==1;contrasts.append(dict(hashseed=seed,native_actions_equal=matches,missing_active=a['bounds_available'],provided_active=b['bounds_available'],missing_root_tokens=a['root_tokens'],provided_root_tokens=b['root_tokens'],first_token_difference=dict(prefix=[],missing=a['root_tokens'],provided=b['root_tokens']),causal_expectation_passes=matches and a['bounds_available']is False and b['bounds_available']is True and len(a['legal_actions'])==1 and b['legal_actions']==[]and bool(a['root_tokens'])and b['root_tokens']==[]))
+r=dict(created_utc=datetime.now(timezone.utc).isoformat(),final=final,valid=valid,train_only=True,case='train20-31100001',repetition=4,prefix_depth=29,rows=rows,contrasts=contrasts,source_code_identical_across_treatments=True,parameter_and_tokenizer_bytes_identical=True,only_treatment='Declared checksum-correct data/raw/kcs/kcs.fix absent vs present; each runtime has verified identical project marker and asserts params.repo_root()==runtime.',all_code_fingerprints_match_source=all(r['all_code_matches_source']for r in rows),total_cpu_s=sum(r['cpu_s']or 0 for r in rows),total_worker_wall_s=sum(r['wall_s']or 0 for r in rows),controller_wall_s=c.get('wall_s'),max_separate_worker_lifetime_rss_bytes=max((r['peak_rss_bytes']or 0 for r in rows),default=0),active_job=c['active_job'],policy='Public lashing is only one checker part on raw completed cargo; it does not imply whole-checker acceptance. Historical recovered mixed-policy rollout aggregate must not be reused as equivalent production-mask comparison.')
+(D/'summary.json').write_text(json.dumps(r,sort_keys=True,indent=2)+'\n');print(json.dumps({k:r[k]for k in('final','valid','total_cpu_s','controller_wall_s','max_separate_worker_lifetime_rss_bytes','contrasts')}))

@@ -1,0 +1,73 @@
+/* Layout only. The shell owns the cards, typography, colours and controls. */
+.st-instruct-root { display: grid; gap: 16px; }
+.st-instruct-radio, .st-instruct-rule { min-width: 0; }
+.st-instruct-channel { margin-bottom: 12px; }
+.st-instruct-actor-meta { display: flex; align-items: center; gap: 7px; }
+.st-instruct-actor-dot { display: inline-block; width: 6px; height: 6px; flex: none; border-radius: 50%; }
+.st-instruct-voice-dot { background: var(--st-c-voice); }
+.st-instruct-reader-dot { background: var(--st-c-reader); }
+.st-instruct-chips, .st-instruct-bay-strip { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.st-instruct-wave { height: 72px; display: flex; gap: 1px; align-items: center; overflow: hidden; margin: 18px 0 10px; }
+.st-instruct-wave progress { display: block; flex: 1 1 0; min-width: 0; max-height: 90%; opacity: .3; transition: opacity 250ms; }
+.st-instruct-wave progress.st-instruct-past { opacity: 1; }
+.st-instruct-transport { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.st-instruct-clock { font-variant-numeric: tabular-nums; }
+.st-instruct-transcription { margin-top: 16px; }
+.st-instruct-transcript { margin: 12px 0 8px; }
+.st-instruct-transcript span { opacity: .08; transition: opacity 250ms; }
+.st-instruct-transcript span.st-instruct-on { opacity: 1; }
+.st-instruct-heard { margin: 8px 0; }
+.st-instruct-read { justify-self: start; }
+.st-instruct-rule { animation: st-instruct-arrive 350ms ease both; }
+.st-instruct-rule-title { margin: 18px 0 12px; overflow-wrap: anywhere; }
+.st-instruct-rule-title span { opacity: .08; transition: opacity 250ms; }
+.st-instruct-rule-title span.st-instruct-on { opacity: 1; }
+.st-instruct-json { white-space: pre-wrap; overflow-wrap: anywhere; margin: 12px 0 0; }
+.st-instruct-json span { opacity: .08; transition: opacity 250ms; }
+.st-instruct-json span.st-instruct-on { opacity: 1; }
+.st-instruct-plain { margin: 14px 0; }
+.st-instruct-scope { margin: 10px 0 16px; }
+.st-instruct-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.st-instruct-details { margin-top: 16px; }
+.st-instruct-details dd { overflow-wrap: anywhere; min-width: 0; }
+.st-instruct-bay-marker { margin: 12px 0 16px; }
+.st-instruct-bay-marker p { margin: 0 0 8px; }
+.st-instruct-status { margin: 0; }
+.st-instruct-status:empty { display: none; }
+.st-instruct-inside { display: flex; flex-direction: column; gap: 16px; height: 100%; padding: 24px; box-sizing: border-box; overflow: auto; }
+.st-instruct-inside-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.st-instruct-inside-head p { margin: 0 0 8px; }
+.st-instruct-comparison { display: grid; gap: 8px; }
+.st-instruct-comparison > .st-instruct-result-row { display: grid; grid-template-columns: minmax(120px, 1fr) minmax(40px, 1fr) auto; align-items: center; gap: 12px; }
+.st-instruct-comparison progress { width: 100%; min-width: 0; height: 6px; }
+.st-instruct-comparison p { margin: 0; }
+.st-instruct-mask-evidence { display: grid; gap: 10px; }
+.st-instruct-mask-evidence p { margin: 0; }
+.st-instruct-player { flex: 1; min-height: 420px; overflow: hidden; padding: 0; }
+.st-instruct-xray-note { flex: none; margin: 0; }
+@keyframes st-instruct-arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .st-instruct-rule { animation: none; } .st-instruct-root span, .st-instruct-wave progress { transition: none; } }
+/* The original, provenance-checking x-ray JavaScript uses shell components and this layout. */
+.st-instruct-player .xray-frame { display: grid; grid-template-rows: auto auto minmax(160px, 1fr) auto auto; gap: 12px; min-height: 520px; height: 100%; padding: 16px; box-sizing: border-box; }
+.st-instruct-player .xray-header, .st-instruct-player .xray-panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.st-instruct-player h1, .st-instruct-player h2, .st-instruct-player p { margin: 0; }
+.st-instruct-player .xray-sentence { display: grid; gap: 6px; }
+.st-instruct-player .xray-body { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; min-height: 0; }
+.st-instruct-player .xray-panel { min-width: 0; min-height: 0; margin: 0; }
+.st-instruct-player .xray-output-panel { display: grid; grid-template-rows: auto minmax(90px, 1fr) auto auto; gap: 12px; }
+.st-instruct-player .xray-json { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; overflow: auto; }
+.st-instruct-player .xray-chosen-box { padding: 8px 12px; }
+.st-instruct-player .xray-chosen-token { display: block; white-space: pre-wrap; overflow-wrap: anywhere; }
+.st-instruct-player .xray-wishes-panel { display: grid; grid-template-rows: auto auto minmax(90px, 1fr) auto; gap: 8px; }
+.st-instruct-player .xray-wishes { display: grid; gap: 6px; align-content: start; list-style: none; overflow: auto; padding: 0; margin: 0; }
+.st-instruct-player .xray-wish { display: grid; grid-template-columns: 20px minmax(0, 1fr) 58px; gap: 8px; align-items: start; }
+.st-instruct-player .xray-wish-token, .st-instruct-player .xray-reason { display: block; white-space: pre-wrap; overflow-wrap: anywhere; }
+.st-instruct-player .xray-probability { text-align: right; }
+.st-instruct-player .xray-probability-track { margin-top: 4px; }
+.st-instruct-player .xray-legend, .st-instruct-player .xray-transport, .st-instruct-player .xray-footer { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.st-instruct-player .xray-footer { justify-content: space-between; }
+.st-instruct-player .xray-scrub { flex: 1; min-width: 100px; }
+.st-instruct-player .xray-frame button, .st-instruct-player .xray-frame select { min-height: 32px; }
+.st-instruct-ship-marker { position: absolute; inset: 0; z-index: 4; pointer-events: none; overflow: hidden; }
+.st-instruct-ship-tint { position: absolute; inset: 0; width: 100%; height: 100%; }
+.st-instruct-ship-label { position: absolute; transform: translate(-50%, -100%); white-space: nowrap; background: var(--st-instruct-ship-label-bg); color: var(--st-white); }

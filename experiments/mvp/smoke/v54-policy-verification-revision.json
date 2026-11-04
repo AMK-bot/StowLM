@@ -1,0 +1,12 @@
+{
+  "revised_epoch": 1793292541.686978,
+  "old_baseline_contract_sha256": "6335db2f384734c0f9edf463ab9f6db181413e42c8c1bcf6ffb1ec365b456f70",
+  "first_promoted_contract_sha256": "4119a265e35d7b4f2078923e63dd18b887fdc160aa4a4d025b2c0d1c29d86bda",
+  "before_sha256": "4119a265e35d7b4f2078923e63dd18b887fdc160aa4a4d025b2c0d1c29d86bda",
+  "after_sha256": "530c8984d9d2b0015ff0b9b4c950cb6b5bfb075fbe46087175f70aeb94e38476",
+  "verification_before": "experiments/checker/followup-1028/canonical2158-review/canonical-policy-review.json",
+  "verification_after": "experiments/mvp/smoke/v54-policy-review.json",
+  "annotation_only": true,
+  "numerical_provider_source_metadata_unchanged": true,
+  "note": "Traceability annotation only. The first candidate/review hash remains unchanged; no retroactive numerical proof claim."
+}

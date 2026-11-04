@@ -1,0 +1,17 @@
+{
+  "version": "reader-v3-selection-freeze/1",
+  "created_utc": "2026-11-02T02:25:03.815903+00:00",
+  "files_sha256": {
+    "experiments/mvp/reader/v3/SELECTION-RULE.md": "97f68998a213864238d5abd5c3deb7e165c1dc77021a3a75043bcb67f36c109b",
+    "experiments/mvp/reader/v3/selection-sample.jsonl": "f933692b51d655c457d7705e8b59e996e4a050000369668d0f27b17021463227",
+    "experiments/mvp/reader/v3/swa.py": "72121bbac2bf600ee9042bc90b2b8ccbae3beec1e5f814092d563663a0adf6f2",
+    "experiments/mvp/reader/v3/select_adapter.py": "d6079d041d2a24289ccef6e456f6a15ab51720a586560c412fe9f269a8ce564c",
+    "experiments/mvp/reader/v3/score_selected.py": "ad1a3e3352fa050999bdd49f431f600827f1c7663b1c70d958279b9fbab24a9f",
+    "experiments/mvp/reader/v3/record_traces.py": "bb478e5fd27c4655711d00342c39cc5d013baafbf57669c538b65a8a99f462b1",
+    "experiments/mvp/reader/v3/finish_run.py": "abd5a4dc5b3473211bfad76bf707dba373485d9bb6960ea8fd1713a42a83bc36",
+    "experiments/mvp/reader/v3/finish_chain.sh": "f5778ab12b8eb2d307b14892131d250190b4a5c66cc108f9bef531cef615d026",
+    "experiments/mvp/reader/v3/data-domain/valid.jsonl": "36afdbf12350d2a3bca3c2000e3e630f7a7e3c09092725ac3883f5f3b5ce5da0",
+    "experiments/mvp/reader/v3/valid-sample.jsonl": "2435fe1f1cb373159da7ebd409a6be87365f8aefff8f755d66490c5281995249"
+  },
+  "amended": "score_selected.py only, before any selection score: tolerate a missing STOPPED.json after a crash"
+}

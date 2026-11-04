@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StowLM Studio</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/studio.css">
+<link rel="stylesheet" href="/studio-intake.css">
+<link rel="stylesheet" href="/studio-instruct.css">
+<link rel="stylesheet" href="/studio-plan.css">
+<link rel="stylesheet" href="/studio-stress.css">
+<link rel="stylesheet" href="/studio-copilot.css">
+<link rel="stylesheet" href="/studio-handover.css">
+<link rel="stylesheet" href="/studio-evidence.css">
+<link rel="stylesheet" href="/studio-impact.css">
+<!-- Order matters (all deferred, run in order): studio-ship.js first gives stage.js the v6 boot flags, stage.js reads
+     them, studio.js puts the studio's own URL back and defines window.Studio, then the step modules register. -->
+<script src="/studio-ship.js" defer></script>
+<script src="/stage-rules.js" defer></script>
+<script src="/stage-fillv6.js" defer></script>
+<script src="/stage-story.js" defer></script>
+<script src="/stage-scene.js" defer></script>
+<script src="/stage-yard.js" defer></script>
+<script src="/stage-gauges.js" defer></script>
+<script src="/stage-bays.js" defer></script>
+<script src="/stage.js" defer></script>
+<script src="/studio-pacing.js" defer></script>
+<script src="/studio.js" defer></script>
+<script src="/studio-voyage.js" defer></script>
+<script src="/studio-intake.js" defer></script>
+<script src="/studio-instruct.js" defer></script>
+<script src="/studio-plan.js" defer></script>
+<script src="/studio-stress.js" defer></script>
+<script src="/studio-copilot.js" defer></script>
+<script src="/studio-handover.js" defer></script>
+<script src="/studio-evidence.js" defer></script>
+<script src="/studio-impact.js" defer></script>
+</head>
+<body>
+<div id="st-app">
+  <header id="st-titlebar">
+    <button type="button" class="st-icon-btn" data-act="sidebar" data-icon="sidebar" title="Show or hide the stages" aria-label="Toggle the stage list"></button>
+    <span class="st-brandmark" aria-hidden="true"></span>
+    <b class="st-appname">StowLM</b>
+    <span class="st-tb-call" id="st-tb-call">Laem Chabang, call 412</span>
+    <div class="st-tb-gap"></div>
+    <span class="st-call-chip" title="StowLM Reader: fine-tuned Muse Glimmer 30B, loaded on this laptop"><i class="dot"></i>StowLM Reader · on this laptop</span>
+    <button type="button" class="st-icon-btn" id="st-bell" data-icon="bell" title="Radio calls" aria-label="Radio calls"></button>
+  </header>
+
+  <aside id="st-sidebar">
+    <div class="st-side-inner">
+      <div class="st-side-label">This call</div>
+      <nav id="st-stages" aria-label="Planning stages"></nav>
+      <div class="st-side-sep"></div>
+      <nav id="st-pages" aria-label="Results"></nav>
+      <div class="st-side-gap"></div>
+      <div class="st-honesty"><span data-icon="shield"></span><span>Synthetic ships and cargo, simulated port. Every plan shown has been through the full checker; a plan that doesn't pass names the rules it breaks.</span></div>
+      <button type="button" class="st-link" id="st-rules-link">View checker rules</button>
+    </div>
+  </aside>
+
+  <main id="st-main">
+    <div id="st-kpis" aria-label="Ship condition">
+      <div class="st-kpi na" data-g="stability"><b>Stability</b><i>—</i></div>
+      <div class="st-kpi na" data-g="balance"><b>List / trim</b><i>—</i></div>
+      <div class="st-kpi na" data-g="draught"><b>Draught</b><i>—</i></div>
+      <div class="st-kpi na" data-g="hull"><b>Hull stress</b><i>—</i></div>
+      <div class="st-kpi na" data-k="moves"><b>Moves</b><i>—</i></div>
+      <div class="st-kpi na" data-k="rules"><b>Rules</b><i>—</i></div>
+    </div>
+    <div id="st-tabs" role="tablist">
+      <button type="button" class="st-tab on" data-tab="ship" role="tab"><span data-icon="ship"></span>Ship</button>
+      <button type="button" class="st-tab" data-tab="bays" role="tab"><span data-icon="plan"></span>Bay plan</button>
+    </div>
+    <div id="st-viewport">
+      <div id="st-view">
+        <div class="ship-wrap" id="ship-wrap">
+          <canvas id="ship-canvas"></canvas>
+          <canvas id="bays-canvas" hidden></canvas>
+          <div class="watermark" id="watermark" hidden></div>
+          <div class="preview-tag" id="preview-tag" hidden></div>
+          <aside class="outcome-card" id="outcome-card" hidden></aside>
+          <div class="devhud" id="devhud" hidden></div>
+          <div class="event-cap" id="event-cap"></div>
+          <aside class="xray-card" id="xray-card" hidden></aside>
+          <div class="tooltip" id="tooltip" hidden></div>
+          <div class="loading" id="loading">Loading the ship</div>
+        </div>
+      </div>
+      <div id="st-center"></div>
+    </div>
+    <div id="st-baystrip">
+      <div class="st-bays" id="st-bays" aria-label="Bays along the hull"></div>
+      <div class="st-moves"><span id="st-moves-label">Move 0 of 0</span><input type="range" id="st-moves" min="0" max="0" value="0" step="1" aria-label="Move"></div>
+    </div>
+    <ol id="st-activity" aria-label="Activity"><li class="st-act-empty">Model and checker actions appear here</li></ol>
+  </main>
+
+  <aside id="st-inspector">
+    <div id="st-insp-host"></div>
+  </aside>
+
+  <section id="st-page" aria-label="Results page"><div class="st-page-inner" id="st-page-inner"></div></section>
+</div>
+<div id="st-toasts" aria-live="polite"></div>
+<div id="st-cursor" aria-hidden="true"><svg viewBox="0 0 22 28"><path d="M2.5 1.8v20.6l5.3-5.1 3.4 8 3.6-1.5-3.3-7.9h7.3z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+
+<!-- The rest of the stage page's DOM, which stage.js writes to every frame. The studio doesn't show it. -->
+<div id="st-stage-dom" aria-hidden="true">
+  <div class="kpis" id="kpis">
+    <div class="kpi" id="kpi-moves"><div id="kpi-moves-v"></div><div id="kpi-moves-s"></div></div>
+    <div class="kpi" id="kpi-hours"><div id="kpi-hours-v"></div></div>
+    <div class="kpi" id="kpi-usd"><div id="kpi-usd-v"></div><div id="kpi-scn"></div></div>
+    <div class="kpi" id="kpi-thb"><div id="kpi-thb-v"></div></div>
+  </div>
+  <span id="verdict"></span><span id="rung"></span><div id="vessel"></div><div id="port"></div>
+  <select id="plan-select" aria-label="Select plan"></select>
+  <span id="planner-label"></span><div id="legend"></div>
+  <div class="view-toggle"><button type="button" data-view="iso">3D</button><button type="button" data-view="bays">Bays</button></div>
+  <button id="xray-btn" type="button"></button>
+  <div id="yard-stats"></div><div class="yard-wrap" id="yard-wrap"><canvas id="yard-canvas"></canvas></div>
+  <span id="spark-title"></span><span id="spark-note"></span><span id="spark-src"></span><div id="spark-body"></div><span id="spark-box"></span><button type="button" id="spark-live" disabled></button>
+  <button type="button" id="btn-back"></button><button type="button" id="btn-play"></button><button type="button" id="btn-fwd"></button>
+  <canvas id="strip-canvas"></canvas><input type="range" id="scrub" min="0" max="0" value="0" step="1" aria-label="Lift">
+  <b id="lift-now"></b><i id="lift-total"></i><div id="speeds"></div>
+  <span id="phys-frame"></span><span id="phys-status"></span>
+  <canvas id="g-gm"></canvas><canvas id="g-heel"></canvas><canvas id="g-draught"></canvas><canvas id="c-sf"></canvas><canvas id="c-bm"></canvas><canvas id="c-gz"></canvas>
+  <div id="phys-pending" hidden><div class="pp-title"></div><i id="pp-fill"></i><div id="pp-sub"></div></div><div id="phys-note"></div>
+  <div id="race-delta"></div><div id="race"></div>
+  <span id="rules-note"></span><span id="rules-badge"></span><div id="rules"></div>
+  <footer id="scope"></footer>
+</div>
+</body>
+</html>

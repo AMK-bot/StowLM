@@ -1,0 +1,18 @@
+{
+  "test": "fd-relative private cleanup allowed; actual source escape rejected",
+  "failed_before_passed_after": true,
+  "results": [
+    {
+      "source": "map_generate_initial.py.txt",
+      "sha256": "5229c61aa88f32aac9c57301ca1a1eda84c1be937aa5b661bd2e36ef0187b5b3",
+      "returncode": 1,
+      "expected_failure": true
+    },
+    {
+      "source": "map_generate.py.txt",
+      "sha256": "8d569b228e9ef29dbd6ee7bb90256c480c1967267d94ebb417c34f406c47f8d7",
+      "returncode": 0,
+      "expected_failure": false
+    }
+  ]
+}

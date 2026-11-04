@@ -1,0 +1,54 @@
+"""Bind the current saved populations used by production row regression tests.
+
+This is an input manifest, not a claimed test pass or a replacement measurement.
+Failed holdout observations remain untouched. Work-in-progress audit metadata
+is not an input or verification claim; only immutable population pins bind tests.
+"""
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[3]
+from profile_run import load_driver
+driver = load_driver()
+
+
+def pin(path):
+    path = path.resolve()
+    return dict(path=str(path.relative_to(ROOT)),sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+
+
+pins = []
+for ship in ('feeder_500','feeder_1000','feeder_1700'):
+    family, _, _, _, current = driver.prepare(ship,HERE/'ordinary')
+    for epoch in ('edges-v1','edges-v2','edges-v3'):
+        for phase in ('train','holdout'):
+            path = HERE/epoch/ship/f'necessary-edges-{phase}.json'
+            record = json.loads(path.read_text())
+            if (record['complete'] is not True or record['physical_inputs_start'] != current
+                    or record['physical_inputs_end'] != current or not record['physical_inputs_unchanged']):
+                raise ValueError('current regression input is incomplete or numerically stale')
+            source = ROOT/record['sampler_source']['path']
+            if pin(source) != record['sampler_source']:
+                raise ValueError('regression producer source changed')
+            pins.append(pin(path))
+    if driver.snapshot(ship,family.parameters) != current:
+        raise ValueError('numerical inputs changed while binding current test inputs')
+result = dict(format=1,status='input binding only; pytest XML records actual verification',
+    source_pins=pins,bank=pin(ROOT/'src/stowage/linear/margin_policy_data.json'),
+    producer=pin(Path(__file__)),
+    qualification_profile=dict(water_density_kg_m3=1000.,adapter=pin(HERE/"profile_run.py")),
+    independent_holdouts=dict(
+        ordinary=sum(json.loads((HERE/'ordinary'/ship/f'holdout-{level}.json').read_text())['samples']
+            for ship in ('feeder_500','feeder_1000','feeder_1700')
+            for level in ('light','medium','full')),
+        fresh_edge=sum(json.loads((HERE/'edges-v3'/ship/'necessary-edges-holdout.json').read_text())['samples']
+            for ship in ('feeder_500','feeder_1000','feeder_1700')),
+        earlier_edge_holds='explicit calibration enrichment; never counted as independent'))
+target = HERE/'claude-current-audit-inputs.json'
+if target.exists():
+    raise ValueError('preserve existing input manifest')
+driver.write(target,result)
+print(json.dumps(dict(populations=len(pins),output=str(target))))

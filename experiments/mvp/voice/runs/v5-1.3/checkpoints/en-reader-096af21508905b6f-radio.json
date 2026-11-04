@@ -1,0 +1,47 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 13,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 2480,
+    "audio_seconds": 2.448,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00010",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "cc8c465bc9e643bfa4ce4d3cf85c474f",
+    "session_id": "voyager/transcribe/E959DD8573BF499B9E86D4095178BA52"
+  },
+  "asr_latency_s": 0.9064104999997653,
+  "audio_sha256": "4bd08c3306640c66445a0b512071943b2e280aed1018c285e26d6b0a5f257352",
+  "canonical": {
+    "constraint": {
+      "bay": 13,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 2.042986332962755,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0007852",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "b19b527cb760ff278da009c4cd215e62d617cb354d8eb065526bea93601d344c",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "ee65ad3c-11ce-4870-86ab-308d6205ef45"
+  },
+  "parser_latency_s": 1.0287645420175977,
+  "script": "Keep bay 13 sealed shut.",
+  "source_id": "reader-096af21508905b6f",
+  "started_utc": "2026-11-01T01:33:18.475982+00:00",
+  "status": "complete",
+  "transcript": "Heat Bay 13 sealed shut."
+}

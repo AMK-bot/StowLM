@@ -1,0 +1,33 @@
+{
+  "label": "Measured current static HTML inspection on synthetic 190-box fixture; earlier external print retained by hash",
+  "html_path": "experiments/mvp/pipeline/package/fixtures/complete/bay-plan.html",
+  "bay_pages": 8,
+  "unique_bays": 8,
+  "box_cell_labels": 316,
+  "external_assets": [],
+  "print_page_css": true,
+  "explicit_page_breaks": true,
+  "standalone_static_check_passed": true,
+  "browser_open_and_print": "Earlier revision passed outside sandbox; revised weight-table layout awaits external print",
+  "browser_error": "Chrome startup failed; exit=-6: ",
+  "browser_fallback_error": "CUA exposes zero browsers; native Google Chrome was not approved for Computer Use",
+  "retry": {
+    "flags": [
+      "--no-sandbox",
+      "--disable-crash-reporter",
+      "--disable-crashpad"
+    ],
+    "input": "Fresh HTML from the same stored 190-box checked outcome fixture; complete folder was being regenerated",
+    "browser_error": "Chrome startup failed; exit=-6, no stderr",
+    "result": "Browser still aborts before DevToolsActivePort; no PDF generated; temporary HTML and own process profile cleaned"
+  },
+  "html_sha256": "c1f821b0221fbf53353b23880e680f313fe8165b68746af0aacef8c11c2a50a5",
+  "external_print": {
+    "source": "User message: printed bay-plan.html outside the sandbox; 8 pages, no errors, looks good",
+    "pages": 8,
+    "errors": 0,
+    "printed_html_sha256": "575f4ce7b1957a68ec2284f748624131e8cb583b1a80af30c15ab8cf504f630c"
+  },
+  "policy": "No GUI application, including headless Chrome, may be launched from a Codex sandbox.",
+  "current_revision_print": "Not attempted: sandbox policy forbids GUI/headless Chrome. Earlier print does not certify revised layout."
+}

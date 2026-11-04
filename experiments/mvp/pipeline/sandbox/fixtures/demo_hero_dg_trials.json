@@ -1,0 +1,86 @@
+[
+  {
+    "box_id": "QZXU0000014",
+    "target_slot": "0220582",
+    "broken": [],
+    "replay_legal": false,
+    "replay_rules": [
+      "expert.moves.hatch_clear",
+      "expert.moves.hatch_clear"
+    ]
+  },
+  {
+    "box_id": "QZXU0000014",
+    "target_slot": "0220402",
+    "broken": [
+      {
+        "rule_id": "checker.missing_vessel_data",
+        "message": "IMDG segregation level 2 requires missing ship/compartment data.",
+        "measured": null,
+        "limit": null,
+        "unit": null,
+        "boxes": [
+          "QZXU0000014",
+          "QZXU0000349"
+        ],
+        "slots": [
+          "0210482",
+          "0220402"
+        ],
+        "severity": "hard"
+      }
+    ],
+    "replay_legal": false,
+    "replay_rules": [
+      "expert.moves.hatch_clear",
+      "expert.moves.hatch_clear"
+    ]
+  },
+  {
+    "box_id": "QZXU0000014",
+    "target_slot": "0220602",
+    "broken": [
+      {
+        "rule_id": "imdg.segregation.7_4_3",
+        "message": "IMDG segregation level 2 is not satisfied.",
+        "measured": null,
+        "limit": null,
+        "unit": null,
+        "boxes": [
+          "QZXU0000014",
+          "QZXU0000349"
+        ],
+        "slots": [
+          "0210482",
+          "0220602"
+        ],
+        "severity": "hard"
+      }
+    ],
+    "replay_legal": false,
+    "replay_rules": [
+      "expert.moves.hatch_clear",
+      "expert.moves.hatch_clear"
+    ]
+  },
+  {
+    "box_id": "QZXU0000014",
+    "target_slot": "0100582",
+    "broken": [],
+    "replay_legal": false,
+    "replay_rules": [
+      "expert.moves.hatch_clear",
+      "expert.moves.hatch_clear"
+    ]
+  },
+  {
+    "box_id": "QZXU0000225",
+    "target_slot": "0010186",
+    "broken": [],
+    "replay_legal": false,
+    "replay_rules": [
+      "expert.moves.bottom_up",
+      "expert.moves.hatch_clear"
+    ]
+  }
+]

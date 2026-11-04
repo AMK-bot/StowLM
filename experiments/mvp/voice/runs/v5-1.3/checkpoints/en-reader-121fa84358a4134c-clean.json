@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 23,
+      "max_tiers": 2,
+      "type": "max_tiers",
+      "zone": "deck"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 5120,
+    "audio_seconds": 5.088,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00025",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "8b6ef94682d24b8fb4976ecdfd031479",
+    "session_id": "voyager/transcribe/895860F092A541AB9CC25378B5F2BE86"
+  },
+  "asr_latency_s": 1.2684859579894692,
+  "audio_sha256": "6998e2e718df5c1f1c86e209e72102f99689663d4474384c591dd8fef60def17",
+  "canonical": {
+    "constraint": {
+      "bay": 23,
+      "max_tiers": 2,
+      "type": "max_tiers",
+      "zone": "deck"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "clean",
+  "end_to_end_s": 2.4552766249980778,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0011035",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "b3437e6e067717819a2efa80c690463322b6d55c4815064e0444c2ecca516a00",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "e3dde7ca-5b0e-4377-8afa-a822d5a343c8"
+  },
+  "parser_latency_s": 1.098584999970626,
+  "script": "Bay 23's weather-deck stacks must top out at 2 tiers.",
+  "source_id": "reader-121fa84358a4134c",
+  "started_utc": "2026-11-01T01:32:07.221073+00:00",
+  "status": "complete",
+  "transcript": "Bay 23's weather deck stacks must top out at two tiers."
+}

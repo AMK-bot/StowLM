@@ -1,0 +1,1722 @@
+{
+  "schema_version": "stowlm.yard-vision-experiment/1",
+  "synthetic": true,
+  "finished_utc": "2026-11-02T01:00:15.711537+00:00",
+  "groups": [
+    {
+      "split": "development",
+      "arm": "clean_render",
+      "label": "measured",
+      "images": 2,
+      "malformed_images": 0,
+      "stack_height": {
+        "correct": 36,
+        "total": 36,
+        "accuracy": 1.0
+      },
+      "id": {
+        "correct": 64,
+        "total": 64,
+        "accuracy": 1.0
+      },
+      "box_count": {
+        "mean_accuracy": 1.0,
+        "exact_images": 2,
+        "total_images": 2
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 36,
+      "wall_s": 34.30551212496357,
+      "cost_usd": 0.0540735,
+      "abstentions": {
+        "stack_height": 0,
+        "id": 0,
+        "unaccepted_stacks": 0
+      },
+      "complete_images": 2,
+      "mean_wall_s": 17.152756062481785
+    },
+    {
+      "split": "development",
+      "arm": "repainted_photo",
+      "label": "measured",
+      "images": 0,
+      "malformed_images": 0,
+      "stack_height": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": null
+      },
+      "id": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": null
+      },
+      "box_count": {
+        "mean_accuracy": null,
+        "exact_images": 0,
+        "total_images": 0
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 0,
+      "wall_s": 0,
+      "cost_usd": 0,
+      "abstentions": {
+        "stack_height": 0,
+        "id": 0,
+        "unaccepted_stacks": 0
+      },
+      "complete_images": 0,
+      "mean_wall_s": null
+    },
+    {
+      "split": "held_out",
+      "arm": "clean_render",
+      "label": "measured",
+      "images": 4,
+      "malformed_images": 1,
+      "stack_height": {
+        "correct": 52,
+        "total": 74,
+        "accuracy": 0.7027027027027027
+      },
+      "id": {
+        "correct": 61,
+        "total": 87,
+        "accuracy": 0.7011494252873564
+      },
+      "box_count": {
+        "mean_accuracy": 1.0,
+        "exact_images": 4,
+        "total_images": 4
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 52,
+      "wall_s": 38.08516645798227,
+      "cost_usd": 0.08851425,
+      "abstentions": {
+        "stack_height": 22,
+        "id": 26,
+        "unaccepted_stacks": 22
+      },
+      "complete_images": 3,
+      "mean_wall_s": 9.521291614495567
+    },
+    {
+      "split": "held_out",
+      "arm": "repainted_photo",
+      "label": "measured",
+      "images": 0,
+      "malformed_images": 0,
+      "stack_height": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": null
+      },
+      "id": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": null
+      },
+      "box_count": {
+        "mean_accuracy": null,
+        "exact_images": 0,
+        "total_images": 0
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 0,
+      "wall_s": 0,
+      "cost_usd": 0,
+      "abstentions": {
+        "stack_height": 0,
+        "id": 0,
+        "unaccepted_stacks": 0
+      },
+      "complete_images": 0,
+      "mean_wall_s": null
+    }
+  ],
+  "photo_audits": [
+    {
+      "synthetic": true,
+      "method": "agent visual comparison of clean and photo; visible tier face tally",
+      "photo_file": "photo.png",
+      "photo_sha256": "c2bb180789e259d94606a8bfd02297bbee5dd2f316e29f842a42083c30fda4a8",
+      "clean_sha256": "0260aa62fdd09944355a269f43a94fe230dd273063becea813b20e9cb4fa6076",
+      "truth_sha256": "c501cd6597ad14bfe848a92d79988ff0ce90d13cda327214205b0e25276e819e",
+      "preserved": false,
+      "counts_preserved": false,
+      "layout_preserved": false,
+      "identities_preserved": false,
+      "observed_box_count": 38,
+      "visible_row_stack_heights": [
+        [
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "reason": "Added stacks in rows 2,3,4; painted IDs changed. Count from visible tier faces, row by row.",
+      "disposition": "discarded; not scored against source state",
+      "case_id": "case-01",
+      "split": "development",
+      "audit_file": "fixtures/case-01/pair_audit-v1.json"
+    },
+    {
+      "synthetic": true,
+      "method": "agent visual comparison of clean and photo; visible tier face tally",
+      "photo_file": "photo-v2.png",
+      "photo_sha256": "bb4fec3a4390b2c62033bf8c88df4f0b9981607799f5446e0e572be014763715",
+      "clean_sha256": "0260aa62fdd09944355a269f43a94fe230dd273063becea813b20e9cb4fa6076",
+      "truth_sha256": "c501cd6597ad14bfe848a92d79988ff0ce90d13cda327214205b0e25276e819e",
+      "preserved": false,
+      "counts_preserved": true,
+      "layout_preserved": true,
+      "identities_preserved": false,
+      "observed_box_count": 32,
+      "visible_row_stack_heights": [
+        [
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "reason": "Counts and footprints preserved, but container identities changed: row2 bay11 top QZWU0000134 versus source QZWU0000026; numerous other ID substitutions.",
+      "disposition": "discarded; not scored against source state",
+      "case_id": "case-01",
+      "split": "development",
+      "audit_file": "fixtures/case-01/pair_audit.json"
+    },
+    {
+      "synthetic": true,
+      "method": "agent visual comparison of clean and photo; visible tier face tally",
+      "photo_file": "photo.png",
+      "photo_sha256": "d90b67c155ad476df37ad985baeaa85c728c0137e1eac9c1a59337e5e95d66e3",
+      "clean_sha256": "23eb92f857abcf49663872e45acffbbac6820a60c074dc853bbb11b7ff200b18",
+      "truth_sha256": "214165f48195d06158b98ef5f071909f5fe0222cb5317ccffde7d4e29c3044b1",
+      "preserved": false,
+      "counts_preserved": true,
+      "layout_preserved": true,
+      "identities_preserved": false,
+      "observed_box_count": 32,
+      "visible_row_stack_heights": [
+        [
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "reason": "Counts and footprints preserved; identities changed (row1 left top reads QZWU0000062 instead of QZWU0000010). Quay label removed.",
+      "disposition": "discarded; not scored against source state",
+      "case_id": "case-02",
+      "split": "development",
+      "audit_file": "fixtures/case-02/pair_audit-v1.json"
+    },
+    {
+      "synthetic": true,
+      "method": "agent visual comparison of clean and photo; visible tier face tally",
+      "photo_file": "photo-v2.png",
+      "photo_sha256": "654564b9fbd54f4a427cd2395f9fa8a0cebc1925be38f4b6bf06c21d1f219cd9",
+      "clean_sha256": "23eb92f857abcf49663872e45acffbbac6820a60c074dc853bbb11b7ff200b18",
+      "truth_sha256": "214165f48195d06158b98ef5f071909f5fe0222cb5317ccffde7d4e29c3044b1",
+      "preserved": false,
+      "counts_preserved": false,
+      "layout_preserved": false,
+      "identities_preserved": false,
+      "observed_box_count": 34,
+      "visible_row_stack_heights": [
+        [
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "reason": "Added a two-tier 40ft stack in row4 around bay3; changed numerous painted identities and ground labels.",
+      "disposition": "discarded; not scored against source state",
+      "case_id": "case-02",
+      "split": "development",
+      "audit_file": "fixtures/case-02/pair_audit.json"
+    },
+    {
+      "synthetic": true,
+      "method": "agent visual comparison of clean and photo; visible tier face tally",
+      "photo_file": "photo-v2.png",
+      "photo_sha256": "056244574a43544839a6f29c02e826e2f99238bd57429a9aa9cf67e8606ae63b",
+      "clean_sha256": "bd454f0767a57eb04e083fee68045c3eff5fdb1f46348861209843ed4ca58516",
+      "truth_sha256": "e4890ade5552430bd82c5631ac503551d06a043325c9beab752d8353c4af1e6d",
+      "preserved": false,
+      "counts_preserved": false,
+      "layout_preserved": false,
+      "identities_preserved": false,
+      "observed_box_count": 20,
+      "visible_row_stack_heights": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ]
+      ],
+      "reason": "Three extra stacks and four extra boxes in row3; duplicate/altered IDs. Independently confirmed by two agents against source16boxes.",
+      "disposition": "discarded; not scored against source state",
+      "case_id": "case-03",
+      "split": "held_out",
+      "audit_file": "fixtures/case-03/pair_audit.json"
+    },
+    {
+      "synthetic": true,
+      "method": "agent visual comparison of clean and photo; visible tier face tally",
+      "photo_file": "photo-v2.png",
+      "photo_sha256": "2897680c08f2dc2b47af884587461e8967d64827c8e510fd60c4581c9e856006",
+      "clean_sha256": "dc491415c00daf8987bacca321347cb6cd70fb9a8735ce9e3a9ff53ff3151975",
+      "truth_sha256": "5ba5da2ddba97708b79500f44fec173fd7b35209819c4e6d2a40bd86cbf4bd27",
+      "preserved": false,
+      "counts_preserved": false,
+      "layout_preserved": false,
+      "identities_preserved": false,
+      "observed_box_count": 27,
+      "visible_row_stack_heights": [
+        [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          2
+        ]
+      ],
+      "reason": "Extra single brown40ft container in row3 nearbay5; source has26boxes. Independently confirmed by two agents. Ground labels and IDs altered.",
+      "disposition": "discarded; not scored against source state",
+      "case_id": "case-04",
+      "split": "held_out",
+      "audit_file": "fixtures/case-04/pair_audit.json"
+    },
+    {
+      "synthetic": true,
+      "method": "agent visual comparison of clean and photo; visible tier face tally independently checked by two agents",
+      "photo_file": "photo-v2.png",
+      "photo_sha256": "a36aa52817813a3ecb8d9dc2afd508324a2d258c082275e9c73bcb4fb4d0d1ce",
+      "clean_sha256": "84804d4ed436d81f8a581b950cf046eab4652e45ff3f40a4e5ddbc2e0108966a",
+      "truth_sha256": "567a59d4b3a15f36cf6309c3261ce5189868d8757285f6fb317fbdba5d5f57f2",
+      "preserved": false,
+      "counts_preserved": true,
+      "layout_preserved": true,
+      "identities_preserved": false,
+      "observed_box_count": 26,
+      "visible_row_stack_heights": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      ],
+      "reason": "Counts/footprints preserved but painted identities altered: row2bay1 top reads QZXU0000185 instead of source QZWU0000010; row1bay17 identity substituted.",
+      "disposition": "discarded; not scored against source state",
+      "case_id": "case-05",
+      "split": "held_out",
+      "audit_file": "fixtures/case-05/pair_audit.json"
+    },
+    {
+      "synthetic": true,
+      "method": "agent visual comparison of clean and photo; visible tier face tally independently checked by two agents",
+      "photo_file": "photo-v2.png",
+      "photo_sha256": "5b9e5c5362e6be1b5b70602135027dbd70f60e2d9a6271853adcc3f4c6e18a22",
+      "clean_sha256": "dd4a01e739468b5c5aff85f7703a4eaf77088ba28d01c120a32d7565ab380615",
+      "truth_sha256": "7dba7b5510245f91d0236c49d7a6ab80883dc7535d9ce9ae90cb90e4ccef76cb",
+      "preserved": false,
+      "counts_preserved": false,
+      "layout_preserved": false,
+      "identities_preserved": false,
+      "observed_box_count": 23,
+      "visible_row_stack_heights": [
+        [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "reason": "Four extra boxes in row1: new two-tier stack nearbay3 plus singles nearbay5 andbay18. Source has19boxes. Many identities and ground labels altered.",
+      "disposition": "discarded; not scored against source state",
+      "case_id": "case-06",
+      "split": "held_out",
+      "audit_file": "fixtures/case-06/pair_audit.json"
+    }
+  ],
+  "photo_trials": 8,
+  "photo_discarded": 8,
+  "held_out_photo_trials": 4,
+  "held_out_photo_preserved": 0,
+  "spend": {
+    "label": "published rates for SAM/Image; token usage cost for Spark; invoice unverified",
+    "sam_calls": 6,
+    "sam_usd": "0.0150",
+    "muse_image_calls": 8,
+    "muse_image_usd": "0.08",
+    "spark_completed_calls": 6,
+    "spark_usd": "0.12758775",
+    "total_usd": "0.22258775",
+    "sam_image_cap_usd": "5",
+    "sam_image_committed_usd": "0.0950",
+    "vision_unknown_holds": 0,
+    "spark_ledger": "experiments/spark-spend/calls.jsonl",
+    "spark_request_ids": [
+      "76ca2911-e6e7-42dd-a89f-92ade2d915ad",
+      "57b739ac-c8e4-4714-861e-dbae9c300a5e",
+      "82a645bb-08be-4d42-a5eb-1365ff204717",
+      "8254b76b-0060-490e-b41b-d99d7b877289",
+      "f1908977-26fa-4681-a016-5afa7bacbf62",
+      "f1312235-d2a3-4732-afaa-ccc9b48db8d4"
+    ]
+  },
+  "cases": [
+    {
+      "label": "measured",
+      "box_count": {
+        "true": 32,
+        "observed": 32,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 32
+      },
+      "stack_height": {
+        "correct": 18,
+        "total": 18,
+        "accuracy": 1.0
+      },
+      "id": {
+        "correct": 32,
+        "total": 32,
+        "accuracy": 1.0
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 18,
+      "abstentions": {
+        "stack_height": 0,
+        "id": 0,
+        "unaccepted_stacks": 0
+      },
+      "wall_s": 14.971564000006765,
+      "cost_usd": 0.02749575,
+      "stacks": [
+        {
+          "key": "B024-001-01",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-001-03",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-003-03",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-005-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-007-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-007-04",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-009-01",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-009-04",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-011-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-01",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-04",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-017-03",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-017-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-019-01",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-019-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-023-01",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-023-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        }
+      ],
+      "spark_box_count": {
+        "true": 32,
+        "observed": 32,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 32
+      },
+      "case_id": "case-01",
+      "arm": "clean_render",
+      "status": "complete",
+      "questions": 0,
+      "image_sha256": "0260aa62fdd09944355a269f43a94fe230dd273063becea813b20e9cb4fa6076",
+      "context_sha256": "0f79a0c4ea321964499b84ab8b7ec95295e2bed165441dc545e0e8ea59d1c1f2",
+      "split": "development"
+    },
+    {
+      "label": "measured",
+      "box_count": {
+        "true": 32,
+        "observed": 32,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 32
+      },
+      "stack_height": {
+        "correct": 18,
+        "total": 18,
+        "accuracy": 1.0
+      },
+      "id": {
+        "correct": 32,
+        "total": 32,
+        "accuracy": 1.0
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 18,
+      "abstentions": {
+        "stack_height": 0,
+        "id": 0,
+        "unaccepted_stacks": 0
+      },
+      "wall_s": 19.333948124956805,
+      "cost_usd": 0.02657775,
+      "stacks": [
+        {
+          "key": "B024-001-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-001-04",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-003-01",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-003-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-005-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-007-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-009-01",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-009-04",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-011-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-01",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-04",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-015-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-015-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-015-04",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-017-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-021-03",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-023-03",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        }
+      ],
+      "spark_box_count": {
+        "true": 32,
+        "observed": 32,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 32
+      },
+      "case_id": "case-02",
+      "arm": "clean_render",
+      "status": "complete",
+      "questions": 0,
+      "image_sha256": "23eb92f857abcf49663872e45acffbbac6820a60c074dc853bbb11b7ff200b18",
+      "context_sha256": "cfc4e3f491057a76ea30801411c5340643fc079ba3430456942b2b4d190aec1d",
+      "split": "development"
+    },
+    {
+      "label": "measured",
+      "malformed_evidence": false,
+      "malformed_reasons": [],
+      "box_count": {
+        "true": 16,
+        "observed": 16,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 16
+      },
+      "stack_height": {
+        "correct": 13,
+        "total": 13,
+        "accuracy": 1.0
+      },
+      "id": {
+        "correct": 16,
+        "total": 16,
+        "accuracy": 1.0
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 13,
+      "abstentions": {
+        "stack_height": 0,
+        "id": 0,
+        "unaccepted_stacks": 0
+      },
+      "wall_s": 9.328704375016969,
+      "cost_usd": 0.02063575,
+      "stacks": [
+        {
+          "key": "B012-003-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-005-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-005-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-007-03",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-009-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-009-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-011-03",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-013-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-013-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-015-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-015-04",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-019-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B012-023-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        }
+      ],
+      "spark_box_count": {
+        "true": 16,
+        "observed": 16,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 16
+      },
+      "case_id": "case-03",
+      "arm": "clean_render",
+      "status": "complete",
+      "questions": 0,
+      "image_sha256": "bd454f0767a57eb04e083fee68045c3eff5fdb1f46348861209843ed4ca58516",
+      "context_sha256": "d68b49d68e0f4e6cd4ab9b31e782655a1bfc8222c942851b089d528b3026563d",
+      "split": "held_out"
+    },
+    {
+      "label": "measured",
+      "malformed_evidence": true,
+      "malformed_reasons": [
+        "client_response_unusable; see retained raw attempt"
+      ],
+      "box_count": {
+        "true": 26,
+        "observed": 26,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 26
+      },
+      "stack_height": {
+        "correct": 0,
+        "total": 22,
+        "accuracy": 0.0
+      },
+      "id": {
+        "correct": 0,
+        "total": 26,
+        "accuracy": 0.0
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 0,
+      "abstentions": {
+        "stack_height": 22,
+        "id": 26,
+        "unaccepted_stacks": 22
+      },
+      "wall_s": 9.486621166986879,
+      "cost_usd": 0.02144475,
+      "stacks": [
+        {
+          "key": "B024-001-01",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-001-02",
+          "true_height": 2,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-001-03",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-003-01",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-003-02",
+          "true_height": 2,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-003-04",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-005-04",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-007-01",
+          "true_height": 2,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-009-01",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-009-02",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-011-02",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-011-04",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-01",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-02",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-03",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-015-04",
+          "true_height": 2,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-017-03",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-019-01",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-021-02",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-021-03",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-023-02",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-023-03",
+          "true_height": 1,
+          "observed_height": null,
+          "accepted": false,
+          "exact_stack": false,
+          "silent_wrong": false
+        }
+      ],
+      "spark_box_count": {
+        "true": 26,
+        "observed": 0,
+        "absolute_error": 26,
+        "exact": false,
+        "accuracy": 0.0,
+        "denominator": 26
+      },
+      "case_id": "case-04",
+      "arm": "clean_render",
+      "status": "needs_answers",
+      "questions": 1,
+      "image_sha256": "dc491415c00daf8987bacca321347cb6cd70fb9a8735ce9e3a9ff53ff3151975",
+      "context_sha256": "2ef30bc3f92c42eae208004b6b9f9a4337ed5bd095e0cbb0f1aeaee0d56ce37b",
+      "split": "held_out"
+    },
+    {
+      "label": "measured",
+      "malformed_evidence": false,
+      "malformed_reasons": [],
+      "box_count": {
+        "true": 26,
+        "observed": 26,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 26
+      },
+      "stack_height": {
+        "correct": 22,
+        "total": 22,
+        "accuracy": 1.0
+      },
+      "id": {
+        "correct": 26,
+        "total": 26,
+        "accuracy": 1.0
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 22,
+      "abstentions": {
+        "stack_height": 0,
+        "id": 0,
+        "unaccepted_stacks": 0
+      },
+      "wall_s": 11.170029625005554,
+      "cost_usd": 0.0234465,
+      "stacks": [
+        {
+          "key": "B024-001-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-001-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-001-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-003-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-003-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-005-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-007-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-007-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-011-02",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-011-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-01",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-015-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-017-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-017-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-017-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-017-04",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-019-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-019-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-021-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-023-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        }
+      ],
+      "spark_box_count": {
+        "true": 26,
+        "observed": 26,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 26
+      },
+      "case_id": "case-05",
+      "arm": "clean_render",
+      "status": "complete",
+      "questions": 0,
+      "image_sha256": "84804d4ed436d81f8a581b950cf046eab4652e45ff3f40a4e5ddbc2e0108966a",
+      "context_sha256": "cf9830e47dc53fef85492f633f3db900c939798615ffe0ba5a1ca0b334d9c487",
+      "split": "held_out"
+    },
+    {
+      "label": "measured",
+      "malformed_evidence": false,
+      "malformed_reasons": [],
+      "box_count": {
+        "true": 19,
+        "observed": 19,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 19
+      },
+      "stack_height": {
+        "correct": 17,
+        "total": 17,
+        "accuracy": 1.0
+      },
+      "id": {
+        "correct": 19,
+        "total": 19,
+        "accuracy": 1.0
+      },
+      "silent_wrong_stacks": 0,
+      "accepted_stacks": 17,
+      "abstentions": {
+        "stack_height": 0,
+        "id": 0,
+        "unaccepted_stacks": 0
+      },
+      "wall_s": 8.099811290972866,
+      "cost_usd": 0.02298725,
+      "stacks": [
+        {
+          "key": "B024-001-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-004-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-005-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-007-03",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-008-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-009-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-011-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-012-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-013-03",
+          "true_height": 2,
+          "observed_height": 2,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-016-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-016-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-020-01",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-020-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-020-03",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-021-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-022-02",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        },
+        {
+          "key": "B024-023-04",
+          "true_height": 1,
+          "observed_height": 1,
+          "accepted": true,
+          "exact_stack": true,
+          "silent_wrong": false
+        }
+      ],
+      "spark_box_count": {
+        "true": 19,
+        "observed": 19,
+        "absolute_error": 0,
+        "exact": true,
+        "accuracy": 1.0,
+        "denominator": 19
+      },
+      "case_id": "case-06",
+      "arm": "clean_render",
+      "status": "complete",
+      "questions": 0,
+      "image_sha256": "dd4a01e739468b5c5aff85f7703a4eaf77088ba28d01c120a32d7565ab380615",
+      "context_sha256": "6405002230ba017ad19094c503f6749a8f72778c57a7bc8b58fcd7673b3a5df1",
+      "split": "held_out"
+    }
+  ]
+}

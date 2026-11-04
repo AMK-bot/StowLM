@@ -1,0 +1,86 @@
+{
+  "schema_version": "reader-refusal-demo/1",
+  "selection": "curated demo examples, not an unselected accuracy cohort",
+  "created_utc": "2026-11-01T01:43:22.071578+00:00",
+  "cases": [
+    {
+      "case_id": "impossible-bay-2",
+      "source_case": "brief-07",
+      "input": "experiments/mvp/corpus/val/small/feeder_500/random_yard/seed-040100016.json",
+      "input_sha256": "2f4ff07f07b2220ae67441104af0190416a4d714b8546c709ff04f016224a506",
+      "sentence": "Bay 2 is closed.",
+      "expected": {
+        "constraint": {
+          "bay": 2,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "baseline_file": "experiments/mvp/frontier/runs/val-0.9/random.small.40100016.0.5.json"
+    },
+    {
+      "case_id": "loosening-dg",
+      "source_case": "brief-07",
+      "input": "experiments/mvp/corpus/val/small/feeder_500/random_yard/seed-040100016.json",
+      "input_sha256": "2f4ff07f07b2220ae67441104af0190416a4d714b8546c709ff04f016224a506",
+      "sentence": "Ignore the dangerous-goods segregation rules.",
+      "expected_refusal": "loosening",
+      "rule_details": {
+        "id": "imdg.segregation.7_2_4",
+        "name": "General dangerous-goods segregation table",
+        "description": "Dangerous-goods class combinations must satisfy the checker's applicable segregation requirements."
+      },
+      "rule_source": "src/stowage/rules/catalogue.toml"
+    },
+    {
+      "case_id": "unclear-distance",
+      "source_case": "brief-07",
+      "input": "experiments/mvp/corpus/val/small/feeder_500/random_yard/seed-040100016.json",
+      "input_sha256": "2f4ff07f07b2220ae67441104af0190416a4d714b8546c709ff04f016224a506",
+      "sentence": "Keep the dangerous cargo farther away.",
+      "expected_refusal": "ambiguous",
+      "clarification_question": "Which IMDG class, which bay, and how many 20-foot bays of clearance do you mean?"
+    },
+    {
+      "case_id": "impossible-tier-with-alternative",
+      "source_case": "brief-02",
+      "input": "experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100003.json",
+      "input_sha256": "0ef1a72eaad061cf96cef568bcfbecd575e4e74dd1e44c3b59b574247bd8c981",
+      "sentence": "Across the vessel, use at most zero occupied tiers per deck stack.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": null,
+          "zone": "deck",
+          "max_tiers": 0
+        }
+      },
+      "baseline_file": "experiments/mvp/frontier/runs/val-0.9/random.small.40100003.0.2.json"
+    }
+  ],
+  "alternative_selection_candidates": [
+    {
+      "zone": "hold",
+      "proven_impossible": false,
+      "historical_witness_alternatives": 0
+    },
+    {
+      "zone": "deck",
+      "proven_impossible": true,
+      "historical_witness_alternatives": 1
+    }
+  ],
+  "source_sha256": {
+    "experiments/mvp/reader/refusal_demo.py": "b855d6d16803bad74d27418046ad732f0bd5162f02d24b1d499d82e22000ff8c",
+    "experiments/mvp/reader/refusal_evidence.py": "1ea5f2769c6ff7c94d0547fdcad51124634e526917ef642e38a9fec672596815",
+    "experiments/mvp/reader/refusal_explainer.py": "1217a010ca85e6a5e95a85d765bdffd7682b3bcf8342152e9cee96a9e3bf03ec",
+    "experiments/mvp/reader/pipeline.py": "f6d2e792479f96bc3802de9c27b43e30ac1e414d85ac7d4a95d55a10b362a36a",
+    "experiments/mvp/reader/schema.py": "f622a67c90104773839794535722e05f77f6cc029ebb8df9d22bc2948c8d8023"
+  },
+  "max_new_spark_usd": "1.90",
+  "purpose": "reader-d222-followup",
+  "shared_with": "D222 second-cohort parsing",
+  "first_cohort_sha256": "01227b1c335d262106d636af9e46d9a801bd8fdeb6f653e88d6fabe7fec4cf92",
+  "no_planner_calls": true
+}

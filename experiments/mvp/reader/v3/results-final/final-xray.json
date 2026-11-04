@@ -1,0 +1,51 @@
+{
+  "adopted": {
+    "name": "adapter-v2",
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/adapter-v2",
+    "adapter_sha256": "8bf00809718c48756f61618b479f1651f10a5c64c9c084db7801dbef5fa2ab1e"
+  },
+  "mask_report": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/results-final/mask-study/report-adopted.json",
+  "outcome": "adapter has real blocks",
+  "block_trace": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/xray/fixtures/real-block-trace-adopted.json",
+  "block_shown": {
+    "step": 26,
+    "token": "\",\"",
+    "reason": "not_in_grammar",
+    "probability": 0.9979125436988595,
+    "chosen": "."
+  },
+  "top_token_changes": {
+    "sentences": 200,
+    "recorded": 200,
+    "errors": 0,
+    "tokens": 6940,
+    "tokens_top_changed": 2,
+    "end_token_swaps_excluded": 200,
+    "sentences_top_changed": 2,
+    "sentences_real_block": 2,
+    "by_reason": {
+      "bay_not_on_ship": 0,
+      "tier_over_cap": 0,
+      "not_in_grammar": 2
+    },
+    "exact_match_count": 177,
+    "accepted_loosening": 0,
+    "loosening_rows": 18
+  },
+  "x4_absent_bay": {
+    "rows": 28,
+    "outcomes": {
+      "refused": 28
+    },
+    "mask_real_bay_examples": []
+  },
+  "x4_unsupported": {
+    "rows": 84,
+    "outcomes": {
+      "model_real_bay": 16,
+      "refused": 57,
+      "other_rule": 11
+    },
+    "mask_real_bay_examples": []
+  }
+}

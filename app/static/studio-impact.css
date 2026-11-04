@@ -1,0 +1,44 @@
+/* Shared Studio classes own visual styling, except the native range controls. */
+.st-impact-view { width: 100%; max-width: 1100px; margin: 0 auto; padding: 28px 24px 48px; box-sizing: border-box; }
+.st-impact-grid { align-items: start; }
+.st-impact-card { min-width: 0; }
+.st-impact-card-heading { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
+.st-impact-card-heading > div { min-width: 0; }
+.st-impact-card-heading p { margin: 6px 0 0; }
+.st-impact-card-icon { display: inline-flex; flex: 0 0 36px; width: 36px; height: 40px; align-items: center; }
+.st-impact-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.st-impact-presets { display: flex; gap: 8px; }
+.st-impact-control { display: block; margin: 0 0 16px; }
+.st-impact-control-heading { display: flex; justify-content: space-between; gap: 14px; }
+.st-impact-control-value { white-space: nowrap; }
+.st-impact-range-wrap { display: block; position: relative; margin: 6px 0 0; }
+.st-impact-range-wrap::before, .st-impact-range-wrap::after {
+  content: ''; pointer-events: none; position: absolute; top: calc(50% - 2px); left: 0; height: 4px; border-radius: 999px;
+}
+.st-impact-range-wrap::before { width: 100%; background: var(--st-surface); }
+.st-impact-range-wrap::after { width: var(--st-impact-range-fill, 0%); background: var(--st-brand); }
+.st-impact-range {
+  display: block; position: relative; z-index: 1; width: 100%; margin: 0; height: 32px; min-height: 32px; padding: 0;
+  -webkit-appearance: none; appearance: none; background: transparent; border: 0;
+  accent-color: var(--st-brand); cursor: pointer;
+}
+.st-impact-range::-webkit-slider-runnable-track { height: 4px; border: 0; background: transparent; }
+.st-impact-range::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; box-sizing: border-box; width: 16px; height: 16px; margin-top: -6px;
+  background: var(--st-bg); border: 1px solid var(--st-line-strong); border-radius: 50%;
+}
+.st-impact-range::-moz-range-track { height: 4px; background: transparent; border: 0; }
+.st-impact-range::-moz-range-progress { height: 4px; background: var(--st-brand); border-radius: 999px; }
+.st-impact-range::-moz-range-thumb { box-sizing: border-box; width: 16px; height: 16px; background: var(--st-bg); border: 1px solid var(--st-line-strong); border-radius: 50%; }
+.st-impact-range:focus-visible { outline: 1px solid var(--st-brand); outline-offset: 3px; }
+.st-impact-fixed { margin: 0 0 16px; }
+.st-impact-components { margin: 18px 0 0; }
+.st-impact-component-legend { display: flex; justify-content: space-between; gap: 12px; }
+.st-impact-scope { text-align: right; margin-top: 24px; }
+.st-impact-result-rows { margin: 20px 0; }
+.st-impact-amount { margin: 12px 0 0; }
+.st-impact-sources { padding-left: 18px; }
+.st-impact-sources li { margin: 8px 0; overflow-wrap: anywhere; }
+.st-impact-assumptions { padding-left: 20px; margin: 16px 0 0; }
+.st-impact-assumptions li { margin: 0 0 12px; }
+@media (max-width: 800px) { .st-impact-view { padding: 20px 16px 36px; } }

@@ -1,0 +1,1941 @@
+{
+  "schema_version": "stowlm.profile-selection/1",
+  "measured": true,
+  "published_utc": "2026-11-02T06:47:07.327900+00:00",
+  "engine_version": "0.13.0",
+  "engine_manifest_sha256": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+  "engine_identity": {
+    "manifest_sha256": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+    "native_manifest_sha256": "55a2de7304500675dbfc1aaca14ec25e7ffe6e6ed2a04d0e88e58afc2eba6071",
+    "source_tree_sha256": "e768ee9e7a2ee2c06717c0192a4b91acc6400c29fb0808deed2c14be3ce9229a",
+    "pins_sha256": "eba0b3e076715b1b149e5f1242f56a18d6e5e9d3ab3e191af44d1ecbe012e874",
+    "engine_file_map_sha256": "3f4e90602ae7479a80a11b5d2873220f44c1ef63d58a7015696407ffacde6b25",
+    "native_file_map_sha256": "e1feca1b74beae5c23b48fd863c29ff8786990e5bb16bf6d12aa3cd7a2bbcb70",
+    "identity_sha256": "76df46b6f7356151bd08a91dea0ee3723f7affc8f1901aa34ad2fa5f4d6f23b1",
+    "passed": true,
+    "expected_manifest_sha256": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+    "expected_native_manifest_sha256": "55a2de7304500675dbfc1aaca14ec25e7ffe6e6ed2a04d0e88e58afc2eba6071",
+    "expected_source_tree_sha256": "e768ee9e7a2ee2c06717c0192a4b91acc6400c29fb0808deed2c14be3ce9229a",
+    "source_files": 245,
+    "native_files": 257,
+    "observed_source_files": 245,
+    "observed_native_files": 257,
+    "changed": [],
+    "changed_native": [],
+    "errors": []
+  },
+  "decision_authority": "leader",
+  "decision_kind": "explicit_partial_study_selection",
+  "user_authorized": true,
+  "stopped": true,
+  "observed_completed_rows": 68,
+  "decision_record": "Leader relayed explicit user selection after stopping the study at 68 completed rows: standard budget 300 s / finalize 100 s / hard wall 1800 s; live budget 120 s / finalize 40 s / hard wall 720 s.",
+  "study": "measurements/profile-study-20261101",
+  "manifest_sha256": "5cd8b01c7761619c3c755a8d09be5a22418e6d3c4d14d2ce654f2cc4381af08b",
+  "data_sha256": "4676f3927cf9cfdc7f4608f2c1fa94639ee8536fd71bade85655b0b31ff07afc",
+  "summary_sha256": "3331689e98f747676622566b5e1bdaedf913c2d8da6f0b3d67b69e62f0443e74",
+  "measurements_file_sha256": "9554aac87635fd277941f0077ace7b959cbdd6a48aa712f7433885897f84eb69",
+  "row_files": {
+    "056d0bc52b5752080738a994.json": "702ed38197db6ca2319b5681c62da1fd77017c3cb14533a393439c66dce0f732",
+    "059ef97794787df9417235e8.json": "49b080180202b72f401ff0821384104597d93e93666242975eb99dd506a5e162",
+    "07227eb274ad4334137a9e38.json": "8dca7c1c46beb4f3da525327e22644949441e88b60475f2e6ecfbd84275d1afc",
+    "0724061bfb7c7221c1526ec0.json": "46c45be0629cd69d4b31ae6d3190f065d7bfacfbb13f978deb9025fb29e77e99",
+    "07669ee22d0bd9539869229e.json": "8b68858cbcddbc733852d8a1ad819cfa47027bff041ce09a38f3c01a5368ce4d",
+    "1310d13799b65cbb68883235.json": "35e628f64191b040a33edb7223c5780ed555130769181b7f2eb882ec20e94f93",
+    "14a211d0d9271156060a6621.json": "f33a0079ba3a6d7c54243e6b0bf9a5b0e237aa527e1ab28a8677db6c7eda7b75",
+    "16a94e89e6740b323ae414e3.json": "88fd0941a596068ab7038b5cb02fa899f2a1e9094ee4970fa3f4511ac57024b0",
+    "1a7b602dbef618df299b4aa3.json": "51e475d0580bc782688ccf5c89d969ab7daef998d7fdf01ef1ca8bf0d3f97675",
+    "1b253447d25e5ee026550c64.json": "ef5ed84bf39179963001b3819a0138ccb1986a3a28bb347aa1b94a23c0e1a489",
+    "1c6ea4fa3a2879ffdefa85f6.json": "0ff66f2baff4294f3be43da9aa65258d575d0a0c969d1d27ff83f32c23c3bcaf",
+    "1e2cf6ba1fff78b22b6c570d.json": "ad965865c5abbe3fe418015aab19e467a7673cb1efe84b5303f7778976a55664",
+    "1f5718ba131eecca80256a1c.json": "a24a850237b5dd2012868649731750fca60182ce34769842c36d0913b618b727",
+    "20f6db8b4f83e4a5cde994d5.json": "d1cf322e8efb9a4fc08de6a16c7b2331451e50e187b3c820dfb6c6f921cd3746",
+    "2acb9e087cd720507a02ff5c.json": "fec134df8358c153b8e8390fa17fdfa318feaf20a61c7ff3e75451ff9f8fbade",
+    "2ebe9e6c8c90eafc0459349a.json": "3ac59078e7c1de3739fac752241d939a514ee5de2c406fd1152ed79fc234b9b1",
+    "327ff51b41f17d55013f1a10.json": "001fba5cc0fb43a6ec89cb64ac019e71c1bfdbd657a43d63c4b006b91731b676",
+    "33439f0335524be74a55f2eb.json": "2f501f0f32d82bc837195b269ac25ee2147ff3eb22fcc70e005abcf3028e80ec",
+    "3423b83e3a96acaca4b1bdbe.json": "9d2d4d7769dba588361dddb7326ef9900c0b4a40bfc90ad0d61074cd40abf15b",
+    "3479998c6030682a72cf8ee2.json": "2fa142b5b0f764b8eb5558a50799945e80b245e3b46f94cf9b55ea67166d9a8d",
+    "38d3949d27ef1e4ae8a01095.json": "fe9933c2428c627486829be0888dec81d087539fe20d83279e2d8c4ff1d96b5c",
+    "3980a6646bcdb5797ef6d7b8.json": "3ad4a1e89eaaa3ec5ebf31e6543188af7c3130a0073d6db9b12d5d1891c322e4",
+    "3c209dbb9bdccb60dbd041ee.json": "3ec5a075806a3b75499ea9454f854adda78ff4e4f07ff12e624a3a28264696b6",
+    "45fc437e4e9b253b3bc19814.json": "4cbbc3ca05dc719b9e140a709ce8ae95776db2a318f1738b00675e395bf3634c",
+    "4aef3ae10ee962ebfd460a98.json": "1894fe3307b65ec35186a0da05af14fd5ca3cd8fd73f8e29da2bde24bfa16422",
+    "4be3c2fed0ff3148ffe59697.json": "c0674887a32ab9ba82933260dced18252fd7840c662144a561731e0204cf235c",
+    "4f190a5d280b1b98e6d03bb8.json": "954aeef758568f068a960c8a08fe88dcc327fc57dbd91a589a36326da3b7a18e",
+    "5ae0ba26e353970015cc8f7a.json": "7aefca5983ee456f0720eea64de56736456199603afce1498fa10e5e88726c52",
+    "5c4fe15a1b7c40d73b06e17c.json": "4499833d55ccca8bf12744b773a41413b1e02c5534a39d1ae19ee958778be89f",
+    "5dd3591863ac2298bbac0a6b.json": "35a73c2a15a0fa2e6c97dc36718e30d5f6ece4de707317b6d61a5479772932a1",
+    "5f292d86cf7d9608e9d76fdb.json": "1a0d67635267f13fb4b92b8b7d368d773abee08970c0ae9655dc5cd42f7cf6f6",
+    "649556c31ede1060cf76f9a1.json": "7f1ab61709bbead8c2446de02f3a0847f28581fae902bdb6c99470dbb98b6733",
+    "66f11f00193ab22b977dbcc4.json": "2632939e826babcac37962ef7913555a76733559d32b7026a39a41f9292c0fb2",
+    "671e2e3123f0dce8886fc46b.json": "11cdb73e5d918f3ac656c160bdbe91b7ab8b3225e6dd894612a3d8fae92cf142",
+    "703b23fad8d69f0e06c16cf0.json": "7c385f995ecd3022f37b43e3c6a42a342913148213484e919bf992900240d33f",
+    "80e2a6752ca47a5c61229bdb.json": "81464888a6a23a479a3473bf12805f0fb5373036b4ef556b9c917a753c683fc8",
+    "828c43e99aac7e7be499a106.json": "bdd8bbdf686c0481abc4ffe5b7189f0cdedf699c80c5994e978facf545af025c",
+    "8346a8e024f0fb0b7e01d33b.json": "4e492d7476f93ce9413bdb05f83113e6c4fa2d93ae8b63defc724608b3e42ad5",
+    "87f2339673ec1328710ecafd.json": "5afa869a921fa69b987f2d63bde3abef4205da5d11ffab7fed5bfdf9400edecf",
+    "8f2331137764017b73e3c94f.json": "480940b14836ca83380cc544633b9df807990bb7a60f0f8c06d1d742c543aa28",
+    "9c363c268f0949a9e56236f4.json": "f8e694bb51b0e51654f283050de8adbc4724e8e3b777af774da9b2589c94f8d0",
+    "a44b2cf5ac3eee8ce1f03e21.json": "4385c1e67d9445f6f3793394191553eaf4a34008577f885363e70ba823d118e9",
+    "a496cb2164dbe41d29d23ac7.json": "6cb9c1cfa97adedaaeee515c8b18281b56bc3b6f20447fcea32c35a64a76aa00",
+    "a522a8e8fe7e70433baf8d09.json": "889132756b6850723686d4a1c48bfd7641ee01970b855aa7f8b3212baba53d53",
+    "a61aa2ef852cb7bf82ac51e6.json": "7fb4f29299e5b6b65288c4d352fdc802c029579d26894489501018f58167c531",
+    "a7c539b17ac19b4e61f4f19c.json": "ad5e04e70e913ca28669222a5dbe9effbd5cde95e084575d9f2338565561b551",
+    "aeaa34457c269b2a547170ea.json": "a2af89081cd95723420fdd6a5346987780c0f7f3b7a3a36bf5d8bc70d36ebb8f",
+    "b159a08631f7102736970595.json": "37d4e61acc892ec0e2a5ed08b1abdbd2c5da3d3cca0caf20d1fd5f6a3a4b23d2",
+    "b168649533b61c9783d9b819.json": "02354fec74e512ff2d92a48326fa0b2f338c81efd1a88a54ba84d47494e8758c",
+    "b29715d5c73bc861823bb2d0.json": "3572380fabea4e125bf8ab3dbe59cb0ddff363847d69e9819e8f17e0fef9e6a4",
+    "b7cc238245779943cf16c4b8.json": "ec0de2684288b6ff6902eddf49c1516cf901f52ca66f363217f57e673f62270c",
+    "c1b334b09aaca0540f9b79ea.json": "008c355ca21a5f2e328d5c573dbe7bd31c76414dddddcabeb09a04fa74864095",
+    "c62aa13233caeaf21a83a620.json": "47540f4682146455b1ba1b8fa65429e36af41961724a12f2790bd9a66c87ad37",
+    "c92a5947fe13ee363df7fe12.json": "7409dc59bd1bde0d201aefb889dcb69da567fa4a81b27e556975e72f76d74c1c",
+    "caa69deefc3e310a8e558a1f.json": "ff56d36b9b3f519f94f66ea19db0b1835f84ae7c687ef8b2baf82d2c1230837b",
+    "cb0cf08cf6a3cd52bff2c7f5.json": "cc40cb0ad942789958cd1dfee3145cb61929086a8c6073f1096fae507a29695e",
+    "ccfffa928764dbab8714c844.json": "822f0e8d31318902df3e287ee96458765c9dfef50104184ca13ce3076a1e260e",
+    "d5138eee5c065a2f48803b80.json": "3e0b5636cd29a7942d7ec09467c1f1b744e888543b3df9ee1e90393c2d5a5ea9",
+    "d826927f089b6db3c17e7f76.json": "7e3ce700047325ed4ac801cb53692c4f62ac13b009faa7f42f258b98aec2f6dd",
+    "d950478107a13a2b0873be03.json": "8e3e3d5632f15159d5a29593cb7ae0b013b732431ab9a27e01033fb5a260f712",
+    "e4a3a7b2caba6cc93966e2d1.json": "beed1b0b58bbc11d06a1ccd1c332faef50f8fb1acaffef3efb11f086e2928c5e",
+    "e94294568be34c009fdc648d.json": "c6fbb953e1d41b8498a94ccb28e4971a066f9f9544032e10ec158dfe85fd5e48",
+    "e981ac3360f9a979fc2241ae.json": "6040f09693f9ffc66b7d92f20377cfdbe8bc2a46d23e617c5b3a82986cfd8ce3",
+    "e9a684fe5d58ea6ef82ce706.json": "7411e4b15b3adea3c8707c3fa9b1616a13af6255419e4d8c23a5203d628dfe32",
+    "ee21c27645ce493156e66e1a.json": "23a63bf2fbcf3c189fcb4b75cf7d870e2ffd89beb03995c04977049ade76729d",
+    "effacc7b5af3aefdfc517da0.json": "5a1e8a2e1e383796a6ad00a0fdcb089498104e29d0630b94231000464dcf6c9d",
+    "f3f08f5c36c98c58927c8e0d.json": "d63822e87ae22752d0cb2a4160b95263f3c37fde89350f899982284a3835462b",
+    "f8b963e0d74550903b34972b.json": "058734da60cfd7abd76c83e7943286386d844f023c9e60adde57e3f9f10010bb"
+  },
+  "unfinished_checkpoint_files": {
+    "7ef39c274a00f459f383356c.json": {
+      "sha256": "815940e3b9980bcd96c6e49b527206ebffcc6b5fdf300048953537d1fe6f477f",
+      "status": "checked_plan"
+    }
+  },
+  "profiles": {
+    "live": {
+      "budget_label": "120",
+      "engine_kwargs": {
+        "budget_s": 120.0,
+        "finalize_s": 40.0,
+        "seed": 0,
+        "config": {
+          "assignment_lp": true,
+          "lift_polish": true,
+          "peel_ladder": true,
+          "targeted_constructor": true,
+          "proof_cutoff": true,
+          "moment_pricing": true,
+          "dense_layout": true,
+          "dense_fixed_charge_lns": true,
+          "layout_diagnostics": true,
+          "capacity_deck_cap": true,
+          "post_pass_exchange": true,
+          "candidate_triage": true,
+          "fixed_stow_screen": true,
+          "unary_certificate": true,
+          "peel_seam": true,
+          "assignment_budget_s": 120.0,
+          "assignment_finalize_s": 40.0,
+          "assignment_tries": 1,
+          "lift_polish_s": 10.0,
+          "peel_proposal_s": 40.0,
+          "peel_finalize_s": 20.0,
+          "peel_candidates": 1,
+          "proof_work_limit": 10.0,
+          "proof_outer_s": 20.0,
+          "target_work_limit": 2.0,
+          "post_pass_exchange_s": 10.0,
+          "e9_fix": true,
+          "bound": true,
+          "starts": true,
+          "search": true,
+          "fusion": true,
+          "classes": true,
+          "finish": true,
+          "restow_bound": true,
+          "witness_start": true,
+          "layout_search": true,
+          "asymmetric_deck": true,
+          "oog_repair": true,
+          "unary_cache": true,
+          "medium_bound": true,
+          "fast_pricing": true,
+          "aggregation": true,
+          "restricted_master": true,
+          "cached_mask": true,
+          "diagnostic_screen": true,
+          "securing_cuts": true,
+          "ballast_lp": true,
+          "certified_bound": true,
+          "certified_start": true,
+          "arrival_pages": true,
+          "arrival_bound": true,
+          "mixed_pages": true,
+          "sight_roofs": true,
+          "oog_reservations": true,
+          "unused_covers": true,
+          "fixed_charge_lns": true,
+          "capacity_cuts": true,
+          "fixed_charge_lp": true,
+          "warm_polish": false,
+          "work_count_search": false,
+          "area_securing": true,
+          "area_permutation": true,
+          "area_securing_s": 20.0,
+          "lp_rounds": 40,
+          "polish_rounds": 8,
+          "dive_nodes": 80,
+          "layout_rungs": 12,
+          "lns_iterations": 6,
+          "archive_size": 12,
+          "bound_share": 0.15,
+          "page_share": 0.55,
+          "fusion_share": 0.2,
+          "classes_share": 0.1
+        }
+      },
+      "engine_timeout_s": 720.0,
+      "selection_kind": "explicit_partial_study_selection",
+      "decision_authority": "leader",
+      "deadline_measurement": "configured",
+      "deadline_basis": "Explicit leader-authorized hard wall; not a complete-study maximum plus 20% calculation.",
+      "study_engine_timeout_s": 7200.0,
+      "measured_engine_max_s": 1837.6285268340143,
+      "measurements": [
+        {
+          "size_class": "medium",
+          "rule_mode": "none",
+          "budget_label": "120",
+          "attempts": 9,
+          "passes": 7,
+          "relaxed": 2,
+          "timed_out": 0,
+          "errors": 0,
+          "pass_rate": 0.7777777777777778,
+          "lifts_passing": {
+            "n": 7,
+            "mean": 89.28571428571429,
+            "median": 97.0,
+            "min": 56.0,
+            "max": 106.0
+          },
+          "first_legal_s": {
+            "n": 7,
+            "mean": 276.88441749399396,
+            "median": 132.74029012501705,
+            "min": 84.08555087499553,
+            "max": 1022.9371175420238
+          },
+          "total_s": {
+            "n": 9,
+            "mean": 506.3488937176492,
+            "median": 292.03299470897764,
+            "min": 157.2957769589848,
+            "max": 1280.984540000034
+          },
+          "engine_s": {
+            "n": 9,
+            "mean": 505.92288763867043,
+            "median": 291.47515441599535,
+            "min": 156.9745508330525,
+            "max": 1280.5145642079879
+          },
+          "load": {
+            "start_load1": {
+              "n": 9,
+              "mean": 34.278888888888886,
+              "median": 39.82,
+              "min": 22.97,
+              "max": 44.78
+            },
+            "end_load1": {
+              "n": 9,
+              "mean": 39.12222222222222,
+              "median": 35.7,
+              "min": 23.93,
+              "max": 63.42
+            },
+            "start_enabled_cores": {
+              "n": 9,
+              "mean": 12,
+              "median": 12,
+              "min": 10,
+              "max": 18
+            },
+            "end_enabled_cores": {
+              "n": 9,
+              "mean": 12.444444444444445,
+              "median": 12,
+              "min": 10,
+              "max": 18
+            }
+          }
+        },
+        {
+          "size_class": "medium",
+          "rule_mode": "one_port_per_hatch",
+          "budget_label": "120",
+          "attempts": 9,
+          "passes": 3,
+          "relaxed": 6,
+          "timed_out": 0,
+          "errors": 0,
+          "pass_rate": 0.3333333333333333,
+          "lifts_passing": {
+            "n": 3,
+            "mean": 67.66666666666667,
+            "median": 67.0,
+            "min": 63.0,
+            "max": 73.0
+          },
+          "first_legal_s": {
+            "n": 3,
+            "mean": 446.37283044463646,
+            "median": 414.6185251249699,
+            "min": 96.00635041698115,
+            "max": 828.4936157919583
+          },
+          "total_s": {
+            "n": 9,
+            "mean": 965.214996610988,
+            "median": 926.7124914999586,
+            "min": 133.45621299999766,
+            "max": 1837.9704792079865
+          },
+          "engine_s": {
+            "n": 9,
+            "mean": 964.8443686021039,
+            "median": 926.3933402499533,
+            "min": 133.16527933301404,
+            "max": 1837.6285268340143
+          },
+          "load": {
+            "start_load1": {
+              "n": 9,
+              "mean": 32.922222222222224,
+              "median": 27.68,
+              "min": 25.73,
+              "max": 41.39
+            },
+            "end_load1": {
+              "n": 9,
+              "mean": 36.19777777777777,
+              "median": 36.29,
+              "min": 14.76,
+              "max": 62.04
+            },
+            "start_enabled_cores": {
+              "n": 9,
+              "mean": 11.555555555555555,
+              "median": 12,
+              "min": 10,
+              "max": 12
+            },
+            "end_enabled_cores": {
+              "n": 9,
+              "mean": 12.555555555555555,
+              "median": 12,
+              "min": 10,
+              "max": 18
+            }
+          }
+        }
+      ],
+      "retrospective_deadline_screen": [
+        {
+          "rule_mode": "none",
+          "observed_full_passes": 7,
+          "attempts": 9,
+          "passing_first_legal_within_selected_deadline": 6,
+          "observed_calls_finishing_within_selected_deadline": 7,
+          "caveat": "Retrospective timing screen only; these rows used a 7200 s emergency cap, not the newly selected deadline."
+        },
+        {
+          "rule_mode": "one_port_per_hatch",
+          "observed_full_passes": 3,
+          "attempts": 9,
+          "passing_first_legal_within_selected_deadline": 2,
+          "observed_calls_finishing_within_selected_deadline": 3,
+          "caveat": "Retrospective timing screen only; these rows used a 7200 s emergency cap, not the newly selected deadline."
+        }
+      ],
+      "ladder_evidence_counts": {
+        "not_recorded": 9,
+        "none": 6,
+        "searched": 3
+      },
+      "ladder_note": "Exact measured search settings retained. The live peel proposal remains 40 s, not the later unmeasured 70 s override. A ladder stage with insufficient time can be untried; only explicit row evidence establishes that a tier was searched. Missing historical ladder evidence is unknown, not searched."
+    },
+    "standard": {
+      "budget_label": "300",
+      "engine_kwargs": {
+        "budget_s": 300.0,
+        "finalize_s": 100.0,
+        "seed": 0,
+        "config": {
+          "assignment_lp": true,
+          "lift_polish": true,
+          "peel_ladder": true,
+          "targeted_constructor": true,
+          "proof_cutoff": true,
+          "moment_pricing": true,
+          "dense_layout": true,
+          "dense_fixed_charge_lns": true,
+          "layout_diagnostics": true,
+          "capacity_deck_cap": true,
+          "post_pass_exchange": true,
+          "candidate_triage": true,
+          "fixed_stow_screen": true,
+          "unary_certificate": true,
+          "peel_seam": true,
+          "assignment_budget_s": 300.0,
+          "assignment_finalize_s": 100.0,
+          "assignment_tries": 1,
+          "lift_polish_s": 25.0,
+          "peel_proposal_s": 100.0,
+          "peel_finalize_s": 50.0,
+          "peel_candidates": 1,
+          "proof_work_limit": 10.0,
+          "proof_outer_s": 50.0,
+          "target_work_limit": 2.0,
+          "post_pass_exchange_s": 25.0,
+          "e9_fix": true,
+          "bound": true,
+          "starts": true,
+          "search": true,
+          "fusion": true,
+          "classes": true,
+          "finish": true,
+          "restow_bound": true,
+          "witness_start": true,
+          "layout_search": true,
+          "asymmetric_deck": true,
+          "oog_repair": true,
+          "unary_cache": true,
+          "medium_bound": true,
+          "fast_pricing": true,
+          "aggregation": true,
+          "restricted_master": true,
+          "cached_mask": true,
+          "diagnostic_screen": true,
+          "securing_cuts": true,
+          "ballast_lp": true,
+          "certified_bound": true,
+          "certified_start": true,
+          "arrival_pages": true,
+          "arrival_bound": true,
+          "mixed_pages": true,
+          "sight_roofs": true,
+          "oog_reservations": true,
+          "unused_covers": true,
+          "fixed_charge_lns": true,
+          "capacity_cuts": true,
+          "fixed_charge_lp": true,
+          "warm_polish": false,
+          "work_count_search": false,
+          "area_securing": true,
+          "area_permutation": true,
+          "area_securing_s": 50.0,
+          "lp_rounds": 40,
+          "polish_rounds": 8,
+          "dive_nodes": 80,
+          "layout_rungs": 12,
+          "lns_iterations": 6,
+          "archive_size": 12,
+          "bound_share": 0.15,
+          "page_share": 0.55,
+          "fusion_share": 0.2,
+          "classes_share": 0.1
+        }
+      },
+      "engine_timeout_s": 1800.0,
+      "selection_kind": "explicit_partial_study_selection",
+      "decision_authority": "leader",
+      "deadline_measurement": "configured",
+      "deadline_basis": "Explicit leader-authorized hard wall; not a complete-study maximum plus 20% calculation.",
+      "study_engine_timeout_s": 7200.0,
+      "measured_engine_max_s": 3089.4645345419995,
+      "measurements": [
+        {
+          "size_class": "medium",
+          "rule_mode": "none",
+          "budget_label": "300",
+          "attempts": 9,
+          "passes": 9,
+          "relaxed": 0,
+          "timed_out": 0,
+          "errors": 0,
+          "pass_rate": 1.0,
+          "lifts_passing": {
+            "n": 9,
+            "mean": 86.33333333333333,
+            "median": 95.0,
+            "min": 56.0,
+            "max": 118.0
+          },
+          "first_legal_s": {
+            "n": 9,
+            "mean": 571.5547720600023,
+            "median": 131.80926083301893,
+            "min": 77.41126537503442,
+            "max": 1713.2221282080282
+          },
+          "total_s": {
+            "n": 9,
+            "mean": 835.4514481526761,
+            "median": 691.2326064159861,
+            "min": 201.07446191704366,
+            "max": 1715.4894255829859
+          },
+          "engine_s": {
+            "n": 9,
+            "mean": 835.0375461714575,
+            "median": 690.7011160840048,
+            "min": 200.85876833403017,
+            "max": 1715.294361166947
+          },
+          "load": {
+            "start_load1": {
+              "n": 9,
+              "mean": 31.926666666666666,
+              "median": 28.7,
+              "min": 21.42,
+              "max": 41.63
+            },
+            "end_load1": {
+              "n": 9,
+              "mean": 36.916666666666664,
+              "median": 38.22,
+              "min": 13.57,
+              "max": 87.09
+            },
+            "start_enabled_cores": {
+              "n": 9,
+              "mean": 12,
+              "median": 12,
+              "min": 10,
+              "max": 14
+            },
+            "end_enabled_cores": {
+              "n": 9,
+              "mean": 12.222222222222221,
+              "median": 12,
+              "min": 10,
+              "max": 18
+            }
+          }
+        },
+        {
+          "size_class": "medium",
+          "rule_mode": "one_port_per_hatch",
+          "budget_label": "300",
+          "attempts": 8,
+          "passes": 5,
+          "relaxed": 3,
+          "timed_out": 0,
+          "errors": 0,
+          "pass_rate": 0.625,
+          "lifts_passing": {
+            "n": 5,
+            "mean": 65.0,
+            "median": 67.0,
+            "min": 50.0,
+            "max": 73.0
+          },
+          "first_legal_s": {
+            "n": 5,
+            "mean": 585.007887308416,
+            "median": 159.45385550003266,
+            "min": 86.79543325002305,
+            "max": 2159.88462508301
+          },
+          "total_s": {
+            "n": 8,
+            "mean": 1497.6586420106323,
+            "median": 1688.5506568124983,
+            "min": 269.44564641604666,
+            "max": 3089.9465782920015
+          },
+          "engine_s": {
+            "n": 8,
+            "mean": 1497.1701862762493,
+            "median": 1687.9653343539976,
+            "min": 268.9749769999762,
+            "max": 3089.4645345419995
+          },
+          "load": {
+            "start_load1": {
+              "n": 8,
+              "mean": 31.3325,
+              "median": 26.535,
+              "min": 23.15,
+              "max": 43.94
+            },
+            "end_load1": {
+              "n": 8,
+              "mean": 38.97375,
+              "median": 38.995000000000005,
+              "min": 17.47,
+              "max": 61.15
+            },
+            "start_enabled_cores": {
+              "n": 8,
+              "mean": 12,
+              "median": 12.0,
+              "min": 12,
+              "max": 12
+            },
+            "end_enabled_cores": {
+              "n": 8,
+              "mean": 12.25,
+              "median": 12.0,
+              "min": 12,
+              "max": 14
+            }
+          }
+        }
+      ],
+      "retrospective_deadline_screen": [
+        {
+          "rule_mode": "none",
+          "observed_full_passes": 9,
+          "attempts": 9,
+          "passing_first_legal_within_selected_deadline": 9,
+          "observed_calls_finishing_within_selected_deadline": 9,
+          "caveat": "Retrospective timing screen only; these rows used a 7200 s emergency cap, not the newly selected deadline."
+        },
+        {
+          "rule_mode": "one_port_per_hatch",
+          "observed_full_passes": 5,
+          "attempts": 8,
+          "passing_first_legal_within_selected_deadline": 4,
+          "observed_calls_finishing_within_selected_deadline": 4,
+          "caveat": "Retrospective timing screen only; these rows used a 7200 s emergency cap, not the newly selected deadline."
+        }
+      ],
+      "ladder_evidence_counts": {
+        "searched": 1,
+        "none": 8,
+        "not_recorded": 8
+      },
+      "ladder_note": "Exact measured search settings retained. The live peel proposal remains 40 s, not the later unmeasured 70 s override. A ladder stage with insufficient time can be untried; only explicit row evidence establishes that a tier was searched. Missing historical ladder evidence is unknown, not searched."
+    }
+  },
+  "reasoning": [
+    "The user stopped this study after 68 of 256 expected jobs and explicitly selected these fixed profiles. This decision overrides the automatic incomplete-study recommendation, while completeness remains false.",
+    "Standard uses the measured 300/100 settings: no rule 9/9 full passes, mean 86.33333333333333 lifts; binding-rule arm 5/8 full passes, mean 65.0 lifts. Relative to available default pairs it loses 0/8 no-rule and 0/4 rule passes; paired mean extra lifts are +11.0 on 8 no-rule common passes and -1.0 on 4 rule common passes.",
+    "Live uses the measured 120/40 settings: no rule 7/9 full passes, mean 89.28571428571429 lifts; binding-rule arm 3/9 full passes, mean 67.66666666666667 lifts. Relative to available default pairs it loses 1/8 no-rule and 2/4 rule passes; paired mean extra lifts are +14.714285714285714 on 7 no-rule common passes and 0.0 on 2 rule common passes.",
+    "The 60/20 arm loses 3/8 no-rule and 3/4 rule default passes, with +12.6 lifts on 5 no-rule common passes and 0.0 on 1 rule common pass. Shorter budgets have a measured pass cost; passing-only cell means use different subsets and must not be compared directly.",
+    "Hard walls of 720 s live and 1800 s standard are explicit operational choices. Several observed engine durations and first-legal times exceed them; these measurements do not establish pass rates under the newly selected hard walls.",
+    "The 300 no-rule median total was 691.2326064159861 s and maximum 1715.4894255829859 s; with the rule median total was 1688.5506568124983 s and maximum 3089.9465782920015 s. For 120 no-rule, maximum first-legal time was 1022.9371175420238 s and maximum total was 1280.984540000034 s; these are different milestones.",
+    "Use loaded-machine timings as conservative upper-bound planning inputs per the user; a quiet-machine improvement is expected but unmeasured. No controlled comparison establishes a guaranteed upper bound."
+  ],
+  "completeness": {
+    "complete": false,
+    "expected_jobs": 256,
+    "completed_jobs": 68,
+    "missing_jobs": [
+      "02017f571932e3a0c4725900",
+      "0343e07f8331f1f594b325eb",
+      "04d228281c088bd646e409d0",
+      "0526d9467af55881ee4b2b90",
+      "06e89dfcb0ad8f3707710cab",
+      "078bc20dca8c1391e1d74e5a",
+      "078dfd50c5eb536df03b143d",
+      "07a79b7c265f727afa32e5bc",
+      "0a3a158957a722273ac8a409",
+      "0d3bb06aec3616532d239d3a",
+      "0eb42fe4dd32a5a20b450aaf",
+      "0f4fa655b91432b4e4ebde3d",
+      "1146d7dbf392ea6350a85af2",
+      "136176636cd97e034c4df644",
+      "14671c22748b8b2d61fc85d7",
+      "153a9c1dc2adc420edc5dcba",
+      "191c975341f1dd730dde0fdc",
+      "1932aaff5d8c1b3d4800d9ec",
+      "1b110a2b4288d84ee1fda3c1",
+      "1b4b5ef3f97663854ba472ef",
+      "1b95f06458ba04eeda4306fc",
+      "1dd68957a46e0d58d8ed76ce",
+      "1e1b81c54271ec7483087573",
+      "1f18946e57a09658534b6e3e",
+      "20f7b3befaad4c717f8e1dae",
+      "21605a6c1854ccedb1e3347c",
+      "226ada1ce5226db76c03d828",
+      "22b497eb2f4482694e1ab43b",
+      "23502755cfc8806e4facf665",
+      "24f3100e6cd26eec8dbc04b1",
+      "28612b835c5923c54eeae801",
+      "2914321eb2188efb04ed5886",
+      "2a1b9ac7698ef844f50c54ee",
+      "2a54a946319b75da9592af20",
+      "2a5fc21b990d8e71fcfb1ac8",
+      "2b1bf55fa44f3b0a6963fbec",
+      "2d61f64ad6e526ef091996b6",
+      "2d9d18510b6b7988488cb05d",
+      "2f4112f1535cf4d11561a23a",
+      "319a0ba2001a3f581351f901",
+      "324f495b33e87da27fe4bd52",
+      "3335167647cf2547d7008cde",
+      "3359400b41e90a01063f5be9",
+      "35b70729a3d9c2cf507c8478",
+      "38abfbf402289d916c2053cb",
+      "38c8203bada021135c365d44",
+      "3b7bedd326402f37b8ef7de3",
+      "3b8a89d0c690ff8be37bd1ab",
+      "3ccb1b8d2468bf4927d91ac9",
+      "3ecb95cd04c2c04286b0806b",
+      "411256d9115b602269bb8ba0",
+      "418f831fd56c0b2d7cb4a434",
+      "4311c586c64015cb6ad00064",
+      "44c6e1f2229028ee002d7381",
+      "4552ba4bd2282b623f40b009",
+      "47a5848a7e9ac870d6930251",
+      "48b2c390e39cc96ad7fd5c11",
+      "4c1704d42a8d1edce107bef4",
+      "507f736ef6e3d78734b0e04c",
+      "523324b29907a0e0eb70c551",
+      "52ce8b1cab4fae362a639c0f",
+      "531c875ab44fa4c244e02c26",
+      "55937091397f8e92ff463e6e",
+      "57759e12fc5af2fe9d8d424b",
+      "58de8fd20e7d442ffced0a54",
+      "5906ec0b9eb5554142c0ec19",
+      "59763f5eb3b327330c96d327",
+      "59d9d67c9a25428cb672900f",
+      "5a220efd8be9f801e2f1f32c",
+      "5a9fe345c9516131e4121db8",
+      "5c4176d4d33602d2b1bca5ff",
+      "5edcf6089433b41e9c5661a1",
+      "5ee9193506deb2e7e761164f",
+      "659f7280a5a9a97a4d87e5fd",
+      "66049dabf6552d93f533c50f",
+      "664706086034f9720bf96f32",
+      "6829e2c1524efba3bd84de60",
+      "69fae3855387304e3a9aeedf",
+      "6a86852284795a725b43d223",
+      "6aba45299c8c07332c7d62c6",
+      "6bd139a703bd779153595bf8",
+      "6c4d4ed3b440045d1f811b55",
+      "6ccb4d9a59860ac59e8486b0",
+      "6d0aab013896053d66df92bf",
+      "6ebe3cd9c14e197fa16e3389",
+      "6f1439568e69747508c2b377",
+      "6f5d74863702fe0009a89431",
+      "70406409c514ca42e4c2d204",
+      "707cef739f6e19b5e8a49364",
+      "70d2291249218d1d2bbfd867",
+      "73307125429a52430b2be41a",
+      "733ad5dc28d9c33afbb12b58",
+      "7509980ad8a75b178d59d71f",
+      "75cbef7c004fa7cdb4352fb0",
+      "76b14e50fcf402997e392ea1",
+      "76ca277c3e65a1f9a589099c",
+      "77ff2022c6627894bb2cd8cd",
+      "7908dfcd5fd8f80b10adb43e",
+      "7a1c10dbc91d8d6f1ea862f8",
+      "7be3ca8be42ef65c189ddf48",
+      "7e27e185c913eaa04fca56ba",
+      "7ef39c274a00f459f383356c",
+      "811d44c6a23eb65dc99ff6b1",
+      "815325ebb4b6b76119637c81",
+      "84ece24806f7a42929fdc685",
+      "8549777517ee068a671d986a",
+      "8621896108dc11a49007851a",
+      "8689c3a4e45acb25a0b0c1ae",
+      "86c41942cad240db218d1de5",
+      "89629489e7e8251fde272ccb",
+      "899cc946298887b607c3feaf",
+      "8a2caa749bd1f097dd04da13",
+      "8aa760a99dbd4a56fbac6b76",
+      "8f208ef713d16a05c6ef43be",
+      "9469b5f4965dfc4fc93c725d",
+      "95bce54e077d8aa316d00576",
+      "9605eebaa05720a171669f4c",
+      "9671c0a6e6ac8af335a54d1a",
+      "97230b19be932e19ecf6844f",
+      "976cde28b39bcfc19dd31664",
+      "97e041fc1ce791e0231d3860",
+      "9c4cc0641650104f043b6854",
+      "9cb14a4bc5b73013363bc0ca",
+      "9d74ed96fd90cc85e72a5313",
+      "a0100bc9f8d5c9d1f9c0d045",
+      "a04ae421b9af74f5a17075e0",
+      "a14786a703cd9cbd5a027d97",
+      "a172b9087cb573fd13c78bec",
+      "a25b548e8a145783663d04de",
+      "a31c6044b5d3ce2a085b3a65",
+      "a35835303b637071d743e0ac",
+      "a44808bee632cfd39739d383",
+      "a543927d8c5196a9acee1909",
+      "a949f7a9fe8937af4a75305b",
+      "a96f7a442de0bd7c0742481b",
+      "ac0c8412062b79a45a597e98",
+      "af7335dc2f7738b48eaa8287",
+      "b0b9b6310839a4ea901efa3e",
+      "b2102a4f4eda062ac6d02e3c",
+      "b82f4a7f6fced721d0965e65",
+      "ba7f3c869b75b39f86616ce8",
+      "bb7f08823bb86edd7f65c879",
+      "bba5c4e8901979675badb0dd",
+      "bd0faba5f18dca3760bcd33c",
+      "bd3b4982926ec73604bf40f4",
+      "bd6b4cc7140f9431d56d6f94",
+      "bfebdad2f3f579d5f26d94b4",
+      "c105f49f8bc7b206202630e4",
+      "c14a9a8ec5bc140d06ea7831",
+      "c1d3e1dec1fa1381c8513ab8",
+      "c4729c7b7484d08b37668628",
+      "c5b92bc460424132423ff063",
+      "c5e18ee97dafe4026a1a5ad7",
+      "c8c90eff48f9cda4be7cc0b3",
+      "c9386d6213c2ec1618276d97",
+      "cb96a99d09ba32bdba1ba5f1",
+      "cc1337d4da68ed8abd233261",
+      "cd0f81d7f222bda90dbbdc30",
+      "cd3cd5fe600f4a56c27946fb",
+      "cd6ffe9efc049182e1640d92",
+      "d067dedb5cb362152c20736e",
+      "d23a28d97b4385702a32d356",
+      "d6ebc1f79eb94bc60e09f4c3",
+      "d76d706eb5c58946769bac2c",
+      "daeb807b515c8f08b1343bd8",
+      "db5077749132b134e02f5dc7",
+      "dbbc0371e7ad7710ecfb976a",
+      "dbfaa6ef95876aa3807e0097",
+      "dced98ad5d0073afb6ba3275",
+      "de4e5d6c678edd61fa8e5bce",
+      "e16def3e066e3d488f892477",
+      "e3dd1c734a99b38b1d32b831",
+      "e471e60cc2cb9ccba30ef546",
+      "e50f0e40a5eb204b9e8650e3",
+      "e51eb7226a4edbc2648de2a9",
+      "e7c0edc8b177cb0e22994621",
+      "e8665b018bdeb55d188a93d3",
+      "e8fd8a7d883ca0ac9fd7a38d",
+      "ead4a28af052d51ceff5bb14",
+      "eb8f187578ab9cb93ad3d2d8",
+      "ec465d23711e4eacf8193ff8",
+      "ecbe56b203dc57c03ba6e075",
+      "f190696b2688f1f3166b30bc",
+      "f7f897176d5d992efae87c74",
+      "f8db215e3ca73ec990b45cc0",
+      "f9367c229bf7ebbbf8fb3247",
+      "fc7838ed86d176cea2bc8f33",
+      "febd3734ff0734f9a9cb8374"
+    ],
+    "medium_missing_cells": [
+      [
+        "feeder_500-random_yard-f60-r3",
+        "one_port_per_hatch",
+        "default"
+      ],
+      [
+        "feeder_500-random_yard-f70-r1",
+        "one_port_per_hatch",
+        "default"
+      ],
+      [
+        "feeder_500-random_yard-f70-r2",
+        "none",
+        "default"
+      ],
+      [
+        "feeder_500-random_yard-f70-r2",
+        "one_port_per_hatch",
+        "300"
+      ],
+      [
+        "feeder_500-random_yard-f70-r2",
+        "one_port_per_hatch",
+        "default"
+      ],
+      [
+        "feeder_500-random_yard-f70-r3",
+        "none",
+        "120"
+      ],
+      [
+        "feeder_500-random_yard-f70-r3",
+        "none",
+        "300"
+      ],
+      [
+        "feeder_500-random_yard-f70-r3",
+        "none",
+        "default"
+      ],
+      [
+        "feeder_500-random_yard-f70-r3",
+        "one_port_per_hatch",
+        "60"
+      ],
+      [
+        "feeder_500-random_yard-f70-r3",
+        "one_port_per_hatch",
+        "120"
+      ],
+      [
+        "feeder_500-random_yard-f70-r3",
+        "one_port_per_hatch",
+        "300"
+      ],
+      [
+        "feeder_500-random_yard-f70-r3",
+        "one_port_per_hatch",
+        "default"
+      ]
+    ],
+    "caveat": "Completeness is against the supplied manifest.",
+    "stopped": true,
+    "completed_rows": 68,
+    "expected_rows": 256
+  },
+  "automatic_recommendation": {
+    "provisional": true,
+    "live": null,
+    "standard": null,
+    "completeness": {
+      "complete": false,
+      "expected_jobs": 256,
+      "completed_jobs": 68,
+      "missing_jobs": [
+        "02017f571932e3a0c4725900",
+        "0343e07f8331f1f594b325eb",
+        "04d228281c088bd646e409d0",
+        "0526d9467af55881ee4b2b90",
+        "06e89dfcb0ad8f3707710cab",
+        "078bc20dca8c1391e1d74e5a",
+        "078dfd50c5eb536df03b143d",
+        "07a79b7c265f727afa32e5bc",
+        "0a3a158957a722273ac8a409",
+        "0d3bb06aec3616532d239d3a",
+        "0eb42fe4dd32a5a20b450aaf",
+        "0f4fa655b91432b4e4ebde3d",
+        "1146d7dbf392ea6350a85af2",
+        "136176636cd97e034c4df644",
+        "14671c22748b8b2d61fc85d7",
+        "153a9c1dc2adc420edc5dcba",
+        "191c975341f1dd730dde0fdc",
+        "1932aaff5d8c1b3d4800d9ec",
+        "1b110a2b4288d84ee1fda3c1",
+        "1b4b5ef3f97663854ba472ef",
+        "1b95f06458ba04eeda4306fc",
+        "1dd68957a46e0d58d8ed76ce",
+        "1e1b81c54271ec7483087573",
+        "1f18946e57a09658534b6e3e",
+        "20f7b3befaad4c717f8e1dae",
+        "21605a6c1854ccedb1e3347c",
+        "226ada1ce5226db76c03d828",
+        "22b497eb2f4482694e1ab43b",
+        "23502755cfc8806e4facf665",
+        "24f3100e6cd26eec8dbc04b1",
+        "28612b835c5923c54eeae801",
+        "2914321eb2188efb04ed5886",
+        "2a1b9ac7698ef844f50c54ee",
+        "2a54a946319b75da9592af20",
+        "2a5fc21b990d8e71fcfb1ac8",
+        "2b1bf55fa44f3b0a6963fbec",
+        "2d61f64ad6e526ef091996b6",
+        "2d9d18510b6b7988488cb05d",
+        "2f4112f1535cf4d11561a23a",
+        "319a0ba2001a3f581351f901",
+        "324f495b33e87da27fe4bd52",
+        "3335167647cf2547d7008cde",
+        "3359400b41e90a01063f5be9",
+        "35b70729a3d9c2cf507c8478",
+        "38abfbf402289d916c2053cb",
+        "38c8203bada021135c365d44",
+        "3b7bedd326402f37b8ef7de3",
+        "3b8a89d0c690ff8be37bd1ab",
+        "3ccb1b8d2468bf4927d91ac9",
+        "3ecb95cd04c2c04286b0806b",
+        "411256d9115b602269bb8ba0",
+        "418f831fd56c0b2d7cb4a434",
+        "4311c586c64015cb6ad00064",
+        "44c6e1f2229028ee002d7381",
+        "4552ba4bd2282b623f40b009",
+        "47a5848a7e9ac870d6930251",
+        "48b2c390e39cc96ad7fd5c11",
+        "4c1704d42a8d1edce107bef4",
+        "507f736ef6e3d78734b0e04c",
+        "523324b29907a0e0eb70c551",
+        "52ce8b1cab4fae362a639c0f",
+        "531c875ab44fa4c244e02c26",
+        "55937091397f8e92ff463e6e",
+        "57759e12fc5af2fe9d8d424b",
+        "58de8fd20e7d442ffced0a54",
+        "5906ec0b9eb5554142c0ec19",
+        "59763f5eb3b327330c96d327",
+        "59d9d67c9a25428cb672900f",
+        "5a220efd8be9f801e2f1f32c",
+        "5a9fe345c9516131e4121db8",
+        "5c4176d4d33602d2b1bca5ff",
+        "5edcf6089433b41e9c5661a1",
+        "5ee9193506deb2e7e761164f",
+        "659f7280a5a9a97a4d87e5fd",
+        "66049dabf6552d93f533c50f",
+        "664706086034f9720bf96f32",
+        "6829e2c1524efba3bd84de60",
+        "69fae3855387304e3a9aeedf",
+        "6a86852284795a725b43d223",
+        "6aba45299c8c07332c7d62c6",
+        "6bd139a703bd779153595bf8",
+        "6c4d4ed3b440045d1f811b55",
+        "6ccb4d9a59860ac59e8486b0",
+        "6d0aab013896053d66df92bf",
+        "6ebe3cd9c14e197fa16e3389",
+        "6f1439568e69747508c2b377",
+        "6f5d74863702fe0009a89431",
+        "70406409c514ca42e4c2d204",
+        "707cef739f6e19b5e8a49364",
+        "70d2291249218d1d2bbfd867",
+        "73307125429a52430b2be41a",
+        "733ad5dc28d9c33afbb12b58",
+        "7509980ad8a75b178d59d71f",
+        "75cbef7c004fa7cdb4352fb0",
+        "76b14e50fcf402997e392ea1",
+        "76ca277c3e65a1f9a589099c",
+        "77ff2022c6627894bb2cd8cd",
+        "7908dfcd5fd8f80b10adb43e",
+        "7a1c10dbc91d8d6f1ea862f8",
+        "7be3ca8be42ef65c189ddf48",
+        "7e27e185c913eaa04fca56ba",
+        "7ef39c274a00f459f383356c",
+        "811d44c6a23eb65dc99ff6b1",
+        "815325ebb4b6b76119637c81",
+        "84ece24806f7a42929fdc685",
+        "8549777517ee068a671d986a",
+        "8621896108dc11a49007851a",
+        "8689c3a4e45acb25a0b0c1ae",
+        "86c41942cad240db218d1de5",
+        "89629489e7e8251fde272ccb",
+        "899cc946298887b607c3feaf",
+        "8a2caa749bd1f097dd04da13",
+        "8aa760a99dbd4a56fbac6b76",
+        "8f208ef713d16a05c6ef43be",
+        "9469b5f4965dfc4fc93c725d",
+        "95bce54e077d8aa316d00576",
+        "9605eebaa05720a171669f4c",
+        "9671c0a6e6ac8af335a54d1a",
+        "97230b19be932e19ecf6844f",
+        "976cde28b39bcfc19dd31664",
+        "97e041fc1ce791e0231d3860",
+        "9c4cc0641650104f043b6854",
+        "9cb14a4bc5b73013363bc0ca",
+        "9d74ed96fd90cc85e72a5313",
+        "a0100bc9f8d5c9d1f9c0d045",
+        "a04ae421b9af74f5a17075e0",
+        "a14786a703cd9cbd5a027d97",
+        "a172b9087cb573fd13c78bec",
+        "a25b548e8a145783663d04de",
+        "a31c6044b5d3ce2a085b3a65",
+        "a35835303b637071d743e0ac",
+        "a44808bee632cfd39739d383",
+        "a543927d8c5196a9acee1909",
+        "a949f7a9fe8937af4a75305b",
+        "a96f7a442de0bd7c0742481b",
+        "ac0c8412062b79a45a597e98",
+        "af7335dc2f7738b48eaa8287",
+        "b0b9b6310839a4ea901efa3e",
+        "b2102a4f4eda062ac6d02e3c",
+        "b82f4a7f6fced721d0965e65",
+        "ba7f3c869b75b39f86616ce8",
+        "bb7f08823bb86edd7f65c879",
+        "bba5c4e8901979675badb0dd",
+        "bd0faba5f18dca3760bcd33c",
+        "bd3b4982926ec73604bf40f4",
+        "bd6b4cc7140f9431d56d6f94",
+        "bfebdad2f3f579d5f26d94b4",
+        "c105f49f8bc7b206202630e4",
+        "c14a9a8ec5bc140d06ea7831",
+        "c1d3e1dec1fa1381c8513ab8",
+        "c4729c7b7484d08b37668628",
+        "c5b92bc460424132423ff063",
+        "c5e18ee97dafe4026a1a5ad7",
+        "c8c90eff48f9cda4be7cc0b3",
+        "c9386d6213c2ec1618276d97",
+        "cb96a99d09ba32bdba1ba5f1",
+        "cc1337d4da68ed8abd233261",
+        "cd0f81d7f222bda90dbbdc30",
+        "cd3cd5fe600f4a56c27946fb",
+        "cd6ffe9efc049182e1640d92",
+        "d067dedb5cb362152c20736e",
+        "d23a28d97b4385702a32d356",
+        "d6ebc1f79eb94bc60e09f4c3",
+        "d76d706eb5c58946769bac2c",
+        "daeb807b515c8f08b1343bd8",
+        "db5077749132b134e02f5dc7",
+        "dbbc0371e7ad7710ecfb976a",
+        "dbfaa6ef95876aa3807e0097",
+        "dced98ad5d0073afb6ba3275",
+        "de4e5d6c678edd61fa8e5bce",
+        "e16def3e066e3d488f892477",
+        "e3dd1c734a99b38b1d32b831",
+        "e471e60cc2cb9ccba30ef546",
+        "e50f0e40a5eb204b9e8650e3",
+        "e51eb7226a4edbc2648de2a9",
+        "e7c0edc8b177cb0e22994621",
+        "e8665b018bdeb55d188a93d3",
+        "e8fd8a7d883ca0ac9fd7a38d",
+        "ead4a28af052d51ceff5bb14",
+        "eb8f187578ab9cb93ad3d2d8",
+        "ec465d23711e4eacf8193ff8",
+        "ecbe56b203dc57c03ba6e075",
+        "f190696b2688f1f3166b30bc",
+        "f7f897176d5d992efae87c74",
+        "f8db215e3ca73ec990b45cc0",
+        "f9367c229bf7ebbbf8fb3247",
+        "fc7838ed86d176cea2bc8f33",
+        "febd3734ff0734f9a9cb8374"
+      ],
+      "medium_missing_cells": [
+        [
+          "feeder_500-random_yard-f60-r3",
+          "one_port_per_hatch",
+          "default"
+        ],
+        [
+          "feeder_500-random_yard-f70-r1",
+          "one_port_per_hatch",
+          "default"
+        ],
+        [
+          "feeder_500-random_yard-f70-r2",
+          "none",
+          "default"
+        ],
+        [
+          "feeder_500-random_yard-f70-r2",
+          "one_port_per_hatch",
+          "300"
+        ],
+        [
+          "feeder_500-random_yard-f70-r2",
+          "one_port_per_hatch",
+          "default"
+        ],
+        [
+          "feeder_500-random_yard-f70-r3",
+          "none",
+          "120"
+        ],
+        [
+          "feeder_500-random_yard-f70-r3",
+          "none",
+          "300"
+        ],
+        [
+          "feeder_500-random_yard-f70-r3",
+          "none",
+          "default"
+        ],
+        [
+          "feeder_500-random_yard-f70-r3",
+          "one_port_per_hatch",
+          "60"
+        ],
+        [
+          "feeder_500-random_yard-f70-r3",
+          "one_port_per_hatch",
+          "120"
+        ],
+        [
+          "feeder_500-random_yard-f70-r3",
+          "one_port_per_hatch",
+          "300"
+        ],
+        [
+          "feeder_500-random_yard-f70-r3",
+          "one_port_per_hatch",
+          "default"
+        ]
+      ],
+      "caveat": "Completeness is against the supplied manifest."
+    },
+    "reasoning": [
+      "Study incomplete: retain provisional profiles until every expected medium arm finishes."
+    ],
+    "data_sha256": "4676f3927cf9cfdc7f4608f2c1fa94639ee8536fd71bade85655b0b31ff07afc"
+  },
+  "budget_table": [
+    {
+      "size_class": "medium",
+      "rule_mode": "none",
+      "budget_label": "60",
+      "attempts": 10,
+      "passes": 6,
+      "relaxed": 3,
+      "timed_out": 0,
+      "errors": 0,
+      "pass_rate": 0.6,
+      "lifts_passing": {
+        "n": 6,
+        "mean": 83.0,
+        "median": 86.0,
+        "min": 62.0,
+        "max": 97.0
+      },
+      "first_legal_s": {
+        "n": 6,
+        "mean": 110.22873843048971,
+        "median": 93.11671068749274,
+        "min": 63.465284542005975,
+        "max": 184.35408924997319
+      },
+      "total_s": {
+        "n": 10,
+        "mean": 446.4774016835028,
+        "median": 221.0746135834779,
+        "min": 124.54915620904649,
+        "max": 1168.0829947500024
+      },
+      "engine_s": {
+        "n": 10,
+        "mean": 445.95432099190657,
+        "median": 220.67893431300763,
+        "min": 124.28150570800062,
+        "max": 1166.1705089590396
+      },
+      "load": {
+        "start_load1": {
+          "n": 10,
+          "mean": 32.298,
+          "median": 36.67,
+          "min": 12.87,
+          "max": 44.63
+        },
+        "end_load1": {
+          "n": 10,
+          "mean": 38.874,
+          "median": 37.93,
+          "min": 13.05,
+          "max": 69.92
+        },
+        "start_enabled_cores": {
+          "n": 10,
+          "mean": 12.2,
+          "median": 12.0,
+          "min": 10,
+          "max": 18
+        },
+        "end_enabled_cores": {
+          "n": 10,
+          "mean": 11.9,
+          "median": 12.0,
+          "min": 10,
+          "max": 13
+        }
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "none",
+      "budget_label": "120",
+      "attempts": 9,
+      "passes": 7,
+      "relaxed": 2,
+      "timed_out": 0,
+      "errors": 0,
+      "pass_rate": 0.7777777777777778,
+      "lifts_passing": {
+        "n": 7,
+        "mean": 89.28571428571429,
+        "median": 97.0,
+        "min": 56.0,
+        "max": 106.0
+      },
+      "first_legal_s": {
+        "n": 7,
+        "mean": 276.88441749399396,
+        "median": 132.74029012501705,
+        "min": 84.08555087499553,
+        "max": 1022.9371175420238
+      },
+      "total_s": {
+        "n": 9,
+        "mean": 506.3488937176492,
+        "median": 292.03299470897764,
+        "min": 157.2957769589848,
+        "max": 1280.984540000034
+      },
+      "engine_s": {
+        "n": 9,
+        "mean": 505.92288763867043,
+        "median": 291.47515441599535,
+        "min": 156.9745508330525,
+        "max": 1280.5145642079879
+      },
+      "load": {
+        "start_load1": {
+          "n": 9,
+          "mean": 34.278888888888886,
+          "median": 39.82,
+          "min": 22.97,
+          "max": 44.78
+        },
+        "end_load1": {
+          "n": 9,
+          "mean": 39.12222222222222,
+          "median": 35.7,
+          "min": 23.93,
+          "max": 63.42
+        },
+        "start_enabled_cores": {
+          "n": 9,
+          "mean": 12,
+          "median": 12,
+          "min": 10,
+          "max": 18
+        },
+        "end_enabled_cores": {
+          "n": 9,
+          "mean": 12.444444444444445,
+          "median": 12,
+          "min": 10,
+          "max": 18
+        }
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "none",
+      "budget_label": "300",
+      "attempts": 9,
+      "passes": 9,
+      "relaxed": 0,
+      "timed_out": 0,
+      "errors": 0,
+      "pass_rate": 1.0,
+      "lifts_passing": {
+        "n": 9,
+        "mean": 86.33333333333333,
+        "median": 95.0,
+        "min": 56.0,
+        "max": 118.0
+      },
+      "first_legal_s": {
+        "n": 9,
+        "mean": 571.5547720600023,
+        "median": 131.80926083301893,
+        "min": 77.41126537503442,
+        "max": 1713.2221282080282
+      },
+      "total_s": {
+        "n": 9,
+        "mean": 835.4514481526761,
+        "median": 691.2326064159861,
+        "min": 201.07446191704366,
+        "max": 1715.4894255829859
+      },
+      "engine_s": {
+        "n": 9,
+        "mean": 835.0375461714575,
+        "median": 690.7011160840048,
+        "min": 200.85876833403017,
+        "max": 1715.294361166947
+      },
+      "load": {
+        "start_load1": {
+          "n": 9,
+          "mean": 31.926666666666666,
+          "median": 28.7,
+          "min": 21.42,
+          "max": 41.63
+        },
+        "end_load1": {
+          "n": 9,
+          "mean": 36.916666666666664,
+          "median": 38.22,
+          "min": 13.57,
+          "max": 87.09
+        },
+        "start_enabled_cores": {
+          "n": 9,
+          "mean": 12,
+          "median": 12,
+          "min": 10,
+          "max": 14
+        },
+        "end_enabled_cores": {
+          "n": 9,
+          "mean": 12.222222222222221,
+          "median": 12,
+          "min": 10,
+          "max": 18
+        }
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "none",
+      "budget_label": "default",
+      "attempts": 8,
+      "passes": 8,
+      "relaxed": 0,
+      "timed_out": 0,
+      "errors": 0,
+      "pass_rate": 1.0,
+      "lifts_passing": {
+        "n": 8,
+        "mean": 71.375,
+        "median": 69.5,
+        "min": 49.0,
+        "max": 104.0
+      },
+      "first_legal_s": {
+        "n": 8,
+        "mean": 227.6547917603748,
+        "median": 114.78227220798726,
+        "min": 67.08279329200741,
+        "max": 625.7012009580503
+      },
+      "total_s": {
+        "n": 8,
+        "mean": 3046.17723061952,
+        "median": 2904.411152665998,
+        "min": 1642.1283750830335,
+        "max": 4549.607623625023
+      },
+      "engine_s": {
+        "n": 8,
+        "mean": 3045.825758442639,
+        "median": 2903.994994583016,
+        "min": 1641.708540917025,
+        "max": 4549.304117666034
+      },
+      "load": {
+        "start_load1": {
+          "n": 8,
+          "mean": 31.8975,
+          "median": 32.55,
+          "min": 22.17,
+          "max": 43.49
+        },
+        "end_load1": {
+          "n": 8,
+          "mean": 36.6975,
+          "median": 29.755,
+          "min": 15.58,
+          "max": 87.0
+        },
+        "start_enabled_cores": {
+          "n": 8,
+          "mean": 11.75,
+          "median": 12.0,
+          "min": 10,
+          "max": 12
+        },
+        "end_enabled_cores": {
+          "n": 8,
+          "mean": 12.75,
+          "median": 12.0,
+          "min": 12,
+          "max": 18
+        }
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "one_port_per_hatch",
+      "budget_label": "60",
+      "attempts": 9,
+      "passes": 2,
+      "relaxed": 5,
+      "timed_out": 0,
+      "errors": 0,
+      "pass_rate": 0.2222222222222222,
+      "lifts_passing": {
+        "n": 2,
+        "mean": 68.0,
+        "median": 68.0,
+        "min": 63.0,
+        "max": 73.0
+      },
+      "first_legal_s": {
+        "n": 2,
+        "mean": 244.00189164548647,
+        "median": 244.00189164548647,
+        "min": 98.35334620799404,
+        "max": 389.6504370829789
+      },
+      "total_s": {
+        "n": 9,
+        "mean": 415.35646153677953,
+        "median": 475.3961305000121,
+        "min": 120.86871420801617,
+        "max": 828.4579954999499
+      },
+      "engine_s": {
+        "n": 9,
+        "mean": 414.9627885046648,
+        "median": 475.1727776249754,
+        "min": 120.65392875001999,
+        "max": 828.1258565000026
+      },
+      "load": {
+        "start_load1": {
+          "n": 9,
+          "mean": 32.276666666666664,
+          "median": 37.51,
+          "min": 13.72,
+          "max": 41.12
+        },
+        "end_load1": {
+          "n": 9,
+          "mean": 38.31666666666666,
+          "median": 36.61,
+          "min": 22.77,
+          "max": 62.66
+        },
+        "start_enabled_cores": {
+          "n": 9,
+          "mean": 12.88888888888889,
+          "median": 12,
+          "min": 10,
+          "max": 18
+        },
+        "end_enabled_cores": {
+          "n": 9,
+          "mean": 12.777777777777779,
+          "median": 12,
+          "min": 12,
+          "max": 18
+        }
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "one_port_per_hatch",
+      "budget_label": "120",
+      "attempts": 9,
+      "passes": 3,
+      "relaxed": 6,
+      "timed_out": 0,
+      "errors": 0,
+      "pass_rate": 0.3333333333333333,
+      "lifts_passing": {
+        "n": 3,
+        "mean": 67.66666666666667,
+        "median": 67.0,
+        "min": 63.0,
+        "max": 73.0
+      },
+      "first_legal_s": {
+        "n": 3,
+        "mean": 446.37283044463646,
+        "median": 414.6185251249699,
+        "min": 96.00635041698115,
+        "max": 828.4936157919583
+      },
+      "total_s": {
+        "n": 9,
+        "mean": 965.214996610988,
+        "median": 926.7124914999586,
+        "min": 133.45621299999766,
+        "max": 1837.9704792079865
+      },
+      "engine_s": {
+        "n": 9,
+        "mean": 964.8443686021039,
+        "median": 926.3933402499533,
+        "min": 133.16527933301404,
+        "max": 1837.6285268340143
+      },
+      "load": {
+        "start_load1": {
+          "n": 9,
+          "mean": 32.922222222222224,
+          "median": 27.68,
+          "min": 25.73,
+          "max": 41.39
+        },
+        "end_load1": {
+          "n": 9,
+          "mean": 36.19777777777777,
+          "median": 36.29,
+          "min": 14.76,
+          "max": 62.04
+        },
+        "start_enabled_cores": {
+          "n": 9,
+          "mean": 11.555555555555555,
+          "median": 12,
+          "min": 10,
+          "max": 12
+        },
+        "end_enabled_cores": {
+          "n": 9,
+          "mean": 12.555555555555555,
+          "median": 12,
+          "min": 10,
+          "max": 18
+        }
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "one_port_per_hatch",
+      "budget_label": "300",
+      "attempts": 8,
+      "passes": 5,
+      "relaxed": 3,
+      "timed_out": 0,
+      "errors": 0,
+      "pass_rate": 0.625,
+      "lifts_passing": {
+        "n": 5,
+        "mean": 65.0,
+        "median": 67.0,
+        "min": 50.0,
+        "max": 73.0
+      },
+      "first_legal_s": {
+        "n": 5,
+        "mean": 585.007887308416,
+        "median": 159.45385550003266,
+        "min": 86.79543325002305,
+        "max": 2159.88462508301
+      },
+      "total_s": {
+        "n": 8,
+        "mean": 1497.6586420106323,
+        "median": 1688.5506568124983,
+        "min": 269.44564641604666,
+        "max": 3089.9465782920015
+      },
+      "engine_s": {
+        "n": 8,
+        "mean": 1497.1701862762493,
+        "median": 1687.9653343539976,
+        "min": 268.9749769999762,
+        "max": 3089.4645345419995
+      },
+      "load": {
+        "start_load1": {
+          "n": 8,
+          "mean": 31.3325,
+          "median": 26.535,
+          "min": 23.15,
+          "max": 43.94
+        },
+        "end_load1": {
+          "n": 8,
+          "mean": 38.97375,
+          "median": 38.995000000000005,
+          "min": 17.47,
+          "max": 61.15
+        },
+        "start_enabled_cores": {
+          "n": 8,
+          "mean": 12,
+          "median": 12.0,
+          "min": 12,
+          "max": 12
+        },
+        "end_enabled_cores": {
+          "n": 8,
+          "mean": 12.25,
+          "median": 12.0,
+          "min": 12,
+          "max": 14
+        }
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "one_port_per_hatch",
+      "budget_label": "default",
+      "attempts": 6,
+      "passes": 4,
+      "relaxed": 2,
+      "timed_out": 0,
+      "errors": 0,
+      "pass_rate": 0.6666666666666666,
+      "lifts_passing": {
+        "n": 4,
+        "mean": 64.0,
+        "median": 65.0,
+        "min": 54.0,
+        "max": 72.0
+      },
+      "first_legal_s": {
+        "n": 4,
+        "mean": 182.66877416647912,
+        "median": 147.3532452499785,
+        "min": 104.1632951250067,
+        "max": 331.8053110409528
+      },
+      "total_s": {
+        "n": 6,
+        "mean": 1745.200000118018,
+        "median": 1654.7629582290247,
+        "min": 1193.878440333996,
+        "max": 2409.1693252500263
+      },
+      "engine_s": {
+        "n": 6,
+        "mean": 1744.7597314373318,
+        "median": 1654.0776923749945,
+        "min": 1193.565318665991,
+        "max": 2408.958061375015
+      },
+      "load": {
+        "start_load1": {
+          "n": 6,
+          "mean": 37.89,
+          "median": 38.075,
+          "min": 27.94,
+          "max": 44.78
+        },
+        "end_load1": {
+          "n": 6,
+          "mean": 37.12166666666667,
+          "median": 38.59,
+          "min": 24.47,
+          "max": 53.08
+        },
+        "start_enabled_cores": {
+          "n": 6,
+          "mean": 11.333333333333334,
+          "median": 12.0,
+          "min": 10,
+          "max": 12
+        },
+        "end_enabled_cores": {
+          "n": 6,
+          "mean": 11.666666666666666,
+          "median": 12.0,
+          "min": 10,
+          "max": 12
+        }
+      }
+    }
+  ],
+  "paired_costs": [
+    {
+      "size_class": "medium",
+      "rule_mode": "none",
+      "budget_label": "60",
+      "reference": "default",
+      "paired_attempts": 8,
+      "missing_reference": 2,
+      "short_passes": 5,
+      "default_passes": 8,
+      "passes_lost": 3,
+      "passes_gained": 0,
+      "both_pass": 5,
+      "extra_lifts_short_minus_default": {
+        "n": 5,
+        "mean": 12.6,
+        "median": 10.0,
+        "min": 8.0,
+        "max": 24.0
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "none",
+      "budget_label": "120",
+      "reference": "default",
+      "paired_attempts": 8,
+      "missing_reference": 1,
+      "short_passes": 7,
+      "default_passes": 8,
+      "passes_lost": 1,
+      "passes_gained": 0,
+      "both_pass": 7,
+      "extra_lifts_short_minus_default": {
+        "n": 7,
+        "mean": 14.714285714285714,
+        "median": 10.0,
+        "min": 0.0,
+        "max": 36.0
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "none",
+      "budget_label": "300",
+      "reference": "default",
+      "paired_attempts": 8,
+      "missing_reference": 1,
+      "short_passes": 8,
+      "default_passes": 8,
+      "passes_lost": 0,
+      "passes_gained": 0,
+      "both_pass": 8,
+      "extra_lifts_short_minus_default": {
+        "n": 8,
+        "mean": 11.0,
+        "median": 2.5,
+        "min": -2.0,
+        "max": 49.0
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "one_port_per_hatch",
+      "budget_label": "60",
+      "reference": "default",
+      "paired_attempts": 6,
+      "missing_reference": 3,
+      "short_passes": 1,
+      "default_passes": 4,
+      "passes_lost": 3,
+      "passes_gained": 0,
+      "both_pass": 1,
+      "extra_lifts_short_minus_default": {
+        "n": 1,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "one_port_per_hatch",
+      "budget_label": "120",
+      "reference": "default",
+      "paired_attempts": 6,
+      "missing_reference": 3,
+      "short_passes": 2,
+      "default_passes": 4,
+      "passes_lost": 2,
+      "passes_gained": 0,
+      "both_pass": 2,
+      "extra_lifts_short_minus_default": {
+        "n": 2,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "size_class": "medium",
+      "rule_mode": "one_port_per_hatch",
+      "budget_label": "300",
+      "reference": "default",
+      "paired_attempts": 6,
+      "missing_reference": 2,
+      "short_passes": 4,
+      "default_passes": 4,
+      "passes_lost": 0,
+      "passes_gained": 0,
+      "both_pass": 4,
+      "extra_lifts_short_minus_default": {
+        "n": 4,
+        "mean": -1.0,
+        "median": 0.0,
+        "min": -4.0,
+        "max": 0.0
+      }
+    }
+  ],
+  "binding_evidence": {
+    "audits": 26,
+    "baseline_plans_violating_rule": 18,
+    "demonstrated_binding_passes": 9
+  },
+  "load_context": {
+    "start_load1": {
+      "n": 68,
+      "min": 12.87,
+      "max": 44.78
+    },
+    "start_enabled_cores": {
+      "n": 68,
+      "min": 10,
+      "max": 18
+    },
+    "end_load1": {
+      "n": 68,
+      "min": 13.05,
+      "max": 87.09
+    },
+    "end_enabled_cores": {
+      "n": 68,
+      "min": 10,
+      "max": 18
+    },
+    "gpu_job_running": true,
+    "gpu_job_cpu_cores": 6,
+    "concurrency_policy": "Four workers, permitted to rise to six after sustained load1 below 30.",
+    "context_source": "User reported the GPU job using six cores and a concurrent engine benchmark; load and enabled-core ranges come from each measured row.",
+    "quiet_machine_timing": "Not measured; loaded-machine timings treated as conservative planning inputs, not guaranteed quiet-machine bounds."
+  },
+  "limitations": [
+    "Partial development study only: 68 completed medium map/rule/budget jobs of 256 expected. The missing 188 jobs are unknown, not failed passes.",
+    "Full passes require the full checker and every confirmed instruction recheck. Relaxed plans remain separate and never count as passes.",
+    "Lifts include projected later-port lifts (D15). Medium lift means include passing maps only.",
+    "Engine-only measurement excludes the complete runner assembly, reader, receipt, package and final orchestration overhead; configured engine deadlines are not whole-run guarantees.",
+    "The measured search invocations used a 7200 s emergency cap. The new live and standard hard walls were selected without a capped rerun; an incumbent still requires fresh final checker and instruction gates.",
+    "The study mixes source and hatch-search policy epochs. This user selection does not make the mixed data a clean profile calibration or a claim of optimality; a fresh quiet study would be required for clean comparisons.",
+    "Exact study Config settings retain warm_polish=False and work_count_search=False. The live peel proposal stays 40 s; insufficient-time ladder stages may remain untried, with searched levels only as recorded in existing evidence."
+  ],
+  "source_epochs": [
+    "09f61cb8e8fb8b4c69709c284c7fed6d231c6a17dae97cf8f885c3622d41c157",
+    "1ba6711e69f9905f7a2ba0818c9812642742472220ebb6eeddf460ac549b827b",
+    "3f4e2afd6d7d25710e595555a0a0dd4f81d8e6322cfcce0281f87c43f356e9a9",
+    "44f308b018f8eb75e761ba8322a079d0628b4e64232ed2009a442dab37d89851",
+    "66231d3f20ebed5341484f7c16910cc54e512c45b3fdebc8a9521194a47a016f",
+    "7ddfe13c47574cf211cee6b2e92c665093ed71c95846abca7f94cd2f32762b54",
+    "b44a90105290e54d6b749885aadc419d7d06073b1651ecf3a9d571b23b8e5c9a",
+    "fc255dd684d16a5339d85a4adb48027c615f844403dd440d607a9bca43bf0bae"
+  ],
+  "source_epoch_caveat": "Mixed source epochs: earlier rows precede explicit batch confirmation and the hatch instruction correction that leaves missing-load completion to the full checker. The reviewed migration also adds stronger frozen provenance checks, owned ballast-pool cleanup, and durable measurement-attempt evidence. Authorized runner B2/B6 presentation and API changes include earlier-plan display, ladder reporting, and provisional live-profile peel budgets; the explicitly scheduled study_profile configurations are unchanged, and execute_row does not use provisional profile defaults. D261 changes runner-owned deadline/checker reporting; frozen study configurations and native search are unchanged. Finished rows are preserved; each new row records its actual execution source. Comparisons across source epochs may be confounded. Every passing row still requires the full checker and every instruction recheck. Reviewed logic3 hatch portfolio is a new numerical search epoch: at most three sequential strict mappings, with additive configured work per mapping. Legacy single-mapping hatch rows remain immutable and cannot be pooled with portfolio rows to calibrate profiles. A fresh quiet study is required for clean budget comparisons.",
+  "source_epochs_sidecar_sha256": "1287f3085fb560a6764b221aabe2df33f3d02d1b316ded5b7757bfaf204a97f5",
+  "source_baseline_migration": {
+    "kind": "reviewed_source_baseline_bridge/1",
+    "from_source_sha256": "b44a90105290e54d6b749885aadc419d7d06073b1651ecf3a9d571b23b8e5c9a",
+    "to_source_sha256": "09f61cb8e8fb8b4c69709c284c7fed6d231c6a17dae97cf8f885c3622d41c157",
+    "archived_manifest_sha256": "c1f6eea3f59bece59609b625ca3e349295a840435c410cce388df724f1b67031",
+    "archived_manifest": "manifest-history/c1f6eea3f59bece59609b625ca3e349295a840435c410cce388df724f1b67031.json",
+    "recorded_utc": "2026-11-02T03:08:01.044359+00:00",
+    "job_payload_sha256": "f8d9bbaa2ad286b976053d5e5f02f7489555db7f30876bdaa8cde0f766a0756a",
+    "affected_workers": [
+      {
+        "pid": 97487,
+        "job_id": "e94294568be34c009fdc648d"
+      },
+      {
+        "pid": 99561,
+        "job_id": "16a94e89e6740b323ae414e3"
+      },
+      {
+        "pid": 1727,
+        "job_id": "828c43e99aac7e7be499a106"
+      },
+      {
+        "pid": 1728,
+        "job_id": "a7c539b17ac19b4e61f4f19c"
+      }
+    ],
+    "loaded_metadata_version_caveat": "Reviewed source-baseline compatibility bridge: affected worker metadata helpers were loaded before runner B2/B6 changes. Their frozen study configurations are unchanged; binding imports after the source gate are fresh. The source snapshot identifies the reviewed files on disk, while the metadata helper itself remains the earlier loaded version.",
+    "policy_dependencies_sha256": "4c8c2be90208e1a18d5c20cfaaec0b6b0ce9d5addb03493b8fb76673813be3e3",
+    "hatch_policy_epoch_caveat": "Reviewed logic3 hatch portfolio is a new numerical search epoch: at most three sequential strict mappings, with additive configured work per mapping. Legacy single-mapping hatch rows remain immutable and cannot be pooled with portfolio rows to calibrate profiles. A fresh quiet study is required for clean budget comparisons.",
+    "approved_reason": "Explicit executive decision: unblock idle legacy source-gate metadata helpers without signals, optimizer restarts, job/config changes, or finished-row edits."
+  },
+  "policy_dependencies": {
+    "schema_version": "stowlm.policy-dependencies/1",
+    "portfolio_policy_version": "logic3-hatch-portfolio-v1",
+    "files": {
+      "experiments/mvp/pipeline/binding/review3/activation.py": "e0a70b14c1b870520f421d0809c31e979d8501c0f47f502b0857b8ad5db924cb",
+      "experiments/mvp/pipeline/binding/review3/api.py": "df491918cc90df91079ab5ce10268faf324235e2f2540a956e8ed39230e60379",
+      "experiments/mvp/pipeline/binding/review3/campaign.py": "a01f30c324e4f65323c93b6ace13b5d8ce63a8709896d07b15b0477ea08ba6dd",
+      "experiments/mvp/pipeline/binding/review3/measurement.py": "8c0041c7b19f4ac9e6d0235c7b89324c15693b156766366bab5fbf070d286498",
+      "experiments/mvp/pipeline/binding/review3/hatch.py": "7c82c4fa3c248b6d977439e382ee715d926488e040ba731ab9a3559f8c916cad",
+      "experiments/mvp/pipeline/binding/review3/recorded.py": "9c198320db05e1c30053626f912547ac7db8c204a30715edf946797626eea862",
+      "experiments/mvp/pipeline/binding/review3/__init__.py": "53b897a4df90b891fb1a48f4870047d21a8ccc8b81a28cbb63c147688c9518f0",
+      "experiments/mvp/pipeline/binding/review3/init-export-delta.json": "2e7e36643ad2284a40a58efff11be0124fb47c86cb92bb7c55580ebb737e9c40"
+    },
+    "sha256": "4c8c2be90208e1a18d5c20cfaaec0b6b0ce9d5addb03493b8fb76673813be3e3",
+    "source_epoch_caveat": "Reviewed logic3 hatch portfolio is a new numerical search epoch: at most three sequential strict mappings, with additive configured work per mapping. Legacy single-mapping hatch rows remain immutable and cannot be pooled with portfolio rows to calibrate profiles. A fresh quiet study is required for clean budget comparisons."
+  },
+  "hatch_policy_epochs": [
+    "legacy-single-mapping",
+    "logic3-hatch-portfolio-v1"
+  ]
+}

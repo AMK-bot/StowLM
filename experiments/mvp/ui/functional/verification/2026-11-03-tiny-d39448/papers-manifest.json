@@ -1,0 +1,90 @@
+[
+  {
+    "booking_ref": null,
+    "complete_booking_list": false,
+    "id": "generated-global-unspecified",
+    "label": "Synthetic document",
+    "media_type": "text/csv",
+    "name": "load-list.csv",
+    "path": "papers/generated/load-list.csv",
+    "role": "unspecified",
+    "synthetic": true
+  },
+  {
+    "booking_ref": "SYN-e57bef3e82ce7e30-B1",
+    "complete_booking_list": false,
+    "id": "generated-B1-booking",
+    "label": "Synthetic document",
+    "media_type": "text/plain",
+    "name": "B1-booking-note.txt",
+    "path": "papers/generated/B1-booking-note.txt",
+    "role": "booking",
+    "synthetic": true
+  },
+  {
+    "booking_ref": "SYN-e57bef3e82ce7e30-B1",
+    "complete_booking_list": false,
+    "id": "generated-B1-shipping_instructions",
+    "label": "Synthetic document",
+    "media_type": "text/plain",
+    "name": "B1-shipping-instructions.txt",
+    "path": "papers/generated/B1-shipping-instructions.txt",
+    "role": "shipping_instructions",
+    "synthetic": true
+  },
+  {
+    "booking_ref": "SYN-e57bef3e82ce7e30-B1",
+    "complete_booking_list": false,
+    "id": "generated-B1-vgm",
+    "label": "Synthetic document",
+    "media_type": "text/plain",
+    "name": "B1-vgm.txt",
+    "path": "papers/generated/B1-vgm.txt",
+    "role": "vgm",
+    "synthetic": true
+  },
+  {
+    "booking_ref": "SYN-e57bef3e82ce7e30-B1",
+    "complete_booking_list": true,
+    "id": "generated-B1-dg_declaration",
+    "label": "Synthetic document",
+    "media_type": "text/plain",
+    "name": "B1-dg-declaration.txt",
+    "path": "papers/generated/B1-dg-declaration.txt",
+    "role": "dg_declaration",
+    "synthetic": true
+  },
+  {
+    "booking_ref": "SYN-e57bef3e82ce7e30-B1",
+    "complete_booking_list": false,
+    "id": "generated-B1-gate_slip",
+    "label": "Synthetic document",
+    "media_type": "text/plain",
+    "name": "B1-gate-slip.txt",
+    "path": "papers/generated/B1-gate-slip.txt",
+    "role": "gate_slip",
+    "synthetic": true
+  },
+  {
+    "booking_ref": "SYN-e57bef3e82ce7e30-B1",
+    "complete_booking_list": true,
+    "id": "generated-B1-reefer_list",
+    "label": "Synthetic document",
+    "media_type": "text/plain",
+    "name": "B1-reefer-list.txt",
+    "path": "papers/generated/B1-reefer-list.txt",
+    "role": "reefer_list",
+    "synthetic": true
+  },
+  {
+    "booking_ref": "SYN-e57bef3e82ce7e30-B1",
+    "complete_booking_list": true,
+    "id": "generated-B1-oog_list",
+    "label": "Synthetic document",
+    "media_type": "text/plain",
+    "name": "B1-oog-list.txt",
+    "path": "papers/generated/B1-oog-list.txt",
+    "role": "oog_list",
+    "synthetic": true
+  }
+]

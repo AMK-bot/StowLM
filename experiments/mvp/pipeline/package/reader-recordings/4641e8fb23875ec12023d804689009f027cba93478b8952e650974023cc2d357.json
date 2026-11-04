@@ -1,0 +1,208 @@
+{
+  "label": "Recorded Muse Spark reader answers; synthetic development ship",
+  "readings": [
+    {
+      "sentence": "",
+      "envelope": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "not_an_instruction",
+          "reason": "empty input"
+        }
+      },
+      "evidence": {
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"empty input\"}}",
+        "request_id": "802dcdd4-44f1-484c-9972-56552e557a2f",
+        "cost_usd": "0.0016105",
+        "usage": {
+          "input_tokens": 622,
+          "output_tokens": 196,
+          "cached_tokens": 0
+        },
+        "parser": "SparkParser",
+        "model": "muse-spark-1.3",
+        "adapter_sha256": null,
+        "purpose": "pipeline-package-hero-reader",
+        "prompt_sha256": "17491fcf3d4b59ab0a52086ce9e1971d9236423e7f7f430b7e9c4e1ebbb59adb",
+        "reservation_context_bound_tokens": 32768,
+        "source_sha256": "f6d2e792479f96bc3802de9c27b43e30ac1e414d85ac7d4a95d55a10b362a36a"
+      },
+      "seconds": 1.910919333982747,
+      "ship": "D192.medium-feeder_500-f60-low-s192200002",
+      "context": {
+        "id": "D192.medium-feeder_500-f60-low-s192200002",
+        "bays": [
+          1,
+          2,
+          3,
+          9,
+          10,
+          11,
+          21,
+          22,
+          23
+        ],
+        "max_tiers": {
+          "hold": 3,
+          "deck": 5
+        },
+        "max_tiers_by_bay": {
+          "1": {
+            "hold": 2,
+            "deck": 5
+          },
+          "2": {
+            "hold": 2,
+            "deck": 5
+          },
+          "3": {
+            "hold": 2,
+            "deck": 5
+          },
+          "9": {
+            "hold": 3,
+            "deck": 5
+          },
+          "10": {
+            "hold": 3,
+            "deck": 5
+          },
+          "11": {
+            "hold": 3,
+            "deck": 5
+          },
+          "21": {
+            "hold": 2,
+            "deck": 5
+          },
+          "22": {
+            "hold": 2,
+            "deck": 5
+          },
+          "23": {
+            "hold": 2,
+            "deck": 5
+          }
+        },
+        "has_accommodation": true,
+        "hatch_covers": [
+          "HC-002-P",
+          "HC-002-S",
+          "HC-010-P",
+          "HC-010-S",
+          "HC-022-P",
+          "HC-022-S"
+        ],
+        "ports": [
+          "SGSIN",
+          "MYPKG",
+          "THLCH"
+        ]
+      }
+    },
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 1 20-foot bays away from the accommodation.",
+      "envelope": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "evidence": {
+        "raw": "{\"schema_version\": \"stowlm.reader/2\", \"constraint\": {\"type\": \"dg_keep_away\", \"imdg_class\": \"2.2\", \"min_bays\": 1, \"away_from\": {\"kind\": \"accommodation\"}}}",
+        "request_id": "770ca74b-c572-4b94-950f-9292fa14e1fc",
+        "cost_usd": "0.00174125",
+        "usage": {
+          "input_tokens": 645,
+          "output_tokens": 220,
+          "cached_tokens": 0
+        },
+        "parser": "SparkParser",
+        "model": "muse-spark-1.3",
+        "adapter_sha256": null,
+        "purpose": "pipeline-package-hero-reader",
+        "prompt_sha256": "50cd15b3cb3eaf0a69464bd4c59d1ae5ed2e67496d7cadbff33d0879582afda5",
+        "reservation_context_bound_tokens": 32768,
+        "source_sha256": "f6d2e792479f96bc3802de9c27b43e30ac1e414d85ac7d4a95d55a10b362a36a"
+      },
+      "seconds": 2.332764875027351,
+      "ship": "D192.medium-feeder_500-f60-low-s192200002",
+      "context": {
+        "id": "D192.medium-feeder_500-f60-low-s192200002",
+        "bays": [
+          1,
+          2,
+          3,
+          9,
+          10,
+          11,
+          21,
+          22,
+          23
+        ],
+        "max_tiers": {
+          "hold": 3,
+          "deck": 5
+        },
+        "max_tiers_by_bay": {
+          "1": {
+            "hold": 2,
+            "deck": 5
+          },
+          "2": {
+            "hold": 2,
+            "deck": 5
+          },
+          "3": {
+            "hold": 2,
+            "deck": 5
+          },
+          "9": {
+            "hold": 3,
+            "deck": 5
+          },
+          "10": {
+            "hold": 3,
+            "deck": 5
+          },
+          "11": {
+            "hold": 3,
+            "deck": 5
+          },
+          "21": {
+            "hold": 2,
+            "deck": 5
+          },
+          "22": {
+            "hold": 2,
+            "deck": 5
+          },
+          "23": {
+            "hold": 2,
+            "deck": 5
+          }
+        },
+        "has_accommodation": true,
+        "hatch_covers": [
+          "HC-002-P",
+          "HC-002-S",
+          "HC-010-P",
+          "HC-010-S",
+          "HC-022-P",
+          "HC-022-S"
+        ],
+        "ports": [
+          "SGSIN",
+          "MYPKG",
+          "THLCH"
+        ]
+      }
+    }
+  ]
+}

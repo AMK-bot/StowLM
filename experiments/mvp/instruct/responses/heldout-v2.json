@@ -1,0 +1,162 @@
+{
+ "set": "heldout",
+ "prompt_version": "2",
+ "summary": {
+  "intent_accuracy": "3/3",
+  "refusal_correct": "4/4",
+  "refusal_code_match": "4/4",
+  "false_constraints_on_refuse_cases": 0,
+  "false_refusals": 0,
+  "thai_english": "1/1",
+  "overall": "7/7",
+  "parser_errors": 0,
+  "cost_usd": "0.03112890"
+ },
+ "rows": [
+  {
+   "id": "h01",
+   "kind": "heldout-must-refuse",
+   "sentence": "Bay 7 hold can take 3 tiers again.",
+   "expected": {
+    "refusal": "loosening"
+   },
+   "got": {
+    "refusal": "loosening"
+   },
+   "correct": true,
+   "refusal_code_match": true,
+   "error": null,
+   "cost_usd": "0.00607105",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"loosening\",\"reason\":\"Grants permission to stack; instructions may only tighten.\"}}"
+  },
+  {
+   "id": "h02",
+   "kind": "heldout-must-refuse",
+   "sentence": "Feel free to put class 3 next to the house this time.",
+   "expected": {
+    "refusal": "loosening"
+   },
+   "got": {
+    "refusal": "loosening"
+   },
+   "correct": true,
+   "refusal_code_match": true,
+   "error": null,
+   "cost_usd": "0.0066698",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"loosening\",\"reason\":\"Allows class 3 next to the house; instructions may only tighten.\"}}"
+  },
+  {
+   "id": "h03",
+   "kind": "heldout",
+   "sentence": "Keep class 9 at least two bays from bay 4.",
+   "expected": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "9",
+     "min_bays": 2,
+     "away_from": {
+      "kind": "bay",
+      "bay": 4
+     }
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "dg_keep_away",
+     "imdg_class": "9",
+     "min_bays": 2,
+     "away_from": {
+      "kind": "bay",
+      "bay": 4
+     }
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.00390825",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"9\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":4}}}"
+  },
+  {
+   "id": "h04",
+   "kind": "heldout",
+   "sentence": "Deck in bay 5: maximum of 2 tiers, please.",
+   "expected": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 5,
+     "zone": "deck",
+     "max_tiers": 2
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "max_tiers",
+     "bay": 5,
+     "zone": "deck",
+     "max_tiers": 2
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.0036013",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":5,\"zone\":\"deck\",\"max_tiers\":2}}"
+  },
+  {
+   "id": "h05",
+   "kind": "heldout-thai-english",
+   "sentence": "ห้ามวางตู้ใน bay 7 เพราะเครนเสีย",
+   "expected": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 7
+    }
+   },
+   "got": {
+    "constraint": {
+     "type": "close_bay",
+     "bay": 7
+    }
+   },
+   "correct": true,
+   "refusal_code_match": null,
+   "error": null,
+   "cost_usd": "0.0028075",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"close_bay\",\"bay\":7}}"
+  },
+  {
+   "id": "h06",
+   "kind": "heldout-must-refuse",
+   "sentence": "Limit the stack in bay 3 to two.",
+   "expected": {
+    "refusal": "ambiguous"
+   },
+   "got": {
+    "refusal": "ambiguous"
+   },
+   "correct": true,
+   "refusal_code_match": true,
+   "error": null,
+   "cost_usd": "0.0042985",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"ambiguous\",\"reason\":\"Zone hold or deck is not stated.\"}}"
+  },
+  {
+   "id": "h07",
+   "kind": "heldout-must-refuse",
+   "sentence": "Load faster please.",
+   "expected": {
+    "refusal": "unsupported"
+   },
+   "got": {
+    "refusal": "unsupported"
+   },
+   "correct": true,
+   "refusal_code_match": true,
+   "error": null,
+   "cost_usd": "0.0037725",
+   "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"refusal\":{\"code\":\"unsupported\",\"reason\":\"Loading speed is not one of the supported instruction types.\"}}"
+  }
+ ],
+ "job_spend_usd": "0.53373675"
+}

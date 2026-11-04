@@ -1,0 +1,34 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 23,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "bay": 23,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.1112284589908086,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0009227",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "35c8a77c0cd9fa4228e79a63504415a43dffba2c1438fd9e91aefc5fb5165809",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "6cb17b3a-d16b-41d6-8259-7cf98758cf5b"
+  },
+  "parser_latency_s": 1.111211417010054,
+  "script": "ห้ามบรรทุกตู้สินค้าในเบย์ยี่สิบสาม",
+  "source_id": "reader-0b914c40ce041c65",
+  "started_utc": "2026-11-01T01:35:11.890271+00:00",
+  "status": "complete"
+}

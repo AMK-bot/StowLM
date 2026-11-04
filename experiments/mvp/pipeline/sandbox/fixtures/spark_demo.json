@@ -1,0 +1,1710 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "complete": true,
+  "created_utc": "2026-11-02T01:25:43.157528+00:00",
+  "model": "muse-spark-1.3",
+  "source_fixture": "experiments/mvp/pipeline/sandbox/fixtures/demo_source190.final.json",
+  "source_sha256": "7a7c2f380a03fe8cafa6543cacb9ae571f3b0049ff4370d1ea045615e1b20849",
+  "checker_facts_sha256": "c3fb6b2f42a20e36a79a7bb238d8fe030c00c8deff3e02f29f6ba21715795322",
+  "input_demo_sha256": "bdde226462188724fa781f717bd3c92a1c6e859d6ecca8e28ac4798f2edaaef3",
+  "explainer_sha256": "b6516fb007f5ac4e7413e786fa993f222422a66345c2eb9466b966b8ecadb2da",
+  "recorder_sha256": "192c928809b52f0684b71ca42989aa2c30c57a505d04245acdc331d07872914e",
+  "purpose": "sandbox-verdict",
+  "task_cap_usd": "2",
+  "initial_task_actual_usd": "0",
+  "initial_task_hold_usd": "0",
+  "ledger_path": "experiments/spark-spend/calls.jsonl",
+  "max_retries": 0,
+  "max_output_tokens": 2048,
+  "reasoning_effort": "minimal",
+  "cases": [
+    {
+      "kind": "legal",
+      "verdict_sha256": "54af18f3f765e426afc1ae974dc4ded7a4765c7f5acf05871dc9e6f35fe958a0",
+      "prompt_sha256": "3ba9e3a74584a0a10b87281dc8afd856649d0419e1888d9f9c2982870c9a4b0a",
+      "selected_ids": [
+        "status"
+      ],
+      "validated": true,
+      "rejection": null,
+      "request_id": "2f14b8fb-d944-4634-8644-cc55352c6725",
+      "cost_usd": "0.000969",
+      "accounting": [
+        {
+          "time": "2026-11-02T01:25:43.341533+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": null,
+          "output_tokens": null,
+          "cached_tokens": null,
+          "purpose": "sandbox-verdict",
+          "request_id": null,
+          "reservation_id": "4a30e8e3d4534826992d7dac2bb81e62",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "reservation",
+          "cost_usd": "1.316864",
+          "status": "pending",
+          "cost_kind": "conservative_hold"
+        },
+        {
+          "time": "2026-11-02T01:25:43.341533+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": 170,
+          "output_tokens": 178,
+          "cached_tokens": 0,
+          "purpose": "sandbox-verdict",
+          "request_id": "2f14b8fb-d944-4634-8644-cc55352c6725",
+          "reservation_id": "4a30e8e3d4534826992d7dac2bb81e62",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "settlement",
+          "status": "completed",
+          "cost_usd": "0.000969",
+          "cost_kind": "measured"
+        }
+      ],
+      "explanation": {
+        "language": "en",
+        "text": "Muse Spark selected checked statements.\nThe moved plan passed the full checker.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The moved plan passed the full checker.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      },
+      "template_explanation": {
+        "language": "en",
+        "text": "Template explanation.\nThe moved plan passed the full checker.\nThis move changes the move engine's crane-lift count by +0.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The moved plan passed the full checker.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "This move changes the move engine's crane-lift count by +0.",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      }
+    },
+    {
+      "kind": "stability",
+      "verdict_sha256": "0a03517ec6be4fc72fa08abfdd8aedb46b0ab9adca87829e091bb43ba4eb5e77",
+      "prompt_sha256": "a5d05e217af9e87693db6a0c11aac99b823d04f16f16a89372078901eb0ccdf6",
+      "selected_ids": [
+        "status",
+        "diagnostic",
+        "broken:0",
+        "broken:1",
+        "broken:2"
+      ],
+      "validated": true,
+      "rejection": null,
+      "request_id": "8ce22ec5-07d3-427f-b622-95e10b345187",
+      "cost_usd": "0.001771",
+      "accounting": [
+        {
+          "time": "2026-11-02T01:25:45.124400+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": null,
+          "output_tokens": null,
+          "cached_tokens": null,
+          "purpose": "sandbox-verdict",
+          "request_id": null,
+          "reservation_id": "4b2654a8fbcf49d49a47585806e8f31e",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "reservation",
+          "cost_usd": "1.316864",
+          "status": "pending",
+          "cost_kind": "conservative_hold"
+        },
+        {
+          "time": "2026-11-02T01:25:45.124400+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": 866,
+          "output_tokens": 162,
+          "cached_tokens": 0,
+          "purpose": "sandbox-verdict",
+          "request_id": "8ce22ec5-07d3-427f-b622-95e10b345187",
+          "reservation_id": "4b2654a8fbcf49d49a47585806e8f31e",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "settlement",
+          "status": "completed",
+          "cost_usd": "0.001771",
+          "cost_kind": "measured"
+        }
+      ],
+      "explanation": {
+        "language": "en",
+        "text": "Muse Spark selected checked statements.\nThe full checker rejected the moved plan.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.bottom_up failed. Ship stacks must fill from the lowest cell without gaps. Measured: not reported; limit: not reported; boxes: [\"QZXU0000009\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nRule iscode.loading.trim failed. [straits:call-0:THLCH:departure departure] trim_m exceeds permissible loading limit Measured: -0.14778069128103954 m; limit: -0.15567719231265897 m; boxes: [].",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The full checker rejected the moved plan.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.bottom_up failed. Ship stacks must fill from the lowest cell without gaps. Measured: not reported; limit: not reported; boxes: [\"QZXU0000009\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.bottom_up"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "Ship stacks must fill from the lowest cell without gaps."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000009"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule iscode.loading.trim failed. [straits:call-0:THLCH:departure departure] trim_m exceeds permissible loading limit Measured: -0.14778069128103954 m; limit: -0.15567719231265897 m; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "iscode.loading.trim"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "[straits:call-0:THLCH:departure departure] trim_m exceeds permissible loading limit"
+              },
+              {
+                "path": "broken[2].measured",
+                "value": -0.14778069128103954
+              },
+              {
+                "path": "broken[2].limit",
+                "value": -0.15567719231265897
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": "m"
+              },
+              {
+                "path": "broken[2].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      },
+      "template_explanation": {
+        "language": "en",
+        "text": "Template explanation.\nThe full checker rejected the moved plan.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.bottom_up failed. Ship stacks must fill from the lowest cell without gaps. Measured: not reported; limit: not reported; boxes: [\"QZXU0000009\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nRule iscode.loading.trim failed. [straits:call-0:THLCH:departure departure] trim_m exceeds permissible loading limit Measured: -0.14778069128103954 m; limit: -0.15567719231265897 m; boxes: [].\nExtra crane lifts are unavailable.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The full checker rejected the moved plan.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.bottom_up failed. Ship stacks must fill from the lowest cell without gaps. Measured: not reported; limit: not reported; boxes: [\"QZXU0000009\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.bottom_up"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "Ship stacks must fill from the lowest cell without gaps."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000009"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule iscode.loading.trim failed. [straits:call-0:THLCH:departure departure] trim_m exceeds permissible loading limit Measured: -0.14778069128103954 m; limit: -0.15567719231265897 m; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "iscode.loading.trim"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "[straits:call-0:THLCH:departure departure] trim_m exceeds permissible loading limit"
+              },
+              {
+                "path": "broken[2].measured",
+                "value": -0.14778069128103954
+              },
+              {
+                "path": "broken[2].limit",
+                "value": -0.15567719231265897
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": "m"
+              },
+              {
+                "path": "broken[2].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Extra crane lifts are unavailable.",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": null
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      }
+    },
+    {
+      "kind": "segregation",
+      "verdict_sha256": "dcb3929f6180fa82ec04fe9c8677adca7cb2865f7eadea18b776ecd055cc2fbd",
+      "prompt_sha256": "a25e94b79a34bce404012652286e6c6cc28c2ba2e903585ac662b64de734da60",
+      "selected_ids": [
+        "status",
+        "diagnostic",
+        "broken:0",
+        "broken:1",
+        "broken:2"
+      ],
+      "validated": true,
+      "rejection": null,
+      "request_id": "de252b7c-c3be-4496-b35b-b8a92b7ef324",
+      "cost_usd": "0.001679",
+      "accounting": [
+        {
+          "time": "2026-11-02T01:25:46.304993+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": null,
+          "output_tokens": null,
+          "cached_tokens": null,
+          "purpose": "sandbox-verdict",
+          "request_id": null,
+          "reservation_id": "5884078acd50413cb4eaccd195dfbec2",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "reservation",
+          "cost_usd": "1.316864",
+          "status": "pending",
+          "cost_kind": "conservative_hold"
+        },
+        {
+          "time": "2026-11-02T01:25:46.304993+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": 857,
+          "output_tokens": 143,
+          "cached_tokens": 0,
+          "purpose": "sandbox-verdict",
+          "request_id": "de252b7c-c3be-4496-b35b-b8a92b7ef324",
+          "reservation_id": "5884078acd50413cb4eaccd195dfbec2",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "settlement",
+          "status": "completed",
+          "cost_usd": "0.001679",
+          "cost_kind": "measured"
+        }
+      ],
+      "explanation": {
+        "language": "en",
+        "text": "Muse Spark selected checked statements.\nThe full checker rejected the moved plan.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.hatch_clear failed. The deck stack has no available closed hatch cover. Measured: not reported; limit: not reported; boxes: [\"QZXU0000077\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nRule imdg.segregation.7_4_3 failed. IMDG segregation level 2 is not satisfied. Measured: not reported; limit: not reported; boxes: [\"QZXU0000077\",\"QZXU0002193\"].",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The full checker rejected the moved plan.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.hatch_clear failed. The deck stack has no available closed hatch cover. Measured: not reported; limit: not reported; boxes: [\"QZXU0000077\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "The deck stack has no available closed hatch cover."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000077"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule imdg.segregation.7_4_3 failed. IMDG segregation level 2 is not satisfied. Measured: not reported; limit: not reported; boxes: [\"QZXU0000077\",\"QZXU0002193\"].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "imdg.segregation.7_4_3"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "IMDG segregation level 2 is not satisfied."
+              },
+              {
+                "path": "broken[2].measured",
+                "value": null
+              },
+              {
+                "path": "broken[2].limit",
+                "value": null
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": [
+                  "QZXU0000077",
+                  "QZXU0002193"
+                ]
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": null
+              },
+              {
+                "path": "broken[2].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      },
+      "template_explanation": {
+        "language": "en",
+        "text": "Template explanation.\nThe full checker rejected the moved plan.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.hatch_clear failed. The deck stack has no available closed hatch cover. Measured: not reported; limit: not reported; boxes: [\"QZXU0000077\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nRule imdg.segregation.7_4_3 failed. IMDG segregation level 2 is not satisfied. Measured: not reported; limit: not reported; boxes: [\"QZXU0000077\",\"QZXU0002193\"].\nExtra crane lifts are unavailable.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The full checker rejected the moved plan.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.hatch_clear failed. The deck stack has no available closed hatch cover. Measured: not reported; limit: not reported; boxes: [\"QZXU0000077\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "The deck stack has no available closed hatch cover."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000077"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule imdg.segregation.7_4_3 failed. IMDG segregation level 2 is not satisfied. Measured: not reported; limit: not reported; boxes: [\"QZXU0000077\",\"QZXU0002193\"].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "imdg.segregation.7_4_3"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "IMDG segregation level 2 is not satisfied."
+              },
+              {
+                "path": "broken[2].measured",
+                "value": null
+              },
+              {
+                "path": "broken[2].limit",
+                "value": null
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": [
+                  "QZXU0000077",
+                  "QZXU0002193"
+                ]
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": null
+              },
+              {
+                "path": "broken[2].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Extra crane lifts are unavailable.",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": null
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      }
+    },
+    {
+      "kind": "stack_weight",
+      "verdict_sha256": "63672afbfd46a9643b503bbe2ce96dda2118af06b78b81ee1a4b6fcebdf4f896",
+      "prompt_sha256": "c2d758c66f27a6cd9e21b47ee5456da765f93a37de487922da72e3c3bf6b34a1",
+      "selected_ids": [
+        "status",
+        "diagnostic",
+        "broken:0",
+        "broken:1",
+        "broken:2",
+        "broken:3",
+        "broken:4",
+        "broken:5",
+        "broken:6",
+        "broken:7",
+        "broken:8"
+      ],
+      "validated": true,
+      "rejection": null,
+      "request_id": "e3f05152-3689-45eb-b1c0-fe38382abc8f",
+      "cost_usd": "0.00432125",
+      "accounting": [
+        {
+          "time": "2026-11-02T01:25:47.503683+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": null,
+          "output_tokens": null,
+          "cached_tokens": null,
+          "purpose": "sandbox-verdict",
+          "request_id": null,
+          "reservation_id": "f58aa3db1e1c4c328cefaaf9220345be",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "reservation",
+          "cost_usd": "1.316864",
+          "status": "pending",
+          "cost_kind": "conservative_hold"
+        },
+        {
+          "time": "2026-11-02T01:25:47.503683+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": 2709,
+          "output_tokens": 220,
+          "cached_tokens": 0,
+          "purpose": "sandbox-verdict",
+          "request_id": "e3f05152-3689-45eb-b1c0-fe38382abc8f",
+          "reservation_id": "f58aa3db1e1c4c328cefaaf9220345be",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "settlement",
+          "status": "completed",
+          "cost_usd": "0.00432125",
+          "cost_kind": "measured"
+        }
+      ],
+      "explanation": {
+        "language": "en",
+        "text": "Muse Spark selected checked statements.\nThe full checker rejected the moved plan.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.hatch_clear failed. The deck stack has no available closed hatch cover. Measured: not reported; limit: not reported; boxes: [\"QZXU0001258\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nRule expert.physical.stack_weight failed. Stack exceeds its mass limit. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule expert.physical.stack_weight failed. [straits:call-0:THLCH:departure departure] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule expert.physical.stack_weight failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.080295203571009 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.0703729799748933 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule expert.physical.stack_weight failed. [straits:call-1:SGSIN:arrival arrival] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.0571189867482018 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The full checker rejected the moved plan.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.hatch_clear failed. The deck stack has no available closed hatch cover. Measured: not reported; limit: not reported; boxes: [\"QZXU0001258\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "The deck stack has no available closed hatch cover."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0001258"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule expert.physical.stack_weight failed. Stack exceeds its mass limit. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "expert.physical.stack_weight"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "Stack exceeds its mass limit."
+              },
+              {
+                "path": "broken[2].measured",
+                "value": 21821.63698283259
+              },
+              {
+                "path": "broken[2].limit",
+                "value": 18256.402964792054
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": "kg"
+              },
+              {
+                "path": "broken[2].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:3",
+            "text": "Rule expert.physical.stack_weight failed. [straits:call-0:THLCH:departure departure] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[3].rule_id",
+                "value": "expert.physical.stack_weight"
+              },
+              {
+                "path": "broken[3].message",
+                "value": "[straits:call-0:THLCH:departure departure] Physical stack 00904D exceeds its mass rating."
+              },
+              {
+                "path": "broken[3].measured",
+                "value": 21821.63698283259
+              },
+              {
+                "path": "broken[3].limit",
+                "value": 18256.402964792054
+              },
+              {
+                "path": "broken[3].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[3].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[3].unit",
+                "value": "kg"
+              },
+              {
+                "path": "broken[3].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:4",
+            "text": "Rule expert.physical.stack_weight failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[4].rule_id",
+                "value": "expert.physical.stack_weight"
+              },
+              {
+                "path": "broken[4].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] Physical stack 00904D exceeds its mass rating."
+              },
+              {
+                "path": "broken[4].measured",
+                "value": 21821.63698283259
+              },
+              {
+                "path": "broken[4].limit",
+                "value": 18256.402964792054
+              },
+              {
+                "path": "broken[4].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[4].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[4].unit",
+                "value": "kg"
+              },
+              {
+                "path": "broken[4].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:5",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.080295203571009 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[5].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[5].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[5].measured",
+                "value": 1.080295203571009
+              },
+              {
+                "path": "broken[5].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[5].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[5].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[5].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[5].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:6",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.0703729799748933 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[6].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[6].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[6].measured",
+                "value": 1.0703729799748933
+              },
+              {
+                "path": "broken[6].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[6].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[6].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[6].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[6].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:7",
+            "text": "Rule expert.physical.stack_weight failed. [straits:call-1:SGSIN:arrival arrival] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[7].rule_id",
+                "value": "expert.physical.stack_weight"
+              },
+              {
+                "path": "broken[7].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] Physical stack 00904D exceeds its mass rating."
+              },
+              {
+                "path": "broken[7].measured",
+                "value": 21821.63698283259
+              },
+              {
+                "path": "broken[7].limit",
+                "value": 18256.402964792054
+              },
+              {
+                "path": "broken[7].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[7].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[7].unit",
+                "value": "kg"
+              },
+              {
+                "path": "broken[7].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:8",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.0571189867482018 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[8].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[8].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[8].measured",
+                "value": 1.0571189867482018
+              },
+              {
+                "path": "broken[8].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[8].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[8].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[8].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[8].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      },
+      "template_explanation": {
+        "language": "en",
+        "text": "Template explanation.\nThe full checker rejected the moved plan.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.hatch_clear failed. The deck stack has no available closed hatch cover. Measured: not reported; limit: not reported; boxes: [\"QZXU0001258\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nRule expert.physical.stack_weight failed. Stack exceeds its mass limit. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule expert.physical.stack_weight failed. [straits:call-0:THLCH:departure departure] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule expert.physical.stack_weight failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.080295203571009 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.0703729799748933 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule expert.physical.stack_weight failed. [straits:call-1:SGSIN:arrival arrival] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.0571189867482018 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].\nExtra crane lifts are unavailable.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The full checker rejected the moved plan.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.hatch_clear failed. The deck stack has no available closed hatch cover. Measured: not reported; limit: not reported; boxes: [\"QZXU0001258\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "The deck stack has no available closed hatch cover."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0001258"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule expert.physical.stack_weight failed. Stack exceeds its mass limit. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "expert.physical.stack_weight"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "Stack exceeds its mass limit."
+              },
+              {
+                "path": "broken[2].measured",
+                "value": 21821.63698283259
+              },
+              {
+                "path": "broken[2].limit",
+                "value": 18256.402964792054
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": "kg"
+              },
+              {
+                "path": "broken[2].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:3",
+            "text": "Rule expert.physical.stack_weight failed. [straits:call-0:THLCH:departure departure] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[3].rule_id",
+                "value": "expert.physical.stack_weight"
+              },
+              {
+                "path": "broken[3].message",
+                "value": "[straits:call-0:THLCH:departure departure] Physical stack 00904D exceeds its mass rating."
+              },
+              {
+                "path": "broken[3].measured",
+                "value": 21821.63698283259
+              },
+              {
+                "path": "broken[3].limit",
+                "value": 18256.402964792054
+              },
+              {
+                "path": "broken[3].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[3].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[3].unit",
+                "value": "kg"
+              },
+              {
+                "path": "broken[3].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:4",
+            "text": "Rule expert.physical.stack_weight failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[4].rule_id",
+                "value": "expert.physical.stack_weight"
+              },
+              {
+                "path": "broken[4].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] Physical stack 00904D exceeds its mass rating."
+              },
+              {
+                "path": "broken[4].measured",
+                "value": 21821.63698283259
+              },
+              {
+                "path": "broken[4].limit",
+                "value": 18256.402964792054
+              },
+              {
+                "path": "broken[4].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[4].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[4].unit",
+                "value": "kg"
+              },
+              {
+                "path": "broken[4].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:5",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.080295203571009 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[5].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[5].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[5].measured",
+                "value": 1.080295203571009
+              },
+              {
+                "path": "broken[5].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[5].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[5].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[5].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[5].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:6",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.0703729799748933 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[6].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[6].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[6].measured",
+                "value": 1.0703729799748933
+              },
+              {
+                "path": "broken[6].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[6].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[6].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[6].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[6].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:7",
+            "text": "Rule expert.physical.stack_weight failed. [straits:call-1:SGSIN:arrival arrival] Physical stack 00904D exceeds its mass rating. Measured: 21821.63698283259 kg; limit: 18256.402964792054 kg; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[7].rule_id",
+                "value": "expert.physical.stack_weight"
+              },
+              {
+                "path": "broken[7].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] Physical stack 00904D exceeds its mass rating."
+              },
+              {
+                "path": "broken[7].measured",
+                "value": 21821.63698283259
+              },
+              {
+                "path": "broken[7].limit",
+                "value": 18256.402964792054
+              },
+              {
+                "path": "broken[7].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[7].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[7].unit",
+                "value": "kg"
+              },
+              {
+                "path": "broken[7].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "broken:8",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.0571189867482018 ratio; limit: 1.0 ratio; boxes: [\"QZXU0001068\",\"QZXU0001258\",\"QZXU0001582\"].",
+            "evidence": [
+              {
+                "path": "broken[8].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[8].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[8].measured",
+                "value": 1.0571189867482018
+              },
+              {
+                "path": "broken[8].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[8].boxes",
+                "value": [
+                  "QZXU0001068",
+                  "QZXU0001258",
+                  "QZXU0001582"
+                ]
+              },
+              {
+                "path": "broken[8].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[8].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[8].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Extra crane lifts are unavailable.",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": null
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      }
+    }
+  ],
+  "task_actual_usd": "0.00874025",
+  "task_hold_usd": "0",
+  "incremental_actual_usd": "0.00874025"
+}

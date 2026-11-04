@@ -1,0 +1,2052 @@
+{
+  "schema_version": "stowlm.lattice-hero/1",
+  "synthetic": true,
+  "campaign_id": "current-v3",
+  "selection_status": "hero_and_backup_checked",
+  "hero": {
+    "path": "experiments/mvp/strategy/fillsweep/maps/train/medium/feeder_500/f60-low/seed-192200002.json",
+    "instance_id": "D192.medium-feeder_500-f60-low-s192200002",
+    "instance_sha256": "cabff3d68d56e64ba9956761bcd0ca2abfa5077d41296db35b630efc11b04678",
+    "file_sha256": "2d89a0b873027fa161267de22d3d397e00e2f773af5b574b25dfb88ce2cbd619",
+    "boxes": 87,
+    "reefers": 2,
+    "dg": [
+      {
+        "id": "QZXU0000014",
+        "imdg_class": "3"
+      },
+      {
+        "id": "QZXU0000288",
+        "imdg_class": "2.2"
+      },
+      {
+        "id": "QZXU0000328",
+        "imdg_class": "3"
+      },
+      {
+        "id": "QZXU0000349",
+        "imdg_class": "8"
+      }
+    ],
+    "pods": [
+      "MYPKG",
+      "SGSIN"
+    ],
+    "envelope": {
+      "in_envelope": true,
+      "size_class": "medium",
+      "reasons": [],
+      "numbers": {
+        "boxes_to_load": 87,
+        "box_limit": 195,
+        "physical_cell_demand": 143,
+        "physical_cell_capacity": 240,
+        "physical_cell_fill": 0.5958333333333333,
+        "fill_limit": 0.7,
+        "onboard_boxes": 0,
+        "loading_calls": 1,
+        "discharge_boxes": 0,
+        "ship": "feeder_500",
+        "stage": "A",
+        "planned_region": "half-ship section",
+        "fill_scope": "physical cells in the planned region",
+        "section_of": "feeder_500"
+      }
+    },
+    "context": {
+      "id": "D192.medium-feeder_500-f60-low-s192200002",
+      "bays": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        21,
+        22,
+        23
+      ],
+      "max_tiers": {
+        "hold": 3,
+        "deck": 5
+      },
+      "max_tiers_by_bay": {
+        "1": {
+          "hold": 2,
+          "deck": 5
+        },
+        "2": {
+          "hold": 2,
+          "deck": 5
+        },
+        "3": {
+          "hold": 2,
+          "deck": 5
+        },
+        "9": {
+          "hold": 3,
+          "deck": 5
+        },
+        "10": {
+          "hold": 3,
+          "deck": 5
+        },
+        "11": {
+          "hold": 3,
+          "deck": 5
+        },
+        "21": {
+          "hold": 2,
+          "deck": 5
+        },
+        "22": {
+          "hold": 2,
+          "deck": 5
+        },
+        "23": {
+          "hold": 2,
+          "deck": 5
+        }
+      },
+      "has_accommodation": true,
+      "hatch_covers": [
+        "HC-002-P",
+        "HC-002-S",
+        "HC-010-P",
+        "HC-010-S",
+        "HC-022-P",
+        "HC-022-S"
+      ],
+      "ports": [
+        "SGSIN",
+        "MYPKG",
+        "THLCH"
+      ]
+    },
+    "screening_result": "experiments/mvp/pipeline/lattice/screening/current-v3/cabff3d68d56e64b.repaired.json",
+    "base_plan": "experiments/mvp/pipeline/lattice/fixtures/hero-base.json",
+    "base_entry": "experiments/mvp/pipeline/lattice/store/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json",
+    "lifts": 66.0,
+    "total_lifts_now": 143,
+    "plan_producer": "lattice.sequence",
+    "producer_label": "Deterministic crane-sequence repair after Frontier Engine 0.13.0",
+    "frames_checked": 144,
+    "computed_utc": "2026-11-02T02:50:09.142520+00:00",
+    "why": "Screened in-envelope development candidate with a full original-instance checker pass and every crane frame inside limits; synthetic DG cargo, reefers and 2 discharge ports, with 40.42% of section capacity open."
+  },
+  "backup": {
+    "path": "experiments/mvp/strategy/fillsweep/maps/train/medium/feeder_800/f60-low/seed-192200100.json",
+    "instance_id": "D192.medium-feeder_800-f60-low-s192200100",
+    "instance_sha256": "084ffe943b9979665a16f21f613767afd5f5d0a623a1fa39eda8d299bc16730e",
+    "file_sha256": "0a24a8081157731b82db0b66a247988a8809100ce1311fff94c86ff361c06f4a",
+    "boxes": 163,
+    "reefers": 5,
+    "dg": [
+      {
+        "id": "QZXU0000077",
+        "imdg_class": "3"
+      },
+      {
+        "id": "QZXU0000713",
+        "imdg_class": "3"
+      },
+      {
+        "id": "QZXU0001263",
+        "imdg_class": "3"
+      },
+      {
+        "id": "QZXU0001833",
+        "imdg_class": "8"
+      },
+      {
+        "id": "QZXU0002193",
+        "imdg_class": "8"
+      }
+    ],
+    "pods": [
+      "MYPKG",
+      "SGSIN"
+    ],
+    "envelope": {
+      "in_envelope": true,
+      "size_class": "medium",
+      "reasons": [],
+      "numbers": {
+        "boxes_to_load": 163,
+        "box_limit": 195,
+        "physical_cell_demand": 271,
+        "physical_cell_capacity": 452,
+        "physical_cell_fill": 0.5995575221238938,
+        "fill_limit": 0.7,
+        "onboard_boxes": 0,
+        "loading_calls": 1,
+        "discharge_boxes": 0,
+        "ship": "feeder_800",
+        "stage": "A",
+        "planned_region": "half-ship section",
+        "fill_scope": "physical cells in the planned region",
+        "section_of": "feeder_800"
+      }
+    },
+    "context": {
+      "id": "D192.medium-feeder_800-f60-low-s192200100",
+      "bays": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        17,
+        18,
+        19,
+        25,
+        26,
+        27
+      ],
+      "max_tiers": {
+        "hold": 3,
+        "deck": 5
+      },
+      "max_tiers_by_bay": {
+        "1": {
+          "hold": 3,
+          "deck": 5
+        },
+        "2": {
+          "hold": 3,
+          "deck": 5
+        },
+        "3": {
+          "hold": 3,
+          "deck": 5
+        },
+        "9": {
+          "hold": 3,
+          "deck": 5
+        },
+        "10": {
+          "hold": 3,
+          "deck": 5
+        },
+        "11": {
+          "hold": 3,
+          "deck": 5
+        },
+        "17": {
+          "hold": 3,
+          "deck": 5
+        },
+        "18": {
+          "hold": 3,
+          "deck": 5
+        },
+        "19": {
+          "hold": 3,
+          "deck": 5
+        },
+        "25": {
+          "hold": 3,
+          "deck": 5
+        },
+        "26": {
+          "hold": 3,
+          "deck": 5
+        },
+        "27": {
+          "hold": 3,
+          "deck": 5
+        }
+      },
+      "has_accommodation": true,
+      "hatch_covers": [
+        "HC-002-P",
+        "HC-002-S",
+        "HC-010-P",
+        "HC-010-S",
+        "HC-018-P",
+        "HC-018-S",
+        "HC-026-P",
+        "HC-026-S"
+      ],
+      "ports": [
+        "SGSIN",
+        "MYPKG",
+        "THLCH"
+      ]
+    },
+    "screening_result": "experiments/mvp/pipeline/lattice/screening/current-v3/084ffe943b997966.block.json",
+    "base_plan": "experiments/mvp/pipeline/lattice/fixtures/backup-base.json",
+    "base_entry": "experiments/mvp/pipeline/lattice/store/a8c3afc17f1d575bc8cea051969e52db8926a34eba881a3e1d166a45576f8f52.json",
+    "lifts": 115.0,
+    "total_lifts_now": 262,
+    "plan_producer": "lattice.recover_candidate",
+    "producer_label": "Recorded crane permutation, freshly checked under current physics",
+    "frames_checked": 263,
+    "computed_utc": "2026-11-02T03:27:52.932841+00:00",
+    "why": "Screened in-envelope development candidate with a full original-instance checker pass and every crane frame inside limits; synthetic DG cargo, reefers and 2 discharge ports, with 40.04% of section capacity open."
+  },
+  "story_candidates": [
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 1 20-foot bays away from the accommodation.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "2.2",
+            "min_bays": 1,
+            "away_from": {
+              "kind": "accommodation"
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000288 -> 0220302: instruction: QZXU0000288 may not be stowed at 0220302",
+        "final QZXU0000288 at 0220302: instruction: QZXU0000288 may not be stowed at 0220302"
+      ],
+      "anchor": {
+        "kind": "accommodation"
+      },
+      "anchor_container_ids": [],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000288"
+      ],
+      "accommodation_regions": [
+        {
+          "id": "deckhouse",
+          "kind": "accommodation",
+          "source_kind": "deckhouse",
+          "source_id": "deckhouse",
+          "bounds": {
+            "x_min_m": 2.6950000000000003,
+            "x_max_m": 11.858,
+            "y_min_m": -8.16,
+            "y_max_m": 8.16,
+            "z_min_m": 9.2,
+            "z_max_m": 28.2
+          },
+          "assumption": "APPROXIMATION: Explicit synthetic 3D role catalog, not surveyed geometry or recovered transverse extent. Deckhouse x/z share the declared windage rectangle; transverse half-width 0.425B is a new design assumption. Bridge work area is a synthetic 0.5m-long, 1m-high room around the declared conning reference. Air-intake 0.5m boxes share actual lowest aperture-edge coordinates. Geometry carries no extra mass: superstructure is already in lightship. This catalog is not inserted as an opaque own-wheelhouse visibility obstacle."
+        }
+      ],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 2 20-foot bays away from the accommodation.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "2.2",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "accommodation"
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000288 -> 0220302: instruction: QZXU0000288 may not be stowed at 0220302",
+        "final QZXU0000288 at 0220302: instruction: QZXU0000288 may not be stowed at 0220302"
+      ],
+      "anchor": {
+        "kind": "accommodation"
+      },
+      "anchor_container_ids": [],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000288"
+      ],
+      "accommodation_regions": [
+        {
+          "id": "deckhouse",
+          "kind": "accommodation",
+          "source_kind": "deckhouse",
+          "source_id": "deckhouse",
+          "bounds": {
+            "x_min_m": 2.6950000000000003,
+            "x_max_m": 11.858,
+            "y_min_m": -8.16,
+            "y_max_m": 8.16,
+            "z_min_m": 9.2,
+            "z_max_m": 28.2
+          },
+          "assumption": "APPROXIMATION: Explicit synthetic 3D role catalog, not surveyed geometry or recovered transverse extent. Deckhouse x/z share the declared windage rectangle; transverse half-width 0.425B is a new design assumption. Bridge work area is a synthetic 0.5m-long, 1m-high room around the declared conning reference. Air-intake 0.5m boxes share actual lowest aperture-edge coordinates. Geometry carries no extra mass: superstructure is already in lightship. This catalog is not inserted as an opaque own-wheelhouse visibility obstacle."
+        }
+      ],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "2.2",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "accommodation"
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000288 -> 0220302: instruction: QZXU0000288 may not be stowed at 0220302",
+        "final QZXU0000288 at 0220302: instruction: QZXU0000288 may not be stowed at 0220302"
+      ],
+      "anchor": {
+        "kind": "accommodation"
+      },
+      "anchor_container_ids": [],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000288"
+      ],
+      "accommodation_regions": [
+        {
+          "id": "deckhouse",
+          "kind": "accommodation",
+          "source_kind": "deckhouse",
+          "source_id": "deckhouse",
+          "bounds": {
+            "x_min_m": 2.6950000000000003,
+            "x_max_m": 11.858,
+            "y_min_m": -8.16,
+            "y_max_m": 8.16,
+            "z_min_m": 9.2,
+            "z_max_m": 28.2
+          },
+          "assumption": "APPROXIMATION: Explicit synthetic 3D role catalog, not surveyed geometry or recovered transverse extent. Deckhouse x/z share the declared windage rectangle; transverse half-width 0.425B is a new design assumption. Bridge work area is a synthetic 0.5m-long, 1m-high room around the declared conning reference. Air-intake 0.5m boxes share actual lowest aperture-edge coordinates. Geometry carries no extra mass: superstructure is already in lightship. This catalog is not inserted as an opaque own-wheelhouse visibility obstacle."
+        }
+      ],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 1 20-foot bays away from the accommodation.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 1,
+            "away_from": {
+              "kind": "accommodation"
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000328 -> 0230184: instruction: QZXU0000328 may not be stowed at 0230184",
+        "final QZXU0000328 at 0230184: instruction: QZXU0000328 may not be stowed at 0230184"
+      ],
+      "anchor": {
+        "kind": "accommodation"
+      },
+      "anchor_container_ids": [],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [
+        {
+          "id": "deckhouse",
+          "kind": "accommodation",
+          "source_kind": "deckhouse",
+          "source_id": "deckhouse",
+          "bounds": {
+            "x_min_m": 2.6950000000000003,
+            "x_max_m": 11.858,
+            "y_min_m": -8.16,
+            "y_max_m": 8.16,
+            "z_min_m": 9.2,
+            "z_max_m": 28.2
+          },
+          "assumption": "APPROXIMATION: Explicit synthetic 3D role catalog, not surveyed geometry or recovered transverse extent. Deckhouse x/z share the declared windage rectangle; transverse half-width 0.425B is a new design assumption. Bridge work area is a synthetic 0.5m-long, 1m-high room around the declared conning reference. Air-intake 0.5m boxes share actual lowest aperture-edge coordinates. Geometry carries no extra mass: superstructure is already in lightship. This catalog is not inserted as an opaque own-wheelhouse visibility obstacle."
+        }
+      ],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from the accommodation.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "accommodation"
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000328 -> 0230184: instruction: QZXU0000328 may not be stowed at 0230184",
+        "final QZXU0000328 at 0230184: instruction: QZXU0000328 may not be stowed at 0230184"
+      ],
+      "anchor": {
+        "kind": "accommodation"
+      },
+      "anchor_container_ids": [],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [
+        {
+          "id": "deckhouse",
+          "kind": "accommodation",
+          "source_kind": "deckhouse",
+          "source_id": "deckhouse",
+          "bounds": {
+            "x_min_m": 2.6950000000000003,
+            "x_max_m": 11.858,
+            "y_min_m": -8.16,
+            "y_max_m": 8.16,
+            "z_min_m": 9.2,
+            "z_max_m": 28.2
+          },
+          "assumption": "APPROXIMATION: Explicit synthetic 3D role catalog, not surveyed geometry or recovered transverse extent. Deckhouse x/z share the declared windage rectangle; transverse half-width 0.425B is a new design assumption. Bridge work area is a synthetic 0.5m-long, 1m-high room around the declared conning reference. Air-intake 0.5m boxes share actual lowest aperture-edge coordinates. Geometry carries no extra mass: superstructure is already in lightship. This catalog is not inserted as an opaque own-wheelhouse visibility obstacle."
+        }
+      ],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from the accommodation.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "accommodation"
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000328 -> 0230184: instruction: QZXU0000328 may not be stowed at 0230184",
+        "final QZXU0000328 at 0230184: instruction: QZXU0000328 may not be stowed at 0230184"
+      ],
+      "anchor": {
+        "kind": "accommodation"
+      },
+      "anchor_container_ids": [],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [
+        {
+          "id": "deckhouse",
+          "kind": "accommodation",
+          "source_kind": "deckhouse",
+          "source_id": "deckhouse",
+          "bounds": {
+            "x_min_m": 2.6950000000000003,
+            "x_max_m": 11.858,
+            "y_min_m": -8.16,
+            "y_max_m": 8.16,
+            "z_min_m": 9.2,
+            "z_max_m": 28.2
+          },
+          "assumption": "APPROXIMATION: Explicit synthetic 3D role catalog, not surveyed geometry or recovered transverse extent. Deckhouse x/z share the declared windage rectangle; transverse half-width 0.425B is a new design assumption. Bridge work area is a synthetic 0.5m-long, 1m-high room around the declared conning reference. Air-intake 0.5m boxes share actual lowest aperture-edge coordinates. Geometry carries no extra mass: superstructure is already in lightship. This catalog is not inserted as an opaque own-wheelhouse visibility obstacle."
+        }
+      ],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 8 containers at least 2 20-foot bays away from the accommodation.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "8",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "accommodation"
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000349 -> 0210482: instruction: QZXU0000349 may not be stowed at 0210482",
+        "final QZXU0000349 at 0210482: instruction: QZXU0000349 may not be stowed at 0210482"
+      ],
+      "anchor": {
+        "kind": "accommodation"
+      },
+      "anchor_container_ids": [],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000349"
+      ],
+      "accommodation_regions": [
+        {
+          "id": "deckhouse",
+          "kind": "accommodation",
+          "source_kind": "deckhouse",
+          "source_id": "deckhouse",
+          "bounds": {
+            "x_min_m": 2.6950000000000003,
+            "x_max_m": 11.858,
+            "y_min_m": -8.16,
+            "y_max_m": 8.16,
+            "z_min_m": 9.2,
+            "z_max_m": 28.2
+          },
+          "assumption": "APPROXIMATION: Explicit synthetic 3D role catalog, not surveyed geometry or recovered transverse extent. Deckhouse x/z share the declared windage rectangle; transverse half-width 0.425B is a new design assumption. Bridge work area is a synthetic 0.5m-long, 1m-high room around the declared conning reference. Air-intake 0.5m boxes share actual lowest aperture-edge coordinates. Geometry carries no extra mass: superstructure is already in lightship. This catalog is not inserted as an opaque own-wheelhouse visibility obstacle."
+        }
+      ],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 8 containers at least 3 20-foot bays away from the accommodation.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "8",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "accommodation"
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000349 -> 0210482: instruction: QZXU0000349 may not be stowed at 0210482",
+        "final QZXU0000349 at 0210482: instruction: QZXU0000349 may not be stowed at 0210482"
+      ],
+      "anchor": {
+        "kind": "accommodation"
+      },
+      "anchor_container_ids": [],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000349"
+      ],
+      "accommodation_regions": [
+        {
+          "id": "deckhouse",
+          "kind": "accommodation",
+          "source_kind": "deckhouse",
+          "source_id": "deckhouse",
+          "bounds": {
+            "x_min_m": 2.6950000000000003,
+            "x_max_m": 11.858,
+            "y_min_m": -8.16,
+            "y_max_m": 8.16,
+            "z_min_m": 9.2,
+            "z_max_m": 28.2
+          },
+          "assumption": "APPROXIMATION: Explicit synthetic 3D role catalog, not surveyed geometry or recovered transverse extent. Deckhouse x/z share the declared windage rectangle; transverse half-width 0.425B is a new design assumption. Bridge work area is a synthetic 0.5m-long, 1m-high room around the declared conning reference. Air-intake 0.5m boxes share actual lowest aperture-edge coordinates. Geometry carries no extra mass: superstructure is already in lightship. This catalog is not inserted as an opaque own-wheelhouse visibility obstacle."
+        }
+      ],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 1 20-foot bays away from bay 09.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 1,
+            "away_from": {
+              "kind": "bay",
+              "bay": 9
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000014 -> 0100202: instruction: QZXU0000014 may not be stowed at 0100202",
+        "final QZXU0000014 at 0100202: instruction: QZXU0000014 may not be stowed at 0100202"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 9
+      },
+      "anchor_container_ids": [
+        "QZXU0000966",
+        "QZXU0000734",
+        "QZXU0000673",
+        "QZXU0000020",
+        "QZXU0000035",
+        "QZXU0000591",
+        "QZXU0000760",
+        "QZXU0000647",
+        "QZXU0000396",
+        "QZXU0000230",
+        "QZXU0000565",
+        "QZXU0001140",
+        "QZXU0001155",
+        "QZXU0000098",
+        "QZXU0000122",
+        "QZXU0000082",
+        "QZXU0000858",
+        "QZXU0000307",
+        "QZXU0000518",
+        "QZXU0000842",
+        "QZXU0000821",
+        "QZXU0000971",
+        "QZXU0001134",
+        "QZXU0000040",
+        "QZXU0000863",
+        "QZXU0000797",
+        "QZXU0000360",
+        "QZXU0000009",
+        "QZXU0000462",
+        "QZXU0001052",
+        "QZXU0001200",
+        "QZXU0000478",
+        "QZXU0001113",
+        "QZXU0000415",
+        "QZXU0000354"
+      ],
+      "anchor_reefer_ids": [
+        "QZXU0000230",
+        "QZXU0000565"
+      ],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 1 20-foot bays away from bay 11.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 1,
+            "away_from": {
+              "kind": "bay",
+              "bay": 11
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000014 -> 0100202: instruction: QZXU0000014 may not be stowed at 0100202",
+        "final QZXU0000014 at 0100202: instruction: QZXU0000014 may not be stowed at 0100202"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 11
+      },
+      "anchor_container_ids": [
+        "QZXU0000230",
+        "QZXU0000565",
+        "QZXU0001140",
+        "QZXU0001155",
+        "QZXU0000098",
+        "QZXU0000122",
+        "QZXU0000082",
+        "QZXU0000858",
+        "QZXU0000307",
+        "QZXU0000518",
+        "QZXU0000842",
+        "QZXU0000821",
+        "QZXU0000971",
+        "QZXU0001134",
+        "QZXU0000040",
+        "QZXU0000863",
+        "QZXU0000797",
+        "QZXU0000360",
+        "QZXU0000009",
+        "QZXU0000462",
+        "QZXU0001052",
+        "QZXU0001200",
+        "QZXU0000478",
+        "QZXU0001113",
+        "QZXU0000415",
+        "QZXU0000354",
+        "QZXU0000502",
+        "QZXU0000077",
+        "QZXU0000884",
+        "QZXU0000586",
+        "QZXU0000159",
+        "QZXU0000143"
+      ],
+      "anchor_reefer_ids": [
+        "QZXU0000230",
+        "QZXU0000565"
+      ],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from bay 09.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "bay",
+              "bay": 9
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000014 -> 0100202: instruction: QZXU0000014 may not be stowed at 0100202",
+        "final QZXU0000014 at 0100202: instruction: QZXU0000014 may not be stowed at 0100202"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 9
+      },
+      "anchor_container_ids": [
+        "QZXU0000966",
+        "QZXU0000734",
+        "QZXU0000673",
+        "QZXU0000020",
+        "QZXU0000035",
+        "QZXU0000591",
+        "QZXU0000760",
+        "QZXU0000647",
+        "QZXU0000396",
+        "QZXU0000230",
+        "QZXU0000565",
+        "QZXU0001140",
+        "QZXU0001155",
+        "QZXU0000098",
+        "QZXU0000122",
+        "QZXU0000082",
+        "QZXU0000858",
+        "QZXU0000307",
+        "QZXU0000518",
+        "QZXU0000842",
+        "QZXU0000821",
+        "QZXU0000971",
+        "QZXU0001134",
+        "QZXU0000040",
+        "QZXU0000863",
+        "QZXU0000797",
+        "QZXU0000360",
+        "QZXU0000009",
+        "QZXU0000462",
+        "QZXU0001052",
+        "QZXU0001200",
+        "QZXU0000478",
+        "QZXU0001113",
+        "QZXU0000415",
+        "QZXU0000354"
+      ],
+      "anchor_reefer_ids": [
+        "QZXU0000230",
+        "QZXU0000565"
+      ],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from bay 11.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "bay",
+              "bay": 11
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000014 -> 0100202: instruction: QZXU0000014 may not be stowed at 0100202",
+        "final QZXU0000014 at 0100202: instruction: QZXU0000014 may not be stowed at 0100202"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 11
+      },
+      "anchor_container_ids": [
+        "QZXU0000230",
+        "QZXU0000565",
+        "QZXU0001140",
+        "QZXU0001155",
+        "QZXU0000098",
+        "QZXU0000122",
+        "QZXU0000082",
+        "QZXU0000858",
+        "QZXU0000307",
+        "QZXU0000518",
+        "QZXU0000842",
+        "QZXU0000821",
+        "QZXU0000971",
+        "QZXU0001134",
+        "QZXU0000040",
+        "QZXU0000863",
+        "QZXU0000797",
+        "QZXU0000360",
+        "QZXU0000009",
+        "QZXU0000462",
+        "QZXU0001052",
+        "QZXU0001200",
+        "QZXU0000478",
+        "QZXU0001113",
+        "QZXU0000415",
+        "QZXU0000354",
+        "QZXU0000502",
+        "QZXU0000077",
+        "QZXU0000884",
+        "QZXU0000586",
+        "QZXU0000159",
+        "QZXU0000143"
+      ],
+      "anchor_reefer_ids": [
+        "QZXU0000230",
+        "QZXU0000565"
+      ],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from bay 09.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "bay",
+              "bay": 9
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000014 -> 0100202: instruction: QZXU0000014 may not be stowed at 0100202",
+        "final QZXU0000014 at 0100202: instruction: QZXU0000014 may not be stowed at 0100202"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 9
+      },
+      "anchor_container_ids": [
+        "QZXU0000966",
+        "QZXU0000734",
+        "QZXU0000673",
+        "QZXU0000020",
+        "QZXU0000035",
+        "QZXU0000591",
+        "QZXU0000760",
+        "QZXU0000647",
+        "QZXU0000396",
+        "QZXU0000230",
+        "QZXU0000565",
+        "QZXU0001140",
+        "QZXU0001155",
+        "QZXU0000098",
+        "QZXU0000122",
+        "QZXU0000082",
+        "QZXU0000858",
+        "QZXU0000307",
+        "QZXU0000518",
+        "QZXU0000842",
+        "QZXU0000821",
+        "QZXU0000971",
+        "QZXU0001134",
+        "QZXU0000040",
+        "QZXU0000863",
+        "QZXU0000797",
+        "QZXU0000360",
+        "QZXU0000009",
+        "QZXU0000462",
+        "QZXU0001052",
+        "QZXU0001200",
+        "QZXU0000478",
+        "QZXU0001113",
+        "QZXU0000415",
+        "QZXU0000354"
+      ],
+      "anchor_reefer_ids": [
+        "QZXU0000230",
+        "QZXU0000565"
+      ],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from bay 11.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "bay",
+              "bay": 11
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000014 -> 0100202: instruction: QZXU0000014 may not be stowed at 0100202",
+        "final QZXU0000014 at 0100202: instruction: QZXU0000014 may not be stowed at 0100202"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 11
+      },
+      "anchor_container_ids": [
+        "QZXU0000230",
+        "QZXU0000565",
+        "QZXU0001140",
+        "QZXU0001155",
+        "QZXU0000098",
+        "QZXU0000122",
+        "QZXU0000082",
+        "QZXU0000858",
+        "QZXU0000307",
+        "QZXU0000518",
+        "QZXU0000842",
+        "QZXU0000821",
+        "QZXU0000971",
+        "QZXU0001134",
+        "QZXU0000040",
+        "QZXU0000863",
+        "QZXU0000797",
+        "QZXU0000360",
+        "QZXU0000009",
+        "QZXU0000462",
+        "QZXU0001052",
+        "QZXU0001200",
+        "QZXU0000478",
+        "QZXU0001113",
+        "QZXU0000415",
+        "QZXU0000354",
+        "QZXU0000502",
+        "QZXU0000077",
+        "QZXU0000884",
+        "QZXU0000586",
+        "QZXU0000159",
+        "QZXU0000143"
+      ],
+      "anchor_reefer_ids": [
+        "QZXU0000230",
+        "QZXU0000565"
+      ],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": true,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 1 20-foot bays away from bay 21.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "2.2",
+            "min_bays": 1,
+            "away_from": {
+              "kind": "bay",
+              "bay": 21
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000288 -> 0220302: instruction: QZXU0000288 may not be stowed at 0220302",
+        "final QZXU0000288 at 0220302: instruction: QZXU0000288 may not be stowed at 0220302"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 21
+      },
+      "anchor_container_ids": [
+        "QZXU0000061",
+        "QZXU0000610",
+        "QZXU0000349",
+        "QZXU0000550",
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000288"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 1 20-foot bays away from bay 23.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "2.2",
+            "min_bays": 1,
+            "away_from": {
+              "kind": "bay",
+              "bay": 23
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000288 -> 0220302: instruction: QZXU0000288 may not be stowed at 0220302",
+        "final QZXU0000288 at 0220302: instruction: QZXU0000288 may not be stowed at 0220302"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 23
+      },
+      "anchor_container_ids": [
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992",
+        "QZXU0000375",
+        "QZXU0000328",
+        "QZXU0000380",
+        "QZXU0000740",
+        "QZXU0000251",
+        "QZXU0000420",
+        "QZXU0001005"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000288"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 2 20-foot bays away from bay 21.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "2.2",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "bay",
+              "bay": 21
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000288 -> 0220302: instruction: QZXU0000288 may not be stowed at 0220302",
+        "final QZXU0000288 at 0220302: instruction: QZXU0000288 may not be stowed at 0220302"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 21
+      },
+      "anchor_container_ids": [
+        "QZXU0000061",
+        "QZXU0000610",
+        "QZXU0000349",
+        "QZXU0000550",
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000288"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 2 20-foot bays away from bay 23.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "2.2",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "bay",
+              "bay": 23
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000288 -> 0220302: instruction: QZXU0000288 may not be stowed at 0220302",
+        "final QZXU0000288 at 0220302: instruction: QZXU0000288 may not be stowed at 0220302"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 23
+      },
+      "anchor_container_ids": [
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992",
+        "QZXU0000375",
+        "QZXU0000328",
+        "QZXU0000380",
+        "QZXU0000740",
+        "QZXU0000251",
+        "QZXU0000420",
+        "QZXU0001005"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000288"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from bay 21.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "2.2",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "bay",
+              "bay": 21
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000288 -> 0220302: instruction: QZXU0000288 may not be stowed at 0220302",
+        "final QZXU0000288 at 0220302: instruction: QZXU0000288 may not be stowed at 0220302"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 21
+      },
+      "anchor_container_ids": [
+        "QZXU0000061",
+        "QZXU0000610",
+        "QZXU0000349",
+        "QZXU0000550",
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000288"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from bay 23.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "2.2",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "bay",
+              "bay": 23
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000288 -> 0220302: instruction: QZXU0000288 may not be stowed at 0220302",
+        "final QZXU0000288 at 0220302: instruction: QZXU0000288 may not be stowed at 0220302"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 23
+      },
+      "anchor_container_ids": [
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992",
+        "QZXU0000375",
+        "QZXU0000328",
+        "QZXU0000380",
+        "QZXU0000740",
+        "QZXU0000251",
+        "QZXU0000420",
+        "QZXU0001005"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000288"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 1 20-foot bays away from bay 23.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 1,
+            "away_from": {
+              "kind": "bay",
+              "bay": 23
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000328 -> 0230184: instruction: QZXU0000328 may not be stowed at 0230184",
+        "final QZXU0000328 at 0230184: instruction: QZXU0000328 may not be stowed at 0230184"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 23
+      },
+      "anchor_container_ids": [
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992",
+        "QZXU0000375",
+        "QZXU0000380",
+        "QZXU0000740",
+        "QZXU0000251",
+        "QZXU0000420",
+        "QZXU0001005"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from bay 21.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "bay",
+              "bay": 21
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000328 -> 0230184: instruction: QZXU0000328 may not be stowed at 0230184",
+        "final QZXU0000328 at 0230184: instruction: QZXU0000328 may not be stowed at 0230184"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 21
+      },
+      "anchor_container_ids": [
+        "QZXU0000061",
+        "QZXU0000610",
+        "QZXU0000349",
+        "QZXU0000550",
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from bay 23.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "bay",
+              "bay": 23
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000328 -> 0230184: instruction: QZXU0000328 may not be stowed at 0230184",
+        "final QZXU0000328 at 0230184: instruction: QZXU0000328 may not be stowed at 0230184"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 23
+      },
+      "anchor_container_ids": [
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992",
+        "QZXU0000375",
+        "QZXU0000380",
+        "QZXU0000740",
+        "QZXU0000251",
+        "QZXU0000420",
+        "QZXU0001005"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from bay 21.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "bay",
+              "bay": 21
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000328 -> 0230184: instruction: QZXU0000328 may not be stowed at 0230184",
+        "final QZXU0000328 at 0230184: instruction: QZXU0000328 may not be stowed at 0230184"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 21
+      },
+      "anchor_container_ids": [
+        "QZXU0000061",
+        "QZXU0000610",
+        "QZXU0000349",
+        "QZXU0000550",
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from bay 23.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "3",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "bay",
+              "bay": 23
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000328 -> 0230184: instruction: QZXU0000328 may not be stowed at 0230184",
+        "final QZXU0000328 at 0230184: instruction: QZXU0000328 may not be stowed at 0230184"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 23
+      },
+      "anchor_container_ids": [
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992",
+        "QZXU0000375",
+        "QZXU0000380",
+        "QZXU0000740",
+        "QZXU0000251",
+        "QZXU0000420",
+        "QZXU0001005"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000014",
+        "QZXU0000328"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 8 containers at least 1 20-foot bays away from bay 21.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "8",
+            "min_bays": 1,
+            "away_from": {
+              "kind": "bay",
+              "bay": 21
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000349 -> 0210482: instruction: QZXU0000349 may not be stowed at 0210482",
+        "final QZXU0000349 at 0210482: instruction: QZXU0000349 may not be stowed at 0210482"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 21
+      },
+      "anchor_container_ids": [
+        "QZXU0000061",
+        "QZXU0000610",
+        "QZXU0000550",
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000349"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 8 containers at least 2 20-foot bays away from bay 21.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "8",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "bay",
+              "bay": 21
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000349 -> 0210482: instruction: QZXU0000349 may not be stowed at 0210482",
+        "final QZXU0000349 at 0210482: instruction: QZXU0000349 may not be stowed at 0210482"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 21
+      },
+      "anchor_container_ids": [
+        "QZXU0000061",
+        "QZXU0000610",
+        "QZXU0000550",
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000349"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 8 containers at least 2 20-foot bays away from bay 23.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "8",
+            "min_bays": 2,
+            "away_from": {
+              "kind": "bay",
+              "bay": 23
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000349 -> 0210482: instruction: QZXU0000349 may not be stowed at 0210482",
+        "final QZXU0000349 at 0210482: instruction: QZXU0000349 may not be stowed at 0210482"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 23
+      },
+      "anchor_container_ids": [
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992",
+        "QZXU0000375",
+        "QZXU0000328",
+        "QZXU0000380",
+        "QZXU0000740",
+        "QZXU0000251",
+        "QZXU0000420",
+        "QZXU0001005"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000349"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 8 containers at least 3 20-foot bays away from bay 21.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "8",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "bay",
+              "bay": 21
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000349 -> 0210482: instruction: QZXU0000349 may not be stowed at 0210482",
+        "final QZXU0000349 at 0210482: instruction: QZXU0000349 may not be stowed at 0210482"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 21
+      },
+      "anchor_container_ids": [
+        "QZXU0000061",
+        "QZXU0000610",
+        "QZXU0000550",
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000349"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    },
+    {
+      "sentence": "Keep all IMDG class 8 containers at least 3 20-foot bays away from bay 23.",
+      "canonical_rules": [
+        {
+          "schema_version": "stowlm.reader/2",
+          "constraint": {
+            "type": "dg_keep_away",
+            "imdg_class": "8",
+            "min_bays": 3,
+            "away_from": {
+              "kind": "bay",
+              "bay": 23
+            }
+          }
+        }
+      ],
+      "base_violations": [
+        "load QZXU0000349 -> 0210482: instruction: QZXU0000349 may not be stowed at 0210482",
+        "final QZXU0000349 at 0210482: instruction: QZXU0000349 may not be stowed at 0210482"
+      ],
+      "anchor": {
+        "kind": "bay",
+        "bay": 23
+      },
+      "anchor_container_ids": [
+        "QZXU0000903",
+        "QZXU0000312",
+        "QZXU0001089",
+        "QZXU0000890",
+        "QZXU0000708",
+        "QZXU0000987",
+        "QZXU0001010",
+        "QZXU0000288",
+        "QZXU0001129",
+        "QZXU0000950",
+        "QZXU0000930",
+        "QZXU0000776",
+        "QZXU0001031",
+        "QZXU0001047",
+        "QZXU0000800",
+        "QZXU0001176",
+        "QZXU0000272",
+        "QZXU0000689",
+        "QZXU0000400",
+        "QZXU0000992",
+        "QZXU0000375",
+        "QZXU0000328",
+        "QZXU0000380",
+        "QZXU0000740",
+        "QZXU0000251",
+        "QZXU0000420",
+        "QZXU0001005"
+      ],
+      "anchor_reefer_ids": [],
+      "dg_container_ids": [
+        "QZXU0000349"
+      ],
+      "accommodation_regions": [],
+      "preferred_reference": false,
+      "status": "base_violated_candidate_not_yet_replanned"
+    }
+  ],
+  "assumptions": [
+    "Current binding runtime fingerprint is required for publication.",
+    "Standard is the provisional runner profile; actual wall time is recorded.",
+    "Feeder800 was preferred and screened; its earlier plans failed intermediate gauges.",
+    "The first fully gated primary is frozen so subsequent stored computations remain useful.",
+    "Backup must have a different instance hash and pass its own complete gate."
+  ],
+  "computed_utc": "2026-11-02T02:50:16.549466+00:00"
+}

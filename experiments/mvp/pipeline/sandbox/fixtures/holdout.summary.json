@@ -1,0 +1,71 @@
+{
+  "synthetic": true,
+  "mode": "recorded-derived",
+  "created_utc": "2026-11-02T02:51:51.102946+00:00",
+  "results_sha256": "251de4734193ba0e87e939da7a7a2d9a9960c69278fd34a9e5544085c369e6c4",
+  "manifest_sha256": "b12ae05218abc7d85a25537db9e12353f5940969990d40731910eb288206de2c",
+  "readiness_sha256": "8a52b3a1633ad413ac53fcf1cf9dbb062ee698e38f15fe07c85c4ef157d9b2cc",
+  "source_boxes": 163,
+  "different_instance_and_plan": true,
+  "requests": 40,
+  "distinct_boxes": 34,
+  "counts": {
+    "empty": 20,
+    "swap": 20
+  },
+  "fresh_canonical_checks": 40,
+  "reused_candidate_results": 0,
+  "candidate_input_bindings": true,
+  "postfreeze_calls": true,
+  "runtime_screen_disagreements": 0,
+  "false_legal_count": 0,
+  "denominator": 40,
+  "miss_rule_families": {},
+  "timings": {
+    "fast_response": {
+      "median_s": 5.385515708010644,
+      "p95_s": 8.171858666988555,
+      "max_s": 8.301213166036177
+    },
+    "full_api_response": {
+      "median_s": 34.79812814554316,
+      "p95_s": 42.24041254102485,
+      "max_s": 43.2117210419965
+    },
+    "canonical_checker": {
+      "median_s": 29.24654293700587,
+      "p95_s": 34.98718704201747,
+      "max_s": 35.74292666697875
+    }
+  },
+  "load1_readings": {
+    "admission": {
+      "min": 21.02,
+      "max": 44.41
+    },
+    "fast_load_after": {
+      "min": 21.02,
+      "max": 48.65
+    },
+    "load_after": {
+      "min": 22.24,
+      "max": 57.53
+    }
+  },
+  "workers": 4,
+  "native_thread_caps": "1 each",
+  "load_caveat": "Shared observed load; four concurrent measurement workers; admission wait excluded from response times.",
+  "freeze_utc": "2026-11-02T02:40:53.207120+00:00",
+  "first_request_started_utc": "2026-11-02T02:42:15.731733+00:00",
+  "first_canonical_started_utc": "2026-11-02T02:42:22.683552+00:00",
+  "completed_utc": "2026-11-02T02:50:50.982944+00:00",
+  "session": 54942,
+  "session_exit_code": 0,
+  "parent_pid": 7378,
+  "worker_pids": [
+    7394,
+    7395,
+    7396,
+    7397
+  ]
+}

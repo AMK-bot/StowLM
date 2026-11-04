@@ -1,0 +1,127 @@
+{
+  "schema_version": "stowlm.ext1.rows-archive-verification/1",
+  "verified": true,
+  "created_utc": "2026-11-03T06:03:39Z",
+  "original_path": "experiments/mvp/pipeline/sealed/runs/ext-1/rows.json",
+  "original_before": {
+    "bytes": 132080123,
+    "sha256": "6d3ffd91f22b3d06671b9ecbdefc07f4ebb5c0f271b62272b704a5b9a9dd6660"
+  },
+  "original_after": {
+    "bytes": 132080123,
+    "sha256": "6d3ffd91f22b3d06671b9ecbdefc07f4ebb5c0f271b62272b704a5b9a9dd6660"
+  },
+  "original_unchanged": true,
+  "original_mtime_ns_before": 1793685659649143941,
+  "original_mtime_ns_after": 1793685659649143941,
+  "archive_manifest": "experiments/mvp/pipeline/sealed/runs/ext-1/rows-archive/manifest.json",
+  "archive_manifest_sha256": "2148ec5d6bff2dd1abdb5c16593f4b6e5a2a824cd99c5673e8549de839021a6a",
+  "archive_readme_sha256": "209da8785b78126b2b5ce0cf9bea8792a361939ff5d8d59f85e1c340f91e3018",
+  "tool_sha256": "7cd3e5c838173645db30460b42a08a250b3ae67e9a4a0cc0f4905c9a6168ac96",
+  "test_tool_sha256": "d728d06f9601455ce754f814618ac3843ecda8220c2b2eb207dce4300d0a6d5e",
+  "volumes": [
+    {
+      "index": 1,
+      "file": "rows.json.part-0001.gz",
+      "compressed_bytes": 6412159,
+      "sha256": "8bd0362dcd3fa937ab02b439064f51486ca6e53119150294dd7d2756890d2eb2",
+      "raw_bytes": 40000000,
+      "raw_sha256": "2133168e7f135b5adcedf3eb81e16e1eb5d35ee3b4271826bfc0667df4a11a1c"
+    },
+    {
+      "index": 2,
+      "file": "rows.json.part-0002.gz",
+      "compressed_bytes": 6999573,
+      "sha256": "2fbcc5891420fca31bbefbee7cedacc013044d8d03594308c1eaabe74aadcc03",
+      "raw_bytes": 40000000,
+      "raw_sha256": "dea3ff2877c57973a75164ac3595f382b930a5cfee1e0a8abad333c611e90863"
+    },
+    {
+      "index": 3,
+      "file": "rows.json.part-0003.gz",
+      "compressed_bytes": 6628609,
+      "sha256": "af4fe88aed831c28310ab3d387c2787bc37caf6e56bcd7b6770628837ec5337e",
+      "raw_bytes": 40000000,
+      "raw_sha256": "6ae5abbb198bb765f63bb2ab17b2703bc1195c9735b4882b6c73f8cb49715756"
+    },
+    {
+      "index": 4,
+      "file": "rows.json.part-0004.gz",
+      "compressed_bytes": 1847367,
+      "sha256": "0dc5a52670aaddb3851069a534893bf20dd647f4c163ac3cfad56dfe95cb5587",
+      "raw_bytes": 12080123,
+      "raw_sha256": "e49f1d3b9577fe0a61c967f25593edd5a38c35183a58f83af8c9799d3a441b11"
+    }
+  ],
+  "roundtrip": {
+    "verified": true,
+    "volumes": 4,
+    "bytes": 132080123,
+    "sha256": "6d3ffd91f22b3d06671b9ecbdefc07f4ebb5c0f271b62272b704a5b9a9dd6660"
+  },
+  "independent_verify_again": true,
+  "tests": {
+    "passed": 7,
+    "failed": 0,
+    "coverage": [
+      "synthetic incompressible multi-volume concatenation",
+      "empty/tiny inputs",
+      "truncation and corrupted identity",
+      "missing/reordered volumes",
+      "strict cap equality refusal",
+      "existing output refusal",
+      "original mismatch",
+      "path escape/symlink rejection"
+    ]
+  },
+  "metric_recounts": 0,
+  "sealed_map_reads": 0,
+  "new_output_freeze_checks": [
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/archive_rows.py.txt",
+      "excluded_pipeline": true,
+      "already_frozen": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/test_archive_rows.py.txt",
+      "excluded_pipeline": true,
+      "already_frozen": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/runs/ext-1/rows-archive/README.md",
+      "excluded_pipeline": true,
+      "already_frozen": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/runs/ext-1/rows-archive/manifest.json",
+      "excluded_pipeline": true,
+      "already_frozen": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/runs/ext-1/rows-archive/rows.json.part-0001.gz",
+      "excluded_pipeline": true,
+      "already_frozen": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/runs/ext-1/rows-archive/rows.json.part-0002.gz",
+      "excluded_pipeline": true,
+      "already_frozen": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/runs/ext-1/rows-archive/rows.json.part-0003.gz",
+      "excluded_pipeline": true,
+      "already_frozen": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/runs/ext-1/rows-archive/rows.json.part-0004.gz",
+      "excluded_pipeline": true,
+      "already_frozen": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/rows-archive-verification.json",
+      "excluded_pipeline": true,
+      "already_frozen": false
+    }
+  ],
+  "freeze_manifest_sha256": "acf2f275efa73f45c43709f4a52807dd480390e1497f085cab11d3604265bbec"
+}

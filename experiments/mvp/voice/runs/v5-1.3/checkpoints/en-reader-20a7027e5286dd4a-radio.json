@@ -1,0 +1,45 @@
+{
+  "answer": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 8000,
+    "audio_seconds": 7.944,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00040",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "a00a090c963242c9b6aea1b9a7cb0c30",
+    "session_id": "voyager/transcribe/24B38EF3E5794994BDB8B35942871CD9"
+  },
+  "asr_latency_s": 1.4305596659542061,
+  "audio_sha256": "afaa74ef15281eeb978a475f6c6726184751a2db7695e30045f9988eb9da6ad4",
+  "canonical": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 2.9066234169877134,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00133925",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "af5c5d75b8d4ec8d7cbf6a30e30a79aa96c619afc38a56f18c153e5aa9b09f08",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "5fe10b81-dd8c-40cd-b212-1b4531271074"
+  },
+  "parser_latency_s": 1.379818791989237,
+  "script": "Planner instruction: Radio: cover must share one port in hold and on deck. This is mandatory.",
+  "source_id": "reader-20a7027e5286dd4a",
+  "started_utc": "2026-11-01T01:34:59.487576+00:00",
+  "status": "complete",
+  "transcript": "planner instruction radio cover must share one port and hold and on deck this is mandatory."
+}

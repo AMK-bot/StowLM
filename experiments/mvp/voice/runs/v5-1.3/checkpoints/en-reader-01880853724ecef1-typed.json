@@ -1,0 +1,38 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 23,
+      "max_tiers": 1,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "bay": 23,
+      "max_tiers": 1,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.1908743749954738,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.001316",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "edf490db9597e0e17aebb6df5051b886073350ca913c395e00547f847fd1f1f7",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "77e3bf61-ec73-4d9e-a4ca-59850fac4586"
+  },
+  "parser_latency_s": 1.190846333047375,
+  "script": "Planner: restrict bay 23 hold to 1 max.",
+  "source_id": "reader-01880853724ecef1",
+  "started_utc": "2026-11-01T01:30:47.692851+00:00",
+  "status": "complete"
+}

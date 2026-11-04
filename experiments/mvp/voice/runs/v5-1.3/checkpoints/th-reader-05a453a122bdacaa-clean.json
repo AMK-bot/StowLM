@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 35,
+      "max_tiers": 4,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 7600,
+    "audio_seconds": 7.584,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00035",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "66ff22d1139346408835f10e6d013956",
+    "session_id": "voyager/transcribe/7DBC3EC187EF4F948C286C16717278CA"
+  },
+  "asr_latency_s": 1.6819575839908794,
+  "audio_sha256": "60e1850688e4776d6249d6e45166a9aa64e36ff9b90b0b9d8202c526b35fcfbf",
+  "canonical": {
+    "constraint": {
+      "bay": 35,
+      "max_tiers": 4,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "clean",
+  "end_to_end_s": 2.901792792021297,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00155325",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "dad8737c284774657004ffa2596399d3f1185ac79d7db6c08e53516bf9a292fa",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "3b6941c1-4d07-43b8-9a78-f064736d1df8"
+  },
+  "parser_latency_s": 1.1222229159902781,
+  "script": "ในระวางใต้ดาดฟ้าของเบย์สามสิบห้า ให้ซ้อนตู้สินค้าได้ไม่เกินสี่ชั้น",
+  "source_id": "reader-05a453a122bdacaa",
+  "started_utc": "2026-11-01T01:35:54.851645+00:00",
+  "status": "complete",
+  "transcript": "Nairaวางใต้ดาดฟ้าของเบสามสามสิบห้าให้ซอนตู้สินค้าได้ไม่เกินสี่ชั้น"
+}

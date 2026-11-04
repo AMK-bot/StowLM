@@ -1,0 +1,40 @@
+[project]
+name = "stowlm"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "huggingface-hub>=2.3.0",
+    "mlx>=0.32.4",
+    "mlx-lm>=0.32.2",
+    "mlx-vlm>=0.7.10",
+    "numpy>=2.5.4",
+    "ortools>=9.15.6755",
+    "pydantic>=2.14.1",
+    "scipy>=1.18.1",
+]
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/stowage", "src/llm", "src/eval"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# importlib mode: test folders need no __init__.py, and two test files may share a basename.
+# Speed policy (docs/architecture.md "Conventions"): the default run skips slow/gpu/net tests and targets < 3 min on an
+# idle machine. `--run-brp-benchmarks` opts into slow archive tests (conftest.py); explicit -m still wins.
+# `-m slow` runs only the slow ones; `-m ""` runs everything (a later -m on the command line wins).
+addopts = '--import-mode=importlib -q -m "not slow and not gpu and not net"'
+markers = [
+    "slow: takes more than ~10 s (excluded by default; run with -m slow or -m \"\")",
+    "gpu: needs the Mac GPU / MLX model weights (excluded by default; one GPU job at a time, see experiments/fleet/ledger.md)",
+    "net: needs network access (excluded by default)",
+    "benchmark: public-benchmark validation (plan 4.10)",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

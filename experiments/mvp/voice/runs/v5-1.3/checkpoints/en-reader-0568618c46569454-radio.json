@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "unsupported",
+      "reason": "invalid IMDG class 220",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 4560,
+    "audio_seconds": 4.536,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00020",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "61a2d7d678ca464aae113ebec891f5d9",
+    "session_id": "voyager/transcribe/59841FB51D674717A4B4464584D189BA"
+  },
+  "asr_latency_s": 1.2760022910078987,
+  "audio_sha256": "483f26c4825da07ddd84d65e90b7b39aaabb7d5d4a6957be81728a0ad1dbd1c4",
+  "canonical": {
+    "refusal": {
+      "code": "unsupported",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 2.6907654579845257,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00127295",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "44770708bcb0e9c4402b4288575f139ef3bd0c8c054720dca19f9ff0909f646b",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "99b4e6f4-1e1b-492c-858a-ed0d6da43200"
+  },
+  "parser_latency_s": 1.3142183750169352,
+  "script": "Radio: keep class 2 20 bays away from crew house.",
+  "source_id": "reader-0568618c46569454",
+  "started_utc": "2026-11-01T01:34:03.808618+00:00",
+  "status": "complete",
+  "transcript": "Radio, keep class 220 bays away from crew house."
+}

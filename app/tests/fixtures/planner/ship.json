@@ -1,0 +1,110 @@
+{
+  "ship": {
+    "words": "Fixture feeder",
+    "teu": 40,
+    "synthetic_label": "Synthetic test vessel"
+  },
+  "bays": [
+    {
+      "bay": 1,
+      "label": "Bay 01",
+      "position": 0.0,
+      "length_ft": 20,
+      "rows": [
+        4,
+        2,
+        0,
+        1,
+        3
+      ],
+      "deck_tiers": [
+        82,
+        84
+      ],
+      "hold_tiers": [
+        2,
+        4
+      ],
+      "hatch": true
+    },
+    {
+      "bay": 2,
+      "label": "Bay 02",
+      "position": 6.1,
+      "length_ft": 40,
+      "rows": [
+        4,
+        2,
+        0,
+        1,
+        3
+      ],
+      "deck_tiers": [
+        82,
+        84
+      ],
+      "hold_tiers": [
+        2,
+        4
+      ],
+      "hatch": true
+    },
+    {
+      "bay": 3,
+      "label": "Bay 03",
+      "position": 12.2,
+      "length_ft": 20,
+      "rows": [
+        4,
+        2,
+        0,
+        1,
+        3
+      ],
+      "deck_tiers": [
+        82,
+        84
+      ],
+      "hold_tiers": [
+        2,
+        4
+      ],
+      "hatch": true
+    },
+    {
+      "bay": 5,
+      "label": "Bay 05",
+      "position": 18.299999999999997,
+      "length_ft": 20,
+      "rows": [
+        4,
+        2,
+        0,
+        1,
+        3
+      ],
+      "deck_tiers": [
+        82,
+        84
+      ],
+      "hold_tiers": [
+        2,
+        4
+      ],
+      "hatch": true
+    }
+  ],
+  "row_order": "port_to_starboard",
+  "limits": {
+    "draught_m": 7,
+    "gm_min_m": 0.5,
+    "heel_max_deg": 3
+  },
+  "source": {
+    "kind": "synthetic_unit_fixture",
+    "paths": [
+      "app/tests/fixtures/planner/fixture-source.txt"
+    ],
+    "sha256": "3ebdaf54f17cf296f4b591c2848c8520639cb04d16a57048a56b0d17b9a68e09"
+  }
+}

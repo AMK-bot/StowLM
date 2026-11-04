@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "not_an_instruction",
+      "reason": "No restriction requested, mere commentary",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 2560,
+    "audio_seconds": 2.544,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00010",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "01e28de8b40543399da11d76735797f8",
+    "session_id": "voyager/transcribe/91D365EEFAE64F789792425E6EB57FE1"
+  },
+  "asr_latency_s": 0.8591920409817249,
+  "audio_sha256": "74626085dec244127e969de5541dad9967698f69ec996cf7c80aedd952565d68",
+  "canonical": {
+    "refusal": {
+      "code": "not_an_instruction",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 2.0548127079964615,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0009607",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "9ed45fe33a4700cfa0cc4b90ad2d1f35864f844371d57eb1402895705a186a00",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "41c116e0-70f6-4a4b-89cc-7f3650a3c875"
+  },
+  "parser_latency_s": 1.0989745420520194,
+  "script": "Keep bay 23 sealed shut.",
+  "source_id": "reader-0b914c40ce041c65",
+  "started_utc": "2026-11-01T01:33:20.520954+00:00",
+  "status": "complete",
+  "transcript": "Peep day 23 sealed shut."
+}

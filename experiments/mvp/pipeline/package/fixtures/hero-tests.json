@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "wall_s": 138.86313449998852,
+  "network": false,
+  "gpu": false,
+  "additional_spark_cost_usd": 0.00335175,
+  "tests": 127,
+  "failures": 0,
+  "errors": 0,
+  "real_checker_tests": 5,
+  "standalone_hero_verification": {
+    "verify_api_wall_s": 21.195897791010793,
+    "checker_wall_s": 21.17414508399088
+  },
+  "logic_review_hero_from_run_packet": "passed",
+  "native_frames_passed": 146
+}

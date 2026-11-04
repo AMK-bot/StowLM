@@ -1,0 +1,229 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "model": "mock",
+  "cost_usd": 0,
+  "label": "Recorded mock answer; validator exercised; no measured model accuracy",
+  "base_instance": {
+    "path": "experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100011.json",
+    "sha256": "dd634e69d9b6bfda657cd9c8eeb9d71a25463d915ae6340739d9a023e96d6419"
+  },
+  "text": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+  "proposal": {
+    "id": "QZXU0000009",
+    "iso_type": "22G1",
+    "length_ft": 20,
+    "gross_mass_kg": 25131.83,
+    "pod": "SGSIN",
+    "reefer": false,
+    "reefer_setpoint_c": null,
+    "dg": null
+  },
+  "result": {
+    "status": "complete",
+    "rows": [
+      {
+        "id": "QZXU0000009",
+        "iso_type": "22G1",
+        "length_ft": 20,
+        "height_m": 2.591,
+        "tare_kg": 2350.0,
+        "gross_mass_kg": 25131.83,
+        "max_gross_mass_kg": 30480.0,
+        "weight_class": "H",
+        "pol": "SGSIN",
+        "pod": "SGSIN",
+        "empty": false,
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "dg": null,
+        "direct_delivery": false,
+        "special_stowage": [],
+        "oog": null,
+        "category": "SGSIN:22G1:H:loaded"
+      }
+    ],
+    "questions": [],
+    "field_sources": [
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "id",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "iso_type",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "length_ft",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "gross_mass_kg",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "pod",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "reefer",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "reefer_setpoint_c",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "dg",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "height_m",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "tare_kg",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "max_gross_mass_kg",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "weight_class",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "pol",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "empty",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "direct_delivery",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "special_stowage",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "oog",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "category",
+        "document": "base-container",
+        "quote": "{\"height_m\":2.591,\"tare_kg\":2350.0,\"max_gross_mass_kg\":30480.0,\"weight_class\":\"H\",\"pol\":\"SGSIN\",\"empty\":false,\"direct_delivery\":false,\"special_stowage\":[],\"oog\":null,\"category\":\"SGSIN:22G1:H:loaded\"}",
+        "evidence": "exact_quote",
+        "accepted": true
+      }
+    ],
+    "records": [
+      {
+        "stage": "intake_private",
+        "mode": "recorded",
+        "input_sha256": "bb25143b34ee34b1d7b75b92014378aed86e9abcbc617cb062c3ba7744e028d3",
+        "output_sha256": "0b8cb6afd88400f7d61b84c0545154097fb4fbadac465c671060ce085ce95215",
+        "model": "mock-model; preparation only",
+        "adapter_sha256": null,
+        "prompt_sha256": "617cf732739d60b99dad3ae16a795a46fb886bf3a3f60cefa065223d024e5372",
+        "source_sha256": "c88cfe01b8ee89bef856a991bc18afbe7e3b38725c5d22afc96b129243e2f52d",
+        "wall_s": 1.3791079579968937,
+        "cost_usd": 0.0,
+        "notes": "Local model proposal; shared task 1.3 validator. Non-extraction fields sourced from matching base container; single-row scope.  Recorded mock proposal, not trained-model inference.",
+        "prev_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "result_sha256": "602a0ffac89ec22a986bba5b4fcb4939a013be772975b99f15fa1c464bedfdb6"
+}

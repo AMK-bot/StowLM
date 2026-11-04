@@ -1,0 +1,5 @@
+1. Model: class-to-bay/tier transport, shared D57 cargo/tanks, necessary rod inequalities and interval GZ-area covers.
+2. Papers: Moore (1966), McCormick (1976), Bernstein polynomial enclosures.
+3. Medium12 by seed: **185100000 feasible**, retained 114-lift witness. **185100001, 185100010, 185100011, 185100100, 185100101, 185100110, 185100111, 185100200, 185100201, 185100210, 185100211 unknown**. Zero infeasibility proofs. Joint sweep 68.7 s; area sweep 480.4 s. Fresh positive controls: 19/19 complete replay-legal/full-checker passes, 335.8 s; zero new passes. All 25 tests, 92 independent matrix certificates and 57 control-phase checks pass. No paired 0.9 lift benchmark.
+4. **Keep part:** KG/draught/deck windows preserve every control; area bounds did not narrow them. Default direct floating arithmetic remains uncertified. Assumptions: proportional D57 consumables and fixed voyage ballast.
+5. Files: `windows.json`, `NOTES.md`, `MEASUREMENTS.md`, `validation.json`. Entry points: `run_windows.py`, then `run_area.py`; verify with `final_audit.py`. Next: certify direct arithmetic and contract free-trim tails.

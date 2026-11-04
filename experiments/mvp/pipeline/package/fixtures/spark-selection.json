@@ -1,0 +1,52 @@
+{
+  "schema_version": "stowlm.package-note-recording/1",
+  "synthetic": true,
+  "mode": "recorded",
+  "raw": "{\"headline\": [\"no_violations\", \"tightest_limit\"], \"points\": [[\"clean_checks\"], [\"loads\", \"total\"], [\"no_restows_now\", \"hatch_covers_now\", \"later_ports\"], [\"yard_rehandles\"], [\"omitted\"]]}",
+  "model": "muse-spark-1.3",
+  "request_id": "2949d180-7448-42fc-8042-ff9a444a5a00",
+  "cost_usd": "0.00336025",
+  "usage": {
+    "input_tokens": 1165,
+    "output_tokens": 448,
+    "cached_tokens": 0
+  },
+  "wall_s_measured": 3.572676291980315,
+  "recorded_utc": "2026-11-02T00:13:39.305311+00:00",
+  "purpose": "pipeline-package-note",
+  "plan_sha256": "8d47fff76cbf4edfdd931e842ec5b1731d63889e5354579f3628508b089e8efd",
+  "reservation_context_bound_tokens": 32768,
+  "prompt_sha256": "a9967b14fab9b2668fa5c093f021f5e2d106ebe344216492a5a7c5907af4964a",
+  "source_sha256": "a03bbaa47b88486cb6ace5b0f5e817e975fca4331be093befb93b4c33b6e418b",
+  "selection": {
+    "headline": [
+      "no_violations",
+      "tightest_limit"
+    ],
+    "points": [
+      [
+        "clean_checks"
+      ],
+      [
+        "loads",
+        "total"
+      ],
+      [
+        "no_restows_now",
+        "hatch_covers_now",
+        "later_ports"
+      ],
+      [
+        "yard_rehandles"
+      ],
+      [
+        "omitted"
+      ]
+    ]
+  },
+  "validated": true,
+  "rejection": [],
+  "retired": true,
+  "retirement_reason": "Chief-officer statement menu replaced the old menu; current playback uses deterministic fallback.",
+  "validated_for_current_menu": false
+}

@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "label": "Independent final frozen-holdout artifact audit; no new canonical calls",
+  "created_utc": "2026-11-02T02:52:24.703821+00:00",
+  "manifest_sha256": "b12ae05218abc7d85a25537db9e12353f5940969990d40731910eb288206de2c",
+  "results_sha256": "251de4734193ba0e87e939da7a7a2d9a9960c69278fd34a9e5544085c369e6c4",
+  "readiness_sha256": "8a52b3a1633ad413ac53fcf1cf9dbb062ee698e38f15fe07c85c4ef157d9b2cc",
+  "checks": {
+    "complete40": true,
+    "same_manifest": true,
+    "fresh40": true,
+    "postfreeze40": true,
+    "inputbindings40": true,
+    "all_parts_ran40": true,
+    "no_frozen_runtime_disagreement": true,
+    "no_falselegal": true
+  },
+  "passed": true,
+  "requests": 40,
+  "distinct_boxes": 34,
+  "kinds": {
+    "empty": 20,
+    "swap": 20
+  },
+  "false_legal": 0,
+  "false_legal_denominator": 40,
+  "verification": "Focused pytest test_holdout_audit.py:4passed, including independent reconstruction of all40 exact candidate plans, complete report/input/count binding and recorded pre-outcome dependency identity. Regression/low-full/workspace audit tests passed earlier. Parent full own-folder114 passed.",
+  "owned_processes": "Old72196 was verified gone; low-full4475/session47394 exited0; final focused audit session87127 exited0; no remaining owned queued or CPU process."
+}

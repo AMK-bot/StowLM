@@ -1,0 +1,29 @@
+{
+  "case_id": "impossible-tier-with-alternative",
+  "pid": 67144,
+  "admission": {
+    "utc": "2026-11-01T01:51:57.188043+00:00",
+    "observed_at": 1793497917.188043,
+    "source": "experiments/fleet/core-state.json",
+    "source_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/fleet/core-state.json",
+    "raw": {
+      "mask": 4095,
+      "load1": 41.25,
+      "t": 1793497912
+    },
+    "t": 1793497912,
+    "age_s": 5.188043117523193,
+    "core_mask": 4095,
+    "core_count": 12,
+    "load_1m": 41.25,
+    "allowed": true
+  },
+  "passed": true,
+  "plan_sha256": "dfd7ce34990da2c063bc3785f07357f845512ef6ff4c5f9fa6d1c06c6856a969",
+  "weighted": 12.0,
+  "baseline_sha256": "31bcbdb0c51a256788587ad38cf39c756670046cbc6dda354a7b69a7478bbb55",
+  "alternative_violations": {
+    "alternative-1": []
+  },
+  "wall_s": 39.72714375000214
+}

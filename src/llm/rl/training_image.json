@@ -1,0 +1,20 @@
+{
+  "schema": "1.9",
+  "checker": "2.2",
+  "feasibility": "2.5",
+  "mask": "stowlm-mask@1.2",
+  "linear_model": "3.5",
+  "ballast": "4.0",
+  "move_engine": "2.0",
+  "action_space": "1.0.1",
+  "rule_catalogue": "sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae",
+  "rl": "stowlm-grpo@2.0",
+  "_scope": {
+    "plan": "v4 MVP (D78)",
+    "c2": "off: FeasibilityConfig extra global_screen=0 (D79)",
+    "securing": "llm.securing necessary deck-securing envelope over the production mask (D95)",
+    "finisher": "ballast 4.0 with STOWAGE_BALLAST_V4=1 scoped to finalize (D88)",
+    "rule_freeze_v1": false,
+    "recorded": "2026-10-29 (w2-modal, falsifier 4)"
+  }
+}

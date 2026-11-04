@@ -1,0 +1,94 @@
+{
+  "synthetic": true,
+  "source_fixture": "experiments/mvp/pipeline/sandbox/fixtures/demo_source_hero.json",
+  "source_sha256": "00760ad9e2d56e9b313a0223041ceb150708aaf7b744be3cad211e3ba7abb791",
+  "cases": {
+    "legal": {
+      "box_id": "QZXU0000082",
+      "target_slot": "0100104",
+      "projected_later_delta": 28
+    },
+    "crane_order": {
+      "box_id": "QZXU0000610",
+      "target_slot": "0210182"
+    },
+    "securing": {
+      "box_id": "QZXU0000478",
+      "target_slot": "0100688"
+    },
+    "segregation": {
+      "box_id": "QZXU0000014",
+      "target_slot": "0220602"
+    }
+  },
+  "legal_candidates": [
+    {
+      "box_id": "QZXU0000082",
+      "target_slot": "0100104",
+      "projected_later_delta": 28
+    },
+    {
+      "box_id": "QZXU0000138",
+      "target_slot": "0100102",
+      "projected_later_delta": 28
+    },
+    {
+      "box_id": "QZXU0000565",
+      "target_slot": "0100204",
+      "projected_later_delta": 28
+    },
+    {
+      "box_id": "QZXU0000610",
+      "target_slot": "0030282",
+      "projected_later_delta": 2
+    },
+    {
+      "box_id": "QZXU0000740",
+      "target_slot": "0030282",
+      "projected_later_delta": 2
+    },
+    {
+      "box_id": "QZXU0000550",
+      "target_slot": "0030282",
+      "projected_later_delta": 0
+    },
+    {
+      "box_id": "QZXU0000930",
+      "target_slot": "0020382",
+      "projected_later_delta": 0
+    },
+    {
+      "box_id": "QZXU0000992",
+      "target_slot": "0020682",
+      "projected_later_delta": 0
+    },
+    {
+      "box_id": "QZXU0001005",
+      "target_slot": "0010382",
+      "projected_later_delta": 0
+    },
+    {
+      "box_id": "QZXU0001005",
+      "target_slot": "0030282",
+      "projected_later_delta": 0
+    },
+    {
+      "box_id": "QZXU0001010",
+      "target_slot": "0020282",
+      "projected_later_delta": 0
+    },
+    {
+      "box_id": "QZXU0001031",
+      "target_slot": "0220302",
+      "projected_later_delta": 0
+    },
+    {
+      "box_id": "QZXU0001176",
+      "target_slot": "0020382",
+      "projected_later_delta": 0
+    }
+  ],
+  "missing": [],
+  "label": "Prepared candidates; full checks pending",
+  "created_utc": "2026-11-02T03:01:58.940326+00:00"
+}

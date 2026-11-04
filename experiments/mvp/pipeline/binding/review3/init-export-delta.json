@@ -1,0 +1,5 @@
+{
+  "old_sha256": "3430cdaa72c119550fa7704c2d90d17d0eccc378c31b0cd029a45a49d7622574",
+  "new_sha256": "2e69540942e0b027be4b20062332e5c49ea08cac5cd6fc900de7d2b994e9fc37",
+  "append": "\n# Review-three public policy; the immutable adapter remains the non-hatch core.\nfrom .review3.api import plan_with_rules, execute_brief, confirmation_text, planner_message\n__all__ += ['confirmation_text', 'planner_message']\n"
+}

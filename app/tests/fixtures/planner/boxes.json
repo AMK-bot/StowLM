@@ -1,0 +1,68 @@
+{
+  "boxes": {
+    "TEST0000001": {
+      "size_ft": 20,
+      "weight_t": 18.4,
+      "pod": "SGSIN",
+      "dg_class": null,
+      "reefer": false,
+      "iso": "22G1"
+    },
+    "TEST0000002": {
+      "size_ft": 40,
+      "weight_t": 26.1,
+      "pod": "MYPKG",
+      "dg_class": "3",
+      "reefer": false,
+      "iso": "42G1"
+    },
+    "TEST0000003": {
+      "size_ft": 20,
+      "weight_t": 12.8,
+      "pod": "THLCH",
+      "dg_class": null,
+      "reefer": true,
+      "iso": "22R1"
+    },
+    "TEST0000004": {
+      "size_ft": 20,
+      "weight_t": 9.2,
+      "pod": "SGSIN",
+      "dg_class": "5.1",
+      "reefer": true,
+      "iso": "22R1"
+    },
+    "TEST0000005": {
+      "size_ft": 20,
+      "weight_t": 21,
+      "pod": "THLCH",
+      "dg_class": null,
+      "reefer": false,
+      "iso": "22G1"
+    }
+  },
+  "pods": [
+    {
+      "code": "SGSIN",
+      "name_words": "Singapore",
+      "colour": "#82b3d1"
+    },
+    {
+      "code": "MYPKG",
+      "name_words": "Port Klang",
+      "colour": "#e2b87a"
+    },
+    {
+      "code": "THLCH",
+      "name_words": "Laem Chabang",
+      "colour": "#88b5a1"
+    }
+  ],
+  "source": {
+    "kind": "synthetic_unit_fixture",
+    "paths": [
+      "app/tests/fixtures/planner/fixture-source.txt"
+    ],
+    "sha256": "3ebdaf54f17cf296f4b591c2848c8520639cb04d16a57048a56b0d17b9a68e09"
+  }
+}

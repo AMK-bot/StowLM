@@ -1,0 +1,33 @@
+[
+  {
+    "mode": "live",
+    "status": "constraint_ready",
+    "sentence": "Leave Bay one empty on this call..",
+    "answer": {
+      "schema_version": "stowlm.reader/2",
+      "constraint": {
+        "type": "close_bay",
+        "bay": 1
+      }
+    },
+    "adopted": true,
+    "rule_text": "Nothing loads into bay 01.",
+    "refusal": null,
+    "evidence": {
+      "parser": "GlimmerParser",
+      "model": "muse-glimmer-30b",
+      "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+      "request_id": null,
+      "purpose": null,
+      "recorded": null,
+      "source": null
+    },
+    "model": "muse-glimmer-30b",
+    "decode": "schema mask (v3 decoder)",
+    "wall_s": 1.8011272500734776,
+    "cold_load_s": null,
+    "id": "r1b8c9a87a6e9",
+    "origin": "voice",
+    "confirmed": true
+  }
+]

@@ -1,0 +1,39 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")/../../../../../.."
+export UV_CACHE_DIR="$PWD/experiments/mvp/pipeline/sealed/measurements/ext-1/uv-cache"
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONPATH=.:src:experiments/mvp/frontier:experiments/mvp/frontier/lab
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1
+export MKL_NUM_THREADS=1 STOWAGE_IN_PORT_WORKERS=1
+tool=experiments/mvp/pipeline/sealed/measurements/ext-1/ext_runner.py.txt
+config=experiments/mvp/pipeline/sealed/measurements/ext-1/config.json
+gpu_ready=false
+detach=false
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --gpu-ready) gpu_ready=true; shift ;;
+        --detach) detach=true; shift ;;
+        --config) config="$2"; shift 2 ;;
+        --check) exec uv run --offline --no-sync python "$tool" --check --config "$config" ;;
+        *) printf 'Use --gpu-ready, --detach, --config PATH, or --check\n' >&2; exit 2 ;;
+    esac
+done
+if [ "$gpu_ready" = true ]; then
+    uv run --offline --no-sync python "$tool" --gpu-ready --config "$config"
+fi
+uv run --offline --no-sync python "$tool" --check --config "$config"
+if [ "$detach" = false ]; then
+    exec uv run --offline --no-sync python "$tool" --run --config "$config"
+fi
+uv run --offline --no-sync python -c '
+import json,subprocess,sys,time
+from pathlib import Path
+tool=Path(sys.argv[1]).resolve(); config=Path(sys.argv[2]).resolve(); home=tool.parent
+directory=home/"launcher"; directory.mkdir(exist_ok=True)
+with (directory/"nohup.log").open("ab",buffering=0) as stream:
+    child=subprocess.Popen([sys.executable,str(tool),"--run","--config",str(config)],stdin=subprocess.DEVNULL,stdout=stream,stderr=subprocess.STDOUT,start_new_session=True,close_fds=True)
+with (directory/"history.jsonl").open("a") as history:
+    history.write(json.dumps(dict(decision="D320A",pid=child.pid,pgid=child.pid,start_new_session=True,started=time.time(),config=str(config)))+"\n")
+print("D320A extension controller PID",child.pid,"(detached; log",directory/"nohup.log",")")
+' "$tool" "$config"

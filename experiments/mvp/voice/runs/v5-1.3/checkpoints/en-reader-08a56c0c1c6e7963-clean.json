@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "1.4",
+      "min_bays": 2,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 5920,
+    "audio_seconds": 5.856,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00025",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "e398dd358d374cb7955e4007215e244b",
+    "session_id": "voyager/transcribe/798D3C827CC344CBB820ACC3B61E1919"
+  },
+  "asr_latency_s": 1.3373672920279205,
+  "audio_sha256": "e1ac5a1fc9d4f8025f9ed17c3098854aa426a5dec4b52c575beb89b6f53c873b",
+  "canonical": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "1.4",
+      "min_bays": 2,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "clean",
+  "end_to_end_s": 3.484890124993399,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.002134",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "eab47efc3eca5383527076810e6286df920a979ea0946fd5b2a3b096b4379f91",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "47707781-e7e9-4299-bf4b-21a5a1bb92c1"
+  },
+  "parser_latency_s": 2.055415000009816,
+  "script": "A 2-bay minimum buffer from accommodation applies to class 1.4.",
+  "source_id": "reader-08a56c0c1c6e7963",
+  "started_utc": "2026-11-01T01:32:20.033228+00:00",
+  "status": "complete",
+  "transcript": "A two bay minimum buffer from accommodation applies applies to class 1.4"
+}

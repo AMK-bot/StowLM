@@ -1,0 +1,27 @@
+{
+  "case_id": "impossible-bay-2",
+  "sentence": "Bay 2 is closed.",
+  "parsed": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "close_bay",
+      "bay": 2
+    }
+  },
+  "parser": {
+    "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":2}}",
+    "request_id": "5d4b903c-51fa-4037-8a41-8e64e4e9f9c0",
+    "cost_usd": "0.001314",
+    "usage": {
+      "input_tokens": 531,
+      "output_tokens": 153,
+      "cached_tokens": 0
+    },
+    "parser": "SparkParser",
+    "model": "muse-spark-1.3",
+    "adapter_sha256": null,
+    "purpose": "reader-d222-followup",
+    "prompt_sha256": "065a5f19df17b643a7165a577b6de3e138e0551c8578b1a08cc91575ad4db00b",
+    "reservation_context_bound_tokens": 32768
+  }
+}

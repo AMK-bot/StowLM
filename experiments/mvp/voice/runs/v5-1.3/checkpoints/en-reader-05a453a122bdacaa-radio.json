@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 35,
+      "max_tiers": 4,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 5200,
+    "audio_seconds": 5.184,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00025",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "54a6e316712a4597ba6f9f7ddc57cadc",
+    "session_id": "voyager/transcribe/55D135E242B64101ABE54E9E36727A42"
+  },
+  "asr_latency_s": 1.2748566250083968,
+  "audio_sha256": "23e58dfc60a74b706c015fd902521b1e75c24ce4620689fbae77a845db7bb7fe",
+  "canonical": {
+    "constraint": {
+      "bay": 35,
+      "max_tiers": 4,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 2.3466480410424992,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00117095",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "020186a06eb64ad402ef22c3292d583f5064b952ec5a325cfd7def85998c9481",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "4d5d4d1f-60d2-4781-94dd-f8c57dcae5d3"
+  },
+  "parser_latency_s": 0.9776077499845996,
+  "script": "Bay 35's below-deck stacks must top out at 4 tiers.",
+  "source_id": "reader-05a453a122bdacaa",
+  "started_utc": "2026-11-01T01:33:40.497879+00:00",
+  "status": "complete",
+  "transcript": "Bay 35 below deck staff must top out out at four tiers."
+}

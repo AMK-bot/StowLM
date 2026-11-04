@@ -1,0 +1,136 @@
+{
+  "reviewed_source_changes": [
+    "src/stowage/model/__init__.py",
+    "src/stowage/model/vessel.py",
+    "src/stowage/vessel/fleet.py",
+    "src/stowage/vessel/fleet_balance.py",
+    "src/stowage/vessel/fleet_conditions.py"
+  ],
+  "reviewed_auxiliary_changes": [],
+  "reviewed_parameter_changes": [
+    "feeder_1700",
+    "feeder_500",
+    "feeder_800"
+  ],
+  "reviewed_provider_changes": [
+    "build_vessel"
+  ],
+  "review_manifest_sha256": "d582ef35e83be81aff98a586c4b31ff9203ab8014549907a2050de081a62e89f",
+  "baseline_review_sha256": "dbfe1d89356fc3724a25bc385b110f99d2b30ca062f3399256746ebdc0fae283",
+  "old_contract_sha256": "aab289f7a481d46aca400a46a8f076a66fa4c6d5a48da7449684371c6ffff47d",
+  "rows": [
+    {
+      "ship": "feeder_1700",
+      "seconds": 145.40759387500293,
+      "vessel_cache_reuse": false,
+      "five_fields_bitwise_equal": true,
+      "unchanged_from_prior_review_bitwise": true,
+      "construction_identity": "3a6e866c9f9a5c1c944bdc4f3e8f81fb00fb92dec624a918dddf91a8f5e86a6d",
+      "prior_fields": {
+        "min_trim_m": -1.6,
+        "max_trim_m": 1.6,
+        "min_displacement_kg": 8074000.0,
+        "max_displacement_kg": 27985050.213187423,
+        "bilge_keel_area_m2": 0.0
+      },
+      "projection_fields": {
+        "min_trim_m": -1.6,
+        "max_trim_m": 1.6,
+        "min_displacement_kg": 8074000.0,
+        "max_displacement_kg": 27985050.213187423,
+        "bilge_keel_area_m2": 0.0
+      },
+      "differences": [],
+      "fields": {
+        "min_trim_m": -1.6,
+        "max_trim_m": 1.6,
+        "min_displacement_kg": 8074000.0,
+        "max_displacement_kg": 27985050.213187423,
+        "bilge_keel_area_m2": 0.0
+      },
+      "float64_hex": {
+        "min_trim_m": "bff999999999999a",
+        "max_trim_m": "3ff999999999999a",
+        "min_displacement_kg": "415eccc400000000",
+        "max_displacement_kg": "417ab049a3693737",
+        "bilge_keel_area_m2": "0000000000000000"
+      }
+    },
+    {
+      "ship": "feeder_500",
+      "seconds": 128.72300570800144,
+      "vessel_cache_reuse": false,
+      "five_fields_bitwise_equal": true,
+      "unchanged_from_prior_review_bitwise": true,
+      "construction_identity": "b6d30c98572283fdde6a6e942723f1f5771d70d358d646102431adb4aed1feb0",
+      "prior_fields": {
+        "min_trim_m": -1.078,
+        "max_trim_m": 1.078,
+        "min_displacement_kg": 2900000.0,
+        "max_displacement_kg": 9713353.260589017,
+        "bilge_keel_area_m2": 0.0
+      },
+      "projection_fields": {
+        "min_trim_m": -1.078,
+        "max_trim_m": 1.078,
+        "min_displacement_kg": 2900000.0,
+        "max_displacement_kg": 9713353.260589017,
+        "bilge_keel_area_m2": 0.0
+      },
+      "differences": [],
+      "fields": {
+        "min_trim_m": -1.078,
+        "max_trim_m": 1.078,
+        "min_displacement_kg": 2900000.0,
+        "max_displacement_kg": 9713353.260589017,
+        "bilge_keel_area_m2": 0.0
+      },
+      "float64_hex": {
+        "min_trim_m": "bff13f7ced916873",
+        "max_trim_m": "3ff13f7ced916873",
+        "min_displacement_kg": "4146201000000000",
+        "max_displacement_kg": "416286d92856bec7",
+        "bilge_keel_area_m2": "0000000000000000"
+      }
+    },
+    {
+      "ship": "feeder_800",
+      "seconds": 147.2662216250028,
+      "vessel_cache_reuse": false,
+      "five_fields_bitwise_equal": true,
+      "unchanged_from_prior_review_bitwise": true,
+      "construction_identity": "8e49c742ccd47eb7bef2535af3563ef0d16beb84befbbc1fa8688dc75aa9e48c",
+      "prior_fields": {
+        "min_trim_m": -1.2441,
+        "max_trim_m": 1.2441,
+        "min_displacement_kg": 5200000.0,
+        "max_displacement_kg": 16211273.69597336,
+        "bilge_keel_area_m2": 0.0
+      },
+      "projection_fields": {
+        "min_trim_m": -1.2441,
+        "max_trim_m": 1.2441,
+        "min_displacement_kg": 5200000.0,
+        "max_displacement_kg": 16211273.69597336,
+        "bilge_keel_area_m2": 0.0
+      },
+      "differences": [],
+      "fields": {
+        "min_trim_m": -1.2441,
+        "max_trim_m": 1.2441,
+        "min_displacement_kg": 5200000.0,
+        "max_displacement_kg": 16211273.69597336,
+        "bilge_keel_area_m2": 0.0
+      },
+      "float64_hex": {
+        "min_trim_m": "bff3e7d566cf41f2",
+        "max_trim_m": "3ff3e7d566cf41f2",
+        "min_displacement_kg": "4153d62000000000",
+        "max_displacement_kg": "416eeba9364569ed",
+        "bilge_keel_area_m2": "0000000000000000"
+      }
+    }
+  ],
+  "installed": true,
+  "new_contract_sha256": "6335db2f384734c0f9edf463ab9f6db181413e42c8c1bcf6ffb1ec365b456f70"
+}

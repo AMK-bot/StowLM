@@ -1,0 +1,2947 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "complete": true,
+  "created_utc": "2026-11-02T03:14:01.094756+00:00",
+  "model": "muse-spark-1.3",
+  "source_fixture": "experiments/mvp/pipeline/sandbox/fixtures/demo_source_hero.json",
+  "source_sha256": "00760ad9e2d56e9b313a0223041ceb150708aaf7b744be3cad211e3ba7abb791",
+  "checker_facts_sha256": "eee7024e0ab975996bd8424abf30c150be62d64738d52ae9887e753e39c5116b",
+  "input_demo_sha256": "45a2e2cd48509c2ddf63e3605ee68a83f6c0d9be35b276842a89b4c2bd3276a1",
+  "explainer_sha256": "ae160609ab2fb29c0f6d3e40c6eac7024168e42394a98a6642d21ee8e050655c",
+  "recorder_sha256": "192c928809b52f0684b71ca42989aa2c30c57a505d04245acdc331d07872914e",
+  "purpose": "sandbox-verdict",
+  "task_cap_usd": "2",
+  "initial_task_actual_usd": "0.00874025",
+  "initial_task_hold_usd": "0",
+  "ledger_path": "experiments/spark-spend/calls.jsonl",
+  "max_retries": 0,
+  "max_output_tokens": 2048,
+  "reasoning_effort": "minimal",
+  "cases": [
+    {
+      "kind": "legal",
+      "verdict_sha256": "e983e8a234aa2e62cc085061f9ab92c5528ae551c06b9f5b1969da0cb20994b9",
+      "prompt_sha256": "15b6336d44f241ff2652fd4993d0cca099f018a7e80c21d96b6bcfff46f2f8e3",
+      "selected_ids": [
+        "status",
+        "scope",
+        "lifts",
+        "quality"
+      ],
+      "validated": true,
+      "rejection": null,
+      "request_id": "8651ffa8-205c-4a7c-8dae-db8f1124a66f",
+      "cost_usd": "0.00136925",
+      "accounting": [
+        {
+          "time": "2026-11-02T03:14:22.361793+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": null,
+          "output_tokens": null,
+          "cached_tokens": null,
+          "purpose": "sandbox-verdict",
+          "request_id": null,
+          "reservation_id": "8519a207e5454e31b085e21f387cf0d4",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "reservation",
+          "cost_usd": "1.316864",
+          "status": "pending",
+          "cost_kind": "conservative_hold"
+        },
+        {
+          "time": "2026-11-02T03:14:22.361793+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": 429,
+          "output_tokens": 196,
+          "cached_tokens": 0,
+          "purpose": "sandbox-verdict",
+          "request_id": "8651ffa8-205c-4a7c-8dae-db8f1124a66f",
+          "reservation_id": "8519a207e5454e31b085e21f387cf0d4",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "settlement",
+          "status": "completed",
+          "cost_usd": "0.00136925",
+          "cost_kind": "measured"
+        }
+      ],
+      "explanation": {
+        "language": "en",
+        "text": "Muse Spark selected checked statements.\nPasses as edited. The moved plan passed the full checker.\nThis edits one box and keeps the crane order and ballast. It doesn't replan.\nCrane lifts this call: +0. Projected later-port lifts: +28 (projection).\nLegal isn't the same as good.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "Passes as edited. The moved plan passed the full checker.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": true
+              },
+              {
+                "path": "gauges.deciding_cause",
+                "value": {
+                  "kind": "passed",
+                  "source": "full_plan_check",
+                  "rule_id": null,
+                  "message": "Passes as edited."
+                }
+              },
+              {
+                "path": "gauges.stow_assessment",
+                "value": {
+                  "passed": true,
+                  "source": "full_plan_check",
+                  "diagnostic_only": false,
+                  "checked_plan_reached": true,
+                  "violations": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "text": "This edits one box and keeps the crane order and ballast. It doesn't replan.",
+            "evidence": [
+              {
+                "path": "gauges.scope_note",
+                "value": "This edits one box and keeps the crane order and ballast. It doesn't replan."
+              },
+              {
+                "path": "gauges.crane_order_preserved",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Crane lifts this call: +0. Projected later-port lifts: +28 (projection).",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": 0
+              },
+              {
+                "path": "gauges.lift_counts.projected_later_delta",
+                "value": 28
+              }
+            ]
+          },
+          {
+            "id": "quality",
+            "text": "Legal isn't the same as good.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      },
+      "template_explanation": {
+        "language": "en",
+        "text": "Template explanation.\nPasses as edited. The moved plan passed the full checker.\nCrane lifts this call: +0. Projected later-port lifts: +28 (projection).\nThis edits one box and keeps the crane order and ballast. It doesn't replan.\nLegal isn't the same as good.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "Passes as edited. The moved plan passed the full checker.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": true
+              },
+              {
+                "path": "gauges.deciding_cause",
+                "value": {
+                  "kind": "passed",
+                  "source": "full_plan_check",
+                  "rule_id": null,
+                  "message": "Passes as edited."
+                }
+              },
+              {
+                "path": "gauges.stow_assessment",
+                "value": {
+                  "passed": true,
+                  "source": "full_plan_check",
+                  "diagnostic_only": false,
+                  "checked_plan_reached": true,
+                  "violations": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Crane lifts this call: +0. Projected later-port lifts: +28 (projection).",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": 0
+              },
+              {
+                "path": "gauges.lift_counts.projected_later_delta",
+                "value": 28
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "text": "This edits one box and keeps the crane order and ballast. It doesn't replan.",
+            "evidence": [
+              {
+                "path": "gauges.scope_note",
+                "value": "This edits one box and keeps the crane order and ballast. It doesn't replan."
+              },
+              {
+                "path": "gauges.crane_order_preserved",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "quality",
+            "text": "Legal isn't the same as good.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      }
+    },
+    {
+      "kind": "crane_order",
+      "verdict_sha256": "827f075241da0f5d73431a5e6faa04f4826722a7aefcc40ebf8eb3bcd3359032",
+      "prompt_sha256": "8209fe8e6ffae4684a39185fe83845945db51b8f2640f28c82bfa20fe19e5406",
+      "selected_ids": [
+        "status",
+        "diagnostic",
+        "broken:0",
+        "broken:1",
+        "lifts",
+        "scope"
+      ],
+      "validated": true,
+      "rejection": null,
+      "request_id": "de7da4d2-fb56-4d6b-97eb-56e78d2a4efc",
+      "cost_usd": "0.00164525",
+      "accounting": [
+        {
+          "time": "2026-11-02T03:14:51.358362+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": null,
+          "output_tokens": null,
+          "cached_tokens": null,
+          "purpose": "sandbox-verdict",
+          "request_id": null,
+          "reservation_id": "bb28d18458bf4a2eb0c1ccd2bffcad2e",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "reservation",
+          "cost_usd": "1.316864",
+          "status": "pending",
+          "cost_kind": "conservative_hold"
+        },
+        {
+          "time": "2026-11-02T03:14:51.358362+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": 864,
+          "output_tokens": 133,
+          "cached_tokens": 0,
+          "purpose": "sandbox-verdict",
+          "request_id": "de7da4d2-fb56-4d6b-97eb-56e78d2a4efc",
+          "reservation_id": "bb28d18458bf4a2eb0c1ccd2bffcad2e",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "settlement",
+          "status": "completed",
+          "cost_usd": "0.00164525",
+          "cost_kind": "measured"
+        }
+      ],
+      "explanation": {
+        "language": "en",
+        "text": "Muse Spark selected checked statements.\nStow is fine, but the existing crane order can't reach it (expert.moves.bottom_up). A replan might.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.bottom_up failed. Ship stacks must fill from the lowest cell without gaps. Measured: not reported; limit: not reported; boxes: [\"QZXU0000061\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nCrane lifts this call: unavailable. Projected later-port lifts: unavailable (projection).\nThis edits one box and keeps the crane order and ballast. It doesn't replan.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "Stow is fine, but the existing crane order can't reach it (expert.moves.bottom_up). A replan might.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              },
+              {
+                "path": "gauges.deciding_cause",
+                "value": {
+                  "kind": "crane_order",
+                  "source": "proposal_replay",
+                  "rule_id": "expert.moves.bottom_up",
+                  "message": "Ship stacks must fill from the lowest cell without gaps."
+                }
+              },
+              {
+                "path": "gauges.stow_assessment",
+                "value": {
+                  "passed": true,
+                  "source": "requested_stow_snapshot",
+                  "diagnostic_only": true,
+                  "checked_plan_reached": false,
+                  "violations": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.bottom_up failed. Ship stacks must fill from the lowest cell without gaps. Measured: not reported; limit: not reported; boxes: [\"QZXU0000061\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.bottom_up"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "Ship stacks must fill from the lowest cell without gaps."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000061"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Crane lifts this call: unavailable. Projected later-port lifts: unavailable (projection).",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": null
+              },
+              {
+                "path": "gauges.lift_counts.projected_later_delta",
+                "value": null
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "text": "This edits one box and keeps the crane order and ballast. It doesn't replan.",
+            "evidence": [
+              {
+                "path": "gauges.scope_note",
+                "value": "This edits one box and keeps the crane order and ballast. It doesn't replan."
+              },
+              {
+                "path": "gauges.crane_order_preserved",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      },
+      "template_explanation": {
+        "language": "en",
+        "text": "Template explanation.\nStow is fine, but the existing crane order can't reach it (expert.moves.bottom_up). A replan might.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.bottom_up failed. Ship stacks must fill from the lowest cell without gaps. Measured: not reported; limit: not reported; boxes: [\"QZXU0000061\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nCrane lifts this call: unavailable. Projected later-port lifts: unavailable (projection).\nThis edits one box and keeps the crane order and ballast. It doesn't replan.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "Stow is fine, but the existing crane order can't reach it (expert.moves.bottom_up). A replan might.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              },
+              {
+                "path": "gauges.deciding_cause",
+                "value": {
+                  "kind": "crane_order",
+                  "source": "proposal_replay",
+                  "rule_id": "expert.moves.bottom_up",
+                  "message": "Ship stacks must fill from the lowest cell without gaps."
+                }
+              },
+              {
+                "path": "gauges.stow_assessment",
+                "value": {
+                  "passed": true,
+                  "source": "requested_stow_snapshot",
+                  "diagnostic_only": true,
+                  "checked_plan_reached": false,
+                  "violations": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.bottom_up failed. Ship stacks must fill from the lowest cell without gaps. Measured: not reported; limit: not reported; boxes: [\"QZXU0000061\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.bottom_up"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "Ship stacks must fill from the lowest cell without gaps."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000061"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Crane lifts this call: unavailable. Projected later-port lifts: unavailable (projection).",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": null
+              },
+              {
+                "path": "gauges.lift_counts.projected_later_delta",
+                "value": null
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "text": "This edits one box and keeps the crane order and ballast. It doesn't replan.",
+            "evidence": [
+              {
+                "path": "gauges.scope_note",
+                "value": "This edits one box and keeps the crane order and ballast. It doesn't replan."
+              },
+              {
+                "path": "gauges.crane_order_preserved",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      }
+    },
+    {
+      "kind": "segregation",
+      "verdict_sha256": "ee28151e50c42be744cfd6691d7436ae92f223ca585aa1a740c3f56c646b2ef2",
+      "prompt_sha256": "2d84fc8500cdb3c9a748167177520369d5dc80fe5ce4d2df844117966a0989e2",
+      "selected_ids": [
+        "status",
+        "diagnostic",
+        "broken:0",
+        "broken:1",
+        "broken:2",
+        "lifts",
+        "scope"
+      ],
+      "validated": true,
+      "rejection": null,
+      "request_id": "468d5839-a1ab-411e-a9ba-09c392e796fb",
+      "cost_usd": "0.002294",
+      "accounting": [
+        {
+          "time": "2026-11-02T03:15:17.458931+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": null,
+          "output_tokens": null,
+          "cached_tokens": null,
+          "purpose": "sandbox-verdict",
+          "request_id": null,
+          "reservation_id": "17103b0556734518b2572ea9124f80de",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "reservation",
+          "cost_usd": "1.316864",
+          "status": "pending",
+          "cost_kind": "conservative_hold"
+        },
+        {
+          "time": "2026-11-02T03:15:17.458931+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": 1196,
+          "output_tokens": 188,
+          "cached_tokens": 0,
+          "purpose": "sandbox-verdict",
+          "request_id": "468d5839-a1ab-411e-a9ba-09c392e796fb",
+          "reservation_id": "17103b0556734518b2572ea9124f80de",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "settlement",
+          "status": "completed",
+          "cost_usd": "0.002294",
+          "cost_kind": "measured"
+        }
+      ],
+      "explanation": {
+        "language": "en",
+        "text": "Muse Spark selected checked statements.\nThe existing crane order can't reach the requested stow (expert.moves.hatch_clear). The diagnostic stow check also found broken rules.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.hatch_clear failed. The hatch cover must be off before accessing the hold. Measured: not reported; limit: not reported; boxes: [\"QZXU0000014\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nRule imdg.segregation.7_4_3 failed. IMDG segregation level 2 is not satisfied. Measured: not reported; limit: not reported; boxes: [\"QZXU0000014\",\"QZXU0000349\"].\nCrane lifts this call: unavailable. Projected later-port lifts: unavailable (projection).\nThis edits one box and keeps the crane order and ballast. It doesn't replan.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The existing crane order can't reach the requested stow (expert.moves.hatch_clear). The diagnostic stow check also found broken rules.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              },
+              {
+                "path": "gauges.deciding_cause",
+                "value": {
+                  "kind": "crane_order",
+                  "source": "proposal_replay",
+                  "rule_id": "expert.moves.hatch_clear",
+                  "message": "The hatch cover must be off before accessing the hold."
+                }
+              },
+              {
+                "path": "gauges.stow_assessment",
+                "value": {
+                  "passed": false,
+                  "source": "requested_stow_snapshot",
+                  "diagnostic_only": true,
+                  "checked_plan_reached": false,
+                  "violations": [
+                    {
+                      "rule_id": "imdg.segregation.7_4_3",
+                      "message": "IMDG segregation level 2 is not satisfied.",
+                      "measured": null,
+                      "limit": null,
+                      "boxes": [
+                        "QZXU0000014",
+                        "QZXU0000349"
+                      ],
+                      "unit": null,
+                      "severity": "hard",
+                      "slots": [
+                        "0210482",
+                        "0220602"
+                      ],
+                      "move_index": null
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.hatch_clear failed. The hatch cover must be off before accessing the hold. Measured: not reported; limit: not reported; boxes: [\"QZXU0000014\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "The hatch cover must be off before accessing the hold."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000014"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule imdg.segregation.7_4_3 failed. IMDG segregation level 2 is not satisfied. Measured: not reported; limit: not reported; boxes: [\"QZXU0000014\",\"QZXU0000349\"].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "imdg.segregation.7_4_3"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "IMDG segregation level 2 is not satisfied."
+              },
+              {
+                "path": "broken[2].measured",
+                "value": null
+              },
+              {
+                "path": "broken[2].limit",
+                "value": null
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": [
+                  "QZXU0000014",
+                  "QZXU0000349"
+                ]
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": null
+              },
+              {
+                "path": "broken[2].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Crane lifts this call: unavailable. Projected later-port lifts: unavailable (projection).",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": null
+              },
+              {
+                "path": "gauges.lift_counts.projected_later_delta",
+                "value": null
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "text": "This edits one box and keeps the crane order and ballast. It doesn't replan.",
+            "evidence": [
+              {
+                "path": "gauges.scope_note",
+                "value": "This edits one box and keeps the crane order and ballast. It doesn't replan."
+              },
+              {
+                "path": "gauges.crane_order_preserved",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      },
+      "template_explanation": {
+        "language": "en",
+        "text": "Template explanation.\nThe existing crane order can't reach the requested stow (expert.moves.hatch_clear). The diagnostic stow check also found broken rules.\nThe crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.\nRule expert.moves.hatch_clear failed. The hatch cover must be off before accessing the hold. Measured: not reported; limit: not reported; boxes: [\"QZXU0000014\"].\nRule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].\nRule imdg.segregation.7_4_3 failed. IMDG segregation level 2 is not satisfied. Measured: not reported; limit: not reported; boxes: [\"QZXU0000014\",\"QZXU0000349\"].\nCrane lifts this call: unavailable. Projected later-port lifts: unavailable (projection).\nThis edits one box and keeps the crane order and ballast. It doesn't replan.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "The existing crane order can't reach the requested stow (expert.moves.hatch_clear). The diagnostic stow check also found broken rules.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              },
+              {
+                "path": "gauges.deciding_cause",
+                "value": {
+                  "kind": "crane_order",
+                  "source": "proposal_replay",
+                  "rule_id": "expert.moves.hatch_clear",
+                  "message": "The hatch cover must be off before accessing the hold."
+                }
+              },
+              {
+                "path": "gauges.stow_assessment",
+                "value": {
+                  "passed": false,
+                  "source": "requested_stow_snapshot",
+                  "diagnostic_only": true,
+                  "checked_plan_reached": false,
+                  "violations": [
+                    {
+                      "rule_id": "imdg.segregation.7_4_3",
+                      "message": "IMDG segregation level 2 is not satisfied.",
+                      "measured": null,
+                      "limit": null,
+                      "boxes": [
+                        "QZXU0000014",
+                        "QZXU0000349"
+                      ],
+                      "unit": null,
+                      "severity": "hard",
+                      "slots": [
+                        "0210482",
+                        "0220602"
+                      ],
+                      "move_index": null
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "diagnostic",
+            "text": "The crane proposal did not reach the requested stow. The gauges describe a diagnostic check of that stow.",
+            "evidence": [
+              {
+                "path": "gauges.diagnostic_only",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule expert.moves.hatch_clear failed. The hatch cover must be off before accessing the hold. Measured: not reported; limit: not reported; boxes: [\"QZXU0000014\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "The hatch cover must be off before accessing the hold."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": null
+              },
+              {
+                "path": "broken[0].limit",
+                "value": null
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000014"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": null
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule expert.moves.hatch_clear failed. All hatch covers must be replaced before departure. Measured: not reported; limit: not reported; boxes: [].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "expert.moves.hatch_clear"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "All hatch covers must be replaced before departure."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": null
+              },
+              {
+                "path": "broken[1].limit",
+                "value": null
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": []
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": null
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule imdg.segregation.7_4_3 failed. IMDG segregation level 2 is not satisfied. Measured: not reported; limit: not reported; boxes: [\"QZXU0000014\",\"QZXU0000349\"].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "imdg.segregation.7_4_3"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "IMDG segregation level 2 is not satisfied."
+              },
+              {
+                "path": "broken[2].measured",
+                "value": null
+              },
+              {
+                "path": "broken[2].limit",
+                "value": null
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": [
+                  "QZXU0000014",
+                  "QZXU0000349"
+                ]
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": null
+              },
+              {
+                "path": "broken[2].source",
+                "value": "requested_stow_snapshot"
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Crane lifts this call: unavailable. Projected later-port lifts: unavailable (projection).",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": null
+              },
+              {
+                "path": "gauges.lift_counts.projected_later_delta",
+                "value": null
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "text": "This edits one box and keeps the crane order and ballast. It doesn't replan.",
+            "evidence": [
+              {
+                "path": "gauges.scope_note",
+                "value": "This edits one box and keeps the crane order and ballast. It doesn't replan."
+              },
+              {
+                "path": "gauges.crane_order_preserved",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      }
+    },
+    {
+      "kind": "securing",
+      "verdict_sha256": "f11ad8c33926a12bd5ed20ebac41ceafc9b3af3b50a2acab08053871ba51162a",
+      "prompt_sha256": "60d8baaf1b3dd328cf367fd9dc194112aca70e97a7311ab4dc7bfceca5287ba6",
+      "selected_ids": [
+        "status",
+        "broken:0",
+        "broken:1",
+        "broken:2",
+        "broken:3",
+        "broken:4",
+        "broken:5",
+        "broken:6",
+        "broken:7",
+        "broken:8",
+        "broken:9",
+        "broken:10",
+        "broken:11",
+        "broken:12",
+        "lifts",
+        "scope"
+      ],
+      "validated": true,
+      "rejection": null,
+      "request_id": "f3ded3f7-cac3-4c90-8906-416d6bba185d",
+      "cost_usd": "0.00893625",
+      "accounting": [
+        {
+          "time": "2026-11-02T03:15:37.748901+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": null,
+          "output_tokens": null,
+          "cached_tokens": null,
+          "purpose": "sandbox-verdict",
+          "request_id": null,
+          "reservation_id": "c9a1accd529a481283c0ff2d099f40cd",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "reservation",
+          "cost_usd": "1.316864",
+          "status": "pending",
+          "cost_kind": "conservative_hold"
+        },
+        {
+          "time": "2026-11-02T03:15:37.748901+00:00",
+          "model": "muse-spark-1.3",
+          "input_tokens": 6435,
+          "output_tokens": 210,
+          "cached_tokens": 0,
+          "purpose": "sandbox-verdict",
+          "request_id": "f3ded3f7-cac3-4c90-8906-416d6bba185d",
+          "reservation_id": "c9a1accd529a481283c0ff2d099f40cd",
+          "attempt": 1,
+          "reasoning_effort": "minimal",
+          "phase": "settlement",
+          "status": "completed",
+          "cost_usd": "0.00893625",
+          "cost_kind": "measured"
+        }
+      ],
+      "explanation": {
+        "language": "en",
+        "text": "Muse Spark selected checked statements.\nStow breaks rule iacs.member_irs.container_securing.\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.2560732132214936 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.501295887995794 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.76623045646564 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.4250060450679118 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.0107430373963673 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.243619037550215 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.4801162493072502 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.7413132344791178 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.4104479902428246 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.2000447870605533 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.4062187807203228 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.6543750361415563 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.3595897855874124 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nCrane lifts this call: +0. Projected later-port lifts: +2 (projection).\nThis edits one box and keeps the crane order and ballast. It doesn't replan.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "Stow breaks rule iacs.member_irs.container_securing.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              },
+              {
+                "path": "gauges.deciding_cause",
+                "value": {
+                  "kind": "stow_rule",
+                  "source": "full_plan_check",
+                  "rule_id": "iacs.member_irs.container_securing",
+                  "message": "[straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit."
+                }
+              },
+              {
+                "path": "gauges.stow_assessment",
+                "value": {
+                  "passed": false,
+                  "source": "full_plan_check",
+                  "diagnostic_only": false,
+                  "checked_plan_reached": true,
+                  "violations": [
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.2560732132214936,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.501295887995794,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.76623045646564,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.4250060450679118,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.0107430373963673,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_racking_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.243619037550215,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.4801162493072502,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_fitting_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.7413132344791178,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.4104479902428246,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-1:SGSIN:arrival arrival] max_racking_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.2000447870605533,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-1:SGSIN:arrival arrival] max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.4062187807203228,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-1:SGSIN:arrival arrival] max_fitting_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.6543750361415563,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.3595897855874124,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.2560732132214936 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": 1.2560732132214936
+              },
+              {
+                "path": "broken[0].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.501295887995794 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_corner_tension_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": 1.501295887995794
+              },
+              {
+                "path": "broken[1].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.76623045646564 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[2].measured",
+                "value": 1.76623045646564
+              },
+              {
+                "path": "broken[2].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[2].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:3",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.4250060450679118 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[3].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[3].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[3].measured",
+                "value": 1.4250060450679118
+              },
+              {
+                "path": "broken[3].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[3].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[3].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[3].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[3].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:4",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.0107430373963673 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[4].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[4].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[4].measured",
+                "value": 1.0107430373963673
+              },
+              {
+                "path": "broken[4].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[4].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[4].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[4].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[4].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:5",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.243619037550215 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[5].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[5].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_racking_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[5].measured",
+                "value": 1.243619037550215
+              },
+              {
+                "path": "broken[5].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[5].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[5].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[5].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[5].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:6",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.4801162493072502 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[6].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[6].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_corner_tension_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[6].measured",
+                "value": 1.4801162493072502
+              },
+              {
+                "path": "broken[6].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[6].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[6].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[6].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[6].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:7",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.7413132344791178 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[7].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[7].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_fitting_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[7].measured",
+                "value": 1.7413132344791178
+              },
+              {
+                "path": "broken[7].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[7].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[7].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[7].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[7].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:8",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.4104479902428246 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[8].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[8].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[8].measured",
+                "value": 1.4104479902428246
+              },
+              {
+                "path": "broken[8].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[8].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[8].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[8].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[8].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:9",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.2000447870605533 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[9].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[9].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_racking_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[9].measured",
+                "value": 1.2000447870605533
+              },
+              {
+                "path": "broken[9].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[9].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[9].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[9].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[9].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:10",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.4062187807203228 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[10].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[10].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_corner_tension_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[10].measured",
+                "value": 1.4062187807203228
+              },
+              {
+                "path": "broken[10].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[10].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[10].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[10].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[10].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:11",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.6543750361415563 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[11].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[11].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_fitting_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[11].measured",
+                "value": 1.6543750361415563
+              },
+              {
+                "path": "broken[11].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[11].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[11].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[11].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[11].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:12",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.3595897855874124 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[12].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[12].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[12].measured",
+                "value": 1.3595897855874124
+              },
+              {
+                "path": "broken[12].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[12].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[12].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[12].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[12].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Crane lifts this call: +0. Projected later-port lifts: +2 (projection).",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": 0
+              },
+              {
+                "path": "gauges.lift_counts.projected_later_delta",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "text": "This edits one box and keeps the crane order and ballast. It doesn't replan.",
+            "evidence": [
+              {
+                "path": "gauges.scope_note",
+                "value": "This edits one box and keeps the crane order and ballast. It doesn't replan."
+              },
+              {
+                "path": "gauges.crane_order_preserved",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      },
+      "template_explanation": {
+        "language": "en",
+        "text": "Template explanation.\nStow breaks rule iacs.member_irs.container_securing.\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.2560732132214936 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.501295887995794 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.76623045646564 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.4250060450679118 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.0107430373963673 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.243619037550215 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.4801162493072502 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.7413132344791178 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.4104479902428246 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.2000447870605533 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.4062187807203228 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.6543750361415563 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nRule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.3595897855874124 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].\nCrane lifts this call: +0. Projected later-port lifts: +2 (projection).\nThis edits one box and keeps the crane order and ballast. It doesn't replan.",
+        "statements": [
+          {
+            "id": "status",
+            "text": "Stow breaks rule iacs.member_irs.container_securing.",
+            "evidence": [
+              {
+                "path": "screen",
+                "value": "full"
+              },
+              {
+                "path": "legal",
+                "value": false
+              },
+              {
+                "path": "gauges.deciding_cause",
+                "value": {
+                  "kind": "stow_rule",
+                  "source": "full_plan_check",
+                  "rule_id": "iacs.member_irs.container_securing",
+                  "message": "[straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit."
+                }
+              },
+              {
+                "path": "gauges.stow_assessment",
+                "value": {
+                  "passed": false,
+                  "source": "full_plan_check",
+                  "diagnostic_only": false,
+                  "checked_plan_reached": true,
+                  "violations": [
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.2560732132214936,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.501295887995794,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.76623045646564,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.4250060450679118,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.0107430373963673,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_racking_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.243619037550215,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.4801162493072502,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_fitting_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.7413132344791178,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.4104479902428246,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-1:SGSIN:arrival arrival] max_racking_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.2000447870605533,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-1:SGSIN:arrival arrival] max_corner_tension_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.4062187807203228,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-1:SGSIN:arrival arrival] max_fitting_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.6543750361415563,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    },
+                    {
+                      "rule_id": "iacs.member_irs.container_securing",
+                      "message": "[straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit.",
+                      "measured": 1.3595897855874124,
+                      "limit": 1.0,
+                      "boxes": [
+                        "QZXU0000354",
+                        "QZXU0000415",
+                        "QZXU0000478",
+                        "QZXU0001113"
+                      ],
+                      "unit": "ratio",
+                      "severity": "hard",
+                      "slots": [
+                        "0100682",
+                        "0100684",
+                        "0100686",
+                        "0100688"
+                      ],
+                      "move_index": null
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "broken:0",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.2560732132214936 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[0].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[0].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_racking_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[0].measured",
+                "value": 1.2560732132214936
+              },
+              {
+                "path": "broken[0].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[0].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[0].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[0].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[0].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:1",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.501295887995794 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[1].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[1].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_corner_tension_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[1].measured",
+                "value": 1.501295887995794
+              },
+              {
+                "path": "broken[1].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[1].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[1].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[1].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[1].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:2",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.76623045646564 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[2].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[2].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[2].measured",
+                "value": 1.76623045646564
+              },
+              {
+                "path": "broken[2].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[2].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[2].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[2].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[2].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:3",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.4250060450679118 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[3].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[3].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[3].measured",
+                "value": 1.4250060450679118
+              },
+              {
+                "path": "broken[3].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[3].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[3].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[3].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[3].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:4",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.0107430373963673 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[4].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[4].message",
+                "value": "[straits:call-0:THLCH:departure departure] max_fitting_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[4].measured",
+                "value": 1.0107430373963673
+              },
+              {
+                "path": "broken[4].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[4].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[4].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[4].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[4].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:5",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.243619037550215 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[5].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[5].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_racking_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[5].measured",
+                "value": 1.243619037550215
+              },
+              {
+                "path": "broken[5].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[5].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[5].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[5].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[5].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:6",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.4801162493072502 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[6].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[6].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_corner_tension_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[6].measured",
+                "value": 1.4801162493072502
+              },
+              {
+                "path": "broken[6].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[6].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[6].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[6].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[6].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:7",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.7413132344791178 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[7].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[7].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_fitting_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[7].measured",
+                "value": 1.7413132344791178
+              },
+              {
+                "path": "broken[7].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[7].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[7].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[7].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[7].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:8",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.4104479902428246 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[8].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[8].message",
+                "value": "[straits:call-0:THLCH:departure:mid_voyage mid_voyage] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[8].measured",
+                "value": 1.4104479902428246
+              },
+              {
+                "path": "broken[8].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[8].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[8].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[8].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[8].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:9",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_racking_ratio exceeds the declared synthetic securing limit. Measured: 1.2000447870605533 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[9].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[9].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_racking_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[9].measured",
+                "value": 1.2000447870605533
+              },
+              {
+                "path": "broken[9].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[9].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[9].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[9].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[9].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:10",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_corner_tension_ratio exceeds the declared synthetic securing limit. Measured: 1.4062187807203228 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[10].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[10].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_corner_tension_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[10].measured",
+                "value": 1.4062187807203228
+              },
+              {
+                "path": "broken[10].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[10].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[10].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[10].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[10].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:11",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_fitting_ratio exceeds the declared synthetic securing limit. Measured: 1.6543750361415563 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[11].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[11].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_fitting_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[11].measured",
+                "value": 1.6543750361415563
+              },
+              {
+                "path": "broken[11].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[11].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[11].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[11].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[11].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "broken:12",
+            "text": "Rule iacs.member_irs.container_securing failed. [straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit. Measured: 1.3595897855874124 ratio; limit: 1.0 ratio; boxes: [\"QZXU0000354\",\"QZXU0000415\",\"QZXU0000478\",\"QZXU0001113\"].",
+            "evidence": [
+              {
+                "path": "broken[12].rule_id",
+                "value": "iacs.member_irs.container_securing"
+              },
+              {
+                "path": "broken[12].message",
+                "value": "[straits:call-1:SGSIN:arrival arrival] max_lashing_ratio exceeds the declared synthetic securing limit."
+              },
+              {
+                "path": "broken[12].measured",
+                "value": 1.3595897855874124
+              },
+              {
+                "path": "broken[12].limit",
+                "value": 1.0
+              },
+              {
+                "path": "broken[12].boxes",
+                "value": [
+                  "QZXU0000354",
+                  "QZXU0000415",
+                  "QZXU0000478",
+                  "QZXU0001113"
+                ]
+              },
+              {
+                "path": "broken[12].severity",
+                "value": "hard"
+              },
+              {
+                "path": "broken[12].unit",
+                "value": "ratio"
+              },
+              {
+                "path": "broken[12].source",
+                "value": "proposal_replay"
+              }
+            ]
+          },
+          {
+            "id": "lifts",
+            "text": "Crane lifts this call: +0. Projected later-port lifts: +2 (projection).",
+            "evidence": [
+              {
+                "path": "extra_lifts",
+                "value": 0
+              },
+              {
+                "path": "gauges.lift_counts.projected_later_delta",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "text": "This edits one box and keeps the crane order and ballast. It doesn't replan.",
+            "evidence": [
+              {
+                "path": "gauges.scope_note",
+                "value": "This edits one box and keeps the crane order and ballast. It doesn't replan."
+              },
+              {
+                "path": "gauges.crane_order_preserved",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "mode": "recorded"
+      }
+    }
+  ],
+  "task_actual_usd": "0.02298500",
+  "task_hold_usd": "0",
+  "incremental_actual_usd": "0.01424475"
+}

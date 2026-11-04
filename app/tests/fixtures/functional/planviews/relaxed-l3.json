@@ -1,0 +1,846 @@
+{
+ "aboard_pct": 91.7,
+ "active_rules": 41,
+ "bays": [
+  {
+   "bay": 1,
+   "boxes": [
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000001",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 1,
+     "size_ft": 20,
+     "slot": "0010102",
+     "span_bay": null,
+     "tier": 2,
+     "un": null,
+     "weight_t": 8.0
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000002",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 2,
+     "size_ft": 20,
+     "slot": "0010202",
+     "span_bay": null,
+     "tier": 2,
+     "un": null,
+     "weight_t": 9.5
+    },
+    {
+     "dg_class": "3",
+     "empty": false,
+     "id": "QZXU0000003",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 3,
+     "size_ft": 20,
+     "slot": "0010302",
+     "span_bay": null,
+     "tier": 2,
+     "un": "1263",
+     "weight_t": 11.0
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000004",
+     "pod": "MYPKG",
+     "reefer": true,
+     "row": 4,
+     "size_ft": 20,
+     "slot": "0010402",
+     "span_bay": null,
+     "tier": 2,
+     "un": null,
+     "weight_t": 12.5
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000005",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 1,
+     "size_ft": 40,
+     "slot": "0020104",
+     "span_bay": 2,
+     "tier": 4,
+     "un": null,
+     "weight_t": 14.0
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000006",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 2,
+     "size_ft": 20,
+     "slot": "0010204",
+     "span_bay": null,
+     "tier": 4,
+     "un": null,
+     "weight_t": 15.5
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000007",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 3,
+     "size_ft": 20,
+     "slot": "0010304",
+     "span_bay": null,
+     "tier": 4,
+     "un": null,
+     "weight_t": 17.0
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000008",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 4,
+     "size_ft": 20,
+     "slot": "0010404",
+     "span_bay": null,
+     "tier": 4,
+     "un": null,
+     "weight_t": 18.5
+    },
+    {
+     "dg_class": "3",
+     "empty": false,
+     "id": "QZXU0000009",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 1,
+     "size_ft": 20,
+     "slot": "0010182",
+     "span_bay": null,
+     "tier": 82,
+     "un": "1263",
+     "weight_t": 20.0
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000010",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 2,
+     "size_ft": 40,
+     "slot": "0020282",
+     "span_bay": 2,
+     "tier": 82,
+     "un": null,
+     "weight_t": 8.0
+    },
+    {
+     "dg_class": null,
+     "empty": true,
+     "id": "QZXU0000011",
+     "pod": "SGSIN",
+     "reefer": true,
+     "row": 3,
+     "size_ft": 20,
+     "slot": "0010382",
+     "span_bay": null,
+     "tier": 82,
+     "un": null,
+     "weight_t": 9.5
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000012",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 4,
+     "size_ft": 20,
+     "slot": "0010482",
+     "span_bay": null,
+     "tier": 82,
+     "un": null,
+     "weight_t": 11.0
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000013",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 1,
+     "size_ft": 20,
+     "slot": "0010184",
+     "span_bay": null,
+     "tier": 84,
+     "un": null,
+     "weight_t": 12.5
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000014",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 2,
+     "size_ft": 20,
+     "slot": "0010284",
+     "span_bay": null,
+     "tier": 84,
+     "un": null,
+     "weight_t": 14.0
+    },
+    {
+     "dg_class": "3",
+     "empty": false,
+     "id": "QZXU0000015",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 3,
+     "size_ft": 40,
+     "slot": "0020384",
+     "span_bay": 2,
+     "tier": 84,
+     "un": "1263",
+     "weight_t": 15.5
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000016",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 4,
+     "size_ft": 20,
+     "slot": "0010484",
+     "span_bay": null,
+     "tier": 84,
+     "un": null,
+     "weight_t": 17.0
+    }
+   ],
+   "cells": [
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 4
+    },
+    {
+     "reefer": true,
+     "row": 1,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 84
+    }
+   ],
+   "deck_tiers": [
+    84,
+    82
+   ],
+   "hatch": true,
+   "hold_tiers": [
+    4,
+    2
+   ],
+   "label": "Bay 01",
+   "rows": [
+    4,
+    2,
+    1,
+    3
+   ]
+  },
+  {
+   "bay": 3,
+   "boxes": [
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000005",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 1,
+     "size_ft": 40,
+     "slot": "0020104",
+     "span_bay": 2,
+     "tier": 4,
+     "un": null,
+     "weight_t": 14.0
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000010",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 2,
+     "size_ft": 40,
+     "slot": "0020282",
+     "span_bay": 2,
+     "tier": 82,
+     "un": null,
+     "weight_t": 8.0
+    },
+    {
+     "dg_class": "3",
+     "empty": false,
+     "id": "QZXU0000015",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 3,
+     "size_ft": 40,
+     "slot": "0020384",
+     "span_bay": 2,
+     "tier": 84,
+     "un": "1263",
+     "weight_t": 15.5
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000017",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 1,
+     "size_ft": 20,
+     "slot": "0030102",
+     "span_bay": null,
+     "tier": 2,
+     "un": null,
+     "weight_t": 18.5
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000018",
+     "pod": "MYPKG",
+     "reefer": true,
+     "row": 2,
+     "size_ft": 20,
+     "slot": "0030202",
+     "span_bay": null,
+     "tier": 2,
+     "un": null,
+     "weight_t": 20.0
+    },
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000019",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 3,
+     "size_ft": 20,
+     "slot": "0030302",
+     "span_bay": null,
+     "tier": 2,
+     "un": null,
+     "weight_t": 8.0
+    },
+    {
+     "dg_class": "3",
+     "empty": false,
+     "id": "QZXU0000021",
+     "pod": "SGSIN",
+     "reefer": false,
+     "row": 4,
+     "size_ft": 20,
+     "slot": "0030402",
+     "span_bay": null,
+     "tier": 2,
+     "un": "1263",
+     "weight_t": 11.0
+    },
+    {
+     "dg_class": null,
+     "empty": true,
+     "id": "QZXU0000022",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 2,
+     "size_ft": 20,
+     "slot": "0030204",
+     "span_bay": null,
+     "tier": 4,
+     "un": null,
+     "weight_t": 12.5
+    }
+   ],
+   "cells": [
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 4
+    },
+    {
+     "reefer": true,
+     "row": 1,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 84
+    }
+   ],
+   "deck_tiers": [
+    84,
+    82
+   ],
+   "hatch": true,
+   "hold_tiers": [
+    4,
+    2
+   ],
+   "label": "Bay 03",
+   "rows": [
+    4,
+    2,
+    1,
+    3
+   ]
+  },
+  {
+   "bay": 5,
+   "boxes": [
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000020",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 1,
+     "size_ft": 40,
+     "slot": "0060102",
+     "span_bay": 6,
+     "tier": 2,
+     "un": null,
+     "weight_t": 9.5
+    }
+   ],
+   "cells": [
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 4
+    },
+    {
+     "reefer": true,
+     "row": 1,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 84
+    }
+   ],
+   "deck_tiers": [
+    84,
+    82
+   ],
+   "hatch": true,
+   "hold_tiers": [
+    4,
+    2
+   ],
+   "label": "Bay 05",
+   "rows": [
+    4,
+    2,
+    1,
+    3
+   ]
+  },
+  {
+   "bay": 7,
+   "boxes": [
+    {
+     "dg_class": null,
+     "empty": false,
+     "id": "QZXU0000020",
+     "pod": "MYPKG",
+     "reefer": false,
+     "row": 1,
+     "size_ft": 40,
+     "slot": "0060102",
+     "span_bay": 6,
+     "tier": 2,
+     "un": null,
+     "weight_t": 9.5
+    }
+   ],
+   "cells": [
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 4
+    },
+    {
+     "reefer": true,
+     "row": 1,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 1,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 2,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 3,
+     "tier": 84
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 2
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 4
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 82
+    },
+    {
+     "reefer": false,
+     "row": 4,
+     "tier": 84
+    }
+   ],
+   "deck_tiers": [
+    84,
+    82
+   ],
+   "hatch": true,
+   "hold_tiers": [
+    4,
+    2
+   ],
+   "label": "Bay 07",
+   "rows": [
+    4,
+    2,
+    1,
+    3
+   ]
+  }
+ ],
+ "boxes_aboard": 22,
+ "boxes_ashore": [
+  "QZXU0000023",
+  "QZXU0000024"
+ ],
+ "boxes_drawn": 22,
+ "boxes_total": 24,
+ "broken_rules": [
+  {
+   "id": "expert.e2.weight_order",
+   "tier": "T4",
+   "title": "No heavier container above a lighter container"
+  },
+  {
+   "id": "objective.all_loaded",
+   "tier": "T3",
+   "title": "Every required load-list container is aboard at departure"
+  }
+ ],
+ "call_id": "c20261103-101500-a1b2c3",
+ "confirmed_instructions": [
+  {
+   "rechecked": true,
+   "sentence": "Nothing goes into bay seven on this call."
+  }
+ ],
+ "first_checked_wall_s": 11.4,
+ "full_checker_pass": false,
+ "instance_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+ "label": "Relaxed plan: gives up bookings or leaves boxes ashore; partial, 91.7 % aboard",
+ "level": 3,
+ "lifts": 9.0,
+ "lifts_words": "extra crane lifts (rehandles now and projected at later ports, hatch-cover lifts; D15)",
+ "message": "Partial relaxed plan at L3; 91.7% aboard; full checker pass: false. Broken rules: expert.e2.weight_order, objective.all_loaded. Boxes ashore: 2.",
+ "notes": [
+  "Bays are physical 20-foot positions, fore to aft by BAPLIE number; rows run port to starboard; tiers bottom to top (hold below 80, deck from 80).",
+  "A 40-foot box is drawn in both odd bays it spans and counted once.",
+  "Placements are this plan's ship moves replayed over the arrival state; the verdict is the runner's checker evidence, read and not recomputed."
+ ],
+ "partial": true,
+ "passed": false,
+ "pods": [
+  {
+   "code": "SGSIN",
+   "colour": "#0072b2",
+   "order": 1
+  },
+  {
+   "code": "MYPKG",
+   "colour": "#e69f00",
+   "order": 2
+  }
+ ],
+ "receipt_plan_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+ "relaxed": true,
+ "schema": "stowlm.functional-plan-view/1",
+ "ship": {
+  "id": "feeder_500.small",
+  "name": "feeder_500.small",
+  "teu": 64
+ },
+ "status": "relaxed_plan",
+ "synthetic_label": "Synthetic ship and cargo, simulated port",
+ "wall_s": 62.0
+}

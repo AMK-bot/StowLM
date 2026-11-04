@@ -1,0 +1,1903 @@
+{
+  "schema_version": "stowlm.hero-delivery-audit/1",
+  "recording": "hero-shot10-delivered",
+  "scope": "Offline observations of this separately recorded demonstration after declared software-card scoping/auth/cache-label repairs. No benchmark/scenario rerun, original criteria change or new benchmark score.",
+  "delivery_outcome": "DELIVERED on turn2 after two withheld attempts and scripted planner clarifications. Actual chosen DG reading, host confirmation and checked stored-plan release followed.",
+  "source_pins": {
+    "fixtures/hero-shot10-delivered/shot10.json": "ea03b6ff52df574e616ae45c643b548f5ab0e486a7f677accd96f14e699b0c37",
+    "fixtures/hero-shot10-delivered/shot10-facts.json": "5c50112afdc7ba7a144509207a6cebdd4c11639397a6e365c1c49ee02c46de7c",
+    "fixtures/hero-shot10-delivered/finished.json": "596147a3da9bf140e369e266f0376c389558ba066ac8d5de6c57e553f7d0eb77",
+    "fixtures/hero-shot10-delivered/run-authorization.json": "c1987627243067d264833489bd49f340d7684dfc746a43a56a6a52b1d1e4b841",
+    "fixtures/hero-shot10-delivered-report/hero-shot10-report.json": "ba8d5e206c09541d526c415798597a689014bb4e14b994547a71985634c69111",
+    "fixtures/hero-shot10-delivered-report/p22-playback-manifest.json": "80597eab4326c74cb83793e1afe4741d60749198d86b1e1f0b268e1741a57a05"
+  },
+  "host_ranking_delivered_flag": true,
+  "turn_observations": [
+    {
+      "turn_index": 0,
+      "same_window_checked_cards": [
+        {
+          "id": "dg-clearance",
+          "label": "checked",
+          "checked": true,
+          "passed": true,
+          "lifts": 70.0,
+          "lifts_label": "measured; includes projected later-port lifts",
+          "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+          "cost_reference": {
+            "label": "measured; includes projected later-port lifts",
+            "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+            "source": "checker.report.count.weighted_nonproductive",
+            "value": 70.0
+          }
+        },
+        {
+          "id": "bay-closure",
+          "label": "checked",
+          "checked": true,
+          "passed": true,
+          "lifts": 82.0,
+          "lifts_label": "measured; includes projected later-port lifts",
+          "plan_sha256": "f66c8301b6c7d83ec1b0f593a07c764fecab5c7288fce1cf72602cb8527a0f2d",
+          "cost_reference": {
+            "label": "measured; includes projected later-port lifts",
+            "plan_sha256": "f66c8301b6c7d83ec1b0f593a07c764fecab5c7288fce1cf72602cb8527a0f2d",
+            "source": "checker.report.count.weighted_nonproductive",
+            "value": 82.0
+          }
+        }
+      ],
+      "raw_say": "Your selected request \u2014 0 tiers in hold and 0 tiers on deck in every bay \u2014 is impossible. Checked arithmetic proof: the load needs 143 TEU of cells but only 60 remain open (180 closed by the instruction). Equation: 143 needed > 60 open, even as a necessary upper-bound screen. Planning is not permitted under that request.\n\nChecked alternatives requiring your choice:\n1) Card dg-clearance: Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation. Checked true, full checker passed true. Weighted nonproductive lifts: 70.0, measured; includes projected later-port lifts.\n2) Card bay-closure: Do not load any containers in bay 09. Checked true, full checker passed true. Weighted nonproductive lifts: 82.0, measured; includes projected later-port lifts.\n\nComparison: 82.0 - 70.0 = 12.0 extra weighted lifts for bay-closure over dg-clearance.\n\nRecommendation: choose dg-clearance. Reason: both are checked passes satisfying every previously confirmed instruction, but dg-clearance costs 12.0 fewer weighted lifts (70.0 vs 82.0). Neither is applied until you choose it, send its sentence through the reader, and confirm the new reading.",
+      "final_say": "The authenticated catalogue refusal was rechecked; the complete proposed instruction is proved impossible. A necessary screen gives at most 60 open physical cells for 143 required; even that upper bound falls short.",
+      "raw_frozen_text_flags": [],
+      "software_gate_reasons": [
+        "unsupported_acceptance"
+      ],
+      "raw_retained_verbatim": false,
+      "delivered_comparison": false,
+      "observation": "Checked-card raw comparison withheld; final only proof template."
+    },
+    {
+      "turn_index": 1,
+      "same_window_checked_cards": [
+        {
+          "id": "dg-clearance",
+          "label": "checked",
+          "checked": true,
+          "passed": true,
+          "lifts": 70.0,
+          "lifts_label": "measured; includes projected later-port lifts",
+          "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+          "cost_reference": {
+            "label": "measured; includes projected later-port lifts",
+            "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+            "source": "checker.report.count.weighted_nonproductive",
+            "value": 70.0
+          }
+        },
+        {
+          "id": "bay-closure",
+          "label": "checked",
+          "checked": true,
+          "passed": true,
+          "lifts": 82.0,
+          "lifts_label": "measured; includes projected later-port lifts",
+          "plan_sha256": "f66c8301b6c7d83ec1b0f593a07c764fecab5c7288fce1cf72602cb8527a0f2d",
+          "cost_reference": {
+            "label": "measured; includes projected later-port lifts",
+            "plan_sha256": "f66c8301b6c7d83ec1b0f593a07c764fecab5c7288fce1cf72602cb8527a0f2d",
+            "source": "checker.report.count.weighted_nonproductive",
+            "value": 82.0
+          }
+        }
+      ],
+      "raw_say": "Both cards are checked what-if candidates only \u2014 neither is chosen or applied. dg-clearance: checked true, checker passed true, 70.0 weighted lifts; includes projected later-port lifts. Sentence: Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation. bay-closure: checked true, checker passed true, 82.0 weighted lifts; includes projected later-port lifts. Sentence: Do not load any containers in bay 09. Difference is 12.0 lifts higher for bay-closure. Both show applied false and requires your choice, plus reader_required_for_application true \u2014 you must choose one, send its exact sentence through the reader, and confirm the new reading before it can be applied; it is not applied automatically. Recommendation: choose dg-clearance if you proceed, because it is fully checked and saves 12.0 lifts versus bay-closure with the same checked pass status.",
+      "final_say": "The authenticated catalogue refusal was rechecked; the complete proposed instruction is proved impossible. A necessary screen gives at most 60 open physical cells for 143 required; even that upper bound falls short.",
+      "raw_frozen_text_flags": [
+        "unsupported_number"
+      ],
+      "software_gate_reasons": [
+        "unsupported_number",
+        "unsupported_acceptance"
+      ],
+      "raw_retained_verbatim": false,
+      "delivered_comparison": false,
+      "observation": "Checked-card raw comparison withheld; final only proof template."
+    },
+    {
+      "turn_index": 2,
+      "same_window_checked_cards": [
+        {
+          "id": "dg-clearance",
+          "label": "checked",
+          "checked": true,
+          "passed": true,
+          "lifts": 70.0,
+          "lifts_label": "measured; includes projected later-port lifts",
+          "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+          "cost_reference": {
+            "label": "measured; includes projected later-port lifts",
+            "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+            "source": "checker.report.count.weighted_nonproductive",
+            "value": 70.0
+          }
+        },
+        {
+          "id": "bay-closure",
+          "label": "checked",
+          "checked": true,
+          "passed": true,
+          "lifts": 82.0,
+          "lifts_label": "measured; includes projected later-port lifts",
+          "plan_sha256": "f66c8301b6c7d83ec1b0f593a07c764fecab5c7288fce1cf72602cb8527a0f2d",
+          "cost_reference": {
+            "label": "measured; includes projected later-port lifts",
+            "plan_sha256": "f66c8301b6c7d83ec1b0f593a07c764fecab5c7288fce1cf72602cb8527a0f2d",
+            "source": "checker.report.count.weighted_nonproductive",
+            "value": 82.0
+          }
+        }
+      ],
+      "raw_say": "The selected request is proved impossible and no replacement is applied: a necessary screen gives at most 60 open physical cells for 143 required; 143 needed > 60 open. Both what-if cards are checked candidates only, not chosen or applied:\n- dg-clearance: checked true, checker passed true, weighted nonproductive lifts 70.0 measured; includes projected later-port lifts.\n- bay-closure: checked true, checker passed true, weighted nonproductive lifts 82.0 measured; includes projected later-port lifts.\nFor fewer weighted lifts I recommend dg-clearance, because 70.0 vs 82.0 is 12.0 lower on the compared arithmetic over checked weighted lifts. If you want it, you must choose its sentence, send it through the reader, and confirm the new reading before it can apply.",
+      "final_say": "The selected request is proved impossible and no replacement is applied: a necessary screen gives at most 60 open physical cells for 143 required; 143 needed > 60 open. Both what-if cards are checked candidates only, not chosen or applied:\n- dg-clearance: checked true, checker passed true, weighted nonproductive lifts 70.0 measured; includes projected later-port lifts.\n- bay-closure: checked true, checker passed true, weighted nonproductive lifts 82.0 measured; includes projected later-port lifts.\nFor fewer weighted lifts I recommend dg-clearance, because 70.0 vs 82.0 is 12.0 lower on the compared arithmetic over checked weighted lifts. If you want it, you must choose its sentence, send it through the reader, and confirm the new reading before it can apply.\nThe authenticated catalogue refusal was rechecked; the complete proposed instruction is proved impossible. A necessary screen gives at most 60 open physical cells for 143 required; even that upper bound falls short.",
+      "raw_frozen_text_flags": [],
+      "software_gate_reasons": [],
+      "raw_retained_verbatim": true,
+      "delivered_comparison": true,
+      "observation": "Final retains both checked card identities, 70.0/82.0 weighted costs, projected-lift label and supported 12.0 lower-cost recommendation. Explicitly neither chosen/applied; reader and host confirmation required."
+    },
+    {
+      "turn_index": 3,
+      "same_window_checked_cards": [],
+      "raw_say": "Reading for 'Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.' needs your separate host confirmation before it can apply \u2014 I cannot confirm it myself.\n\nEvery row in reading 038d62253eb5f4aa894d45247cb6ab8eed8d04094a7dd1ff1ca927b8786e656f:\n1. standing role \u2014 status refused \u2014 sentence empty \u2014 binds false \u2014 refusal code not_an_instruction: The reader did not identify an instruction. No constraint was applied.\n2. voyage role \u2014 status accepted \u2014 sentence 'Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.' \u2014 binds true \u2014 constraint type dg_keep_away, imdg_class 2.2, min_bays 3, away_from accommodation.\n\nThe static screen did not prove this impossible (143 TEU demand vs 240 physical cells), but a plan and full checker are still required. Please confirm this reading through the planner if you want to proceed to replan.",
+      "final_say": "Review the reader interpretation and confirm it through the planner before replanning.",
+      "raw_frozen_text_flags": [],
+      "software_gate_reasons": [
+        "unsupported_acceptance"
+      ],
+      "raw_retained_verbatim": false,
+      "delivered_comparison": false,
+      "observation": "Reader rows proposed, separate host confirmed despite prose being replaced by review template."
+    },
+    {
+      "turn_index": 4,
+      "same_window_checked_cards": [],
+      "raw_say": "Found the stored plan for your confirmed rule and checked it:\n- Confirmed rule: DG keep-away for IMDG class 2.2, min_bays 3 away_from accommodation.\n- Stored plan status: checked_plan, full checker passed true, instruction audit passed true. All stability, strength, lashing, visibility and voyage parts passed true.\n- Operational change: the plan enforces at least 3 bays separation for the 87 boxes to load from accommodation. To achieve that within 240 physical cells it uses 46 relocations current-port lifts and 12 hatch_cover_lifts current-port lifts, with loads 87 current-port lifts.\n- Lift cost: weighted nonproductive 70.0 weighted lifts; includes projected later-port lifts. Projected later-port lifts are 6 at call_index 1 and 6 at call_index 2, 0 at call_index 3.\n- Envelope still in_envelope true: 87 boxes to load, box_limit 195, physical_cell_fill 0.5958333333333333 in the planned half-ship section of feeder_500.\nNo new plan was created; this is the reused recorded gate already verified.",
+      "final_say": "Found the stored plan for your confirmed rule and checked it:\n- Confirmed rule: DG keep-away for IMDG class 2.2, min_bays 3 away_from accommodation.\n- Stored plan status: checked_plan, full checker passed true, instruction audit passed true. All stability, strength, lashing, visibility and voyage parts passed true.\n- Operational change: the plan enforces at least 3 bays separation for the 87 boxes to load from accommodation. To achieve that within 240 physical cells it uses 46 relocations current-port lifts and 12 hatch_cover_lifts current-port lifts, with loads 87 current-port lifts.\n- Lift cost: weighted nonproductive 70.0 weighted lifts; includes projected later-port lifts. Projected later-port lifts are 6 at call_index 1 and 6 at call_index 2, 0 at call_index 3.\n- Envelope still in_envelope true: 87 boxes to load, box_limit 195, physical_cell_fill 0.5958333333333333 in the planned half-ship section of feeder_500.\nNo new plan was created; this is the reused recorded gate already verified.",
+      "raw_frozen_text_flags": [],
+      "software_gate_reasons": [],
+      "raw_retained_verbatim": true,
+      "delivered_comparison": false,
+      "observation": "Confirmed checked stored-plan digest actually returned, with recorded reuse provenance in final prose."
+    }
+  ],
+  "unchanged_frozen_raw_behavior": {
+    "raw_text": {
+      "passed": 4,
+      "total": 5
+    },
+    "raw_text_violations": 1,
+    "raw_actions": {
+      "passed": 3,
+      "total": 5
+    },
+    "software_enforcement": {
+      "passed": 5,
+      "total": 5
+    },
+    "violation_kinds": [
+      "invalid_action_protocol",
+      "unsupported_number"
+    ],
+    "report_lines": [
+      "Enforced by software: release checks exercised on 5 returned outputs; 5 satisfy them. This is not model accuracy.",
+      "Spark\u2019s own text before the gate: 1 of 5 violations (unsupported_number)."
+    ]
+  },
+  "raw_numeric_flag_audit": {
+    "turn_index": 1,
+    "missing_frozen_tokens": [
+      "one"
+    ],
+    "exact_context": "you must choose one, send its exact sentence through the reader, and confirm the new reading before it can be applied",
+    "interpretation": "The frozen recognizer treats card-reference one as a quantity absent from this window. Saved unsupported_number grade remains unchanged; this does not show an invented measured lift cost."
+  },
+  "action_violation_turns": [
+    0,
+    4
+  ],
+  "host_confirmation": {
+    "status": "confirmed",
+    "reading_id": "038d62253eb5f4aa894d45247cb6ab8eed8d04094a7dd1ff1ca927b8786e656f",
+    "planner_confirmed": true,
+    "passed": false
+  },
+  "checked_stored_hashes": [
+    {
+      "source_pointer": "/turns/4/trace/3/content",
+      "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+      "mode": "stored",
+      "computed_utc": null
+    }
+  ],
+  "returned_plan_hashes": [
+    {
+      "turn_index": 4,
+      "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee"
+    }
+  ],
+  "actual_tool_receipts": [
+    {
+      "turn_index": 0,
+      "event_index": 5,
+      "tool": "read_instruction",
+      "status": "needs_confirmation",
+      "mode": null,
+      "passed": false,
+      "checker": null,
+      "instruction_recheck": null,
+      "plan_sha256": null,
+      "text": "The authenticated catalogue refusal was rechecked; the complete proposed instruction is proved impossible. A necessary screen gives at most 60 open physical cells for 143 required; even that upper bound falls short. Checked alternative requiring your choice: Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation. Reused recorded native gate, native checked at 2026-11-02T05:33:34.342527+00:00; current source, epoch, inputs and reader rules verified now. The candidate satisfies this alternative together with every previously confirmed instruction. Weighted nonproductive lifts: 70.0; this includes projected later-port lifts. The planner must choose it, send its sentence through the reader, and confirm the new reading before applying it. It is not applied automatically. Checked alternative requiring your choice: Do not load any containers in bay 09. Reused recorded native gate, native checked at 2026-11-02T05:24:25.430781+00:00; current source, epoch, inputs and reader rules verified now. The candidate satisfies this alternative together with every previously confirmed instruction. Weighted nonproductive lifts: 82.0; this includes projected later-port lifts. The planner must choose it, send its sentence through the reader, and confirm the new reading before applying it. It is not applied automatically."
+    },
+    {
+      "turn_index": 0,
+      "event_index": 9,
+      "tool": "list_limits",
+      "status": "limits",
+      "mode": null,
+      "passed": false,
+      "checker": null,
+      "instruction_recheck": null,
+      "plan_sha256": null,
+      "text": "Synthetic ship facts: 87 boxes to load; 240 physical cells. Minimum GM (metres): 0.15. Maximum draught (metres): 7.05. Maximum trim (metres): 1.078. Maximum list (radians): 0.03490658503988659. Yard stack height (tiers): 5. Limits require checking and cannot be waived by the copilot. The authenticated catalogue refusal was rechecked; the complete proposed instruction is proved impossible. A necessary screen gives at most 60 open physical cells for 143 required; even that upper bound falls short. Checked alternative requiring your choice: Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation. Reused recorded native gate, native checked at 2026-11-02T05:33:34.342527+00:00; current source, epoch, inputs and reader rules verified now. The candidate satisfies this alternative together with every previously confirmed instruction. Weighted nonproductive lifts: 70.0; this includes projected later-port lifts. The planner must choose it, send its sentence through the reader, and confirm the new reading before applying it. It is not applied automatically. Checked alternative requiring your choice: Do not load any containers in bay 09. Reused recorded native gate, native checked at 2026-11-02T05:24:25.430781+00:00; current source, epoch, inputs and reader rules verified now. The candidate satisfies this alternative together with every previously confirmed instruction. Weighted nonproductive lifts: 82.0; this includes projected later-port lifts. The planner must choose it, send its sentence through the reader, and confirm the new reading before applying it. It is not applied automatically."
+    },
+    {
+      "turn_index": 1,
+      "event_index": 3,
+      "tool": "list_limits",
+      "status": "limits",
+      "mode": null,
+      "passed": false,
+      "checker": null,
+      "instruction_recheck": null,
+      "plan_sha256": null,
+      "text": "Synthetic ship facts: 87 boxes to load; 240 physical cells. Minimum GM (metres): 0.15. Maximum draught (metres): 7.05. Maximum trim (metres): 1.078. Maximum list (radians): 0.03490658503988659. Yard stack height (tiers): 5. Limits require checking and cannot be waived by the copilot. The authenticated catalogue refusal was rechecked; the complete proposed instruction is proved impossible. A necessary screen gives at most 60 open physical cells for 143 required; even that upper bound falls short. Checked alternative requiring your choice: Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation. Reused recorded native gate, native checked at 2026-11-02T05:33:34.342527+00:00; current source, epoch, inputs and reader rules verified now. The candidate satisfies this alternative together with every previously confirmed instruction. Weighted nonproductive lifts: 70.0; this includes projected later-port lifts. The planner must choose it, send its sentence through the reader, and confirm the new reading before applying it. It is not applied automatically. Checked alternative requiring your choice: Do not load any containers in bay 09. Reused recorded native gate, native checked at 2026-11-02T05:24:25.430781+00:00; current source, epoch, inputs and reader rules verified now. The candidate satisfies this alternative together with every previously confirmed instruction. Weighted nonproductive lifts: 82.0; this includes projected later-port lifts. The planner must choose it, send its sentence through the reader, and confirm the new reading before applying it. It is not applied automatically."
+    },
+    {
+      "turn_index": 2,
+      "event_index": 3,
+      "tool": "list_limits",
+      "status": "limits",
+      "mode": null,
+      "passed": false,
+      "checker": null,
+      "instruction_recheck": null,
+      "plan_sha256": null,
+      "text": "Synthetic ship facts: 87 boxes to load; 240 physical cells. Minimum GM (metres): 0.15. Maximum draught (metres): 7.05. Maximum trim (metres): 1.078. Maximum list (radians): 0.03490658503988659. Yard stack height (tiers): 5. Limits require checking and cannot be waived by the copilot. The authenticated catalogue refusal was rechecked; the complete proposed instruction is proved impossible. A necessary screen gives at most 60 open physical cells for 143 required; even that upper bound falls short. Checked alternative requiring your choice: Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation. Reused recorded native gate, native checked at 2026-11-02T05:33:34.342527+00:00; current source, epoch, inputs and reader rules verified now. The candidate satisfies this alternative together with every previously confirmed instruction. Weighted nonproductive lifts: 70.0; this includes projected later-port lifts. The planner must choose it, send its sentence through the reader, and confirm the new reading before applying it. It is not applied automatically. Checked alternative requiring your choice: Do not load any containers in bay 09. Reused recorded native gate, native checked at 2026-11-02T05:24:25.430781+00:00; current source, epoch, inputs and reader rules verified now. The candidate satisfies this alternative together with every previously confirmed instruction. Weighted nonproductive lifts: 82.0; this includes projected later-port lifts. The planner must choose it, send its sentence through the reader, and confirm the new reading before applying it. It is not applied automatically."
+    },
+    {
+      "turn_index": 3,
+      "event_index": 3,
+      "tool": "read_instruction",
+      "status": "needs_confirmation",
+      "mode": null,
+      "passed": false,
+      "checker": null,
+      "instruction_recheck": null,
+      "plan_sha256": null,
+      "text": "Review the reader interpretation and confirm it through the planner before replanning."
+    },
+    {
+      "turn_index": 4,
+      "event_index": 3,
+      "tool": "plan_lookup",
+      "status": "checked_plan",
+      "mode": "stored",
+      "passed": true,
+      "checker": {
+        "passed": true,
+        "report": {
+          "count": {
+            "discharges": 0,
+            "future": [
+              {
+                "call_index": 1,
+                "hatch_cover_lifts": 6,
+                "restow_lifts": 0,
+                "restowed_boxes": 0
+              },
+              {
+                "call_index": 2,
+                "hatch_cover_lifts": 6,
+                "restow_lifts": 0,
+                "restowed_boxes": 0
+              },
+              {
+                "call_index": 3,
+                "hatch_cover_lifts": 0,
+                "restow_lifts": 0,
+                "restowed_boxes": 0
+              }
+            ],
+            "gate_moves": 0,
+            "hatch_cover_lifts": 12,
+            "loads": 87,
+            "relocations": 46,
+            "restow_lifts": 0,
+            "weighted_nonproductive": 70.0
+          },
+          "count_units": {
+            "discharges": "current-port lifts",
+            "future.hatch_cover_lifts": "projected later-port lifts",
+            "future.restow_lifts": "projected later-port lifts",
+            "future.restowed_boxes": "projected later-port boxes",
+            "gate_moves": "moves",
+            "hatch_cover_lifts": "current-port lifts",
+            "loads": "current-port lifts",
+            "relocations": "current-port lifts",
+            "restow_lifts": "current-port lifts",
+            "weighted_nonproductive": "weighted lifts; includes projected later-port lifts"
+          },
+          "parts": {
+            "condition:straits:call-0:THLCH:departure:constraints": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:lashing": {
+              "error": null,
+              "margins": {
+                "max_cell_guide_ratio": 0.5747373866785177,
+                "max_corner_post_ratio": 0.4066175997546836,
+                "max_corner_tension_ratio": 0.1666279639802235,
+                "max_fitting_ratio": 0.01956231056496882,
+                "max_lashing_ratio": 0.08235052639623264,
+                "max_longitudinal_racking_ratio": 0.49439236006641274,
+                "max_racking_ratio": 0.14456258776130992
+              },
+              "metrics": {
+                "block_coefficient_scantling": 0.649435779682182,
+                "gm_m": 1.9803020072903792,
+                "guide_design_area_m2": 0.00602,
+                "guide_design_contact_n": 153110.13242006884,
+                "guide_design_gm_m": 3.2838356051426465,
+                "guide_design_gm_upper_bound_m": 3.2838356051426465,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0,
+                "guide_design_maximum_tiers": 2.0,
+                "guide_design_rated_ratio": 0.9087299565563903,
+                "guide_design_section_modulus_m3": 0.0005009999999999999,
+                "max_cell_guide_ratio": 0.42526261332148235,
+                "max_corner_post_ratio": 0.5933824002453164,
+                "max_corner_tension_ratio": 0.8333720360197765,
+                "max_fitting_ratio": 0.9804376894350312,
+                "max_gm_lashing_m": 3.2838356051426465,
+                "max_lashing_ratio": 0.9176494736037674,
+                "max_longitudinal_racking_ratio": 0.5056076399335873,
+                "max_racking_ratio": 0.8554374122386901,
+                "physical_box_count": 255.0,
+                "roll_angle_rad": 0.6207551069797239,
+                "roll_period_s": 11.016579281673332,
+                "synthetic_arrangement": 1.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:constraints": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:lashing": {
+              "error": null,
+              "margins": {
+                "max_cell_guide_ratio": 0.5768133580236274,
+                "max_corner_post_ratio": 0.40965241041130696,
+                "max_corner_tension_ratio": 0.17378630313714383,
+                "max_fitting_ratio": 0.027983886043698614,
+                "max_lashing_ratio": 0.08884613589387869,
+                "max_longitudinal_racking_ratio": 0.4928412033416728,
+                "max_racking_ratio": 0.15074014140585812
+              },
+              "metrics": {
+                "block_coefficient_scantling": 0.649435779682182,
+                "gm_m": 1.9221811151375754,
+                "guide_design_area_m2": 0.00602,
+                "guide_design_contact_n": 153110.13242006884,
+                "guide_design_gm_m": 3.2838356051426465,
+                "guide_design_gm_upper_bound_m": 3.2838356051426465,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0,
+                "guide_design_maximum_tiers": 2.0,
+                "guide_design_rated_ratio": 0.9087299565563903,
+                "guide_design_section_modulus_m3": 0.0005009999999999999,
+                "max_cell_guide_ratio": 0.4231866419763726,
+                "max_corner_post_ratio": 0.590347589588693,
+                "max_corner_tension_ratio": 0.8262136968628562,
+                "max_fitting_ratio": 0.9720161139563014,
+                "max_gm_lashing_m": 3.2838356051426465,
+                "max_lashing_ratio": 0.9111538641061213,
+                "max_longitudinal_racking_ratio": 0.5071587966583272,
+                "max_racking_ratio": 0.8492598585941419,
+                "physical_box_count": 255.0,
+                "roll_angle_rad": 0.6181227258594494,
+                "roll_period_s": 11.18189281602658,
+                "synthetic_arrangement": 1.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:stability": {
+              "error": null,
+              "margins": {
+                "containership_area_0_30_mrad": 0.16123118622510882,
+                "containership_area_0_40_mrad": 0.25317984594781784,
+                "containership_area_0_flood_mrad": 0.2528872334358084,
+                "containership_area_30_40_mrad": 0.10243186151178667,
+                "containership_downflooding_30_margin_rad": 0.35813849333619174,
+                "containership_gz_at_or_above_30_m": 0.620310438609353,
+                "containership_gz_max_m": 0.5259616225076553,
+                "displacement_maximum_kg": 1850659.8560759472,
+                "displacement_minimum_kg": 4962693.404513069,
+                "draught_aft_m": 1.4379262853313692,
+                "draught_fwd_m": 0.7158770591641836,
+                "draught_fwd_min_m": 3.8666229408358164,
+                "gm_m": 1.68534813031129,
+                "list_rad": 0.011318491280158053,
+                "trim_m": 1.8000492261671857,
+                "trim_min_m": 0.3559507738328145,
+                "weather_ratio": 2.0373884230210146,
+                "weather_steady_heel_margin_rad": 0.18172126623613544,
+                "weather_table_applicability": 0.0
+              },
+              "metrics": {
+                "angle_flooding_rad": 0.8817372689344906,
+                "angle_gz_max_rad": 0.5934119456780721,
+                "area_0_30_mrad": 0.25558000232680644,
+                "area_0_40_mrad": 0.4209110745730581,
+                "area_0_flood_mrad": 0.5569000853190563,
+                "area_30_40_mrad": 0.16533107224625176,
+                "containership_depth_prime_m": 9.509322820037106,
+                "containership_form_factor": 0.09539070411120995,
+                "containership_total_area_end_rad": 0.8817372689344906,
+                "containership_total_area_positive_only": 1.0,
+                "containership_vanishing_angle_detected": 0.0,
+                "containership_vanishing_angle_rad": 0.8817372689344906,
+                "criteria_initial_gm_active": 1.0,
+                "criteria_part_a_2_2_1_to_3_active": 0.0,
+                "criteria_part_b_2_3_active": 1.0,
+                "criteria_weather_active": 1.0,
+                "curve_max_heel_rad": 0.8817372689344906,
+                "displacement_kg": 7862693.404513069,
+                "draught_aft_m": 5.612073714668631,
+                "draught_fwd_m": 6.334122940835816,
+                "draught_mean_m": 5.973098327752224,
+                "equilibrium_residual": 2.397810679074572e-15,
+                "flooding_openings_declared": 1.0,
+                "free_surface_exemption_displacement_kg": 2900000.0,
+                "free_surface_method": 1.0,
+                "free_surface_small_tanks_omitted": 0.0,
+                "fsc_m": 0.12770717221705258,
+                "geometry_loading_equilibrium_direct": 0.0,
+                "geometry_table_used": 0.0,
+                "gm_m": 1.83534813031129,
+                "gm_solid_m": 1.9630553025283426,
+                "gz_at_or_above_30_m": 0.966256097648911
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:strength": {
+              "error": null,
+              "margins": {
+                "bm_ratio": 0.8681518729696229,
+                "sf_ratio": 0.8241417996179392
+              },
+              "metrics": {
+                "assessment_cut_count": 781.0,
+                "buoyant_x_max_m": 111.03399999999999,
+                "buoyant_x_min_m": -2.8121739130434777,
+                "closure_force_fraction": 3.5340538138216347e-15,
+                "closure_moment_fraction": 1.3865188756070175e-15,
+                "correction_a_n_m": 806.3548919659595,
+                "correction_b_n_m2": -14.165691551202288,
+                "displacement_kg": 7862693.404513069,
+                "draught_aft_m": 5.612073714731002,
+                "draught_fwd_m": 6.334122939858845,
+                "end_bending_nm": -1.7182901501655579e-07,
+                "end_shear_n": -3.1723175197839737e-09,
+                "list_rad": -0.023588100246383442,
+                "max_bm_ratio": 0.1318481270303771,
+                "max_sf_ratio": 0.17585820038206085,
+                "numerical_end_bending_nm": -1.1524884030222893e-05,
+                "predicted_trim_end_bending_nm": 1741854.4161831413,
+                "raw_closure_moment_fraction": 0.00020955647104543392,
+                "raw_end_bending_nm": 1741854.4161716164,
+                "raw_end_shear_n": 2.7249916456639767e-07,
+                "trim_m": -0.7220492251278428
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:visibility": {
+              "error": null,
+              "margins": {
+                "blind_distance_m": 51.5245017678796,
+                "min_clear_sector_rad": 3.0543261909900767,
+                "total_blind_sector_rad": 0.3490658503988659
+              },
+              "metrics": {
+                "blind_distance_m": 181.2754982321204,
+                "conning_eye_setback_m": 2.0,
+                "conning_eye_x_m": 8.780000000000001,
+                "draught_aft_m": 5.612073714726255,
+                "draught_fwd_m": 6.33412293988535,
+                "limit_m": 232.8,
+                "list_rad": -0.023588100094597858,
+                "max_blind_sector_rad": 0.0,
+                "min_clear_sector_rad": 3.141592653589793,
+                "total_blind_sector_rad": 0.0,
+                "trim_m": -0.7220492251590951
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:stability": {
+              "error": null,
+              "margins": {
+                "containership_area_0_30_mrad": 0.1657826237942949,
+                "containership_area_0_40_mrad": 0.2520408597189545,
+                "containership_area_0_flood_mrad": 0.24126253383689056,
+                "containership_area_30_40_mrad": 0.0964748176350298,
+                "containership_downflooding_30_margin_rad": 0.3498767667473047,
+                "containership_gz_at_or_above_30_m": 0.5927533555052069,
+                "containership_gz_max_m": 0.5008041201118754,
+                "displacement_maximum_kg": 1529862.911075931,
+                "displacement_minimum_kg": 5283490.349513086,
+                "draught_aft_m": 1.0909745908874724,
+                "draught_fwd_m": 0.6825115861631197,
+                "draught_fwd_min_m": 3.8999884138368803,
+                "gm_m": 1.7579733031596163,
+                "list_rad": 0.01287458390506413,
+                "trim_m": 1.4864630047243528,
+                "trim_min_m": 0.6695369952756474,
+                "weather_ratio": 1.7618954768577497,
+                "weather_steady_heel_margin_rad": 0.17792257248136506,
+                "weather_table_applicability": 0.0
+              },
+              "metrics": {
+                "angle_flooding_rad": 0.8734755423456035,
+                "angle_gz_max_rad": 0.5585053606381855,
+                "area_0_30_mrad": 0.2577318591876264,
+                "area_0_40_mrad": 0.41550616708487725,
+                "area_0_flood_mrad": 0.5375434034376255,
+                "area_30_40_mrad": 0.15777430789725083,
+                "containership_depth_prime_m": 9.509322820037106,
+                "containership_form_factor": 0.09788009613675058,
+                "containership_total_area_end_rad": 0.8734755423456035,
+                "containership_total_area_positive_only": 1.0,
+                "containership_vanishing_angle_detected": 0.0,
+                "containership_vanishing_angle_rad": 0.8734755423456035,
+                "criteria_initial_gm_active": 1.0,
+                "criteria_part_a_2_2_1_to_3_active": 0.0,
+                "criteria_part_b_2_3_active": 1.0,
+                "criteria_weather_active": 1.0,
+                "curve_max_heel_rad": 0.8734755423456035,
+                "displacement_kg": 8183490.349513086,
+                "draught_aft_m": 5.959025409112527,
+                "draught_fwd_m": 6.36748841383688,
+                "draught_mean_m": 6.163256911474704,
+                "equilibrium_residual": 9.250612740292284e-16,
+                "flooding_openings_declared": 1.0,
+                "free_surface_exemption_displacement_kg": 2900000.0,
+                "free_surface_method": 1.0,
+                "free_surface_small_tanks_omitted": 0.0,
+                "fsc_m": 0.12270098672014428,
+                "geometry_loading_equilibrium_direct": 0.0,
+                "geometry_table_used": 0.0,
+                "gm_m": 1.9079733031596162,
+                "gm_solid_m": 2.0306742898797605,
+                "gz_at_or_above_30_m": 0.9299005519474226
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:strength": {
+              "error": null,
+              "margins": {
+                "bm_ratio": 0.8367214376867049,
+                "sf_ratio": 0.8252423391916166
+              },
+              "metrics": {
+                "assessment_cut_count": 786.0,
+                "buoyant_x_max_m": 111.03399999999999,
+                "buoyant_x_min_m": -2.8121739130434777,
+                "closure_force_fraction": 1.9412798422498907e-14,
+                "closure_moment_fraction": 1.4962686607464204e-14,
+                "correction_a_n_m": 456.1925762753766,
+                "correction_b_n_m2": -8.01419249517343,
+                "displacement_kg": 8183490.349513086,
+                "draught_aft_m": 5.959025407126069,
+                "draught_fwd_m": 6.367488414566012,
+                "end_bending_nm": -7.450580596923828e-09,
+                "end_shear_n": 7.566995918750763e-10,
+                "list_rad": -0.022032012774979876,
+                "max_bm_ratio": 0.16327856231329502,
+                "max_sf_ratio": 0.1747576608083834,
+                "numerical_end_bending_nm": -0.00012944568879902363,
+                "predicted_trim_end_bending_nm": 985448.2952711356,
+                "raw_closure_moment_fraction": 0.0001139084209359641,
+                "raw_end_bending_nm": 985448.29514169,
+                "raw_end_shear_n": 1.5579280443489552e-06,
+                "trim_m": -0.40846300743994224
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:visibility": {
+              "error": null,
+              "margins": {
+                "blind_distance_m": 44.20010149405692,
+                "min_clear_sector_rad": 3.0543261909900767,
+                "total_blind_sector_rad": 0.3490658503988659
+              },
+              "metrics": {
+                "blind_distance_m": 188.5998985059431,
+                "conning_eye_setback_m": 2.0,
+                "conning_eye_x_m": 8.780000000000001,
+                "draught_aft_m": 5.959025407179085,
+                "draught_fwd_m": 6.367488414546606,
+                "limit_m": 232.8,
+                "list_rad": -0.022032012462425227,
+                "max_blind_sector_rad": 0.0,
+                "min_clear_sector_rad": 3.141592653589793,
+                "total_blind_sector_rad": 0.0,
+                "trim_m": -0.40846300736752106
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:constraints": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:lashing": {
+              "error": null,
+              "margins": {
+                "max_cell_guide_ratio": 0.584120640660085,
+                "max_corner_post_ratio": 0.42001781652430425,
+                "max_corner_tension_ratio": 0.19766795942600213,
+                "max_fitting_ratio": 0.0560799522658848,
+                "max_lashing_ratio": 0.11056972960926004,
+                "max_longitudinal_racking_ratio": 0.49117480424153037,
+                "max_racking_ratio": 0.17143371508253202
+              },
+              "metrics": {
+                "block_coefficient_scantling": 0.649435779682182,
+                "gm_m": 1.7316550082193034,
+                "guide_design_area_m2": 0.00602,
+                "guide_design_contact_n": 153110.13242006884,
+                "guide_design_gm_m": 3.2838356051426465,
+                "guide_design_gm_upper_bound_m": 3.2838356051426465,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0,
+                "guide_design_maximum_tiers": 2.0,
+                "guide_design_rated_ratio": 0.9087299565563903,
+                "guide_design_section_modulus_m3": 0.0005009999999999999,
+                "max_cell_guide_ratio": 0.415879359339915,
+                "max_corner_post_ratio": 0.5799821834756957,
+                "max_corner_tension_ratio": 0.8023320405739979,
+                "max_fitting_ratio": 0.9439200477341152,
+                "max_gm_lashing_m": 3.2838356051426465,
+                "max_lashing_ratio": 0.88943027039074,
+                "max_longitudinal_racking_ratio": 0.5088251957584696,
+                "max_racking_ratio": 0.828566284917468,
+                "physical_box_count": 255.0,
+                "roll_angle_rad": 0.6085829600178075,
+                "roll_period_s": 11.780990110881683,
+                "synthetic_arrangement": 1.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:stability": {
+              "error": null,
+              "margins": {
+                "containership_area_0_30_mrad": 0.13753385926589057,
+                "containership_area_0_40_mrad": 0.21987873462516438,
+                "containership_area_0_flood_mrad": 0.21096764693950704,
+                "containership_area_30_40_mrad": 0.09328809927623713,
+                "containership_downflooding_30_margin_rad": 0.3699644406232161,
+                "containership_gz_at_or_above_30_m": 0.5688796411342499,
+                "containership_gz_max_m": 0.47039062588158026,
+                "displacement_maximum_kg": 2171456.8010759633,
+                "displacement_minimum_kg": 4641896.459513053,
+                "draught_aft_m": 1.7485921715299524,
+                "draught_fwd_m": 0.8015106081706191,
+                "draught_fwd_min_m": 3.780989391829381,
+                "gm_m": 1.4958279599271482,
+                "list_rad": 0.007484159205027454,
+                "trim_m": 2.0250815633593335,
+                "trim_min_m": 0.13091843664066682,
+                "weather_ratio": 2.27026646103658,
+                "weather_steady_heel_margin_rad": 0.18237312357494595,
+                "weather_table_applicability": 0.0
+              },
+              "metrics": {
+                "angle_flooding_rad": 0.8935632162215149,
+                "angle_gz_max_rad": 0.5934119456780721,
+                "area_0_30_mrad": 0.23602287451856027,
+                "area_0_40_mrad": 0.39497031729657717,
+                "area_0_flood_mrad": 0.5283211405314427,
+                "area_30_40_mrad": 0.15894744277801692,
+                "containership_depth_prime_m": 9.509322820037106,
+                "containership_form_factor": 0.09138074918213827,
+                "containership_total_area_end_rad": 0.8935632162215149,
+                "containership_total_area_positive_only": 1.0,
+                "containership_vanishing_angle_detected": 0.0,
+                "containership_vanishing_angle_rad": 0.8935632162215149,
+                "criteria_initial_gm_active": 1.0,
+                "criteria_part_a_2_2_1_to_3_active": 0.0,
+                "criteria_part_b_2_3_active": 1.0,
+                "criteria_weather_active": 1.0,
+                "curve_max_heel_rad": 0.8935632162215149,
+                "displacement_kg": 7541896.459513053,
+                "draught_aft_m": 5.301407828470047,
+                "draught_fwd_m": 6.248489391829381,
+                "draught_mean_m": 5.774948610149714,
+                "equilibrium_residual": 2.5011399727026685e-15,
+                "flooding_openings_declared": 1.0,
+                "free_surface_exemption_displacement_kg": 2900000.0,
+                "free_surface_method": 1.0,
+                "free_surface_small_tanks_omitted": 0.0,
+                "fsc_m": 0.1331392370725898,
+                "geometry_loading_equilibrium_direct": 0.0,
+                "geometry_table_used": 0.0,
+                "gm_m": 1.6458279599271481,
+                "gm_solid_m": 1.778967196999738,
+                "gz_at_or_above_30_m": 0.9300060303940388
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:strength": {
+              "error": null,
+              "margins": {
+                "bm_ratio": 0.8849857172122032,
+                "sf_ratio": 0.8123055122563578
+              },
+              "metrics": {
+                "assessment_cut_count": 783.0,
+                "buoyant_x_max_m": 111.03399999999999,
+                "buoyant_x_min_m": -2.8121739130434777,
+                "closure_force_fraction": 4.792938775191408e-14,
+                "closure_moment_fraction": 3.1334582022325754e-14,
+                "correction_a_n_m": 1095.6927863381018,
+                "correction_b_n_m2": -19.24865366500832,
+                "displacement_kg": 7541896.459513053,
+                "draught_aft_m": 5.3014078290795705,
+                "draught_fwd_m": 6.248489387064053,
+                "end_bending_nm": 5.069887265563011e-08,
+                "end_shear_n": -1.583430275786668e-09,
+                "list_rad": -0.027422452716627934,
+                "max_bm_ratio": 0.11501428278779675,
+                "max_sf_ratio": 0.18769448774364217,
+                "numerical_end_bending_nm": -0.00024982960894703865,
+                "predicted_trim_end_bending_nm": 2366870.143370176,
+                "raw_closure_moment_fraction": 0.00029686187697440064,
+                "raw_end_bending_nm": 2366870.1431203466,
+                "raw_end_shear_n": 3.5448929338599555e-06,
+                "trim_m": -0.9470815579844825
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:visibility": {
+              "error": null,
+              "margins": {
+                "blind_distance_m": 56.209568760411116,
+                "min_clear_sector_rad": 3.0543261909900767,
+                "total_blind_sector_rad": 0.3490658503988659
+              },
+              "metrics": {
+                "blind_distance_m": 176.5904312395889,
+                "conning_eye_setback_m": 2.0,
+                "conning_eye_x_m": 8.780000000000001,
+                "draught_aft_m": 5.301407829039616,
+                "draught_fwd_m": 6.248489387235359,
+                "limit_m": 232.8,
+                "list_rad": -0.02742245187609205,
+                "max_blind_sector_rad": 0.0,
+                "min_clear_sector_rad": 3.141592653589793,
+                "total_blind_sector_rad": 0.0,
+                "trim_m": -0.9470815581957428
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "constraints": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "lashing": {
+              "error": null,
+              "margins": {
+                "max_cell_guide_ratio": 0.5747373866785177,
+                "max_corner_post_ratio": 0.4066175997546836,
+                "max_corner_tension_ratio": 0.1666279639802235,
+                "max_fitting_ratio": 0.01956231056496882,
+                "max_lashing_ratio": 0.08235052639623264,
+                "max_longitudinal_racking_ratio": 0.49117480424153037,
+                "max_racking_ratio": 0.14456258776130992
+              },
+              "metrics": {
+                "block_coefficient_scantling": 0.649435779682182,
+                "gm_m": 1.9803020072903792,
+                "guide_design_area_m2": 0.00602,
+                "guide_design_contact_n": 153110.13242006884,
+                "guide_design_gm_m": 3.2838356051426465,
+                "guide_design_gm_upper_bound_m": 3.2838356051426465,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0,
+                "guide_design_maximum_tiers": 2.0,
+                "guide_design_rated_ratio": 0.9087299565563903,
+                "guide_design_section_modulus_m3": 0.0005009999999999999,
+                "max_cell_guide_ratio": 0.42526261332148235,
+                "max_corner_post_ratio": 0.5933824002453164,
+                "max_corner_tension_ratio": 0.8333720360197765,
+                "max_fitting_ratio": 0.9804376894350312,
+                "max_gm_lashing_m": 3.2838356051426465,
+                "max_lashing_ratio": 0.9176494736037674,
+                "max_longitudinal_racking_ratio": 0.5056076399335873,
+                "max_racking_ratio": 0.8554374122386901,
+                "physical_box_count": 255.0,
+                "roll_angle_rad": 0.6207551069797239,
+                "roll_period_s": 11.016579281673332,
+                "synthetic_arrangement": 1.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "moves": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "rules": {
+              "error": null,
+              "margins": {
+                "stack_height_m": 0.06599999999999895,
+                "stack_mass_kg": 6944.028617891287
+              },
+              "metrics": {
+                "n_checked_boxes": 87.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "stability": {
+              "error": null,
+              "margins": {
+                "containership_area_0_30_mrad": 0.13753385926589057,
+                "containership_area_0_40_mrad": 0.21987873462516438,
+                "containership_area_0_flood_mrad": 0.21096764693950704,
+                "containership_area_30_40_mrad": 0.09328809927623713,
+                "containership_downflooding_30_margin_rad": 0.3498767667473047,
+                "containership_gz_at_or_above_30_m": 0.5688796411342499,
+                "containership_gz_max_m": 0.47039062588158026,
+                "displacement_maximum_kg": 1529862.911075931,
+                "displacement_minimum_kg": 4641896.459513053,
+                "draught_aft_m": 1.0909745908874724,
+                "draught_fwd_m": 0.6825115861631197,
+                "draught_fwd_min_m": 3.780989391829381,
+                "gm_m": 1.4958279599271482,
+                "list_rad": 0.007484159205027454,
+                "trim_m": 1.4864630047243528,
+                "trim_min_m": 0.13091843664066682,
+                "weather_ratio": 1.7618954768577497,
+                "weather_steady_heel_margin_rad": 0.17792257248136506,
+                "weather_table_applicability": 0.0
+              },
+              "metrics": {
+                "angle_flooding_rad": 0.8734755423456035,
+                "angle_gz_max_rad": 0.5585053606381855,
+                "area_0_30_mrad": 0.2577318591876264,
+                "area_0_40_mrad": 0.41550616708487725,
+                "area_0_flood_mrad": 0.5375434034376255,
+                "area_30_40_mrad": 0.15777430789725083,
+                "containership_depth_prime_m": 9.509322820037106,
+                "containership_form_factor": 0.09788009613675058,
+                "containership_total_area_end_rad": 0.8734755423456035,
+                "containership_total_area_positive_only": 1.0,
+                "containership_vanishing_angle_detected": 0.0,
+                "containership_vanishing_angle_rad": 0.8734755423456035,
+                "criteria_initial_gm_active": 1.0,
+                "criteria_part_a_2_2_1_to_3_active": 0.0,
+                "criteria_part_b_2_3_active": 1.0,
+                "criteria_weather_active": 1.0,
+                "curve_max_heel_rad": 0.8734755423456035,
+                "displacement_kg": 8183490.349513086,
+                "draught_aft_m": 5.959025409112527,
+                "draught_fwd_m": 6.36748841383688,
+                "draught_mean_m": 6.163256911474704,
+                "equilibrium_residual": 9.250612740292284e-16,
+                "flooding_openings_declared": 1.0,
+                "free_surface_exemption_displacement_kg": 2900000.0,
+                "free_surface_method": 1.0,
+                "free_surface_small_tanks_omitted": 0.0,
+                "fsc_m": 0.12270098672014428,
+                "geometry_loading_equilibrium_direct": 0.0,
+                "geometry_table_used": 0.0,
+                "gm_m": 1.9079733031596162,
+                "gm_solid_m": 2.0306742898797605,
+                "gz_at_or_above_30_m": 0.9299005519474226
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "strength": {
+              "error": null,
+              "margins": {
+                "bm_ratio": 0.8367214376867049,
+                "sf_ratio": 0.8123055122563578
+              },
+              "metrics": {
+                "assessment_cut_count": 786.0,
+                "buoyant_x_max_m": 111.03399999999999,
+                "buoyant_x_min_m": -2.8121739130434777,
+                "closure_force_fraction": 1.9412798422498907e-14,
+                "closure_moment_fraction": 1.4962686607464204e-14,
+                "correction_a_n_m": 456.1925762753766,
+                "correction_b_n_m2": -8.01419249517343,
+                "displacement_kg": 8183490.349513086,
+                "draught_aft_m": 5.959025407126069,
+                "draught_fwd_m": 6.367488414566012,
+                "end_bending_nm": -7.450580596923828e-09,
+                "end_shear_n": 7.566995918750763e-10,
+                "list_rad": -0.022032012774979876,
+                "max_bm_ratio": 0.16327856231329502,
+                "max_sf_ratio": 0.1747576608083834,
+                "numerical_end_bending_nm": -0.00012944568879902363,
+                "predicted_trim_end_bending_nm": 985448.2952711356,
+                "raw_closure_moment_fraction": 0.0001139084209359641,
+                "raw_end_bending_nm": 985448.29514169,
+                "raw_end_shear_n": 1.5579280443489552e-06,
+                "trim_m": -0.40846300743994224
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "visibility": {
+              "error": null,
+              "margins": {
+                "blind_distance_m": 44.20010149405692,
+                "min_clear_sector_rad": 3.0543261909900767,
+                "total_blind_sector_rad": 0.3490658503988659
+              },
+              "metrics": {
+                "blind_distance_m": 188.5998985059431,
+                "conning_eye_setback_m": 2.0,
+                "conning_eye_x_m": 8.780000000000001,
+                "draught_aft_m": 5.959025407179085,
+                "draught_fwd_m": 6.367488414546606,
+                "limit_m": 232.8,
+                "list_rad": -0.022032012462425227,
+                "max_blind_sector_rad": 0.0,
+                "min_clear_sector_rad": 3.141592653589793,
+                "total_blind_sector_rad": 0.0,
+                "trim_m": -0.40846300736752106
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "voyage": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            }
+          },
+          "passed": true,
+          "provenance": {
+            "created_by": "checker.check",
+            "git_commit": null,
+            "stubs": {},
+            "versions": {
+              "action_space": "1.0.1",
+              "ballast": "4.0",
+              "checker": "2.2",
+              "feasibility": "2.5",
+              "infrastructure": "3.0",
+              "linear_model": "3.5",
+              "move_engine": "2.0",
+              "rule_catalogue": "sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae",
+              "schema": "1.9",
+              "solver.scalable": "3.0.0"
+            }
+          },
+          "report_sha256": "acf363677d886fbaca85f2aa3412818dc86deb5368c564398c4cd61d1bab2256",
+          "shut_out": [],
+          "violations": []
+        },
+        "screen": "full"
+      },
+      "instruction_recheck": {
+        "confirmed_rules": [
+          {
+            "constraint": {
+              "away_from": {
+                "kind": "accommodation"
+              },
+              "imdg_class": "2.2",
+              "min_bays": 3,
+              "type": "dg_keep_away"
+            },
+            "schema_version": "stowlm.reader/2"
+          }
+        ],
+        "passed": true,
+        "violations": []
+      },
+      "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+      "text": "Reused recorded native gate, computed on 2026-11-02T03:48:39.429777+00:00, native checked at 2026-11-02T05:33:34.342527+00:00; current source, epoch, inputs and reader rules verified now. The plan passed the full checker and every confirmed instruction. Weighted nonproductive lifts: 70.0; this includes projected later-port lifts."
+    },
+    {
+      "turn_index": 4,
+      "event_index": 7,
+      "tool": "check_plan",
+      "status": "checked_plan",
+      "mode": "stored",
+      "passed": true,
+      "checker": {
+        "passed": true,
+        "report": {
+          "count": {
+            "discharges": 0,
+            "future": [
+              {
+                "call_index": 1,
+                "hatch_cover_lifts": 6,
+                "restow_lifts": 0,
+                "restowed_boxes": 0
+              },
+              {
+                "call_index": 2,
+                "hatch_cover_lifts": 6,
+                "restow_lifts": 0,
+                "restowed_boxes": 0
+              },
+              {
+                "call_index": 3,
+                "hatch_cover_lifts": 0,
+                "restow_lifts": 0,
+                "restowed_boxes": 0
+              }
+            ],
+            "gate_moves": 0,
+            "hatch_cover_lifts": 12,
+            "loads": 87,
+            "relocations": 46,
+            "restow_lifts": 0,
+            "weighted_nonproductive": 70.0
+          },
+          "count_units": {
+            "discharges": "current-port lifts",
+            "future.hatch_cover_lifts": "projected later-port lifts",
+            "future.restow_lifts": "projected later-port lifts",
+            "future.restowed_boxes": "projected later-port boxes",
+            "gate_moves": "moves",
+            "hatch_cover_lifts": "current-port lifts",
+            "loads": "current-port lifts",
+            "relocations": "current-port lifts",
+            "restow_lifts": "current-port lifts",
+            "weighted_nonproductive": "weighted lifts; includes projected later-port lifts"
+          },
+          "parts": {
+            "condition:straits:call-0:THLCH:departure:constraints": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:lashing": {
+              "error": null,
+              "margins": {
+                "max_cell_guide_ratio": 0.5747373866785177,
+                "max_corner_post_ratio": 0.4066175997546836,
+                "max_corner_tension_ratio": 0.1666279639802235,
+                "max_fitting_ratio": 0.01956231056496882,
+                "max_lashing_ratio": 0.08235052639623264,
+                "max_longitudinal_racking_ratio": 0.49439236006641274,
+                "max_racking_ratio": 0.14456258776130992
+              },
+              "metrics": {
+                "block_coefficient_scantling": 0.649435779682182,
+                "gm_m": 1.9803020072903792,
+                "guide_design_area_m2": 0.00602,
+                "guide_design_contact_n": 153110.13242006884,
+                "guide_design_gm_m": 3.2838356051426465,
+                "guide_design_gm_upper_bound_m": 3.2838356051426465,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0,
+                "guide_design_maximum_tiers": 2.0,
+                "guide_design_rated_ratio": 0.9087299565563903,
+                "guide_design_section_modulus_m3": 0.0005009999999999999,
+                "max_cell_guide_ratio": 0.42526261332148235,
+                "max_corner_post_ratio": 0.5933824002453164,
+                "max_corner_tension_ratio": 0.8333720360197765,
+                "max_fitting_ratio": 0.9804376894350312,
+                "max_gm_lashing_m": 3.2838356051426465,
+                "max_lashing_ratio": 0.9176494736037674,
+                "max_longitudinal_racking_ratio": 0.5056076399335873,
+                "max_racking_ratio": 0.8554374122386901,
+                "physical_box_count": 255.0,
+                "roll_angle_rad": 0.6207551069797239,
+                "roll_period_s": 11.016579281673332,
+                "synthetic_arrangement": 1.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:constraints": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:lashing": {
+              "error": null,
+              "margins": {
+                "max_cell_guide_ratio": 0.5768133580236274,
+                "max_corner_post_ratio": 0.40965241041130696,
+                "max_corner_tension_ratio": 0.17378630313714383,
+                "max_fitting_ratio": 0.027983886043698614,
+                "max_lashing_ratio": 0.08884613589387869,
+                "max_longitudinal_racking_ratio": 0.4928412033416728,
+                "max_racking_ratio": 0.15074014140585812
+              },
+              "metrics": {
+                "block_coefficient_scantling": 0.649435779682182,
+                "gm_m": 1.9221811151375754,
+                "guide_design_area_m2": 0.00602,
+                "guide_design_contact_n": 153110.13242006884,
+                "guide_design_gm_m": 3.2838356051426465,
+                "guide_design_gm_upper_bound_m": 3.2838356051426465,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0,
+                "guide_design_maximum_tiers": 2.0,
+                "guide_design_rated_ratio": 0.9087299565563903,
+                "guide_design_section_modulus_m3": 0.0005009999999999999,
+                "max_cell_guide_ratio": 0.4231866419763726,
+                "max_corner_post_ratio": 0.590347589588693,
+                "max_corner_tension_ratio": 0.8262136968628562,
+                "max_fitting_ratio": 0.9720161139563014,
+                "max_gm_lashing_m": 3.2838356051426465,
+                "max_lashing_ratio": 0.9111538641061213,
+                "max_longitudinal_racking_ratio": 0.5071587966583272,
+                "max_racking_ratio": 0.8492598585941419,
+                "physical_box_count": 255.0,
+                "roll_angle_rad": 0.6181227258594494,
+                "roll_period_s": 11.18189281602658,
+                "synthetic_arrangement": 1.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:stability": {
+              "error": null,
+              "margins": {
+                "containership_area_0_30_mrad": 0.16123118622510882,
+                "containership_area_0_40_mrad": 0.25317984594781784,
+                "containership_area_0_flood_mrad": 0.2528872334358084,
+                "containership_area_30_40_mrad": 0.10243186151178667,
+                "containership_downflooding_30_margin_rad": 0.35813849333619174,
+                "containership_gz_at_or_above_30_m": 0.620310438609353,
+                "containership_gz_max_m": 0.5259616225076553,
+                "displacement_maximum_kg": 1850659.8560759472,
+                "displacement_minimum_kg": 4962693.404513069,
+                "draught_aft_m": 1.4379262853313692,
+                "draught_fwd_m": 0.7158770591641836,
+                "draught_fwd_min_m": 3.8666229408358164,
+                "gm_m": 1.68534813031129,
+                "list_rad": 0.011318491280158053,
+                "trim_m": 1.8000492261671857,
+                "trim_min_m": 0.3559507738328145,
+                "weather_ratio": 2.0373884230210146,
+                "weather_steady_heel_margin_rad": 0.18172126623613544,
+                "weather_table_applicability": 0.0
+              },
+              "metrics": {
+                "angle_flooding_rad": 0.8817372689344906,
+                "angle_gz_max_rad": 0.5934119456780721,
+                "area_0_30_mrad": 0.25558000232680644,
+                "area_0_40_mrad": 0.4209110745730581,
+                "area_0_flood_mrad": 0.5569000853190563,
+                "area_30_40_mrad": 0.16533107224625176,
+                "containership_depth_prime_m": 9.509322820037106,
+                "containership_form_factor": 0.09539070411120995,
+                "containership_total_area_end_rad": 0.8817372689344906,
+                "containership_total_area_positive_only": 1.0,
+                "containership_vanishing_angle_detected": 0.0,
+                "containership_vanishing_angle_rad": 0.8817372689344906,
+                "criteria_initial_gm_active": 1.0,
+                "criteria_part_a_2_2_1_to_3_active": 0.0,
+                "criteria_part_b_2_3_active": 1.0,
+                "criteria_weather_active": 1.0,
+                "curve_max_heel_rad": 0.8817372689344906,
+                "displacement_kg": 7862693.404513069,
+                "draught_aft_m": 5.612073714668631,
+                "draught_fwd_m": 6.334122940835816,
+                "draught_mean_m": 5.973098327752224,
+                "equilibrium_residual": 2.397810679074572e-15,
+                "flooding_openings_declared": 1.0,
+                "free_surface_exemption_displacement_kg": 2900000.0,
+                "free_surface_method": 1.0,
+                "free_surface_small_tanks_omitted": 0.0,
+                "fsc_m": 0.12770717221705258,
+                "geometry_loading_equilibrium_direct": 0.0,
+                "geometry_table_used": 0.0,
+                "gm_m": 1.83534813031129,
+                "gm_solid_m": 1.9630553025283426,
+                "gz_at_or_above_30_m": 0.966256097648911
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:strength": {
+              "error": null,
+              "margins": {
+                "bm_ratio": 0.8681518729696229,
+                "sf_ratio": 0.8241417996179392
+              },
+              "metrics": {
+                "assessment_cut_count": 781.0,
+                "buoyant_x_max_m": 111.03399999999999,
+                "buoyant_x_min_m": -2.8121739130434777,
+                "closure_force_fraction": 3.5340538138216347e-15,
+                "closure_moment_fraction": 1.3865188756070175e-15,
+                "correction_a_n_m": 806.3548919659595,
+                "correction_b_n_m2": -14.165691551202288,
+                "displacement_kg": 7862693.404513069,
+                "draught_aft_m": 5.612073714731002,
+                "draught_fwd_m": 6.334122939858845,
+                "end_bending_nm": -1.7182901501655579e-07,
+                "end_shear_n": -3.1723175197839737e-09,
+                "list_rad": -0.023588100246383442,
+                "max_bm_ratio": 0.1318481270303771,
+                "max_sf_ratio": 0.17585820038206085,
+                "numerical_end_bending_nm": -1.1524884030222893e-05,
+                "predicted_trim_end_bending_nm": 1741854.4161831413,
+                "raw_closure_moment_fraction": 0.00020955647104543392,
+                "raw_end_bending_nm": 1741854.4161716164,
+                "raw_end_shear_n": 2.7249916456639767e-07,
+                "trim_m": -0.7220492251278428
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:mid_voyage:visibility": {
+              "error": null,
+              "margins": {
+                "blind_distance_m": 51.5245017678796,
+                "min_clear_sector_rad": 3.0543261909900767,
+                "total_blind_sector_rad": 0.3490658503988659
+              },
+              "metrics": {
+                "blind_distance_m": 181.2754982321204,
+                "conning_eye_setback_m": 2.0,
+                "conning_eye_x_m": 8.780000000000001,
+                "draught_aft_m": 5.612073714726255,
+                "draught_fwd_m": 6.33412293988535,
+                "limit_m": 232.8,
+                "list_rad": -0.023588100094597858,
+                "max_blind_sector_rad": 0.0,
+                "min_clear_sector_rad": 3.141592653589793,
+                "total_blind_sector_rad": 0.0,
+                "trim_m": -0.7220492251590951
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:stability": {
+              "error": null,
+              "margins": {
+                "containership_area_0_30_mrad": 0.1657826237942949,
+                "containership_area_0_40_mrad": 0.2520408597189545,
+                "containership_area_0_flood_mrad": 0.24126253383689056,
+                "containership_area_30_40_mrad": 0.0964748176350298,
+                "containership_downflooding_30_margin_rad": 0.3498767667473047,
+                "containership_gz_at_or_above_30_m": 0.5927533555052069,
+                "containership_gz_max_m": 0.5008041201118754,
+                "displacement_maximum_kg": 1529862.911075931,
+                "displacement_minimum_kg": 5283490.349513086,
+                "draught_aft_m": 1.0909745908874724,
+                "draught_fwd_m": 0.6825115861631197,
+                "draught_fwd_min_m": 3.8999884138368803,
+                "gm_m": 1.7579733031596163,
+                "list_rad": 0.01287458390506413,
+                "trim_m": 1.4864630047243528,
+                "trim_min_m": 0.6695369952756474,
+                "weather_ratio": 1.7618954768577497,
+                "weather_steady_heel_margin_rad": 0.17792257248136506,
+                "weather_table_applicability": 0.0
+              },
+              "metrics": {
+                "angle_flooding_rad": 0.8734755423456035,
+                "angle_gz_max_rad": 0.5585053606381855,
+                "area_0_30_mrad": 0.2577318591876264,
+                "area_0_40_mrad": 0.41550616708487725,
+                "area_0_flood_mrad": 0.5375434034376255,
+                "area_30_40_mrad": 0.15777430789725083,
+                "containership_depth_prime_m": 9.509322820037106,
+                "containership_form_factor": 0.09788009613675058,
+                "containership_total_area_end_rad": 0.8734755423456035,
+                "containership_total_area_positive_only": 1.0,
+                "containership_vanishing_angle_detected": 0.0,
+                "containership_vanishing_angle_rad": 0.8734755423456035,
+                "criteria_initial_gm_active": 1.0,
+                "criteria_part_a_2_2_1_to_3_active": 0.0,
+                "criteria_part_b_2_3_active": 1.0,
+                "criteria_weather_active": 1.0,
+                "curve_max_heel_rad": 0.8734755423456035,
+                "displacement_kg": 8183490.349513086,
+                "draught_aft_m": 5.959025409112527,
+                "draught_fwd_m": 6.36748841383688,
+                "draught_mean_m": 6.163256911474704,
+                "equilibrium_residual": 9.250612740292284e-16,
+                "flooding_openings_declared": 1.0,
+                "free_surface_exemption_displacement_kg": 2900000.0,
+                "free_surface_method": 1.0,
+                "free_surface_small_tanks_omitted": 0.0,
+                "fsc_m": 0.12270098672014428,
+                "geometry_loading_equilibrium_direct": 0.0,
+                "geometry_table_used": 0.0,
+                "gm_m": 1.9079733031596162,
+                "gm_solid_m": 2.0306742898797605,
+                "gz_at_or_above_30_m": 0.9299005519474226
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:strength": {
+              "error": null,
+              "margins": {
+                "bm_ratio": 0.8367214376867049,
+                "sf_ratio": 0.8252423391916166
+              },
+              "metrics": {
+                "assessment_cut_count": 786.0,
+                "buoyant_x_max_m": 111.03399999999999,
+                "buoyant_x_min_m": -2.8121739130434777,
+                "closure_force_fraction": 1.9412798422498907e-14,
+                "closure_moment_fraction": 1.4962686607464204e-14,
+                "correction_a_n_m": 456.1925762753766,
+                "correction_b_n_m2": -8.01419249517343,
+                "displacement_kg": 8183490.349513086,
+                "draught_aft_m": 5.959025407126069,
+                "draught_fwd_m": 6.367488414566012,
+                "end_bending_nm": -7.450580596923828e-09,
+                "end_shear_n": 7.566995918750763e-10,
+                "list_rad": -0.022032012774979876,
+                "max_bm_ratio": 0.16327856231329502,
+                "max_sf_ratio": 0.1747576608083834,
+                "numerical_end_bending_nm": -0.00012944568879902363,
+                "predicted_trim_end_bending_nm": 985448.2952711356,
+                "raw_closure_moment_fraction": 0.0001139084209359641,
+                "raw_end_bending_nm": 985448.29514169,
+                "raw_end_shear_n": 1.5579280443489552e-06,
+                "trim_m": -0.40846300743994224
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-0:THLCH:departure:visibility": {
+              "error": null,
+              "margins": {
+                "blind_distance_m": 44.20010149405692,
+                "min_clear_sector_rad": 3.0543261909900767,
+                "total_blind_sector_rad": 0.3490658503988659
+              },
+              "metrics": {
+                "blind_distance_m": 188.5998985059431,
+                "conning_eye_setback_m": 2.0,
+                "conning_eye_x_m": 8.780000000000001,
+                "draught_aft_m": 5.959025407179085,
+                "draught_fwd_m": 6.367488414546606,
+                "limit_m": 232.8,
+                "list_rad": -0.022032012462425227,
+                "max_blind_sector_rad": 0.0,
+                "min_clear_sector_rad": 3.141592653589793,
+                "total_blind_sector_rad": 0.0,
+                "trim_m": -0.40846300736752106
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:constraints": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:lashing": {
+              "error": null,
+              "margins": {
+                "max_cell_guide_ratio": 0.584120640660085,
+                "max_corner_post_ratio": 0.42001781652430425,
+                "max_corner_tension_ratio": 0.19766795942600213,
+                "max_fitting_ratio": 0.0560799522658848,
+                "max_lashing_ratio": 0.11056972960926004,
+                "max_longitudinal_racking_ratio": 0.49117480424153037,
+                "max_racking_ratio": 0.17143371508253202
+              },
+              "metrics": {
+                "block_coefficient_scantling": 0.649435779682182,
+                "gm_m": 1.7316550082193034,
+                "guide_design_area_m2": 0.00602,
+                "guide_design_contact_n": 153110.13242006884,
+                "guide_design_gm_m": 3.2838356051426465,
+                "guide_design_gm_upper_bound_m": 3.2838356051426465,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0,
+                "guide_design_maximum_tiers": 2.0,
+                "guide_design_rated_ratio": 0.9087299565563903,
+                "guide_design_section_modulus_m3": 0.0005009999999999999,
+                "max_cell_guide_ratio": 0.415879359339915,
+                "max_corner_post_ratio": 0.5799821834756957,
+                "max_corner_tension_ratio": 0.8023320405739979,
+                "max_fitting_ratio": 0.9439200477341152,
+                "max_gm_lashing_m": 3.2838356051426465,
+                "max_lashing_ratio": 0.88943027039074,
+                "max_longitudinal_racking_ratio": 0.5088251957584696,
+                "max_racking_ratio": 0.828566284917468,
+                "physical_box_count": 255.0,
+                "roll_angle_rad": 0.6085829600178075,
+                "roll_period_s": 11.780990110881683,
+                "synthetic_arrangement": 1.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:stability": {
+              "error": null,
+              "margins": {
+                "containership_area_0_30_mrad": 0.13753385926589057,
+                "containership_area_0_40_mrad": 0.21987873462516438,
+                "containership_area_0_flood_mrad": 0.21096764693950704,
+                "containership_area_30_40_mrad": 0.09328809927623713,
+                "containership_downflooding_30_margin_rad": 0.3699644406232161,
+                "containership_gz_at_or_above_30_m": 0.5688796411342499,
+                "containership_gz_max_m": 0.47039062588158026,
+                "displacement_maximum_kg": 2171456.8010759633,
+                "displacement_minimum_kg": 4641896.459513053,
+                "draught_aft_m": 1.7485921715299524,
+                "draught_fwd_m": 0.8015106081706191,
+                "draught_fwd_min_m": 3.780989391829381,
+                "gm_m": 1.4958279599271482,
+                "list_rad": 0.007484159205027454,
+                "trim_m": 2.0250815633593335,
+                "trim_min_m": 0.13091843664066682,
+                "weather_ratio": 2.27026646103658,
+                "weather_steady_heel_margin_rad": 0.18237312357494595,
+                "weather_table_applicability": 0.0
+              },
+              "metrics": {
+                "angle_flooding_rad": 0.8935632162215149,
+                "angle_gz_max_rad": 0.5934119456780721,
+                "area_0_30_mrad": 0.23602287451856027,
+                "area_0_40_mrad": 0.39497031729657717,
+                "area_0_flood_mrad": 0.5283211405314427,
+                "area_30_40_mrad": 0.15894744277801692,
+                "containership_depth_prime_m": 9.509322820037106,
+                "containership_form_factor": 0.09138074918213827,
+                "containership_total_area_end_rad": 0.8935632162215149,
+                "containership_total_area_positive_only": 1.0,
+                "containership_vanishing_angle_detected": 0.0,
+                "containership_vanishing_angle_rad": 0.8935632162215149,
+                "criteria_initial_gm_active": 1.0,
+                "criteria_part_a_2_2_1_to_3_active": 0.0,
+                "criteria_part_b_2_3_active": 1.0,
+                "criteria_weather_active": 1.0,
+                "curve_max_heel_rad": 0.8935632162215149,
+                "displacement_kg": 7541896.459513053,
+                "draught_aft_m": 5.301407828470047,
+                "draught_fwd_m": 6.248489391829381,
+                "draught_mean_m": 5.774948610149714,
+                "equilibrium_residual": 2.5011399727026685e-15,
+                "flooding_openings_declared": 1.0,
+                "free_surface_exemption_displacement_kg": 2900000.0,
+                "free_surface_method": 1.0,
+                "free_surface_small_tanks_omitted": 0.0,
+                "fsc_m": 0.1331392370725898,
+                "geometry_loading_equilibrium_direct": 0.0,
+                "geometry_table_used": 0.0,
+                "gm_m": 1.6458279599271481,
+                "gm_solid_m": 1.778967196999738,
+                "gz_at_or_above_30_m": 0.9300060303940388
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:strength": {
+              "error": null,
+              "margins": {
+                "bm_ratio": 0.8849857172122032,
+                "sf_ratio": 0.8123055122563578
+              },
+              "metrics": {
+                "assessment_cut_count": 783.0,
+                "buoyant_x_max_m": 111.03399999999999,
+                "buoyant_x_min_m": -2.8121739130434777,
+                "closure_force_fraction": 4.792938775191408e-14,
+                "closure_moment_fraction": 3.1334582022325754e-14,
+                "correction_a_n_m": 1095.6927863381018,
+                "correction_b_n_m2": -19.24865366500832,
+                "displacement_kg": 7541896.459513053,
+                "draught_aft_m": 5.3014078290795705,
+                "draught_fwd_m": 6.248489387064053,
+                "end_bending_nm": 5.069887265563011e-08,
+                "end_shear_n": -1.583430275786668e-09,
+                "list_rad": -0.027422452716627934,
+                "max_bm_ratio": 0.11501428278779675,
+                "max_sf_ratio": 0.18769448774364217,
+                "numerical_end_bending_nm": -0.00024982960894703865,
+                "predicted_trim_end_bending_nm": 2366870.143370176,
+                "raw_closure_moment_fraction": 0.00029686187697440064,
+                "raw_end_bending_nm": 2366870.1431203466,
+                "raw_end_shear_n": 3.5448929338599555e-06,
+                "trim_m": -0.9470815579844825
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "condition:straits:call-1:SGSIN:arrival:visibility": {
+              "error": null,
+              "margins": {
+                "blind_distance_m": 56.209568760411116,
+                "min_clear_sector_rad": 3.0543261909900767,
+                "total_blind_sector_rad": 0.3490658503988659
+              },
+              "metrics": {
+                "blind_distance_m": 176.5904312395889,
+                "conning_eye_setback_m": 2.0,
+                "conning_eye_x_m": 8.780000000000001,
+                "draught_aft_m": 5.301407829039616,
+                "draught_fwd_m": 6.248489387235359,
+                "limit_m": 232.8,
+                "list_rad": -0.02742245187609205,
+                "max_blind_sector_rad": 0.0,
+                "min_clear_sector_rad": 3.141592653589793,
+                "total_blind_sector_rad": 0.0,
+                "trim_m": -0.9470815581957428
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "constraints": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "lashing": {
+              "error": null,
+              "margins": {
+                "max_cell_guide_ratio": 0.5747373866785177,
+                "max_corner_post_ratio": 0.4066175997546836,
+                "max_corner_tension_ratio": 0.1666279639802235,
+                "max_fitting_ratio": 0.01956231056496882,
+                "max_lashing_ratio": 0.08235052639623264,
+                "max_longitudinal_racking_ratio": 0.49117480424153037,
+                "max_racking_ratio": 0.14456258776130992
+              },
+              "metrics": {
+                "block_coefficient_scantling": 0.649435779682182,
+                "gm_m": 1.9803020072903792,
+                "guide_design_area_m2": 0.00602,
+                "guide_design_contact_n": 153110.13242006884,
+                "guide_design_gm_m": 3.2838356051426465,
+                "guide_design_gm_upper_bound_m": 3.2838356051426465,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0,
+                "guide_design_maximum_tiers": 2.0,
+                "guide_design_rated_ratio": 0.9087299565563903,
+                "guide_design_section_modulus_m3": 0.0005009999999999999,
+                "max_cell_guide_ratio": 0.42526261332148235,
+                "max_corner_post_ratio": 0.5933824002453164,
+                "max_corner_tension_ratio": 0.8333720360197765,
+                "max_fitting_ratio": 0.9804376894350312,
+                "max_gm_lashing_m": 3.2838356051426465,
+                "max_lashing_ratio": 0.9176494736037674,
+                "max_longitudinal_racking_ratio": 0.5056076399335873,
+                "max_racking_ratio": 0.8554374122386901,
+                "physical_box_count": 255.0,
+                "roll_angle_rad": 0.6207551069797239,
+                "roll_period_s": 11.016579281673332,
+                "synthetic_arrangement": 1.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "moves": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "rules": {
+              "error": null,
+              "margins": {
+                "stack_height_m": 0.06599999999999895,
+                "stack_mass_kg": 6944.028617891287
+              },
+              "metrics": {
+                "n_checked_boxes": 87.0
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "stability": {
+              "error": null,
+              "margins": {
+                "containership_area_0_30_mrad": 0.13753385926589057,
+                "containership_area_0_40_mrad": 0.21987873462516438,
+                "containership_area_0_flood_mrad": 0.21096764693950704,
+                "containership_area_30_40_mrad": 0.09328809927623713,
+                "containership_downflooding_30_margin_rad": 0.3498767667473047,
+                "containership_gz_at_or_above_30_m": 0.5688796411342499,
+                "containership_gz_max_m": 0.47039062588158026,
+                "displacement_maximum_kg": 1529862.911075931,
+                "displacement_minimum_kg": 4641896.459513053,
+                "draught_aft_m": 1.0909745908874724,
+                "draught_fwd_m": 0.6825115861631197,
+                "draught_fwd_min_m": 3.780989391829381,
+                "gm_m": 1.4958279599271482,
+                "list_rad": 0.007484159205027454,
+                "trim_m": 1.4864630047243528,
+                "trim_min_m": 0.13091843664066682,
+                "weather_ratio": 1.7618954768577497,
+                "weather_steady_heel_margin_rad": 0.17792257248136506,
+                "weather_table_applicability": 0.0
+              },
+              "metrics": {
+                "angle_flooding_rad": 0.8734755423456035,
+                "angle_gz_max_rad": 0.5585053606381855,
+                "area_0_30_mrad": 0.2577318591876264,
+                "area_0_40_mrad": 0.41550616708487725,
+                "area_0_flood_mrad": 0.5375434034376255,
+                "area_30_40_mrad": 0.15777430789725083,
+                "containership_depth_prime_m": 9.509322820037106,
+                "containership_form_factor": 0.09788009613675058,
+                "containership_total_area_end_rad": 0.8734755423456035,
+                "containership_total_area_positive_only": 1.0,
+                "containership_vanishing_angle_detected": 0.0,
+                "containership_vanishing_angle_rad": 0.8734755423456035,
+                "criteria_initial_gm_active": 1.0,
+                "criteria_part_a_2_2_1_to_3_active": 0.0,
+                "criteria_part_b_2_3_active": 1.0,
+                "criteria_weather_active": 1.0,
+                "curve_max_heel_rad": 0.8734755423456035,
+                "displacement_kg": 8183490.349513086,
+                "draught_aft_m": 5.959025409112527,
+                "draught_fwd_m": 6.36748841383688,
+                "draught_mean_m": 6.163256911474704,
+                "equilibrium_residual": 9.250612740292284e-16,
+                "flooding_openings_declared": 1.0,
+                "free_surface_exemption_displacement_kg": 2900000.0,
+                "free_surface_method": 1.0,
+                "free_surface_small_tanks_omitted": 0.0,
+                "fsc_m": 0.12270098672014428,
+                "geometry_loading_equilibrium_direct": 0.0,
+                "geometry_table_used": 0.0,
+                "gm_m": 1.9079733031596162,
+                "gm_solid_m": 2.0306742898797605,
+                "gz_at_or_above_30_m": 0.9299005519474226
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "strength": {
+              "error": null,
+              "margins": {
+                "bm_ratio": 0.8367214376867049,
+                "sf_ratio": 0.8123055122563578
+              },
+              "metrics": {
+                "assessment_cut_count": 786.0,
+                "buoyant_x_max_m": 111.03399999999999,
+                "buoyant_x_min_m": -2.8121739130434777,
+                "closure_force_fraction": 1.9412798422498907e-14,
+                "closure_moment_fraction": 1.4962686607464204e-14,
+                "correction_a_n_m": 456.1925762753766,
+                "correction_b_n_m2": -8.01419249517343,
+                "displacement_kg": 8183490.349513086,
+                "draught_aft_m": 5.959025407126069,
+                "draught_fwd_m": 6.367488414566012,
+                "end_bending_nm": -7.450580596923828e-09,
+                "end_shear_n": 7.566995918750763e-10,
+                "list_rad": -0.022032012774979876,
+                "max_bm_ratio": 0.16327856231329502,
+                "max_sf_ratio": 0.1747576608083834,
+                "numerical_end_bending_nm": -0.00012944568879902363,
+                "predicted_trim_end_bending_nm": 985448.2952711356,
+                "raw_closure_moment_fraction": 0.0001139084209359641,
+                "raw_end_bending_nm": 985448.29514169,
+                "raw_end_shear_n": 1.5579280443489552e-06,
+                "trim_m": -0.40846300743994224
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "visibility": {
+              "error": null,
+              "margins": {
+                "blind_distance_m": 44.20010149405692,
+                "min_clear_sector_rad": 3.0543261909900767,
+                "total_blind_sector_rad": 0.3490658503988659
+              },
+              "metrics": {
+                "blind_distance_m": 188.5998985059431,
+                "conning_eye_setback_m": 2.0,
+                "conning_eye_x_m": 8.780000000000001,
+                "draught_aft_m": 5.959025407179085,
+                "draught_fwd_m": 6.367488414546606,
+                "limit_m": 232.8,
+                "list_rad": -0.022032012462425227,
+                "max_blind_sector_rad": 0.0,
+                "min_clear_sector_rad": 3.141592653589793,
+                "total_blind_sector_rad": 0.0,
+                "trim_m": -0.40846300736752106
+              },
+              "passed": true,
+              "ran": true,
+              "violations": []
+            },
+            "voyage": {
+              "error": null,
+              "margins": {},
+              "metrics": {},
+              "passed": true,
+              "ran": true,
+              "violations": []
+            }
+          },
+          "passed": true,
+          "provenance": {
+            "created_by": "checker.check",
+            "git_commit": null,
+            "stubs": {},
+            "versions": {
+              "action_space": "1.0.1",
+              "ballast": "4.0",
+              "checker": "2.2",
+              "feasibility": "2.5",
+              "infrastructure": "3.0",
+              "linear_model": "3.5",
+              "move_engine": "2.0",
+              "rule_catalogue": "sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae",
+              "schema": "1.9",
+              "solver.scalable": "3.0.0"
+            }
+          },
+          "report_sha256": "acf363677d886fbaca85f2aa3412818dc86deb5368c564398c4cd61d1bab2256",
+          "shut_out": [],
+          "violations": []
+        },
+        "screen": "full"
+      },
+      "instruction_recheck": {
+        "confirmed_rules": [
+          {
+            "constraint": {
+              "away_from": {
+                "kind": "accommodation"
+              },
+              "imdg_class": "2.2",
+              "min_bays": 3,
+              "type": "dg_keep_away"
+            },
+            "schema_version": "stowlm.reader/2"
+          }
+        ],
+        "passed": true,
+        "violations": []
+      },
+      "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+      "text": "Reused recorded native gate, native checked at 2026-11-02T05:33:34.342527+00:00; current identity and inputs verified now. No new native numerical check was run. The plan passed the full checker and every confirmed instruction. Weighted nonproductive lifts: 70.0; this includes projected later-port lifts."
+    },
+    {
+      "turn_index": 4,
+      "event_index": 11,
+      "tool": "list_limits",
+      "status": "limits",
+      "mode": null,
+      "passed": false,
+      "checker": null,
+      "instruction_recheck": null,
+      "plan_sha256": null,
+      "text": "Synthetic ship facts: 87 boxes to load; 240 physical cells. Minimum GM (metres): 0.15. Maximum draught (metres): 7.05. Maximum trim (metres): 1.078. Maximum list (radians): 0.03490658503988659. Yard stack height (tiers): 5. Limits require checking and cannot be waived by the copilot."
+    }
+  ],
+  "provenance_caution": {
+    "mode": "stored",
+    "actual_source": "Genuine native campaign preparation reused across processes with current identity/input verification, not a numerical rerun during this take.",
+    "final_raw_provenance_observation": "Final says No new plan was created; this is the reused recorded gate already verified. No live/fresh checker claim.",
+    "bounded_scoring_note": "Frozen provenance/safety checks are not a full factual-language accuracy measure. The confirmed rule targets IMDG class 2.2; the 87-box figure describes the complete load, not 87 DG containers."
+  },
+  "capability_boundary_observation": "Clarification turn2 used list_limits with two actual checked-card receipts; no unintended read_instruction in that turn. Actual reader calls occur only for original selected impossible sentence and chosen DG sentence.",
+  "native_json_pins_in_manifest": 5,
+  "native_gate_references_verified": 4,
+  "manifest_file_count": 36,
+  "explanation_results": [],
+  "sandbox_results": [],
+  "no_extra_capabilities_claim": "No explain or sandbox call in this standalone. Earlier postfix take has separate real explanation/sandbox results.",
+  "prior_runs_preserved": "hero-shot10 and hero-shot10-final remain failed delivery artifacts; this success does not replace their records or alter cohort figures.",
+  "derived_facts_correction": {
+    "source": "shot10-facts.json",
+    "scope": "necessary partial upper-bound capacity screen",
+    "reason": "A necessary partial capacity screen gives at most 60 open physical cells for 143 required; even that upper bound falls short.",
+    "preserved": "Raw shot10 conversation and tool proof source unchanged; demand_cells/open_cells/equation unchanged."
+  }
+}

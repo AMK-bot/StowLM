@@ -1,0 +1,14 @@
+{
+ "sentence": "Crane 3 is down, don't load anything into bay 14.",
+ "instance": "experiments/mvp/corpus/test/tiny/feeder_500/random_yard/seed-008000000.json",
+ "parse": {
+  "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"close_bay\",\"bay\":14}}",
+  "cost_usd": "0.00273925",
+  "error": null,
+  "outcome": {
+   "type": "close_bay",
+   "bay": 14
+  }
+ },
+ "not_applicable": "bay 14 is not on this vessel (bays here: 01, 03)"
+}

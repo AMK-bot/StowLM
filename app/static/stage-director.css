@@ -1,0 +1,315 @@
+/* StowLM video director (stage-director.js, /stage?video=1): overlay layer (#dir-root) + stage-page tweaks (body.video). */
+
+/* ---------------------------------------------------------------- overlay layer */
+#dir-root { position: fixed; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; transform-origin: 0 0; z-index: 100;
+  pointer-events: none; font-family: var(--sans); color: var(--text); }
+#dir-ovl { position: absolute; inset: 0; }
+#dir-veil { position: absolute; inset: 0; background: #02060e; opacity: 0; }
+#dir-dip { position: absolute; inset: 0; background: #000; pointer-events: none; opacity: 1; }
+#dir-start { position: absolute; inset: 0; background: #000; display: grid; place-items: center; z-index: 30; pointer-events: auto; }
+#dir-start[hidden] { display: none; }
+#dir-start .ds-in { display: flex; flex-direction: column; align-items: center; gap: 10px; color: #26344d; }
+#dir-start .ds-in b { font-size: 34px; letter-spacing: .02em; color: #1f2c44; }
+#dir-start .ds-in b i { font-style: normal; color: #4a3414; }
+#dir-start .ds-in span { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+
+#dir-chip { position: absolute; left: 18px; bottom: 4px; z-index: 25; padding: 6px 12px; border-radius: 8px; font: 600 14px var(--mono);
+  background: rgba(0, 0, 0, .72); color: #c9d5e8; border: 1px dashed #5b6b86; }
+#dir-chip .w { color: var(--warn); }
+#dir-wm { position: absolute; right: 26px; bottom: 30px; z-index: 25; font: 800 30px var(--sans); letter-spacing: .4em; color: rgba(255, 181, 71, .30);
+  border: 2px solid rgba(255, 181, 71, .25); padding: 4px 4px 4px 16px; border-radius: 8px; transform: rotate(-4deg); pointer-events: none; }
+#dir-wm[hidden], #dir-chip[hidden] { display: none; }
+
+/* lower third */
+.dir-cap { position: absolute; left: 48px; bottom: 96px; z-index: 20; max-width: 1820px; display: flex; align-items: stretch; opacity: 0; pointer-events: none;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, .55)); }
+.dir-cap:empty { display: none; }
+.dir-cap .dc-bar { width: 6px; border-radius: 3px 0 0 3px; background: linear-gradient(180deg, var(--sodium2), var(--sodium)); }
+.dir-cap .dc-txt { padding: 16px 26px 17px 22px; font-size: 31px; line-height: 1.25; font-weight: 520; letter-spacing: .005em;
+  background: linear-gradient(90deg, rgba(4, 10, 22, .94), rgba(6, 14, 30, .88)); border: 1px solid rgba(255, 165, 58, .22); border-left: 0; border-radius: 0 10px 10px 0; }
+.dir-cap .dc-txt b { color: var(--sodium2); font-weight: 760; }
+.dir-cap .dot, .dbc-notes .dot { color: var(--dim); font-style: normal; padding: 0 4px; }
+.dir-pending { display: inline-block; padding: 1px 10px; margin: 0 2px; border-radius: 6px; font: 700 .72em var(--mono); letter-spacing: .04em; vertical-align: .08em;
+  color: #2b1700; background: repeating-linear-gradient(-45deg, #ffb547 0 10px, #ffc670 10px 20px); border: 1px solid #ffd28a; }
+.dir-meas { color: var(--ok); font-weight: 700; }
+
+/* overlay cards */
+.dov { position: absolute; z-index: 15; will-change: opacity, transform; }
+.dov code { font-family: var(--mono); font-size: .92em; color: #cfe0ff; }
+.dc-eyebrow { font-size: 14px; font-weight: 800; letter-spacing: .16em; color: var(--sodium); margin-bottom: 10px; }
+.dc-eyebrow.warn { color: var(--warn); } .dc-eyebrow.bad { color: var(--fail); } .dc-eyebrow.ok { color: var(--ok); }
+.dc-meta { font-size: 16px; color: var(--muted); line-height: 1.45; }
+.dc-src { margin-top: 12px; font-size: 13px; color: var(--dim); line-height: 1.4; }
+.dov-override, .dov-bars, .dov-lifts, .dov-worth, .dov-spark_lines, #dir-brief {
+  padding: 22px 26px; border-radius: 14px; background: rgba(5, 12, 26, .93); border: 1px solid var(--line2); box-shadow: 0 24px 60px rgba(0, 0, 0, .55); }
+
+/* pending: a card that waits on a number says so; never a blank bar or a zero */
+.dc-pend { display: inline-block; padding: 10px 18px; border-radius: 10px; font: 700 24px var(--sans); color: var(--muted); background: rgba(255, 255, 255, .05); border: 1px dashed var(--line2); }
+.dc-pendchip { display: inline-block; padding: 3px 12px; border-radius: 8px; font: 650 19px var(--sans); color: var(--muted); background: rgba(255, 255, 255, .05); border: 1px dashed var(--line2); white-space: nowrap; }
+
+/* shot 3a: the planner's confirmation */
+.dov-confirm { left: 50%; top: 860px; transform: translateX(-50%); display: flex; gap: 12px; align-items: center; padding: 10px 22px; border-radius: 12px; font-size: 26px; font-weight: 720; color: #062417; background: var(--ok); box-shadow: 0 0 40px rgba(54, 212, 155, .4); }
+.dov-confirm b { font-size: 30px; }
+/* shot 3b: what moved */
+.dov-diff { left: 44px; top: 176px; width: 1230px; padding: 18px 24px; border-radius: 14px; background: rgba(5, 12, 26, .93); border: 1px solid var(--line2); }
+.dd-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.dd-side h4 { margin: 0 0 8px; font-size: 22px; font-weight: 700; color: #dfe8f6; }
+.dd-bays { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
+.ddb { display: grid; justify-items: center; gap: 4px; }
+.ddb svg { display: block; height: auto; }
+.ddb span { font-size: 15px; color: var(--muted); }
+.ddb rect.em { fill: rgba(255, 255, 255, .08); }
+.dd-key { margin-top: 10px; display: flex; gap: 10px; align-items: center; font-size: 18px; color: var(--muted); }
+.dd-key i { width: 22px; height: 14px; border-radius: 3px; background: var(--sodium2); }
+.ddb rect.fx { fill: #5d7aa6; }
+.ddb rect.mv { fill: var(--sodium2); stroke: #fff; stroke-width: 1; }
+/* shot 3c: the slot for the live take */
+.dov-live { left: 460px; top: 150px; width: 1000px; padding: 32px 40px; }
+.dlv-icon { width: 96px; margin-bottom: 12px; }
+.dlv-icon svg { width: 100%; display: block; fill: none; stroke: #dfe8f6; stroke-width: 4; stroke-linecap: round; }
+.dlv-icon circle { fill: #dfe8f6; stroke: none; }
+.dlv-icon .off { stroke: var(--fail); stroke-width: 5; }
+.dlv-row { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 27px; }
+.dlv-row span { color: #dfe8f6; }
+.dlv-row b { font: 800 36px var(--mono); color: var(--sodium2); }
+.dov-live .dc-meta { margin-top: 14px; font-size: 20px; }
+
+#dir-rehearsal { position: absolute; right: 26px; top: 14px; z-index: 26; padding: 8px 16px; border-radius: 8px; font: 800 20px var(--mono); letter-spacing: .08em;
+  color: #2b1700; background: #ffb547; }
+#dir-rehearsal[hidden] { display: none; }
+
+.dov-tag { left: 44px; top: 36px; padding: 8px 16px; border-radius: 20px; background: rgba(0, 0, 0, .62); border: 1px solid var(--line2);
+  font-size: 18px; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: #dfe8f6; }
+.dov-tag.dov-s3a, .dov-tag.dov-s3b { top: 122px; }
+
+/* shot 1: hook */
+.dov-hook { inset: 0; }
+.dh-black { position: absolute; inset: 0; background: #000; }
+.dh-stack { --dh-s: 1; position: absolute; left: 0; right: 0; display: flex; flex-direction: column; align-items: center; gap: 28px; transform: scale(var(--dh-s)); transform-origin: 50% 0; pointer-events: none; }
+.dh-wave { height: 140px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.dh-wave i { display: block; width: 7px; border-radius: 4px; background: linear-gradient(180deg, var(--sodium2), var(--sodium)); }
+.dh-words { max-width: 1500px; padding: 10px 26px; border-radius: 14px; background: rgba(4, 10, 22, var(--dh-bg, 0)); text-align: center; font-size: 66px; line-height: 1.16; font-weight: 720; letter-spacing: -.01em; color: #fff; text-shadow: 0 4px 30px rgba(0, 0, 0, .95), 0 0 6px rgba(0, 0, 0, .9); }
+.dov-baylight { border-radius: 12px; border: 2px solid var(--sodium2); background: rgba(255, 165, 58, .14); box-shadow: 0 0 46px rgba(255, 165, 58, .55), inset 0 0 40px rgba(255, 165, 58, .25); }
+.dov-baylight span { position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, -8px); padding: 3px 12px; border-radius: 8px; font-size: 22px; font-weight: 750; color: #2b1700; background: var(--sodium2); white-space: nowrap; }
+
+/* the reading and the confirm tap */
+.dh-rule { display: flex; gap: 18px; align-items: center; margin-top: 6px; padding: 8px 20px; border-radius: 12px; font-size: 40px; font-weight: 700; color: var(--sodium2); background: rgba(4, 10, 22, .85); }
+.dh-rule b { padding: 2px 14px; border-radius: 8px; font-size: 28px; color: #062417; background: var(--ok); }
+
+/* shot 2: map */
+.dov-map { inset: 0; background: #081426; }
+.dov-map .dc-map { width: 100%; height: 100%; border-radius: 0; }
+.dmp-fact { position: absolute; left: 110px; top: 330px; display: grid; gap: 2px; text-shadow: 0 4px 24px rgba(0, 0, 0, .9); }
+.dmp-fact span { font-size: 30px; color: #dfe8f6; }
+.dmp-fact b { font-size: 150px; line-height: 1; font-weight: 850; letter-spacing: -.02em; color: var(--sodium2); }
+.dmp-fact i { font-style: normal; font-size: 38px; color: #fff; }
+
+/* shot 3: who did each step */
+.dov-steps { left: 44px; right: 44px; top: 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.dst { padding: 9px 16px; min-height: 92px; border-radius: 12px; background: rgba(5, 12, 26, .94); border: 1px solid var(--line2); opacity: .8; }
+.dst span { display: block; font-size: 15px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.dst b { display: block; margin-top: 3px; font-size: 21px; line-height: 1.15; font-weight: 720; color: #fff; }
+.dst i { font-style: normal; font-size: 16px; color: var(--muted); }
+.dst .dc-pendchip { margin-top: 8px; }
+.dst.on { opacity: 1; border-color: var(--sodium); box-shadow: 0 0 26px rgba(255, 165, 58, .4); }
+.dst.on span { color: var(--sodium2); }
+.dst.done { opacity: .92; }
+#dir-brief { position: absolute; left: 44px; top: 150px; width: 760px; z-index: 16; }
+#dir-brief[hidden] { display: none; }
+.dbf-say { font-size: 34px; line-height: 1.25; font-weight: 680; margin: 6px 0 14px; }
+
+/* shot 4: Spark and the checker report, each statement lighting its lines */
+.dov-spark_lines { left: 60px; top: 50px; width: 1800px; height: 800px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; }
+.dsl-none { grid-column: 1 / -1; display: grid; justify-items: start; gap: 12px; }
+.dsl-col { min-width: 0; }
+.dsl-sub { margin: -6px 0 12px; font-size: 18px; color: var(--muted); }
+.dsl-st { margin-bottom: 7px; padding: 7px 14px; border-radius: 10px; border: 1px solid var(--line); background: rgba(255, 255, 255, .03); opacity: .5; }
+.dsl-st p { margin: 0; font-size: 21px; line-height: 1.26; color: #dfe8f6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dsl-st.done { opacity: .82; }
+.dsl-st.on { opacity: 1; border-color: var(--sodium); background: rgba(255, 165, 58, .1); box-shadow: 0 0 24px rgba(255, 165, 58, .28); }
+.dsl-ln { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: baseline; padding: 6px 12px; border-bottom: 1px solid var(--line); border-radius: 6px; }
+.dsl-ln span { font-size: 20px; color: var(--muted); }
+.dsl-ln b { font: 700 20px var(--mono); color: #e9f1ff; max-width: 500px; text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dsl-ln.on { background: rgba(255, 165, 58, .16); box-shadow: inset 3px 0 0 var(--sodium); }
+.dsl-ln.on span { color: #fff; }
+.dsl-ln.on b { color: var(--sodium2); }
+
+/* shots 6, 7, 8: evidence cards */
+.dov-bars { left: 210px; top: 90px; width: 1500px; padding: 32px 40px; }
+.dbc-title { min-height: 48px; font-size: 38px; font-weight: 720; margin-bottom: 18px; }
+.dbc-rows { display: grid; gap: 18px; }
+.dbr-l { font-size: 25px; font-weight: 620; color: #dfe8f6; margin-bottom: 7px; }
+.dbr.own .dbr-l { color: var(--sodium2); }
+.dbr-v { display: grid; grid-template-columns: 1fr 150px; gap: 18px; align-items: center; min-height: 40px; }
+.dbr-v > .dc-pendchip { grid-column: 1 / -1; justify-self: start; }
+.dbr-track { position: relative; height: 34px; border-radius: 6px; background: rgba(255, 255, 255, .05); overflow: hidden; }
+.dbr-track i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 6px; background: #5d7aa6; }
+.dbr.own .dbr-track i { background: linear-gradient(90deg, var(--sodium), var(--sodium2)); }
+.dbr b { font: 800 34px var(--mono); color: #e9f1ff; text-align: right; }
+.dbr.own b { color: var(--sodium2); }
+.dbc-notes { margin-top: 24px; font-size: 21px; color: #cfe0ff; }
+.dbc-partial { margin-top: 14px; font-size: 21px; color: #ffa53a; }
+.dbr.ref .dbr-track i { background: none; border-right: 3px dashed #cfe0ff; border-radius: 0; }
+.dbr.ref .dbr-l, .dbr.ref b { color: #cfe0ff; }
+.dov-lifts { left: 44px; top: 50px; width: 1130px; }
+.dli-head { font-size: 46px; line-height: 1.12; font-weight: 780; margin: 2px 0 16px; }
+.dlim { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+.dlim span { padding: 8px 16px; border-radius: 10px; font-size: 25px; font-weight: 700; color: #2b1700; background: var(--sodium2); }
+.dli-who { margin-top: 22px; font-size: 26px; font-weight: 680; color: #fff; }
+.dov-lifts .dc-src { font-size: 17px; color: var(--muted); }
+.dov-worth { left: 1200px; top: 50px; width: 676px; padding: 18px 22px; }
+.dov-worth .dc-map { height: 250px; margin-bottom: 12px; }
+.dwo-head { font-size: 38px; line-height: 1.14; font-weight: 780; color: var(--sodium2); }
+.dwo-sub { font-size: 22px; color: #dfe8f6; margin-bottom: 6px; }
+.dwo-range { font: 700 24px var(--mono); color: #e9f1ff; margin-bottom: 6px; }
+
+.dov-override { left: 44px; top: 96px; width: 760px; border-color: rgba(255, 91, 91, .55); }
+.dc-ov { font-size: 25px; line-height: 1.35; margin-bottom: 10px; }
+.dc-ov code.bad { color: #ff9a9a; text-decoration: line-through; text-decoration-thickness: 2px; font-size: 1.05em; }
+.dc-map { width: 100%; height: auto; border-radius: 10px; display: block; }
+.dc-pulse { animation: dirpulse 2.2s ease-in-out infinite; transform-origin: 512px 200px; }
+@keyframes dirpulse { 50% { transform: scale(1.35); opacity: .45; } }
+
+/* shot 9: end card over the ship */
+.dov-end { left: 0; right: 0; bottom: 0; height: 640px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 10px; padding-bottom: 84px;
+  background: linear-gradient(180deg, rgba(4, 9, 20, 0) 0%, rgba(4, 9, 20, .9) 34%, #040914 100%); }
+.de-logo { display: flex; align-items: center; gap: 22px; font-size: 104px; font-weight: 850; letter-spacing: -.02em; }
+.de-logo b { color: var(--sodium); }
+.de-logo .brand-mark { width: 84px; height: 84px; padding: 12px 11px; gap: 6px; border-radius: 16px; }
+.de-tag { font-size: 32px; color: #dfe8f6; }
+.de-say { font-size: 28px; font-weight: 650; color: var(--sodium2); }
+.de-lines { margin-top: 12px; text-align: center; font-size: 22px; line-height: 1.5; color: var(--muted); }
+.de-lines .dot { color: var(--dim); font-style: normal; padding: 0 4px; }
+
+.dv-stamp { display: inline-block; padding: 12px 30px; border-radius: 12px; font-size: 38px; font-weight: 850; letter-spacing: .08em; margin-bottom: 12px; }
+.dv-stamp.ok { color: #062417; background: var(--ok); box-shadow: 0 0 60px rgba(54, 212, 155, .45); }
+.dv-stamp.bad { color: #fff; background: var(--fail); }
+
+/* ---------------------------------------------------------------- stage page in video mode */
+body.video .picker, body.video .view-toggle, body.video #devhud, body.video .tooltip { display: none !important; }
+body.video { cursor: none; }
+body.video.dir-no-kpis #kpis { visibility: hidden; } /* Worse and Par: tiles off on shots 1-7, so a negative isn't the constant frame */
+body.video.dir-no-money #kpi-usd, body.video.dir-no-money #kpi-thb { display: none; } /* D181: shot 9's prize line is the only money in the Worse take */
+body.video .panel { transition: none; }
+body.video.dir-dim .panel:not(.dir-hot), body.video.dir-dim > header, body.video.dir-dim > footer { opacity: calc(1 - .68 * var(--dd, 0)); filter: saturate(calc(1 - .6 * var(--dd, 0))) brightness(calc(1 - .3 * var(--dd, 0))); }
+body.video .panel.dir-glow { box-shadow: 0 0 0 calc(2px * var(--dir-glow, 0)) rgba(255, 165, 58, .8), 0 0 calc(34px * var(--dir-glow, 0)) rgba(255, 165, 58, .45); }
+body.video .dir-big { box-shadow: 0 30px 90px rgba(0, 0, 0, .7), 0 0 0 1px rgba(255, 165, 58, .35); }
+body.video #kpis.dir-big { padding: 18px; border-radius: 16px; background: rgba(6, 13, 27, .96); }
+#dir-backdrop { position: fixed; inset: 0; z-index: 55; background: rgb(2, 6, 14); opacity: 0; display: none; pointer-events: none; }
+body.video #rules .fam.dir-pend .ico { visibility: hidden; }
+body.video #rules .fam.dir-pend summary { opacity: .45; }
+body.video #rules .fam.dir-pop:not(.dir-pend) .ico { animation: pop .5s cubic-bezier(.2, 1.6, .4, 1) both; }
+body.video #rules-badge.dir-pend-badge { visibility: hidden; }
+
+/* D99: in-frame stand-in label, shown in final mode too (not only the draft chip). Sits beside the StowLM brand /
+   planner name, above every card and zoomed panel, under the black dip. Per-shot nudges below. */
+#dir-dip { z-index: 24; }
+#dir-standin { position: absolute; left: 44px; bottom: 34px; z-index: 21; display: flex; align-items: center; gap: 10px; padding: 7px 14px 7px 12px;
+  max-width: 290px; border-radius: 8px; background: rgba(28, 19, 4, .92); border: 1.5px dashed rgba(255, 181, 71, .75); box-shadow: 0 8px 22px rgba(0, 0, 0, .45);
+  font: 700 14px/1.25 var(--sans); letter-spacing: .05em; color: #ffd9a0; text-transform: uppercase; pointer-events: none; }
+#dir-standin i { width: 9px; height: 9px; border-radius: 50%; background: var(--warn); box-shadow: 0 0 8px rgba(255, 181, 71, .8); flex: none; }
+#dir-standin[hidden] { display: none; }
+#dir-standin { max-width: 1200px; }
+/* draft only: names what replaces the stand-in */
+#dir-slot { position: absolute; right: 250px; bottom: 34px; z-index: 22; padding: 6px 14px; border-radius: 8px; font: 800 20px var(--mono); color: #2b1700; background: repeating-linear-gradient(-45deg, #ffb547 0 10px, #ffc670 10px 20px); }
+#dir-slot[hidden] { display: none; }
+
+/* full-bleed shots: the ship is the frame, every other panel is off unless a shot's focus puts it on */
+body.dir-bleed > header, body.dir-bleed > footer { visibility: hidden; }
+body.dir-bleed main.stage > .panel:not(.ship-panel):not(.dir-big) { visibility: hidden; }
+body.dir-bleed .ship-panel { position: fixed; inset: 0; z-index: 1; border: 0; border-radius: 0; }
+body.dir-bleed .ship-panel .panel-head, body.dir-bleed .ship-panel .event-cap, body.dir-bleed .ship-panel .watermark, body.dir-bleed .ship-panel .preview-tag { display: none; }
+body.dir-bleed .ship-panel .xray-card { zoom: 1.2; right: 30px; top: 20px; }
+body.dir-bleed .yard-panel.dir-big { background: rgba(6, 13, 27, .97); }
+body.dir-bleed .ship-wrap { position: absolute; inset: 0; height: 100%; }
+.physics-panel.dir-mini .chart, .physics-panel.dir-mini .phys-note, .physics-panel.dir-mini .panel-head { display: none; }
+.physics-panel.dir-mini .phys-grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr; height: 100%; }
+
+body.video .brf.director.full { zoom: 1.2; }
+
+/* the X clip: 1080x1920 */
+body.dir-clip .dir-cap { left: 28px; right: 28px; bottom: 150px; max-width: none; }
+body.dir-clip .dir-cap .dc-txt { font-size: 34px; }
+body.dir-clip .dh-words { max-width: 980px; font-size: 76px; }
+body.dir-clip .dh-rule { max-width: 1000px; font-size: 44px; }
+.dh-rule b { white-space: nowrap; }
+body.video.dir-clip .brf.director, body.video.dir-clip .brf.director.full { zoom: 1; left: 20px; right: 20px; top: 300px; width: auto; transform: none; }
+body.dir-clip .dov-steps { left: 28px; right: 28px; top: 40px; grid-template-columns: repeat(2, 1fr); }
+body.dir-clip .dov-diff { left: 28px; right: 28px; width: auto; top: 320px; }
+body.dir-clip .dd-pair { grid-template-columns: 1fr; }
+body.dir-clip .dov-confirm { top: 1420px; }
+body.dir-clip .dov-tag.dov-s3a, body.dir-clip .dov-tag.dov-s3b { top: 250px; }
+body.dir-clip #dir-brief { left: 28px; right: 28px; width: auto; top: 380px; }
+body.dir-clip #dir-standin { left: 28px; right: 28px; bottom: 60px; max-width: none; }
+body.dir-clip #dir-slot { left: 28px; right: auto; bottom: 110px; }
+
+/* ---------------------------------------------------------------- v6 film */
+#dir-lower { position: absolute; left: 0; right: 0; bottom: 8px; z-index: 22; text-align: center; font-size: 15px; letter-spacing: .02em; color: #9db0cc; }
+#dir-lower[hidden] { display: none; }
+#dir-strip { display: none; position: absolute; left: 0; right: 0; bottom: 0; height: 112px; background: #040914; }
+body.dir-chapter #dir-strip { display: block; }
+body.dir-v6 #dir-standin.dir-standin-s13 { bottom: auto; top: 24px; }
+body.dir-v6 .dir-cap { left: 40px; bottom: 36px; max-width: 1840px; }
+body.dir-v6 .dir-cap .dc-txt { padding: 9px 20px 10px 16px; font-size: 24px; line-height: 1.22; }
+body.dir-v6 #dir-standin { left: auto; right: 24px; bottom: 124px; }
+.dov-hits { inset: 0; background: #000; overflow: hidden; }
+.dov-hits .dh-black { display: none; }
+.dht { position: absolute; left: 50%; top: 46%; font-size: 168px; line-height: 1; font-weight: 860; letter-spacing: -.01em; color: #fff; white-space: nowrap; }
+.dht.dare { font-size: 120px; color: #ffa53a; }
+.dov-rows, .dov-card { left: 330px; top: 170px; width: 1260px; padding: 30px 38px; border-radius: 14px; background: rgba(5, 12, 26, .95); border: 1px solid var(--line2); }
+.drw { width: 100%; border-collapse: collapse; font-size: 24px; } .drw th { text-align: left; font-size: 16px; color: var(--muted); padding: 6px 10px; } .drw td { padding: 9px 10px; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.dcd-title { font-size: 46px; line-height: 1.16; font-weight: 720; color: #fff; }
+.dcd-line { margin-top: 14px; font-size: 26px; color: #c9d5e8; }
+.dov-tally { left: 90px; top: 130px; width: 620px; transform-origin: 50% 50%; }
+.dov-tally img { display: block; width: 100%; border-radius: 6px; box-shadow: 0 30px 80px rgba(0, 0, 0, .7); transform: rotate(-2deg); }
+.dov-tally span { display: inline-block; margin-top: 18px; padding: 5px 12px; border-radius: 999px; font-size: 18px; color: #ffc670; border: 1px dashed #ffa53a; background: rgba(7, 14, 27, .86); }
+.dov-footage { right: 60px; top: 60px; padding: 6px 14px; border-radius: 8px; font-size: 18px; color: #2b1700; background: #ffb547; }
+/* The pull-back stops 44 px above the frame's foot: the zooming map is clipped there, so no map label ever passes under the
+   lower third ("Synthetic ships and cargo, simulated port" stays readable on every frame). The strip below is the same sea colour. */
+.dov-worth.dov-pull { left: 0; top: 0; width: 1920px; height: 1036px; padding: 50px 60px; border: 0; border-radius: 0; overflow: hidden; background: #081426; box-shadow: 0 44px 0 0 #081426; }
+.dov-pull .dc-map { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; border-radius: 0; transform-origin: 78% 50%; }
+.dov-pull > :not(.dc-map) { position: relative; max-width: 1080px; }
+.dov-pull .dc-eyebrow { font-size: 44px; letter-spacing: .08em; color: #ffc670; }
+.dov-pull .dc-meta { margin-top: 14px; font-size: 20px; color: #c9d5e8; }
+.dbr b { white-space: nowrap; }
+/* shot 1, cold open (film-judge edit 1): one huge word per beat, over that beat's footage; the dare on black */
+.dov-slam { inset: 0; pointer-events: none; }
+.dsl { position: absolute; left: 50%; top: 150px; padding: .04em .22em .1em; font: 900 136px/1 var(--sans); letter-spacing: -.02em; color: #fff; background: #000; white-space: nowrap; }
+.dov-slam.dov-black { background: #000; }
+.dov-slam.dov-black .dsl { top: 48%; font-size: 176px; color: #ffa53a; }
+/* shot 6: same model, same laptop, then the mask's two numbers (film-judge edit 4), in place of the trace */
+.dov-pair { left: 0; top: 0; width: 1920px; height: 968px; padding: 46px 120px 0; background: #081426; }
+.dov-pair .dc-eyebrow { font-size: 40px; letter-spacing: .08em; color: #ffc670; margin-bottom: 26px; }
+.dpr-bars { display: grid; gap: 20px; }
+.dpr-bar { display: grid; grid-template-columns: 1fr 250px; align-items: center; gap: 4px 26px; }
+.dpr-bar span { grid-column: 1 / -1; }
+.dpr-bar span { font-size: 30px; font-weight: 620; color: #dfe8f6; }
+.dpr-bar b { display: block; height: 64px; border-radius: 10px; background: rgba(255, 255, 255, .07); overflow: hidden; }
+.dpr-bar b i { display: block; height: 100%; background: #8193ae; transform-origin: 0 50%; }
+.dpr-bar.own b i { background: #47f5a0; }
+.dpr-bar em { font: 850 96px/1 var(--sans); font-style: normal; color: #cfe0f7; text-align: right; }
+.dpr-bar.own em { color: #47f5a0; }
+.dpr-bar em .dir-meas { font: inherit; color: inherit; }
+.dpr-note { margin-top: 6px; font-size: 26px; color: #c9d5e8; }
+.dpr-mask { margin-top: 40px; padding-top: 26px; border-top: 1px solid rgba(255, 255, 255, .14); }
+.dpr-head { font-size: 30px; color: #c9d5e8; }
+.dpr-big { margin: 6px 0 14px; font: 860 150px/1.02 var(--sans); letter-spacing: -.02em; color: #fff; }
+.dpr-big .dir-meas { color: inherit; font-weight: inherit; }
+.dpr-line { font-size: 31px; line-height: 1.3; color: #ffc670; }
+.dpr-scope { margin-top: 12px; font-size: 24px; color: #9fb4d2; }
+/* shot 12: the money huge, the place name small (film-judge edit 2). Stops 44 px above the frame's foot like the pull-back above,
+   so no map label ever passes under the lower third. */
+.dov-pilot { left: 0; top: 0; width: 1920px; height: 1036px; padding: 128px 80px 0; overflow: hidden; background: #081426; box-shadow: 0 44px 0 0 #081426; }
+.dov-pilot .dc-map { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; border-radius: 0; transform-origin: 78% 50%; }
+.dov-pilot > :not(.dc-map) { position: relative; max-width: 1180px; }
+.dpl-big b { display: block; font: 860 136px/1 var(--sans); letter-spacing: -.02em; color: #ffc670; }
+.dpl-big span, .dpl-mid span { display: block; margin-top: 8px; font-size: 30px; color: #dfe8f6; }
+.dpl-mid { margin-top: 46px; }
+.dpl-mid b { display: block; font: 820 92px/1.02 var(--sans); letter-spacing: -.01em; color: #ffa53a; }
+.dpl-fine { margin-top: 44px; font-size: 22px; line-height: 1.45; color: #c9d5e8; }
+.dpl-fine .dot { color: var(--dim); font-style: normal; padding: 0 4px; }
+.dov-chip { left: 40px; top: 30px; z-index: 18; padding: 6px 22px; border-radius: 999px; font-size: 34px; font-weight: 760; letter-spacing: .04em; color: #2b1700; background: #ffc670; }
+/* the merged end card: the whole frame, the links second only to the name */
+.dov-end.dov-full { top: 0; height: 1036px; justify-content: center; padding: 0 120px; background: #040914; }
+.de-links { margin-top: 6px; font-size: 44px; font-weight: 760; color: #ffc670; text-align: center; }
+.dov-full .de-lines { max-width: 1680px; font-size: 22px; }

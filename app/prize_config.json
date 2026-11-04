@@ -1,0 +1,12 @@
+{
+  "version": "prize-v1",
+  "kind": "size of the prize: an illustrative sizing of the problem, not a StowLM result",
+  "avoided_pct": 10,
+  "export_boxes": 500,
+  "low_usd": 110,
+  "mid_usd": 578,
+  "high_usd": 2248,
+  "text": "each 10 % of avoidable moves ≈ $578 on a 500-box call (mid; low $110, high $2,248; assumptions labelled, not a StowLM result)",
+  "source": "experiments/impact-estimate/ship_time.py --saved-pct 10, total USD/call (handling + ship time); docs/impact.md 'Second layer: ship time'",
+  "source_note": "ASSUMPTION: every input is a labelled scenario assumption in impact.py / ship_time.py, and 500 export boxes per call is itself an assumption. Pinned to ship_time.table(0.10) by app/tests/test_story_panels.py."
+}

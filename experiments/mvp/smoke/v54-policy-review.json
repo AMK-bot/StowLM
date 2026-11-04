@@ -1,0 +1,340 @@
+{
+  "old_contract_sha256": "6335db2f384734c0f9edf463ab9f6db181413e42c8c1bcf6ffb1ec365b456f70",
+  "candidate_sha256": "4119a265e35d7b4f2078923e63dd18b887fdc160aa4a4d025b2c0d1c29d86bda",
+  "source_sha256": {
+    "src/stowage/checker/strength_limits.py": "0c3390781315ce00cdd9d5cb2a0baf992f450d6144bafdeac559868fd55d221e",
+    "src/stowage/conventions.py": "7fb62ae74491f69970eb49ec1599be576c65353f010eded8104ae01168a3d9d7",
+    "src/stowage/model/__init__.py": "79746511f621daf7f8ec46eaf491fbcf2a820605da32368a395e06913e538b3f",
+    "src/stowage/model/base.py": "6e213068ca6cf54300304b2c282911a26718b8c08e8be325ce60ba21090d56c6",
+    "src/stowage/model/port.py": "b76845a2eb30feeee632079ad832849aeb9fe76f160d064eb16aeac921d5b6ca",
+    "src/stowage/model/provenance.py": "2d0ed4b854f78564e604b197be433d3e58ee74f030256b8bd4121f580dcecfd5",
+    "src/stowage/model/ship.py": "dec418343d7b7442df4ef8be69ea436243f139a16aae32bcfbf6715ede8e6fd3",
+    "src/stowage/model/vessel.py": "93c362b83645db64e109e81bb6913db3f50dc440878300de3556884bea19c798",
+    "src/stowage/model/voyage.py": "8ce6ef660a888b9d4d2b769ecb5017be4a81b4d1f21fbd410809b15ec91df38a",
+    "src/stowage/params.py": "356b117dcb8481569805200e1e2bd6e61887089bed0e5c08c49804ec1204065f",
+    "src/stowage/ports/profiles.py": "fa0bcb43e0030c6a4fec9aa9c7af8e489953d8f0228c0573e60183f4cb9ea014",
+    "src/stowage/vessel/fleet.py": "561384d6776447a3ff36d3cbcfa14c7f0312052af3089fe2f3f834195461032c",
+    "src/stowage/vessel/fleet_balance.py": "cdf6d3e346c6929b4b13ba8fb80d20dd9ae3d2dcb4dd8d66d77b3b1fdde106b7",
+    "src/stowage/vessel/fleet_booking.py": "7a3582b10bcf2d26ec392e754582825e0a3ed2d6564513ce25e172d22588ff4f",
+    "src/stowage/vessel/fleet_cache.py": "313d20aff243af9e2bcf535862bf7d736e1f275974ff619a4eec43888b6556a9",
+    "src/stowage/vessel/fleet_conditions.py": "ac85b2c15938ba0af78489e243b7358eb52fe730ed48867afbe6217333ba7a6b",
+    "src/stowage/vessel/fleet_gm.py": "c49dc175a2809d71aa8ddbe051ffe8132dc22b55fd8d440eadabaa82f4164ad2",
+    "src/stowage/vessel/fleet_lashing_design.py": "99f5b0aa9d589711d6060056d8ac5b6dfd92d9b3bb0b5e9931895f2864d87bf7",
+    "src/stowage/vessel/fleet_manual.py": "3feef1ac76559803f5337bb0b68cf1bf600ba1cc2c1b0c7283d806b6178fbbd0",
+    "src/stowage/vessel/fleet_manual_witness.py": "7174d7b2679a62ecee2dbebf2a74848ad24a1bf05caf8de172053e652a1d1090",
+    "src/stowage/vessel/fleet_slices.py": "215bb0e89a9f99e9871dce149482aeb659a7ec521c5ac61a6e6d404cae040529",
+    "src/stowage/vessel/fleet_voyage.py": "b7235cc7f61aaf426b3f8f9811963f9c7d162573d45f96bd6a49b898ccadc0e1",
+    "src/stowage/vessel/hull.py": "d816ac7b17191177589d90b1a3d8f75bcd71eb7c9ee8b2c1deb87dcbe1bbbe0b",
+    "src/stowage/vessel/hull_offsets.py": "4eb44ae7ca99549001ead8ef10e55a6e71c5099ff04b2aa6ef085592304a160d",
+    "src/stowage/vessel/hull_tank_sections.py": "61c84b5e6355cebb283c86615bd6ef5f49d5ea4ec139b1c96f1024495dce7b09",
+    "src/stowage/vessel/hull_tanks.py": "4095fe6ce4c07c05ef474584654de082454313d33f43e7f58d143b07c3463413",
+    "src/stowage/vessel/hydrostatics.py": "a221e75e8a776fb2a47a5f7e334411feec26cd18202e8a7a95e834af7d311f58",
+    "src/stowage/vessel/tanks.py": "d0e3b5d20d17a4966e836370f5b46ebbc0bbd024b77d71007ca7ae74b4551cf4"
+  },
+  "auxiliary_sha256": {
+    "params/cargo/feeder_export.toml": "87b202dc38c497462608173085803065755f73301df10410338b5e36580bd0e2",
+    "params/ports/laem_chabang_like.toml": "ada7b775b71e48e7d7c7583d797b5017dca429f7f357bc998c97303149fa938d",
+    "params/ports/small_feeder.toml": "27950e67491d6bcf08a071434b9a36a9f692372a3f0e5d3b8207c6b2c2c7c80e"
+  },
+  "providers": {
+    "load_vessel": {
+      "module": "stowage.vessel.fleet",
+      "name": "load_vessel",
+      "code": "2cbd2e56dd9e9ef44a0e5f4acce31ab6c5801ec27ed29f107d7c834dc81fe702",
+      "defaults": "(None, {'with_hull': True})"
+    },
+    "build_vessel": {
+      "module": "stowage.vessel.fleet",
+      "name": "_build_vessel",
+      "code": "cde773c17b39885611e42fc6db2a9c27cd36b616e018cd5e9ee4b45f3b8dae6f",
+      "defaults": "(None, None)"
+    },
+    "parameter_bytes": {
+      "module": "stowage.vessel.fleet",
+      "name": "_parameter_bytes",
+      "code": "9fe6736fb2d7d8ed7e1ab697d74806b3e455373b9b4dc1a74ce35945b81fc776",
+      "defaults": "(None, None)"
+    },
+    "cached_vessel": {
+      "module": "stowage.vessel.fleet_cache",
+      "name": "cached_vessel",
+      "code": "d0b1602772a80a6a5f566bbfc4874e9bee66242e2c217d645580a3a07659ad91",
+      "defaults": "(None, None)"
+    },
+    "construction_key": {
+      "module": "stowage.vessel.fleet_cache",
+      "name": "_cache_key",
+      "code": "74e6d6f349a95c83b62861032f6b48fc636f8e7fe60e6383d032e5fd70a983c9",
+      "defaults": "(None, None)"
+    },
+    "construction_sources": {
+      "module": "stowage.vessel.fleet_cache",
+      "name": "_source_files",
+      "code": "0c3001b7eae86eca21af53d1534dfe2956c5c5a5e69d0b6a12770d9d1fbf7ace",
+      "defaults": "(None, None)"
+    },
+    "hull_builder": {
+      "module": "stowage.vessel.hull",
+      "name": "build_hull_model",
+      "code": "ce11e613022cbb000bdbcc985f7dd79f9748b75e80a352500206762a13f217b0",
+      "defaults": "(None, None)"
+    },
+    "plain": {
+      "module": "stowage.vessel.hull",
+      "name": "_plain",
+      "code": "d0bcd93cd9a10583cdebc40f415e9c5ca641be6af1ddf9afd9fee84fa3938a72",
+      "defaults": "(None, None)"
+    },
+    "field_evidence": {
+      "module": "stowage.vessel.hull",
+      "name": "_field_evidence",
+      "code": "8eb5183a4cc489625446f1223e363467345b5a639beb0d80ae2f107caf87e223",
+      "defaults": "(None, None)"
+    },
+    "load_line": {
+      "module": "stowage.vessel.hull",
+      "name": "_load_line_draught",
+      "code": "7903d0f356229d7423bc4b9e8dfd5e8dc797b7fea1ce4e7498476a7e2406a8db",
+      "defaults": "(None, None)"
+    },
+    "lashing_design": {
+      "module": "stowage.vessel.fleet_lashing_design",
+      "name": "populate_lashing_design",
+      "code": "bc9d168cbf677bb92d142867a06af2d0e01ad1b0cf01e50cb7d54f29d7bab6d6",
+      "defaults": "(None, None)"
+    },
+    "hull_geometry": {
+      "module": "stowage.vessel.hydrostatics",
+      "name": "HullGeometry",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "public_hull_geometry": {
+      "module": "stowage.vessel.hydrostatics",
+      "name": "HullGeometry",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "public_hull_model": {
+      "module": "stowage.model.vessel",
+      "name": "HullModel",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "public_field_provenance": {
+      "module": "stowage.model.vessel",
+      "name": "VesselFieldProvenance",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "public_vessel_model": {
+      "module": "stowage.model.vessel",
+      "name": "Vessel",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "cached_vessel_model": {
+      "module": "stowage.model.vessel",
+      "name": "Vessel",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "geometry_from_params": {
+      "module": "stowage.vessel.hydrostatics",
+      "name": "HullGeometry.from_params",
+      "code": "f30f8a1f93843acf6a946a7151694062e5cb1b79c0102c41469e6aca1282cd28",
+      "defaults": "(None, {'nx': 48, 'nz': 64})"
+    },
+    "geometry_init": {
+      "module": "stowage.vessel.hydrostatics",
+      "name": "HullGeometry.__init__",
+      "code": "2e1aeb056ccf932e821da1dc74e4a715a208e56edc77a3d1e7a8b0d2865c9d9b",
+      "defaults": "(None, {'nx': 48, 'nz': 64})"
+    },
+    "submerged": {
+      "module": "stowage.vessel.hydrostatics",
+      "name": "HullGeometry.submerged",
+      "code": "bdc2d47f0c83ebf60e2047d1e91e9f915611a7bd531cd551908319455dabd0b5",
+      "defaults": "((0.0, None), None)"
+    },
+    "axes": {
+      "module": "stowage.vessel.hydrostatics",
+      "name": "HullGeometry._axes",
+      "code": "72884a1981952113485dca37d42c42df4b54064540ceffc12e8b1d9182a4abc3",
+      "defaults": "(None, None)"
+    },
+    "geometry_dependencies": {
+      "module": "stowage.vessel.hydrostatics",
+      "name": "_submerged_dependencies",
+      "code": "76de87a6e2346f36f4fa899bc8d14629ff94287f054f9f359ea1b14b631a514e",
+      "defaults": "(None, None)"
+    },
+    "hull_model": {
+      "module": "stowage.model.vessel",
+      "name": "HullModel",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "hull_model_order": {
+      "module": "stowage.model.vessel",
+      "name": "HullModel.validate_table_order",
+      "code": "a53793a28b2e1f1b39231c3335df612f30af2301a160f94aae11bc078af3629a",
+      "defaults": "(None, None)"
+    },
+    "vessel_model": {
+      "module": "stowage.model.vessel",
+      "name": "Vessel",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "vessel_model_geometry": {
+      "module": "stowage.model.vessel",
+      "name": "Vessel.validate_geometry",
+      "code": "7ea23b9336c5ad61985323c7fbd84db0e7df1e500c85d42c58b79d7a7f51591a",
+      "defaults": "(None, None)"
+    },
+    "field_provenance": {
+      "module": "stowage.model.vessel",
+      "name": "VesselFieldProvenance",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "policy_projection": {
+      "module": "stowage.checker.stability_policy",
+      "name": "_project_reviewed_prefix",
+      "code": "0a68328f385bf323e0d2c80c1c1466abae44865f0a6437d05ac96bd11e440e0f",
+      "defaults": "(None, None)"
+    },
+    "projection_dispatch": {
+      "module": "stowage.checker.stability_policy",
+      "name": "projected_policy",
+      "code": "c8a9c4d3b28be20e7f1016a9ec6d441c5260fc2ebd140cef89d81aa0d8df0dff",
+      "defaults": "(None, None)"
+    },
+    "contract_reader": {
+      "module": "stowage.checker.stability_policy",
+      "name": "_contract",
+      "code": null,
+      "defaults": "(None, None)"
+    },
+    "policy_providers": {
+      "module": "stowage.checker.stability_policy",
+      "name": "runtime_providers",
+      "code": "a6251050937c0ef74db04dac29b76c4717eed69d355f2926983af9c43c690017",
+      "defaults": "(None, None)"
+    },
+    "policy_provider_identity": {
+      "module": "stowage.checker.stability_policy",
+      "name": "provider_identity",
+      "code": "d12aada5f3447095b7a857caf56653bcc9238e5af8cbaf366d40e94f15b42b61",
+      "defaults": "(None, None)"
+    },
+    "implementation_record": {
+      "module": "stowage.checker.stability_policy",
+      "name": "provider_record",
+      "code": "c5a011d07ae243a98b2d88713e3e6395146f143fe504e19eabb16d91f6e3bb71",
+      "defaults": "(None, None)"
+    },
+    "provider_defaults": {
+      "module": "stowage.checker.stability_policy",
+      "name": "_provider_defaults",
+      "code": "68b0d52b6da0bd18667d2920fb4c05414793465614176ed49f99994d922af38d",
+      "defaults": "(None, None)"
+    },
+    "implementation_code": {
+      "module": "stowage.checker.stability_policy",
+      "name": "_code_payload",
+      "code": "18358ff245a23b829e4c262300c0758c8da5d4e6496e82b02f5fbb8070e15c6b",
+      "defaults": "(None, None)"
+    },
+    "implementation_hash": {
+      "module": "stowage.checker.stability_policy",
+      "name": "implementation_digest",
+      "code": "117dbd86e0e9c8828879cee0e77dab4ed111a4516fa870af95c133343d98bf5f",
+      "defaults": "(None, None)"
+    }
+  },
+  "parameter_sha256": {
+    "feeder_1700": "50d71d7d262ab259434ef7873b8dd12fbd72bc92fa07c8f88c4f8bcc2ba2676b",
+    "feeder_500": "797886f10c5e858a123ae61f0550a06be6e7d620c668544a215cf3f9a6b25281",
+    "feeder_800": "c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7"
+  },
+  "rows": [
+    {
+      "ship": "feeder_1700",
+      "uncached_public_builder": false,
+      "bitwise_equal": true,
+      "fields": {
+        "min_trim_m": -1.6,
+        "max_trim_m": 1.6,
+        "min_displacement_kg": 8074000.0,
+        "max_displacement_kg": 27985050.213187423,
+        "bilge_keel_area_m2": 0.0
+      },
+      "float64_hex": [
+        "bff999999999999a",
+        "3ff999999999999a",
+        "415eccc400000000",
+        "417ab049a3693737",
+        "0000000000000000"
+      ],
+      "elapsed_s": 1.6212332919822074
+    },
+    {
+      "ship": "feeder_500",
+      "uncached_public_builder": false,
+      "bitwise_equal": true,
+      "fields": {
+        "min_trim_m": -1.078,
+        "max_trim_m": 1.078,
+        "min_displacement_kg": 2900000.0,
+        "max_displacement_kg": 9713353.260589017,
+        "bilge_keel_area_m2": 0.0
+      },
+      "float64_hex": [
+        "bff13f7ced916873",
+        "3ff13f7ced916873",
+        "4146201000000000",
+        "416286d92856bec7",
+        "0000000000000000"
+      ],
+      "elapsed_s": 1.0618920839915518
+    },
+    {
+      "ship": "feeder_800",
+      "uncached_public_builder": false,
+      "bitwise_equal": true,
+      "fields": {
+        "min_trim_m": -1.2441,
+        "max_trim_m": 1.2441,
+        "min_displacement_kg": 5200000.0,
+        "max_displacement_kg": 16211273.69597336,
+        "bilge_keel_area_m2": 0.0
+      },
+      "float64_hex": [
+        "bff3e7d566cf41f2",
+        "3ff3e7d566cf41f2",
+        "4153d62000000000",
+        "416eeba9364569ed",
+        "0000000000000000"
+      ],
+      "elapsed_s": 1.3264740000013262
+    }
+  ],
+  "changed_sources": [
+    "src/stowage/conventions.py",
+    "src/stowage/model/__init__.py",
+    "src/stowage/model/port.py",
+    "src/stowage/model/vessel.py",
+    "src/stowage/ports/profiles.py",
+    "src/stowage/vessel/fleet.py",
+    "src/stowage/vessel/fleet_balance.py",
+    "src/stowage/vessel/fleet_conditions.py",
+    "src/stowage/vessel/fleet_manual_witness.py",
+    "src/stowage/vessel/fleet_slices.py"
+  ],
+  "note": "Exact metadata projection only; no linear qualification, policy values, thresholds or measured banks changed.",
+  "assumption": "Content-keyed current full-public vessel cache is trusted; no fresh uncached tables claimed.",
+  "metadata_annotation_revision": "experiments/mvp/smoke/v54-policy-verification-revision.json",
+  "annotation_note": "candidate_sha256 remains the first promoted proof candidate. The subsequent verification-path-only annotation and current contract SHA are recorded separately in metadata_annotation_revision."
+}

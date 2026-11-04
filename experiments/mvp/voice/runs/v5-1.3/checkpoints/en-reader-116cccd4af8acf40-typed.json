@@ -1,0 +1,38 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 21,
+      "max_tiers": 6,
+      "type": "max_tiers",
+      "zone": "deck"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "bay": 21,
+      "max_tiers": 6,
+      "type": "max_tiers",
+      "zone": "deck"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.3389404999907129,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00149145",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "03d91933c10b9019f0c15982139087f2b3e5458203d1210bedd521c40fe7d7bd",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "a94853ec-9abf-4d0f-87da-7ea1c0b17fec"
+  },
+  "parser_latency_s": 1.3389229589956813,
+  "script": "Planner: restrict bay 21 deck to 6 max.",
+  "source_id": "reader-116cccd4af8acf40",
+  "started_utc": "2026-11-01T01:30:55.603517+00:00",
+  "status": "complete"
+}

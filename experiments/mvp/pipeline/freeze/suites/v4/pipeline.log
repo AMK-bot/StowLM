@@ -1,0 +1,343 @@
+........................................................................ [  1%]
+........................................................................ [  3%]
+........................................................................ [  5%]
+........................................................................ [  7%]
+........................................................................ [  8%]
+........................................................................ [ 10%]
+........................................................................ [ 12%]
+........................................................................ [ 14%]
+........................................................................ [ 16%]
+........................................................................ [ 17%]
+........................................................................ [ 19%]
+........................................................................ [ 21%]
+........................................................................ [ 23%]
+........................................................................ [ 25%]
+........................................................................ [ 26%]
+........................................................................ [ 28%]
+...................................................EE.........F......... [ 30%]
+........................................................................ [ 32%]
+........................................................................ [ 34%]
+........................................................................ [ 35%]
+........................................................................ [ 37%]
+........................................................................ [ 39%]
+........................................................................ [ 41%]
+........................................................................ [ 43%]
+........................................................................ [ 44%]
+........................................................................ [ 46%]
+........................................................................ [ 48%]
+........................................................................ [ 50%]
+........................................................................ [ 52%]
+........................................................................ [ 53%]
+........................................................................ [ 55%]
+........................................................................ [ 57%]
+........................................................................ [ 59%]
+........................................................................ [ 61%]
+..............................................F......................... [ 62%]
+........................................................................ [ 64%]
+........................................................................ [ 66%]
+........................................................................ [ 68%]
+........................................................................ [ 69%]
+........................................................................ [ 71%]
+........................................................................ [ 73%]
+........................................................................ [ 75%]
+.......................................... [ 76%]
+....................................F........................ [ 77%]
+........................................................................ [ 79%]
+........................................................................ [ 81%]
+........................................................................ [ 83%]
+........................................................................ [ 85%]
+........................................................................ [ 86%]
+........................................................................ [ 88%]
+........................................................................ [ 90%]
+........................................................................ [ 92%]
+........................................................................ [ 94%]
+........................................................................ [ 95%]
+........................................................................ [ 97%]
+........................................................................ [ 99%]
+.....................                                                    [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_published_hero_covers_all_boxes_and_selected_alternatives _
+
+    @pytest.fixture(scope='module')
+    def published_hero_verification():
+        # Root publishes this only after the complete prefetch and explicit verify.
+        # Unit tests above never inspect a live, partial recording.
+        path = HERO / 'verification.json'
+        if not path.exists():
+            pytest.skip('Await complete hero prefetch and explicit verify_hero --write')
+        before = path.read_bytes()
+>       result = verifier.verify_hero(HERO, write=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+experiments/mvp/pipeline/explain/test_hero_recording.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hero_dir = PosixPath('/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/explain/fixtures/hero')
+write = False, manifest = None
+
+    def verify_hero(hero_dir=None, *, write=False, manifest=None):
+        """Read-only by default; explicit write=True publishes hero/verification.json.
+    
+        Every payload is hash/binding/label checked. All fact pairs receive token,
+        role and evidence equality checks. Only the selected ten pairs receive full
+        input-based load_cached rederivation; this distinction is reported plainly.
+        """
+        directory = Path(hero_dir) if hero_dir is not None else HERE / 'fixtures/hero'
+        cache = directory / 'cache'
+        bundle = hero.load_hero(manifest)
+        assert bundle is not None, 'No explicitly published checked hero is available'
+        values = (bundle['instance'], bundle['plan'], bundle['report'])
+        binding = bundle['binding']
+        index = _read(cache / 'index.json')
+        index_digest = index.pop('sha256', None)
+        assert index_digest == sha256_json(index) and index['schema'] == SCHEMA, 'Hero cache index integrity mismatch'
+>       assert index['binding'] == binding, 'Hero cache binding differs from current named hero'
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Hero cache binding differs from current named hero
+
+experiments/mvp/pipeline/explain/verify_hero.py:68: AssertionError
+_ ERROR at setup of test_published_hero_labels_slots_thai_flags_and_spend_are_honest _
+
+    @pytest.fixture(scope='module')
+    def published_hero_verification():
+        # Root publishes this only after the complete prefetch and explicit verify.
+        # Unit tests above never inspect a live, partial recording.
+        path = HERO / 'verification.json'
+        if not path.exists():
+            pytest.skip('Await complete hero prefetch and explicit verify_hero --write')
+        before = path.read_bytes()
+>       result = verifier.verify_hero(HERO, write=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+experiments/mvp/pipeline/explain/test_hero_recording.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hero_dir = PosixPath('/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/explain/fixtures/hero')
+write = False, manifest = None
+
+    def verify_hero(hero_dir=None, *, write=False, manifest=None):
+        """Read-only by default; explicit write=True publishes hero/verification.json.
+    
+        Every payload is hash/binding/label checked. All fact pairs receive token,
+        role and evidence equality checks. Only the selected ten pairs receive full
+        input-based load_cached rederivation; this distinction is reported plainly.
+        """
+        directory = Path(hero_dir) if hero_dir is not None else HERE / 'fixtures/hero'
+        cache = directory / 'cache'
+        bundle = hero.load_hero(manifest)
+        assert bundle is not None, 'No explicitly published checked hero is available'
+        values = (bundle['instance'], bundle['plan'], bundle['report'])
+        binding = bundle['binding']
+        index = _read(cache / 'index.json')
+        index_digest = index.pop('sha256', None)
+        assert index_digest == sha256_json(index) and index['schema'] == SCHEMA, 'Hero cache index integrity mismatch'
+>       assert index['binding'] == binding, 'Hero cache binding differs from current named hero'
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Hero cache binding differs from current named hero
+
+experiments/mvp/pipeline/explain/verify_hero.py:68: AssertionError
+=================================== FAILURES ===================================
+________ test_handoff_is_hash_bound_and_does_not_claim_ui_is_integrated ________
+
+    def test_handoff_is_hash_bound_and_does_not_claim_ui_is_integrated():
+        from experiments.mvp.pipeline.contract.schema import sha256_json
+        value = json.loads(Path(__file__).with_name('app_handoff.json').read_text())
+        digest = value.pop('sha256')
+        assert digest == sha256_json(value)
+        assert value['app_already_uses_this_hero'] is False
+        assert value['status'] == 'awaiting_app_owner_application_and_hero_selection'
+        assert value['recording_snapshot']['recheck_before_apply'] is True
+        patch = value['handoff_artifacts']['integration_patch']
+        assert patch['sha256'] == hashlib.sha256((ROOT / patch['path']).read_bytes()).hexdigest()
+        combined = value['handoff_artifacts']['combined_hero_inputs']
+>       assert combined['sha256'] == hashlib.sha256((ROOT / combined['path']).read_bytes()).hexdigest()
+E       AssertionError: assert '35b9740e7b20...668c02226a61b' == 'a22107d65b9f...456fa788d2461'
+E         
+E         - a22107d65b9f7e48aa916b2810754650834217f35b5940cbf1f456fa788d2461
+E         + 35b9740e7b20993d70d6b6e8ea04fae005448e4acdf617717ea668c02226a61b
+
+experiments/mvp/pipeline/explain/test_integration_patch.py:326: AssertionError
+______________ test_spawned_binding_worker_inherits_lattice_fence ______________
+
+    def test_spawned_binding_worker_inherits_lattice_fence():
+        import multiprocessing
+        from experiments.mvp.pipeline.binding.hooks import binding_scope
+        from experiments.mvp.pipeline.lattice.runtime import HERE, isolated_binding
+        context = multiprocessing.get_context('spawn')
+        queue = context.Queue()
+        instance = build_instance()
+        with isolated_binding(), binding_scope(instance):
+            process = context.Process(target=_runtime_probe, args=(queue,))
+            process.start()
+            try:
+>               result = queue.get(timeout=30)
+                         ^^^^^^^^^^^^^^^^^^^^^
+
+experiments/mvp/pipeline/lattice/test_gates.py:213: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <multiprocessing.queues.Queue object at 0x124616d20>, block = True
+timeout = 29.999996457947418
+
+    def get(self, block=True, timeout=None):
+        if self._closed:
+            raise ValueError(f"Queue {self!r} is closed")
+        if block and timeout is None:
+            with self._rlock:
+                res = self._recv_bytes()
+            self._sem.release()
+        else:
+            if block:
+                deadline = time.monotonic() + timeout
+            if not self._rlock.acquire(block, timeout):
+                raise Empty
+            try:
+                if block:
+                    timeout = deadline - time.monotonic()
+                    if not self._poll(timeout):
+>                       raise Empty
+E                       _queue.Empty
+
+../../.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/multiprocessing/queues.py:114: Empty
+----------------------------- Captured stderr call -----------------------------
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/Users/anda/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/Users/anda/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/lattice/runtime.py", line 38, in worker_entry
+    from experiments.mvp.pipeline.binding import hooks
+  File "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/binding/__init__.py", line 11, in <module>
+    from experiments.mvp.pipeline.binding.adapter import execute_brief, plan_with_rules
+  File "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/binding/adapter.py", line 24, in <module>
+    from engine.peel import inspect
+  File "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sandbox/fixtures/holdout.gates-v3/experiments/mvp/frontier/engine/peel.py", line 14, in <module>
+    TIERS = tomllib.loads(Path(__file__).with_name('tiers.toml').read_text())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anda/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anda/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sandbox/fixtures/holdout.gates-v3/experiments/mvp/frontier/engine/tiers.toml'
+_____ test_binding_descendant_cache_and_audit_paths_stay_in_runner[spawn] ______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x12d668ec0>
+tmp_path = PosixPath('/private/tmp/claude-501/-Users-anda-Projects-meta-hackathon-stowage/3eb8a05b-fdcf-4c03-954a-afded6ea2972/scratchpad/v4-suite-pipeline/test_binding_descendant_cache_1')
+method = 'spawn'
+
+    @pytest.mark.parametrize('method', ['fork', 'spawn'])
+    def test_binding_descendant_cache_and_audit_paths_stay_in_runner(monkeypatch, tmp_path, method):
+        import multiprocessing
+        from experiments.mvp.pipeline.binding import hooks, runtime
+        root = tmp_path / 'runner-cache'
+        monkeypatch.setattr(admission, 'CACHE_ROOT', root)
+        context = multiprocessing.get_context(method)
+        output = context.Queue()
+        target = importlib.import_module(
+            'experiments.mvp.pipeline.runner.test_admission')._runtime_worker_report
+        original_root = runtime.ROOT
+        reading = dict(mask=255, enabled_cores=8, load1=20., reading_age_s=1., waited_s=0.)
+    
+        def engine():
+            with hooks.binding_scope(SimpleNamespace(id='synthetic')) as audit:
+                worker = context.Process(target=target, args=(output,))
+                worker.start()
+                try:
+                    result = output.get(timeout=30)
+                    worker.join(timeout=10)
+                    assert worker.exitcode == 0
+                    return result
+                finally:
+                    if worker.is_alive():
+                        worker.terminate()
+                        worker.join(timeout=10)
+    
+        try:
+>           result = call_admitted(engine, admission=reading)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+experiments/mvp/pipeline/runner/test_admission.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+experiments/mvp/pipeline/runner/admission.py:134: in call_admitted
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/mvp/pipeline/runner/test_admission.py:185: in engine
+    result = output.get(timeout=30)
+             ^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <multiprocessing.queues.Queue object at 0x12d66a5a0>, block = True
+timeout = 29.999990832991898
+
+    def get(self, block=True, timeout=None):
+        if self._closed:
+            raise ValueError(f"Queue {self!r} is closed")
+        if block and timeout is None:
+            with self._rlock:
+                res = self._recv_bytes()
+            self._sem.release()
+        else:
+            if block:
+                deadline = time.monotonic() + timeout
+            if not self._rlock.acquire(block, timeout):
+                raise Empty
+            try:
+                if block:
+                    timeout = deadline - time.monotonic()
+                    if not self._poll(timeout):
+>                       raise Empty
+E                       _queue.Empty
+
+../../.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/multiprocessing/queues.py:114: Empty
+----------------------------- Captured stderr call -----------------------------
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/anda/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anda/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/binding/__init__.py", line 11, in <module>
+    from experiments.mvp.pipeline.binding.adapter import execute_brief, plan_with_rules
+  File "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/binding/adapter.py", line 24, in <module>
+    from engine.peel import inspect
+  File "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sandbox/fixtures/holdout.gates-v3/experiments/mvp/frontier/engine/peel.py", line 14, in <module>
+    TIERS = tomllib.loads(Path(__file__).with_name('tiers.toml').read_text())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anda/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anda/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sandbox/fixtures/holdout.gates-v3/experiments/mvp/frontier/engine/tiers.toml'
+=============================== warnings summary ===============================
+experiments/mvp/pipeline/runner/test_admission.py: 1 warning
+experiments/mvp/pipeline/runner/test_failures.py: 4 warnings
+experiments/mvp/pipeline/runner/test_limits.py: 6 warnings
+experiments/mvp/pipeline/runner/test_logic_review.py: 5 warnings
+  /Users/anda/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=69604) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+experiments/mvp/pipeline/runner/test_logic_review.py::test_real_engine_deadline_ignores_internal_budgets_and_rechecks_best_incumbent[False-live]
+experiments/mvp/pipeline/runner/test_logic_review.py::test_real_engine_deadline_ignores_internal_budgets_and_rechecks_best_incumbent[False-standard]
+experiments/mvp/pipeline/runner/test_logic_review.py::test_real_engine_deadline_ignores_internal_budgets_and_rechecks_best_incumbent[True-live]
+experiments/mvp/pipeline/runner/test_logic_review.py::test_real_engine_deadline_ignores_internal_budgets_and_rechecks_best_incumbent[True-standard]
+  experiments/mvp/pipeline/runner/test_logic_review.py:36: PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+    @pytest.mark.parametrize('profile_name', ['live', 'standard'])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+------------------ tests over 10 s without @pytest.mark.slow -------------------
+    30.0s  experiments/mvp/pipeline/lattice/test_gates.py::test_spawned_binding_worker_inherits_lattice_fence
+    30.0s  experiments/mvp/pipeline/runner/test_admission.py::test_binding_descendant_cache_and_audit_paths_stay_in_runner[spawn]
+=========================== short test summary info ============================
+FAILED experiments/mvp/pipeline/explain/test_integration_patch.py::test_handoff_is_hash_bound_and_does_not_claim_ui_is_integrated
+FAILED experiments/mvp/pipeline/lattice/test_gates.py::test_spawned_binding_worker_inherits_lattice_fence
+FAILED experiments/mvp/pipeline/runner/test_admission.py::test_binding_descendant_cache_and_audit_paths_stay_in_runner[spawn]
+ERROR experiments/mvp/pipeline/explain/test_hero_recording.py::test_published_hero_covers_all_boxes_and_selected_alternatives
+ERROR experiments/mvp/pipeline/explain/test_hero_recording.py::test_published_hero_labels_slots_thai_flags_and_spend_are_honest
+3 failed, 4007 passed, 2 deselected, 20 warnings, 2 errors, 41 subtests passed in 396.53s (0:06:36)

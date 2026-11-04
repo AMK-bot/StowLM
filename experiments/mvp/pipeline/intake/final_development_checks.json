@@ -1,0 +1,1956 @@
+{
+  "label": "development replay of spent v8 recordings; no new paid read or fresh accuracy claim",
+  "old_frozen_methods": {
+    "Muse Spark + software": {
+      "fields_correct": 446,
+      "fields_total": 630,
+      "fields_accepted": 447,
+      "rows_exact": 18,
+      "rows_total": 60,
+      "boxes_stopped": 42,
+      "silent_wrong_values": 3,
+      "planted_problems_stopped": 12,
+      "planted_problems_total": 15,
+      "plausible_traps_stopped": 9,
+      "plausible_traps_total": 12,
+      "silent_wrong_plausible_traps": 1,
+      "clean_dg_accepted": 4,
+      "clean_dg_total": 10,
+      "clean_reefers_accepted": 4,
+      "clean_reefers_total": 10,
+      "clean_dg_cargo_accepted": 4,
+      "clean_reefers_cargo_accepted": 4,
+      "document_questions": 2,
+      "wall_s": 268.35225279198494,
+      "cost_usd": 0.284475,
+      "method": "Muse Spark + software",
+      "label": "measured",
+      "field_accuracy": 0.707936507936508,
+      "row_exact_accuracy": 0.3,
+      "planner_workload": 0.7,
+      "tally": {
+        "cells_correct": 60,
+        "cells_total": 60
+      }
+    },
+    "Literal-header parser": {
+      "fields_correct": 227,
+      "fields_total": 630,
+      "fields_accepted": 227,
+      "rows_exact": 0,
+      "rows_total": 60,
+      "boxes_stopped": 60,
+      "silent_wrong_values": 0,
+      "planted_problems_stopped": 4,
+      "planted_problems_total": 15,
+      "plausible_traps_stopped": 3,
+      "plausible_traps_total": 12,
+      "silent_wrong_plausible_traps": 3,
+      "clean_dg_accepted": 0,
+      "clean_dg_total": 10,
+      "clean_reefers_accepted": 0,
+      "clean_reefers_total": 10,
+      "clean_dg_cargo_accepted": 0,
+      "clean_reefers_cargo_accepted": 0,
+      "document_questions": 15,
+      "wall_s": 3.3664460830041207,
+      "cost_usd": 0.0,
+      "method": "Literal-header parser",
+      "label": "measured",
+      "field_accuracy": 0.3603174603174603,
+      "row_exact_accuracy": 0.0,
+      "planner_workload": 1.0,
+      "tally": {
+        "cells_correct": 0,
+        "cells_total": 60
+      }
+    }
+  },
+  "development_methods": {
+    "Muse Spark + software": {
+      "fields_correct": 446,
+      "fields_total": 630,
+      "fields_accepted": 446,
+      "rows_exact": 18,
+      "rows_total": 60,
+      "boxes_stopped": 42,
+      "silent_wrong_values": 0,
+      "planted_problems_stopped": 12,
+      "planted_problems_total": 15,
+      "plausible_traps_stopped": 9,
+      "plausible_traps_total": 12,
+      "silent_wrong_plausible_traps": 1,
+      "clean_dg_accepted": 4,
+      "clean_dg_total": 10,
+      "clean_reefers_accepted": 4,
+      "clean_reefers_total": 10,
+      "clean_dg_cargo_accepted": 4,
+      "clean_reefers_cargo_accepted": 4,
+      "document_questions": 2,
+      "wall_s": 2.5241206669597887,
+      "cost_usd": 0.0,
+      "method": "Muse Spark + software",
+      "label": "measured",
+      "field_accuracy": 0.707936507936508,
+      "row_exact_accuracy": 0.3,
+      "planner_workload": 0.7,
+      "tally": {
+        "cells_correct": 60,
+        "cells_total": 60
+      }
+    },
+    "Literal-header parser": {
+      "fields_correct": 227,
+      "fields_total": 630,
+      "fields_accepted": 227,
+      "rows_exact": 0,
+      "rows_total": 60,
+      "boxes_stopped": 60,
+      "silent_wrong_values": 0,
+      "planted_problems_stopped": 4,
+      "planted_problems_total": 15,
+      "plausible_traps_stopped": 3,
+      "plausible_traps_total": 12,
+      "silent_wrong_plausible_traps": 3,
+      "clean_dg_accepted": 0,
+      "clean_dg_total": 10,
+      "clean_reefers_accepted": 0,
+      "clean_reefers_total": 10,
+      "clean_dg_cargo_accepted": 0,
+      "clean_reefers_cargo_accepted": 0,
+      "document_questions": 15,
+      "wall_s": 2.542695874988567,
+      "cost_usd": 0.0,
+      "method": "Literal-header parser",
+      "label": "measured",
+      "field_accuracy": 0.3603174603174603,
+      "row_exact_accuracy": 0.0,
+      "planner_workload": 1.0,
+      "tally": {
+        "cells_correct": 0,
+        "cells_total": 60
+      }
+    }
+  },
+  "development_cases": [
+    {
+      "case": "blind_01",
+      "methods": {
+        "Muse Spark + software": {
+          "method": "Muse Spark + software",
+          "label": "measured",
+          "fields_correct": 0,
+          "fields_total": 123,
+          "fields_accepted": 0,
+          "field_accuracy": 0.0,
+          "rows_exact": 0,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.0,
+          "boxes_stopped": 12,
+          "planner_workload": 1.0,
+          "stopped_box_ids": [
+            "QZXU0000009",
+            "QZXU0000014",
+            "QZXU0000035",
+            "QZXU0000040",
+            "QZXU0000056",
+            "QZXU0000061",
+            "QZXU0000077",
+            "QZXU0000082",
+            "QZXU0000101",
+            "QZXU0000117",
+            "QZXU0000138",
+            "QZXU0000159"
+          ],
+          "document_questions": 0,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 0,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 0,
+          "plausible_traps_total": 3,
+          "silent_wrong_plausible_traps": 1,
+          "traps": [
+            {
+              "trap": {
+                "kind": "image_pod",
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "reason": "cross_document_conflict",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "declared_vs_vgm",
+                "row_id": "QZXU0000159",
+                "field": "gross_mass_kg",
+                "reason": "cross_document_conflict",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "wrong_vessel",
+                "row_id": "QZXU0000117",
+                "field": "booked_vessel",
+                "reason": "wrong_vessel",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": true,
+              "unrelated_question_only": true
+            }
+          ],
+          "clean_dg_accepted": 0,
+          "clean_dg_cargo_accepted": 0,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 0,
+          "clean_reefers_cargo_accepted": 0,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 12,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000009",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000014",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000056",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000077",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000138",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000159",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000117",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              }
+            ]
+          },
+          "wall_s": 0.00051829096628353,
+          "cost_usd": 0.0
+        },
+        "Literal-header parser": {
+          "method": "Literal-header parser",
+          "label": "measured",
+          "fields_correct": 46,
+          "fields_total": 123,
+          "fields_accepted": 46,
+          "field_accuracy": 0.37398373983739835,
+          "rows_exact": 0,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.0,
+          "boxes_stopped": 12,
+          "planner_workload": 1.0,
+          "stopped_box_ids": [
+            "QZXU0000009",
+            "QZXU0000014",
+            "QZXU0000035",
+            "QZXU0000040",
+            "QZXU0000056",
+            "QZXU0000061",
+            "QZXU0000077",
+            "QZXU0000082",
+            "QZXU0000101",
+            "QZXU0000117",
+            "QZXU0000138",
+            "QZXU0000159"
+          ],
+          "document_questions": 3,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 1,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 1,
+          "plausible_traps_total": 3,
+          "silent_wrong_plausible_traps": 1,
+          "traps": [
+            {
+              "trap": {
+                "kind": "image_pod",
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "reason": "cross_document_conflict",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": true,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "declared_vs_vgm",
+                "row_id": "QZXU0000159",
+                "field": "gross_mass_kg",
+                "reason": "cross_document_conflict",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "wrong_vessel",
+                "row_id": "QZXU0000117",
+                "field": "booked_vessel",
+                "reason": "wrong_vessel",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000117:booked_vessel:wrong_vessel"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            }
+          ],
+          "clean_dg_accepted": 0,
+          "clean_dg_cargo_accepted": 0,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 0,
+          "clean_reefers_cargo_accepted": 0,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 0,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000009",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000014",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000056",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000077",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000138",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000159",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000117",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              }
+            ]
+          },
+          "wall_s": 0.43171475001145154,
+          "cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case": "blind_02",
+      "methods": {
+        "Muse Spark + software": {
+          "method": "Muse Spark + software",
+          "label": "measured",
+          "fields_correct": 120,
+          "fields_total": 131,
+          "fields_accepted": 120,
+          "field_accuracy": 0.916030534351145,
+          "rows_exact": 9,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.75,
+          "boxes_stopped": 3,
+          "planner_workload": 0.25,
+          "stopped_box_ids": [
+            "QZXU0000077",
+            "QZXU0000082",
+            "QZXU0000170"
+          ],
+          "document_questions": 0,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 3,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 3,
+          "plausible_traps_total": 3,
+          "silent_wrong_plausible_traps": 0,
+          "traps": [
+            {
+              "trap": {
+                "kind": "dg_mp_conflict",
+                "row_id": "QZXU0000077",
+                "field": "dg.marine_pollutant",
+                "reason": "cross_document_conflict",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000077:dg.marine_pollutant:cross_document_conflict"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            },
+            {
+              "trap": {
+                "kind": "dg_lq_conflict",
+                "row_id": "QZXU0000170",
+                "field": "dg.limited_quantity",
+                "reason": "cross_document_conflict",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000170:dg.limited_quantity:cross_document_conflict"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            },
+            {
+              "trap": {
+                "kind": "amendment_pod",
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "reason": "amendment_review",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000082:amendment:amendment_review",
+                "QZXU0000082:pod:cross_document_conflict"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            }
+          ],
+          "clean_dg_accepted": 2,
+          "clean_dg_cargo_accepted": 2,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 2,
+          "clean_reefers_cargo_accepted": 2,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 12,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000009",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000014",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000020",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000056",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000159",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000077",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000170",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              }
+            ]
+          },
+          "wall_s": 0.5481290000025183,
+          "cost_usd": 0.0
+        },
+        "Literal-header parser": {
+          "method": "Literal-header parser",
+          "label": "measured",
+          "fields_correct": 44,
+          "fields_total": 131,
+          "fields_accepted": 44,
+          "field_accuracy": 0.33587786259541985,
+          "rows_exact": 0,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.0,
+          "boxes_stopped": 12,
+          "planner_workload": 1.0,
+          "stopped_box_ids": [
+            "QZXU0000009",
+            "QZXU0000014",
+            "QZXU0000020",
+            "QZXU0000035",
+            "QZXU0000040",
+            "QZXU0000056",
+            "QZXU0000061",
+            "QZXU0000077",
+            "QZXU0000082",
+            "QZXU0000101",
+            "QZXU0000159",
+            "QZXU0000170"
+          ],
+          "document_questions": 3,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 1,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 1,
+          "plausible_traps_total": 3,
+          "silent_wrong_plausible_traps": 0,
+          "traps": [
+            {
+              "trap": {
+                "kind": "dg_mp_conflict",
+                "row_id": "QZXU0000077",
+                "field": "dg.marine_pollutant",
+                "reason": "cross_document_conflict",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "dg_lq_conflict",
+                "row_id": "QZXU0000170",
+                "field": "dg.limited_quantity",
+                "reason": "cross_document_conflict",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "amendment_pod",
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "reason": "amendment_review",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000082:amendment:amendment_review"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            }
+          ],
+          "clean_dg_accepted": 0,
+          "clean_dg_cargo_accepted": 0,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 0,
+          "clean_reefers_cargo_accepted": 0,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 0,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000009",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000014",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000020",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000056",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000159",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000077",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000170",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              }
+            ]
+          },
+          "wall_s": 0.46397066698409617,
+          "cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case": "blind_03",
+      "methods": {
+        "Muse Spark + software": {
+          "method": "Muse Spark + software",
+          "label": "measured",
+          "fields_correct": 107,
+          "fields_total": 125,
+          "fields_accepted": 107,
+          "field_accuracy": 0.856,
+          "rows_exact": 0,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.0,
+          "boxes_stopped": 12,
+          "planner_workload": 1.0,
+          "stopped_box_ids": [
+            "QZXU0000009",
+            "QZXU0000020",
+            "QZXU0000035",
+            "QZXU0000040",
+            "QZXU0000061",
+            "QZXU0000077",
+            "QZXU0000082",
+            "QZXU0000098",
+            "QZXU0000101",
+            "QZXU0000138",
+            "QZXU0000164",
+            "QZXU0000185"
+          ],
+          "document_questions": 1,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 3,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 2,
+          "plausible_traps_total": 2,
+          "silent_wrong_plausible_traps": 0,
+          "traps": [
+            {
+              "trap": {
+                "kind": "fahrenheit",
+                "row_id": "QZXU0000164",
+                "field": "reefer_setpoint_c",
+                "reason": "fahrenheit_setpoint",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000164:reefer_setpoint_c:fahrenheit_setpoint"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            },
+            {
+              "trap": {
+                "kind": "reefer_iso",
+                "row_id": "QZXU0000077",
+                "field": "reefer",
+                "reason": "reefer_iso_mismatch",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000077:reefer:reefer_iso_mismatch"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            },
+            {
+              "trap": {
+                "kind": "missing_vgm",
+                "row_id": "QZXU0000185",
+                "field": "gross_mass_kg",
+                "reason": "missing_vgm",
+                "expected": "question_or_rejection",
+                "plausible": false
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000185:gross_mass_kg:missing_vgm"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            }
+          ],
+          "clean_dg_accepted": 0,
+          "clean_dg_cargo_accepted": 0,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 0,
+          "clean_reefers_cargo_accepted": 0,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 12,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000009",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000020",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000098",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000138",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000164",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000077",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000185",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              }
+            ]
+          },
+          "wall_s": 0.853522332967259,
+          "cost_usd": 0.0
+        },
+        "Literal-header parser": {
+          "method": "Literal-header parser",
+          "label": "measured",
+          "fields_correct": 46,
+          "fields_total": 125,
+          "fields_accepted": 46,
+          "field_accuracy": 0.368,
+          "rows_exact": 0,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.0,
+          "boxes_stopped": 12,
+          "planner_workload": 1.0,
+          "stopped_box_ids": [
+            "QZXU0000009",
+            "QZXU0000020",
+            "QZXU0000035",
+            "QZXU0000040",
+            "QZXU0000061",
+            "QZXU0000077",
+            "QZXU0000082",
+            "QZXU0000098",
+            "QZXU0000101",
+            "QZXU0000138",
+            "QZXU0000164",
+            "QZXU0000185"
+          ],
+          "document_questions": 3,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 1,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 0,
+          "plausible_traps_total": 2,
+          "silent_wrong_plausible_traps": 1,
+          "traps": [
+            {
+              "trap": {
+                "kind": "fahrenheit",
+                "row_id": "QZXU0000164",
+                "field": "reefer_setpoint_c",
+                "reason": "fahrenheit_setpoint",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "reefer_iso",
+                "row_id": "QZXU0000077",
+                "field": "reefer",
+                "reason": "reefer_iso_mismatch",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": true,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "missing_vgm",
+                "row_id": "QZXU0000185",
+                "field": "gross_mass_kg",
+                "reason": "missing_vgm",
+                "expected": "question_or_rejection",
+                "plausible": false
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000185:gross_mass_kg:missing_vgm"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            }
+          ],
+          "clean_dg_accepted": 0,
+          "clean_dg_cargo_accepted": 0,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 0,
+          "clean_reefers_cargo_accepted": 0,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 0,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000009",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000020",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000098",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000138",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000164",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000077",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000185",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              }
+            ]
+          },
+          "wall_s": 0.7660320830182172,
+          "cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case": "blind_04",
+      "methods": {
+        "Muse Spark + software": {
+          "method": "Muse Spark + software",
+          "label": "measured",
+          "fields_correct": 112,
+          "fields_total": 127,
+          "fields_accepted": 112,
+          "field_accuracy": 0.8818897637795275,
+          "rows_exact": 9,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.75,
+          "boxes_stopped": 3,
+          "planner_workload": 0.25,
+          "stopped_box_ids": [
+            "QZXU0000101",
+            "QZXU0000117",
+            "QZXU0000122"
+          ],
+          "document_questions": 0,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 3,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 2,
+          "plausible_traps_total": 2,
+          "silent_wrong_plausible_traps": 0,
+          "traps": [
+            {
+              "trap": {
+                "kind": "unknown_un",
+                "row_id": "QZXU0000101",
+                "field": "dg.un_number",
+                "reason": "unknown_un",
+                "expected": "question_or_rejection",
+                "plausible": false
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000101:dg:unknown_un",
+                "QZXU0000101:dg:unresolved_imdg_entry"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            },
+            {
+              "trap": {
+                "kind": "wrong_pol",
+                "row_id": "QZXU0000122",
+                "field": "pol",
+                "reason": "wrong_pol",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000122:pol:wrong_pol"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            },
+            {
+              "trap": {
+                "kind": "duplicate",
+                "row_id": "QZXU0000117",
+                "field": "id",
+                "reason": "duplicate_id",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000117:id:duplicate_id"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            }
+          ],
+          "clean_dg_accepted": 2,
+          "clean_dg_cargo_accepted": 2,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 2,
+          "clean_reefers_cargo_accepted": 2,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 12,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000020",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "HKHKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000009",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "HKHKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000056",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "HKHKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "HKHKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000098",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000077",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "HKHKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000122",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "HKHKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000117",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "VNSGN"
+                ]
+              }
+            ]
+          },
+          "wall_s": 0.6695775840198621,
+          "cost_usd": 0.0
+        },
+        "Literal-header parser": {
+          "method": "Literal-header parser",
+          "label": "measured",
+          "fields_correct": 45,
+          "fields_total": 127,
+          "fields_accepted": 45,
+          "field_accuracy": 0.3543307086614173,
+          "rows_exact": 0,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.0,
+          "boxes_stopped": 12,
+          "planner_workload": 1.0,
+          "stopped_box_ids": [
+            "QZXU0000009",
+            "QZXU0000020",
+            "QZXU0000035",
+            "QZXU0000040",
+            "QZXU0000056",
+            "QZXU0000061",
+            "QZXU0000077",
+            "QZXU0000082",
+            "QZXU0000098",
+            "QZXU0000101",
+            "QZXU0000117",
+            "QZXU0000122"
+          ],
+          "document_questions": 3,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 0,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 0,
+          "plausible_traps_total": 2,
+          "silent_wrong_plausible_traps": 1,
+          "traps": [
+            {
+              "trap": {
+                "kind": "unknown_un",
+                "row_id": "QZXU0000101",
+                "field": "dg.un_number",
+                "reason": "unknown_un",
+                "expected": "question_or_rejection",
+                "plausible": false
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "wrong_pol",
+                "row_id": "QZXU0000122",
+                "field": "pol",
+                "reason": "wrong_pol",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "duplicate",
+                "row_id": "QZXU0000117",
+                "field": "id",
+                "reason": "duplicate_id",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": true,
+              "unrelated_question_only": true
+            }
+          ],
+          "clean_dg_accepted": 0,
+          "clean_dg_cargo_accepted": 0,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 0,
+          "clean_reefers_cargo_accepted": 0,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 0,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000020",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000009",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000056",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000098",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000077",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000122",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000117",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              }
+            ]
+          },
+          "wall_s": 0.4363647080026567,
+          "cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case": "blind_05",
+      "methods": {
+        "Muse Spark + software": {
+          "method": "Muse Spark + software",
+          "label": "measured",
+          "fields_correct": 107,
+          "fields_total": 124,
+          "fields_accepted": 107,
+          "field_accuracy": 0.8629032258064516,
+          "rows_exact": 0,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.0,
+          "boxes_stopped": 12,
+          "planner_workload": 1.0,
+          "stopped_box_ids": [
+            "QZXU0000014",
+            "QZXU0000020",
+            "QZXU0000035",
+            "QZXU0000040",
+            "QZXU0000056",
+            "QZXU0000061",
+            "QZXU0000082",
+            "QZXU0000098",
+            "QZXU0000101",
+            "QZXU0000117",
+            "QZXU0000138",
+            "QZXU0000143"
+          ],
+          "document_questions": 1,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 3,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 2,
+          "plausible_traps_total": 2,
+          "silent_wrong_plausible_traps": 0,
+          "traps": [
+            {
+              "trap": {
+                "kind": "cod",
+                "row_id": "QZXU0000138",
+                "field": "pod",
+                "reason": "amendment_review",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000138:amendment:amendment_review",
+                "QZXU0000138:pod:cross_document_conflict"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            },
+            {
+              "trap": {
+                "kind": "temperature_range",
+                "row_id": "QZXU0000117",
+                "field": "reefer_setpoint_c",
+                "reason": "reefer_setpoint_range",
+                "expected": "question_or_rejection",
+                "plausible": false
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000117:reefer_setpoint_c:reefer_setpoint_range"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            },
+            {
+              "trap": {
+                "kind": "empty_gross",
+                "row_id": "QZXU0000143",
+                "field": "empty",
+                "reason": "empty_mass_mismatch",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000143:empty:empty_mass_mismatch"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            }
+          ],
+          "clean_dg_accepted": 0,
+          "clean_dg_cargo_accepted": 0,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 0,
+          "clean_reefers_cargo_accepted": 0,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 12,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000020",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000014",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000098",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000056",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000138",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              },
+              {
+                "row_id": "QZXU0000117",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "SGSIN"
+                ]
+              },
+              {
+                "row_id": "QZXU0000143",
+                "field": "pod",
+                "correct": true,
+                "values": [
+                  "MYPKG"
+                ]
+              }
+            ]
+          },
+          "wall_s": 0.4523734590038657,
+          "cost_usd": 0.0
+        },
+        "Literal-header parser": {
+          "method": "Literal-header parser",
+          "label": "measured",
+          "fields_correct": 46,
+          "fields_total": 124,
+          "fields_accepted": 46,
+          "field_accuracy": 0.3709677419354839,
+          "rows_exact": 0,
+          "rows_total": 12,
+          "row_exact_accuracy": 0.0,
+          "boxes_stopped": 12,
+          "planner_workload": 1.0,
+          "stopped_box_ids": [
+            "QZXU0000014",
+            "QZXU0000020",
+            "QZXU0000035",
+            "QZXU0000040",
+            "QZXU0000056",
+            "QZXU0000061",
+            "QZXU0000082",
+            "QZXU0000098",
+            "QZXU0000101",
+            "QZXU0000117",
+            "QZXU0000138",
+            "QZXU0000143"
+          ],
+          "document_questions": 3,
+          "silent_wrong_values": 0,
+          "silent_wrong_details": [],
+          "planted_problems_stopped": 1,
+          "planted_problems_total": 3,
+          "plausible_traps_stopped": 1,
+          "plausible_traps_total": 2,
+          "silent_wrong_plausible_traps": 0,
+          "traps": [
+            {
+              "trap": {
+                "kind": "cod",
+                "row_id": "QZXU0000138",
+                "field": "pod",
+                "reason": "amendment_review",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": true,
+              "questions": [
+                "QZXU0000138:amendment:amendment_review"
+              ],
+              "silent_wrong": false,
+              "unrelated_question_only": false
+            },
+            {
+              "trap": {
+                "kind": "temperature_range",
+                "row_id": "QZXU0000117",
+                "field": "reefer_setpoint_c",
+                "reason": "reefer_setpoint_range",
+                "expected": "question_or_rejection",
+                "plausible": false
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            },
+            {
+              "trap": {
+                "kind": "empty_gross",
+                "row_id": "QZXU0000143",
+                "field": "empty",
+                "reason": "empty_mass_mismatch",
+                "expected": "question_or_rejection",
+                "plausible": true
+              },
+              "caught": false,
+              "questions": [],
+              "silent_wrong": false,
+              "unrelated_question_only": true
+            }
+          ],
+          "clean_dg_accepted": 0,
+          "clean_dg_cargo_accepted": 0,
+          "clean_dg_total": 2,
+          "clean_reefers_accepted": 0,
+          "clean_reefers_cargo_accepted": 0,
+          "clean_reefers_total": 2,
+          "tally": {
+            "cells_correct": 0,
+            "cells_total": 12,
+            "cells": [
+              {
+                "row_id": "QZXU0000020",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000014",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000040",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000035",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000061",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000098",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000056",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000101",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000082",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000138",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000117",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              },
+              {
+                "row_id": "QZXU0000143",
+                "field": "pod",
+                "correct": false,
+                "values": []
+              }
+            ]
+          },
+          "wall_s": 0.44461366697214544,
+          "cost_usd": 0.0
+        }
+      }
+    }
+  ],
+  "demo": {
+    "status": "complete",
+    "assembled_sha256": "dcdf1772058fa882dedd24a409b21f42a0eeff2529d80e756e3b70335264e7af",
+    "base_sha256": "dcdf1772058fa882dedd24a409b21f42a0eeff2529d80e756e3b70335264e7af",
+    "hash_equals_base": true
+  },
+  "new_api_spend_usd": 0
+}

@@ -1,0 +1,1124 @@
+{
+  "call_index": 0,
+  "containers": [
+    {
+      "category": null,
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 20000.0,
+      "height_m": 2.896,
+      "id": "QZXU0000014",
+      "iso_type": "45R1",
+      "length_ft": 40,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "THBKK",
+      "pol": "THLCH",
+      "reefer": true,
+      "reefer_setpoint_c": -18.0,
+      "special_stowage": [],
+      "tare_kg": 4200.0,
+      "weight_class": null
+    },
+    {
+      "category": null,
+      "dg": {
+        "additional": [],
+        "air_circulation": null,
+        "bulk_container_type": null,
+        "clear_living_quarters": null,
+        "ctu_closed": true,
+        "dry": null,
+        "flashpoint_c": 35.0,
+        "handling_codes": [],
+        "handling_compliant": null,
+        "imdg_class": "3",
+        "limited_quantity": false,
+        "marine_pollutant": false,
+        "packing_form": "packaged_goods_in_closed_freight_containers",
+        "packing_group": "III",
+        "protected_from_heat": null,
+        "segregation_codes": [],
+        "shaded": null,
+        "shipment_provenance": {
+          "created_at": null,
+          "created_by": "model.fixtures",
+          "git_commit": null,
+          "input_versions": {},
+          "parents": [],
+          "seed": null,
+          "stubs": {},
+          "versions": {}
+        },
+        "short_international_voyage": null,
+        "special_provisions": null,
+        "stowage_category": "A",
+        "stowage_codes": [],
+        "subsidiary_hazards_verified": null,
+        "subsidiary_risks": [],
+        "un_number": "1263",
+        "ventilation_compliant": null,
+        "verified_provisions": null,
+        "verified_segregation_codes": null
+      },
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 12000.0,
+      "height_m": 2.591,
+      "id": "QZXU0000020",
+      "iso_type": "22G1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "THSGZ",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 2200.0,
+      "weight_class": null
+    },
+    {
+      "category": null,
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 12000.0,
+      "height_m": 2.591,
+      "id": "QZXU0000035",
+      "iso_type": "22G1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "THBKK",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [
+        "away_from_heat",
+        "under_deck"
+      ],
+      "tare_kg": 2200.0,
+      "weight_class": null
+    },
+    {
+      "category": null,
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 12000.0,
+      "height_m": 2.591,
+      "id": "QZXU0000040",
+      "iso_type": "22G1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": {
+        "over_height_m": 0.4,
+        "over_length_aft_m": 0.0,
+        "over_length_fore_m": 0.0,
+        "over_width_port_m": 0.0,
+        "over_width_starboard_m": 0.0
+      },
+      "pod": "THSGZ",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 2200.0,
+      "weight_class": null
+    },
+    {
+      "category": null,
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 12000.0,
+      "height_m": 2.591,
+      "id": "QZXU0000056",
+      "iso_type": "22G1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "THLCH",
+      "pol": "THBKK",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 2200.0,
+      "weight_class": null
+    },
+    {
+      "category": null,
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 12000.0,
+      "height_m": 2.591,
+      "id": "QZXU0000061",
+      "iso_type": "22G1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "THBKK",
+      "pol": "THBKK",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 2200.0,
+      "weight_class": null
+    }
+  ],
+  "discharge_list": [
+    "QZXU0000056"
+  ],
+  "family": {
+    "port": "laem_chabang_like",
+    "vessel": "synthetic_feeder"
+  },
+  "forecasts": [],
+  "id": "fixture_layover",
+  "load_list": [
+    "QZXU0000014",
+    "QZXU0000020",
+    "QZXU0000035",
+    "QZXU0000040"
+  ],
+  "objective": {
+    "future_hatch_cover": 1.0,
+    "future_restow": 1.0,
+    "future_restow_lifts_per_box": 2,
+    "hatch_cover": 1.0,
+    "relocate": 1.0,
+    "restow": 1.0
+  },
+  "onboard": {
+    "covers_off": {},
+    "placements": [
+      {
+        "container_id": "QZXU0000056",
+        "slot": "0010102"
+      },
+      {
+        "container_id": "QZXU0000061",
+        "slot": "0010104"
+      }
+    ],
+    "tank_masses_kg": {
+      "FO-1": 47500.0,
+      "WB-P": 51250.0,
+      "WB-S": 51250.0
+    },
+    "vessel_id": "synthetic_feeder.slice_b01-b03"
+  },
+  "plan_calls": [],
+  "plan_constraints": [],
+  "port": {
+    "archetype": "laem_chabang_like",
+    "berthing_side": "port",
+    "equipment": [
+      {
+        "count": 2,
+        "id": "rtg",
+        "kind": "RTG",
+        "stack_tiers": 3
+      }
+    ],
+    "locode": "THLCH",
+    "max_crane_height_tiers": null,
+    "max_draught_m": 8.0,
+    "port_rules": [],
+    "profile_kind": "operational",
+    "quay_crane": {
+      "count": 1,
+      "max_lift_height_m": 30.0,
+      "max_on_deck_tiers": 2,
+      "outreach_rows": 2
+    },
+    "sources": [
+      "synthetic fixture; no actual terminal operating limits",
+      "synthetic test berth, 8.0 m; not a production bound"
+    ],
+    "water_density_kg_m3": 1025.0,
+    "yard": {
+      "blocks": [
+        {
+          "allowed_lengths_ft": [
+            20,
+            40,
+            45
+          ],
+          "dg_block": false,
+          "equipment_id": "rtg",
+          "id": "A",
+          "max_tiers": 3,
+          "n_bays": 6,
+          "n_rows": 2,
+          "reefer_rows": [
+            1
+          ],
+          "truck_lane_side": "low",
+          "x_m": 0.0,
+          "y_m": 0.0
+        },
+        {
+          "allowed_lengths_ft": [
+            20,
+            40,
+            45
+          ],
+          "dg_block": true,
+          "equipment_id": "rtg",
+          "id": "B",
+          "max_tiers": 3,
+          "n_bays": 6,
+          "n_rows": 2,
+          "reefer_rows": [
+            1
+          ],
+          "truck_lane_side": "low",
+          "x_m": 50.0,
+          "y_m": 0.0
+        }
+      ],
+      "id": "synthetic_thlch"
+    },
+    "yard_max_tiers": 3
+  },
+  "provenance": {
+    "created_at": null,
+    "created_by": "model.fixtures",
+    "git_commit": null,
+    "input_versions": {},
+    "parents": [],
+    "seed": 11,
+    "stubs": {},
+    "versions": {
+      "action_space": "1.0.1",
+      "ballast": "4.0",
+      "checker": "2.2",
+      "feasibility": "2.5",
+      "infrastructure": "3.0",
+      "linear_model": "3.5",
+      "move_engine": "2.0",
+      "rule_catalogue": "sha256:c8f81ad1b73437cc57a378adf6b7acfc68cf7fa0128cd731cc3a5ee48fcad486",
+      "schema": "1.9",
+      "solver.scalable": "3.0.0"
+    }
+  },
+  "rotation": {
+    "calls": [
+      {
+        "archetype": null,
+        "eta_s": 0.0,
+        "index": 0,
+        "locode": "THLCH",
+        "max_on_deck_tiers": 2
+      },
+      {
+        "archetype": null,
+        "eta_s": 86400.0,
+        "index": 1,
+        "locode": "THBKK",
+        "max_on_deck_tiers": 2
+      },
+      {
+        "archetype": null,
+        "eta_s": 172800.0,
+        "index": 2,
+        "locode": "THSGZ",
+        "max_on_deck_tiers": 2
+      }
+    ],
+    "service": "synthetic_thai_coastal"
+  },
+  "rule_overrides": {},
+  "schema_version": "1.9",
+  "seed": 11,
+  "size_class": "tiny",
+  "stage": "B",
+  "vessel": {
+    "bridge": {
+      "bow_x_m": 128.0,
+      "eye_z_m": 25.0,
+      "x_m": 15.0
+    },
+    "cells": [
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0010102",
+        "lcg_m": 46.9,
+        "reefer_plug": false,
+        "stack_id": "00101H",
+        "tcg_m": -1.3,
+        "vcg_base_m": 2.0
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0010104",
+        "lcg_m": 46.9,
+        "reefer_plug": false,
+        "stack_id": "00101H",
+        "tcg_m": -1.3,
+        "vcg_base_m": 4.591
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0010182",
+        "lcg_m": 46.9,
+        "reefer_plug": true,
+        "stack_id": "00101D",
+        "tcg_m": -1.3,
+        "vcg_base_m": 9.0
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0010184",
+        "lcg_m": 46.9,
+        "reefer_plug": true,
+        "stack_id": "00101D",
+        "tcg_m": -1.3,
+        "vcg_base_m": 11.591000000000001
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0010202",
+        "lcg_m": 46.9,
+        "reefer_plug": false,
+        "stack_id": "00102H",
+        "tcg_m": 1.3,
+        "vcg_base_m": 2.0
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0010204",
+        "lcg_m": 46.9,
+        "reefer_plug": false,
+        "stack_id": "00102H",
+        "tcg_m": 1.3,
+        "vcg_base_m": 4.591
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0010282",
+        "lcg_m": 46.9,
+        "reefer_plug": true,
+        "stack_id": "00102D",
+        "tcg_m": 1.3,
+        "vcg_base_m": 9.0
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0010284",
+        "lcg_m": 46.9,
+        "reefer_plug": true,
+        "stack_id": "00102D",
+        "tcg_m": 1.3,
+        "vcg_base_m": 11.591000000000001
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0030102",
+        "lcg_m": 53.1,
+        "reefer_plug": false,
+        "stack_id": "00301H",
+        "tcg_m": -1.3,
+        "vcg_base_m": 2.0
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0030104",
+        "lcg_m": 53.1,
+        "reefer_plug": false,
+        "stack_id": "00301H",
+        "tcg_m": -1.3,
+        "vcg_base_m": 4.591
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0030182",
+        "lcg_m": 53.1,
+        "reefer_plug": true,
+        "stack_id": "00301D",
+        "tcg_m": -1.3,
+        "vcg_base_m": 9.0
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0030184",
+        "lcg_m": 53.1,
+        "reefer_plug": true,
+        "stack_id": "00301D",
+        "tcg_m": -1.3,
+        "vcg_base_m": 11.591000000000001
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0030202",
+        "lcg_m": 53.1,
+        "reefer_plug": false,
+        "stack_id": "00302H",
+        "tcg_m": 1.3,
+        "vcg_base_m": 2.0
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0030204",
+        "lcg_m": 53.1,
+        "reefer_plug": false,
+        "stack_id": "00302H",
+        "tcg_m": 1.3,
+        "vcg_base_m": 4.591
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0030282",
+        "lcg_m": 53.1,
+        "reefer_plug": true,
+        "stack_id": "00302D",
+        "tcg_m": 1.3,
+        "vcg_base_m": 9.0
+      },
+      {
+        "accepts_20": true,
+        "accepts_40": true,
+        "accepts_45": true,
+        "id": "0030284",
+        "lcg_m": 53.1,
+        "reefer_plug": true,
+        "stack_id": "00302D",
+        "tcg_m": 1.3,
+        "vcg_base_m": 11.591000000000001
+      }
+    ],
+    "dg_doc_areas": [],
+    "exclusion_regions": [],
+    "fixed_load_cells": [],
+    "fixed_load_hatch_covers": [],
+    "fixed_load_stacks": [],
+    "fixed_loads": [
+      {
+        "cargo_boxes": null,
+        "kind": "cargo",
+        "mass_kg": 200000.0,
+        "silhouette": {
+          "x_max_m": 83.0,
+          "x_min_m": 77.0,
+          "y_max_m": 1.3,
+          "y_min_m": -1.3,
+          "z_max_m": 6.0,
+          "z_min_m": 2.0
+        },
+        "x_m": 80.0,
+        "y_m": 0.0,
+        "z_m": 4.0
+      }
+    ],
+    "hatch_covers": [
+      {
+        "bays": [
+          1,
+          2,
+          3
+        ],
+        "deck_stack_ids": [
+          "00101D",
+          "00301D"
+        ],
+        "hold_stack_ids": [
+          "00101H",
+          "00301H"
+        ],
+        "id": "HC-02-1",
+        "lcg_m": 50.0,
+        "mass_kg": 12000.0,
+        "tcg_m": -1.3,
+        "vcg_m": 8.8
+      },
+      {
+        "bays": [
+          1,
+          2,
+          3
+        ],
+        "deck_stack_ids": [
+          "00102D",
+          "00302D"
+        ],
+        "hold_stack_ids": [
+          "00102H",
+          "00302H"
+        ],
+        "id": "HC-02-2",
+        "lcg_m": 50.0,
+        "mass_kg": 12000.0,
+        "tcg_m": 1.3,
+        "vcg_m": 8.8
+      }
+    ],
+    "heat_sources": [
+      {
+        "actual_geometry": null,
+        "id": "FO-1",
+        "kind": "heated_tank",
+        "liable_to_exceed_55_c": null,
+        "tank_id": null,
+        "x_max_m": 20.0,
+        "x_min_m": 10.0,
+        "y_max_m": 2.0,
+        "y_min_m": -2.0,
+        "z_max_m": 3.0,
+        "z_min_m": 0.0
+      }
+    ],
+    "hull": {
+      "ap_x_m": 0.0,
+      "beam_m": 20.0,
+      "bilge_keel": true,
+      "bilge_keel_area_m2": null,
+      "bilge_keel_area_m2_provenance": null,
+      "bonjean": null,
+      "cross_curves": [
+        {
+          "displacement_kg": [
+            6000000.0,
+            9600000.0,
+            11400000.0
+          ],
+          "heel_rad": 0.17453292519943295,
+          "kn_m": [
+            1.7364817766693033,
+            1.7364817766693033,
+            1.7364817766693033
+          ]
+        },
+        {
+          "displacement_kg": [
+            6000000.0,
+            9600000.0,
+            11400000.0
+          ],
+          "heel_rad": 0.3490658503988659,
+          "kn_m": [
+            3.420201433256687,
+            3.420201433256687,
+            3.420201433256687
+          ]
+        },
+        {
+          "displacement_kg": [
+            6000000.0,
+            9600000.0,
+            11400000.0
+          ],
+          "heel_rad": 0.5235987755982988,
+          "kn_m": [
+            4.999999999999999,
+            4.999999999999999,
+            4.999999999999999
+          ]
+        },
+        {
+          "displacement_kg": [
+            6000000.0,
+            9600000.0,
+            11400000.0
+          ],
+          "heel_rad": 0.6981317007977318,
+          "kn_m": [
+            6.4278760968653925,
+            6.4278760968653925,
+            6.4278760968653925
+          ]
+        },
+        {
+          "displacement_kg": [
+            6000000.0,
+            9600000.0,
+            11400000.0
+          ],
+          "heel_rad": 0.8726646259971648,
+          "kn_m": [
+            7.66044443118978,
+            7.66044443118978,
+            7.66044443118978
+          ]
+        },
+        {
+          "displacement_kg": [
+            6000000.0,
+            9600000.0,
+            11400000.0
+          ],
+          "heel_rad": 1.0471975511965976,
+          "kn_m": [
+            8.660254037844386,
+            8.660254037844386,
+            8.660254037844386
+          ]
+        }
+      ],
+      "depth_m": 11.0,
+      "design_draught_m": 6.0,
+      "fp_x_m": 120.0,
+      "hull_offsets_ref": null,
+      "hydrostatics": [
+        {
+          "displacement_kg": 6000000.0,
+          "draught_m": 4.0,
+          "kb_m": 2.0,
+          "kmt_m": 10.0,
+          "lcb_m": 60.0,
+          "lcf_m": 60.0,
+          "mct_nm_per_cm": 2000000.0,
+          "tpc_kg_per_cm": 18000.0
+        },
+        {
+          "displacement_kg": 9600000.0,
+          "draught_m": 6.0,
+          "kb_m": 3.0,
+          "kmt_m": 10.0,
+          "lcb_m": 60.0,
+          "lcf_m": 60.0,
+          "mct_nm_per_cm": 2000000.0,
+          "tpc_kg_per_cm": 18000.0
+        },
+        {
+          "displacement_kg": 11400000.0,
+          "draught_m": 7.0,
+          "kb_m": 3.5,
+          "kmt_m": 10.0,
+          "lcb_m": 60.0,
+          "lcf_m": 60.0,
+          "mct_nm_per_cm": 2000000.0,
+          "tpc_kg_per_cm": 18000.0
+        }
+      ],
+      "lightship_distribution": [
+        [
+          0.0,
+          60.0,
+          2000000.0
+        ],
+        [
+          60.0,
+          120.0,
+          2000000.0
+        ]
+      ],
+      "lightship_lcg_m": 60.0,
+      "lightship_mass_kg": 4000000.0,
+      "lightship_tcg_m": 0.0,
+      "lightship_vcg_m": 6.0,
+      "loa_m": 128.0,
+      "lpp_m": 120.0,
+      "max_displacement_kg": null,
+      "max_displacement_kg_provenance": null,
+      "max_draught_m": 7.0,
+      "max_gm_lashing_m": null,
+      "max_gm_lashing_m_provenance": null,
+      "max_list_rad": 0.05235987755982989,
+      "max_trim_m": 2.0,
+      "max_trim_m_provenance": null,
+      "min_displacement_kg": null,
+      "min_displacement_kg_provenance": null,
+      "min_draught_fwd_m": 3.0,
+      "min_gm_m": 0.3,
+      "min_trim_m": null,
+      "min_trim_m_provenance": null,
+      "scantling_draught_m": 7.0,
+      "stations": [
+        {
+          "max_bending_nm": 1000000000.0,
+          "max_shear_n": 100000000.0,
+          "max_torsion_nm": null,
+          "min_bending_nm": -1000000000.0,
+          "min_shear_n": -100000000.0,
+          "x_m": 0.0
+        },
+        {
+          "max_bending_nm": 1000000000.0,
+          "max_shear_n": 100000000.0,
+          "max_torsion_nm": null,
+          "min_bending_nm": -1000000000.0,
+          "min_shear_n": -100000000.0,
+          "x_m": 60.0
+        },
+        {
+          "max_bending_nm": 1000000000.0,
+          "max_shear_n": 100000000.0,
+          "max_torsion_nm": null,
+          "min_bending_nm": -1000000000.0,
+          "min_shear_n": -100000000.0,
+          "x_m": 120.0
+        }
+      ],
+      "water_density_kg_m3": 1025.0,
+      "windage_area_m2": 1200.0,
+      "windage_lever_m": 8.0
+    },
+    "id": "synthetic_feeder.slice_b01-b03",
+    "imdg_placement_geometry": null,
+    "name": "Synthetic feeder geometry slice",
+    "nominal_teu": 16,
+    "slice_of": "synthetic_feeder",
+    "sources": [
+      "APPROXIMATION: fixture placeholder; synthetic hull, tank, strength and slice loads"
+    ],
+    "stacks": [
+      {
+        "base_z_m": 9.0,
+        "bay": 1,
+        "cell_ids": [
+          "0010182",
+          "0010184"
+        ],
+        "dg_classes_allowed": [
+          "3",
+          "9"
+        ],
+        "dg_doc_area_id": null,
+        "hatch_cover_id": "HC-02-1",
+        "id": "00101D",
+        "lashing_group": null,
+        "max_height_m": 6.0,
+        "max_mass_20_kg": null,
+        "max_mass_40_kg": null,
+        "max_mass_kg": 60000.0,
+        "max_tiers_by_visibility": null,
+        "on_deck": true,
+        "row": 1
+      },
+      {
+        "base_z_m": 2.0,
+        "bay": 1,
+        "cell_ids": [
+          "0010102",
+          "0010104"
+        ],
+        "dg_classes_allowed": [
+          "3",
+          "9"
+        ],
+        "dg_doc_area_id": null,
+        "hatch_cover_id": "HC-02-1",
+        "id": "00101H",
+        "lashing_group": null,
+        "max_height_m": 6.0,
+        "max_mass_20_kg": null,
+        "max_mass_40_kg": null,
+        "max_mass_kg": 60000.0,
+        "max_tiers_by_visibility": null,
+        "on_deck": false,
+        "row": 1
+      },
+      {
+        "base_z_m": 9.0,
+        "bay": 1,
+        "cell_ids": [
+          "0010282",
+          "0010284"
+        ],
+        "dg_classes_allowed": [
+          "3",
+          "9"
+        ],
+        "dg_doc_area_id": null,
+        "hatch_cover_id": "HC-02-2",
+        "id": "00102D",
+        "lashing_group": null,
+        "max_height_m": 6.0,
+        "max_mass_20_kg": null,
+        "max_mass_40_kg": null,
+        "max_mass_kg": 60000.0,
+        "max_tiers_by_visibility": null,
+        "on_deck": true,
+        "row": 2
+      },
+      {
+        "base_z_m": 2.0,
+        "bay": 1,
+        "cell_ids": [
+          "0010202",
+          "0010204"
+        ],
+        "dg_classes_allowed": [
+          "3",
+          "9"
+        ],
+        "dg_doc_area_id": null,
+        "hatch_cover_id": "HC-02-2",
+        "id": "00102H",
+        "lashing_group": null,
+        "max_height_m": 6.0,
+        "max_mass_20_kg": null,
+        "max_mass_40_kg": null,
+        "max_mass_kg": 60000.0,
+        "max_tiers_by_visibility": null,
+        "on_deck": false,
+        "row": 2
+      },
+      {
+        "base_z_m": 9.0,
+        "bay": 3,
+        "cell_ids": [
+          "0030182",
+          "0030184"
+        ],
+        "dg_classes_allowed": [
+          "3",
+          "9"
+        ],
+        "dg_doc_area_id": null,
+        "hatch_cover_id": "HC-02-1",
+        "id": "00301D",
+        "lashing_group": null,
+        "max_height_m": 6.0,
+        "max_mass_20_kg": null,
+        "max_mass_40_kg": null,
+        "max_mass_kg": 60000.0,
+        "max_tiers_by_visibility": null,
+        "on_deck": true,
+        "row": 1
+      },
+      {
+        "base_z_m": 2.0,
+        "bay": 3,
+        "cell_ids": [
+          "0030102",
+          "0030104"
+        ],
+        "dg_classes_allowed": [
+          "3",
+          "9"
+        ],
+        "dg_doc_area_id": null,
+        "hatch_cover_id": "HC-02-1",
+        "id": "00301H",
+        "lashing_group": null,
+        "max_height_m": 6.0,
+        "max_mass_20_kg": null,
+        "max_mass_40_kg": null,
+        "max_mass_kg": 60000.0,
+        "max_tiers_by_visibility": null,
+        "on_deck": false,
+        "row": 1
+      },
+      {
+        "base_z_m": 9.0,
+        "bay": 3,
+        "cell_ids": [
+          "0030282",
+          "0030284"
+        ],
+        "dg_classes_allowed": [
+          "3",
+          "9"
+        ],
+        "dg_doc_area_id": null,
+        "hatch_cover_id": "HC-02-2",
+        "id": "00302D",
+        "lashing_group": null,
+        "max_height_m": 6.0,
+        "max_mass_20_kg": null,
+        "max_mass_40_kg": null,
+        "max_mass_kg": 60000.0,
+        "max_tiers_by_visibility": null,
+        "on_deck": true,
+        "row": 2
+      },
+      {
+        "base_z_m": 2.0,
+        "bay": 3,
+        "cell_ids": [
+          "0030202",
+          "0030204"
+        ],
+        "dg_classes_allowed": [
+          "3",
+          "9"
+        ],
+        "dg_doc_area_id": null,
+        "hatch_cover_id": "HC-02-2",
+        "id": "00302H",
+        "lashing_group": null,
+        "max_height_m": 6.0,
+        "max_mass_20_kg": null,
+        "max_mass_40_kg": null,
+        "max_mass_kg": 60000.0,
+        "max_tiers_by_visibility": null,
+        "on_deck": false,
+        "row": 2
+      }
+    ],
+    "tank_pairs": [],
+    "tanks": [
+      {
+        "adjustable": false,
+        "capacity_m3": 100.0,
+        "content_density_kg_m3": 950.0,
+        "heated": true,
+        "id": "FO-1",
+        "kind": "fuel_oil",
+        "table": [
+          {
+            "fsm_m4": 0.0,
+            "lcg_m": 15.0,
+            "tcg_m": 0.0,
+            "vcg_m": 1.0,
+            "volume_m3": 0.0
+          },
+          {
+            "fsm_m4": 50.0,
+            "lcg_m": 15.0,
+            "tcg_m": 0.0,
+            "vcg_m": 1.5,
+            "volume_m3": 50.0
+          },
+          {
+            "fsm_m4": 0.0,
+            "lcg_m": 15.0,
+            "tcg_m": 0.0,
+            "vcg_m": 2.0,
+            "volume_m3": 100.0
+          }
+        ],
+        "x_aft_m": 10.0,
+        "x_fore_m": 20.0
+      },
+      {
+        "adjustable": true,
+        "capacity_m3": 100.0,
+        "content_density_kg_m3": 1025.0,
+        "heated": false,
+        "id": "WB-P",
+        "kind": "ballast",
+        "table": [
+          {
+            "fsm_m4": 0.0,
+            "lcg_m": 15.0,
+            "tcg_m": 5.0,
+            "vcg_m": 1.0,
+            "volume_m3": 0.0
+          },
+          {
+            "fsm_m4": 50.0,
+            "lcg_m": 15.0,
+            "tcg_m": 5.0,
+            "vcg_m": 1.5,
+            "volume_m3": 50.0
+          },
+          {
+            "fsm_m4": 0.0,
+            "lcg_m": 15.0,
+            "tcg_m": 5.0,
+            "vcg_m": 2.0,
+            "volume_m3": 100.0
+          }
+        ],
+        "x_aft_m": 10.0,
+        "x_fore_m": 20.0
+      },
+      {
+        "adjustable": true,
+        "capacity_m3": 100.0,
+        "content_density_kg_m3": 1025.0,
+        "heated": false,
+        "id": "WB-S",
+        "kind": "ballast",
+        "table": [
+          {
+            "fsm_m4": 0.0,
+            "lcg_m": 15.0,
+            "tcg_m": -5.0,
+            "vcg_m": 1.0,
+            "volume_m3": 0.0
+          },
+          {
+            "fsm_m4": 50.0,
+            "lcg_m": 15.0,
+            "tcg_m": -5.0,
+            "vcg_m": 1.5,
+            "volume_m3": 50.0
+          },
+          {
+            "fsm_m4": 0.0,
+            "lcg_m": 15.0,
+            "tcg_m": -5.0,
+            "vcg_m": 2.0,
+            "volume_m3": 100.0
+          }
+        ],
+        "x_aft_m": 10.0,
+        "x_fore_m": 20.0
+      }
+    ],
+    "voyage_policy": null
+  },
+  "voyage": null,
+  "yard": {
+    "quay_buffer": [],
+    "stacks": [
+      {
+        "boxes": [
+          "QZXU0000014"
+        ],
+        "key": "A-001-01",
+        "length_ft": 40
+      },
+      {
+        "boxes": [
+          "QZXU0000035"
+        ],
+        "key": "A-003-01",
+        "length_ft": 20
+      },
+      {
+        "boxes": [
+          "QZXU0000040"
+        ],
+        "key": "A-004-01",
+        "length_ft": 20
+      },
+      {
+        "boxes": [
+          "QZXU0000020"
+        ],
+        "key": "B-001-01",
+        "length_ft": 20
+      }
+    ],
+    "time_s": 0.0,
+    "yard_id": "synthetic_thlch"
+  }
+}

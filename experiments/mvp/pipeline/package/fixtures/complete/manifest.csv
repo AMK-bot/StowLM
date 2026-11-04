@@ -1,0 +1,460 @@
+# Half-ship section: 190 boxes planned in 8 of 14 bays. Other bays hold 268 fixed synthetic background boxes (3,856 t). Stability and strength include them. No ship can sail on this plan alone. Synthetic ships and cargo, simulated port. Full checker passed; local demo receipt. Stored plan; original computation date unrecorded; rechecked now. Stored synthetic development fixture; source provenance is recorded separately. Pipeline: not frozen yet. Checker coverage: 54 active, 8 inactive.
+record_kind,box,slot,length_ft,mass_t,pol,pod,dg_un,dg_class,dg_psn,dg_pg,dg_ems,dg_segregation,dg_dgl_row,reefer,reefer_setpoint_c,oog,oog_over_height_m,oog_over_width_port_m,oog_over_width_starboard_m,oog_over_length_fore_m,oog_over_length_aft_m,restow_calls,remarks
+planned section cargo,QZXU0000190,0010202,20,15.625335156696393,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000293,0010204,20,2.35,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001514,0010206,20,2.35,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000539,0020102,40,16.505348885462187,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002022,0020104,40,14.828422054763116,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001406,0020106,40,13.57940823237468,THLCH,SGSIN,,,,,,,,True,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000312,0020182,40,11.686856715717957,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001284,0020184,40,9.076018352862869,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000755,0020186,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001480,0020282,40,11.925800250612554,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000760,0020284,45,4.8,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001242,0020286,40,3.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001427,0020382,40,10.624470965886731,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001807,0020384,40,10.106397553035965,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000478,0020386,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000333,0020482,40,12.98808132855168,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000776,0020484,40,8.920044871177115,THLCH,MYPKG,,,,,,,,False,,False,,,,,,1,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000098,0020486,40,6.163980385261736,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001793,0020582,40,10.39495728841226,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001751,0020584,40,6.05019568023069,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002228,0020586,40,4.42,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000919,0020682,40,14.612700466951477,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000800,0020684,40,7.650820465298421,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001052,0020686,40,3.75,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001725,0020782,40,10.417387252195129,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002249,0020784,40,8.343592008176216,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001598,0020786,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001833,0020882,40,16.092960160295743,THLCH,MYPKG,1789,8,HYDROCHLORIC ACID,III,not supplied in source; obtain DG declaration,SG36;SG49;SGG1,UN1789-III,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000349,0020884,45,4.8,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001999,0020886,40,3.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000251,0030202,20,19.45368984515764,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000462,0030204,20,10.72294411721432,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000903,0030206,20,2.35,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000328,0090302,20,17.217382774442616,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000499,0090304,20,13.061276061766854,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001730,0090306,20,8.850830985535024,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001772,0090382,20,5.633096409620892,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000694,0090384,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001176,0090386,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001330,0090388,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001197,0090402,20,15.959978876148622,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001941,0090404,20,13.509515807414791,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000930,0090406,20,7.728222951599757,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000415,0090502,20,18.2798274762193,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001509,0090504,20,12.26451187765213,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002070,0090506,20,10.385388980993877,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002260,0090602,20,16.999889131554475,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001324,0090604,20,15.181168001266764,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000518,0090606,20,11.667004242612785,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001556,0100102,40,18.08543050947774,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001026,0100104,40,15.14515681072016,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000101,0100106,40,14.002815333159287,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001319,0100182,40,10.649601161713761,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000164,0100184,40,6.222502396322822,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001767,0100186,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001279,0100202,40,18.473669850646683,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001200,0100204,40,18.012752027880055,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002125,0100206,40,16.46880351621651,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001350,0100282,40,11.048521447221104,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000288,0100284,40,6.4907577597064625,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000457,0100286,40,3.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001068,0100482,40,14.742750953698886,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001582,0100484,40,10.73958693980414,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001643,0100486,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001638,0100582,40,10.592407162530286,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001216,0100584,40,7.205904751774128,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001160,0100586,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002090,0100682,40,13.782274433608444,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001411,0100684,40,5.468849953338788,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000945,0100686,40,3.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000204,0100702,40,15.562737250426306,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000544,0100704,40,14.511889269141632,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000966,0100782,40,11.516538326667591,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001535,0100784,40,8.75924455176752,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000061,0100786,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001047,0100802,40,17.601478023899432,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000992,0100804,40,16.84695133811236,THLCH,MYPKG,,,,,,,,True,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001129,0100882,40,11.399790714239446,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001978,0100884,40,9.75028000160354,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000605,0100886,40,3.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000375,0110302,20,17.08263271210268,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001263,0110304,20,12.927077382690628,THLCH,SGSIN,1263,3,"PAINT (including paint, lacquer, enamel, stain, shellac, varnish, polish, liquid filler and liquid lacquer base) or PAINT RELATED MATERIAL (including paint thinning or reducing compound)",II,not supplied in source; obtain DG declaration,No additional segregation codes supplied; class-based model segregation applies,UN1263-II,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001520,0110306,20,11.02467701776141,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001685,0110382,20,2.86,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000734,0110384,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001601,0110386,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000035,0110402,20,16.556349351373417,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002001,0110404,20,14.443293669902163,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002038,0110406,20,6.230402906156601,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000668,0110502,20,17.175919049717752,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001983,0110504,20,13.794677843331227,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000143,0110506,20,10.81440250095743,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001812,0110602,20,17.008343217721656,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000170,0110604,20,14.292111764074933,THLCH,MYPKG,,,,,,,,True,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000837,0110606,20,9.533380839198914,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001303,0170102,20,15.900595761892642,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000565,0170104,20,14.854977294109986,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001664,0170106,20,7.356468739919882,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001089,0170182,20,11.26065936351992,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000689,0170184,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002017,0170186,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000138,0170202,20,16.785691896207563,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000781,0170204,20,15.259850648944946,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000380,0170206,20,13.58647770329304,THLCH,MYPKG,,,,,,,,False,,False,,,,,,1,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001073,0170402,20,17.991570104271236,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000400,0170404,20,11.866922810980832,THLCH,SGSIN,,,,,,,,True,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000056,0170406,20,8.947631206374307,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002193,0180282,40,10.440116191939463,THLCH,SGSIN,1789,8,HYDROCHLORIC ACID,II,not supplied in source; obtain DG declaration,SG36;SG49;SGG1,UN1789-II,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000502,0180284,40,9.572785370542377,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000673,0180302,40,17.880407881382542,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001005,0180304,40,13.007996599605985,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000360,0180306,40,16.154868088272153,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001221,0180382,40,10.740326577396441,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001031,0180384,40,6.424623405620864,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001469,0180386,40,5.053601304529391,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001788,0180482,40,12.12566142381754,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000740,0180484,40,7.964308815089945,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001920,0180486,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000610,0180502,40,18.049740394985193,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001962,0180504,40,15.19262659516696,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000842,0180506,40,14.430029371734014,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001345,0180582,40,11.274172106720847,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000185,0180584,40,8.94134112647235,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000014,0180586,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000713,0180602,40,17.819504661697813,THLCH,SGSIN,1263,3,"PAINT (including paint, lacquer, enamel, stain, shellac, varnish, polish, liquid filler and liquid lacquer base) or PAINT RELATED MATERIAL (including paint thinning or reducing compound)",III,not supplied in source; obtain DG declaration,No additional segregation codes supplied; class-based model segregation applies,UN1263-III,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000246,0180604,40,15.427726329848891,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000159,0180606,40,13.726669198266476,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000225,0180702,40,16.944060016257733,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000879,0180704,40,14.999646089051538,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000652,0180706,40,13.64845641768462,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000420,0180782,40,11.956853787162496,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001875,0180784,40,6.176572909646719,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002151,0180786,40,3.9,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002188,0180802,40,17.594251557402085,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001366,0180804,40,14.871147878893902,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000210,0180806,40,13.565276855517624,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000307,0180882,40,15.345087089429574,THLCH,SGSIN,,,,,,,,False,,True,0.0,0.25,0.25,0.0,0.0,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001860,0190102,20,17.171139129950642,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001577,0190104,20,13.55152324282732,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001710,0190106,20,10.54163050467335,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000272,0190182,20,11.006303487164597,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000396,0190184,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000858,0190186,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002085,0190188,20,2.35,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002043,0190202,20,8.6701089752222,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001540,0190204,20,8.462563719256819,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000631,0190206,20,4.6988029667108835,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000586,0190402,20,16.335994805721526,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001010,0190404,20,11.33787542311829,THLCH,SGSIN,,,,,,,,True,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001181,0190406,20,11.224490411698731,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001957,0250702,20,13.585768725753436,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002146,0260102,40,16.217211386330753,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000816,0260104,40,14.681443834645794,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001474,0260106,40,12.669381471267517,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000077,0260182,40,11.098577158292851,THLCH,SGSIN,1263,3,"PAINT (including paint, lacquer, enamel, stain, shellac, varnish, polish, liquid filler and liquid lacquer base) or PAINT RELATED MATERIAL (including paint thinning or reducing compound)",III,not supplied in source; obtain DG declaration,No additional segregation codes supplied; class-based model segregation applies,UN1263-III,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000570,0260184,40,10.384511064454767,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000117,0260186,40,3.75,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001690,0260202,40,18.678639941270493,THLCH,MYPKG,,,,,,,,True,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002130,0260204,40,18.609532014369268,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002254,0260206,40,16.682293300625673,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001828,0260282,40,13.783746933176298,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001915,0260284,40,5.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002110,0260286,40,3.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001849,0260302,40,14.520433804564211,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000483,0260304,40,8.282942516329932,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001495,0260382,40,12.526832322145477,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000863,0260384,40,8.164609598746576,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001290,0260386,40,3.75,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000354,0260402,40,16.667764335905133,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000441,0260404,40,14.779731418688604,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002172,0260482,40,11.699704608618442,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000950,0260484,40,7.045403386128089,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000523,0260486,40,3.75,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002207,0260488,40,3.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001258,0260502,40,18.16093607216216,THLCH,SGSIN,,,,,,,,False,,True,0.0,0.0,0.0,0.3,0.3,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0002212,0260582,40,11.51328737387349,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001392,0260584,40,9.130274763200832,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001113,0260586,40,3.75,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001453,0260602,40,16.6266657724409,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000009,0260682,40,12.328026462586616,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000884,0260684,40,7.342413330208862,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000230,0260686,40,3.75,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001854,0260782,40,10.396402195886537,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000082,0260784,40,5.910518369380567,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001387,0260786,40,3.75,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000591,0260802,40,14.869579110968225,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000020,0260882,40,14.215234196189352,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001561,0260884,40,5.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0000924,0260886,40,3.9,THLCH,MYPKG,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+planned section cargo,QZXU0001659,0270702,20,12.94660739200639,THLCH,SGSIN,,,,,,,,False,,False,,,,,,,Synthetic booking and stow; DG declaration fields may be incomplete
+fixed synthetic background cargo,BACKGROUND-000-000,0050102,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-001-000,0050104,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-002-000,0050106,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-003-000,0050202,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-004-000,0050204,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-005-000,0050206,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-006-000,0050302,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-007-000,0050304,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-008-000,0050306,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-009-000,0050402,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-010-000,0050404,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-011-000,0050406,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-012-000,0050502,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-013-000,0050504,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-014-000,0050602,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-015-000,0050604,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-016-000,0070102,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-017-000,0070104,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-018-000,0070106,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-019-000,0070202,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-020-000,0070204,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-021-000,0070206,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-022-000,0070302,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-023-000,0070304,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-024-000,0070306,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-025-000,0070402,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-026-000,0070404,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-027-000,0070406,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-028-000,0070502,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-029-000,0070504,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-030-000,0070602,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-031-000,0070604,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-032-000,0130102,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-033-000,0130104,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-034-000,0130106,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-035-000,0130202,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-036-000,0130204,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-037-000,0130206,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-038-000,0130302,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-039-000,0130304,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-040-000,0130306,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-041-000,0130402,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-042-000,0130404,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-043-000,0130406,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-044-000,0130502,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-045-000,0130504,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-046-000,0130506,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-047-000,0130602,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-048-000,0130604,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-049-000,0130606,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-050-000,0130702,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-051-000,0130704,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-052-000,0130706,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-053-000,0130802,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-054-000,0130804,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-055-000,0130806,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-056-000,0150102,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-057-000,0150104,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-058-000,0150106,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-059-000,0150202,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-060-000,0150204,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-061-000,0150206,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-062-000,0150302,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-063-000,0150304,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-064-000,0150306,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-065-000,0150402,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-066-000,0150404,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-067-000,0150406,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-068-000,0150502,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-069-000,0150504,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-070-000,0150506,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-071-000,0150602,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-072-000,0150604,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-073-000,0150606,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-074-000,0150702,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-075-000,0150704,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-076-000,0150706,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-077-000,0150802,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-078-000,0150804,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-079-000,0150806,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-080-000,0210102,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-081-000,0210104,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-082-000,0210106,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-083-000,0210202,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-084-000,0210204,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-085-000,0210206,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-086-000,0210302,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-087-000,0210304,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-088-000,0210306,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-089-000,0210402,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-090-000,0210404,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-091-000,0210406,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-092-000,0210502,20,18.982475709922838,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-093-000,0210504,20,18.982475709922838,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-094-000,0210506,20,18.982475709922838,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-095-000,0210602,20,7.156310872333482,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-096-000,0210604,20,7.156310872333482,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-097-000,0210606,20,7.156310872333482,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-098-000,0210702,20,30.479999999976112,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-099-000,0210704,20,30.479999999976112,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-100-000,0210802,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-101-000,0210804,20,30.48,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-102-000,0230102,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-103-000,0230104,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-104-000,0230106,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-105-000,0230202,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-106-000,0230204,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-107-000,0230206,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-108-000,0230302,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-109-000,0230304,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-110-000,0230306,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-111-000,0230402,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-112-000,0230404,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-113-000,0230406,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-114-000,0230502,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-115-000,0230504,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-116-000,0230506,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-117-000,0230602,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-118-000,0230604,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-119-000,0230606,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-120-000,0230702,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-121-000,0230704,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-122-000,0230802,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-123-000,0230804,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-124-000,0050182,20,9.024291006587852,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-124-001,0050184,20,8.98925114908532,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-124-002,0050186,20,7.335641719634684,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-125-000,0050282,20,8.872613350126969,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-125-001,0050284,20,8.395229058242187,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-125-002,0050286,20,7.877929948915796,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-126-000,0050382,20,8.763021471953264,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-126-001,0050384,20,8.694793095520021,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-126-002,0050386,20,8.452877046196885,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-127-000,0050482,20,9.535280202737455,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-127-001,0050484,20,8.61843214491185,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-127-002,0050486,20,7.417816794030673,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-128-000,0050582,20,8.990883873934436,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-128-001,0050584,20,8.692626484019025,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-128-002,0050586,20,8.12359256368853,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-129-000,0050682,20,9.032010362526078,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-129-001,0050684,20,8.761740945834228,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-129-002,0050686,20,8.126884093909709,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-130-000,0050782,20,8.526361268755698,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-130-001,0050784,20,8.484288918098592,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-130-002,0050786,20,8.422974350360452,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-131-000,0050882,20,9.31540712028036,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-131-001,0050884,20,8.756574056162513,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-131-002,0050886,20,8.216096537806392,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-132-000,0070182,20,9.279674072555883,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-132-001,0070184,20,9.035770537218777,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-132-002,0070186,20,7.894641315718449,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-133-000,0070282,20,9.950412087544684,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-133-001,0070284,20,9.030416294070688,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-133-002,0070286,20,7.643904458615461,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-134-000,0070382,20,9.448201592410483,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-134-001,0070384,20,8.529098087310729,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-134-002,0070386,20,8.316774195036018,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-135-000,0070482,20,9.036996287136944,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-135-001,0070484,20,8.892991096523136,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-135-002,0070486,20,7.711006029804242,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-136-000,0070582,20,9.508471789402686,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-136-001,0070584,20,9.272642482752927,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-136-002,0070586,20,8.935797540386902,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-137-000,0070682,20,8.961364610820185,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-137-001,0070684,20,8.892401080473498,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-137-002,0070686,20,7.8909624149724715,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-138-000,0070782,20,9.750726779032307,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-138-001,0070784,20,8.988165419576887,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-138-002,0070786,20,8.234304807708918,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-139-000,0070882,20,9.299080749744403,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-139-001,0070884,20,8.12715784260416,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-139-002,0070886,20,8.070177559347155,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-140-000,0130182,20,8.808394801693463,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-140-001,0130184,20,8.272377722246237,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-140-002,0130186,20,8.255957411046486,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-141-000,0130282,20,9.339577532301043,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-141-001,0130284,20,8.713868640824337,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-141-002,0130286,20,8.568671265536931,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-142-000,0130382,20,9.301794718431506,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-142-001,0130384,20,9.243626458940037,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-142-002,0130386,20,7.396116488489031,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-143-000,0130482,20,9.32578537970354,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-143-001,0130484,20,8.79397233456725,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-143-002,0130486,20,8.480168382346104,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-144-000,0130582,20,9.072707494094317,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-144-001,0130584,20,9.040261802651175,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-144-002,0130586,20,8.524979567118159,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-145-000,0130682,20,9.211073065076162,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-145-001,0130684,20,8.335388890524179,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-145-002,0130686,20,8.068264409834349,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-146-000,0130782,20,9.601376015099998,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-146-001,0130784,20,8.631395635505944,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-146-002,0130786,20,8.193897061725881,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-147-000,0130882,20,9.707944203056792,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-147-001,0130884,20,9.098534793354295,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-147-002,0130886,20,7.3376272084509475,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-148-000,0150182,20,8.951436018014563,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-148-001,0150184,20,8.895227403105764,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-148-002,0150186,20,8.689808603358667,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-149-000,0150282,20,8.798079891185422,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-149-001,0150284,20,7.709693772643597,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-149-002,0150286,20,7.291395139395555,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-150-000,0150382,20,8.214383516446842,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-150-001,0150384,20,7.890921712070943,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-150-002,0150386,20,7.280359269646655,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-151-000,0150482,20,8.66829733604259,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-151-001,0150484,20,8.575532184353026,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-151-002,0150486,20,7.376517850924613,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-152-000,0150582,20,9.246469942647414,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-152-001,0150584,20,9.061009397538065,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-152-002,0150586,20,7.926028465903708,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-153-000,0150682,20,8.797527222445396,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-153-001,0150684,20,8.724898293813796,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-153-002,0150686,20,8.651257143991366,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-154-000,0150782,20,9.520845789079022,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-154-001,0150784,20,8.12749811104255,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-154-002,0150786,20,8.048114143703748,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-155-000,0150882,20,8.973361990879635,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-155-001,0150884,20,8.438535689580078,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-155-002,0150886,20,7.834085547278601,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-156-000,0210182,20,9.207133131044708,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-156-001,0210184,20,8.903485299097964,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-156-002,0210186,20,8.786692393719829,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-157-000,0210282,20,9.574958521075375,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-157-001,0210284,20,8.898933361641355,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-157-002,0210286,20,8.605983406611605,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-158-000,0210382,20,9.139717382319446,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-158-001,0210384,20,8.621778925791551,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-158-002,0210386,20,7.48249270972818,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-159-000,0210482,20,9.458753483822138,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-159-001,0210484,20,8.332361114448757,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-159-002,0210486,20,7.338829011218855,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-160-000,0210582,20,9.500071434767936,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-160-001,0210584,20,8.789967680518686,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-160-002,0210586,20,8.551605438023454,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-161-000,0210682,20,8.841927432797249,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-161-001,0210684,20,8.287042979875489,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-161-002,0210686,20,7.498549937225873,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-162-000,0210782,20,9.003918200689752,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-162-001,0210784,20,8.426817847412527,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-162-002,0210786,20,7.771283604552087,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-163-000,0210882,20,9.571766865911695,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-163-001,0210884,20,9.428441864534461,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-163-002,0210886,20,8.702622786684012,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-164-000,0230182,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-164-001,0230184,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-164-002,0230186,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-165-000,0230282,20,9.008914667292306,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-165-001,0230284,20,9.008914667292306,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-165-002,0230286,20,9.008914667292306,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-166-000,0230382,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-166-001,0230384,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-166-002,0230386,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-167-000,0230482,20,7.325941979683855,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-167-001,0230484,20,7.325941979683855,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-167-002,0230486,20,7.325941979683855,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-168-000,0230582,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-168-001,0230584,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-168-002,0230586,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-169-000,0230682,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-169-001,0230684,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-169-002,0230686,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-170-000,0230782,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-170-001,0230784,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-170-002,0230786,20,2.2000010000000003,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-171-000,0230882,20,8.261478001731081,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-171-001,0230884,20,8.261478001731081,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"
+fixed synthetic background cargo,BACKGROUND-171-002,0230886,20,8.261478001731081,,,,,,,,,,,,,,,,,,,"Synthetic geometry identifier; booking, POD, DG, reefer and OOG declarations not supplied"

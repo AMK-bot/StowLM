@@ -1,0 +1,612 @@
+"""Synthetic offline extension tests; no held-out map, GPU or native planner."""
+import fcntl
+import importlib.machinery
+import importlib.util
+import json
+import os
+from pathlib import Path
+import threading
+import time
+import types
+
+import pytest
+
+from experiments.mvp.pipeline.sealed import driver, authorization
+from experiments.mvp.pipeline.sealed.common import HERE, HarnessError, atomic_json, object_hash, read_json, sha256
+
+loader = importlib.machinery.SourceFileLoader('ext1_runner', str(HERE/'measurements/ext-1/ext_runner.py.txt'))
+spec = importlib.util.spec_from_loader(loader.name, loader)
+subject = importlib.util.module_from_spec(spec)
+loader.exec_module(subject)
+
+
+@pytest.fixture
+def setup(tmp_path, monkeypatch):
+    root = tmp_path
+    here = root/'experiments/mvp/pipeline/sealed'
+    home = here/'measurements/ext-1'
+    home.mkdir(parents=True)
+    monkeypatch.setattr(subject, 'ROOT', root)
+    monkeypatch.setattr(subject, 'HERE', here)
+    monkeypatch.setattr(subject, 'HOME', home)
+    own = home/'ext_runner.py.txt'
+    own.write_text('fake extension runner for metadata tests')
+    monkeypatch.setattr(subject, '__file__', str(own))
+    dev = root/'experiments/mvp/pipeline/maps/dev/test.json'
+    dev.parent.mkdir(parents=True)
+    dev.write_text('{"synthetic":true}')
+    prereg = home/'PREREG.md'
+    prereg.write_text('D320A synthetic offline registration')
+    item = dict(map_id='development-test', path=str(dev), sha256=sha256(dev), cohort='envelope24', ship_id='feeder_500')
+    maps = home/'pilot-maps-manifest.json'
+    atomic_json(maps, dict(maps=[item]))
+    core = home/'core-state.json'
+    atomic_json(core, dict(mask=255, load1=44.5, t=time.time(), other_fleet_work=['D320 sibling work']))
+    config = dict(decision='D320A', development_pilot=True, profile='standard', workers=1,
+        reader_mode='recorded', reader_factory='fake:development', parser_options={},
+        child_timeout_s=20, audit_timeout_s=60, prepass_timeout_s=60,
+        arm_deadlines_s=dict(pipeline=20,instruction=20,twostep=20),
+        twostep_s=1,twostep_finalize_s=1, preregistration_path=str(prereg),
+        preregistration_sha256=sha256(prereg),maps_manifest_path=str(maps),maps_manifest_sha256=sha256(maps),
+        manifest_path=str(home/'fake-v4.json'),manifest_sha256='a'*64,run_dir=str(home/'pilot'),
+        admission_path=str(core), artifacts={})
+    path = home/'pilot-config.json'
+    atomic_json(path, config)
+    effective = subject.load_config(path)
+    run = Path(effective['run_dir'])
+    run.mkdir()
+    atomic_json(run/'STARTED.json', subject._identity(effective))
+    atomic_json(run/'config.json', effective)
+    (run/'controller.lock').touch()
+    calls = []
+    def frozen(config):
+        calls.append('frozen')
+        return dict(manifest_sha256='a'*64,tree_digest='b'*64)
+    monkeypatch.setattr(subject, 'frozen', frozen)
+    return dict(root=root,here=here,home=home,run=run,path=path,config=config,effective=effective,
+                item=item,dev=dev,maps=maps,calls=calls,core=core)
+
+
+def save_config(setup, **changes):
+    setup['config'].update(changes)
+    atomic_json(setup['path'], setup['config'])
+    setup['effective'] = subject.load_config(setup['path'])
+
+
+def process_files(target, request, *, phase='plan', elapsed=1, returncode=0, timeout=False, cleanup=False, pid=None):
+    audit = phase == 'audit'
+    prefix = 'audit' if audit else 'child'
+    pid = pid or (456 if audit else 123)
+    atomic_json(target/('audit-job.json' if audit else 'job.json'), request)
+    deadline = 60 if phase in ('audit','prepass') else 20
+    atomic_json(target/('audit.pid.json' if audit else 'pid.json'),
+        dict(pid=pid,pgid=pid,start_new_session=True,started=time.time()-elapsed,timeout_s=deadline))
+    metrics = {prefix+'_elapsed_s':elapsed,prefix+'_returncode':returncode,
+               prefix+'_timed_out':timeout,prefix+'_cleanup_failed':cleanup,prefix+'_pid':pid,
+               prefix+'_timeout_s':deadline}
+    atomic_json(target/('audit.process.json' if audit else 'process.json'), metrics)
+    return metrics
+
+
+def fake_execution(calls):
+    def execute(config, phase, request, target):
+        calls.append(phase)
+        metrics = process_files(target, request, phase=phase)
+        if phase == 'plan':
+            row = dict(map_id=request['map_id'],map_sha256=request['sha256'],cohort=request['cohort'],
+                arm=request['arm'],status='checked_plan',level='L0',passed=True,full_checker_pass=True,
+                planning_pid=123,plan={'moves':[]},audit_verified=False, audit_fresh_process=False)
+            atomic_json(target/'row.json', row)
+        elif phase == 'audit':
+            row = dict(json.loads(Path(request['target']).read_text()), audit_verified=True,
+                       audit_fresh_process=True,audit_pid=456,audited_target_sha256=request['target_sha256'])
+            atomic_json(target/'audit-row.json', row)
+        else:
+            raise AssertionError(phase)
+        return dict(row, **metrics)
+    return execute
+
+
+def target_for(setup, arm='pipeline'):
+    path = setup['run']/'jobs'/object_hash(dict(map_id=setup['item']['map_id'],arm=arm))[:24]
+    path.mkdir(parents=True,exist_ok=True)
+    return path
+
+
+def test_pilot_metadata_check_reads_no_map(setup, monkeypatch):
+    original = Path.open
+    def open_(path, *args, **kwargs):
+        assert path != setup['dev']
+        return original(path,*args,**kwargs)
+    monkeypatch.setattr(Path, 'open', open_)
+    assert subject.load_config(setup['path'])['development_pilot']
+
+
+def test_drift_refuses_before_any_map_or_attempt_is_opened(setup, monkeypatch):
+    def drift(config):
+        raise RuntimeError('FreezeDrift fake pinned change')
+    monkeypatch.setattr(subject,'frozen',drift)
+    monkeypatch.setattr(subject,'prepare',lambda *args: pytest.fail('map preparation must not run'))
+    before = sorted(str(p) for p in setup['run'].rglob('*'))
+    with pytest.raises(RuntimeError,match='FreezeDrift'):
+        subject.run(setup['path'])
+    assert before == sorted(str(p) for p in setup['run'].rglob('*'))
+
+
+def test_full_weight_verifier_contract_is_required(setup, monkeypatch):
+    seen = []
+    def verify(path, **kwargs):
+        seen.append(kwargs)
+        return dict(manifest_sha256='a'*64,tree_digest='b'*64)
+    monkeypatch.setattr(subject.importlib,'import_module',lambda name:types.SimpleNamespace(require_frozen=verify))
+    # Load the unpatched function without executing the CLI.
+    namespace = dict(__name__='extension_contract_test',__file__=str(HERE/'measurements/ext-1/ext_runner.py.txt'))
+    exec(compile(Path(HERE/'measurements/ext-1/ext_runner.py.txt').read_text(),'<extension>','exec'),namespace)
+    namespace['frozen'](setup['effective'])
+    assert seen == [dict(full_weights=True)]
+
+
+def test_admission_allows_other_work_but_keeps_mask_load_and_age_limits(setup):
+    config = setup['effective']
+    assert subject.admission(config)['concurrent_work_allowed'] is True
+    for changes in (dict(mask=127),dict(load1=45.1),dict(t=time.time()-121),dict(mask=True)):
+        baseline = dict(mask=255,load1=44,t=time.time(),other_fleet_work=['allowed'])
+        atomic_json(setup['core'],dict(baseline,**changes))
+        assert subject.admission(config) is None
+
+
+def test_admission_waits_without_raising_for_busy_machine(setup):
+    atomic_json(setup['core'],dict(mask=255,load1=46,t=time.time()))
+    waits=[]
+    def sleep(seconds):
+        waits.append(seconds)
+        atomic_json(setup['core'],dict(mask=255,load1=45,t=time.time()))
+    assert subject.wait_admission(setup['effective'],threading.Event(),sleep=sleep)
+    assert waits == [5]
+
+
+def test_gpu_prepass_waits_for_exact_config_attestation(setup):
+    config = dict(setup['effective'],development_pilot=False)
+    waits=[]
+    def sleep(seconds):
+        waits.append(seconds)
+        atomic_json(setup['home']/'GPU-READY.json',dict(decision='D320A',ready=True,config_sha256=object_hash(config)))
+    subject.wait_gpu(config,threading.Event(),sleep=sleep)
+    assert waits == [5]
+
+
+def test_extension_scope_cannot_authorize_original_sealed_map(setup):
+    job=subject._base_job(setup['effective'],setup['item'],'pipeline')
+    path=HERE/'../maps/sealed/example.json'
+    with pytest.raises(HarnessError,match='original sealed'):
+        subject.authorize_open(setup['effective'],job,path,phase='plan')
+
+
+def test_exact_capability_is_single_use_without_canonical_global_claim(setup, monkeypatch):
+    config=setup['effective']
+    job=subject._base_job(config,setup['item'],'pipeline')
+    request=subject._issue(config,job,'plan','one-plan')
+    original=Path.read_text
+    def read(path,*args,**kwargs):
+        assert path != driver.GLOBAL_CLAIM
+        return original(path,*args,**kwargs)
+    monkeypatch.setattr(Path,'read_text',read)
+    with (setup['run']/'controller.lock').open('a+b') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        subject.authorize_open(config,request,setup['dev'],phase='plan')
+        with pytest.raises(ValueError,match='already consumed'):
+            subject.authorize_open(config,request,setup['dev'],phase='plan')
+    assert setup['calls'] == ['frozen','frozen']
+
+
+def test_capability_payload_tampering_cannot_open_map(setup):
+    config=setup['effective']
+    job=subject._base_job(config,setup['item'],'pipeline')
+    request=subject._issue(config,job,'plan','one-plan')
+    request['seed']=999
+    with (setup['run']/'controller.lock').open('a+b') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        with pytest.raises(ValueError,match='payload differs'):
+            subject.authorize_open(config,request,setup['dev'],phase='plan')
+
+
+def test_completed_trial_is_retained_on_resume_without_new_capability_or_search(setup,monkeypatch):
+    calls=[]
+    monkeypatch.setattr(subject,'_execute',fake_execution(calls))
+    first=subject.trial(setup['effective'],setup['item'],'pipeline',threading.Event())
+    assert first['audit_verified'] is True
+    second=subject.trial(setup['effective'],setup['item'],'pipeline',threading.Event())
+    assert second == first
+    assert calls == ['plan','audit']
+    assert len(list((setup['run']/'authorizations').glob('*.json'))) == 2
+
+
+def test_raw_pilot_outcome_keeps_its_development_label(setup,monkeypatch):
+    config=dict(setup['effective'],label='DRY RUN on development; excluded from extension')
+    monkeypatch.setattr(subject,'_execute',fake_execution([]))
+    result=subject.trial(config,setup['item'],'pipeline',threading.Event())
+    assert result['label']==config['label'] and result['development_pilot'] is True
+    assert read_json(target_for(setup)/'result.json')['label']==config['label']
+
+
+def test_spent_attempt_without_publication_is_not_retried(setup,monkeypatch):
+    target=target_for(setup)
+    atomic_json(target/'DISPATCHED.json',dict(t=time.time()))
+    monkeypatch.setattr(subject,'_execute',lambda *args:pytest.fail('spent search must not retry'))
+    row=subject.trial(setup['effective'],setup['item'],'pipeline',threading.Event())
+    assert row['status'] == 'error' and 'never searched again' in row['reason']
+    assert not (setup['run']/'authorizations').exists()
+
+
+@pytest.mark.parametrize('phase,elapsed,timeout,cleanup,returncode',[
+    ('plan',21,False,False,0),('plan',1,True,False,0),('plan',1,False,True,0),
+    ('plan',1,False,False,1),('audit',61,False,False,0),('audit',1,True,False,0)])
+def test_resume_requires_successful_within_deadline_process_receipt(setup,phase,elapsed,timeout,cleanup,returncode):
+    target=target_for(setup)
+    request=subject._base_job(setup['effective'],setup['item'],'pipeline')
+    process_files(target,request,phase=phase,elapsed=elapsed,timeout=timeout,cleanup=cleanup,returncode=returncode)
+    assert subject.process_receipt(target,phase,setup['effective']) is False
+
+
+def test_late_raw_plan_cannot_become_pass_on_resume(setup,monkeypatch):
+    target=target_for(setup)
+    atomic_json(target/'DISPATCHED.json',dict(t=time.time()))
+    job=subject._base_job(setup['effective'],setup['item'],'pipeline')
+    fake_execution([])(setup['effective'],'plan',job,target)
+    process_files(target,job,elapsed=21)
+    monkeypatch.setattr(subject,'_settle_old_child',lambda path:None)
+    monkeypatch.setattr(subject,'_execute',lambda *args:pytest.fail('late result must not audit or replan'))
+    row=subject.trial(setup['effective'],setup['item'],'pipeline',threading.Event())
+    assert row['status'] == 'error' and row['passed'] is False
+
+
+def test_valid_finished_plan_can_get_one_new_fresh_audit_without_replanning(setup,monkeypatch):
+    target=target_for(setup)
+    atomic_json(target/'DISPATCHED.json',dict(t=time.time()))
+    job=subject._base_job(setup['effective'],setup['item'],'pipeline')
+    fake_execution([])(setup['effective'],'plan',job,target)
+    calls=[]
+    monkeypatch.setattr(subject,'_settle_old_child',lambda path:None)
+    monkeypatch.setattr(subject,'_execute',fake_execution(calls))
+    row=subject.trial(setup['effective'],setup['item'],'pipeline',threading.Event())
+    assert calls == ['audit'] and row['audit_verified'] is True
+
+
+def test_interrupted_audit_is_spent_and_not_repeated(setup,monkeypatch):
+    target=target_for(setup)
+    atomic_json(target/'DISPATCHED.json',dict(t=time.time()))
+    atomic_json(target/'AUDIT-DISPATCHED.json',dict(t=time.time()))
+    job=subject._base_job(setup['effective'],setup['item'],'pipeline')
+    fake_execution([])(setup['effective'],'plan',job,target)
+    monkeypatch.setattr(subject,'_settle_old_child',lambda path:None)
+    monkeypatch.setattr(subject,'_execute',lambda *args:pytest.fail('spent audit must not retry'))
+    row=subject.trial(setup['effective'],setup['item'],'pipeline',threading.Event())
+    assert row['status'] == 'error' and row['audit_error'] == 'interrupted'
+
+
+def test_resumed_late_audit_cannot_pass(setup,monkeypatch):
+    target=target_for(setup)
+    atomic_json(target/'DISPATCHED.json',dict(t=time.time()))
+    atomic_json(target/'AUDIT-DISPATCHED.json',dict(t=time.time()))
+    job=subject._base_job(setup['effective'],setup['item'],'pipeline')
+    fake_execution([])(setup['effective'],'plan',job,target)
+    audit=dict(job,target=str(target/'row.json'),target_sha256=sha256(target/'row.json'))
+    fake_execution([])(setup['effective'],'audit',audit,target)
+    process_files(target,audit,phase='audit',elapsed=61)
+    monkeypatch.setattr(subject,'_settle_old_child',lambda path:None)
+    row=subject.trial(setup['effective'],setup['item'],'pipeline',threading.Event())
+    assert row['status'] == 'error' and row['passed'] is False
+
+
+def test_old_pid_is_never_signalled_on_resume(setup,monkeypatch):
+    target=target_for(setup)
+    atomic_json(target/'pid.json',dict(pid=333,pgid=333,start_new_session=True,started=0,timeout_s=20))
+    signals=[]
+    monkeypatch.setattr(os,'killpg',lambda pid,sig:signals.append((pid,sig)))
+    with pytest.raises(subject.Paused,match='no signals sent'):
+        subject._settle_old_child(target)
+    assert signals == [(333,0)]
+
+
+def test_old_group_permission_error_pauses_without_signals(setup,monkeypatch):
+    target=target_for(setup)
+    atomic_json(target/'pid.json',dict(pid=333,pgid=333,start_new_session=True,started=0,timeout_s=20))
+    def denied(*args):raise PermissionError('zombie-only or sandbox')
+    monkeypatch.setattr(os,'killpg',denied)
+    with pytest.raises(subject.Paused,match='PermissionError'):
+        subject._settle_old_child(target)
+
+
+def test_unstarted_trial_drift_does_not_spend_dispatch_or_capability(setup,monkeypatch):
+    def drift(config):raise RuntimeError('FreezeDrift')
+    monkeypatch.setattr(subject,'frozen',drift)
+    with pytest.raises(RuntimeError,match='FreezeDrift'):
+        subject.trial(setup['effective'],setup['item'],'pipeline',threading.Event())
+    assert not (target_for(setup)/'DISPATCHED.json').exists()
+    assert not (setup['run']/'authorizations').exists()
+
+
+def test_drift_in_child_pauses_controller_instead_of_starting_next_trial(setup,monkeypatch):
+    stop=threading.Event()
+    invocations=[]
+    def freeze(config):
+        invocations.append('guard')
+        if len(invocations)>1:raise RuntimeError('FreezeDrift child')
+    def failed(*args):raise RuntimeError('child guard refused')
+    monkeypatch.setattr(subject,'frozen',freeze)
+    monkeypatch.setattr(subject,'_execute',failed)
+    with pytest.raises(RuntimeError,match='FreezeDrift'):
+        subject.trial(setup['effective'],setup['item'],'pipeline',stop)
+    assert stop.is_set()
+    assert (target_for(setup)/'DISPATCHED.json').exists()
+    assert not (target_for(setup)/'result.json').exists()
+
+
+def test_controller_lock_refuses_parallel_resume(setup,monkeypatch):
+    with (setup['run']/'controller.lock').open('a+b') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        with pytest.raises(HarnessError,match='controller is active'):
+            subject.run(setup['path'])
+
+
+def test_scope_and_artifact_fences_reject_nonextension_outputs(setup):
+    with pytest.raises(HarnessError,match='output escapes'):
+        subject.output_path(setup['here']/'runs/final-3/row.json')
+    with pytest.raises(HarnessError,match='output escapes'):
+        subject.output_path(setup['root']/'experiments/cache/row.json')
+
+
+def test_extension_child_environment_confines_writable_native_caches(setup):
+    env=subject.extension_environment()
+    assert env['UV_CACHE_DIR'].startswith(str(setup['home']))
+    assert env['TMPDIR'].startswith(str(setup['home']))
+    assert env['STOWAGE_VESSEL_CACHE_DIR'].startswith(str(setup['home']))
+
+
+def test_audit_target_is_fenced_before_worker_can_open_original_sealed_payload(setup,monkeypatch):
+    config=setup['effective']
+    target=target_for(setup)
+    job=subject._base_job(config,setup['item'],'pipeline')
+    original_sealed=HERE/'../maps/sealed/must-not-open.json'
+    request=subject._issue(config,dict(job,target=str(original_sealed),target_sha256='c'*64),'audit','bad-target')
+    atomic_json(target/'audit-job.json',request)
+    original=Path.read_bytes
+    def read(path):
+        assert path.resolve() != original_sealed.resolve(), 'original sealed payload was opened'
+        return original(path)
+    monkeypatch.setattr(Path,'read_bytes',read)
+    monkeypatch.setattr(subject,'configure_runtime',lambda:pytest.fail('must reject before any native/model initialization'))
+    with pytest.raises(HarnessError,match='audit target is not its exact extension'):
+        subject.child(setup['path'],'audit',target/'audit-job.json',target/'audit-row.json')
+
+
+def test_child_cannot_write_into_other_map_arm_directory(setup):
+    config=setup['effective']
+    request=subject._issue(config,subject._base_job(config,setup['item'],'pipeline'),'plan','one')
+    wrong=target_for(setup,'instruction')/'row.json'
+    with pytest.raises(HarnessError,match='exact map/arm'):
+        subject.validate_child_request(config,'plan',request,wrong)
+
+
+def test_child_payload_must_match_capability_before_target_read(setup):
+    config=setup['effective']
+    target=target_for(setup)
+    request=subject._issue(config,subject._base_job(config,setup['item'],'pipeline'),'plan','one')
+    request['seed']=999
+    with pytest.raises(HarnessError,match='payload differs'):
+        subject.validate_child_request(config,'plan',request,target/'row.json')
+
+
+def test_corrupt_resumed_audit_is_a_retained_error_not_an_endless_pause(setup,monkeypatch):
+    target=target_for(setup)
+    atomic_json(target/'DISPATCHED.json',dict(t=time.time()))
+    atomic_json(target/'AUDIT-DISPATCHED.json',dict(t=time.time()))
+    job=subject._base_job(setup['effective'],setup['item'],'pipeline')
+    fake_execution([])(setup['effective'],'plan',job,target)
+    audit=dict(job,target=str(target/'row.json'),target_sha256=sha256(target/'row.json'))
+    fake_execution([])(setup['effective'],'audit',audit,target)
+    row=read_json(target/'audit-row.json')
+    atomic_json(target/'audit-row.json',dict(row,audited_target_sha256='f'*64))
+    monkeypatch.setattr(subject,'_settle_old_child',lambda path:None)
+    monkeypatch.setattr(subject,'_execute',lambda *args:pytest.fail('spent audit may not rerun'))
+    row=subject.trial(setup['effective'],setup['item'],'pipeline',threading.Event())
+    assert row['status'] == 'error' and row['audit_error']
+
+
+@pytest.mark.parametrize('event,args',[
+    ('open',('experiments/mvp/frontier/engine/scratch.json','w',os.O_WRONLY)),
+    ('os.mkdir',('experiments/mvp/frontier/engine/new',0o777,-1)),
+    ('os.remove',('experiments/mvp/frontier/engine/old.json',-1)),
+    ('os.rename',('experiments/mvp/frontier/engine/old.json','target.json',-1,-1)),
+    ('os.utime',('experiments/mvp/frontier/engine/old.json',None,None,-1)),
+])
+def test_repository_write_audit_denies_frozen_tree_mutations(setup,event,args):
+    absolute=(str(setup['root']/args[0]),*args[1:])
+    with pytest.raises(HarnessError,match='outside extension outputs'):
+        subject.repository_write_hook(event,absolute)
+
+
+def test_repository_write_audit_allows_only_own_repo_output_paths(setup):
+    for path in (setup['home']/'cache/test',setup['here']/'runs/ext-1/test'):
+        subject.repository_write_hook('open',(str(path),'w',os.O_WRONLY))
+    subject.repository_write_hook('open',(str(setup['root']/'params/policy.json'),'r',0))
+
+
+def test_spawn_initialization_installs_audit_before_native_path_setup(setup,monkeypatch):
+    calls=[]
+    monkeypatch.setenv('STOWAGE_EXT1_RUNTIME_SCOPE',str(setup['home']))
+    monkeypatch.setattr(subject,'guard_repository_writes',lambda:calls.append('write-guard'))
+    monkeypatch.setattr(subject,'configure_runtime',lambda:calls.append('native-paths'))
+    subject.spawn_runtime_init()
+    assert calls == ['write-guard','native-paths']
+
+
+def test_no_extension_scope_means_no_spawn_hook_installation(setup,monkeypatch):
+    monkeypatch.delenv('STOWAGE_EXT1_RUNTIME_SCOPE',raising=False)
+    monkeypatch.setattr(subject,'guard_repository_writes',lambda:pytest.fail('unrelated spawn'))
+    subject.spawn_runtime_init()
+
+
+def prepass_files(setup):
+    target=setup['run']/'prepass'
+    target.mkdir(exist_ok=True)
+    reading=dict(map_id=setup['item']['map_id'],map_sha256=setup['item']['sha256'],
+                 allocation_sha256='a'*64,status='accepted')
+    prepared=[dict(setup['item'],recorded_reading=reading,reading_sha256=object_hash(reading),
+                   reading_allocation_sha256='a'*64)]
+    atomic_json(target/'row.json',prepared)
+    atomic_json(setup['run']/'instruction-allocation.json',prepared)
+    atomic_json(target/'instruction-draw.json',prepared)
+    process_files(target,dict(maps=[setup['item']]),phase='prepass')
+    return target,prepared
+
+
+def test_fatal_prepass_publishes_provisional_rows_without_any_planning(setup,monkeypatch):
+    monkeypatch.setattr(subject,'prepare',lambda config,stop:None)
+    monkeypatch.setattr(subject,'trial',lambda *args:pytest.fail('fatal prepass must prevent every planning arm'))
+    report=subject.run(setup['path'])
+    assert report['complete'] is False and report['provisional'] is True
+    assert 'fatal serial prepass' in report['reason']
+    assert all(row['status']=='not_run' for row in read_json(setup['run']/'rows.json'))
+    assert not (setup['run']/'jobs').exists()
+    assert not (setup['run']/'authorizations').exists()
+
+
+def test_completed_prepass_is_hash_committed_and_never_replayed(setup,monkeypatch):
+    target,prepared=prepass_files(setup)
+    assert subject.commit_prepass(setup['effective']) == prepared
+    commitment=read_json(setup['run']/'PREPASS-COMMIT.json')
+    assert commitment['allocation_sha256'] == sha256(setup['run']/'instruction-allocation.json')
+    monkeypatch.setattr(subject,'_execute',lambda *args:pytest.fail('recorded live readings must never be repeated'))
+    assert subject.prepare(setup['effective'],threading.Event()) == prepared
+
+
+@pytest.mark.parametrize('filename',[
+    'instruction-allocation.json','prepass/row.json','prepass/process.json',
+    'prepass/job.json','prepass/instruction-draw.json'])
+def test_prepass_resume_detects_changed_allocation_publication_or_receipts(setup,filename):
+    prepass_files(setup)
+    subject.commit_prepass(setup['effective'])
+    path=setup['run']/filename
+    value=read_json(path)
+    if filename.endswith('process.json'):
+        value['child_elapsed_s']=.5
+    elif isinstance(value,list):
+        value[0]['changed_after_prepass']=True
+    else:
+        value['changed_after_prepass']=True
+    atomic_json(path,value)
+    with pytest.raises(HarnessError,match='differs|commitment changed'):
+        subject.prepare(setup['effective'],threading.Event())
+
+
+def test_uncommitted_prepass_cannot_be_rebound_after_any_planning_started(setup):
+    prepass_files(setup)
+    atomic_json(target_for(setup)/'DISPATCHED.json',dict(t=time.time()))
+    with pytest.raises(HarnessError,match='after planning began'):
+        subject.commit_prepass(setup['effective'])
+    assert not (setup['run']/'PREPASS-COMMIT.json').exists()
+
+
+def test_prepass_with_nonterminal_or_unhashed_reading_cannot_start_planning(setup):
+    target,prepared=prepass_files(setup)
+    prepared[0]['recorded_reading']['status']='running'
+    prepared[0]['reading_sha256']=object_hash(prepared[0]['recorded_reading'])
+    atomic_json(target/'row.json',prepared)
+    atomic_json(setup['run']/'instruction-allocation.json',prepared)
+    with pytest.raises(HarnessError,match='terminal and hash-bound'):
+        subject.commit_prepass(setup['effective'])
+
+
+def test_child_request_path_cannot_be_a_fresh_map_payload(setup,monkeypatch):
+    payload=setup['home']/'maps/must-not-open.json'
+    payload.parent.mkdir()
+    payload.write_text('{"map_payload":"never read as job metadata"}')
+    original=Path.open
+    def open_(path,*args,**kwargs):
+        assert path != payload,'fresh held-out map was opened without a phase capability'
+        return original(path,*args,**kwargs)
+    monkeypatch.setattr(Path,'open',open_)
+    monkeypatch.setattr(subject,'configure_runtime',lambda:pytest.fail('native imports must not run'))
+    with pytest.raises(HarnessError,match='phase metadata file'):
+        subject.child(setup['path'],'plan',payload,target_for(setup)/'row.json')
+
+
+def test_map_payload_cannot_be_preflight_metadata_or_artifact(setup):
+    payload=setup['home']/'maps/not-metadata.json'
+    payload.parent.mkdir()
+    payload.write_text('{}')
+    setup['config']['artifacts']={str(payload):sha256(payload)}
+    atomic_json(setup['path'],setup['config'])
+    with pytest.raises(HarnessError,match='map payload cannot serve'):
+        subject.load_config(setup['path'])
+
+
+@pytest.mark.parametrize('event', ['os.remove','os.rmdir','os.mkdir','os.chmod','os.utime'])
+def test_native_fd_relative_cleanup_resolves_owned_directory(setup,event):
+    fd=os.open(setup['home'],os.O_RDONLY)
+    try:
+        args={'os.remove':('relative.json',fd),'os.rmdir':('relative-dir',fd),
+              'os.mkdir':('relative-dir',0o777,fd),'os.chmod':('relative.json',0o600,fd),
+              'os.utime':('relative.json',None,None,fd)}[event]
+        subject.repository_write_hook(event,args)
+        assert subject.audit_target('relative.json',fd) == setup['home']/'relative.json'
+    finally:
+        os.close(fd)
+
+
+def test_fd_relative_mutation_cannot_escape_to_frozen_directory(setup):
+    directory=setup['root']/'experiments/mvp/frontier/engine'
+    directory.mkdir(parents=True)
+    fd=os.open(directory,os.O_RDONLY)
+    try:
+        with pytest.raises(HarnessError,match='outside extension outputs'):
+            subject.repository_write_hook('os.remove',('never-deleted.json',fd))
+    finally:
+        os.close(fd)
+
+
+def test_rename_resolves_both_source_and_destination_directory_fds(setup):
+    directory=setup['root']/'experiments/mvp/frontier/engine'
+    directory.mkdir(parents=True)
+    own=os.open(setup['home'],os.O_RDONLY)
+    outside=os.open(directory,os.O_RDONLY)
+    try:
+        subject.repository_write_hook('os.rename',('a','b',own,own))
+        with pytest.raises(HarnessError,match='outside extension outputs'):
+            subject.repository_write_hook('os.rename',('a','b',own,outside))
+    finally:
+        os.close(own);os.close(outside)
+
+
+@pytest.mark.parametrize('with_incumbent',[False,True])
+def test_completed_deadline_audit_is_preserved_after_crash_before_result(setup,monkeypatch,with_incumbent):
+    target=target_for(setup)
+    config=setup['effective']
+    request=subject._issue(config,subject._base_job(config,setup['item'],'pipeline'),'plan','plan-once')
+    metrics=process_files(target,request,elapsed=20,timeout=True,returncode=-9)
+    observed={}
+    if with_incumbent:
+        plan={'moves':[]}
+        observed[object_hash(plan)]=dict(plan=plan,lifts=1,published_wall_s=10,
+            publication_sha256='b'*64,validation_source='runner_checked_incumbent')
+    raw=driver._deadline_result(request,target,metrics,observed)
+    atomic_json(target/'DISPATCHED.json',dict(t=time.time()))
+    audit=subject._issue(config,dict(subject._base_job(config,setup['item'],'pipeline'),
+        target=str(target/'deadline-row.json'),target_sha256=sha256(target/'deadline-row.json'),
+        deadline_recovery=True),'audit','audit-once')
+    fake_execution([])(config,'audit',audit,target)
+    row=read_json(target/'audit-row.json')
+    row.update(passed=with_incumbent,full_checker_pass=with_incumbent,level='L0' if with_incumbent else None,
+               deadline_with_incumbent=with_incumbent)
+    atomic_json(target/'audit-row.json',row)
+    atomic_json(target/'AUDIT-DISPATCHED.json',dict(t=time.time(),target_sha256=audit['target_sha256']))
+    before=(target/'deadline-row.json').read_bytes()
+    monkeypatch.setattr(subject,'_settle_old_child',lambda path:None)
+    monkeypatch.setattr(subject,'_execute',lambda *args:pytest.fail('spent plan/audit may not repeat'))
+    monkeypatch.setattr(subject,'recovered_incumbent',lambda *args:pytest.fail('authenticated deadline bytes must not be rewritten'))
+    result=subject.trial(config,setup['item'],'pipeline',threading.Event())
+    assert result['audit_verified'] is True and result['passed'] is with_incumbent
+    assert result['status']=='deadline_exceeded'
+    assert (target/'deadline-row.json').read_bytes() == before
+    assert result['audited_target_sha256'] == sha256(target/'deadline-row.json')

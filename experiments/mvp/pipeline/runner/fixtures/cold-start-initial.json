@@ -1,0 +1,41 @@
+{
+  "label": "Measured cold process start; synthetic development input",
+  "note": "Initial probe may overlap lazy-import edits; this is not a controlled before/after baseline.",
+  "measured_utc": "2026-11-02T00:39:26.131670+00:00",
+  "packet": "experiments/mvp/pipeline/runner/fixtures/packet.json",
+  "samples": 1,
+  "cold": "New Python process per sample; filesystem and vessel caches left warm.",
+  "no_search": true,
+  "no_model": true,
+  "median_s": {
+    "imports_ready_s": 6.092102208,
+    "assemble_s": 10.658369042,
+    "envelope_s": 11.000978875,
+    "first_reader_call_s": 11.640290708
+  },
+  "phases_s": {
+    "interpreter_and_imports_s": 6.092102208,
+    "assembly_and_setup_s": 4.566266834,
+    "envelope_s": 0.34260983299999914,
+    "reader_preparation_s": 0.6393118330000007
+  },
+  "dominates": "interpreter_and_imports_s",
+  "rows": [
+    {
+      "imports_ready_s": 6.092102208,
+      "run_begin_s": 6.094349917,
+      "assemble_s": 10.658369042,
+      "envelope_s": 11.000978875,
+      "in_envelope": true,
+      "first_reader_call_s": 11.640290708,
+      "status": "probe_complete",
+      "admission": {
+        "mask": 4095,
+        "enabled_cores": 12,
+        "load1": 32.24,
+        "reading_age_s": 14.316884994506836,
+        "waited_s": 0.00020783295622095466
+      }
+    }
+  ]
+}

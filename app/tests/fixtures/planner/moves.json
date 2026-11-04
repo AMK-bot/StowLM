@@ -1,0 +1,55 @@
+{
+  "moves": [
+    {
+      "i": 1,
+      "kind": "discharge",
+      "box_id": "TEST0000003",
+      "from": {
+        "bay": 3,
+        "row": 1,
+        "tier": 84,
+        "deck": true
+      },
+      "to": null,
+      "forced": true
+    },
+    {
+      "i": 2,
+      "kind": "shift",
+      "box_id": "TEST0000001",
+      "from": {
+        "bay": 1,
+        "row": 4,
+        "tier": 82,
+        "deck": true
+      },
+      "to": {
+        "bay": 1,
+        "row": 2,
+        "tier": 82,
+        "deck": true
+      },
+      "forced": false
+    },
+    {
+      "i": 3,
+      "kind": "load",
+      "box_id": "TEST0000005",
+      "from": null,
+      "to": {
+        "bay": 3,
+        "row": 3,
+        "tier": 82,
+        "deck": true
+      },
+      "forced": false
+    }
+  ],
+  "source": {
+    "kind": "synthetic_unit_fixture",
+    "paths": [
+      "app/tests/fixtures/planner/fixture-source.txt"
+    ],
+    "sha256": "3ebdaf54f17cf296f4b591c2848c8520639cb04d16a57048a56b0d17b9a68e09"
+  }
+}

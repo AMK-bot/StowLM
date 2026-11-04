@@ -1,0 +1,827 @@
+{
+  "schema": "stowlm.video-shots/1",
+  "note": "One source of truth for the demo cut, the launch cut, the teleprompter and the subtitles. Voice lines are script-v6.md draft 5 with fill-v6.json values filled in. Every number shown or spoken is listed under its shot's numbers[] with the file it comes from; tools/check_honesty.py fails the build otherwise. Paths are relative to the repo root.",
+  "script": "experiments/mvp/video/script-v6.md",
+  "shots_dir": "experiments/mvp/ui/video-draft/v6",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "cap_s": 180,
+  "words_per_s": 2.4,
+  "whole_film_label": "Synthetic ships and cargo, simulated port",
+  "music": {
+    "credit": "Music: Sascha Ende, ende.app (CC BY 4.0)",
+    "dir": "experiments/mvp/video/brag-vendor/skills/brag/assets/music",
+    "demo": [
+      "happy-beats-business-moves-vol-1-by-ende-dot-app.mp3",
+      "happy-beats-business-moves-vol-10-by-ende-dot-app.mp3"
+    ],
+    "launch": "happy-beats-business-moves-vol-11-by-ende-dot-app.mp3",
+    "bed_volume": 0.32,
+    "duck_volume": 0.09
+  },
+  "radio_clip": {
+    "path": "experiments/mvp/pipeline/radio/audio/03-nothing-goes-into-bay-nine-on-this-call-f599610d-radio.wav",
+    "label": "Generated voice: stock text-to-speech over a simulated radio line",
+    "uses": [
+      {
+        "shot": 1,
+        "at_s": 0.0
+      },
+      {
+        "shot": 4,
+        "at_s": 0.0
+      }
+    ]
+  },
+  "meta_models": [
+    {
+      "name": "Muse Glimmer 30B",
+      "as": "StowLM Reader",
+      "does": "fine-tuned by us (LoRA), reads the planner's words into rules, on this laptop"
+    },
+    {
+      "name": "Muse Spark",
+      "as": "Meta Model API, cloud",
+      "does": "reads paper and pictures, finds where documents disagree, chooses tools in the copilot"
+    },
+    {
+      "name": "Muse Voice Transcribe",
+      "as": "Meta Model API, cloud",
+      "does": "turns speech into an editable transcript"
+    }
+  ],
+  "shots": [
+    {
+      "id": 1,
+      "title": "Cold open",
+      "file": "shot-01.webm",
+      "dur": 10,
+      "voice": "One sentence, over a noisy, simulated radio line. The plan changes, and the full checker passes it. Now try to break it.",
+      "chips": [
+        "Recorded",
+        "Separate demos"
+      ],
+      "lower_third": null,
+      "numbers": [
+        {
+          "text": "3×",
+          "means": "replan shown at three times speed",
+          "source": "experiments/mvp/video/stowlm-brag/shots.json"
+        },
+        {
+          "text": "54",
+          "means": "active rules in the full checker",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "nine",
+          "means": "bay nine in the hero sentence",
+          "source": "experiments/mvp/pipeline/radio/hero-selection.json"
+        }
+      ],
+      "delivery": "Start after the radio voice ends (about 2.6 s in). Punchy, three beats. Keep 'simulated'.",
+      "voice_at_s": 2.6,
+      "chip_beats": [
+        {
+          "from": 0,
+          "to": 2.4,
+          "chips": [
+            "Recorded answer",
+            "Generated voice",
+            "Separate demos"
+          ]
+        },
+        {
+          "from": 2.4,
+          "to": 3.4,
+          "chips": [
+            "Recorded answer",
+            "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop"
+          ]
+        },
+        {
+          "from": 3.4,
+          "to": 7.3,
+          "chips": [
+            "Stored plan, computed on 2 Nov 2026, rechecked now",
+            "Sped up 3×",
+            "Half-ship section"
+          ]
+        },
+        {
+          "from": 7.3,
+          "to": 8.3,
+          "chips": [
+            "Stored plan, computed on 2 Nov 2026, rechecked now",
+            "Full checker, 54 active rules"
+          ]
+        },
+        {
+          "from": 8.3,
+          "to": 10,
+          "chips": [
+            "Recorded verdict",
+            "Separate demos"
+          ]
+        }
+      ],
+      "chip_beats_source": "beats read from the re-recorded take (2 fps contact sheet), matching its own bottom-band labels",
+      "no_slow": true,
+      "segments": [
+        {
+          "ms": 0.733,
+          "me": 9.65
+        },
+        {
+          "ms": 9.65,
+          "me": 10.0,
+          "rate": 0.1
+        }
+      ],
+      "segments_source": "take 1: radio speech ends at 2.51 s of the 2.95 s clip (silencedetect); the replan is labelled 'sped up 3×' in the take, so it plays at 1.0×; only the static 'TRY TO BREAK IT.' title (9.65-10.0 s) is held, at 0.1×",
+      "trim_note": "If over time, drop 'Now', then 'and'; never 'simulated' (logic15)."
+    },
+    {
+      "id": 2,
+      "title": "The stake",
+      "file": "shot-02.webm",
+      "dur": 12,
+      "voice": "My family works in Thai freight forwarding. Every ship at Laem Chabang, Thailand's main port, needs a load plan. A bad one means extra lifts.",
+      "chips": [
+        "Recorded",
+        "9,325 calls in 2024: BSAA Annual Report 2024–25"
+      ],
+      "lower_third": null,
+      "numbers": [
+        {
+          "text": "9,325",
+          "means": "container-vessel calls at Laem Chabang in 2024",
+          "source": "experiments/mvp/ui/fixtures/film-figures.json"
+        },
+        {
+          "text": "2024",
+          "means": "year of the call count",
+          "source": "experiments/mvp/ui/fixtures/film-figures.json"
+        },
+        {
+          "text": "2024–25",
+          "means": "BSAA report edition",
+          "source": "experiments/mvp/ui/fixtures/film-figures.json"
+        },
+        {
+          "text": "v3 (a11b4202…), recorded before v4",
+          "means": "pipeline version of the shot 2 take",
+          "source": "docs/headline.md"
+        }
+      ],
+      "face_cam": "intro",
+      "delivery": "Warm, personal. This is your line: say it like you'd tell a friend.",
+      "trim_note": "If over time, drop 'heavy low, dangerous cargo apart' (script trim order 3).",
+      "segments": [
+        {
+          "ms": 0.5,
+          "me": 4.9
+        },
+        {
+          "ms": 5.5,
+          "me": 8.6
+        },
+        {
+          "ms": 8.8,
+          "me": 11.75
+        }
+      ],
+      "segments_source": "app/static/stage-shots.js shot 2: map 0-5.4 (BSAA source caption 0.5-5.3), yard 5.5-8.6, tally and ship 8.8-11.8",
+      "patches": [
+        {
+          "x": 12,
+          "y": 878,
+          "w": 560,
+          "h": 21,
+          "text": "Frozen pipeline v3 (a11b4202…), recorded before v4"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Mess in",
+      "file": "shot-03.webm",
+      "dur": 11,
+      "voice": "Muse Spark reads the papers and finds where they disagree. Where it isn't sure it asks, and on hard documents most boxes stop for a person.",
+      "chips": [
+        "Recorded answer",
+        "Synthetic document",
+        "Cloud call"
+      ],
+      "lower_third": {
+        "name": "Muse Spark",
+        "role": "Meta Model API, cloud · reads paper, finds where documents disagree"
+      },
+      "numbers": [],
+      "delivery": "Matter-of-fact. Never cut 'most boxes stop for a person'.",
+      "voice_at_s": 1.0
+    },
+    {
+      "id": 4,
+      "title": "Bad radio line",
+      "file": "shot-04.webm",
+      "dur": 10,
+      "voice": "Muse Voice Transcribe hears it through the static. The planner sees the words first.",
+      "voice_at_s": 3.3,
+      "chips": [
+        "Recorded answer",
+        "Generated voice",
+        "Cloud call"
+      ],
+      "lower_third": {
+        "name": "Muse Voice Transcribe",
+        "role": "Meta Model API, cloud · turns speech into an editable transcript"
+      },
+      "numbers": [],
+      "delivery": "Start after the radio clip ends (about 3.5 s in). Calm."
+    },
+    {
+      "id": 5,
+      "title": "The reader",
+      "file": "shot-05.webm",
+      "dur": 18,
+      "voice": "StowLM Reader, Muse Glimmer fine-tuned by us, read it on this laptop, with no cloud call. Same model, same laptop: without our fine-tune, 47 percent on a locked test. With it, 92. It missed two stricter gates.",
+      "chips": [
+        "Recorded answer",
+        "On this laptop, no cloud call"
+      ],
+      "lower_third": {
+        "name": "StowLM Reader",
+        "role": "Muse Glimmer 30B, fine-tuned by us (LoRA) · on device · reads words into rules"
+      },
+      "numbers": [
+        {
+          "text": "47 percent",
+          "means": "untrained Glimmer under the same mask, 60 of 128 (46.88 %) on the reader's locked test",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "92",
+          "means": "StowLM Reader v3, 118 of 128 (92.19 %) on the reader's locked test",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "two",
+          "means": "two stricter gates missed (one loosening accepted; 6 points below Spark)",
+          "source": "docs/headline.md"
+        }
+      ],
+      "delivery": "The proudest line. Slow down on '47' and '92'. Never cut 'It missed two stricter gates'."
+    },
+    {
+      "id": 6,
+      "title": "X-ray and confirm",
+      "file": "shot-06.webm",
+      "dur": 16,
+      "voice": "Inside the model as it writes. Before fine-tuning, the mask overrode it on 182 of 200 sentences, almost all on format. After: 2, both sentences it should have refused. Legal, and still wrong. So a person confirms.",
+      "chips": [
+        "Recorded answer",
+        "Bars: the locked reader test",
+        "182 → 2: 200 validation sentences, not the locked test"
+      ],
+      "lower_third": {
+        "name": "StowLM Reader",
+        "role": "Muse Glimmer 30B fine-tune · traced token by token"
+      },
+      "numbers": [
+        {
+          "text": "182",
+          "means": "mask overrode the untrained model's first choice in 182 of 200 validation sentences",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "200",
+          "means": "validation sentences, not the locked test",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "2",
+          "means": "after fine-tuning, 2 overrides, both sentences it should have refused",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "47",
+          "means": "untrained Glimmer under the same mask on the locked test (bars in the take)",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "92",
+          "means": "StowLM Reader on the locked test (bars in the take)",
+          "source": "docs/headline.md"
+        }
+      ],
+      "delivery": "Curious, then firm on 'So a person confirms'."
+    },
+    {
+      "id": 7,
+      "title": "The plan changes",
+      "file": "shot-07.webm",
+      "dur": 14,
+      "voice": "The search software replans 87 boxes in a half-ship section. That rule forced 36; the search moved 48 more. It replans from scratch; keeping changes small isn't built yet. The gauges stay green.",
+      "chips": [
+        "Stored plan, computed on 2 Nov 2026, rechecked now",
+        "Half-ship section",
+        "Engine 0.13.0 plan, crane sequence not repaired"
+      ],
+      "lower_third": {
+        "name": "Frontier Engine 0.13.0",
+        "role": "search software plans · the full checker decides"
+      },
+      "numbers": [
+        {
+          "text": "87",
+          "means": "boxes in the hero half-ship section",
+          "source": "experiments/mvp/video/fill-v6.json"
+        },
+        {
+          "text": "36",
+          "means": "boxes the bay-9 rule forced out",
+          "source": "experiments/mvp/video/fill-v6.json"
+        },
+        {
+          "text": "48",
+          "means": "further boxes the search rearranged",
+          "source": "experiments/mvp/pipeline/lattice/hero-facts-close-bay-9.json"
+        },
+        {
+          "text": "2 Nov 2026",
+          "means": "stored plan date",
+          "source": "experiments/mvp/video/fill-v6.json"
+        },
+        {
+          "text": "0.13.0",
+          "means": "engine version",
+          "source": "docs/headline.md"
+        }
+      ],
+      "delivery": "Steady. If over time, drop 'It replans from scratch; keeping changes small isn't built yet.' (trim order 1).",
+      "trim_note": "Trim order 1."
+    },
+    {
+      "id": 8,
+      "title": "Drag a box",
+      "file": "shot-08.webm",
+      "dur": 13,
+      "voice": "Now break it. Drag any box anywhere. A fast screen answers in seconds. Then the full checker rules: it passes, the crane order can't reach it, or it breaks a named rule.",
+      "chips": [
+        "Recorded verdict",
+        "Fast screen, full check running",
+        "Demo cargo declaration changed for this challenge; no vessel or rule limit tightened"
+      ],
+      "lower_third": null,
+      "numbers": [],
+      "delivery": "A dare. A little faster."
+    },
+    {
+      "id": 9,
+      "title": "The copilot",
+      "file": "shot-09.webm",
+      "dur": 16,
+      "voice": "A one-tier deck limit needs 143 spaces, with 96 allowed, so the answer is no. On real tools, it negotiates two checked alternatives. Spark's raw text gets strict flags, and software holds back every flagged line.",
+      "conditional": "'On real tools, it negotiates two checked alternatives.' stays only if the delivered real-tools beat is in the re-recorded take (D293). Otherwise drop that sentence.",
+      "chips": [
+        "Recorded answer · real tools · two scripted planner replies · reader here is cloud Spark"
+      ],
+      "lower_third": {
+        "name": "Muse Spark",
+        "role": "Meta Model API, cloud · chooses the tools; software does the arithmetic"
+      },
+      "numbers": [
+        {
+          "text": "31",
+          "means": "spaces needed on another small section (18 boxes), not the hero",
+          "source": "experiments/mvp/video/script-v6.md"
+        },
+        {
+          "text": "12",
+          "means": "spaces left on that section",
+          "source": "experiments/mvp/video/script-v6.md"
+        },
+        {
+          "text": "143",
+          "means": "spaces needed under a one-tier deck limit on the hero",
+          "source": "experiments/mvp/pipeline/lattice/hero-coverage/hero-impossible-plain.json"
+        },
+        {
+          "text": "96",
+          "means": "spaces allowed",
+          "source": "experiments/mvp/pipeline/lattice/hero-coverage/hero-impossible-plain.json"
+        },
+        {
+          "text": "two",
+          "means": "two checked alternatives in the delivered take",
+          "source": "experiments/mvp/video/script-v6.md"
+        }
+      ],
+      "delivery": "Brisk, clear numbers. Pause after '12 left'.",
+      "trim_note": "The small-section beat was cut (film-judge edit 3; trim order 2).",
+      "chip_beats": [
+        {
+          "from": 0,
+          "to": 3.0,
+          "chips": [
+            "Stored refusal, proved by arithmetic",
+            "Hero section"
+          ]
+        },
+        {
+          "from": 3.0,
+          "to": 16,
+          "chips": [
+            "Recorded answer · real tools · two scripted planner replies · reader here is cloud Spark"
+          ]
+        }
+      ],
+      "chip_beats_source": "beats read from the re-recorded 16 s take"
+    },
+    {
+      "id": 10,
+      "title": "Receipt",
+      "file": "shot-10.webm",
+      "dur": 14,
+      "voice": "A handover package and a signed receipt, every step tied to its model and verdict. Verify it against our published key, after setup, with no model and no network. Change one digit and it fails.",
+      "chips": [
+        "Replay of a measured run",
+        "Our own signature, not a certificate"
+      ],
+      "lower_third": null,
+      "numbers": [
+        {
+          "text": "one",
+          "means": "one digit changed in plan.json",
+          "source": "experiments/mvp/video/script-v6.md"
+        }
+      ],
+      "delivery": "Confident. Land 'it fails' with a small smile."
+    },
+    {
+      "id": 11,
+      "title": "Held-out test",
+      "file": "shot-11.webm",
+      "dur": 9,
+      "voice": "On held-out test voyages we never tuned on, 24 of 24 inside our design limit passed the full checker.",
+      "chips": [
+        "Held-out test voyages",
+        "Frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim",
+        "Third attempt; two earlier runs stopped on our own guard, both published"
+      ],
+      "lower_third": null,
+      "numbers": [
+        {
+          "text": "24",
+          "means": "held-out envelope voyages, all full checker passes (D288)",
+          "source": "experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json"
+        },
+        {
+          "text": "two",
+          "means": "two earlier interrupted attempts",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "3.1 on v3 (a11b4202…); demo and package on v4 (acf2f275…)",
+          "means": "pipeline versions: the held-out run on v3, the demo and package on v4",
+          "source": "docs/headline.md"
+        }
+      ],
+      "held_out": true,
+      "delivery": "Plain. Don't oversell it; the card carries the limits.",
+      "keep_head": true,
+      "patches": [
+        {
+          "x": 12,
+          "y": 878,
+          "w": 560,
+          "h": 21,
+          "text": "3.1 on v3 (a11b4202…); demo and package on v4 (acf2f275…)"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Forward pilot",
+      "file": "shot-12.webm",
+      "dur": 24,
+      "voice": "It's for the planners who load feeder ships at ports like Laem Chabang. Port calls cost about ninety billion dollars a year, so every one percent is about a billion. The pool a better plan can act on: about seven billion a year. That's a projection, not a result. A forward pilot, built to scale: more compute for the search, a larger model for reading.",
+      "chips": [
+        "Projection"
+      ],
+      "lower_third": null,
+      "face_cam": "outro",
+      "numbers": [
+        {
+          "text": "ninety billion",
+          "means": "port-call cost exposure, USD a year (projection)",
+          "source": "docs/impact.md"
+        },
+        {
+          "text": "one percent",
+          "means": "every 1 % of the exposure",
+          "source": "docs/impact.md"
+        },
+        {
+          "text": "a billion",
+          "means": "about $1 billion per 1 %",
+          "source": "docs/impact.md"
+        },
+        {
+          "text": "seven billion",
+          "means": "mid-case pool, USD a year (projection)",
+          "source": "docs/impact.md"
+        },
+        {
+          "text": "125 million",
+          "means": "Laem Chabang by share of calls, million USD a year (projection), in the take's lower third",
+          "source": "experiments/mvp/ui/fixtures/film-figures.json"
+        }
+      ],
+      "delivery": "Lead with who it's for, then the $90 billion bill, then the pool. Never cut 'That's a projection, not a result'.",
+      "end_card_at_take_s": 17.4
+    }
+  ],
+  "credits": {
+    "dur": 3,
+    "overlay_s": 3.2,
+    "lines": [
+      [
+        "h1",
+        "StowLM"
+      ],
+      [
+        "lead",
+        "Models propose. Software decides."
+      ],
+      [
+        "p",
+        "Three Meta models: Muse Glimmer 30B, fine-tuned by us as StowLM Reader, reads the planner's words on the laptop · Muse Spark reads paper and chooses tools · Muse Voice Transcribe hears the radio"
+      ],
+      [
+        "p",
+        "Plans by Frontier Engine 0.13.0, our search software. Every plan shown has been through the full checker; a plan that doesn't pass says which rules it breaks."
+      ],
+      [
+        "url",
+        "Try to break it: https://amk-bot.github.io/StowLM/replay/ · Code: https://github.com/AMK-bot/StowLM"
+      ],
+      [
+        "small",
+        "Built 26 Oct – 4 Nov 2026 for the Meta hackathon · built for the Thai freight world my family works in"
+      ],
+      [
+        "small",
+        "Measured on synthetic ships and cargo at a simulated Laem Chabang-style port. Designed for up to 195 boxes in a half-ship section of feeder ships of 500 to 800 TEU, up to 70 % of that section, an empty section on a ship whose other bays hold fixed synthetic cargo, one loading call. Research pilot, not for use on a real ship."
+      ],
+      [
+        "small",
+        "Radio voice: stock text-to-speech, generated · Narration: {narration} · Music: Sascha Ende, ende.app (CC BY 4.0) · Edit kit adapted from brag (latent-spaces, MIT)"
+      ]
+    ],
+    "numbers": [
+      {
+        "text": "30",
+        "means": "Glimmer 30B model name",
+        "source": "docs/headline.md"
+      },
+      {
+        "text": "0.13.0",
+        "means": "engine version",
+        "source": "docs/headline.md"
+      },
+      {
+        "text": "26 Oct – 4 Nov 2026",
+        "means": "build window",
+        "source": "docs/hackathon.md"
+      },
+      {
+        "text": "4.0",
+        "means": "licence name CC BY 4.0",
+        "source": "docs/decisions.md"
+      },
+      {
+        "text": "Three",
+        "means": "three Meta models",
+        "source": "docs/headline.md"
+      },
+      {
+        "text": "195",
+        "means": "envelope boxes",
+        "source": "docs/headline.md"
+      },
+      {
+        "text": "500 to 800",
+        "means": "envelope TEU",
+        "source": "docs/headline.md"
+      },
+      {
+        "text": "70",
+        "means": "envelope fill %",
+        "source": "docs/headline.md"
+      },
+      {
+        "text": "24",
+        "means": "held-out envelope voyages (D288)",
+        "source": "experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json"
+      },
+      {
+        "text": "0 of 24",
+        "means": "two-step baseline passes",
+        "source": "experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json"
+      },
+      {
+        "text": "2 Nov 2026",
+        "means": "stored plan date",
+        "source": "experiments/mvp/video/fill-v6.json"
+      },
+      {
+        "text": "Apache-2.0",
+        "means": "code and adapter licence (D327)",
+        "source": "docs/decisions.md"
+      }
+    ]
+  },
+  "face_cam": {
+    "intro": {
+      "file": "experiments/mvp/video/record-kit/cam/intro.mov",
+      "over_shot": 2,
+      "replaces_voice": true
+    },
+    "outro": {
+      "file": "experiments/mvp/video/record-kit/cam/outro.mov",
+      "over": "credits",
+      "replaces_voice": false
+    }
+  },
+  "launch": {
+    "target_s": 25,
+    "end_card": {
+      "dur": 3,
+      "lines": [
+        [
+          "h1",
+          "StowLM"
+        ],
+        [
+          "url",
+          "Try to break it: https://amk-bot.github.io/StowLM/replay/ · Code: https://github.com/AMK-bot/StowLM"
+        ],
+        [
+          "claim",
+          "24 of 24 held-out test voyages inside our design limit passed the full checker (up to 195 boxes in a half-ship section of 500-800 TEU feeder ships, up to 70 % fill)"
+        ],
+        [
+          "small",
+          "Frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim · third attempt; two earlier runs stopped on our own guard, both published"
+        ],
+        [
+          "small",
+          "Synthetic ships and cargo, simulated port · Research pilot"
+        ],
+        [
+          "small",
+          "Music: Sascha Ende, ende.app (CC BY 4.0)"
+        ]
+      ],
+      "numbers": [
+        {
+          "text": "24",
+          "means": "held-out envelope voyages (D288)",
+          "source": "experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json"
+        },
+        {
+          "text": "two",
+          "means": "two earlier interrupted attempts",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "4.0",
+          "means": "licence name",
+          "source": "docs/decisions.md"
+        },
+        {
+          "text": "195",
+          "means": "envelope: boxes per half-ship section",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "500-800",
+          "means": "envelope: feeder ship size, TEU",
+          "source": "docs/headline.md"
+        },
+        {
+          "text": "70",
+          "means": "envelope: fill of the section, %",
+          "source": "docs/headline.md"
+        }
+      ]
+    },
+    "segments": [
+      {
+        "shot": 7,
+        "ms": 0.4,
+        "me": 9.4,
+        "rate": 3,
+        "caption": "“Nothing goes into bay nine on this call.”",
+        "chips": [
+          "Stored plan, computed on 2 Nov 2026, rechecked now",
+          "Sped up 3×"
+        ],
+        "crop": [
+          0,
+          100,
+          1180,
+          960
+        ]
+      },
+      {
+        "shot": 7,
+        "ms": 12.0,
+        "me": 13.5,
+        "caption": "The plan changes. The full checker passes it.",
+        "chips": [
+          "Stored plan, computed on 2 Nov 2026, rechecked now",
+          "Full checker, 54 active rules"
+        ],
+        "crop": [
+          0,
+          100,
+          1180,
+          960
+        ]
+      },
+      {
+        "shot": 4,
+        "ms": 0.45,
+        "me": 3.0,
+        "radio": true,
+        "caption": "One sentence over a bad radio line, heard by Muse Voice Transcribe.",
+        "chips": [
+          "Recorded answer",
+          "Generated voice",
+          "Cloud call"
+        ],
+        "crop": [
+          250,
+          60,
+          1670,
+          560
+        ]
+      },
+      {
+        "shot": 5,
+        "ms": 5.0,
+        "me": 9.0,
+        "caption": "Our fine-tuned Muse Glimmer reads it into a rule, on the laptop.",
+        "chips": [
+          "Recorded answer",
+          "On this laptop, no cloud call"
+        ],
+        "crop": [
+          60,
+          20,
+          1860,
+          560
+        ]
+      },
+      {
+        "shot": 8,
+        "ms": 1.5,
+        "me": 6.0,
+        "caption": "Drag any box. The checker answers.",
+        "chips": [
+          "Recorded verdict",
+          "Demo cargo declaration changed for this challenge; no vessel or rule limit tightened"
+        ],
+        "crop": [
+          0,
+          100,
+          1180,
+          960
+        ]
+      },
+      {
+        "shot": 10,
+        "ms": 8.5,
+        "me": 13.0,
+        "caption": "A signed handover package. Change one digit and it fails.",
+        "chips": [
+          "Replay of a measured run",
+          "Our own signature, not a certificate"
+        ],
+        "crop": [
+          0,
+          40,
+          1920,
+          1000
+        ]
+      }
+    ],
+    "numbers_note": "Segment numbers (3×, 54) are sourced on shot 1."
+  }
+}

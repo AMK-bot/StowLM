@@ -1,0 +1,40 @@
+{
+  "command": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/solve47/slack/showcase/run_showcase_gold.py --ship feeder_1700 --seed 29000201 --baseline-s 120 --ballast-s 90 --lns-s 15 --gold-watchdog-s 600 --output /Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/runs/showcase-v2-gold-1700-attempt1",
+  "created_at": "2026-10-29T20:52:10.221303+00:00",
+  "entries": [
+    {
+      "checker_passed": true,
+      "departure_approved": true,
+      "entry": "instances/random.small.29000022.0.7/result.json",
+      "input_sha256": "d59a4eece1b6d3304b9d4fce8da7462620a11adda268f616204b4b636acad908",
+      "instance_id": "random.small.29000022.0.7",
+      "status": "passed"
+    },
+    {
+      "checker_passed": true,
+      "departure_approved": true,
+      "entry": "instances/random.small.29000201.0.7/result.json",
+      "input_sha256": "7925481baaa60ae2a76784215a340fc81bf5f28f7b8e4b7fb64fc857ed3a304b",
+      "instance_id": "random.small.29000201.0.7",
+      "status": "passed"
+    }
+  ],
+  "format": "showcase-reference-v1",
+  "method": "solver.gold_warmstart",
+  "planner": "solver.gold_warmstart",
+  "source": "solver-reference",
+  "status": "passed",
+  "updated_at": "2026-10-29T20:54:26.155229+00:00",
+  "versions": {
+    "action_space": "1.0.1",
+    "ballast": "4.0",
+    "checker": "2.2",
+    "feasibility": "2.5",
+    "infrastructure": "3.0",
+    "linear_model": "3.5",
+    "move_engine": "2.0",
+    "rule_catalogue": "sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae",
+    "schema": "1.9",
+    "solver.scalable": "3.0.0"
+  }
+}

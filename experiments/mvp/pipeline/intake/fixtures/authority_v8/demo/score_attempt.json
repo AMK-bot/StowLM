@@ -1,0 +1,26 @@
+{
+  "schema_version": "stowlm.intake-score-attempt/8",
+  "started_utc": "2026-11-02T03:50:00.498422+00:00",
+  "case": "demo",
+  "recordings": {
+    "spark_request.json": "4e5bfd6403ecbaa9af8372f889123fd60e72c2a3fcdf5987948cced23ba4398d",
+    "spark_response.json": "4356fba17f36fa2f7a4064b42e80b56b98ad5638a4911a305871c027824fe60f",
+    "spark_raw.json": "6f9a25d9248543c7bda422f6bcef480a4cb48ca69da92914a1703246c73b9581"
+  },
+  "policy": {
+    "policy_version": 8,
+    "case_count": 5,
+    "boxes_per_case": 12,
+    "attempt_limit": 1,
+    "schema_failure": "zero accepted fields; every business field questioned; full workload; no specific trap credit",
+    "transport_failure": "same failure scoring; reported dollars retained, unreported dollars explicitly unknown",
+    "validator_failure": "zero accepted fields and full workload, with exact exception recorded for either method",
+    "tally": "literal raw transcription scored separately, never accepted cargo evidence",
+    "derived_business_evidence": [
+      "closed_world_declaration",
+      "derived_iso_tare"
+    ],
+    "case_inclusion": "all five frozen cases, including failures; no substitution, retries or exclusions",
+    "after_answers": "synthetic demo interaction only; never accuracy"
+  }
+}

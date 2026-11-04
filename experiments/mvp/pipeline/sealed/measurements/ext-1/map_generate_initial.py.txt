@@ -1,0 +1,190 @@
+"""D320A: same frozen envelope generator, fresh roots, isolated output paths."""
+from __future__ import annotations
+import argparse,concurrent.futures,hashlib,importlib,importlib.util,json,os,shutil,signal,subprocess,sys,time
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[6];HOME=Path(__file__).resolve().parent
+ORIGINAL=ROOT/'experiments/mvp/pipeline/maps';WORK=HOME/'map-generation';RUNTIME=ORIGINAL/'runtime'
+PREREG_SHA='ba3dcc46f4b773b484d156288d8ee5c5fe682b2fc8f4d5096ee2e37de211e206'
+MANIFEST_SHA='acf2f275efa73f45c43709f4a52807dd480390e1497f085cab11d3604265bbec'
+OBSERVED={}
+def sha(path):
+ h=hashlib.sha256()
+ with Path(path).open('rb') as stream:
+  for block in iter(lambda:stream.read(1024*1024),b''):h.update(block)
+ return h.hexdigest()
+def canonical(value,*,ensure_ascii=False):return json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=ensure_ascii,allow_nan=False).encode()
+def write(path,value):
+ path.parent.mkdir(parents=True,exist_ok=True);tmp=path.with_name(path.name+'.tmp');tmp.write_text(json.dumps(value,indent=2)+'\n');os.replace(tmp,path)
+def specs():
+ cells=[(s,f,g) for s in ('feeder_500','feeder_800') for f in (60,70) for g in ('random_yard','simulated_yard')]
+ return [dict(split='ext1',ship=s,fill_target=f,generator=g,rep=rep,cell_index=ci,
+  seed=306320000+100*ci+rep,path=str((HOME/'maps'/f'{s}-{g}-f{f}-r{rep}.json').relative_to(ROOT)))
+  for ci,(s,f,g) in enumerate(cells) for rep in range(3)]
+def wait_capacity():
+ while True:
+  try:
+   state=json.loads((ROOT/'experiments/fleet/core-state.json').read_text());mask=int(state['mask'],0) if isinstance(state['mask'],str) else int(state['mask']);age=time.time()-float(state['t'])
+   if mask.bit_count()>=8 and 0<=float(state['load1'])<=45 and 0<=age<120:return dict(state,age_s=age)
+  except (OSError,ValueError,TypeError,KeyError):pass
+  print('Extension generation waiting for fresh >=8core/load<=45 admission',flush=True);time.sleep(5.)
+def original_module():
+ sys.path.insert(0,str(ORIGINAL))
+ spec=importlib.util.spec_from_file_location('ext1_frozen_envelope_generator',ORIGINAL/'generate.py')
+ module=importlib.util.module_from_spec(spec);sys.modules[spec.name]=module;spec.loader.exec_module(module)
+ module.HERE=WORK;module.ROOT=ROOT;module.RUNTIME=RUNTIME
+ return module
+
+def configure(row):
+ if any(n=='stowage' or n.startswith('stowage.') for n in sys.modules):raise RuntimeError('Generation needs a fresh frozen-runtime process')
+ for key in list(os.environ):
+  if key.startswith('STOWAGE_'):del os.environ[key]
+ os.environ['STOWAGE_VESSEL_CACHE_DIR']=str(WORK/'cache/vessels');os.environ['TMPDIR']=str(WORK/'tmp')
+ import tempfile
+ tempfile.tempdir=str(WORK/'tmp')
+ sys.path.insert(0,str(RUNTIME/'src'))
+ spec=importlib.util.spec_from_file_location('ext1_frozen_corpus_builder',RUNTIME/'experiments/mvp/corpus_tools/build.py')
+ build=importlib.util.module_from_spec(spec);sys.modules[spec.name]=build;spec.loader.exec_module(build);build.ROOT=RUNTIME
+ # Routing only: preserve cache keys, certificate bytes and all physics/producer functions.
+ cache=importlib.import_module('stowage.linear.cache');cache._DEFAULT_ROOT=WORK/'cache/linear'
+ for name,attribute in (('stability_tables','CACHE_DIR'),('stability_sounding','CACHE_DIRECTORY'),('stability_liquid','CACHE_DIRECTORY'),('stability_liquid_tables','CACHE_DIRECTORY')):
+  module=importlib.import_module('stowage.checker.'+name);setattr(module,attribute,WORK/'cache/stability')
+ tables=importlib.import_module('stowage.checker.stability_tables')
+ for name in ('load_table_geometry','cached_geometry','migrate_legacy'):
+  function=getattr(tables,name);defaults=function.__kwdefaults__ or {};function.__kwdefaults__=dict(defaults,cache_dir=WORK/'cache/stability')
+ io=importlib.import_module('stowage.io');original_save=io.save_instance
+ def observed_save(instance,path,**kwargs):
+  result=original_save(instance,path,**kwargs)
+  if Path(path).absolute()==ROOT/row['path']:
+   payload=instance.model_dump(mode='json')
+   OBSERVED.update(canonical_instance_sha256=hashlib.sha256(canonical(payload)).hexdigest(),canonical_ascii_instance_sha256=hashlib.sha256(canonical(payload,ensure_ascii=True)).hexdigest(),instance_id=instance.id)
+  return result
+ io.save_instance=observed_save
+ return build
+
+def guard_repository_writes(row):
+ fd=os.open(WORK/f"writes-{row['seed']}.jsonl",os.O_WRONLY|os.O_CREAT|os.O_APPEND,0o600)
+ def hook(event,args):
+  paths=[]
+  if event=='open':
+   path,mode,flags=args
+   if not ((isinstance(mode,str) and any(c in mode for c in 'wax+')) or isinstance(flags,int) and flags&(os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC)):return
+   paths=[path]
+  elif event in ('os.rename','os.remove','os.mkdir','os.rmdir'):
+   paths=args[:2] if event=='os.rename' else args[:1]
+  else:return
+  for value in paths:
+   if not isinstance(value,(str,bytes,os.PathLike)):continue
+   path=Path(os.fsdecode(value)).absolute()
+   if path.is_relative_to(ROOT):
+    allowed=path.is_relative_to(HOME)
+    os.write(fd,(json.dumps(dict(event=event,path=str(path.relative_to(ROOT)),allowed=allowed))+'\n').encode())
+    if not allowed:raise RuntimeError('Extension generation attempted a repository write outside its excluded fence')
+ sys.addaudithook(hook)
+
+def child(index):
+ row=specs()[index];admission=wait_capacity();claim=WORK/'claims'/f"{row['seed']}.json"
+ claim.parent.mkdir(parents=True,exist_ok=True)
+ fd=os.open(claim,os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
+ with os.fdopen(fd,'w') as stream:json.dump(dict(row=row,pid=os.getpid(),started=time.time()),stream)
+ guard_repository_writes(row)
+ module=original_module();module.configure=lambda:configure(row)
+ started=time.time()
+ try:
+  with open(os.devnull,'w') as sink:
+   from contextlib import redirect_stdout,redirect_stderr
+   with redirect_stdout(sink),redirect_stderr(sink):result=module._make_one(row,admission)
+  if not OBSERVED.get('canonical_instance_sha256'):raise RuntimeError('Generator did not publish its canonical identity')
+  result.update(OBSERVED,map_id='ext-1:'+str(row['seed']),cohort='envelope24',ship_id=row['ship'],parent_root_seed=row['seed'],
+   generator_source_sha256=sha(ORIGINAL/'generate.py'),wrapper_sha256=sha(__file__),prereg_sha256=PREREG_SHA,
+   mode='held-out-extension-generation',plan_checked=False,planner_called=False)
+ except BaseException as error:
+  result=dict(row,generation_status='failed',schema_valid=False,error_type=type(error).__name__,
+   error='Producer/schema/envelope generation unavailable; no redraw or replacement seed.',map_id='ext-1:'+str(row['seed']),cohort='envelope24',ship_id=row['ship'],plan_checked=False,planner_called=False)
+ result['generation_wall_s']=time.time()-started;write(WORK/'status'/f"{row['seed']}.json",result)
+ return 0 if result['generation_status']=='accepted' else 2
+
+def prepare():
+ if sha(HOME/'PREREG.md')!=PREREG_SHA:raise RuntimeError('Registration changed')
+ manifest_path=ROOT/'experiments/mvp/pipeline/freeze/manifest-pipeline.json'
+ if sha(manifest_path)!=MANIFEST_SHA:raise RuntimeError('Expected v4 manifest differs')
+ manifest=json.loads(manifest_path.read_text())
+ for name in ('generate.py','requests.json','runtime-snapshot.json'):
+  source=ORIGINAL/name;relative=str(source.relative_to(ROOT))
+  if sha(source)!=manifest['files'].get(relative):raise RuntimeError('Frozen generator identity drift: '+relative)
+ proof=json.loads((HOME/'map-seed-proof.json').read_text())
+ if not proof['no_seed_collision'] or proof['errors'] or not proof.get('structural_seed_coverage_complete') or not proof.get('ready_for_generation'):raise RuntimeError('Seed audit must complete without collisions/errors and with structural range coverage')
+ if proof['proposed_seeds']!=[row['seed'] for row in specs()]:raise RuntimeError('Audited seeds differ from generation requests')
+ if (WORK/'requests.json').exists():raise RuntimeError('Generation requests already fixed; refusing prepare overwrite')
+ snapshot=json.loads((ORIGINAL/'runtime-snapshot.json').read_text())
+ cache_files=[]
+ for name,digest in snapshot['acceleration_cache_files'].items():
+  source=RUNTIME/name
+  if sha(source)!=digest:raise RuntimeError('Frozen acceleration cache changed: '+name)
+  relative=Path(name).relative_to('experiments/cache');target=WORK/'cache'/relative
+  target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,target);cache_files.append(dict(source=name,sha256=digest,bytes=source.stat().st_size))
+ for name in ('PREREG.md','runtime-snapshot.json','SEED-AUDIT-PRE.json'):
+  source=HOME/'PREREG.md' if name=='PREREG.md' else ORIGINAL/name if name=='runtime-snapshot.json' else HOME/'map-seed-proof.json'
+  shutil.copy2(source,WORK/name)
+ (WORK/'tmp').mkdir(exist_ok=True)
+ request=dict(generator_sha256=sha(ORIGINAL/'generate.py'),prereg_sha256=PREREG_SHA,
+  seed_audit_sha256=sha(WORK/'SEED-AUDIT-PRE.json'),runtime_snapshot_sha256=sha(WORK/'runtime-snapshot.json'),
+  source_files=json.loads((ORIGINAL/'requests.json').read_text())['source_files'],specs=specs())
+ write(WORK/'requests.json',request)
+ write(HOME/'map-cache-copy-proof.json',dict(files=cache_files,files_copied=len(cache_files),source_runtime_snapshot_sha256=sha(ORIGINAL/'runtime-snapshot.json'),plans_copied=False,source_files_copied=False))
+ write(HOME/'map-seeds.json',dict(seeds=[row['seed'] for row in specs()],formula='306320000+100*cell_index+rep',specs=specs()))
+ write(HOME/'map-cells.json',dict(cells=[dict(cell_index=row['cell_index'],ship=row['ship'],fill_target=row['fill_target'],generator=row['generator'],replicates=3) for row in specs()[::3]],total_maps=24))
+
+def one(index):
+ row=specs()[index];wait_capacity();log=WORK/'logs'/f"{row['seed']}.log";log.parent.mkdir(parents=True,exist_ok=True)
+ with log.open('ab',buffering=0) as stream:
+  process=subprocess.Popen([sys.executable,str(Path(__file__).resolve()),'--child',str(index)],cwd=ROOT,stdout=stream,stderr=subprocess.STDOUT,start_new_session=True,stdin=subprocess.DEVNULL)
+  with (WORK/'owned-pids.jsonl').open('a') as ledger:ledger.write(json.dumps(dict(seed=row['seed'],pid=process.pid,started=time.time(),hard_generation_wall_s=1200))+'\n')
+  try:return process.wait(timeout=1200)
+  except subprocess.TimeoutExpired:
+   try:os.killpg(process.pid,signal.SIGTERM)
+   except (ProcessLookupError,PermissionError):pass
+   try:process.wait(timeout=5)
+   except subprocess.TimeoutExpired:
+    try:os.killpg(process.pid,signal.SIGKILL)
+    except (ProcessLookupError,PermissionError):pass
+   write(WORK/'status'/f"{row['seed']}.json",dict(row,generation_status='failed',schema_valid=False,error_type='GenerationDeadline',map_id='ext-1:'+str(row['seed']),cohort='envelope24',ship_id=row['ship'],error='Generation hard deadline; no redraw.'))
+   return 124
+
+def publish():
+ prior=json.loads((HOME/'map-prior-identities.json').read_text());known=set(prior['digests']);rows=[];collisions=[];seen=set()
+ for row in specs():
+  path=WORK/'status'/f"{row['seed']}.json"
+  result=json.loads(path.read_text()) if path.exists() else dict(row,generation_status='failed',schema_valid=False,error_type='MissingTerminal',map_id='ext-1:'+str(row['seed']),cohort='envelope24',ship_id=row['ship'])
+  if result['generation_status']=='accepted':
+   for field in ('sha256','canonical_instance_sha256','canonical_ascii_instance_sha256'):
+    digest=result[field]
+    if digest in known or digest in seen:collisions.append(dict(seed=row['seed'],field=field,digest=digest,prior_sources=prior['digests'].get(digest,[])))
+   seen.update(result[field] for field in ('sha256','canonical_instance_sha256','canonical_ascii_instance_sha256'))
+  rows.append(result)
+ manifest=dict(schema_version='stowlm.ext1.maps-manifest/1',label='fresh held-out extension, run after the freeze; not the pre-registered sealed claim',maps=rows,
+  prereg_sha256=PREREG_SHA,seed_proof_sha256=sha(HOME/'map-seed-proof.json'),generator_source_sha256=sha(ORIGINAL/'generate.py'),all_registered_requests_accounted=True)
+ write(HOME/'maps-manifest.json',manifest)
+ proof=dict(schema_version='stowlm.ext1.digest-proof/1',metadata_only_prior_comparison=True,prior_digest_count=len(known),
+  prior_identity_inventory_sha256=sha(HOME/'map-prior-identities.json'),maps_manifest_sha256=sha(HOME/'maps-manifest.json'),
+  compared_fields=['saved bytes SHA256','canonical full Instance.model_dump(mode=json), UTF-8 and legacy ensure_ascii serializers SHA256'],canonical_serialization='JSON sorted keys; compact separators; ensure_ascii=False primary (contract), ensure_ascii=True compatibility; allow_nan=False',
+  prior_digests_conservative_superset=True,collisions=collisions,unique_generated_digests=len(seen),
+  accepted=sum(row['generation_status']=='accepted' for row in rows),failed=sum(row['generation_status']!='accepted' for row in rows),
+  ready=not collisions and all(row['generation_status']=='accepted' for row in rows),
+  coverage_limits=json.loads((HOME/'map-seed-proof.json').read_text())['coverage_limits'],
+  planners_run=0,old_map_payloads_opened=0,seeds_redrawn=0)
+ write(HOME/'map-digest-proof.json',proof)
+ print(json.dumps({key:proof[key] for key in ('ready','accepted','failed','collisions','prior_digest_count')}),flush=True)
+
+def main():
+ cli=argparse.ArgumentParser();cli.add_argument('--prepare',action='store_true');cli.add_argument('--generate',action='store_true');cli.add_argument('--child',type=int);args=cli.parse_args()
+ if args.child is not None:return child(args.child)
+ if args.prepare:prepare();return 0
+ if args.generate:
+  if (WORK/'STARTED.json').exists():raise RuntimeError('Generation already started; never redraw registered requests')
+  write(WORK/'STARTED.json',dict(started=time.time(),workers=2,prereg_sha256=PREREG_SHA,wrapper_sha256=sha(__file__)))
+  try:
+   with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:list(pool.map(one,range(24)))
+  finally:publish()
+  return 0
+ cli.error('Use --prepare, then --generate, or a child index')
+if __name__=='__main__':raise SystemExit(main())

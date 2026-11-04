@@ -1,0 +1,18 @@
+# ASSUMPTION: Synthetic next-call water environment only; no measured dock data.
+id = "cat_lai_like"
+label = "Cat Lai-like river/estuary next-call environment"
+description = "Synthetic arrival-water scenario for VNSGN; not a terminal or yard model."
+synthetic = true
+profile_kind = "next_call_environment"
+locode = "VNSGN"
+schema_version = { value = 1, unit = "version", assumption = "ASSUMPTION: Initial lightweight next-call environment parameter contract." }
+berthing_side = "port"
+berthing_side_assumption = "ASSUMPTION: synthetic port-side berthing default; no berth survey is supplied."
+water_density_kg_m3 = { value = 1000, unit = "kg/m3", assumption = "ASSUMPTION: Cat Lai on the Saigon River is treated as a river/estuary berth with fresh water density of 1000 kg/m3, the conservative choice for draught. There are no measured dock data; brackish water could reach about 1015 kg/m3. This is synthetic scenario input, not a dock survey." }
+berth_depth_m = { value = 10, unit = "m", assumption = "APPROXIMATION: synthetic representative berth depth 10 m; no surveyed terminal or channel depth is supplied. This is scenario input, not a navigational declaration." }
+berth_depth_assumption = "APPROXIMATION: representative synthetic berth; any published depth is context for this scenario, not measured permission at every berth. With rule freeze v1 on, depth is used directly as PortProfile.max_draught_m. No tide or UKC increment is credited; no separate UKC reserve is modelled. Unknown legacy limits remain None with the switch off."
+
+[quay_crane]
+gross_moves_per_hour = { value = 20, unit = "moves/h/crane", assumption = "APPROXIMATION: synthetic D74 amended per-crane gross productivity; UNVERIFIED range 20-35 moves/h/crane, selected 20; pending expert Q23/Q30, not a measured terminal rate." }
+pre_operation_allowance_h = { value = 1.0, unit = "h", assumption = "APPROXIMATION: synthetic D74 amended pre-operation pumping allowance; UNVERIFIED range 0.25-1.5 h, selected 1.0 h; pending expert Q23/Q30." }
+post_operation_allowance_h = { value = 1.0, unit = "h", assumption = "APPROXIMATION: synthetic D74 amended post-operation pumping allowance; UNVERIFIED range 0.25-1.0 h, selected 1.0 h; pending expert Q23/Q30." }

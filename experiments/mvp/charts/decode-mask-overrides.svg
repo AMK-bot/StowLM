@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Decode-mask overrides before and after fine-tuning</title>
+<desc id="desc">Recorded validation study, not sealed accuracy. Almost all overrides concerned output format; neither arm had an illegal bay or tier. Both remaining overrides concerned sentences the reader should have refused.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif} line,rect,circle,path{vector-effect:non-scaling-stroke}</style>
+<rect width="1200" height="720" fill="#ffffff"/>
+<metadata id="chart-data">{&quot;facts&quot;: {&quot;fine_tuned&quot;: {&quot;count&quot;: 200, &quot;overrides&quot;: 2}, &quot;untrained&quot;: {&quot;count&quot;: 200, &quot;overrides&quot;: 182}}, &quot;sources&quot;: [{&quot;path&quot;: &quot;experiments/mvp/reader/v3/results-final/mask-study/report-base.json&quot;, &quot;sha256&quot;: &quot;795009c1dc3e277365279adc5902860a2eab847b0ab1f08c37b1d768976bc077&quot;}, {&quot;path&quot;: &quot;experiments/mvp/reader/v3/results-final/mask-study/report.json&quot;, &quot;sha256&quot;: &quot;4774b875747953fbd1dd7652e3ed12ec04d905545c937baa40e300f95ec84173&quot;}, {&quot;path&quot;: &quot;docs/headline.md&quot;, &quot;sha256&quot;: &quot;48f8315729481c665f15807dc468911ac313ad7f71a07bad5e505573348f3d06&quot;}]}</metadata>
+<text x="36" y="46" font-size="28" fill="#17212b" text-anchor="start" font-weight="bold">Decode-mask overrides before and after fine-tuning</text>
+<text x="36" y="79" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">Validation sentences; recorded results. Synthetic ships and cargo, simulated port.</text>
+<text x="36" y="112" font-size="18" fill="#17212b" text-anchor="start" font-weight="bold">almost all were the output format, not ship facts; none was an illegal bay or tier</text>
+<text x="36" y="145" font-size="18" fill="#17212b" text-anchor="start" font-weight="bold">both of the 2 were sentences it should have refused; what&#x27;s left is legal and still wrong,</text>
+<text x="36" y="173" font-size="18" fill="#17212b" text-anchor="start" font-weight="bold">which is why a person confirms.</text>
+<text x="36" y="208" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">A sentence is counted when the mask overrode the model&#x27;s first choice at least once.</text>
+<line x1="300.0" y1="256" x2="300.0" y2="494" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="446.0" y1="256" x2="446.0" y2="494" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="592.0" y1="256" x2="592.0" y2="494" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="738.0" y1="256" x2="738.0" y2="494" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="884.0" y1="256" x2="884.0" y2="494" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="1030.0" y1="256" x2="1030.0" y2="494" stroke="#e1e6eb" stroke-width="1"/>
+<text x="36" y="254" font-size="16" fill="#17212b" text-anchor="start" font-weight="normal">Model / training</text>
+<text x="1158" y="254" font-size="16" fill="#17212b" text-anchor="end" font-weight="normal">Sentences / total</text>
+<text x="36" y="317" font-size="20" fill="#17212b" text-anchor="start" font-weight="bold">Before: untrained</text>
+<rect x="300" y="286" width="664.3" height="48" rx="2" fill="#536574" stroke="none"/>
+<text x="1158" y="317" font-size="26" fill="#17212b" text-anchor="end" font-weight="bold">182/200</text>
+<text x="36" y="433" font-size="20" fill="#17212b" text-anchor="start" font-weight="bold">After: tuned v3</text>
+<rect x="300" y="402" width="7.3" height="48" rx="2" fill="#0072B2" stroke="none"/>
+<text x="1158" y="433" font-size="26" fill="#17212b" text-anchor="end" font-weight="bold">2/200</text>
+<line x1="300" y1="494" x2="1030" y2="494" stroke="#536574" stroke-width="1.5"/>
+<line x1="300.0" y1="494" x2="300.0" y2="500" stroke="#536574" stroke-width="1"/>
+<text x="300.0" y="522" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">0</text>
+<line x1="446.0" y1="494" x2="446.0" y2="500" stroke="#536574" stroke-width="1"/>
+<text x="446.0" y="522" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">40</text>
+<line x1="592.0" y1="494" x2="592.0" y2="500" stroke="#536574" stroke-width="1"/>
+<text x="592.0" y="522" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">80</text>
+<line x1="738.0" y1="494" x2="738.0" y2="500" stroke="#536574" stroke-width="1"/>
+<text x="738.0" y="522" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">120</text>
+<line x1="884.0" y1="494" x2="884.0" y2="500" stroke="#536574" stroke-width="1"/>
+<text x="884.0" y="522" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">160</text>
+<line x1="1030.0" y1="494" x2="1030.0" y2="500" stroke="#536574" stroke-width="1"/>
+<text x="1030.0" y="522" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">200</text>
+<text x="665.0" y="555" font-size="18" fill="#17212b" text-anchor="middle" font-weight="normal">Validation sentences with at least one override (count)</text>
+<rect x="36" y="590" width="1128" height="65" rx="8" fill="#f2f5f7" stroke="none"/>
+<text x="54" y="617" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">This measures intervention by the decode mask, not correctness of the model&#x27;s reading.</text>
+<text x="54" y="643" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">End-token swaps are excluded; the same 200-sentence validation sample is used in both arms.</text>
+<text x="36" y="688" font-size="15" fill="#17212b" text-anchor="start" font-weight="normal">Source: results-final/mask-study/report-base.json; full source paths and SHA-256 hashes in the chart README.</text>
+</svg>

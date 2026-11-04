@@ -1,0 +1,59 @@
+{
+  "schema_version": "stowlm.intake-fixture-freeze/1",
+  "frozen_before_scoring": true,
+  "synthetic": true,
+  "source_list": "experiments/mvp/frontier/lab/sets/quick_small.txt",
+  "selection": "Two development maps; prefer existing DG and reefer for trap realism. Not the pipeline sealed cohort.",
+  "cases": [
+    {
+      "split": "dev",
+      "source_map": "experiments/mvp/corpus/val/small/feeder_500/simulated_yard/seed-040100010.json",
+      "source_map_sha256": "e18262fd9af7cf86a5d6deb29c6212d956d96e3b55d2db4018f49668e81908d0",
+      "base_amendments": [
+        {
+          "row_id": "QZXU0000098",
+          "field": "reefer_setpoint_c",
+          "source_value": null,
+          "fixture_value": -18.0,
+          "reason": "Synthetic shipper declaration supplies a known answer absent from source map; the input documents deliberately omit it to plant the missing-setpoint trap."
+        }
+      ],
+      "rows": 13,
+      "traps": 7,
+      "files": {
+        "base_instance.json": "8935390d5274ba547fb085baed5f0627c249227d00062faf04f9e7a663142e60",
+        "booking_email.txt": "5cf58b1a7e342cc6443d47fd6c845d04ab2759f710f3d3f2fe0123d71a3cf01e",
+        "documents.json": "5d9e8d6c7ebbd1571d6ca463fadcbc124539d73a747eececfacd2b59f297bc46",
+        "expected.json": "129e4d299a767673e7d29a1ab5cfa0b40441910ffe85fe9a09785785b40768d1",
+        "gate_dump.csv": "6449100e11e32409d5e6a87d16a4335dd9d05f2bbdaf88fd193820002e0839ce",
+        "oracle_reading.json": "c3273593c13a11e380118fc8dcf6dd3bddca2dbefee9f54eaea63e17296505de",
+        "tally_sheet.png": "3fcf52f09c9f9d86d583547b2f77df6e26be067e0f37cded36b729bd48babf54"
+      }
+    },
+    {
+      "split": "heldout",
+      "source_map": "experiments/mvp/corpus/val/small/feeder_500/simulated_yard/seed-040100046.json",
+      "source_map_sha256": "8a7998c8c983a23c1af8defe0d01caf94f5648ca3a001991f9c4ba876dafc8a0",
+      "base_amendments": [
+        {
+          "row_id": "QZXU0000082",
+          "field": "reefer_setpoint_c",
+          "source_value": null,
+          "fixture_value": -18.0,
+          "reason": "Synthetic shipper declaration supplies a known answer absent from source map; the input documents deliberately omit it to plant the missing-setpoint trap."
+        }
+      ],
+      "rows": 12,
+      "traps": 7,
+      "files": {
+        "base_instance.json": "d50f8ebf8297ad58dcf3ed66ecc90042893bd2c6049ec08fe545e0e99098bef3",
+        "booking_email.txt": "18d6299f5003155a6d44495c6a5577fc9775cdd763dc63aa613ad25939ac0968",
+        "documents.json": "9d88b7183c5d1792c36aabc1774119357b3f31c958af0300a32ad976df538cc9",
+        "expected.json": "a0f1596de690b853f524d57b57f39c8627b2eafaeb9a3c20d0292ecfab990c96",
+        "gate_dump.csv": "8c7004db2e9dd7bf2d94dbd04a1146032a41cd9e76da01453682c45a6809423e",
+        "oracle_reading.json": "8e869c324eb8eef12d6bef279df46656d638101ef06f0c9da1d40db5e6c97c04",
+        "tally_sheet.png": "3dc96ea7195d4a825a231e99ece372480b040792eafcb6efc7fe6999ca5f9ccb"
+      }
+    }
+  ]
+}

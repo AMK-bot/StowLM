@@ -1,0 +1,11 @@
+/* Live-only additions; the instruction cards share the take-4 planner's styles. */
+.pl-live-instruct [data-live-audio] { max-width: 100%; color: var(--pl-instruct-muted); font: inherit; }
+.pl-live-instruct [data-live-audio]::file-selector-button { margin-right: 8px; padding: 6px 12px; border: 1px solid var(--pl-instruct-strong); border-radius: 6px; background: var(--pl-instruct-bg); color: var(--pl-instruct-text); font: inherit; cursor: pointer; }
+.pl-live-instruct [data-live-reading]:empty { display: none; }
+.pl-live-instruct-voice-option { display: flex; align-items: center; gap: 8px; }
+.pl-live-instruct [data-live-generated-voice] { margin: 0; accent-color: var(--pl-instruct-brand); }
+.pl-live-instruct [data-live-reader-status]:empty,
+.pl-live-instruct [data-live-voice-key-status]:empty,
+.pl-live-instruct [data-live-voice-status]:empty { display: none; }
+.pl-live-instruct-none { justify-self: start; }
+.pl-live-instruct-evidence pre { margin: 0; padding: 16px; border: 1px solid var(--pl-instruct-line); border-radius: 8px; background: var(--pl-instruct-surface); overflow: auto; }

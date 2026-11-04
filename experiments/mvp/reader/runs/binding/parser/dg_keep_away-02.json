@@ -1,0 +1,93 @@
+{
+  "type": "dg_keep_away",
+  "input": "experiments/mvp/corpus/val/small/feeder_500/random_yard/seed-040100048.json",
+  "baseline_file": "experiments/mvp/frontier/runs/val-0.9/random.small.40100048.0.2.json",
+  "instance_id": "random.small.40100048.0.2",
+  "sentence": "Class 3 \u2014 sorry, class 8 \u2014 one bay from bay 1 at minimum.",
+  "sealed_id": "sealed-052",
+  "expected": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "dg_keep_away",
+      "imdg_class": "8",
+      "min_bays": 1,
+      "away_from": {
+        "kind": "bay",
+        "bay": 1
+      }
+    }
+  },
+  "context": {
+    "id": "random.small.40100048.0.2",
+    "bays": [
+      1,
+      2,
+      3
+    ],
+    "max_tiers": {
+      "hold": 2,
+      "deck": 5
+    },
+    "max_tiers_by_bay": {
+      "1": {
+        "hold": 2,
+        "deck": 5
+      },
+      "2": {
+        "hold": 2,
+        "deck": 5
+      },
+      "3": {
+        "hold": 2,
+        "deck": 5
+      }
+    },
+    "has_accommodation": true,
+    "hatch_covers": [
+      "HC-002-P",
+      "HC-002-S"
+    ],
+    "ports": [
+      "SGSIN",
+      "MYPKG",
+      "THLCH"
+    ]
+  },
+  "baseline_weighted": 7.0,
+  "baseline_violations": [
+    "load QZXU0000040 -> 0020282: instruction: QZXU0000040 may not be stowed at 0020282"
+  ],
+  "baseline_violation_count": 1,
+  "capacity_screen": "necessary open-cell and surviving 40ft-pair screens passed; not a feasibility certificate",
+  "n_load": 13,
+  "input_sha256": "0317079d6da76fe03fa27cd0e71dec0936cce787f175f82cd2462ce0e6622b2e",
+  "case_id": "dg_keep_away-02",
+  "selection_rationale": "Openly baseline-screened, binding-enriched validation cohort: prefer violating stored best plans, then smaller load lists, then larger baseline weighted move count; one literal sealed sentence per distinct map. necessary open-cell and surviving 40ft-pair screens passed; not a feasibility certificate",
+  "baseline_sha256": "35100849dd616373b9372ba774c3174c84ad304e1b4c69e00be861cb24b4a42b",
+  "parsed": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "dg_keep_away",
+      "imdg_class": "8",
+      "min_bays": 1,
+      "away_from": {
+        "kind": "bay",
+        "bay": 1
+      }
+    }
+  },
+  "parser": {
+    "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":1}}}",
+    "request_id": "7e59e7e5-2405-41ff-8f11-7ca73c6804a4",
+    "cost_usd": "0.0019635",
+    "usage": {
+      "input_tokens": 544,
+      "output_tokens": 302,
+      "cached_tokens": 0
+    },
+    "prompt_sha256": "2d5db0dceca7d5ed15e7a757e901b47f452a7abd04e22e070e920f12d7a49fbd",
+    "reservation_context_bound_tokens": 32768
+  },
+  "parse_exact": true,
+  "parse_wall_s": 1.0870264589902945
+}

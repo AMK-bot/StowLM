@@ -1,0 +1,77 @@
+{
+  "measurement": "measured",
+  "tests": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "37",
+      "time": "8.590",
+      "timestamp": "2026-11-01T20:39:35.079123-05:00",
+      "hostname": "Andamans-MacBook-Pro.local"
+    }
+  ],
+  "source_sha256": {
+    "stored.py": "edc4443d510a2929184011037e0b382650d0207fca57eed6f8f55864a9c61b06",
+    "test_relaxed_review.py": "f091a241dab4ae2921308cac1d1164ba9a683b2a85dc4bc1fe3f23114be8b484",
+    "test_logic_review.py": "ad36d3608e14c6f69600b1887ea7a433c5b94cc0de421f15c19eeaf801d37b35",
+    "conftest.py": "91abf4c6185d91378d8d5e0d62d505e2f6e35360359b2945c0ddc393ee61516c",
+    "benchmark.py": "1d366c15b2ca3338adcc4eb2251f837e2c80e5ee539ac50586676958a88ae0cc",
+    "test_profile_finalize.py": "50b1d1ff20b65f2f184285e0ef6083ff00ad415cafd3a1e8af80a5c873f77d59",
+    "limits.py": "6ec0c14a7319faa3acb7e5cc8184b04543c9eccce25f25eff56dfd1dbf1ffee8",
+    "test_offline.py": "7c72f22b8616b64ec9220684acdfb24061308f1336ef6db0703900391f7e1079",
+    "test_preflight.py": "544491a752cd4f42acf197e198d10040b1dee9bc13e638179ecafe273c1028c0",
+    "test_runtime.py": "4a7624b004d748b8249d30f8f55107bd6beac76183f5439a422693f884821201",
+    "__init__.py": "14c6d40081b89800606f3d1dde6650bddaa2abb08eaf3a3fcc349739b210bfc9",
+    "test_cold_start.py": "87476e46330b5b45f77e95b278486c33add6f7d08b7e19ebb55c6b916bbf3a1d",
+    "offline.py": "fa54f19e170951f490164a4d5625beb8d899dc93ab19c3a942647cac9e92bc59",
+    "core.py": "e31ec9c0d208c97cd77b3eee05fa23bc58ce6391f4f93e5e6688c27fc53987ef",
+    "test_admission.py": "03750c05542ad06d04739d4dfbdcb454d77ad248be452621066e0356f21530be",
+    "test_profile_analysis.py": "f8a704668717b7f888c70ac59c52d580900f0b3bb5d5f38b5177209d9378f7b6",
+    "runtime.py": "635a22839f52386123d093fe55297100bdc36188f56f499f2a966cf4688e2527",
+    "test_runner.py": "ddc3241114fab15ec2a0fb32947eafc4be903b6581143824aa737f5cab6eea97",
+    "assembly.py": "95479793769a7b2e274a71859a30a9cc3533003d0880e5df8418429f81158b87",
+    "cold_start.py": "f49a0b34bd98cd349ef93a2e6740c565426ddf99cdefd088d48a243fbbaba432",
+    "test_envelope.py": "9863b603379c508dced8a5ef03e073901bf24af922a2ef981561fce36cf4f1b0",
+    "profile_analysis.py": "1cacdc926a600a8dec1cad3a643390ccf6d07370c8aad6a6c94a82622e217526",
+    "test_limits.py": "42f5b90918287f0a8f14cadffca27187c56c4a2efa8d03a3d568e6a7fb9830b2",
+    "profile_study.py": "0f2efb73870c30ea79801a992d00bb0bcb2a6b78efe7f63c3a6272ee80303847",
+    "admission.py": "a8afc463cc06a3785dea6fc7bdf7f35e0badd82292b7a7f6701b94f799f901bc",
+    "test_assembly.py": "c1990e24b95b2669077dd315730b8985d99c0c2953dee490e216adf023e509fd",
+    "test_failures.py": "24300fe2914c6ca396aac6683951462d44da3071ad79e231f6e63b17d297fa45",
+    "test_cli_profiles.py": "562e62774cc72fd57b46db89df975b511e30d5aea26438a5457e25db6232db4e",
+    "evidence.py": "8eb327bbd23c055f6427f491aab9f2776acf9cec9f0e8c0fa5fa1258077b9558",
+    "profiles.py": "667adbac293261afa5c3d03c4d1818e15f81667290856d2b78554d2f52694b71",
+    "__main__.py": "91c361d1b7963631d6befc2f3fc90fda8b372bac8ad6317e18c0acc7cace2adf",
+    "cache_seed.py": "19df40660a153b3e1b5f8683de8cced43d96777e617193207fb88ec93dca56cc",
+    "test_profile_study.py": "62db1dd169ac2a5355b86971b9dc01a4390e7d322727b74964b0bebaca0b8653",
+    "envelope.py": "1d63a089da9f1f6e78a53839c9a93374f823af08ac918bf28303dc46e1914d53",
+    "relaxed_probe.py": "35e60189a3370dd95704322bf9841afb04aea9590828861385a96e0e7ec8c1a1",
+    "preflight.py": "c7a451ce523af58111c968d3226cbb4125c49402a45a7914142a33bb7603fb5b",
+    "profile_finalize.py": "ffbbff74bf731279d6c3cb111c39cefb913fa45325423186de375f44bf57047c"
+  },
+  "launcher_sha256": "b82f289f0952c8b3c3854246e6bf2b166a88ac2479e4764fc76ad320e55f8d01",
+  "detached_launcher_pid": 80306,
+  "study": "measurements/profile-study-20261101",
+  "paid_calls": 0,
+  "gpu_calls": 0,
+  "integration_tests": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "47",
+      "time": "99.109",
+      "timestamp": "2026-11-01T20:42:07.871037-05:00",
+      "hostname": "Andamans-MacBook-Pro.local"
+    }
+  ],
+  "detached_verified_across_tool_calls": true,
+  "cohort_at_observation": {
+    "maps": 20,
+    "jobs": 160,
+    "source_sha256": "b44a90105290e54d6b749885aadc419d7d06073b1651ecf3a9d571b23b8e5c9a"
+  }
+}

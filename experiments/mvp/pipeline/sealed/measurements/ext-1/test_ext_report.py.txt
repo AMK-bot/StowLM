@@ -1,0 +1,120 @@
+"""Offline synthetic reporting regressions; copy to /tmp for pytest discovery."""
+import copy
+import csv
+import json
+from pathlib import Path
+import runpy
+
+import pytest
+
+PATH=Path('/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/ext_report.py.txt')
+api=runpy.run_path(str(PATH))
+
+
+def population(n=24):
+    return [dict(map_id=f'm{i}',sha256=f'{i:064x}',cohort='envelope24',
+        ship_id='feeder_500' if i<n/2 else 'feeder_800',
+        instruction_type=api['canonical'].RULE_TYPES[i%4]) for i in range(n)]
+
+
+def row(item,arm,*,passed=True):
+    return dict(map_id=item['map_id'],map_sha256=item['sha256'],ship_id=item['ship_id'],
+        cohort='envelope24',arm=arm,status='checked_plan' if passed else 'no_checked_plan',
+        passed=passed,full_checker_pass=passed,level=0 if passed else None,
+        audit_verified=True,audit_fresh_process=True,plan={} if passed else None,
+        instruction_type=item['instruction_type'],instruction_recheck=passed if arm=='instruction' else None,
+        counterfactual_instruction_recheck=False,final_cells={'b':['cell-a' if arm=='pipeline' else 'cell-b']},
+        lifts_total=10 if arm=='pipeline' else 12,lifts_current_port=6,
+        lifts_projected_later_port=4 if arm=='pipeline' else 6,weighted_lifts=10.,
+        wall_s=123.,child_elapsed_s=125.,audit_elapsed_s=20.,reading_wall_s=2.,
+        reading_status='accepted',confirmation_source='sealed_expected_match')
+
+
+def fixture():
+    maps=population();rows=[]
+    for i,item in enumerate(maps):
+        base=row(item,'pipeline');base['counterfactual_instruction_recheck']=i>=18
+        instructed=row(item,'instruction',passed=i<13 or i>=19)
+        twostep=row(item,'twostep',passed=False)
+        twostep.update(status='relaxed_plan',level=1,plan={})
+        if i==0:twostep.update(status='out_of_envelope',level=None,plan=None)
+        rows += [base,instructed,twostep]
+    return maps,rows
+
+
+def test_registered24_counts_ship_intervals_binding13_of18_and_separate_diagnostics():
+    maps,rows=fixture();summary,filled=api['summarize'](rows,maps)
+    assert len(filled)==summary['rows']==summary['expected_rows']==72
+    assert summary['complete'] and summary['verified_complete']
+    assert summary['arms']['pipeline']['passes_L0']==24
+    assert summary['arms']['instruction']['passes_L0']==18
+    assert summary['arms']['twostep']['passes_L0']==0
+    assert set(summary['arms'])=={'pipeline','twostep','instruction'}
+    assert summary['arms']['pipeline']['passes_L0_exact95']==pytest.approx([.8575264022774742,1])
+    assert all(c['expected_maps']==12 for c in summary['by_ship'].values())
+    assert summary['arms']['twostep']['relaxed_by_level']=={'L1':23}
+    assert summary['arms']['twostep']['out_of_envelope']==1
+    binding=summary['instruction']
+    assert binding['binding_obedient_passes']==13 and binding['rule_broken_maps']==18
+    assert binding['already_obeyed']==6 and binding['counterfactual_unavailable']==0
+    assert binding['plan_difference']['n']==18
+    assert binding['plan_difference']['mean_boxes']==1
+    assert binding['signed_lift_change']['lifts_total']['mean_difference_left_minus_right']==2
+    assert binding['already_obeyed_noise_floor']['lifts_total']['n']==5
+    assert sum(c['rule_broken_maps'] for c in summary['instruction_by_type'].values())==18
+    assert all(c['expected_maps']==6 for c in summary['instruction_types'].values())
+    assert summary['wall_times_quotable'] is False and summary['sealed_claim_eligible'] is False
+    assert all('wall_s' not in a and 'child_elapsed_s' not in a for a in summary['arms'].values())
+
+
+def test_missing_and_failed_audit_retained_not_passed_and_baseline_l0_not_denominator_gate():
+    maps=population(2);base=row(maps[0],'pipeline');base.update(status='relaxed_plan',level=1,passed=False,full_checker_pass=False)
+    instruction=row(maps[0],'instruction');bad=row(maps[1],'instruction');bad['audit_verified']=False
+    summary,filled=api['summarize']([base,instruction,bad],maps)
+    assert summary['expected_rows']==len(filled)==6 and summary['pending_rows']==3
+    assert not summary['complete'] and summary['provisional']
+    assert summary['arms']['instruction']['passes_L0']==1
+    assert summary['instruction']['rule_broken_maps']==1
+    assert summary['instruction']['binding_obedient_passes']==1
+    assert summary['instruction']['counterfactual_unavailable']==1
+    assert summary['instruction_types']['max_tiers']['instruction_recheck']['passed_denominator']>=0
+
+
+def test_duplicate_hash_and_unregistered_sensitivity_are_refused():
+    maps=population(1);r=row(maps[0],'pipeline')
+    with pytest.raises(ValueError,match='Duplicate'):
+        api['summarize']([r,r],maps)
+    bad=copy.deepcopy(r);bad['map_sha256']='f'*64
+    with pytest.raises(ValueError,match='hash'):
+        api['summarize']([bad],maps)
+    bad=copy.deepcopy(r);bad['arm']='twostep_300'
+    with pytest.raises(ValueError,match='unregistered'):
+        api['summarize']([bad],maps)
+
+
+def test_write_pilot_labels_no_public_timing_and_terminal_errors_complete(tmp_path):
+    glob=api['write_reports'].__globals__;oldhome,oldrun=glob['HOME'],glob['RUN']
+    glob['HOME'],glob['RUN']=tmp_path,tmp_path/'run'
+    try:
+        maps=population(1);run=tmp_path/'pilot';run.mkdir()
+        for arm in api['ARMS']:
+            target=run/'jobs'/api['object_hash'](dict(map_id='m0',arm=arm))[:24];target.mkdir(parents=True)
+            r=row(maps[0],arm,passed=False);r.update(status='error',audit_error='injected failed audit')
+            (target/'result.json').write_text(json.dumps(r))
+        summary=api['write_reports'](dict(run_dir=str(run),maps=maps,development_pilot=True,
+            label='DRY RUN on development map; excluded',preregistration_sha256='p',manifest_sha256='m'),reason='injected')
+        assert summary['complete'] and summary['error_rows']==3 and summary['provisional']
+        assert summary['label'].startswith('DRY RUN')
+        assert summary['arms']['pipeline']['passes_L0']==0
+        assert summary['provenance']['config_sha256']
+        with (run/'per-map.csv').open() as f:
+            reader=csv.DictReader(f);assert 'wall_s' not in reader.fieldnames and 'child_elapsed_s' not in reader.fieldnames
+            assert len(list(reader))==3
+        text=(run/'REPORT.md').read_text();assert 'DRY RUN' in text and '123.0' not in text
+        with pytest.raises(api['HarnessError'],match='escapes'):
+            api['_within'](tmp_path.parent/'escape.json')
+        (tmp_path/'link').symlink_to(run,target_is_directory=True)
+        with pytest.raises(api['HarnessError'],match='symlink'):
+            api['_within'](tmp_path/'link/report.json')
+    finally:
+        glob['HOME'],glob['RUN']=oldhome,oldrun

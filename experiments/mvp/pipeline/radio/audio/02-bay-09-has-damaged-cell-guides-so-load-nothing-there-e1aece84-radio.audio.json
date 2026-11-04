@@ -1,0 +1,19 @@
+{
+  "sha256": "a58f22b59df580548e99819016666350417cc52670667bb7ed3d550db844d066",
+  "duration_s": 4.8,
+  "frames": 115200,
+  "channels": 1,
+  "sample_rate": 24000,
+  "sample_width": 2,
+  "seed": 3786329732,
+  "snr_db": 12.0,
+  "measured_pre_quantization_snr_db": 12.0,
+  "bandpass_hz": [
+    300,
+    3400
+  ],
+  "filter": "first-order high-pass then low-pass",
+  "noise": "seeded uniform white; whole-clip RMS SNR after speech bandpass",
+  "global_peak_scale": 1.0,
+  "source_sha256": "03ef6af65fa51a17df5e45a56c4b8eba6fbd296554c6faf3e9b994fa6481aede"
+}

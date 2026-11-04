@@ -1,0 +1,2178 @@
+{
+  "captured_utc": "2026-11-03T06:04:30.224987+00:00",
+  "completion_marker_sha256": "26bbe635df8ec0b30f74370a3964b1c80b4decd22d3385ef727e2ffeef5563d8",
+  "independence": "No report or scoring implementation imported; no REPORT.md/report.json/figures read by capture.",
+  "input_sha256": {
+    "config.json": "7e055997243e1bce066b31be3c7b53549497b112e4f0fca67e3dbee43cd73e6e",
+    "instruction-allocation.json": "eee883cbc2dc03d3a9b396113326995a0c9ffd1c6a80de2b56d6fc9acc3af76e",
+    "rows.json": "6d3ffd91f22b3d06671b9ecbdefc07f4ebb5c0f271b62272b704a5b9a9dd6660"
+  },
+  "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim",
+  "metrics": {
+    "arms": {
+      "instruction": {
+        "all": {
+          "audit_errors": 0,
+          "deadline_exceeded": 6,
+          "engine_failures": 2,
+          "exact_95": [
+            0.6261582865113173,
+            0.9526463733927428
+          ],
+          "levels": {
+            "L0": 20,
+            "L4": 2
+          },
+          "missing_synthesized": 0,
+          "not_run": 0,
+          "out_of_envelope": 0,
+          "passes": 20,
+          "reader_failures": 0,
+          "relaxed_levels": {
+            "L4": 2
+          },
+          "statuses": {
+            "checked_plan": 16,
+            "deadline_exceeded": 6,
+            "relaxed_plan": 2
+          },
+          "trials": 24
+        },
+        "by_ship": {
+          "feeder_500": {
+            "audit_errors": 0,
+            "deadline_exceeded": 4,
+            "engine_failures": 2,
+            "exact_95": [
+              0.34887550641881554,
+              0.9007539088504167
+            ],
+            "levels": {
+              "L0": 8,
+              "L4": 2
+            },
+            "missing_synthesized": 0,
+            "not_run": 0,
+            "out_of_envelope": 0,
+            "passes": 8,
+            "reader_failures": 0,
+            "relaxed_levels": {
+              "L4": 2
+            },
+            "statuses": {
+              "checked_plan": 6,
+              "deadline_exceeded": 4,
+              "relaxed_plan": 2
+            },
+            "trials": 12
+          },
+          "feeder_800": {
+            "audit_errors": 0,
+            "deadline_exceeded": 2,
+            "engine_failures": 0,
+            "exact_95": [
+              0.7353515306029488,
+              1.0
+            ],
+            "levels": {
+              "L0": 12
+            },
+            "missing_synthesized": 0,
+            "not_run": 0,
+            "out_of_envelope": 0,
+            "passes": 12,
+            "reader_failures": 0,
+            "relaxed_levels": {},
+            "statuses": {
+              "checked_plan": 10,
+              "deadline_exceeded": 2
+            },
+            "trials": 12
+          }
+        }
+      },
+      "pipeline": {
+        "all": {
+          "audit_errors": 0,
+          "deadline_exceeded": 3,
+          "engine_failures": 0,
+          "exact_95": [
+            0.8575264022774743,
+            1.0
+          ],
+          "levels": {
+            "L0": 24
+          },
+          "missing_synthesized": 0,
+          "not_run": 0,
+          "out_of_envelope": 0,
+          "passes": 24,
+          "reader_failures": 0,
+          "relaxed_levels": {},
+          "statuses": {
+            "checked_plan": 21,
+            "deadline_exceeded": 3
+          },
+          "trials": 24
+        },
+        "by_ship": {
+          "feeder_500": {
+            "audit_errors": 0,
+            "deadline_exceeded": 3,
+            "engine_failures": 0,
+            "exact_95": [
+              0.7353515306029488,
+              1.0
+            ],
+            "levels": {
+              "L0": 12
+            },
+            "missing_synthesized": 0,
+            "not_run": 0,
+            "out_of_envelope": 0,
+            "passes": 12,
+            "reader_failures": 0,
+            "relaxed_levels": {},
+            "statuses": {
+              "checked_plan": 9,
+              "deadline_exceeded": 3
+            },
+            "trials": 12
+          },
+          "feeder_800": {
+            "audit_errors": 0,
+            "deadline_exceeded": 0,
+            "engine_failures": 0,
+            "exact_95": [
+              0.7353515306029488,
+              1.0
+            ],
+            "levels": {
+              "L0": 12
+            },
+            "missing_synthesized": 0,
+            "not_run": 0,
+            "out_of_envelope": 0,
+            "passes": 12,
+            "reader_failures": 0,
+            "relaxed_levels": {},
+            "statuses": {
+              "checked_plan": 12
+            },
+            "trials": 12
+          }
+        }
+      },
+      "twostep": {
+        "all": {
+          "audit_errors": 0,
+          "deadline_exceeded": 0,
+          "engine_failures": 0,
+          "exact_95": [
+            0.0010543524454697472,
+            0.2112016834569731
+          ],
+          "levels": {
+            "L0": 1,
+            "L4": 6,
+            "L5": 3
+          },
+          "missing_synthesized": 0,
+          "not_run": 0,
+          "out_of_envelope": 0,
+          "passes": 1,
+          "reader_failures": 0,
+          "relaxed_levels": {
+            "L4": 6,
+            "L5": 3
+          },
+          "statuses": {
+            "checked_plan": 1,
+            "no_checked_plan": 14,
+            "relaxed_plan": 9
+          },
+          "trials": 24
+        },
+        "by_ship": {
+          "feeder_500": {
+            "audit_errors": 0,
+            "deadline_exceeded": 0,
+            "engine_failures": 0,
+            "exact_95": [
+              0.0021075932318602264,
+              0.38479616515094406
+            ],
+            "levels": {
+              "L0": 1,
+              "L4": 4,
+              "L5": 3
+            },
+            "missing_synthesized": 0,
+            "not_run": 0,
+            "out_of_envelope": 0,
+            "passes": 1,
+            "reader_failures": 0,
+            "relaxed_levels": {
+              "L4": 4,
+              "L5": 3
+            },
+            "statuses": {
+              "checked_plan": 1,
+              "no_checked_plan": 4,
+              "relaxed_plan": 7
+            },
+            "trials": 12
+          },
+          "feeder_800": {
+            "audit_errors": 0,
+            "deadline_exceeded": 0,
+            "engine_failures": 0,
+            "exact_95": [
+              0.0,
+              0.2646484693970512
+            ],
+            "levels": {
+              "L4": 2
+            },
+            "missing_synthesized": 0,
+            "not_run": 0,
+            "out_of_envelope": 0,
+            "passes": 0,
+            "reader_failures": 0,
+            "relaxed_levels": {
+              "L4": 2
+            },
+            "statuses": {
+              "no_checked_plan": 10,
+              "relaxed_plan": 2
+            },
+            "trials": 12
+          }
+        }
+      }
+    },
+    "instruction": {
+      "all": {
+        "already_obeyed": 2,
+        "already_obeyed_passes": 2,
+        "audit_errors": 0,
+        "binding": {
+          "exact_95": [
+            0.5971542169221287,
+            0.9481327006875631
+          ],
+          "passes": 18,
+          "trials": 22
+        },
+        "changed_cells": {
+          "mean": 130.95454545454547,
+          "n": 22,
+          "sum": 2881
+        },
+        "counterfactual_unavailable": 0,
+        "deadline_exceeded": 6,
+        "engine_failures": 2,
+        "exact_95": [
+          0.6261582865113173,
+          0.9526463733927428
+        ],
+        "intended_rechecks": {
+          "failed": 0,
+          "passed": 22,
+          "unavailable": 2
+        },
+        "levels": {
+          "L0": 20,
+          "L4": 2
+        },
+        "missing_synthesized": 0,
+        "not_run": 0,
+        "out_of_envelope": 0,
+        "passes": 20,
+        "per_map": [
+          {
+            "changed_cells": 76,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320000"
+          },
+          {
+            "changed_cells": 82,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320001"
+          },
+          {
+            "changed_cells": 85,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320002"
+          },
+          {
+            "changed_cells": 87,
+            "counterfactual": "binding",
+            "instructed_pass": false,
+            "map_id": "ext-1:306320100"
+          },
+          {
+            "changed_cells": 84,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320101"
+          },
+          {
+            "changed_cells": 84,
+            "counterfactual": "already_obeyed",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320102"
+          },
+          {
+            "changed_cells": 94,
+            "counterfactual": "binding",
+            "instructed_pass": false,
+            "map_id": "ext-1:306320200"
+          },
+          {
+            "changed_cells": 98,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320201"
+          },
+          {
+            "changed_cells": null,
+            "counterfactual": "binding",
+            "instructed_pass": false,
+            "map_id": "ext-1:306320202"
+          },
+          {
+            "changed_cells": null,
+            "counterfactual": "binding",
+            "instructed_pass": false,
+            "map_id": "ext-1:306320300"
+          },
+          {
+            "changed_cells": 100,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320301"
+          },
+          {
+            "changed_cells": 93,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320302"
+          },
+          {
+            "changed_cells": 147,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320400"
+          },
+          {
+            "changed_cells": 150,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320401"
+          },
+          {
+            "changed_cells": 149,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320402"
+          },
+          {
+            "changed_cells": 165,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320500"
+          },
+          {
+            "changed_cells": 144,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320501"
+          },
+          {
+            "changed_cells": 149,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320502"
+          },
+          {
+            "changed_cells": 186,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320600"
+          },
+          {
+            "changed_cells": 184,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320601"
+          },
+          {
+            "changed_cells": 189,
+            "counterfactual": "already_obeyed",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320602"
+          },
+          {
+            "changed_cells": 175,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320700"
+          },
+          {
+            "changed_cells": 174,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320701"
+          },
+          {
+            "changed_cells": 186,
+            "counterfactual": "binding",
+            "instructed_pass": true,
+            "map_id": "ext-1:306320702"
+          }
+        ],
+        "reader_failures": 0,
+        "relaxed_levels": {
+          "L4": 2
+        },
+        "statuses": {
+          "checked_plan": 16,
+          "deadline_exceeded": 6,
+          "relaxed_plan": 2
+        },
+        "trials": 24
+      },
+      "by_type": {
+        "close_bay": {
+          "already_obeyed": 0,
+          "already_obeyed_passes": 0,
+          "audit_errors": 0,
+          "binding": {
+            "exact_95": [
+              0.22277809550351213,
+              0.9567281317072583
+            ],
+            "passes": 4,
+            "trials": 6
+          },
+          "changed_cells": {
+            "mean": 112.16666666666667,
+            "n": 6,
+            "sum": 673
+          },
+          "counterfactual_unavailable": 0,
+          "deadline_exceeded": 0,
+          "engine_failures": 2,
+          "exact_95": [
+            0.22277809550351213,
+            0.9567281317072583
+          ],
+          "intended_rechecks": {
+            "failed": 0,
+            "passed": 6,
+            "unavailable": 0
+          },
+          "levels": {
+            "L0": 4,
+            "L4": 2
+          },
+          "missing_synthesized": 0,
+          "not_run": 0,
+          "out_of_envelope": 0,
+          "passes": 4,
+          "per_map": [
+            {
+              "changed_cells": 76,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320000"
+            },
+            {
+              "changed_cells": 82,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320001"
+            },
+            {
+              "changed_cells": 87,
+              "counterfactual": "binding",
+              "instructed_pass": false,
+              "map_id": "ext-1:306320100"
+            },
+            {
+              "changed_cells": 94,
+              "counterfactual": "binding",
+              "instructed_pass": false,
+              "map_id": "ext-1:306320200"
+            },
+            {
+              "changed_cells": 150,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320401"
+            },
+            {
+              "changed_cells": 184,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320601"
+            }
+          ],
+          "reader_failures": 0,
+          "relaxed_levels": {
+            "L4": 2
+          },
+          "statuses": {
+            "checked_plan": 4,
+            "relaxed_plan": 2
+          },
+          "trials": 6
+        },
+        "dg_keep_away": {
+          "already_obeyed": 1,
+          "already_obeyed_passes": 1,
+          "audit_errors": 0,
+          "binding": {
+            "exact_95": [
+              0.4781762498950185,
+              1.0
+            ],
+            "passes": 5,
+            "trials": 5
+          },
+          "changed_cells": {
+            "mean": 138,
+            "n": 6,
+            "sum": 828
+          },
+          "counterfactual_unavailable": 0,
+          "deadline_exceeded": 0,
+          "engine_failures": 0,
+          "exact_95": [
+            0.5407418735600995,
+            1.0
+          ],
+          "intended_rechecks": {
+            "failed": 0,
+            "passed": 6,
+            "unavailable": 0
+          },
+          "levels": {
+            "L0": 6
+          },
+          "missing_synthesized": 0,
+          "not_run": 0,
+          "out_of_envelope": 0,
+          "passes": 6,
+          "per_map": [
+            {
+              "changed_cells": 85,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320002"
+            },
+            {
+              "changed_cells": 84,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320101"
+            },
+            {
+              "changed_cells": 147,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320400"
+            },
+            {
+              "changed_cells": 149,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320502"
+            },
+            {
+              "changed_cells": 189,
+              "counterfactual": "already_obeyed",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320602"
+            },
+            {
+              "changed_cells": 174,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320701"
+            }
+          ],
+          "reader_failures": 0,
+          "relaxed_levels": {},
+          "statuses": {
+            "checked_plan": 6
+          },
+          "trials": 6
+        },
+        "max_tiers": {
+          "already_obeyed": 0,
+          "already_obeyed_passes": 0,
+          "audit_errors": 0,
+          "binding": {
+            "exact_95": [
+              0.5407418735600995,
+              1.0
+            ],
+            "passes": 6,
+            "trials": 6
+          },
+          "changed_cells": {
+            "mean": 141.16666666666666,
+            "n": 6,
+            "sum": 847
+          },
+          "counterfactual_unavailable": 0,
+          "deadline_exceeded": 2,
+          "engine_failures": 0,
+          "exact_95": [
+            0.5407418735600995,
+            1.0
+          ],
+          "intended_rechecks": {
+            "failed": 0,
+            "passed": 6,
+            "unavailable": 0
+          },
+          "levels": {
+            "L0": 6
+          },
+          "missing_synthesized": 0,
+          "not_run": 0,
+          "out_of_envelope": 0,
+          "passes": 6,
+          "per_map": [
+            {
+              "changed_cells": 100,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320301"
+            },
+            {
+              "changed_cells": 93,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320302"
+            },
+            {
+              "changed_cells": 149,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320402"
+            },
+            {
+              "changed_cells": 144,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320501"
+            },
+            {
+              "changed_cells": 186,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320600"
+            },
+            {
+              "changed_cells": 175,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320700"
+            }
+          ],
+          "reader_failures": 0,
+          "relaxed_levels": {},
+          "statuses": {
+            "checked_plan": 4,
+            "deadline_exceeded": 2
+          },
+          "trials": 6
+        },
+        "one_port_per_hatch": {
+          "already_obeyed": 1,
+          "already_obeyed_passes": 1,
+          "audit_errors": 0,
+          "binding": {
+            "exact_95": [
+              0.14663279963467313,
+              0.9472550494736831
+            ],
+            "passes": 3,
+            "trials": 5
+          },
+          "changed_cells": {
+            "mean": 133.25,
+            "n": 4,
+            "sum": 533
+          },
+          "counterfactual_unavailable": 0,
+          "deadline_exceeded": 4,
+          "engine_failures": 0,
+          "exact_95": [
+            0.22277809550351213,
+            0.9567281317072583
+          ],
+          "intended_rechecks": {
+            "failed": 0,
+            "passed": 4,
+            "unavailable": 2
+          },
+          "levels": {
+            "L0": 4
+          },
+          "missing_synthesized": 0,
+          "not_run": 0,
+          "out_of_envelope": 0,
+          "passes": 4,
+          "per_map": [
+            {
+              "changed_cells": 84,
+              "counterfactual": "already_obeyed",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320102"
+            },
+            {
+              "changed_cells": 98,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320201"
+            },
+            {
+              "changed_cells": null,
+              "counterfactual": "binding",
+              "instructed_pass": false,
+              "map_id": "ext-1:306320202"
+            },
+            {
+              "changed_cells": null,
+              "counterfactual": "binding",
+              "instructed_pass": false,
+              "map_id": "ext-1:306320300"
+            },
+            {
+              "changed_cells": 165,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320500"
+            },
+            {
+              "changed_cells": 186,
+              "counterfactual": "binding",
+              "instructed_pass": true,
+              "map_id": "ext-1:306320702"
+            }
+          ],
+          "reader_failures": 0,
+          "relaxed_levels": {},
+          "statuses": {
+            "checked_plan": 2,
+            "deadline_exceeded": 4
+          },
+          "trials": 6
+        }
+      }
+    },
+    "integrity_issues": [],
+    "per_trial": [
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320000",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320000",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320000",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320001",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320001",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320001",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320002",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320002",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320002",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320100",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320100",
+        "passed": true,
+        "status": "deadline_exceeded"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320100",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320101",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320101",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320101",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320102",
+        "passed": true,
+        "status": "deadline_exceeded"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320102",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320102",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320200",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320200",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320200",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320201",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320201",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320201",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean",
+          "intended_instruction_obeyed",
+          "fresh_verified_predeadline_incumbent"
+        ],
+        "map_id": "ext-1:306320202",
+        "passed": false,
+        "status": "deadline_exceeded"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320202",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320202",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean",
+          "intended_instruction_obeyed",
+          "fresh_verified_predeadline_incumbent"
+        ],
+        "map_id": "ext-1:306320300",
+        "passed": false,
+        "status": "deadline_exceeded"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320300",
+        "passed": true,
+        "status": "deadline_exceeded"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320300",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320301",
+        "passed": true,
+        "status": "deadline_exceeded"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320301",
+        "passed": true,
+        "status": "deadline_exceeded"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320301",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320302",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320302",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320302",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320400",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320400",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320400",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320401",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320401",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320401",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320402",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320402",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320402",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320500",
+        "passed": true,
+        "status": "deadline_exceeded"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320500",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320500",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320501",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320501",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320501",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320502",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320502",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "unrelaxed",
+          "full_checker_pass",
+          "no_broken_rules",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320502",
+        "passed": false,
+        "status": "relaxed_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320600",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320600",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320600",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320601",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320601",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320601",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320602",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320602",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320602",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320700",
+        "passed": true,
+        "status": "deadline_exceeded"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320700",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320700",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320701",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320701",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320701",
+        "passed": false,
+        "status": "no_checked_plan"
+      },
+      {
+        "arm": "instruction",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320702",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "pipeline",
+        "failed_requirements": [],
+        "map_id": "ext-1:306320702",
+        "passed": true,
+        "status": "checked_plan"
+      },
+      {
+        "arm": "twostep",
+        "failed_requirements": [
+          "terminal_checked_status",
+          "L0",
+          "full_checker_pass",
+          "all_loaded",
+          "complete",
+          "replay_legal",
+          "checker_parts_present",
+          "checker_parts_clean"
+        ],
+        "map_id": "ext-1:306320702",
+        "passed": false,
+        "status": "no_checked_plan"
+      }
+    ],
+    "population": {
+      "maps": 24,
+      "not_run": 0,
+      "supplied_rows": 72,
+      "terminal_rows": 72,
+      "trials": 72
+    }
+  },
+  "phase": "FINAL",
+  "provenance": {
+    "checks": {
+      "all_candidate_passes_freshly_audited": true,
+      "all_readings_bound": true,
+      "digest_proof_clear": true,
+      "exact_confirmation_precedes_instruction_execution": true,
+      "freeze_receipts": true,
+      "map_cell_recipe": true,
+      "maps_config_identity": true,
+      "maps_manifest_hash": true,
+      "only_registered_extension_map_opens": true,
+      "planning_code_identity_attestation": true,
+      "prepass_commit:allocation_sha256": true,
+      "prepass_commit:draw_sha256": true,
+      "prepass_commit:job_sha256": true,
+      "prepass_commit:prepass_row_sha256": true,
+      "prepass_commit:process_receipt_sha256": true,
+      "prepass_config": true,
+      "preregistration_sha256": true,
+      "prior_identity_inventory_hash": true,
+      "prior_inventory_no_collision": true,
+      "range_no_collision:experiments/mvp/corpus/test-v3/manifest.json": true,
+      "range_no_collision:experiments/mvp/corpus_tools/v3-verification.json": true,
+      "range_no_collision:experiments/mvp/frontier/lab/c3/c3-layover/cohort/MANIFEST.json": true,
+      "range_no_collision:experiments/mvp/frontier/lab/c4/c3-layover/cohort/MANIFEST.json": true,
+      "range_no_collision:experiments/mvp/frontier/lab/c6/c3-layover/cohort/MANIFEST.json": true,
+      "range_no_collision:experiments/mvp/maskspeed/out/input-manifest.json": true,
+      "registered_manifest": true,
+      "registered_metadata_artifact_hashes": true,
+      "registered_recipe": true,
+      "registered_seed_sequences": true,
+      "seed_proof_bound": true,
+      "seed_proof_coverage": true,
+      "six_of_each_instruction": true,
+      "started_config_hash": true,
+      "unique:canonical_instance_sha256": true,
+      "unique:sha256": true,
+      "unique_allocation_ranks": true,
+      "worker_reading_replay_bound": true
+    },
+    "evidence": {
+      "allocation_rank_limit": "Rank/type and exact unique ranks are checked against committed raw draw; canonical public-facts ordering is not recomputed without opening map payloads.",
+      "candidate_audits": [
+        {
+          "arm": "pipeline",
+          "audit_pid": 28409,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/48d2db2062698230b3af528f",
+          "map_id": "ext-1:306320000",
+          "ok": true,
+          "planning_pid": 26635,
+          "target_sha256": "0ab41bd71775b23b48f8a45817a27cf96981e3f1cc7db4d5765c5e646796d122"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 29414,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/7bc13df46fdf3459c36f7954",
+          "map_id": "ext-1:306320000",
+          "ok": true,
+          "planning_pid": 28475,
+          "target_sha256": "073d4d40e50903651ee04a26786f130672d05648a4143f0349b3c0ca65efc31b"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 26962,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/fe4fd16fc98f0cab77cccc6a",
+          "map_id": "ext-1:306320001",
+          "ok": true,
+          "planning_pid": 26633,
+          "target_sha256": "e32d70dfa47f732de60b61c166bd8ba5e8486500cd3d39a5ada1d036e0770b8b"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 31239,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/ec1987c91f7db5f58e6a0bb6",
+          "map_id": "ext-1:306320001",
+          "ok": true,
+          "planning_pid": 27047,
+          "target_sha256": "e8fecc9e9f07913856ff32e3096a8245c5c3ff8dc90885c4260c75276218b02f"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 27720,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/11574340167f58509b489818",
+          "map_id": "ext-1:306320002",
+          "ok": true,
+          "planning_pid": 26634,
+          "target_sha256": "4cc10691bfbd72124b688cfb99d2f809abfa31603ac24641775a3f4918a853a3"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 28611,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/be9291df06ae1f104112bb44",
+          "map_id": "ext-1:306320002",
+          "ok": true,
+          "planning_pid": 28052,
+          "target_sha256": "b4d45570a6368a6aaff571ca58b32cc8c3709083c1c23bd145df0f0132d5694c"
+        },
+        {
+          "arm": "twostep",
+          "audit_pid": 28869,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/beb0d2a3e7d8239b5e0e3c88",
+          "map_id": "ext-1:306320002",
+          "ok": true,
+          "planning_pid": 28724,
+          "target_sha256": "fd29cff8784e3a4dbbb66fcdb898a4874838aa408684dff5d61a0d4cdb4bcb3c"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 32076,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/eff08ca9b84d97ab36ab1ece",
+          "map_id": "ext-1:306320100",
+          "ok": true,
+          "planning_pid": 26636,
+          "target_sha256": "7b37741c01071b4f7e253865b6442406a1d10d0ba5b270e22ca3a08fb2fc9072"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 29980,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/35c15403c6384d92b21d2ac5",
+          "map_id": "ext-1:306320101",
+          "ok": true,
+          "planning_pid": 28939,
+          "target_sha256": "a5331b24e4a2a2eae4feef20faab3cac7a2b6e14782bdd3b5fc466c5b08cfab0"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 32389,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/7fb94ac1137b3ee3eae0d942",
+          "map_id": "ext-1:306320101",
+          "ok": true,
+          "planning_pid": 30041,
+          "target_sha256": "e0a0eb53d5b9f5bcd928e842f1c25f5e910edaa1756270f8bbd2fa7103c432be"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 31951,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/1e7639df12c2ab34b3bbe135",
+          "map_id": "ext-1:306320102",
+          "ok": true,
+          "planning_pid": 29643,
+          "target_sha256": "76745c6a8bd2941643ea4a15583f06b6cfbf77b259658046c05a31371daacf5e"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 37674,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/1f83665d4016339a17f6825b",
+          "map_id": "ext-1:306320102",
+          "ok": true,
+          "planning_pid": 31999,
+          "target_sha256": "766ba4c0d645407c38f0ddfc2721bdbb8b436ea032a53dc81f95d8d4a9e65c77"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 33108,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/2db2768e59be02bf8f97aa70",
+          "map_id": "ext-1:306320200",
+          "ok": true,
+          "planning_pid": 31797,
+          "target_sha256": "42e28e0b20fd2ed2a54cf6176f07f5c77cc4df03d5ebd9e78eca807954922b3e"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 35029,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/c28422caa46a32e68599d9b0",
+          "map_id": "ext-1:306320201",
+          "ok": true,
+          "planning_pid": 33122,
+          "target_sha256": "80f117d07ebab26054ec3f5c325f3162495753e0040d4f1d21d89568c8a7c554"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 39732,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/9d92aa80a5aa0ee6cd5dbd57",
+          "map_id": "ext-1:306320201",
+          "ok": true,
+          "planning_pid": 35125,
+          "target_sha256": "df4cc89fae1ea892bea4734be874c038cadbba4f7ae68540239dd75557897bac"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 39476,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/744ed42978fa73df4ffb4af3",
+          "map_id": "ext-1:306320202",
+          "ok": true,
+          "planning_pid": 37892,
+          "target_sha256": "ab2e2f75124c1dc38c097d9436164d3e84238505c8f9e36de3bf803970c96ce7"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 51536,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/2446d5901e4353b4b910fe67",
+          "map_id": "ext-1:306320300",
+          "ok": true,
+          "planning_pid": 38183,
+          "target_sha256": "a487b67298418d1e2d5cacc44a05bfdb8057de3d84ea12dc0de1788a970dcaae"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 53712,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/b70ab7bb62c8c126266fb404",
+          "map_id": "ext-1:306320301",
+          "ok": true,
+          "planning_pid": 39916,
+          "target_sha256": "9b0081ddb1648d37db88b87967e306328cf6d7590dd722cabcf6aac506c7d8ea"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 58885,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/bef95a2ba2b9b810260334f6",
+          "map_id": "ext-1:306320301",
+          "ok": true,
+          "planning_pid": 53920,
+          "target_sha256": "62404036afa065dd1d66e60704a365788e166df2bf86e0293b5718a3cae08950"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 50425,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/0abb540963d1954ee26af3f2",
+          "map_id": "ext-1:306320302",
+          "ok": true,
+          "planning_pid": 40693,
+          "target_sha256": "19204fba5da96425d0fee00369b6f137ca69e7955733a73ccb8a96f048210645"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 55504,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/e9250c679032da899138775b",
+          "map_id": "ext-1:306320302",
+          "ok": true,
+          "planning_pid": 50898,
+          "target_sha256": "cf0419ebe89a7d1e19143c87c1be864ca6e2db9de23abea0211ebe3a06331bcd"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 54679,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/0235ad2c16aa0a0a94620c79",
+          "map_id": "ext-1:306320400",
+          "ok": true,
+          "planning_pid": 53884,
+          "target_sha256": "05f8f0a6884f489f1877d1f04d29677c848c467bc9f774ed9dc2e347d3ff1bad"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 56607,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/753a7b483f3b7f410ec83ee8",
+          "map_id": "ext-1:306320400",
+          "ok": true,
+          "planning_pid": 54718,
+          "target_sha256": "3ca4858e8f2f7dcb87f769f63da1957e497a6a76cee96ed40f4d892460e263e3"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 56809,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/f60c66b628a22c4d9f04fd04",
+          "map_id": "ext-1:306320401",
+          "ok": true,
+          "planning_pid": 55754,
+          "target_sha256": "b7cb0dbd17e85332c46b778f419c0d0ffe906acfa4b77ed1d0a38f5ab9b5e17d"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 59277,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/032d4eb5b723e5333b289300",
+          "map_id": "ext-1:306320401",
+          "ok": true,
+          "planning_pid": 57011,
+          "target_sha256": "6d64b7e267e2c5a09cecd0681eab359683c5f914091ebd9e051ac77fce7b8be4"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 58037,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/386f821c6b325f4ad0bae02d",
+          "map_id": "ext-1:306320402",
+          "ok": true,
+          "planning_pid": 57148,
+          "target_sha256": "efee5466135a931ab94e15b197a19a570fbc49659c572d807e8f04f2ca5e4cf4"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 58583,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/927cdba0a5705b0d0cdf3ab7",
+          "map_id": "ext-1:306320402",
+          "ok": true,
+          "planning_pid": 58112,
+          "target_sha256": "a1e40033d1c261b3211816dd59e546d7699dba33b932338db41a215d46c8d81f"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 69488,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/f165cc4c90744889410d0376",
+          "map_id": "ext-1:306320500",
+          "ok": true,
+          "planning_pid": 58470,
+          "target_sha256": "599cc9de1f22613fa8be954599560aa5784691fb5ab20318d58916878f0477a0"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 71622,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/fb43f245abfa833b7452cfd4",
+          "map_id": "ext-1:306320500",
+          "ok": true,
+          "planning_pid": 69528,
+          "target_sha256": "e4652015d05647fbe9068a5747a153badaa7936cb6b9bd145e68035b9c08912a"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 65743,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/cf7d932da999fc34831ff21a",
+          "map_id": "ext-1:306320501",
+          "ok": true,
+          "planning_pid": 59455,
+          "target_sha256": "66d0ceec9be915b00f663296368e5f32a8de03daca6667526c78e1c3391c492f"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 69240,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/9421b947c86c7a9a1e2a0a47",
+          "map_id": "ext-1:306320501",
+          "ok": true,
+          "planning_pid": 67127,
+          "target_sha256": "779fbfa800effdb846e11e231be7ec8dba029d855c41897ffa0b4a6899499167"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 68354,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/b6a3b0eff7164e060ddace61",
+          "map_id": "ext-1:306320502",
+          "ok": true,
+          "planning_pid": 60693,
+          "target_sha256": "034b297d6abdbdbfd176120cebe668673a41bc63c730c2f661ffad66ed710c36"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 69809,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/964ed3b74dd0f490a5a26a42",
+          "map_id": "ext-1:306320502",
+          "ok": true,
+          "planning_pid": 68476,
+          "target_sha256": "09271a0406605013e720846eafc3d4770e03158094957b31f7ece91b31b7b1fb"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 68355,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/cc7727f8fe710f9ab19a3895",
+          "map_id": "ext-1:306320600",
+          "ok": true,
+          "planning_pid": 60695,
+          "target_sha256": "a4a767d6d8662889543ce1315c984ecfeb4d5cee910ddae8971b9bb4afe75f73"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 69909,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/74353d778dfdb94f1b6af730",
+          "map_id": "ext-1:306320600",
+          "ok": true,
+          "planning_pid": 68477,
+          "target_sha256": "16b8cd56c9dfd340e4c18901c3191a02e906d4125187ab466b4dc22790461e82"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 70126,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/4c499b09b0674ca3764bd2c4",
+          "map_id": "ext-1:306320601",
+          "ok": true,
+          "planning_pid": 69440,
+          "target_sha256": "ccb2e8a0b795d8dcdea8f426f174b38ce9ea2eb24040ff8a5f82ff932ee99d66"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 71476,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/11d7fb5ca049fadde19a2829",
+          "map_id": "ext-1:306320601",
+          "ok": true,
+          "planning_pid": 70172,
+          "target_sha256": "0f3693d7ca45dc00e19c278e26d325bed1ec0f9955b7734881d262eccecf42e5"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 70617,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/7e6f94bacc67e17b03738456",
+          "map_id": "ext-1:306320602",
+          "ok": true,
+          "planning_pid": 70009,
+          "target_sha256": "05f15cac10d0396b94689f31dce774284fcc05be234c475d9608411d2d2b6cbf"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 71067,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/21bb9e2b685dcc1e226a093b",
+          "map_id": "ext-1:306320602",
+          "ok": true,
+          "planning_pid": 70674,
+          "target_sha256": "8480c95f4f6365fe39aa86761c98320467e95ac646cd3f980a462c20e6eed980"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 70766,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/65eeaa4d2a8112679fdbc7e4",
+          "map_id": "ext-1:306320700",
+          "ok": true,
+          "planning_pid": 70067,
+          "target_sha256": "c52bcb5902321179c8cd40882dad0c961dd542766a42b263defa0e8299a05e85"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 73627,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/2a0d953d000e8b6efe8d6412",
+          "map_id": "ext-1:306320700",
+          "ok": true,
+          "planning_pid": 70829,
+          "target_sha256": "5f3091b189385f9b35730644a97ce47d6ad1ec9b2907918f008a85751177278d"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 71853,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/dcd486b86e3120a25a50ef6e",
+          "map_id": "ext-1:306320701",
+          "ok": true,
+          "planning_pid": 71210,
+          "target_sha256": "b25c94350bd6a6e5a9bc9bef65c98a9498fb5f0d5ea04a878a2373aec79f18ae"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 73264,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/b971f9231d9d64ca041043a9",
+          "map_id": "ext-1:306320701",
+          "ok": true,
+          "planning_pid": 71875,
+          "target_sha256": "c1432edc9b627fe03e2a9eabc01077131b76d65bd3819e0950ef52a4d384da48"
+        },
+        {
+          "arm": "pipeline",
+          "audit_pid": 72247,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/c1aed3ff694286aa40725bbd",
+          "map_id": "ext-1:306320702",
+          "ok": true,
+          "planning_pid": 71604,
+          "target_sha256": "3dda50b83c13c1529be0d24deb5e4779ed66a823e8e15130bc8db5bb2aa1941e"
+        },
+        {
+          "arm": "instruction",
+          "audit_pid": 74888,
+          "errors": [],
+          "job_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/ddb95a1fd7b8a65fb49edaa7",
+          "map_id": "ext-1:306320702",
+          "ok": true,
+          "planning_pid": 72344,
+          "target_sha256": "6a594a6e65df1bf980c20b7e65844a07b86a46c052745fe98ed4669a39d5ce73"
+        }
+      ],
+      "closed_world_limit": "Published open logs show only registered ext-1 maps. This cannot detect unlogged file access, unrecorded prior seeds/digests or forbidden sealed payload contents; no map payload was opened by this verifier. Freeze and seed census coverage are independently hash-bound attestations, not a new execution of their original census/full-weight verifier.",
+      "fresh_candidate_audits": 45,
+      "opened_distinct_maps": 24,
+      "opened_events": 168,
+      "prior_identity_bytes": 260228317,
+      "seed_proof_coverage": {
+        "coverage_limits": [
+          "A closed-world statement about recorded external identity metadata, not unknown unrecorded payload contents.",
+          "Forbidden raw trees are not entered. Their public corpus/envelope manifests and requested lists are explicitly covered.",
+          "Plan/job/row payloads and symlinks are not opened. Identity values recorded only there are outside directly auditable metadata coverage.",
+          "Synthetic test workspaces and tool environments are excluded; their fake seeds are not experimental cohorts.",
+          "All hexadecimal metadata values are retained conservatively; an unknown recorded canonical identity outside selected metadata cannot be certified."
+        ],
+        "forbidden_raw_roots": [
+          "experiments/mvp/pipeline/maps/sealed",
+          "experiments/mvp/reader/v3/sealed",
+          "experiments/mvp/testv3",
+          "experiments/mvp/valsplit",
+          "data/raw/rcsppsuite"
+        ],
+        "metadata_cutoff_utc": "2026-11-03T03:16:44Z",
+        "metadata_files_checked": 14548,
+        "paths_checked": 5961686,
+        "prior_digest_count": 92237,
+        "prior_seed_count": 20140,
+        "skipped": {
+          "closed_or_own_dirs": 6,
+          "environment_dirs": 274,
+          "symlink_dirs": 6966,
+          "symlink_metadata": 999,
+          "synthetic_test_workspace_dirs": 127
+        }
+      },
+      "unanchored_metadata_receipts": [
+        "experiments/mvp/pipeline/sealed/measurements/ext-1/verify-before.json",
+        "experiments/mvp/pipeline/sealed/measurements/ext-1/verify-after.json"
+      ]
+    },
+    "inputs": {
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/PREREG.md": "ba3dcc46f4b773b484d156288d8ee5c5fe682b2fc8f4d5096ee2e37de211e206",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/map-digest-proof.json": "34b4bc97df7abab294762bcab8ebe37e2eda537461aeb5159539fada6bd2b1a7",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/map-prior-identities.json": "1053c5e8a5d63fc6d35a6886359622a6ff1b7e5a785e2de3e30ef9391afb3fc4",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/map-seed-proof.json": "e7c5f68801770b7fdf6cf7746fd09c72185ca0ac3db90974e9f71e1dd1dfbe2b",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/map-seeds.json": "6061edddd3bf2164c40c2bbf75b1c282ab6f4f1976c8a714d56a2463f6e34def",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/maps-manifest.json": "41ffddc689abb2c11c2c62cd61165b81b0fa13dccfcba23c6f577175dba5116f",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/planning-code-identity.json": "80df28e0bb5c6df1333315130dd46ca9935d91c9207c76ec886cc253467aedef",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/verify-after.json": "4c59ee31a4b2ca9696a97a8241c5b36ccf8a729d46e5b56815925b905dde3c29",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/verify-before.json": "a04d090779d1d077ded3482197c200934569289dd32a33c0fcda558fe099863e",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/PREPASS-COMMIT.json": "dc2b58328155bd16a5be20b9f85f041dc2916bab3e66325e0add6b809346b2fe",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/STARTED.json": "934159111a74ebc50c2711312352f937f2bf2a20b327fe2a42a933174e2b64ae",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/config.json": "7e055997243e1bce066b31be3c7b53549497b112e4f0fca67e3dbee43cd73e6e",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/instruction-allocation.json": "eee883cbc2dc03d3a9b396113326995a0c9ffd1c6a80de2b56d6fc9acc3af76e",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/0235ad2c16aa0a0a94620c79/job.json": "ac4a5358f00e6bcc8b02a109fd5369ff3b3eaec570a616389f907f45fab47b51",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/032d4eb5b723e5333b289300/job.json": "63dd94b5d3613a9bdd588bd49d730c01806fb9928569d5160976d1c62a821f52",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/032d4eb5b723e5333b289300/pipeline/events.jsonl": "b30369e15838a6482af5732ef691a1cd3d88a08da1829e9547cf7e2874f7ae63",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/06f9f0cb9567b49eb09a2729/job.json": "b718aca4a0c44cdf0bbe9fb6def2269c61a59298bf22c4a6be6536966e3c9a29",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/06f9f0cb9567b49eb09a2729/pipeline/events.jsonl": "317581748335d6e191d1f62aa32c90824bcb1f4b529760b0bd0cfac0e0b83d3e",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/0abb540963d1954ee26af3f2/job.json": "09666e8f33ef12abda1519576294963993fe4938cdead1892e3f49ccee7eb66d",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/0d1338fff0f06aa9afd0df87/job.json": "bee2c745c41753900f6b235d97d5ba0887c1764c739c2f264b1789e91a93d58e",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/11574340167f58509b489818/job.json": "9faf354760d0e5211965a72a6c5389b5946267d2c1fc1406a3b1dc6580670811",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/11d7fb5ca049fadde19a2829/job.json": "b966f31a91b0a8d482eb7519764e4e6fb95efa80efe2933c7a2ba5241e5116a9",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/11d7fb5ca049fadde19a2829/pipeline/events.jsonl": "8df837d85814facad14a91a6306dd8a05945861e3d1491f6b5504cb87cc7e670",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/1b95317ceca88e779949339f/job.json": "0d77a7651bfb33b5ac4df6cdf2383ff7aaa63009756f358b81a9d7671ff5acbc",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/1d4b05ac1e7675288d2b7c84/job.json": "918341ae3525d8f1e2d8be51625ff4d791cca718f2c784bb198078c53a0ebbd3",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/1e7639df12c2ab34b3bbe135/job.json": "9e9791edaa8550eeea33a29ac394f975c0fbc8d87b165c0884056c6c9e87d9b7",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/1f83665d4016339a17f6825b/job.json": "d5ccc459cdf412233d932cd218265df8fed1e148abab9583202561ace22c8535",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/1f83665d4016339a17f6825b/pipeline/events.jsonl": "d02c99aa66f7c04219f749195ceab9aabdc5a496f8a7ab0c0a42d8fbc8b8eae9",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/21bb9e2b685dcc1e226a093b/job.json": "39ee3f8aa2d5be7527cf63070f00a12f01a60431bab453305cc2d38f2b85f76a",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/21bb9e2b685dcc1e226a093b/pipeline/events.jsonl": "a423ea64cf3469b4ccc6ee90cb526e27edbfdbe1c36f6fceb63ba071b9d13210",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/2446d5901e4353b4b910fe67/job.json": "465cd27ef9b796b7eefe519596a24eec179f4feb578e6b5c2ed9a5a5ad45a061",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/29423facce6c8babd04221ec/job.json": "76d4e7af1cda94b18238c15cd2aa665bb8e83d0f13126118e5183ec14c172b85",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/29e42b0a1ddb97f052418bbe/job.json": "a79687f12aa264c8892bffd24b2abbda5fabcef85b8d325d3203a00038bcaa46",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/2a0d953d000e8b6efe8d6412/job.json": "10cde1c5d46745d617245e41d22700505e2cff6a7ca909c1bf40259261dcbf26",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/2a0d953d000e8b6efe8d6412/pipeline/events.jsonl": "4a288009ebee03f3934d83999ebd36365aaf9a102844069320bf76cb38ba23a0",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/2db2768e59be02bf8f97aa70/job.json": "78ec7b0784d578ef1ee47d2391421fba01e3319d196d79096faf43f4289fb0e1",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/35c15403c6384d92b21d2ac5/job.json": "82d5b5429a93d75f8ea342066ef8a683fffaaa3545df74d5470baf977a4b962a",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/386f821c6b325f4ad0bae02d/job.json": "f55644b6ce017974325dc2a76796658b4b70949f7a72d5a6f54ba2e96bf18506",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/3aab333df58f2648fd672433/job.json": "8bed95447af5987b1ccae4165b69c24f40f9e4ccf1f73a2d17faa4a900b20570",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/3b0052e2d4d286d45eaef639/job.json": "6cc0bbc352e591def9ea2c7a1323e394945914ef41d5391dd9da08d32a19f5f7",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/43eaa09290464a3921ef8814/job.json": "dd1b63555fa5be851adfe1fdd41855677a005268440dee7a03c957f773c1c145",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/48d2db2062698230b3af528f/job.json": "1e720832629d195753397de3a18e5cfc43506a17787c88e029bf23867d63bdec",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/490000cf97382b034d43c7aa/job.json": "28746591bc34f9116b99cfd21c1adc072ed078e0d5903453e684549d45d74d33",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/490000cf97382b034d43c7aa/pipeline/events.jsonl": "16c4d7de9e7d4086a55da6248b6b569754a61ae53a465b6c4c5313b6136e70d3",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/4c499b09b0674ca3764bd2c4/job.json": "eab2731f8afdbd6df304ef0ec9d280d166a2dd10f5af7d87e02fb245f00bf80d",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/5c4da9c8a50864e781cc3914/job.json": "1b870919a9fbc270ab5d987814130fdc640c4ce46cde582f8bc00bc0a8965416",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/5d51d20117f205c4bfdb2330/job.json": "2fa42308bbf92c48b68d56a4760a419660a8cd7e97e1f3e575351b615fbb2069",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/5d51d20117f205c4bfdb2330/pipeline/events.jsonl": "b585604d052c18cd9519c528f44986f47e6863825df8f2661794c8331f7b5ee6",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/624fc6f66d42b5c36952348a/job.json": "9ba055b4c6303d0ae4ff87d4d71b9fc28e354e997a8a31bbae9ff003509d7ba5",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/624fc6f66d42b5c36952348a/pipeline/events.jsonl": "6050b390134249aa5decd5cbe2e2763848787f33e8b7c9d36bdf2a92eb501a5b",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/65eeaa4d2a8112679fdbc7e4/job.json": "c923a24b2eb30398b7ad5915ff03d5328d3d6673ed34b901d40af023ea350ab3",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/74353d778dfdb94f1b6af730/job.json": "ca6d0f649c817b82428c9ec34e24a8943f73f5314c5ec71654f5f85c212b8502",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/74353d778dfdb94f1b6af730/pipeline/events.jsonl": "bbe9d1a56df81ab94647e13510ad2b767724a2462f864f9af4fff06cb9bdf090",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/744ed42978fa73df4ffb4af3/job.json": "7e5a96aa480760ba79e0a51ce58d4a6fccfa268af9e3854cd877f68b5caed7b8",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/74c4cd4be8d850990e49c92c/job.json": "54cf42c48c3ee51f3faea923476c0329ee91c77193f44d23fd2458fdd275dd59",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/753a7b483f3b7f410ec83ee8/job.json": "6500a430bf2931196b61d7b323b5b1c8bb797370920deff23227e1b76cf24287",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/753a7b483f3b7f410ec83ee8/pipeline/events.jsonl": "a9683e41131c671479121f1d6dcb4a8547669124168e25e77fbe82cc029964e1",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/7bc13df46fdf3459c36f7954/job.json": "5e2bad26b632dbecfce7f2cdee73c5e0d7868ac50d050db9b61ad008e9ef42e0",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/7bc13df46fdf3459c36f7954/pipeline/events.jsonl": "8a40f8a37ea235ad099483fbb3b5587d72e53bb08eb7f62168beb2ce87970979",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/7e6f94bacc67e17b03738456/job.json": "c91b2b5932963452936fe1a32fd4c6983ad0006f90277586e6306c4a6ae59972",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/7fb94ac1137b3ee3eae0d942/job.json": "d4515a6e4806e995798452201bea698a136c6c9aea4f312755b5fae226b1f943",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/7fb94ac1137b3ee3eae0d942/pipeline/events.jsonl": "013b87fc8e538e8fbe06a4ae440a1d3d0f448e2f4e7e54a562c28f86647cf4c7",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/82d591615241a3b1e7693e72/job.json": "3830d0a063149723a928b391bfa42113130191fd5baf2a8593883104953bcfc8",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/87a840ec4bbf7a07e70f3ef5/job.json": "01c51c9e9cb5be423bff2acb2a9817931e16460f9361235b502329ae4d79f328",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/89a4bf2e6b926e5cc118ffba/job.json": "83c0ba4c98c310f985fa3011534ac9fca437c0023b49bc2d8b16dcabdbc5b852",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/927cdba0a5705b0d0cdf3ab7/job.json": "f706ea21cb0a3a008bb5b56803faa90e9a701857d87fb74c59934da5561cbd5e",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/927cdba0a5705b0d0cdf3ab7/pipeline/events.jsonl": "9cf50e858230d0b9e38b8790220426093fde5393cd590d376a59a410c4a6ba71",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/9421b947c86c7a9a1e2a0a47/job.json": "a8f9e4277fcd9e00b9bec167c20835a6aa122fb506e7a2966eb20190466f83d0",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/9421b947c86c7a9a1e2a0a47/pipeline/events.jsonl": "635df71e2736c85eeecad32865513d53f193dde0ca1865cc31da237d6a662812",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/964ed3b74dd0f490a5a26a42/job.json": "c9b6232982741ab920607d92d8a17de3beef52e5419bcd4f68597f5c7b3e6484",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/964ed3b74dd0f490a5a26a42/pipeline/events.jsonl": "33613cdfc2e071d7a2653c7e68735eee655fc2bf60f69c95e602965141d67e99",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/9d92aa80a5aa0ee6cd5dbd57/job.json": "7fe20c7c4b0df7cc8dc0d50242c2a6e343ba9607f2841fa3e8bd04317430c8eb",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/9d92aa80a5aa0ee6cd5dbd57/pipeline/events.jsonl": "5021ea6062198ad321348479bc2202c0131abb95f450bbd612c7e183ecd029b2",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/a21c9d84210ab284cb861dc2/job.json": "af968e57ae9a2f8e59c4b71fbbd717862da4ef43650a6ffc18810aa6887d20b3",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/a6928a8447ea12dda14095e2/job.json": "9c8bb0e76a1c26a3e66d5d610986508eda7636df2a7e3ecd7b26aee1771fbba1",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/a7a231c65b4ac33011ec1347/job.json": "fbab443d16d817b3845a2b43283efcf1ce385d635317f87f18b70d3c61945ec2",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/b6a3b0eff7164e060ddace61/job.json": "0f675eca7f73ef03890adb709c351099aca3346626a74f68d909bd124f0dbf9b",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/b70ab7bb62c8c126266fb404/job.json": "cc7791cfda2973798caac306f0c1318fd25a98e66414c6025f174bab85eda07e",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/b971f9231d9d64ca041043a9/job.json": "e386f7ea13d8f5426b5989c7f19e62937dd1d364d14064f57baa96cb6f7353fb",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/b971f9231d9d64ca041043a9/pipeline/events.jsonl": "81ebf239917375640bd8854d122dee810912c658d196da5409fc359e9d125c4c",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/be9291df06ae1f104112bb44/job.json": "380ee29d8397e9f0957852c21bbbbc9349724624fa76d9680dd1af7a396298b5",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/be9291df06ae1f104112bb44/pipeline/events.jsonl": "78d35708b4d0007b70c908051b54c319f621e0600b9fa2b1418eefc5a552122c",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/beb0d2a3e7d8239b5e0e3c88/job.json": "6403c2d5a7c39179d07cf69e5b17fc009f79def15519b47349e3ad95b235f86a",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/bef95a2ba2b9b810260334f6/job.json": "e5f25bd6e9181b18e4d973f057b841af96c0661f1a56347884fa26521b2997f0",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/bef95a2ba2b9b810260334f6/pipeline/events.jsonl": "50fc190500a34240e61d81f797c99e34cf4e46fbe689063a9bfb313fa99182b1",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/c1aed3ff694286aa40725bbd/job.json": "95e2828dcd418435717ca2a2003396dd1333684109607e21c23d975739e165c0",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/c28422caa46a32e68599d9b0/job.json": "6f7d57f53340b169e403f8c3136099b3e560021284084e025f0d979ff95b1e71",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/c4b427999bb1d66105f9f6c3/job.json": "33919d2419a5b5ea1213bc6da3f199e84a431cb82fe98ed5e7d101b6d23c788d",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/cc7727f8fe710f9ab19a3895/job.json": "f1276c83c06b3dc34d874e5b01e2a3334436fb0392dc250b281cc0dcb2064077",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/cf7d932da999fc34831ff21a/job.json": "b0128ab784eb1d38c4a3a42a086fb6bc9769be35fc29e8dc8121c9d86a6b3d61",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/d788e89c985abccca8f0e4ee/job.json": "14402800564cd4b0534f67b3e1e8fffa7d1c73c60bb626df3d0c2fc1fccf1af7",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/d86935f0868364e4fa394748/job.json": "8a0de9ce9ac039274952ec441a5432bc84147db7bb9771a50ef5f20b74da263a",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/dcd486b86e3120a25a50ef6e/job.json": "95fa96452eebb6ce17f35cbf8fafe6cbb1c8a956ab3a4b257776876791417e24",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/ddb95a1fd7b8a65fb49edaa7/job.json": "291622e34c1a1d248fa7e917ad745566abab1f8507bbd63a02d9f5ebcfe24084",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/ddb95a1fd7b8a65fb49edaa7/pipeline/events.jsonl": "6e609019673dbf823af870f825eea56603d05ed158d20618d82f2ede9ef4d351",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/de18cc0d140d0f6e1f56ebfc/job.json": "c53de76c5ccb3b01173229cf0032a229f75ae5a5caaa7b7f6a727e179332a283",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/e9250c679032da899138775b/job.json": "e10e87316765d1ac1d6bac4e9ea76de7c1415c5ef186a07dda85a0082d3bcd2c",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/e9250c679032da899138775b/pipeline/events.jsonl": "10905ff6d63de2cfdc4b384a0eb5acecb4191ba2645acb077946827a9d76c255",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/ec1987c91f7db5f58e6a0bb6/job.json": "7fa82531a804efdf98a0447cbbb3442f0cca1aef25cbf18f750e5df095ef1619",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/ec1987c91f7db5f58e6a0bb6/pipeline/events.jsonl": "4ea22289c82520249ccc8080b0bb7949f1db8e62f9446289feb6f5be467b1e4b",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/eff08ca9b84d97ab36ab1ece/job.json": "bfc5e1c8bb4debfbd5ca450773db37bec8fe995b34b4caea809e856ed2b25315",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/f165cc4c90744889410d0376/job.json": "1a9ea5bfb13d904766571b4422d85a4b18a587fab93f7d66fd3f3b0371c824b3",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/f3e0cfd4fcff7c659225b51b/job.json": "2f447afdf6563070dae375e8946ec11f2256058e0b9255ae3879da67b1aad21d",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/f5326e1d8fb672ba6ac200d6/job.json": "25b07ee4832516f060bc42eb1bc925063be64fcc45cdb67754cb0cca40960ce1",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/f60c66b628a22c4d9f04fd04/job.json": "21b7ff9d5d32a8b8016241a7c659f4cb87e1c102297080ca54eb5fe982d8264a",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/f7949dbdbd22f5a09bf2e4f6/job.json": "2fb321c2203e0e09a150f28d0d7ed4acea39c7f3d87a528594cd7b0950c6ee48",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/fb43f245abfa833b7452cfd4/job.json": "c6398a49ebb22978e874668a180d92f4d945980b7525e589115e3d72c427abaa",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/fb43f245abfa833b7452cfd4/pipeline/events.jsonl": "ae112fae70444ab7b0d35745c50a279f649f3a4db37614f9558997af7f44cee7",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/jobs/fe4fd16fc98f0cab77cccc6a/job.json": "09e46fbaff8bc058c29ff08ed2c7b7f3e7f3c7d6c014ccba94816b913891787d",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/opened-maps.jsonl": "945198f528bf588d1159d26f370eee7b99204dc17a4ee1c9e5e70445cd7ad771",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/prepass/instruction-draw.json": "53571294df4bb151deea6bcc4bc00635434a14f44983d741893f6e80c33569f0",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/prepass/job.json": "c9a74252d93d8c82badc0bb56d01b7bb915f894e6472b8e6974cd3fdb546543e",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/prepass/process.json": "7a57b0a0dd382a17a7f3dd96e6a3d71acbb576fedd5efe5cd3169efe1d25698a",
+      "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/prepass/row.json": "eee883cbc2dc03d3a9b396113326995a0c9ffd1c6a80de2b56d6fc9acc3af76e"
+    },
+    "issues": [],
+    "ok": true
+  },
+  "recount_source_sha256": {
+    "integrity.py": "27252a7578e3133b191b957bb8ba925147d50415c63c5983c3d1fb8a098124d4",
+    "metrics.py": "704d6641b2baf93c0c3753a33dcda8616b711079e40fb3f5867ec740bac0919c",
+    "recount.py": "5013dad57ad07d71e06b7823238f14133eb1ece41ce6687e48b601af2fa0fed1"
+  },
+  "termination_evidence": "COMPLETE.json"
+}

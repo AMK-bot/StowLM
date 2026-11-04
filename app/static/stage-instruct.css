@@ -1,0 +1,94 @@
+/* StowLM stage page: instruction box (stage-instruct.js). Uses the page's colour tokens from stage.css. */
+.ins-btn { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 7px; cursor: pointer;
+  border: 1px solid var(--line2); background: rgba(10, 21, 40, .9); color: var(--sodium2); font-size: 12px; font-weight: 700;
+  letter-spacing: .1em; }
+.ins-btn .ins-ic { font-size: 13px; letter-spacing: 0; }
+.ins-btn[aria-pressed="true"] { background: rgba(255, 165, 58, .16); border-color: var(--sodium); color: var(--sodium);
+  box-shadow: 0 0 18px rgba(255, 165, 58, .28); }
+.ins-pill { display: inline-flex; align-items: center; gap: 6px; max-width: 380px; padding: 4px 10px; border-radius: 6px;
+  font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text);
+  border: 1px solid rgba(54, 212, 155, .5); background: rgba(54, 212, 155, .1); }
+.ins-pill b { color: var(--ok); }
+.ins-pill.bad { border-color: rgba(255, 91, 91, .5); background: rgba(255, 91, 91, .1); }
+.ins-pill.bad b { color: var(--fail); }
+
+.ins-card { position: absolute; left: 12px; top: 50px; z-index: 5; width: 470px; max-height: calc(100% - 110px); overflow: auto;
+  padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(255, 165, 58, .45);
+  background: rgba(6, 13, 27, .95); box-shadow: 0 10px 40px rgba(0, 0, 0, .55); font-size: 13px; }
+.ins-card[hidden] { display: none; }
+.ins-title { display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 800; letter-spacing: .12em;
+  color: var(--sodium); margin-bottom: 8px; }
+.ins-src { font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px;
+  border-radius: 5px; color: #c9b5ff; border: 1px solid rgba(160, 130, 255, .5); }
+.ins-x { margin-left: auto; border: 0; background: none; color: var(--muted); font-size: 18px; line-height: 1; cursor: pointer; }
+.ins-form { display: flex; gap: 8px; }
+.ins-form input { flex: 1; min-width: 0; padding: 8px 10px; border-radius: 7px; border: 1px solid var(--line2);
+  background: #050c1a; color: var(--text); font-size: 14px; outline: none; }
+.ins-form input:focus { border-color: var(--sodium); box-shadow: 0 0 0 2px rgba(255, 165, 58, .2); }
+.ins-form button { padding: 8px 16px; border-radius: 7px; border: 1px solid var(--sodium); background: var(--sodium);
+  color: #1a1206; font-weight: 750; cursor: pointer; }
+.ins-form button:disabled { opacity: .5; cursor: progress; }
+.ins-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
+.ins-chip { max-width: 100%; padding: 3px 9px; border-radius: 12px; border: 1px solid var(--line2); background: #0b1830;
+  color: #b9cbe6; font-size: 11.5px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ins-chips.compact { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+.ins-chips.compact::-webkit-scrollbar { display: none; }
+.ins-chips.compact .ins-chip { flex: 0 0 auto; max-width: 260px; }
+.ins-chip:hover { border-color: var(--sodium); color: var(--text); }
+.ins-chip.ref { border-color: rgba(255, 91, 91, .45); color: #ffb0b0; }
+.ins-chip.miss { border-style: dashed; color: var(--muted); }
+.ins-out:empty { display: none; }
+.ins-out { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 8px; }
+.ins-said { font-size: 14px; color: var(--text); font-style: italic; margin-bottom: 6px; }
+.ins-parsed { margin: 6px 0; padding: 7px 9px; border-radius: 7px; background: rgba(160, 130, 255, .07);
+  border: 1px solid rgba(160, 130, 255, .25); }
+.ip-h { display: flex; gap: 8px; align-items: center; font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.ip-en { margin: 4px 0 3px; font-weight: 650; }
+.ins-parsed code { display: block; font-family: var(--mono); font-size: 11.5px; color: #cdbfff; word-break: break-all; }
+.ip-ap { margin-top: 4px; font-size: 11.5px; color: var(--muted); }
+.ins-steps { list-style: none; margin: 6px 0; padding: 0; }
+.ins-steps li { display: grid; grid-template-columns: 18px auto 1fr; gap: 6px; align-items: baseline; padding: 2px 0; font-size: 12.5px; }
+.ins-steps .mk { font-weight: 800; text-align: center; }
+.ins-steps li.ok .mk { color: var(--ok); }
+.ins-steps li.no .mk { color: var(--fail); }
+.ins-steps li.na .mk { color: var(--muted); }
+.ins-steps .dt { color: var(--muted); font-size: 11.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ins-steps li.run b { color: var(--sodium2); }
+.mk.spin { width: 11px; height: 11px; margin: 0 auto; border-radius: 50%; border: 2px solid rgba(255, 165, 58, .25);
+  border-top-color: var(--sodium); animation: ins-spin .8s linear infinite; }
+@keyframes ins-spin { to { transform: rotate(360deg); } }
+.ins-refused { margin-top: 6px; padding: 9px 11px; border-radius: 8px; border: 1px solid rgba(255, 91, 91, .55);
+  background: rgba(255, 91, 91, .09); }
+.ir-h { font-size: 11px; font-weight: 800; letter-spacing: .12em; color: #ff8b8b; margin-bottom: 3px; }
+.ir-f { margin-top: 4px; font-size: 11.5px; color: var(--muted); }
+.ins-cost { margin-top: 6px; padding: 9px 11px; border-radius: 8px; border: 1px solid var(--line2); background: rgba(10, 21, 40, .8); }
+.ic-row { display: grid; grid-template-columns: 110px 54px 1fr; align-items: baseline; gap: 6px; }
+.ic-row span { color: var(--muted); }
+.ic-row b { font-size: 20px; text-align: right; font-variant-numeric: tabular-nums; }
+.ic-row.new b { color: var(--sodium2); }
+.ic-row i { font-style: normal; color: var(--muted); font-size: 12px; }
+.ic-delta { margin: 5px 0; font-size: 12.5px; color: var(--ok); }
+.ic-delta.worse { color: var(--warn); }
+.ic-ver { display: flex; gap: 14px; font-weight: 700; font-size: 12.5px; }
+.ic-ver .ok { color: var(--ok); }
+.ic-ver .no { color: var(--fail); }
+.ic-why { margin-top: 5px; font-size: 11.5px; color: var(--muted); }
+.ins-go, .ins-back { display: inline-block; margin-top: 8px; padding: 6px 12px; border-radius: 7px; font-weight: 700;
+  font-size: 12.5px; text-decoration: none; }
+.ins-go { background: var(--sodium); color: #1a1206; }
+.ins-back { border: 1px solid var(--line2); color: var(--text); }
+/* D144 recorded replan: the rule check that flips for the flagged box. */
+.ins-card.recorded { top: 96px; max-height: calc(100% - 156px); }
+.ins-form[hidden], .ins-chips[hidden] { display: none; }
+.ins-card.recorded .ins-out { margin-top: 0; border-top: 0; padding-top: 0; }
+.ir-flip { margin: 6px 0; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line2); background: rgba(10, 21, 40, .8); }
+.irf-box { font-family: var(--mono); font-weight: 700; margin-bottom: 5px; }
+.irf-box span { font-family: var(--sans); font-weight: 600; font-size: 11.5px; color: var(--muted); margin-left: 6px; }
+.irf-row { display: grid; grid-template-columns: 52px 1fr auto; gap: 8px; align-items: baseline; padding: 2px 0; font-size: 13px; }
+.irf-row span { color: var(--muted); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; }
+.irf-row i { font-style: normal; font-family: var(--mono); font-size: 12.5px; }
+.irf-row b { white-space: nowrap; }
+.irf-row.bad b { color: var(--fail); }
+.irf-row.good b { color: var(--ok); }
+.ir-tag { margin-top: 8px; padding: 5px 9px; border-radius: 6px; border: 1.5px dashed rgba(255, 181, 71, .75); color: #ffd9a0;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }

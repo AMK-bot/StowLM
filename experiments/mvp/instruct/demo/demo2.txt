@@ -1,0 +1,12 @@
+$ uv run python -m llm.instructions.demo --instance experiments/mvp/corpus/test/tiny/feeder_500/random_yard/seed-008000000.json "Tank top in bay 1 is under repair: only one tier in the hold there." --refresh-baseline --save experiments/mvp/instruct/demo/demo2.json
+Planner: "Tank top in bay 1 is under repair: only one tier in the hold there."
+Parser: Muse Spark (muse-spark-1.3), measured cost $0.007214
+Constraint (schema stowlm.instruction/1, validated): {"type": "max_tiers", "bay": 1, "zone": "hold", "max_tiers": 1}
+Applied (tighten-only): 1 of 6 cells closed to all boxes (0010204)
+Before (scalable solver, no instruction): checker PASS, 4 loads, 1 yard rehandles, 0 restow lifts, 2 hatch-cover lifts = 7 crane lifts now (+4 projected later; D11 weighted 7)
+  placements breaking the instruction: 1 (load QZXU0000035 -> 0010204: instruction: slot 0010204 is closed)
+Replanning under the instruction (scalable solver, D79 config, limit 240s)...
+After: status ok, full checker PASS, shippable True, 4 loads, 1 yard rehandles, 0 restow lifts, 2 hatch-cover lifts = 7 crane lifts now (+4 projected later; D11 weighted 7) [54.4s]
+  placements breaking the instruction: 0
+  loads: QZXU0000020->0030202, QZXU0000009->0010202, QZXU0000035->0030204, QZXU0000014->0010282
+Instruction honoured and plan checked: shown as a proposal for the carrier's approval.

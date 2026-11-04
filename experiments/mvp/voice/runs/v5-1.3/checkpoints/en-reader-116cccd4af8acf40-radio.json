@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 21,
+      "max_tiers": 6,
+      "type": "max_tiers",
+      "zone": "deck"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 4320,
+    "audio_seconds": 4.296,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00020",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "9f563ecf82b74b91ac1da3eb08b2196f",
+    "session_id": "voyager/transcribe/511F3B08C0DA4888AD7860CAFC74B282"
+  },
+  "asr_latency_s": 1.1064039170159958,
+  "audio_sha256": "3c6e9491baab74308093344989274712b7e2ac91cbbae6c21532271e12d21899",
+  "canonical": {
+    "constraint": {
+      "bay": 21,
+      "max_tiers": 6,
+      "type": "max_tiers",
+      "zone": "deck"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 2.2217468750313856,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00122725",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "280a95b2b926df2d003fbb1188c371354d7a377d9b55245f37d7600d36a38c05",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "6fc48838-0b38-48be-acd9-284d1a3265fd"
+  },
+  "parser_latency_s": 1.018719375017099,
+  "script": "Planner: restrict bay 21 deck to 6 max.",
+  "source_id": "reader-116cccd4af8acf40",
+  "started_utc": "2026-11-01T01:33:52.273047+00:00",
+  "status": "complete",
+  "transcript": "Planner, restrict Bay 21 deck to six max."
+}

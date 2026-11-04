@@ -1,0 +1,500 @@
+{
+  "schema_version": "stowlm.copilot-shot10-facts/1",
+  "synthetic": true,
+  "conversation": "hero-shot10-delivered/shot10.json",
+  "reader": "Unadapted cloud Spark reader; not the adopted local fine-tune.",
+  "instance_sha256": "cabff3d68d56e64ba9956761bcd0ca2abfa5077d41296db35b630efc11b04678",
+  "proof": {
+    "proven_impossible": true,
+    "reason": "A necessary partial capacity screen gives at most 60 open physical cells for 143 required; even that upper bound falls short.",
+    "scope": "necessary partial upper-bound capacity screen",
+    "demand_cells": 143.0,
+    "open_cells": 60,
+    "equation": "143 needed > 60 open"
+  },
+  "base_lifts": 66.0,
+  "selected_lifts": 70.0,
+  "selected_plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+  "confirmed_instruction": "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.",
+  "alternatives": [
+    {
+      "id": "dg-clearance",
+      "label": "checked",
+      "lifts": 70.0,
+      "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+      "evidence": {
+        "base_lifts": 66.0,
+        "boxes_moved": 83,
+        "checked_utc": "2026-11-02T05:33:34.342527+00:00",
+        "computed_utc": "2026-11-02T03:48:39.429777+00:00",
+        "freshly_rechecked": false,
+        "gate_source": "recorded_native_handoff",
+        "lift_delta": 4.0,
+        "native_handoff": {
+          "catalogue_sha256": "6d66050f7ac50c49c61dee6a492e72546bcf91cefa87f96d627d027b04eec9d9",
+          "engine_manifest_sha256": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+          "physics_epoch": "8c01607702076002893ba34e1f219d4322417cb0ced995e93b705e408ca9ff42",
+          "receipt_sha256": "1d43178ad9822576b0d72c8aa6f0bceb9364b9b3be0f5298851dd2b91a27ce7b",
+          "source_row_sha256": "1cb443849ad3f06299c46d05a328ae3b083fa121388a32d357a7744a31591a2a"
+        },
+        "rechecked_utc": "2026-11-02T05:33:34.342527+00:00",
+        "reused_recorded": true,
+        "total_lifts_now": 145
+      },
+      "sentences": [
+        "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation."
+      ]
+    },
+    {
+      "id": "bay-closure",
+      "label": "checked",
+      "lifts": 82.0,
+      "plan_sha256": "f66c8301b6c7d83ec1b0f593a07c764fecab5c7288fce1cf72602cb8527a0f2d",
+      "evidence": {
+        "base_lifts": 66.0,
+        "boxes_moved": 84,
+        "checked_utc": "2026-11-02T05:24:25.430781+00:00",
+        "computed_utc": "2026-11-02T04:36:38.695362+00:00",
+        "freshly_rechecked": false,
+        "gate_source": "recorded_native_handoff",
+        "lift_delta": 16.0,
+        "native_handoff": {
+          "catalogue_sha256": "6d66050f7ac50c49c61dee6a492e72546bcf91cefa87f96d627d027b04eec9d9",
+          "engine_manifest_sha256": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+          "physics_epoch": "8c01607702076002893ba34e1f219d4322417cb0ced995e93b705e408ca9ff42",
+          "receipt_sha256": "a351c008fb5a9746fdbd3c762db34f74c35f670d8ac1e5bd0a56bfd44ee2dec9",
+          "source_row_sha256": "2d351369bb7adf644795051b1e126230bbc114b5149e6f590c1d66f35d61bf1f"
+        },
+        "rechecked_utc": "2026-11-02T05:24:25.430781+00:00",
+        "reused_recorded": true,
+        "total_lifts_now": 145
+      },
+      "sentences": [
+        "Do not load any containers in bay 09."
+      ]
+    }
+  ],
+  "observed_acceptance": [
+    "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee"
+  ],
+  "ranking_delivered": true,
+  "frames_checked": 146,
+  "what_moved": [
+    {
+      "container_id": "QZXU0000009",
+      "before": "0100484",
+      "after": "0100584"
+    },
+    {
+      "container_id": "QZXU0000014",
+      "before": "0100202",
+      "after": "0100402"
+    },
+    {
+      "container_id": "QZXU0000020",
+      "before": "0090502",
+      "after": "0030102"
+    },
+    {
+      "container_id": "QZXU0000035",
+      "before": "0090504",
+      "after": "0090104"
+    },
+    {
+      "container_id": "QZXU0000040",
+      "before": "0100384",
+      "after": "0020586"
+    },
+    {
+      "container_id": "QZXU0000061",
+      "before": "0210182",
+      "after": "0030182"
+    },
+    {
+      "container_id": "QZXU0000077",
+      "before": "0110502",
+      "after": "0090102"
+    },
+    {
+      "container_id": "QZXU0000082",
+      "before": "0100204",
+      "after": "0220202"
+    },
+    {
+      "container_id": "QZXU0000098",
+      "before": "0100184",
+      "after": "0220386"
+    },
+    {
+      "container_id": "QZXU0000122",
+      "before": "0100186",
+      "after": "0220586"
+    },
+    {
+      "container_id": "QZXU0000138",
+      "before": "0020202",
+      "after": "0100184"
+    },
+    {
+      "container_id": "QZXU0000143",
+      "before": "0110606",
+      "after": "0090204"
+    },
+    {
+      "container_id": "QZXU0000159",
+      "before": "0110604",
+      "after": "0030202"
+    },
+    {
+      "container_id": "QZXU0000185",
+      "before": "0020586",
+      "after": "0220684"
+    },
+    {
+      "container_id": "QZXU0000204",
+      "before": "0010182",
+      "after": "0110604"
+    },
+    {
+      "container_id": "QZXU0000210",
+      "before": "0020486",
+      "after": "0100688"
+    },
+    {
+      "container_id": "QZXU0000225",
+      "before": "0010188",
+      "after": "0090604"
+    },
+    {
+      "container_id": "QZXU0000230",
+      "before": "0100102",
+      "after": "0220102"
+    },
+    {
+      "container_id": "QZXU0000246",
+      "before": "0020482",
+      "after": "0100682"
+    },
+    {
+      "container_id": "QZXU0000251",
+      "before": "0230482",
+      "after": "0090606"
+    },
+    {
+      "container_id": "QZXU0000267",
+      "before": "0020584",
+      "after": "0220482"
+    },
+    {
+      "container_id": "QZXU0000272",
+      "before": "0220602",
+      "after": "0100582"
+    },
+    {
+      "container_id": "QZXU0000288",
+      "before": "0220302",
+      "after": "0020584"
+    },
+    {
+      "container_id": "QZXU0000307",
+      "before": "0100284",
+      "after": "0100686"
+    },
+    {
+      "container_id": "QZXU0000312",
+      "before": "0220104",
+      "after": "0020588"
+    },
+    {
+      "container_id": "QZXU0000328",
+      "before": "0230184",
+      "after": "0090106"
+    },
+    {
+      "container_id": "QZXU0000349",
+      "before": "0210482",
+      "after": "0210182"
+    },
+    {
+      "container_id": "QZXU0000354",
+      "before": "0100686",
+      "after": "0100484"
+    },
+    {
+      "container_id": "QZXU0000360",
+      "before": "0100482",
+      "after": "0100186"
+    },
+    {
+      "container_id": "QZXU0000375",
+      "before": "0230182",
+      "after": "0010104"
+    },
+    {
+      "container_id": "QZXU0000380",
+      "before": "0230186",
+      "after": "0110102"
+    },
+    {
+      "container_id": "QZXU0000396",
+      "before": "0090606",
+      "after": "0030204"
+    },
+    {
+      "container_id": "QZXU0000400",
+      "before": "0220684",
+      "after": "0100282"
+    },
+    {
+      "container_id": "QZXU0000415",
+      "before": "0100684",
+      "after": "0220204"
+    },
+    {
+      "container_id": "QZXU0000420",
+      "before": "0230484",
+      "after": "0210186"
+    },
+    {
+      "container_id": "QZXU0000436",
+      "before": "0020204",
+      "after": "0100586"
+    },
+    {
+      "container_id": "QZXU0000441",
+      "before": "0020582",
+      "after": "0220682"
+    },
+    {
+      "container_id": "QZXU0000462",
+      "before": "0100486",
+      "after": "0020282"
+    },
+    {
+      "container_id": "QZXU0000478",
+      "before": "0100586",
+      "after": "0220384"
+    },
+    {
+      "container_id": "QZXU0000499",
+      "before": "0010184",
+      "after": "0210184"
+    },
+    {
+      "container_id": "QZXU0000502",
+      "before": "0110402",
+      "after": "0090206"
+    },
+    {
+      "container_id": "QZXU0000539",
+      "before": "0030182",
+      "after": "0010204"
+    },
+    {
+      "container_id": "QZXU0000550",
+      "before": "0210484",
+      "after": "0110206"
+    },
+    {
+      "container_id": "QZXU0000565",
+      "before": "0100104",
+      "after": "0220502"
+    },
+    {
+      "container_id": "QZXU0000586",
+      "before": "0110602",
+      "after": "0010202"
+    },
+    {
+      "container_id": "QZXU0000591",
+      "before": "0090506",
+      "after": "0030104"
+    },
+    {
+      "container_id": "QZXU0000610",
+      "before": "0210184",
+      "after": "0110104"
+    },
+    {
+      "container_id": "QZXU0000631",
+      "before": "0010186",
+      "after": "0090602"
+    },
+    {
+      "container_id": "QZXU0000647",
+      "before": "0090604",
+      "after": "0110204"
+    },
+    {
+      "container_id": "QZXU0000673",
+      "before": "0090406",
+      "after": "0110606"
+    },
+    {
+      "container_id": "QZXU0000689",
+      "before": "0220682",
+      "after": "0220602"
+    },
+    {
+      "container_id": "QZXU0000708",
+      "before": "0220284",
+      "after": "0100284"
+    },
+    {
+      "container_id": "QZXU0000713",
+      "before": "0020484",
+      "after": "0100486"
+    },
+    {
+      "container_id": "QZXU0000734",
+      "before": "0090404",
+      "after": "0110202"
+    },
+    {
+      "container_id": "QZXU0000740",
+      "before": "0230188",
+      "after": "0110106"
+    },
+    {
+      "container_id": "QZXU0000760",
+      "before": "0090602",
+      "after": "0110602"
+    },
+    {
+      "container_id": "QZXU0000776",
+      "before": "0220402",
+      "after": "0100684"
+    },
+    {
+      "container_id": "QZXU0000800",
+      "before": "0220584",
+      "after": "0220382"
+    },
+    {
+      "container_id": "QZXU0000842",
+      "before": "0100288",
+      "after": "0220686"
+    },
+    {
+      "container_id": "QZXU0000858",
+      "before": "0100282",
+      "after": "0100404"
+    },
+    {
+      "container_id": "QZXU0000863",
+      "before": "0100386",
+      "after": "0020382"
+    },
+    {
+      "container_id": "QZXU0000884",
+      "before": "0110504",
+      "after": "0010102"
+    },
+    {
+      "container_id": "QZXU0000890",
+      "before": "0220282",
+      "after": "0100182"
+    },
+    {
+      "container_id": "QZXU0000903",
+      "before": "0220102",
+      "after": "0100304"
+    },
+    {
+      "container_id": "QZXU0000930",
+      "before": "0220386",
+      "after": "0100384"
+    },
+    {
+      "container_id": "QZXU0000950",
+      "before": "0220384",
+      "after": "0100382"
+    },
+    {
+      "container_id": "QZXU0000966",
+      "before": "0090402",
+      "after": "0090202"
+    },
+    {
+      "container_id": "QZXU0000971",
+      "before": "0100304",
+      "after": "0100386"
+    },
+    {
+      "container_id": "QZXU0000987",
+      "before": "0220286",
+      "after": "0020384"
+    },
+    {
+      "container_id": "QZXU0000992",
+      "before": "0220686",
+      "after": "0100482"
+    },
+    {
+      "container_id": "QZXU0001005",
+      "before": "0230486",
+      "after": "0210188"
+    },
+    {
+      "container_id": "QZXU0001010",
+      "before": "0220288",
+      "after": "0220688"
+    },
+    {
+      "container_id": "QZXU0001031",
+      "before": "0220502",
+      "after": "0020582"
+    },
+    {
+      "container_id": "QZXU0001052",
+      "before": "0100582",
+      "after": "0220302"
+    },
+    {
+      "container_id": "QZXU0001089",
+      "before": "0220202",
+      "after": "0100406"
+    },
+    {
+      "container_id": "QZXU0001094",
+      "before": "0020488",
+      "after": "0100288"
+    },
+    {
+      "container_id": "QZXU0001113",
+      "before": "0100682",
+      "after": "0220402"
+    },
+    {
+      "container_id": "QZXU0001129",
+      "before": "0220382",
+      "after": "0220104"
+    },
+    {
+      "container_id": "QZXU0001134",
+      "before": "0100382",
+      "after": "0100306"
+    },
+    {
+      "container_id": "QZXU0001140",
+      "before": "0100106",
+      "after": "0100502"
+    },
+    {
+      "container_id": "QZXU0001155",
+      "before": "0100182",
+      "after": "0220584"
+    },
+    {
+      "container_id": "QZXU0001176",
+      "before": "0220586",
+      "after": "0100506"
+    },
+    {
+      "container_id": "QZXU0001200",
+      "before": "0100584",
+      "after": "0100504"
+    }
+  ],
+  "facts_label": "Actual observed tool cards and returned checked hashes; numerical gates reused from campaign preparation, not rerun per turn. Weighted nonproductive lifts include projected later-port lifts."
+}

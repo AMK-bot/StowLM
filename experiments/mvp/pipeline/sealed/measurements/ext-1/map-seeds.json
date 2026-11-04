@@ -1,0 +1,271 @@
+{
+  "seeds": [
+    306320000,
+    306320001,
+    306320002,
+    306320100,
+    306320101,
+    306320102,
+    306320200,
+    306320201,
+    306320202,
+    306320300,
+    306320301,
+    306320302,
+    306320400,
+    306320401,
+    306320402,
+    306320500,
+    306320501,
+    306320502,
+    306320600,
+    306320601,
+    306320602,
+    306320700,
+    306320701,
+    306320702
+  ],
+  "formula": "306320000+100*cell_index+rep",
+  "specs": [
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 60,
+      "generator": "random_yard",
+      "rep": 0,
+      "cell_index": 0,
+      "seed": 306320000,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-random_yard-f60-r0.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 60,
+      "generator": "random_yard",
+      "rep": 1,
+      "cell_index": 0,
+      "seed": 306320001,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-random_yard-f60-r1.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 60,
+      "generator": "random_yard",
+      "rep": 2,
+      "cell_index": 0,
+      "seed": 306320002,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-random_yard-f60-r2.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "rep": 0,
+      "cell_index": 1,
+      "seed": 306320100,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-simulated_yard-f60-r0.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "rep": 1,
+      "cell_index": 1,
+      "seed": 306320101,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-simulated_yard-f60-r1.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "rep": 2,
+      "cell_index": 1,
+      "seed": 306320102,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-simulated_yard-f60-r2.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 70,
+      "generator": "random_yard",
+      "rep": 0,
+      "cell_index": 2,
+      "seed": 306320200,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-random_yard-f70-r0.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 70,
+      "generator": "random_yard",
+      "rep": 1,
+      "cell_index": 2,
+      "seed": 306320201,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-random_yard-f70-r1.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 70,
+      "generator": "random_yard",
+      "rep": 2,
+      "cell_index": 2,
+      "seed": 306320202,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-random_yard-f70-r2.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "rep": 0,
+      "cell_index": 3,
+      "seed": 306320300,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-simulated_yard-f70-r0.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "rep": 1,
+      "cell_index": 3,
+      "seed": 306320301,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-simulated_yard-f70-r1.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_500",
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "rep": 2,
+      "cell_index": 3,
+      "seed": 306320302,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-simulated_yard-f70-r2.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 60,
+      "generator": "random_yard",
+      "rep": 0,
+      "cell_index": 4,
+      "seed": 306320400,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-random_yard-f60-r0.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 60,
+      "generator": "random_yard",
+      "rep": 1,
+      "cell_index": 4,
+      "seed": 306320401,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-random_yard-f60-r1.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 60,
+      "generator": "random_yard",
+      "rep": 2,
+      "cell_index": 4,
+      "seed": 306320402,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-random_yard-f60-r2.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "rep": 0,
+      "cell_index": 5,
+      "seed": 306320500,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-simulated_yard-f60-r0.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "rep": 1,
+      "cell_index": 5,
+      "seed": 306320501,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-simulated_yard-f60-r1.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "rep": 2,
+      "cell_index": 5,
+      "seed": 306320502,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-simulated_yard-f60-r2.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 70,
+      "generator": "random_yard",
+      "rep": 0,
+      "cell_index": 6,
+      "seed": 306320600,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-random_yard-f70-r0.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 70,
+      "generator": "random_yard",
+      "rep": 1,
+      "cell_index": 6,
+      "seed": 306320601,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-random_yard-f70-r1.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 70,
+      "generator": "random_yard",
+      "rep": 2,
+      "cell_index": 6,
+      "seed": 306320602,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-random_yard-f70-r2.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "rep": 0,
+      "cell_index": 7,
+      "seed": 306320700,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-simulated_yard-f70-r0.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "rep": 1,
+      "cell_index": 7,
+      "seed": 306320701,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-simulated_yard-f70-r1.json"
+    },
+    {
+      "split": "ext1",
+      "ship": "feeder_800",
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "rep": 2,
+      "cell_index": 7,
+      "seed": 306320702,
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_800-simulated_yard-f70-r2.json"
+    }
+  ]
+}

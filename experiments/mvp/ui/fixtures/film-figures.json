@@ -1,0 +1,77 @@
+{
+  "note": "Film figures with no machine-readable source in reach: one place to change. Each names where it was read. Served by /api/v6/figures, bound to this file's sha256. Anything a results file holds is read from that file (app/v6.py), not copied here.",
+  "figures": {
+    "reader_spark_exact": {
+      "value": "126",
+      "scope": "sealed v3, schema-constrained with the earlier mask, not rerun",
+      "named_source": "experiments/mvp/reader/v3/GPU_HANDOFF.md, fixed reference; its summary sits in the sealed folder, which the app never opens"
+    },
+    "reader_spark_total": {
+      "value": "128",
+      "scope": "sealed v3 sentences",
+      "named_source": "experiments/mvp/reader/v3/GPU_HANDOFF.md, fixed reference"
+    },
+    "stake_calls": {
+      "value": "9,325",
+      "scope": "container-vessel calls in 2024, public",
+      "named_source": "experiments/mvp/video/STORY-NEEDS-v6.md, fixed facts: BSAA 2024–25, p. 6"
+    },
+    "impact_low_billion": {
+      "value": "1.2",
+      "scope": "Projection, low case, USD a year",
+      "named_source": "docs/impact.md, total annual prize"
+    },
+    "impact_teu_m": {
+      "value": "920",
+      "scope": "Projection input, TEU a year",
+      "named_source": "experiments/impact-estimate/impact_v6.py, TEU/year"
+    },
+    "impact_calls_k": {
+      "value": "520",
+      "scope": "Projection input, container-vessel calls a year",
+      "named_source": "experiments/impact-estimate/impact_v6.py, calls/year"
+    },
+    "impact_restow_pct": {
+      "value": "10",
+      "scope": "Projection input, assumed",
+      "named_source": "experiments/mvp/video/script-v6.md, shot 12"
+    },
+    "impact_lift_usd": {
+      "value": "75",
+      "scope": "Projection input, assumed",
+      "named_source": "experiments/mvp/video/script-v6.md, shot 12"
+    },
+    "impact_berth_pct": {
+      "value": "5",
+      "scope": "Projection input, assumed",
+      "named_source": "experiments/mvp/video/script-v6.md, shot 12"
+    },
+    "impact_revenue_low": {
+      "value": "63",
+      "scope": "world terminal revenue, analyst estimates, billion USD a year",
+      "named_source": "docs/impact.md, terminal-revenue cross-check"
+    },
+    "impact_revenue_high": {
+      "value": "76",
+      "scope": "world terminal revenue, analyst estimates, billion USD a year",
+      "named_source": "docs/impact.md, verified terminal-revenue range $63–76 billion (TechSci 75.5, rounded); IBISWorld 81.5 is unverified and excluded (logic4 F9)"
+    },
+    "impact_port_musd": {
+      "value": "125",
+      "scope": "Projection, Laem Chabang scaled by its share of calls, million USD a year; not a port estimate",
+      "named_source": "docs/impact.md, Laem Chabang projection (logic7 L7, D286)"
+    },
+    "repo_url": {
+      "value": "https://github.com/AMK-bot/StowLM",
+      "scope": "release URL: the public code repository",
+      "named_source": "experiments/mvp/ui/fixtures/release-links.json, repo_url; release URL, leader 2026-11-02",
+      "sha256": "703e7ae4cb86c65ce8c5cb79cafcbd0809e3e1081c638db5dd7902622f0bea7f"
+    },
+    "replay_url": {
+      "value": "https://amk-bot.github.io/StowLM/replay/",
+      "scope": "release URL: the break-it replay page on the project's GitHub Pages site (site/replay/)",
+      "named_source": "experiments/mvp/ui/fixtures/release-links.json, replay_url; release URL, leader 2026-11-02",
+      "sha256": "703e7ae4cb86c65ce8c5cb79cafcbd0809e3e1081c638db5dd7902622f0bea7f"
+    }
+  }
+}

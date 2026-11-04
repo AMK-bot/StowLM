@@ -1,0 +1,240 @@
+{
+  "id": "c20261103-151500-a1b2c3",
+  "app": "functional",
+  "state": "failed",
+  "message": "Muse Spark stopped: the launch spend cap has been reached.",
+  "availability": {
+    "spark": {
+      "available": true,
+      "reason": null
+    },
+    "voice": {
+      "available": true,
+      "reason": null
+    },
+    "reader": {
+      "available": true,
+      "reason": null
+    }
+  },
+  "case": {
+    "papers": [
+      {
+        "name": "booking.txt",
+        "path": "papers/generated/SYN-A/booking.txt",
+        "media_type": "text/plain",
+        "role": "booking",
+        "booking_ref": "SYN-A",
+        "synthetic": true,
+        "label": "Synthetic document"
+      },
+      {
+        "name": "vgm.csv",
+        "path": "papers/generated/SYN-A/vgm.csv",
+        "media_type": "text/csv",
+        "role": "vgm",
+        "booking_ref": "SYN-A",
+        "synthetic": true,
+        "label": "Synthetic document"
+      },
+      {
+        "name": "booking.txt",
+        "path": "papers/generated/SYN-B/booking.txt",
+        "media_type": "text/plain",
+        "role": "booking",
+        "booking_ref": "SYN-B",
+        "synthetic": true,
+        "label": "Synthetic document"
+      }
+    ],
+    "boxes": 83
+  },
+  "papers": {
+    "documents": [
+      {
+        "name": "booking.txt",
+        "path": "papers/generated/SYN-A/booking.txt",
+        "media_type": "text/plain",
+        "role": "booking",
+        "booking_ref": "SYN-A",
+        "synthetic": true,
+        "label": "Synthetic document",
+        "origin": "generated"
+      },
+      {
+        "name": "vgm.csv",
+        "path": "papers/generated/SYN-A/vgm.csv",
+        "media_type": "text/csv",
+        "role": "vgm",
+        "booking_ref": "SYN-A",
+        "synthetic": true,
+        "label": "Synthetic document",
+        "origin": "generated"
+      },
+      {
+        "name": "booking.txt",
+        "path": "papers/generated/SYN-B/booking.txt",
+        "media_type": "text/plain",
+        "role": "booking",
+        "booking_ref": "SYN-B",
+        "synthetic": true,
+        "label": "Synthetic document",
+        "origin": "generated"
+      }
+    ],
+    "intake": null,
+    "intake_index": {
+      "choice": {
+        "use_generated_papers": true
+      },
+      "bookings": [
+        {
+          "booking_ref": "B1",
+          "status": "done",
+          "boxes": 8,
+          "view": {
+            "boxes": 8,
+            "complete": true,
+            "read_wall_s": 10.0,
+            "read_cost_usd": 0.1,
+            "wall_s": 0.001,
+            "cost_usd": 0.1
+          }
+        },
+        {
+          "booking_ref": "B2",
+          "status": "done",
+          "boxes": 8,
+          "view": {
+            "boxes": 8,
+            "complete": true,
+            "read_wall_s": 11.0,
+            "read_cost_usd": 0.11,
+            "wall_s": 0.001,
+            "cost_usd": 0.11
+          }
+        },
+        {
+          "booking_ref": "B3",
+          "status": "done",
+          "boxes": 8,
+          "view": {
+            "boxes": 8,
+            "complete": true,
+            "read_wall_s": 12.0,
+            "read_cost_usd": 0.12000000000000001,
+            "wall_s": 0.001,
+            "cost_usd": 0.12000000000000001
+          }
+        },
+        {
+          "booking_ref": "B4",
+          "status": "done",
+          "boxes": 8,
+          "view": {
+            "boxes": 8,
+            "complete": true,
+            "read_wall_s": 13.0,
+            "read_cost_usd": 0.13,
+            "wall_s": 0.001,
+            "cost_usd": 0.13
+          }
+        },
+        {
+          "booking_ref": "B5",
+          "status": "done",
+          "boxes": 8,
+          "view": {
+            "boxes": 8,
+            "complete": true,
+            "read_wall_s": 14.0,
+            "read_cost_usd": 0.14,
+            "wall_s": 0.001,
+            "cost_usd": 0.14
+          }
+        },
+        {
+          "booking_ref": "B6",
+          "status": "done",
+          "boxes": 8,
+          "view": {
+            "boxes": 8,
+            "complete": true,
+            "read_wall_s": 15.0,
+            "read_cost_usd": 0.15000000000000002,
+            "wall_s": 0.001,
+            "cost_usd": 0.15000000000000002
+          }
+        },
+        {
+          "booking_ref": "B7",
+          "status": "done",
+          "boxes": 8,
+          "view": {
+            "boxes": 8,
+            "complete": true,
+            "read_wall_s": 16.0,
+            "read_cost_usd": 0.16,
+            "wall_s": 0.001,
+            "cost_usd": 0.16
+          }
+        },
+        {
+          "booking_ref": "B8",
+          "status": "done",
+          "boxes": 8,
+          "view": {
+            "boxes": 8,
+            "complete": true,
+            "read_wall_s": 17.0,
+            "read_cost_usd": 0.17,
+            "wall_s": 0.001,
+            "cost_usd": 0.17
+          }
+        },
+        {
+          "booking_ref": "B9",
+          "status": "done",
+          "boxes": 8,
+          "view": {
+            "boxes": 8,
+            "complete": true,
+            "read_wall_s": 18.0,
+            "read_cost_usd": 0.18,
+            "wall_s": 0.001,
+            "cost_usd": 0.18
+          }
+        },
+        {
+          "booking_ref": "B10",
+          "status": "failed",
+          "boxes": 8,
+          "reason": "The launch spend cap has been reached. Raise the cap before retrying."
+        },
+        {
+          "booking_ref": "B11",
+          "status": "failed",
+          "boxes": 3,
+          "reason": "The launch spend cap has been reached. Raise the cap before retrying."
+        }
+      ]
+    }
+  },
+  "load_list": null,
+  "voice": null,
+  "readings": [],
+  "stages": [
+    {
+      "stage": "intake",
+      "status": "running",
+      "who": "Muse Spark",
+      "notes": "Reading up to 3 bookings at a time; completed bookings are kept on retry."
+    },
+    {
+      "stage": "intake",
+      "status": "failed",
+      "who": "Muse Spark",
+      "notes": "Muse Spark stopped: the launch spend cap has been reached."
+    }
+  ]
+}

@@ -1,0 +1,2562 @@
+{
+  "name": "imdg_42_24.containership_segregation_7_4_3",
+  "tables": [
+    {
+      "id": "7.4.3.2",
+      "ship_type": "closed_holds",
+      "cells": [
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "vertical",
+          "pair": "closed_closed",
+          "deck": null,
+          "text": "One on top of the other permitted",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; vertical",
+            "column": "closed_closed; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "vertical",
+          "pair": "closed_open",
+          "deck": null,
+          "text": "Open on top of closed permitted otherwise as for \"open versus open\"",
+          "alternatives": [
+            {
+              "open_above_closed": true
+            },
+            {
+              "not_same_vertical_line": true
+            },
+            {
+              "segregated_by_deck": true,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; vertical",
+            "column": "closed_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "vertical",
+          "pair": "open_open",
+          "deck": null,
+          "text": "Not in the same vertical line unless segregated by a deck",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            },
+            {
+              "segregated_by_deck": true,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; vertical",
+            "column": "open_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; fore_aft",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; fore_aft",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; fore_aft",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; fore_aft",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; fore_aft",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "One container space or one bulkhead",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            },
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; fore_aft",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; athwartships",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; athwartships",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; athwartships",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; athwartships",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; athwartships",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".1 Away from; athwartships",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "vertical",
+          "pair": "closed_closed",
+          "deck": null,
+          "text": "Not in the same vertical line unless segregated by a deck",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            },
+            {
+              "segregated_by_deck": true,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; vertical",
+            "column": "closed_closed; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "vertical",
+          "pair": "closed_open",
+          "deck": null,
+          "text": "As for \"open versus open\"",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            },
+            {
+              "segregated_by_deck": true,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; vertical",
+            "column": "closed_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "vertical",
+          "pair": "open_open",
+          "deck": null,
+          "text": "Not in the same vertical line unless segregated by a deck",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            },
+            {
+              "segregated_by_deck": true,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; vertical",
+            "column": "open_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; fore_aft",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One container space or one bulkhead",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            },
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; fore_aft",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; fore_aft",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "One container space or one bulkhead",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            },
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; fore_aft",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; fore_aft",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; fore_aft",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; athwartships",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; athwartships",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; athwartships",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "Two container spaces",
+          "alternatives": [
+            {
+              "min_container_spaces": 2
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; athwartships",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Two container spaces",
+          "alternatives": [
+            {
+              "min_container_spaces": 2
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; athwartships",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".2 Separated from; athwartships",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "vertical",
+          "pair": "closed_closed",
+          "deck": null,
+          "text": "Not in the same vertical line unless segregated by a deck",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            },
+            {
+              "segregated_by_deck": true,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; vertical",
+            "column": "closed_closed; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "vertical",
+          "pair": "closed_open",
+          "deck": null,
+          "text": "As for \"open versus open\"",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            },
+            {
+              "segregated_by_deck": true,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; vertical",
+            "column": "closed_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "vertical",
+          "pair": "open_open",
+          "deck": null,
+          "text": "Not in the same vertical line unless segregated by a deck",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            },
+            {
+              "segregated_by_deck": true,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; vertical",
+            "column": "open_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Two container spaces",
+          "alternatives": [
+            {
+              "min_container_spaces": 2
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "Two bulkheads",
+          "alternatives": [
+            {
+              "min_bulkheads": 2,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "Two container spaces",
+          "alternatives": [
+            {
+              "min_container_spaces": 2
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "Two container spaces",
+          "alternatives": [
+            {
+              "min_container_spaces": 2
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Three container spaces",
+          "alternatives": [
+            {
+              "min_container_spaces": 3
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "Two bulkheads",
+          "alternatives": [
+            {
+              "min_bulkheads": 2,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "vertical",
+          "pair": "closed_closed",
+          "deck": null,
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; vertical",
+            "column": "closed_closed; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "vertical",
+          "pair": "closed_open",
+          "deck": null,
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; vertical",
+            "column": "closed_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "vertical",
+          "pair": "open_open",
+          "deck": null,
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; vertical",
+            "column": "open_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "Minimum horizontal distance of 24 m",
+          "alternatives": [
+            {
+              "min_horizontal_m": 24
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One bulkhead and minimum horizontal distance of 24 m",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true,
+              "min_horizontal_m": 24
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "Minimum horizontal distance of 24 m",
+          "alternatives": [
+            {
+              "min_horizontal_m": 24
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "Two bulkheads",
+          "alternatives": [
+            {
+              "min_bulkheads": 2,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Minimum horizontal distance of 24 m",
+          "alternatives": [
+            {
+              "min_horizontal_m": 24
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "Two bulkheads",
+          "alternatives": [
+            {
+              "min_bulkheads": 2,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "closed_holds",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "open_open; under"
+          }
+        }
+      ],
+      "notes": [
+        {
+          "text": "Containers not less than 6 m from intervening bulkhead.",
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": "footer",
+            "column": "all"
+          }
+        },
+        {
+          "text": "All bulkheads and decks shall be resistant to fire and liquids.",
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 506,
+            "table": "7.4.3.2",
+            "row": "Note",
+            "column": "all"
+          }
+        }
+      ]
+    },
+    {
+      "id": "7.4.3.3",
+      "ship_type": "hatchless",
+      "cells": [
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "vertical",
+          "pair": "closed_closed",
+          "deck": null,
+          "text": "One on top of the other permitted",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; vertical",
+            "column": "closed_closed; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "vertical",
+          "pair": "closed_open",
+          "deck": null,
+          "text": "Open on top of closed permitted otherwise as for \"open versus open\"",
+          "alternatives": [
+            {
+              "open_above_closed": true
+            },
+            {
+              "not_same_vertical_line": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; vertical",
+            "column": "closed_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "vertical",
+          "pair": "open_open",
+          "deck": null,
+          "text": "Not in the same vertical line",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; vertical",
+            "column": "open_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; fore_aft",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; fore_aft",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; fore_aft",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; fore_aft",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; fore_aft",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "One container space or one bulkhead",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            },
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; fore_aft",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; athwartships",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; athwartships",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; athwartships",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "No restriction",
+          "alternatives": [
+            {}
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; athwartships",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; athwartships",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 1,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".1 Away from; athwartships",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "vertical",
+          "pair": "closed_closed",
+          "deck": null,
+          "text": "Not in the same vertical line",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; vertical",
+            "column": "closed_closed; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "vertical",
+          "pair": "closed_open",
+          "deck": null,
+          "text": "As for \"open versus open\"",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; vertical",
+            "column": "closed_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "vertical",
+          "pair": "open_open",
+          "deck": null,
+          "text": "Not in the same vertical line",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; vertical",
+            "column": "open_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; fore_aft",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One container space or one bulkhead",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            },
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; fore_aft",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; fore_aft",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "One container space or one bulkhead",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            },
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; fore_aft",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "One container space and not in or above same hold",
+          "alternatives": [
+            {
+              "min_container_spaces": 1,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; fore_aft",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; fore_aft",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; athwartships",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One container space",
+          "alternatives": [
+            {
+              "min_container_spaces": 1
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; athwartships",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "Two container spaces",
+          "alternatives": [
+            {
+              "min_container_spaces": 2
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; athwartships",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "Two container spaces",
+          "alternatives": [
+            {
+              "min_container_spaces": 2
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; athwartships",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Two container spaces and not in or above same hold",
+          "alternatives": [
+            {
+              "min_container_spaces": 2,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; athwartships",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 2,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".2 Separated from; athwartships",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "vertical",
+          "pair": "closed_closed",
+          "deck": null,
+          "text": "Not in the same vertical line",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; vertical",
+            "column": "closed_closed; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "vertical",
+          "pair": "closed_open",
+          "deck": null,
+          "text": "As for \"open versus open\"",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; vertical",
+            "column": "closed_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "vertical",
+          "pair": "open_open",
+          "deck": null,
+          "text": "Not in the same vertical line",
+          "alternatives": [
+            {
+              "not_same_vertical_line": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; vertical",
+            "column": "open_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "One container space and not in or above same hold",
+          "alternatives": [
+            {
+              "min_container_spaces": 1,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "One container space and not in or above same hold",
+          "alternatives": [
+            {
+              "min_container_spaces": 1,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Two container spaces and not in or above same hold",
+          "alternatives": [
+            {
+              "min_container_spaces": 2,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "Two bulkheads",
+          "alternatives": [
+            {
+              "min_bulkheads": 2,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; fore_aft",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "Two container spaces and not in or above same hold",
+          "alternatives": [
+            {
+              "min_container_spaces": 2,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "Two container spaces and not in or above same hold",
+          "alternatives": [
+            {
+              "min_container_spaces": 2,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "One bulkhead",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Three container spaces and not in or above same hold",
+          "alternatives": [
+            {
+              "min_container_spaces": 3,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 3,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "Two bulkheads",
+          "alternatives": [
+            {
+              "min_bulkheads": 2,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".3 Separated by a complete compartment or hold from; athwartships",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "vertical",
+          "pair": "closed_closed",
+          "deck": null,
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; vertical",
+            "column": "closed_closed; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "vertical",
+          "pair": "closed_open",
+          "deck": null,
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; vertical",
+            "column": "closed_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "vertical",
+          "pair": "open_open",
+          "deck": null,
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; vertical",
+            "column": "open_open; all deck positions"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "Minimum horizontal distance of 24 m and not in or above same hold",
+          "alternatives": [
+            {
+              "min_horizontal_m": 24,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "One bulkhead and minimum horizontal distance of 24 m",
+          "alternatives": [
+            {
+              "min_bulkheads": 1,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true,
+              "min_horizontal_m": 24
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "Minimum horizontal distance of 24 m and not in or above same hold",
+          "alternatives": [
+            {
+              "min_horizontal_m": 24,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "Two bulkheads",
+          "alternatives": [
+            {
+              "min_bulkheads": 2,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Minimum horizontal distance of 24 m and not in or above same hold",
+          "alternatives": [
+            {
+              "min_horizontal_m": 24,
+              "not_in_or_above_same_hold": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "fore_aft",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "Two bulkheads",
+          "alternatives": [
+            {
+              "min_bulkheads": 2,
+              "min_distance_from_intervening_bulkhead_m": 6,
+              "barriers_resistant_to_fire_and_liquids": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; fore_aft",
+            "column": "open_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "on",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "closed_closed; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "closed_closed",
+          "deck": "under",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "closed_closed; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "on",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "closed_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "closed_open",
+          "deck": "under",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "closed_open; under"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "on",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "open_open; on"
+          }
+        },
+        {
+          "ship_type": "hatchless",
+          "level": 4,
+          "orientation": "athwartships",
+          "pair": "open_open",
+          "deck": "under",
+          "text": "Prohibited",
+          "alternatives": [
+            {
+              "prohibited": true
+            }
+          ],
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": ".4 Separated longitudinally by an intervening complete compartment or hold from; athwartships",
+            "column": "open_open; under"
+          }
+        }
+      ],
+      "notes": [
+        {
+          "text": "Containers not less than 6 m from intervening bulkhead.",
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": "footer",
+            "column": "all"
+          }
+        },
+        {
+          "text": "All bulkheads and decks shall be resistant to fire and liquids.",
+          "source": {
+            "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+            "pdf_page": 507,
+            "table": "7.4.3.3",
+            "row": "Note",
+            "column": "all"
+          }
+        }
+      ]
+    }
+  ],
+  "definitions": {
+    "container_space_fore_aft_m": 6,
+    "container_space_athwartships_m": 2.4,
+    "source": {
+      "document": "IMO MSC.556(108), IMDG Code Amendment 42-24",
+      "pdf_page": 505,
+      "table": "7.4.3.1.1",
+      "row": "definition",
+      "column": "container space"
+    }
+  },
+  "semantics": "Alternatives are OR; conditions within each alternative are AND. Empty condition means no restriction in this table cell. Horizontal and vertical constraints must both be considered; this data is not a complete IMDG compliance decision. Mixed on/under-deck geometry and sensitive vertical lines also need 7.4.2.2 application."
+}

@@ -1,0 +1,32 @@
+{
+  "answer": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.5130922500393353,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00063615",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "ed9d1b80427a27fc133e061224ce68574eee97cac10420641dec69b962416307",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "0f3c4ccc-1b0d-4159-8dec-177d353a326c"
+  },
+  "parser_latency_s": 1.5130718339933082,
+  "script": "สำหรับการบรรทุกครั้งนี้ ตู้สินค้าทั้งใต้และบนฝาระวางแต่ละฝา ต้องมีท่าเรือปลายทางเดียวกันเท่านั้น",
+  "source_id": "reader-09189b48b686c53b",
+  "started_utc": "2026-11-01T01:35:28.854090+00:00",
+  "status": "complete"
+}

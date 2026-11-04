@@ -1,0 +1,191 @@
+[
+ {
+  "run": "probe-free-prose",
+  "case": "A_wording_test_only_not_a_pass",
+  "raw": "Plan A for THLCH, stop 0, passed its checks with no violations and no boxes left behind.\n\nYou load 4, shift 1 onboard, plus open and close the hatch: 7 lifts total. Only one rehandle - box QZWU0000005 moved once. Next two ports need 2 hatch lifts each but no restows.\n\nLashing is OK for Straits departure and mid-voyage, with 26-88% spare strength. Tightest is racking.\n\nCaution: stability was not run, data is stub-tainted, and 74 margins were skipped. Treat as lashing-only pass - confirm stability before sailing.",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": false,
+  "judging_note": "'shift 1 onboard' for a yard rehandle; '74 margins' from old facts"
+ },
+ {
+  "run": "probe-free-prose",
+  "case": "B_wording_test_only_not_a_pass_restow",
+  "raw": "THLCH loading plan passed all run checks with zero violations and zero shut-outs.\n\nYou load 4 boxes, plus 1 relocate and 1 restow (2 restow lifts) and 2 hatch-cover lifts \u2014 9 lifts total, no gate moves.\n\nTwo boxes need extra handling: QZXU0000035 (2 lifts) and QZWU0000005 (1 lift). Future calls need 2 hatch lifts each at calls 1 and 2, none at call 3, no restows.\n\nLashing is safe for departure and mid-voyage, with 26-88% spare capacity; tightest is transverse racking.\n\nCaution: stability checks did not run and data is stub-marked, so get stability clearance before sailing.\n",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": false,
+  "judging_note": "'Lashing is safe'; 'passed all run checks'"
+ },
+ {
+  "run": "probe-free-prose",
+  "case": "C_live_stale_vessel_data",
+  "raw": "This check for THLCH FAILED \u2014 do not sail on it.\n\nPlan was 4 loads + 1 onboard relocate + open/close hatch = 7 lifts. One box, QZWU0000005, gets handled twice. Nothing left behind.\n\nLashing at departure and mid-voyage looked OK, with ~26% spare on the tightest racking check.\n\nBut 5 hard errors: vessel stack/capacity data is stale/mismatched, parameters changed. Stability and other checks were skipped as a result.\n\nAction: reload the full vessel profile, then re-run the check. Note next stops need 2 hatch lifts each at calls 1 and 2.",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": false,
+  "judging_note": "'onboard relocate'; 'handled twice' (1 lift); 'Stability and other checks were skipped'"
+ },
+ {
+  "run": "probe-free-prose",
+  "case": "D_live_shut_out",
+  "raw": "This plan for THLCH FAILED check - do not sail as-is.\n\nPlan does 6 lifts: 3 loads, 1 onboard shift, plus open/close hatch. One box QZWU0000005 is rehandled once. One load-list box QZXU0000035 is left behind - that's the operational miss to fix.\n\nOf 6 hard flags, 5 are IT data errors: stale vessel/stack files, need to reload full vessel. Not a lashing fault.\n\nLashing that could be checked looks OK with 26-88% spare. Stability was not run because of that missing data.\n\nNext ports: expect 2 hatch moves each at calls 1 and 2.\n",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": false,
+  "judging_note": "'1 onboard shift' for a yard rehandle"
+ },
+ {
+  "run": "v2.0-16k",
+  "case": "A_wording_test_only_not_a_pass",
+  "raw": "{\"headline\": \"Loading plan for THLCH with lashing and visibility margins noted, result is not validated\", \"points\": [\"For constraints, lashing, moves, rules, strength, visibility, voyage showed no violation, while stability did not run.\", \"At THLCH, plan has loads 4, hatch-cover lift count 2, relocations 1, and shut out count 0.\", \"QZWU0000005 yard rehandle moved within the yard has 1 extra lifts, with HC-002-P lifted.\", \"Later calls show hatch-cover lift counts 2 and 2 and 0 with restow 0 and restowed_boxes 0.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": "faithful but stilted ('loads 4'), raw field name"
+ },
+ {
+  "run": "v2.1",
+  "case": "A_wording_test_only_not_a_pass",
+  "raw": "{\"headline\": \"THLCH plan loads 4 boxes with 1 yard rehandle and 2 hatch-cover lifts\", \"points\": [\"4 boxes are loaded and 1 box QZWU0000005 is moved within the yard first (a yard rehandle).\", \"2 hatch-cover lifts handle HC-002-P with 1 hatch-cover off and 1 hatch-cover on, total 7 lifts including gate.\", \"0 boxes are shut out and 0 restow lifts are planned, and lashing showed no violation.\", \"Stability checks did not run and the result is not validated.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v2.1",
+  "case": "B_wording_test_only_not_a_pass_restow",
+  "raw": "{\"headline\": \"THLCH plan loads 4 boxes with 2 restow lifts and 1 yard rehandle, result is not validated\", \"points\": [\"4 boxes are loaded and box QZWU0000005 is moved within the yard first (a yard rehandle).\", \"2 restow lifts move box QZXU0000035 aboard and 2 hatch-cover lift moves handle HC-002-P, with 9 lifts in total at THLCH.\", \"0 boxes are shut out and lashing showed no violation for the 4 loads now.\", \"Stability did not run and the result is not validated, with 4 later hatch-cover lifts still expected.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v2.1",
+  "case": "C_live_stale_vessel_data",
+  "raw": "{\"headline\": \"Checker failed on missing vessel data, reload full vessel before planning\", \"points\": [\"Plan shows 5 hard violations for checker.missing_vessel_data because vessel data is missing or stale, so reload the full vessel before slicing.\", \"At THLCH there are 4 loads and 1 yard rehandle of QZWU0000005, with 2 hatch-cover lift actions involving HC-002-P and 0 restow lifts and 0 shut out.\", \"lashing showed no violation for the loads checked.\", \"stability did not run.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v2.1",
+  "case": "D_live_shut_out",
+  "raw": "{\"headline\": \"Plan failed at THLCH with 1 box shut out and 5 missing vessel data items to fix\", \"points\": [\"Rule objective.all_loaded failed because box QZXU0000035 was shut out and must be loaded before departure.\", \"Rule checker.missing_vessel_data showed 5 unverified items, so reload the full vessel data before replanning.\", \"Plan does 3 loads and 1 yard rehandle of box QZWU0000005 plus 2 hatch-cover lift operations of HC-002-P for 6 lifts with 0 restow lifts.\", \"Stability did not run, while lashing showed no violation.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v2.2",
+  "case": "A_wording_test_only_not_a_pass",
+  "raw": "{\"headline\": \"THLCH plan loads 4 boxes with 2 hatch-cover lifts and 1 yard rehandle.\", \"points\": [\"4 boxes are loaded and 1 box QZWU0000005 is moved within the yard as a yard rehandle, not on board.\", \"Hatch-cover lift uses HC-002-P with 1 lift off and 1 lift on, and restow lifts are 0.\", \"0 boxes are shut out, lashing showed no violation, and later ports need 4 hatch-cover lifts and 0 restow lifts.\", \"Stability including GM did not run and the result is not validated.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v2.2",
+  "case": "B_wording_test_only_not_a_pass_restow",
+  "raw": "{\"headline\": \"Plan at THLCH loads 4 boxes with 1 yard rehandle and restow work\", \"points\": [\"4 boxes are loaded and 1 box is moved within the yard as a yard rehandle.\", \"Box QZXU0000035 takes 2 restow lifts aboard and box QZWU0000005 takes 1 yard rehandle lift.\", \"The hatch-cover HC-002-P takes 2 hatch-cover lift moves and 0 boxes are shut out.\", \"The lashing data is included and stability did not run and the result is not validated.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v2.2",
+  "case": "C_live_stale_vessel_data",
+  "raw": "{\"headline\": \"Plan did not validate: 5 hard violations for missing vessel data must be fixed by reloading vessel\", \"points\": [\"5 hard violations under checker.missing_vessel_data mean vessel data is missing or stale; reload the full vessel before slicing to fix.\", \"4 boxes are loaded and 1 box QZWU0000005 is moved within the yard as a yard rehandle; there are 2 hatch-cover lift moves of HC-002-P and 0 restow lifts.\", \"constraints, moves, rules, strength, visibility, voyage and lashing showed no violation, with 7 lifts excluding gate and 7 total lifts including gate.\", \"0 boxes are shut out; stability including GM did not run; later ports project 4 hatch-cover lifts and 0 restow lifts.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": false,
+  "judging_note": "'constraints, moves, rules ... showed no violation' but the rules part has 2 missing-vessel-data violations"
+ },
+ {
+  "run": "v2.2",
+  "case": "D_live_shut_out",
+  "raw": "{\"headline\": \"Plan failed at THLCH with 1 box shut out and vessel data to fix\", \"points\": [\"Rule objective.all_loaded failed because box QZXU0000035 is shut out and must be loaded, and rule checker.missing_vessel_data showed 5 items with stale vessel data to reload.\", \"3 loads and 1 yard rehandle of box QZWU0000005 with 1 lift, plus 2 hatch-cover lifts of HC-002-P for 1 off and 1 on, with 0 restow lifts.\", \"Lashing showed no violation, with 6 lifts now excluding gate and 6 total lifts including gate.\", \"Stability did not run, with 4 later hatch-cover lifts and 0 later restow lifts projected.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v2.3",
+  "case": "A_wording_test_only_not_a_pass",
+  "raw": "{\"headline\": \"THLCH plan loads 4 boxes with 1 yard rehandle and hatch-cover work, result not validated\", \"points\": [\"4 boxes are loaded and 1 box QZWU0000005 is moved within the yard (a yard rehandle) with 0 restow lifts.\", \"HC-002-P has 2 hatch-cover lift moves, 1 hatch_cover_off and 1 hatch_cover_on, within 7 total lifts including gate.\", \"0 boxes are shut out; constraints, lashing, moves, rules, strength, visibility and voyage showed no violation.\", \"Stability did not run and the result is not validated.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": "faithful; raw field names hatch_cover_off/on"
+ },
+ {
+  "run": "v2.3",
+  "case": "B_wording_test_only_not_a_pass_restow",
+  "raw": "{\"headline\": \"THLCH plan moves 4 boxes with 2 restow lifts and 2 hatch-cover lifts\", \"points\": [\"4 boxes are loaded; 1 box QZWU0000005 is moved within the yard (a yard rehandle) and box QZXU0000035 needs 2 restow lifts.\", \"hatch-cover lift work uses HC-002-P for 2 hatch-cover lifts and 0 boxes are shut out; lashing showed no violation.\", \"Constraints, moves, rules, strength, visibility and voyage showed no violation; stability did not run.\", \"This result is not validated; the checker counts 9 lifts excluding gate with 1 relocate.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v2.3",
+  "case": "C_live_stale_vessel_data",
+  "raw": "{\"headline\": \"Checker failed on missing vessel data; reload full vessel before slicing\", \"points\": [\"5 hard violations under checker.missing_vessel_data show vessel data missing or stale, so reload the full vessel before slicing and fix the stale audit.\", \"At THLCH 4 boxes are loaded with 1 yard rehandle of QZWU0000005 and 2 hatch-cover lift moves on HC-002-P for 7 lifts, with no restow and 0 shut out.\", \"The constraints, lashing, moves, strength, visibility and voyage checks showed no violation.\", \"Stability did not run, so GM was not checked, and later ports need 4 hatch-cover lift moves with 0 restow lifts.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v2.3",
+  "case": "D_live_shut_out",
+  "raw": "{\"headline\": \"Plan failed at THLCH: 1 box shut out and vessel data missing must be fixed\", \"points\": [\"1 box QZXU0000035 is shut out under rule objective.all_loaded; it must be aboard at departure.\", \"Vessel data is missing under rule checker.missing_vessel_data; reload the full vessel before slicing and fix stale capacity evidence.\", \"3 boxes are loaded; 1 box QZWU0000005 is moved within the yard (a yard rehandle); 2 hatch-cover lift moves on HC-002-P; 0 restow lifts.\", \"lashing, constraints, strength, visibility and voyage showed no violation; stability including GM did not run; 4 later hatch-cover lift moves and 0 later restow lifts are projected.\"]}",
+  "expect_shown": false,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": ""
+ },
+ {
+  "run": "v3.0",
+  "case": "A_wording_test_only_not_a_pass",
+  "raw": "{\"headline\":[\"not_run:stability\",\"not_validated\"],\"points\":[[\"tightest_limit\"],[\"no_violations\",\"clean_checks\"],[\"total\",\"loads\",\"yard_rehandles\"],[\"hatch_covers_now\",\"no_restows_now\",\"later_ports\"]]}",
+  "expect_shown": true,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": "statement selection; text rendered from the report"
+ },
+ {
+  "run": "v3.0",
+  "case": "B_wording_test_only_not_a_pass_restow",
+  "raw": "{\"headline\": [\"not_run:stability\", \"not_validated\"], \"points\": [[\"tightest_limit\"], [\"total\"], [\"restows_now\", \"hatch_covers_now\", \"later_ports\"], [\"loads\", \"yard_rehandles\"], [\"clean_checks\"]]}",
+  "expect_shown": true,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": "statement selection; text rendered from the report"
+ },
+ {
+  "run": "v3.0",
+  "case": "C_live_stale_vessel_data",
+  "raw": "{\"headline\": [\"incomplete:checker.missing_vessel_data\", \"not_run:stability\"], \"points\": [[\"tightest_limit\", \"clean_checks\"], [\"total\", \"loads\"], [\"hatch_covers_now\", \"later_ports\", \"no_restows_now\"], [\"yard_rehandles\"]]}",
+  "expect_shown": true,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": "statement selection; text rendered from the report"
+ },
+ {
+  "run": "v3.0",
+  "case": "D_live_shut_out",
+  "raw": "{\"headline\":[\"shut_out\"],\"points\":[[\"incomplete:checker.missing_vessel_data\",\"not_run:stability\"],[\"tightest_limit\",\"clean_checks\"],[\"total\",\"loads\",\"yard_rehandles\"],[\"hatch_covers_now\",\"later_ports\",\"no_restows_now\"]]}",
+  "expect_shown": true,
+  "expect_problems": [],
+  "judged_faithful": true,
+  "judging_note": "statement selection; text rendered from the report"
+ }
+]

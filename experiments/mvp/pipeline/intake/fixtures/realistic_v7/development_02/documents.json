@@ -1,0 +1,65 @@
+[
+  {
+    "id": "development_02-booking_confirmation",
+    "path": "experiments/mvp/pipeline/intake/fixtures/realistic_v7/development_02/booking_confirmation.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT — invented cargo and companies; no customer data\nBOOKING CONFIRMATION  BK-0002\nVessel: SYNTHETIC LANTA\nVoyage: 2611S\nLoad port: THLCH / LAEM CHABANG\nETD: 02 NOV 2026 03:00 ICT\nStatus: CONFIRMED\n\nQZXU0000009; ISO 22G1; POL THLCH; POD HKHKG; Vessel SYNTHETIC LANTA; Status CONFIRMED; DG YES\nQZXU0000009; DG item 1; UN 1263; Class 3; PG III; Marine pollutant NO; Limited quantity NO\nQZXU0000009; DG item 2; UN 3082; Class 9; PG III; Marine pollutant YES; Limited quantity NO\nQZXU0000014; ISO 45G1; POL THLCH; POD VNSGN; Vessel SYNTHETIC LANTA; Status CONFIRMED; DG YES\nQZXU0000014; DG item 1; UN 3082; Class 9; PG III; Marine pollutant YES; Limited quantity YES\nQZXU0000020; ISO 45R1; POL THLCH; POD SGSIN; Vessel SYNTHETIC LANTA; Status CONFIRMED; DG NO\nQZXU0000035; ISO 22G1; POL THLCH; POD HKHKG; Vessel SYNTHETIC LANTA; Status CONFIRMED; DG NO\nQZXU0000040; ISO 45R1; POL THLCH; POD VNSGN; Vessel SYNTHETIC LANTA; Status CONFIRMED; DG NO\nQZXU0000056; ISO 45G1; POL THLCH; POD SGSIN; Vessel SYNTHETIC LANTA; Status CONFIRMED; DG YES\nQZXU0000056; DG item 1; UN 3082; Class 9; PG III; Marine pollutant YES; Limited quantity NO\nQZXU0000061; ISO 45G1; POL THLCH; POD HKHKG; Vessel SYNTHETIC LANTA; Status CONFIRMED; DG NO\nQZXU0000077; ISO 45G1; POL THLCH; POD VNSGN; Vessel SYNTHETIC LANTA; Status CONFIRMED; DG NO\n",
+    "synthetic": true,
+    "role": "booking"
+  },
+  {
+    "id": "development_02-shipping_instructions",
+    "path": "experiments/mvp/pipeline/intake/fixtures/realistic_v7/development_02/shipping_instructions.csv",
+    "mime_type": "text/csv",
+    "text": "Container Number,ISO Code,Port of Loading,Port of Discharge,Verified Gross Mass,Tare (kg),Empty,Operating reefer,Set temperature,DG cargo,Booked vessel,Status,Stowage request\r\nQZXU0000009,22G1,THLCH,HKHKG,11220 kg,2300 kg,N,N,,Y,SYNTHETIC LANTA,CONFIRMED,\r\nQZXU0000014,45G1,THLCH,VNSGN,12080 kg,3900 kg,N,N,,Y,SYNTHETIC LANTA,CONFIRMED,\r\nQZXU0000020,45R1,THLCH,SGSIN,12940 kg,4500 kg,N,Y,-18 C,N,SYNTHETIC LANTA,CONFIRMED,\r\nQZXU0000035,22G1,THLCH,,13800 kg,2300 kg,N,N,,N,SYNTHETIC LANTA,CONFIRMED,\r\nQZXU0000040,45R1,THLCH,VNSGN,14660 kg,3900 kg,N,Y,-0.4 F,N,SYNTHETIC LANTA,CONFIRMED,\r\nQZXU0000056,45G1,THLCH,SGSIN,15520 kg,3900 kg,N,N,,Y,SYNTHETIC LANTA,CONFIRMED,\r\nQZXU0000061,45G1,THLCH,HKHKG,16380 kg,850 kg,N,N,,N,SYNTHETIC LANTA,CONFIRMED,\r\nQZXU0000077,45G1,THLCH,VNSGN,17240 kg,3900 kg,N,N,,N,SYNTHETIC LANTA,CONFIRMED,\r\n",
+    "synthetic": true,
+    "role": "shipping_instructions"
+  },
+  {
+    "id": "development_02-vgm_declaration",
+    "path": "experiments/mvp/pipeline/intake/fixtures/realistic_v7/development_02/vgm_declaration.csv",
+    "mime_type": "text/csv",
+    "text": "Unit ID,Mass incl. tare,Method,Signed by,Date\r\nQZXU0000009,11220 kg,1,N. Chai,01/11/2569\r\nQZXU0000014,12080 kg,1,N. Chai,01/11/2569\r\nQZXU0000020,12940 kg,1,N. Chai,01/11/2569\r\nQZXU0000035,13800 kg,1,N. Chai,01/11/2569\r\nQZXU0000040,14660 kg,1,N. Chai,01/11/2569\r\nQZXU0000056,15520 kg,1,N. Chai,01/11/2569\r\nQZXU0000061,16380 kg,1,N. Chai,01/11/2569\r\nQZXU0000077,17240 kg,1,N. Chai,01/11/2569\r\n",
+    "synthetic": true,
+    "role": "vgm"
+  },
+  {
+    "id": "development_02-dg_declaration",
+    "path": "experiments/mvp/pipeline/intake/fixtures/realistic_v7/development_02/dg_declaration.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT — invented cargo and companies; no customer data\nMULTIMODAL DANGEROUS GOODS DECLARATION\nBooking BK-0002; vessel SYNTHETIC LANTA; voyage 2611S\nDate: 01 November 2026; Shipper: Synthetic Eastern Pack Ltd\n\nQZXU0000009; Item 1; UN 1263; Class 3; PG III; Marine pollutant NO; Limited quantity NO; 24 fibreboard boxes; cargo gross 480 kg; closed freight container\nQZXU0000009; Item 2; UN 3082; Class 9; PG III; Marine pollutant YES; Limited quantity NO; 24 fibreboard boxes; cargo gross 480 kg; closed freight container\nQZXU0000014; Item 1; UN 3082; Class 9; PG III; Marine pollutant YES; Limited quantity YES; 24 fibreboard boxes; cargo gross 480 kg; closed freight container\nQZXU0000020; NON-DANGEROUS GOODS; no IMDG declaration\nQZXU0000035; NON-DANGEROUS GOODS; no IMDG declaration\nQZXU0000040; NON-DANGEROUS GOODS; no IMDG declaration\nQZXU0000056; Item 1; UN 3082; Class 9; PG III; Marine pollutant NO; Limited quantity NO; 24 fibreboard boxes; cargo gross 480 kg; closed freight container\nQZXU0000061; NON-DANGEROUS GOODS; no IMDG declaration\nQZXU0000077; NON-DANGEROUS GOODS; no IMDG declaration\n",
+    "synthetic": true,
+    "role": "dg_declaration"
+  },
+  {
+    "id": "development_02-eir_gate_slips",
+    "path": "experiments/mvp/pipeline/intake/fixtures/realistic_v7/development_02/eir_gate_slips.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT — invented cargo and companies; no customer data\nEQUIPMENT INTERCHANGE RECEIPT / LAEM CHABANG\nVessel: SYNTHETIC LANTA / 2611S\nGate in: 01/11/2569 19:20 ICT\n\nQZXU0000009; ISO 22G1; Tare 2300 kg; Gross 11220 kg; LADEN; Reefer NO; POD HKHKG; Seal SYN02000; IN GAUGE\nQZXU0000014; ISO 45G1; Tare 3900 kg; Gross 12080 kg; LADEN; Reefer NO; POD VNSGN; Seal SYN02001; IN GAUGE\nQZXU0000020; ISO 45R1; Tare 4500 kg; Gross 12940 kg; LADEN; Reefer YES; Setpoint -18 C; POD SGSIN; Seal SYN02002; IN GAUGE\nQZXU0000035; ISO 22G1; Tare 2300 kg; Gross 13800 kg; LADEN; Reefer NO; POD HKHKG; Seal SYN02003; IN GAUGE\nQZXU0000040; ISO 45R1; Tare 3900 kg; Gross 14660 kg; LADEN; Reefer YES; Setpoint -0.4 F; POD VNSGN; Seal SYN02004; IN GAUGE\nQZXU0000056; ISO 45G1; Tare 3900 kg; Gross 15520 kg; LADEN; Reefer NO; POD SGSIN; Seal SYN02005; IN GAUGE\nQZXU0000061; ISO 45G1; Tare 850 kg; Gross 16380 kg; LADEN; Reefer NO; POD HKHKG; Seal SYN02006; IN GAUGE\nQZXU0000077; ISO 45G1; Tare 3900 kg; Gross 17240 kg; LADEN; Reefer NO; POD VNSGN; Seal SYN02007; IN GAUGE\n",
+    "synthetic": true,
+    "role": "gate_slip"
+  },
+  {
+    "id": "development_02-forwarding_email",
+    "path": "experiments/mvp/pipeline/intake/fixtures/realistic_v7/development_02/forwarding_email.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT — invented cargo and companies; no customer data\nFrom: Mali <export@example.invalid>\nTo: Vessel planner <plan@example.invalid>\nSubject: FW: BK-0002 / SYNTHETIC LANTA 2611S\nวันที่ 1 พฤศจิกายน 2569 เวลา 20.15 น.\n\nพี่คะ ส่งใบจอง ใบชั่งและใบรับตู้เข้าท่ามาให้แล้วค่ะ ตู้เย็นเสียบไฟที่ลานเรียบร้อย คนขับฝากใบเช็คหน้าท่าไว้กับ รปภ. อีกใบ รบกวนรวมเอกสารชุดนี้ให้ก่อนปิดรับคืนนี้ด้วยค่ะ\n\nมาลี\n\n----- Forwarded message -----\nFrom: Somsak <gate@example.invalid>\nSent: 1/11/2569 19.58\nเรื่อง: ใบรับตู้กะค่ำ\nตรวจซีลครบแล้วครับ รูปใบเช็คแนบมาด้วย รถคันสุดท้ายเพิ่งออกจากประตูสาม\n",
+    "synthetic": true,
+    "role": "email"
+  },
+  {
+    "id": "development_02-rollover_email",
+    "path": "experiments/mvp/pipeline/intake/fixtures/realistic_v7/development_02/rollover_email.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT — invented cargo and companies; no customer data\nFrom: Somsak <ops@example.invalid>\nSubject: RE: development_02 / QZXU0000077\nวันที่ 1 พฤศจิกายน 2569\nQZXU0000077 ไม่ทันปิดรับเที่ยว 2611S ขอถอนออกจากเที่ยวนี้และย้ายไปเรือเที่ยวถัดไปครับ\nสมศักดิ์\n",
+    "synthetic": true,
+    "role": "amendment"
+  },
+  {
+    "id": "development_02-tally_sheet",
+    "path": "experiments/mvp/pipeline/intake/fixtures/realistic_v7/development_02/tally_sheet.png",
+    "mime_type": "image/png",
+    "synthetic": true,
+    "role": "tally"
+  }
+]

@@ -1,0 +1,79 @@
+{
+ "sentence": "Crane 1 is down, nothing goes into bay 01 this call.",
+ "instance": "experiments/mvp/corpus/test/tiny/feeder_500/simulated_yard/seed-008000003.json",
+ "parse": {
+  "raw": "{\"schema_version\":\"stowlm.instruction/1\",\"constraint\":{\"type\":\"close_bay\",\"bay\":1}}",
+  "cost_usd": "0.00559225",
+  "error": null,
+  "outcome": {
+   "type": "close_bay",
+   "bay": 1
+  }
+ },
+ "before": {
+  "status": "ok",
+  "message": "Candidate requires ballast finishing and full checker",
+  "checker_passed": true,
+  "shippable": true,
+  "counts": {
+   "loads": 3,
+   "yard_rehandles": 1,
+   "restow_lifts": 0,
+   "hatch_cover_lifts": 2,
+   "crane_lifts_now": 6,
+   "later_port_lifts": 2,
+   "weighted_D11": 5.0
+  },
+  "placements": [
+   [
+    "QZXU0000020",
+    "0010202"
+   ],
+   [
+    "QZXU0000009",
+    "0010282"
+   ],
+   [
+    "QZXU0000014",
+    "0030282"
+   ]
+  ],
+  "wall_s": 48.3
+ },
+ "broken_before": [
+  "load QZXU0000020 -> 0010202: instruction: slot 0010202 is closed",
+  "load QZXU0000009 -> 0010282: instruction: slot 0010282 is closed"
+ ],
+ "after": {
+  "status": "ok",
+  "message": "Candidate requires ballast finishing and full checker",
+  "checker_passed": true,
+  "shippable": true,
+  "counts": {
+   "loads": 3,
+   "yard_rehandles": 1,
+   "restow_lifts": 0,
+   "hatch_cover_lifts": 2,
+   "crane_lifts_now": 6,
+   "later_port_lifts": 4,
+   "weighted_D11": 7.0
+  },
+  "placements": [
+   [
+    "QZXU0000009",
+    "0030202"
+   ],
+   [
+    "QZXU0000014",
+    "0030204"
+   ],
+   [
+    "QZXU0000020",
+    "0030282"
+   ]
+  ],
+  "wall_s": 32.3
+ },
+ "broken_after": [],
+ "shown": true
+}

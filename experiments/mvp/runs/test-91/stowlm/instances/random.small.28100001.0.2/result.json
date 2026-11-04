@@ -1,0 +1,648 @@
+{
+ "status": "ok",
+ "plan": {
+  "schema_version": "1.9",
+  "id": "random.small.28100001.0.2.stowlm.0",
+  "instance_id": "random.small.28100001.0.2",
+  "call_index": 0,
+  "moves": [
+   {
+    "call_index": 0,
+    "kind": "hatch_cover_off",
+    "cover_id": "HC-002-S",
+    "dst": "quay"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000040",
+    "src": "B012-015-02-01",
+    "dst": "0020102"
+   },
+   {
+    "call_index": 0,
+    "kind": "hatch_cover_off",
+    "cover_id": "HC-002-P",
+    "dst": "quay"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000082",
+    "src": "B012-013-03-01",
+    "dst": "0020202"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000159",
+    "src": "B012-007-01-01",
+    "dst": "0020104"
+   },
+   {
+    "call_index": 0,
+    "kind": "relocate",
+    "container_id": "QZWU0000031",
+    "src": "B012-003-04-02",
+    "dst": "B012-003-02-01"
+   },
+   {
+    "call_index": 0,
+    "kind": "hatch_cover_on",
+    "cover_id": "HC-002-P"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000170",
+    "src": "B012-003-04-01",
+    "dst": "0020282"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000077",
+    "src": "B012-023-02-01",
+    "dst": "0020106"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000101",
+    "src": "B012-021-01-01",
+    "dst": "0030482"
+   },
+   {
+    "call_index": 0,
+    "kind": "hatch_cover_on",
+    "cover_id": "HC-002-S"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000138",
+    "src": "B012-023-03-01",
+    "dst": "0030382"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000122",
+    "src": "B012-013-04-01",
+    "dst": "0010382"
+   },
+   {
+    "call_index": 0,
+    "kind": "relocate",
+    "container_id": "QZWU0000010",
+    "src": "B012-021-03-02",
+    "dst": "B012-021-02-01"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000143",
+    "src": "B012-021-03-01",
+    "dst": "0010482"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000056",
+    "src": "B012-005-03-01",
+    "dst": "0020682"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000035",
+    "src": "B012-005-02-01",
+    "dst": "0020582"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000009",
+    "src": "B012-017-01-01",
+    "dst": "0020882"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000014",
+    "src": "B012-003-03-01",
+    "dst": "0020782"
+   },
+   {
+    "call_index": 0,
+    "kind": "relocate",
+    "container_id": "QZWU0000005",
+    "src": "B012-001-03-02",
+    "dst": "B012-001-02-01"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000020",
+    "src": "B012-001-03-01",
+    "dst": "0030182"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000061",
+    "src": "B012-001-04-01",
+    "dst": "0020684"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000098",
+    "src": "B012-019-02-01",
+    "dst": "0030184"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000117",
+    "src": "B012-023-04-01",
+    "dst": "0020284"
+   },
+   {
+    "call_index": 0,
+    "kind": "relocate",
+    "container_id": "QZWU0000026",
+    "src": "B012-005-04-02",
+    "dst": "B012-005-03-01"
+   },
+   {
+    "call_index": 0,
+    "kind": "load",
+    "container_id": "QZXU0000164",
+    "src": "B012-005-04-01",
+    "dst": "0010182"
+   }
+  ],
+  "ballast": {
+   "tank_masses_kg": {
+    "APT-P": 0.0,
+    "APT-S": 0.0,
+    "DB-A-P": 0.0,
+    "DB-A-S": 0.0,
+    "DB-F-P": 0.0,
+    "DB-F-S": 0.0,
+    "DB-M-P": 0.0,
+    "DB-M-S": 0.0,
+    "FPT-P": 0.0,
+    "FPT-S": 0.0,
+    "FWD-DEEP-P": 0.0,
+    "FWD-DEEP-S": 0.0,
+    "HEEL-P": 0.0,
+    "HEEL-S": 0.0,
+    "WING-A-P": 0.0,
+    "WING-A-S": 0.0,
+    "WING-F-P": 0.0,
+    "WING-F-S": 0.0
+   },
+   "source": "finisher"
+  },
+  "action_space": "boxslot@1.0.1",
+  "actions": [
+   {
+    "op": "P",
+    "box": "QZXU0000040",
+    "slot": "0020102"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000082",
+    "slot": "0020202"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000159",
+    "slot": "0020104"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000170",
+    "slot": "0020282"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000077",
+    "slot": "0020106"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000101",
+    "slot": "0030482"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000138",
+    "slot": "0030382"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000122",
+    "slot": "0010382"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000143",
+    "slot": "0010482"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000056",
+    "slot": "0020682"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000035",
+    "slot": "0020582"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000009",
+    "slot": "0020882"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000014",
+    "slot": "0020782"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000020",
+    "slot": "0030182"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000061",
+    "slot": "0020684"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000098",
+    "slot": "0030184"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000117",
+    "slot": "0020284"
+   },
+   {
+    "op": "P",
+    "box": "QZXU0000164",
+    "slot": "0010182"
+   }
+  ],
+  "provenance": {
+   "versions": {
+    "schema": "1.9",
+    "move_engine": "2.0",
+    "checker": "2.2",
+    "feasibility": "2.5",
+    "linear_model": "3.5",
+    "ballast": "4.0",
+    "action_space": "1.0.1",
+    "infrastructure": "3.0",
+    "solver.scalable": "3.0.0",
+    "rule_catalogue": "sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae"
+   },
+   "stubs": {},
+   "seed": 0,
+   "created_by": "stowlm@glimmer-30b-4bit+adapter",
+   "created_at": null,
+   "git_commit": null,
+   "parents": [
+    "APPROXIMATION D50: departure/arrival endpoints only; actual worst intermediate condition is not searched.",
+    "APPROXIMATION: D50 checks declared departure/arrival endpoints; no worst-intermediate-consumables claim",
+    "APPROXIMATION: D57 requires departure, midpoint and arrival samples; these samples do not search the true worst continuous-voyage state",
+    "APPROXIMATION: synthetic D29 equivalent cell mass represented as a standard-height ISO20 box",
+    "ASSUMPTION Q9: row 1 in every block has reefer plugs; final block permits DG, including reefer DG; detailed DG segregation remains mandatory.",
+    "ASSUMPTION: LOCODE labels THLCH/SGSIN/THBKK/USLAX identify synthetic scenarios, not real terminals.",
+    "ASSUMPTION: Synthetic governing crane height derived from the existing quay max_on_deck_tier_count; yard/equipment limits remain separate lower caps. Expert Q3 does not establish this port value.",
+    "ASSUMPTION: dock water density 1025 kg/m3 (seawater); no measured density is supplied.",
+    "ASSUMPTION: legacy documentation only: retained order uses descending full-sounding LCG and canonical tank ID to break ties; it does not control D57 proportional tank fills; no service-tank roles or usual operating practice are inferred.",
+    "ASSUMPTION: synthetic consumable draw-down is globally forward first and aft last, using descending full-sounding LCG and canonical tank ID to break ties; no service-tank roles or usual operating practice are inferred.",
+    "ASSUMPTION: synthetic lane at the row-1 side of every block; no yard survey is supplied.",
+    "ASSUMPTION: synthetic port-side berthing default; no berth survey is supplied.",
+    "D27: tank geometry and explicit Tank.kind are declared synthetic design inputs",
+    "D34: port labels and profile water densities describe synthetic scenarios, not measured real docks.",
+    "D50 default arrival quantity retained by D57: 10% of departure contents",
+    "D50 default rule: data/raw/is-code/msc267-85.pdf Part B 3.4.1.2-.3, PDF p.41.",
+    "D50: consumption=None selects the vessel policy's default 10% remaining per consumable group.",
+    "D50: each declared consumable group retains 0.1 of departure contents unless complete explicit consumption replaces it",
+    "D50: no voyage ballast operations are declared or permitted.",
+    "D57 DECLARATION: proportional draw-down applies to every consumable tank: mass(r) = departure mass * one common remaining fraction r; symmetric pairs drain together. Default arrival r=0.10; explicit group consumption must imply the same r across all nonempty groups.",
+    "DECLARATION: Tank.kind=diesel_oil",
+    "DECLARATION: Tank.kind=fresh_water",
+    "DECLARATION: Tank.kind=fuel_oil",
+    "DECLARATION: absent from supplied tank catalog: lube_oil, stores",
+    "Rule freeze v1: off; catalogue sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae",
+    "UNVERIFIED: berth/channel draught limit is unknown (None), not an assertion of unlimited draught.",
+    "adapter-weights-sha256:cc52d335c68fda097dbecd6bddc28ebeadac77786ab45d8d04d7ac71cbe2ae6c",
+    "base-model-sha256:4f1b662295ab863be30b4bcac9def5b9eed005960f8d47320f3c9fdcbfa48f6d",
+    "checker.instance.sha256:801c3c3da087210d207c641c0c2ba1979f44f4757beca0ff3ed0dbc6694e45af",
+    "checker.plan.sha256:f85bc3a465838aca930667ada2cfd0869005868d7175ff688db78a2bc4c23713",
+    "conv_C2_feeder_1000",
+    "conv_C2_feeder_1000.convergence-restore",
+    "data/raw/is-code/msc267-85.pdf: Part B 3.4.1.2 and 3.4.1.3, PDF p41",
+    "dock-water:THBKK:a656aac3bc05c55fbe9fdf2ebf68599486710887d3524382b341f7a30d8b4227",
+    "dock-water:THLCH:76a5bae4f1802a0c342bb2628c4d0051b0f7c38456bedefb76a671f7825fb15c",
+    "docs/decisions.md:D27",
+    "docs/decisions.md:D34",
+    "docs/decisions.md:D50",
+    "docs/decisions.md:D56",
+    "docs/decisions.md:D57",
+    "docs/expert/2026-10-28-written-answers.md: expert Q3, 2026-10-28; Expert Q3 (28 Oct 2026): most Laem Chabang terminals can operate eight tiers; applied to the quay crane only under D62 amendment/A8. Yard height is an independent synthetic RTG assumption pending Q25.",
+    "experiments/physics-review/convergence/harness.py:place",
+    "experiments/physics-review/convergence/post_d30/harness2.py:build",
+    "experiments/physics-review/convergence/post_d30/search_feeder_1000_C1.json sha256:8505a20a575e9e07a50cd77449288ec5430baa7985c5b8610bd909b89dc3cce8",
+    "experiments/physics-review/convergence/post_d30/search_feeder_1000_C2.json sha256:3cc53fd5ca1a69a4eebb9e5ad2b8750cbd9f05bd5a7070242149fadad5dad1ad",
+    "experiments/physics-review/convergence/post_d30/search_feeder_1000_C2.json sha256:3cc53fd5ca1a69a4eebb9e5ad2b8750cbd9f05bd5a7070242149fadad5dad1ad; current dual-phase full-checker witness: experiments/physics-review/rerun/fix-t2-vessel/restore/unchanged-v2/feeder_1000_C2/result.json sha256:4b91f00dd4ba93d5091331e49e6123c1974c82d4d1f8e19ce9d064b563443dc4",
+    "experiments/physics-review/convergence/post_d30/search_feeder_1000_C3.json sha256:68cc097c7611f25bb00436d69474a20b0800a5d8c4ac1b22b7e2bd6ce95b43cb",
+    "experiments/physics-review/design/harness.py:C3",
+    "feeder_1000",
+    "feeder_800",
+    "params/cargo/feeder_export.toml sha256:87b202dc38c497462608173085803065755f73301df10410338b5e36580bd0e2",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-P]",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-P].table[-1].lcg_m=26.265996232377745",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-S]",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-S].table[-1].lcg_m=26.265996232377734",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-P]",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-P].table[-1].lcg_m=17.336421896156274",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-S]",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-S].table[-1].lcg_m=17.33642189615627",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-P]",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-P].table[-1].lcg_m=103.71889399970796",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-S]",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-S].table[-1].lcg_m=103.71889399970796",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-P]",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-P].table[-1].lcg_m=22.773510741855596",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-S]",
+    "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-S].table[-1].lcg_m=22.773510741855596",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-P]",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-P].table[-1].lcg_m=26.265996232377745",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-S]",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-S].table[-1].lcg_m=26.265996232377734",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-P]",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-P].table[-1].lcg_m=17.336421896156274",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-S]",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-S].table[-1].lcg_m=17.33642189615627",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-P]",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-P].table[-1].lcg_m=103.71889399970796",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-S]",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-S].table[-1].lcg_m=103.71889399970796",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-P]",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-P].table[-1].lcg_m=22.773510741855596",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-S]",
+    "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-S].table[-1].lcg_m=22.773510741855596",
+    "params/ports/laem_chabang_like.toml sha256:ada7b775b71e48e7d7c7583d797b5017dca429f7f357bc998c97303149fa938d",
+    "params/ports/singapore_like.toml sha256:56ac0001aeb471a594d417cf8476303a9d5ee634736583ed3223ed70225b938e",
+    "params/ports/small_feeder.toml sha256:b3ccc9cddb40e9b6a8e81d5f3776323756a23c359853ead9b46178ae76ea8b31",
+    "random.small.28100001.0.2",
+    "random.small.28100001.0.2.boxslot",
+    "random.small.28100001.0.2.stowlm.0",
+    "rotation straits call 0 LOCODE THLCH",
+    "rotation straits call 1 LOCODE SGSIN",
+    "rotation:synthetic_thai_coastal:call:0:THLCH",
+    "rotation:synthetic_thai_coastal:call:1:THBKK",
+    "sft-data-sha256:c18f6d61990f768fe67e620bb6f9041af62fa7be6f67cb0e4a8fdf8495ad9237",
+    "sft-entries-sha256:4a17be18218464ed6e96863c3eaebd160a091462009dd0d281fb76c5a69a952b",
+    "src/stowage/model/fixtures.py: historical manual route THLCH->THBKK->THSGZ",
+    "straits:call-0:THLCH:departure",
+    "straits:call-1:SGSIN:arrival",
+    "synthetic fixture; no actual terminal operating limits",
+    "synthetic port profile laem_chabang_like sha256:e0bea50ffeb11e429d42611311241118150d78c7ad4dc392a48c443bc9617491",
+    "synthetic port profile singapore_like sha256:b457d1da4f7b67310281307243c1ef0e53875a5cedd95d090ac7410153639b9c",
+    "synthetic-port:laem_chabang_like:317aa928fbcbf14935bc1a595025b9fe8cce4bf731ef836acaf3110dd5ee88fe",
+    "synthetic-port:small_feeder:a9b9b9d6b81c732b8a20d6892b98c259bc35fb36f388f794648c1cca5a8b429c"
+   ],
+   "input_versions": {}
+  }
+ },
+ "later_plans": [],
+ "planner": "stowlm",
+ "planner_version": "glimmer-30b-4bit+adapter",
+ "seed": 0,
+ "wall_time_s": 22.336556458030827,
+ "metrics": {
+  "n_samples": 1,
+  "n_dead_end": 0,
+  "mask_dead_ends": 0,
+  "mlx_active_gb": 15.74,
+  "mlx_cache_gb": 2.15,
+  "mlx_peak_gb": 16.93,
+  "mlx_cache_limit_gb": 2.0,
+  "tokens_in": 855,
+  "tokens_out": 127,
+  "mask_version": "stowlm-mask@1.2",
+  "temperature": 0.0,
+  "n_complete": 1,
+  "n_max_tokens": 0,
+  "engine_build_s": 0.058,
+  "host_share": 0.0,
+  "sample_objectives": [
+   28.0
+  ],
+  "dead_end_depths": [],
+  "gen_wall_s": 6.922,
+  "gen_steps": 127,
+  "gen_tokens": 127,
+  "gen_host_mask_s": 0.0,
+  "gen_tok_s": 18.35,
+  "gen_prefill_s": 0.929,
+  "gen_decode_mode": "sequential-backtracking",
+  "gen_backtracks": [
+   0
+  ],
+  "gen_rewound_actions": [
+   0
+  ],
+  "gen_cache_refills": 0,
+  "gen_cache_trims": 0,
+  "gen_override_rate_all_steps": 0.0236,
+  "gen_override_rate_action_start": 0.0,
+  "gen_sample_temperatures": [
+   0.0
+  ],
+  "finisher_budget_timeouts": [],
+  "n_checker_feasible": 1,
+  "checker_feasible_objectives": [
+   28.0
+  ],
+  "candidate_failures": {},
+  "n_candidates_checked": 1,
+  "chosen_level4": {
+   "heavy_on_deck_count": 0.0,
+   "killed_slots": 0.0
+  },
+  "selection_mode": "rank_order_first_pass",
+  "candidate_selection_s": 14.81,
+  "chosen_sample": 0,
+  "chosen_objective": 28.0,
+  "masked_logprob": 0.0,
+  "n_actions": 18,
+  "tokens_out_chosen": 127,
+  "pass_at_1": {
+   "sample": 0,
+   "complete": true,
+   "checker_passed": true,
+   "objective": 28.0,
+   "checked_in_selection": true
+  },
+  "pool_plan_wall_s": 22.337,
+  "mask_override_scope": "backtracking decode: gen_override_rate_all_steps / _action_start",
+  "trace_rows": 19,
+  "trace_replay_s": 2.067,
+  "trace_exact_counts_s": 0.906,
+  "pipeline_timing": {
+   "planning_s": 24.40388116700342,
+   "finalize_s": 2.5708985049277544e-05,
+   "check_s": 1.7367462089750916,
+   "repair_s": 0.0,
+   "recheck_s": 0.0,
+   "pipeline_s": 26.183660834038164
+  },
+  "fallback_needed": false,
+  "repair_status": "not_needed",
+  "shippable": true
+ },
+ "message": null,
+ "repaired": false,
+ "repair_note": null,
+ "provenance": {
+  "versions": {
+   "schema": "1.9",
+   "move_engine": "2.0",
+   "checker": "2.2",
+   "feasibility": "2.5",
+   "linear_model": "3.5",
+   "ballast": "4.0",
+   "action_space": "1.0.1",
+   "infrastructure": "3.0",
+   "solver.scalable": "3.0.0",
+   "rule_catalogue": "sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae"
+  },
+  "stubs": {},
+  "seed": 0,
+  "created_by": "planner.run_planner",
+  "created_at": null,
+  "git_commit": null,
+  "parents": [
+   "APPROXIMATION D50: departure/arrival endpoints only; actual worst intermediate condition is not searched.",
+   "APPROXIMATION: D50 checks declared departure/arrival endpoints; no worst-intermediate-consumables claim",
+   "APPROXIMATION: D57 requires departure, midpoint and arrival samples; these samples do not search the true worst continuous-voyage state",
+   "APPROXIMATION: synthetic D29 equivalent cell mass represented as a standard-height ISO20 box",
+   "ASSUMPTION Q9: row 1 in every block has reefer plugs; final block permits DG, including reefer DG; detailed DG segregation remains mandatory.",
+   "ASSUMPTION: LOCODE labels THLCH/SGSIN/THBKK/USLAX identify synthetic scenarios, not real terminals.",
+   "ASSUMPTION: Synthetic governing crane height derived from the existing quay max_on_deck_tier_count; yard/equipment limits remain separate lower caps. Expert Q3 does not establish this port value.",
+   "ASSUMPTION: dock water density 1025 kg/m3 (seawater); no measured density is supplied.",
+   "ASSUMPTION: legacy documentation only: retained order uses descending full-sounding LCG and canonical tank ID to break ties; it does not control D57 proportional tank fills; no service-tank roles or usual operating practice are inferred.",
+   "ASSUMPTION: synthetic consumable draw-down is globally forward first and aft last, using descending full-sounding LCG and canonical tank ID to break ties; no service-tank roles or usual operating practice are inferred.",
+   "ASSUMPTION: synthetic lane at the row-1 side of every block; no yard survey is supplied.",
+   "ASSUMPTION: synthetic port-side berthing default; no berth survey is supplied.",
+   "D27: tank geometry and explicit Tank.kind are declared synthetic design inputs",
+   "D34: port labels and profile water densities describe synthetic scenarios, not measured real docks.",
+   "D50 default arrival quantity retained by D57: 10% of departure contents",
+   "D50 default rule: data/raw/is-code/msc267-85.pdf Part B 3.4.1.2-.3, PDF p.41.",
+   "D50: consumption=None selects the vessel policy's default 10% remaining per consumable group.",
+   "D50: each declared consumable group retains 0.1 of departure contents unless complete explicit consumption replaces it",
+   "D50: no voyage ballast operations are declared or permitted.",
+   "D57 DECLARATION: proportional draw-down applies to every consumable tank: mass(r) = departure mass * one common remaining fraction r; symmetric pairs drain together. Default arrival r=0.10; explicit group consumption must imply the same r across all nonempty groups.",
+   "DECLARATION: Tank.kind=diesel_oil",
+   "DECLARATION: Tank.kind=fresh_water",
+   "DECLARATION: Tank.kind=fuel_oil",
+   "DECLARATION: absent from supplied tank catalog: lube_oil, stores",
+   "Rule freeze v1: off; catalogue sha256:a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae",
+   "UNVERIFIED: berth/channel draught limit is unknown (None), not an assertion of unlimited draught.",
+   "adapter-weights-sha256:cc52d335c68fda097dbecd6bddc28ebeadac77786ab45d8d04d7ac71cbe2ae6c",
+   "base-model-sha256:4f1b662295ab863be30b4bcac9def5b9eed005960f8d47320f3c9fdcbfa48f6d",
+   "checker.instance.sha256:801c3c3da087210d207c641c0c2ba1979f44f4757beca0ff3ed0dbc6694e45af",
+   "checker.plan.sha256:6157c37225c08b64ce4596dad9ad7184929fa042f49e65b68d8d25318ab42df0",
+   "checker.plan.sha256:f85bc3a465838aca930667ada2cfd0869005868d7175ff688db78a2bc4c23713",
+   "conv_C2_feeder_1000",
+   "conv_C2_feeder_1000.convergence-restore",
+   "data/raw/is-code/msc267-85.pdf: Part B 3.4.1.2 and 3.4.1.3, PDF p41",
+   "dock-water:THBKK:a656aac3bc05c55fbe9fdf2ebf68599486710887d3524382b341f7a30d8b4227",
+   "dock-water:THLCH:76a5bae4f1802a0c342bb2628c4d0051b0f7c38456bedefb76a671f7825fb15c",
+   "docs/decisions.md:D27",
+   "docs/decisions.md:D34",
+   "docs/decisions.md:D50",
+   "docs/decisions.md:D56",
+   "docs/decisions.md:D57",
+   "docs/expert/2026-10-28-written-answers.md: expert Q3, 2026-10-28; Expert Q3 (28 Oct 2026): most Laem Chabang terminals can operate eight tiers; applied to the quay crane only under D62 amendment/A8. Yard height is an independent synthetic RTG assumption pending Q25.",
+   "experiments/physics-review/convergence/harness.py:place",
+   "experiments/physics-review/convergence/post_d30/harness2.py:build",
+   "experiments/physics-review/convergence/post_d30/search_feeder_1000_C1.json sha256:8505a20a575e9e07a50cd77449288ec5430baa7985c5b8610bd909b89dc3cce8",
+   "experiments/physics-review/convergence/post_d30/search_feeder_1000_C2.json sha256:3cc53fd5ca1a69a4eebb9e5ad2b8750cbd9f05bd5a7070242149fadad5dad1ad",
+   "experiments/physics-review/convergence/post_d30/search_feeder_1000_C2.json sha256:3cc53fd5ca1a69a4eebb9e5ad2b8750cbd9f05bd5a7070242149fadad5dad1ad; current dual-phase full-checker witness: experiments/physics-review/rerun/fix-t2-vessel/restore/unchanged-v2/feeder_1000_C2/result.json sha256:4b91f00dd4ba93d5091331e49e6123c1974c82d4d1f8e19ce9d064b563443dc4",
+   "experiments/physics-review/convergence/post_d30/search_feeder_1000_C3.json sha256:68cc097c7611f25bb00436d69474a20b0800a5d8c4ac1b22b7e2bd6ce95b43cb",
+   "experiments/physics-review/design/harness.py:C3",
+   "feeder_1000",
+   "feeder_800",
+   "params/cargo/feeder_export.toml sha256:87b202dc38c497462608173085803065755f73301df10410338b5e36580bd0e2",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-P]",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-P].table[-1].lcg_m=26.265996232377745",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-S]",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[DO-S].table[-1].lcg_m=26.265996232377734",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-P]",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-P].table[-1].lcg_m=17.336421896156274",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-S]",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-A-S].table[-1].lcg_m=17.33642189615627",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-P]",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-P].table[-1].lcg_m=103.71889399970796",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-S]",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FO-F-S].table[-1].lcg_m=103.71889399970796",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-P]",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-P].table[-1].lcg_m=22.773510741855596",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-S]",
+   "params/fleet/feeder_1000.toml sha256:6a26959e2bbbacbdf6dc052bd6e110cccf7835a524ea45b4becffdea6a9d4b94#tanks[FW-S].table[-1].lcg_m=22.773510741855596",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-P]",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-P].table[-1].lcg_m=26.265996232377745",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-S]",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[DO-S].table[-1].lcg_m=26.265996232377734",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-P]",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-P].table[-1].lcg_m=17.336421896156274",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-S]",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-A-S].table[-1].lcg_m=17.33642189615627",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-P]",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-P].table[-1].lcg_m=103.71889399970796",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-S]",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FO-F-S].table[-1].lcg_m=103.71889399970796",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-P]",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-P].table[-1].lcg_m=22.773510741855596",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-S]",
+   "params/fleet/feeder_800.toml sha256:c759507b3f214760687e1d700789abebc89e22acba1f6cbd272576c406ebe5c7#tanks[FW-S].table[-1].lcg_m=22.773510741855596",
+   "params/ports/laem_chabang_like.toml sha256:ada7b775b71e48e7d7c7583d797b5017dca429f7f357bc998c97303149fa938d",
+   "params/ports/singapore_like.toml sha256:56ac0001aeb471a594d417cf8476303a9d5ee634736583ed3223ed70225b938e",
+   "params/ports/small_feeder.toml sha256:b3ccc9cddb40e9b6a8e81d5f3776323756a23c359853ead9b46178ae76ea8b31",
+   "random.small.28100001.0.2",
+   "random.small.28100001.0.2.boxslot",
+   "random.small.28100001.0.2.stowlm.0",
+   "rotation straits call 0 LOCODE THLCH",
+   "rotation straits call 1 LOCODE SGSIN",
+   "rotation:synthetic_thai_coastal:call:0:THLCH",
+   "rotation:synthetic_thai_coastal:call:1:THBKK",
+   "sft-data-sha256:c18f6d61990f768fe67e620bb6f9041af62fa7be6f67cb0e4a8fdf8495ad9237",
+   "sft-entries-sha256:4a17be18218464ed6e96863c3eaebd160a091462009dd0d281fb76c5a69a952b",
+   "src/stowage/model/fixtures.py: historical manual route THLCH->THBKK->THSGZ",
+   "straits:call-0:THLCH:departure",
+   "straits:call-1:SGSIN:arrival",
+   "synthetic fixture; no actual terminal operating limits",
+   "synthetic port profile laem_chabang_like sha256:e0bea50ffeb11e429d42611311241118150d78c7ad4dc392a48c443bc9617491",
+   "synthetic port profile singapore_like sha256:b457d1da4f7b67310281307243c1ef0e53875a5cedd95d090ac7410153639b9c",
+   "synthetic-port:laem_chabang_like:317aa928fbcbf14935bc1a595025b9fe8cce4bf731ef836acaf3110dd5ee88fe",
+   "synthetic-port:small_feeder:a9b9b9d6b81c732b8a20d6892b98c259bc35fb36f388f794648c1cca5a8b429c"
+  ],
+  "input_versions": {}
+ }
+}

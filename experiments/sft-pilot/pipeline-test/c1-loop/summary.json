@@ -1,0 +1,28 @@
+{
+ "n": 3,
+ "shipped": 0,
+ "shipped_pass_rate": null,
+ "fallback_rate": 1.0,
+ "stowlm_own_shipped": 0,
+ "status_counts": {
+  "error": 3
+ },
+ "mean_gap_to_exact_shipped": null,
+ "decode_tok_s": 35.61018882270942,
+ "decode_steps": 122,
+ "mask_host_ms_per_step": 19.024590163934427,
+ "gpu_host_stall_fraction": 0.044481054365733116,
+ "pipeline_s_mean": 232.18999999999997,
+ "prefill_s_mean": 1.6706666666666667,
+ "peak_memory_gb_max": 16.75,
+ "samples": 24,
+ "samples_complete": 24,
+ "samples_dead_end": 0,
+ "candidates_checker_feasible": 0,
+ "no_decode": {},
+ "config_sha256": "52f2511af95de67af54f72babf2926706fd1800d67379d9d0b1f91265f9c1214",
+ "label": "DIAGNOSTIC (loose inputs; not a docs/evaluation.md row)",
+ "active_stubs": {
+  "feasibility.make_engine": "C1 dry run: 3.7 linear policy epoch may be stale during requalification, so the engine's C2 global screen is off (extra global_screen=0); L1/L2 local checks and C1 stay on; the full checker judges every plan"
+ }
+}

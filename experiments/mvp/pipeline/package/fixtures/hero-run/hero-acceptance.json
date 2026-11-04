@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "errors": [],
+  "pipeline_sha256": "acf2f275efa73f45c43709f4a52807dd480390e1497f085cab11d3604265bbec",
+  "hero_sentence": "Nothing goes into bay nine on this call.",
+  "rule": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "close_bay",
+      "bay": 9
+    }
+  },
+  "reader": {
+    "name": "swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+    "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03"
+  }
+}

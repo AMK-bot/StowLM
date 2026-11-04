@@ -1,0 +1,36 @@
+{
+  "source": "demo_source190.json",
+  "admission": {
+    "mask": 4095,
+    "load1": 42.75,
+    "t": 1793578976,
+    "age_s": 10.409416913986206
+  },
+  "base_rough_frame": {
+    "step": 0,
+    "criteria": "rough upright-table fast screen (not a checker verdict)",
+    "gm_m": 2.5833819930886173,
+    "gm_min_m": 0.15,
+    "heel_deg": 0.006062697042829557,
+    "trim_m": -0.1665328357689193,
+    "draught_aft_m": 7.469028195286112,
+    "draught_fwd_m": 7.6355610310550315,
+    "draught_mean_m": 7.552294613170572,
+    "max_draught_m": 8.7,
+    "displacement_t": 13564.284492015391,
+    "sf_n": null,
+    "bm_nm": null,
+    "max_sf_ratio": null,
+    "max_bm_ratio": null,
+    "gz": [],
+    "gz_error": "not computed by the fast screen",
+    "stability_passed": null,
+    "strength_passed": null,
+    "stability_violations": [],
+    "strength_violations": [],
+    "error": null,
+    "covers_off": [],
+    "tank_state": "candidate ship tank masses; tabulated centres and free surfaces"
+  },
+  "pairs": []
+}

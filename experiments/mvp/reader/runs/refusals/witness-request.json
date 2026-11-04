@@ -1,0 +1,17 @@
+{
+  "case_id": "impossible-tier-with-alternative",
+  "source_case": "brief-02",
+  "input": "experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100003.json",
+  "input_sha256": "0ef1a72eaad061cf96cef568bcfbecd575e4e74dd1e44c3b59b574247bd8c981",
+  "sentence": "Across the vessel, use at most zero occupied tiers per deck stack.",
+  "expected": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "max_tiers",
+      "bay": null,
+      "zone": "deck",
+      "max_tiers": 0
+    }
+  },
+  "baseline_file": "experiments/mvp/frontier/runs/val-0.9/random.small.40100003.0.2.json"
+}

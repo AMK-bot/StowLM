@@ -1,0 +1,97 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "label": "Loaded cProfile cost attribution; not uninstrumented response latency",
+  "source": "profile190_loaded.json",
+  "wall_s": 57.58892075001495,
+  "part_costs": [
+    {
+      "file": "stowage/checker/visibility.py",
+      "line": 339,
+      "function": "check_visibility",
+      "primitive_calls": 3,
+      "calls": 3,
+      "own_s": 0.077173104,
+      "cumulative_s": 21.100105958,
+      "fraction_of_profiled_wall": 0.3663917587480492
+    },
+    {
+      "file": "stowage/checker/strength.py",
+      "line": 461,
+      "function": "check_strength",
+      "primitive_calls": 3,
+      "calls": 3,
+      "own_s": 0.013127662,
+      "cumulative_s": 16.221671291,
+      "fraction_of_profiled_wall": 0.2816804183814434
+    },
+    {
+      "file": "stowage/checker/stability.py",
+      "line": 529,
+      "function": "check_stability",
+      "primitive_calls": 3,
+      "calls": 3,
+      "own_s": 0.026357417,
+      "cumulative_s": 14.739541000000001,
+      "fraction_of_profiled_wall": 0.2559440393749031
+    },
+    {
+      "file": "stowage/checker/lashing.py",
+      "line": 668,
+      "function": "check_lashing",
+      "primitive_calls": 3,
+      "calls": 3,
+      "own_s": 0.00872825,
+      "cumulative_s": 3.6201115840000004,
+      "fraction_of_profiled_wall": 0.06286125068595005
+    },
+    {
+      "file": "stowage/checker/rules.py",
+      "line": 408,
+      "function": "check_static_rules",
+      "primitive_calls": 1,
+      "calls": 1,
+      "own_s": 0.00028583300000000004,
+      "cumulative_s": 1.019193416,
+      "fraction_of_profiled_wall": 0.017697734264272274
+    },
+    {
+      "file": "stowage/checker/full.py",
+      "line": 73,
+      "function": "_input_bindings",
+      "primitive_calls": 1,
+      "calls": 1,
+      "own_s": 9.208e-06,
+      "cumulative_s": 0.151572791,
+      "fraction_of_profiled_wall": 0.002631978321975424
+    },
+    {
+      "file": "stowage/moves/engine.py",
+      "line": 87,
+      "function": "apply_plan",
+      "primitive_calls": 1,
+      "calls": 1,
+      "own_s": 0.0008531070000000001,
+      "cumulative_s": 0.10092250000000001,
+      "fraction_of_profiled_wall": 0.0017524638191795565
+    },
+    {
+      "file": "stowage/checker/full.py",
+      "line": 169,
+      "function": "check_plan_constraints",
+      "primitive_calls": 3,
+      "calls": 3,
+      "own_s": 5.9041000000000006e-05,
+      "cumulative_s": 0.000107583,
+      "fraction_of_profiled_wall": 1.868119745931722e-06
+    }
+  ],
+  "dominance": "Visibility, strength and stability together consume most instrumented wall time. The shared visibility.py _loading_condition function has six calls and 18.816661292 s cumulative across its visibility and lashing callers; this is not attribution of six calls to the visibility part. Numerical hull/tank equilibrium is shared hot work across parts; cumulative parent/child rows overlap and must not be added.",
+  "cached_base_report": {
+    "implemented": false,
+    "reason": "Full reports are bound to complete instance and plan hashes. A changed destination invalidates base report binding. A changed placement can affect every cargo-dependent part at all three voyage conditions, plus replay/count and active in-port checks. No dependency proof for replacing affected part results was established.",
+    "persistent_reuse": "Exact parameter parsing, canonical policy, hull geometry LRUs and interpolation stencils exist; immutable metadata/input contents participate in cache keys. Geometry owns full-precision submerged-state caches. They are numerical reuse, never a base verdict.",
+    "per_evaluation_reuse": "checker.perf.evaluation_cache supplies a fresh disposable context for each public full check; it is not a persistent base report cache.",
+    "safe_claim": "No full-check shortcut implemented. A screen that skips any required part is an incremental screen, not a full check."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "unsupported",
+      "reason": "min_bays 1.41 out of allowed integer range",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 5680,
+    "audio_seconds": 5.64,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00025",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "2b23b965ec1d43ef9fab566f89bacbad",
+    "session_id": "voyager/transcribe/6D73E8EBD1E940828047FA6D3825405D"
+  },
+  "asr_latency_s": 1.1196981249959208,
+  "audio_sha256": "032aaea689525d09ae8279e0f46a9c4e89d253f6e1ba4752853a3409ce4ee839",
+  "canonical": {
+    "refusal": {
+      "code": "unsupported",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 3.4785283749806695,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00182225",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "ff5a01c7fe79a51e006979c2d5ab26a99d0d49ea8c943cc3acbc2ea0acc27dcc",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "36674b8c-963c-4f63-9eec-f0e1897eed1b"
+  },
+  "parser_latency_s": 2.2627962089609355,
+  "script": "Radio: keep class 1.4 1 bays away from crew house.",
+  "source_id": "reader-001423e1b41880f9",
+  "started_utc": "2026-11-01T01:34:00.327717+00:00",
+  "status": "complete",
+  "transcript": "Radio. Keep plus 1.41 bays away from crew house."
+}

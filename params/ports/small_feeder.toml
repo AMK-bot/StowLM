@@ -1,0 +1,94 @@
+# APPROXIMATION: all operational values are synthetic scenario assumptions pending expert X1.
+# Public port/equipment context is listed in README; it does not validate these scenario values.
+# Bays count twenty-foot longitudinal positions; forty-foot boxes occupy two adjacent positions.
+# Clearance height is an assumed equipment travel envelope, never an extra storage tier.
+id = "small_feeder"
+label = "Small feeder port"
+description = "Synthetic low-volume regional feeder berth group with reach-stacker operations; no named port or terminal is reproduced."
+synthetic = true
+schema_version = { value = 1, unit = "version", assumption = "Initial local parameter schema version." }
+max_crane_height_tiers = { value = 4, unit = "tiers", assumption = "ASSUMPTION: Synthetic governing crane height derived from the existing quay max_on_deck_tier_count; yard/equipment limits remain separate lower caps. Expert Q3 does not establish this port value." }
+berthing_side = "port"
+berthing_side_assumption = "ASSUMPTION: synthetic port-side berthing default; no berth survey is supplied."
+
+berth_depth_m = { value = 8, unit = "m", assumption = "APPROXIMATION: synthetic representative berth depth 8 m; no surveyed terminal or channel depth is supplied. The shallow 8 m case intentionally constrains a deeply loaded feeder_1700." }
+berth_depth_assumption = "APPROXIMATION: representative synthetic berth; any published depth is context for this scenario, not measured permission at every berth. With rule freeze v1 on, depth is used directly as PortProfile.max_draught_m. No tide or UKC increment is credited; no separate UKC reserve is modelled. Unknown legacy limits remain None with the switch off."
+
+[yard]
+truck_lane_side = "low"
+truck_lane_side_assumption = "ASSUMPTION: synthetic lane at the row-1 side of every block; no yard survey is supplied."
+berth_count = { value = 1, unit = "berths", assumption = "Synthetic selected berth group, not the whole reference port; geometry chosen to support several simultaneous calls." }
+block_count = { value = 4, unit = "blocks", assumption = "Synthetic selected berth group, not the whole reference port; geometry chosen to support several simultaneous calls." }
+blocks_per_berth = { value = 4, unit = "blocks/berth", assumption = "Synthetic selected berth group, not the whole reference port; geometry chosen to support several simultaneous calls." }
+bays_per_block = { value = 20, unit = "bays", assumption = "Synthetic selected berth group, not the whole reference port; geometry chosen to support several simultaneous calls." }
+rows_per_bay = { value = 4, unit = "rows", assumption = "Synthetic selected berth group, not the whole reference port; geometry chosen to support several simultaneous calls." }
+max_stack_tiers = { value = 3, unit = "tiers", assumption = "Synthetic operating envelope; expert Q3 must confirm yard and quay limits separately; not a measured real terminal limit." }
+initial_occupancy_fraction = { value = 0.5, unit = "fraction", assumption = "Synthetic selected berth group, not the whole reference port; geometry chosen to support several simultaneous calls." }
+
+[equipment]
+type = "reach_stacker"
+stacking_notation = "1-over-3"
+stack_height_tiers = { value = 3, unit = "tiers", assumption = "Synthetic operating envelope; expert Q3 must confirm yard and quay limits separately; not a measured real terminal limit." }
+clearance_height_tiers = { value = 4, unit = "tiers", assumption = "Synthetic operating envelope; expert Q3 must confirm yard and quay limits separately; not a measured real terminal limit." }
+count = { value = 3, unit = "machines", assumption = "Synthetic selected berth group, not the whole reference port; geometry chosen to support several simultaneous calls." }
+
+[quay_crane]
+gross_moves_per_hour = { value = 20, unit = "moves/h/crane", assumption = "APPROXIMATION: synthetic D74 amended per-crane gross productivity; UNVERIFIED range 20-35 moves/h/crane, selected 20; pending expert Q23/Q30, not a measured terminal rate." }
+pre_operation_allowance_h = { value = 1.0, unit = "h", assumption = "APPROXIMATION: synthetic D74 amended pre-operation pumping allowance; UNVERIFIED range 0.25-1.5 h, selected 1.0 h; pending expert Q23/Q30." }
+post_operation_allowance_h = { value = 1.0, unit = "h", assumption = "APPROXIMATION: synthetic D74 amended post-operation pumping allowance; UNVERIFIED range 0.25-1.0 h, selected 1.0 h; pending expert Q23/Q30." }
+max_on_deck_tier_count = { value = 4, unit = "tiers", assumption = "Synthetic operating envelope; expert Q3 must confirm yard and quay limits separately; not a measured real terminal limit." }
+count_per_berth = { value = 1, unit = "cranes/berth", assumption = "Synthetic selected berth group, not the whole reference port; geometry chosen to support several simultaneous calls." }
+
+[traffic]
+transshipment_fraction = { value = 0.02, unit = "fraction", assumption = "Synthetic selected-berth workload; expert Q8 to confirm call volumes and frequency; not scaled from whole-port throughput. Fraction of discharged boxes reserved for later vessel loading, matched to load demand." }
+mean_teu_per_box = { value = 1.5, unit = "TEU/box", assumption = "Synthetic selected-berth workload; expert Q8 to confirm call volumes and frequency; not scaled from whole-port throughput. Cargo-mix prior; actual box size determines physical occupancy." }
+
+[[services]]
+id = "regional_feeder"
+kind = "feeder"
+calls_per_week = { value = 4, unit = "calls/week", assumption = "Synthetic selected-berth workload; expert Q8 to confirm call volumes and frequency; not scaled from whole-port throughput." }
+mean_load_boxes = { value = 100, unit = "boxes/call", assumption = "Synthetic selected-berth workload; expert Q8 to confirm call volumes and frequency; not scaled from whole-port throughput." }
+mean_discharge_boxes = { value = 110, unit = "boxes/call", assumption = "Synthetic selected-berth workload; expert Q8 to confirm call volumes and frequency; not scaled from whole-port throughput." }
+call_volume_cv = { value = 0.25, unit = "dimensionless", assumption = "Synthetic selected-berth workload; expert Q8 to confirm call volumes and frequency; not scaled from whole-port throughput." }
+arrival_jitter_s = { value = 10800, unit = "s", assumption = "Synthetic selected-berth workload; expert Q8 to confirm call volumes and frequency; not scaled from whole-port throughput. Uniform signed jitter about scheduled arrival; value is half-width." }
+
+[gate_in]
+process = "piecewise_uniform_before_cutoff"
+window_before_cutoff_s = { value = 259200, unit = "s", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+cutoff_before_arrival_s = { value = 14400, unit = "s", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+
+[[gate_in.bins]]
+start_before_cutoff_s = { value = 259200, unit = "s", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+end_before_cutoff_s = { value = 172800, unit = "s", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+share = { value = 0.15, unit = "fraction", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+
+[[gate_in.bins]]
+start_before_cutoff_s = { value = 172800, unit = "s", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+end_before_cutoff_s = { value = 86400, unit = "s", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+share = { value = 0.3, unit = "fraction", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+
+[[gate_in.bins]]
+start_before_cutoff_s = { value = 86400, unit = "s", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+end_before_cutoff_s = { value = 0, unit = "s", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+share = { value = 0.55, unit = "fraction", assumption = "Synthetic export gate-in pattern rising toward cutoff; expert Q5/Q8 to confirm." }
+
+[dwell]
+distribution = "gamma"
+import_mean_s = { value = 259200, unit = "s", assumption = "Synthetic gamma dwell distribution; expert Q5/Q8 to confirm times and variability." }
+import_cv = { value = 0.65, unit = "dimensionless", assumption = "Synthetic gamma dwell distribution; expert Q5/Q8 to confirm times and variability." }
+transshipment_mean_s = { value = 259200, unit = "s", assumption = "Synthetic gamma dwell distribution; expert Q5/Q8 to confirm times and variability." }
+transshipment_cv = { value = 0.5, unit = "dimensionless", assumption = "Synthetic gamma dwell distribution; expert Q5/Q8 to confirm times and variability." }
+
+[placement]
+cluster_keys = ["vessel_call_id", "pod", "size_type", "weight_class"]
+preferred_stack_order = "later_retrieval_below_earlier_retrieval"
+noise_model = "independent_cluster_and_order_errors"
+cluster_misplacement_probability = { value = 0.25, unit = "fraction", assumption = "Synthetic imperfect good-enough placement following provisional E4; expert Q5 to confirm clustering and noise." }
+retrieval_order_error_probability = { value = 0.3, unit = "fraction", assumption = "Synthetic imperfect good-enough placement following provisional E4; expert Q5 to confirm clustering and noise." }
+
+[simulation]
+call_arrival_process = "weekly_schedule_with_uniform_jitter"
+volume_distribution = "negative_binomial"
+overflow_policy = "hold_in_external_queue"
+import_exit_process = "sample_dwell_at_discharge"
+transshipment_connection_policy = "next_compatible_call_after_dwell"

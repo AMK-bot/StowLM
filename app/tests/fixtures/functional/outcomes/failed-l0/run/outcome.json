@@ -1,0 +1,772 @@
+{
+ "boxes_ashore": [],
+ "broken_rules": [],
+ "checker": {
+  "passed": false,
+  "violations": [
+   {
+    "rule": "iscode.loading.gm"
+   }
+  ]
+ },
+ "events": [],
+ "evidence": {
+  "boxes_total": 24,
+  "instruction_recheck_passed": true,
+  "level": 0
+ },
+ "first_checked_wall_s": 11.4,
+ "instance": {
+  "containers": [
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 8000,
+    "id": "QZXU0000001",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 9500,
+    "id": "QZXU0000002",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": false
+   },
+   {
+    "dg": {
+     "imdg_class": "3",
+     "un_number": "1263"
+    },
+    "empty": false,
+    "gross_mass_kg": 11000,
+    "id": "QZXU0000003",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 12500,
+    "id": "QZXU0000004",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": true
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 14000,
+    "id": "QZXU0000005",
+    "length_ft": 40,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 15500,
+    "id": "QZXU0000006",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 17000,
+    "id": "QZXU0000007",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 18500,
+    "id": "QZXU0000008",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": false
+   },
+   {
+    "dg": {
+     "imdg_class": "3",
+     "un_number": "1263"
+    },
+    "empty": false,
+    "gross_mass_kg": 20000,
+    "id": "QZXU0000009",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 8000,
+    "id": "QZXU0000010",
+    "length_ft": 40,
+    "pod": "MYPKG",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": true,
+    "gross_mass_kg": 9500,
+    "id": "QZXU0000011",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": true
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 11000,
+    "id": "QZXU0000012",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 12500,
+    "id": "QZXU0000013",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 14000,
+    "id": "QZXU0000014",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": false
+   },
+   {
+    "dg": {
+     "imdg_class": "3",
+     "un_number": "1263"
+    },
+    "empty": false,
+    "gross_mass_kg": 15500,
+    "id": "QZXU0000015",
+    "length_ft": 40,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 17000,
+    "id": "QZXU0000016",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 18500,
+    "id": "QZXU0000017",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 20000,
+    "id": "QZXU0000018",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": true
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 8000,
+    "id": "QZXU0000019",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 9500,
+    "id": "QZXU0000020",
+    "length_ft": 40,
+    "pod": "MYPKG",
+    "reefer": false
+   },
+   {
+    "dg": {
+     "imdg_class": "3",
+     "un_number": "1263"
+    },
+    "empty": false,
+    "gross_mass_kg": 11000,
+    "id": "QZXU0000021",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": true,
+    "gross_mass_kg": 12500,
+    "id": "QZXU0000022",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 14000,
+    "id": "QZXU0000023",
+    "length_ft": 20,
+    "pod": "SGSIN",
+    "reefer": false
+   },
+   {
+    "dg": null,
+    "empty": false,
+    "gross_mass_kg": 15500,
+    "id": "QZXU0000024",
+    "length_ft": 20,
+    "pod": "MYPKG",
+    "reefer": false
+   }
+  ],
+  "id": "fa-toy.small-feeder_500-s91000017",
+  "load_list": [
+   "QZXU0000001",
+   "QZXU0000002",
+   "QZXU0000003",
+   "QZXU0000004",
+   "QZXU0000005",
+   "QZXU0000006",
+   "QZXU0000007",
+   "QZXU0000008",
+   "QZXU0000009",
+   "QZXU0000010",
+   "QZXU0000011",
+   "QZXU0000012",
+   "QZXU0000013",
+   "QZXU0000014",
+   "QZXU0000015",
+   "QZXU0000016",
+   "QZXU0000017",
+   "QZXU0000018",
+   "QZXU0000019",
+   "QZXU0000020",
+   "QZXU0000021",
+   "QZXU0000022",
+   "QZXU0000023",
+   "QZXU0000024"
+  ],
+  "onboard": {
+   "placements": []
+  },
+  "rotation": {
+   "calls": [
+    {
+     "locode": "THLCH"
+    },
+    {
+     "locode": "SGSIN"
+    },
+    {
+     "locode": "MYPKG"
+    }
+   ]
+  },
+  "size_class": "small",
+  "stage": "A",
+  "vessel": {
+   "cells": [
+    {
+     "id": "0010102",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010104",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010182",
+     "reefer_plug": true
+    },
+    {
+     "id": "0010184",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010202",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010204",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010282",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010284",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010302",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010304",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010382",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010384",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010402",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010404",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010482",
+     "reefer_plug": false
+    },
+    {
+     "id": "0010484",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030102",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030104",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030182",
+     "reefer_plug": true
+    },
+    {
+     "id": "0030184",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030202",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030204",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030282",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030284",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030302",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030304",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030382",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030384",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030402",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030404",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030482",
+     "reefer_plug": false
+    },
+    {
+     "id": "0030484",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050102",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050104",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050182",
+     "reefer_plug": true
+    },
+    {
+     "id": "0050184",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050202",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050204",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050282",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050284",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050302",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050304",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050382",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050384",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050402",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050404",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050482",
+     "reefer_plug": false
+    },
+    {
+     "id": "0050484",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070102",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070104",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070182",
+     "reefer_plug": true
+    },
+    {
+     "id": "0070184",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070202",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070204",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070282",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070284",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070302",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070304",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070382",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070384",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070402",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070404",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070482",
+     "reefer_plug": false
+    },
+    {
+     "id": "0070484",
+     "reefer_plug": false
+    }
+   ],
+   "hatch_covers": [
+    {
+     "bays": [
+      1,
+      3
+     ],
+     "id": "HC-1"
+    },
+    {
+     "bays": [
+      5,
+      7
+     ],
+     "id": "HC-2"
+    }
+   ],
+   "id": "feeder_500.small",
+   "name": "feeder_500.small",
+   "nominal_teu": 64
+  }
+ },
+ "instance_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+ "label": "live",
+ "level": 0,
+ "lifts": 6.0,
+ "message": "Plan passed the full checker and every confirmed instruction recheck. First legal plan: 11.4 s; total wall time: 62.0 s.",
+ "packet_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+ "passed": true,
+ "plan": {
+  "id": "toy.plan",
+  "moves": [
+   {
+    "cover_id": "HC-1",
+    "dst": "quay",
+    "kind": "hatch_cover_off"
+   },
+   {
+    "container_id": "QZXU0000001",
+    "dst": "0010102",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000002",
+    "dst": "0010202",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000003",
+    "dst": "0010302",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000004",
+    "dst": "0010402",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000005",
+    "dst": "0020104",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000006",
+    "dst": "0010204",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000007",
+    "dst": "0010304",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000008",
+    "dst": "0010404",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000009",
+    "dst": "0010182",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000010",
+    "dst": "0020282",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000011",
+    "dst": "0010382",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000012",
+    "dst": "0010482",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000013",
+    "dst": "0010184",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000014",
+    "dst": "0010284",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000015",
+    "dst": "0020384",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000016",
+    "dst": "0010484",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000017",
+    "dst": "0030102",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000018",
+    "dst": "0030202",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000019",
+    "dst": "0030302",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000020",
+    "dst": "0060102",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000021",
+    "dst": "0030402",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000022",
+    "dst": "0030204",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000023",
+    "dst": "0030304",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "container_id": "QZXU0000024",
+    "dst": "0030404",
+    "kind": "load",
+    "src": "B001-001-01-01"
+   },
+   {
+    "cover_id": "HC-1",
+    "kind": "hatch_cover_on"
+   }
+  ]
+ },
+ "receipt": {
+  "checker": {
+   "passed": false
+  },
+  "plan_sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+ },
+ "rules": [
+  {
+   "confirmed": true,
+   "reading": {
+    "constraint": {
+     "bay": 7,
+     "type": "close_bay"
+    }
+   },
+   "recheck": {
+    "passed": false,
+    "violations": [
+     "bay 07"
+    ]
+   },
+   "sentence": "Nothing goes into bay seven on this call."
+  }
+ ],
+ "status": "checked_plan",
+ "synthetic": true,
+ "timing": {
+  "first_checked_wall_s": 11.4,
+  "wall_s": 62.0
+ },
+ "wall_s": 62.0,
+ "warnings": []
+}

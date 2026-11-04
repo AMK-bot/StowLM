@@ -1,0 +1,142 @@
+{
+  "synthetic": true,
+  "mode": "generated",
+  "label": "Synthetic extraction examples; expected answers, not model measurements",
+  "model": null,
+  "cost_usd": 0,
+  "examples": [
+    {
+      "id": "train-00000",
+      "family": "booking_pipe",
+      "text": "SYNTHETIC booking | CNTR SYNU1000003 | ISO 22G1 | LENGTH 20 ft | GROSS 10.000 tonnes | POD SGSIN | dry, no reefer, no temperature setpoint | non-DG, no dangerous goods",
+      "context": {
+        "pods": [
+          "SGSIN",
+          "MYPKG",
+          "VNSGN",
+          "THLCH"
+        ],
+        "iso_types": [
+          "22G1",
+          "42G1",
+          "45G1",
+          "22R1",
+          "45R1"
+        ],
+        "dg_classes": [
+          "3",
+          "8",
+          "9"
+        ]
+      },
+      "expected": {
+        "id": "SYNU1000003",
+        "iso_type": "22G1",
+        "length_ft": 20,
+        "gross_mass_kg": 10000,
+        "pod": "SGSIN",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "dg": null
+      }
+    },
+    {
+      "id": "train-00005",
+      "family": "forwarded_fragment",
+      "text": "[synthetic forwarded message]\n> box: SYNU1000050\n> size: 20 ft / ISO 22G1\n> gross: 10010 kg\n> unload: MYPKG\n> dry, no reefer, no temperature setpoint\n> DG UN1789, IMDG class 8",
+      "context": {
+        "pods": [
+          "SGSIN",
+          "MYPKG",
+          "VNSGN",
+          "THLCH"
+        ],
+        "iso_types": [
+          "22G1",
+          "42G1",
+          "45G1",
+          "22R1",
+          "45R1"
+        ],
+        "dg_classes": [
+          "3",
+          "8",
+          "9"
+        ]
+      },
+      "expected": {
+        "id": "SYNU1000050",
+        "iso_type": "22G1",
+        "length_ft": 20,
+        "gross_mass_kg": 10010,
+        "pod": "MYPKG",
+        "reefer": false,
+        "reefer_setpoint_c": null,
+        "dg": {
+          "un_number": "1789",
+          "imdg_class": "8"
+        }
+      }
+    },
+    {
+      "id": "train-00048",
+      "family": "booking_pipe",
+      "text": "SYNTHETIC booking | CNTR SYNU1000488 | ISO 22R1 | LENGTH 20 ft | GROSS not supplied | POD SGSIN | reefer yes, set point -20 C | DG UN1263, IMDG class 3",
+      "context": {
+        "pods": [
+          "SGSIN",
+          "MYPKG",
+          "VNSGN",
+          "THLCH"
+        ],
+        "iso_types": [
+          "22G1",
+          "42G1",
+          "45G1",
+          "22R1",
+          "45R1"
+        ],
+        "dg_classes": [
+          "3",
+          "8",
+          "9"
+        ]
+      },
+      "expected": {
+        "refusal": {
+          "code": "MISSING_FIELD"
+        }
+      }
+    },
+    {
+      "id": "train-00064",
+      "family": "booking_pipe",
+      "text": "SYNTHETIC booking | CNTR SYNU1000641 | ISO 45R1 | LENGTH 40 ft | GROSS 10,128 kg; another declaration says 10129 kg; unresolved conflict | POD MYPKG | reefer yes, set point -18 C | non-DG, no dangerous goods",
+      "context": {
+        "pods": [
+          "SGSIN",
+          "MYPKG",
+          "VNSGN",
+          "THLCH"
+        ],
+        "iso_types": [
+          "22G1",
+          "42G1",
+          "45G1",
+          "22R1",
+          "45R1"
+        ],
+        "dg_classes": [
+          "3",
+          "8",
+          "9"
+        ]
+      },
+      "expected": {
+        "refusal": {
+          "code": "CONFLICT"
+        }
+      }
+    }
+  ]
+}

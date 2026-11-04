@@ -1,0 +1,87 @@
+/* Intake owns its document sheet and step controls; shell classes are optional. */
+.pl-intake-panel, .pl-intake-sheet {
+  --pl-intake-text: var(--pl-text, var(--st-text, #111418));
+  --pl-intake-muted: var(--pl-text-2, var(--pl-muted, var(--st-text-2, #59616b)));
+  --pl-intake-line: var(--pl-line-2, var(--pl-line, var(--st-line, #dce1e7)));
+  --pl-intake-bg: var(--pl-bg, var(--st-bg, #fff));
+  --pl-intake-surface: var(--pl-bg-2, var(--pl-surface, var(--st-surface-2, #f7f8fa)));
+  --pl-intake-brand: var(--pl-accent, var(--pl-brand, var(--st-brand, #1665d8)));
+  --pl-intake-pass: var(--pl-pass, var(--pl-green, var(--st-green, #1f9d55)));
+  --pl-intake-warn: var(--pl-warn, var(--pl-orange, var(--st-amber, #b66c00)));
+  box-sizing: border-box; min-width: 0; max-width: 100%; color: var(--pl-intake-text);
+  font: 13px/1.5 var(--pl-font, var(--st-font, -apple-system, BlinkMacSystemFont, system-ui, sans-serif));
+}
+.pl-intake-panel *, .pl-intake-sheet * { box-sizing: border-box; }
+.pl-intake-panel { display: grid; gap: 16px; width: 100%; }
+.pl-intake-panel > * { min-width: 0; max-width: 100%; }
+.pl-intake-panel p, .pl-intake-sheet p { margin: 0; }
+.pl-intake-panel [hidden], .pl-intake-sheet [hidden] { display: none; }
+.pl-intake-meta { color: var(--pl-intake-muted); font-size: 12px; }
+.pl-intake-provenance { display: flex; flex-wrap: wrap; gap: 8px; }
+.pl-intake-chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 8px; max-width: 100%; border: 1px solid var(--pl-intake-line); border-radius: 8px; font-size: 11px; color: var(--pl-intake-muted); }
+.pl-intake-chip[data-kind=spark]::before { content: ''; width: 8px; height: 8px; flex: none; border-radius: 50%; background: var(--pl-c-spark, var(--st-c-spark, #0a84ff)); }
+.pl-intake-scope { padding-left: 8px; border-left: 2px solid var(--pl-intake-line); color: var(--pl-intake-muted); font-size: 12px; }
+.pl-intake-files { display: grid; min-width: 0; }
+.pl-intake-file { display: flex; align-items: center; gap: 8px; width: 100%; min-width: 0; min-height: 56px; padding: 8px 0; border: 0; border-bottom: 1px solid var(--pl-intake-line); background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.pl-intake-file-kind { width: 40px; flex: none; color: var(--pl-intake-muted); font-size: 11px; }
+.pl-intake-file-info { display: grid; gap: 4px; min-width: 0; flex: 1; }
+.pl-intake-file-info b { font-weight: 600; }
+.pl-intake-file-state { flex: none; color: var(--pl-intake-brand); font-size: 12px; }
+.pl-intake-button { min-height: 32px; padding: 8px 16px; border: 1px solid var(--pl-intake-line); border-radius: 8px; background: var(--pl-intake-bg); color: var(--pl-intake-text); font: inherit; font-weight: 500; cursor: pointer; }
+.pl-intake-primary { background: var(--pl-intake-brand); border-color: var(--pl-intake-brand); color: var(--pl-white, var(--st-white, #fff)); }
+.pl-intake-button:hover, .pl-intake-file:hover { filter: brightness(.97); }
+.pl-intake-button:focus-visible, .pl-intake-file:focus-visible { outline: 2px solid var(--pl-intake-brand); outline-offset: 2px; }
+.pl-intake-question { display: grid; gap: 8px; padding: 8px; border: 1px solid var(--pl-intake-line); border-radius: 8px; background: var(--pl-intake-bg); }
+.pl-intake-question header { display: flex; justify-content: space-between; gap: 8px; }
+.pl-intake-question header > span:last-child { flex: none; }
+.pl-intake-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.pl-intake-message { color: var(--pl-intake-warn); font-size: 12px; }
+.pl-intake-ready { display: grid; gap: 8px; padding: 8px; border: 1px solid var(--pl-intake-line); border-radius: 8px; }
+/* The input column is 340 px; the table never expands it. */
+.pl-intake-load-summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.pl-intake-toggle { padding: 8px; }
+.pl-intake-load-table { min-width: 0; max-height: 256px; overflow: auto; border: 1px solid var(--pl-intake-line); border-radius: 8px; }
+.pl-intake-load-table table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 11px; font-variant-numeric: tabular-nums; }
+.pl-intake-load-table th, .pl-intake-load-table td { padding: 8px 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left; vertical-align: top; border-bottom: 1px solid var(--pl-intake-line); }
+.pl-intake-load-table th { position: sticky; top: 0; background: var(--pl-intake-surface); color: var(--pl-intake-muted); font-weight: 400; }
+.pl-intake-load-table th:nth-child(1) { width: 32%; }
+.pl-intake-load-table th:nth-child(2) { width: 32%; }
+.pl-intake-load-table th:nth-child(3) { width: 16%; }
+.pl-intake-load-table th:nth-child(4) { width: 20%; }
+.pl-intake-load-table td > span { display: block; overflow: hidden; text-overflow: ellipsis; }
+.pl-intake-load-table .pl-intake-meta { font-size: inherit; }
+.pl-intake-load-table [data-review=question] { color: var(--pl-intake-warn); }
+.pl-intake-load-table [data-review=ready] { color: var(--pl-intake-pass); }
+.pl-intake-ready-label::before { content: '✓'; margin-right: 8px; color: var(--pl-intake-pass); }
+.pl-intake-measured { display: grid; gap: 8px; padding-top: 16px; border-top: 1px solid var(--pl-intake-line); min-width: 0; }
+.pl-intake-measured table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+.pl-intake-measured th { text-align: left; font-weight: 400; color: var(--pl-intake-muted); }
+.pl-intake-measured th, .pl-intake-measured td { padding: 8px 4px; border-bottom: 1px solid var(--pl-intake-line); overflow-wrap: anywhere; }
+.pl-intake-measured td { text-align: right; }
+.pl-intake-details-button { justify-self: start; }
+.pl-intake-details-body { display: grid; gap: 16px; color: var(--pl-intake-muted); }
+.pl-intake-details-body code { overflow-wrap: anywhere; }
+.pl-intake-sheet { height: 100%; overflow: auto; padding: 16px; background: var(--pl-intake-bg); }
+.pl-intake-sheet-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.pl-intake-sheet-head > p { min-width: 0; flex: 1; }
+.pl-intake-close { flex: none; }
+.pl-intake-documents { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 16px; align-items: start; }
+.pl-intake-paper { min-width: 0; overflow: hidden; border: 1px solid var(--pl-intake-line); border-radius: 8px; }
+.pl-intake-paper[data-reading=yes] { border-color: var(--pl-intake-brand); }
+.pl-intake-paper > header { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px; border-bottom: 1px solid var(--pl-intake-line); }
+.pl-intake-paper > header b { font-weight: 600; }
+.pl-intake-photo { position: relative; }
+.pl-intake-photo img { display: block; width: 100%; }
+.pl-intake-photo i { position: absolute; left: 3%; width: 94%; }
+.pl-intake-caution { padding: 16px; }
+.pl-intake-mail { padding: 16px; max-height: 440px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; }
+.pl-intake-paper-sheet { grid-column: 1 / -1; }
+.pl-intake-grid-scroll { max-height: 256px; overflow: auto; }
+.pl-intake-grid { border-collapse: collapse; white-space: nowrap; font-size: 12px; }
+.pl-intake-grid th, .pl-intake-grid td { max-width: 240px; overflow: hidden; text-overflow: ellipsis; padding: 8px; border: 1px solid var(--pl-intake-line); }
+.pl-intake-grid th { font-weight: 400; color: var(--pl-intake-muted); background: var(--pl-intake-surface); }
+.pl-intake-sheet [data-highlight=read] { background: color-mix(in srgb, var(--pl-intake-brand) 12%, transparent); outline: 1px solid var(--pl-intake-brand); outline-offset: -1px; }
+.pl-intake-sheet [data-highlight=ask] { background: color-mix(in srgb, var(--pl-intake-warn) 12%, transparent); outline: 1px solid var(--pl-intake-warn); outline-offset: -1px; }
+.pl-intake-evidence { display: grid; gap: 16px; margin-top: 16px; padding: 16px; border: 1px solid var(--pl-intake-line); border-radius: 8px; }
+.pl-intake-evidence blockquote { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-width: 1100px) { .pl-intake-documents { grid-template-columns: minmax(0, 1fr); } }

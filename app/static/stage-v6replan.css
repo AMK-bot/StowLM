@@ -1,0 +1,44 @@
+/* v6 chapter 4: the ship replans. Sits over the ship panel; the panels to its right are the live stage's own. */
+body.v6-morph .ship-panel .event-cap, body.v6-morph .ship-panel .panel-head { visibility: hidden; }
+#rules .fam.v6-pend .ico { visibility: hidden; }
+#rules .fam.v6-pend summary { opacity: .42; }
+#rules-badge.v6-pend { visibility: hidden; }
+.v6r-rule { position: absolute; left: 24px; top: 12px; max-width: 900px; display: flex; flex-direction: column; gap: 2px; padding: 10px 18px; background: rgba(7, 14, 27, .9); border: 1px solid #ffa53a; border-radius: 10px; }
+.v6r-rule[hidden], .v6r-result[hidden], .v6r-trail[hidden], .v6r-go[hidden], .v6r-tag[hidden] { display: none; }
+.v6r-rule span { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #ffc670; }
+.v6r-rule b { font-size: 25px; font-weight: 700; color: #fff; }
+.v6r-tag { position: absolute; right: 500px; top: 12px; display: flex; align-items: center; gap: 8px; padding: 5px 12px; font-size: 13px; color: #ffc670; background: rgba(7, 14, 27, .86); border: 1px dashed #ffa53a; border-radius: 999px; }
+.v6r-tag i { width: 8px; height: 8px; border-radius: 50%; background: #ffa53a; }
+.v6r-count { position: absolute; left: 24px; bottom: 22px; display: flex; flex-direction: column; gap: 2px; padding: 8px 16px; background: rgba(7, 14, 27, .82); border-radius: 10px; font-variant-numeric: tabular-nums; }
+.v6r-lift b { font-size: 46px; font-weight: 760; color: #fff; }
+.v6r-lift i { font-style: normal; font-size: 16px; color: #8ba0c0; margin-left: 8px; }
+.v6r-moved { display: flex; flex-direction: column; gap: 2px; }
+.v6r-forced { font-size: 21px; font-weight: 700; color: #ffc670; }
+.v6r-also { font-size: 16px; font-weight: 500; color: #9db8dc; }
+.v6r-also:empty, .v6r-forced:empty { display: none; }
+.v6r-gauges { position: absolute; left: 490px; bottom: 22px; display: flex; gap: 8px; font-variant-numeric: tabular-nums; }
+.v6r-gauges span { width: 216px; padding: 8px 12px; border-radius: 8px; background: rgba(7, 14, 27, .86); border-left: 3px solid #47f5a0; }
+.v6r-gauges span.bad { border-left-color: #ff5a5a; }
+.v6r-gauges b { display: block; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #8ba0c0; }
+.v6r-gauges i { font-style: normal; font-size: 18px; font-weight: 650; color: #fff; white-space: nowrap; }
+.v6r-go { position: absolute; left: 24px; top: 148px; display: flex; gap: 10px; z-index: 2; }
+.v6r-result { position: absolute; left: 24px; bottom: 112px; width: 1060px; display: grid; grid-template-columns: auto 1fr; gap: 2px 28px; align-items: baseline; padding: 14px 22px; background: rgba(7, 14, 27, .93); border: 1px solid #22395e; border-radius: 12px; }
+.v6r-big { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 14px; font-variant-numeric: tabular-nums; }
+.v6r-big b { font-size: 62px; line-height: 1.05; font-weight: 780; color: #fff; }
+.v6r-big b:nth-of-type(2) { color: #ffc670; }
+.v6r-big i { font-style: normal; font-size: 40px; color: #ffa53a; }
+.v6r-big span { font-size: 17px; color: #8ba0c0; }
+.v6r-split { grid-column: 1 / -1; display: flex; gap: 30px; align-items: baseline; }
+.v6r-split .v6r-forced { font-size: 25px; }
+.v6r-split .v6r-also { font-size: 20px; }
+.v6r-cost { grid-column: 1 / -1; font-size: 17px; color: #e8eef8; }
+.v6r-green { grid-column: 1 / -1; font-size: 17px; color: #47f5a0; }
+.v6r-note { grid-column: 1 / -1; font-size: 13px; color: #8ba0c0; }
+.v6r-trail { position: absolute; left: 24px; top: 112px; display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; max-width: 1000px; padding: 6px 12px; font-size: 13px; color: #b9c8df; background: rgba(7, 14, 27, .8); border-radius: 8px; font-variant-numeric: tabular-nums; }
+.v6r-trail i { font-style: normal; color: #ffa53a; }
+.v6r-labels { position: absolute; left: 24px; top: 86px; display: flex; gap: 8px; flex-wrap: wrap; max-width: 1380px; font-size: 13px; color: #cdd9ec; }
+.v6r-labels span { padding: 3px 10px; background: rgba(7, 14, 27, .82); border: 1px solid #22395e; border-radius: 6px; }
+.v6r-labels span.v6r-caveat { flex-basis: 100%; box-sizing: border-box; max-width: max-content; color: #ffc670; border-color: #6b4a1c; }
+@media (max-width: 1500px) { .v6r-result { width: auto; right: 500px; bottom: 196px; } .v6r-big b { font-size: 44px; } .v6r-gauges { left: 24px; bottom: 136px; } .v6r-gauges span { width: 190px; } .v6r-labels { max-width: 900px; } }
+body.v6-video .v6r-tag { display: none; } /* the director's stand-in pill says it in the film */
+.v6r-moved[hidden] { display: none; }

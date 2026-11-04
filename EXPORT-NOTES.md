@@ -1,0 +1,384 @@
+# Export review
+
+Selected files were copied; the source tree was not modified.
+
+Counts exclude this note and the JSON report.
+
+## Rewritten files
+
+- `app/tests/fixtures/functional/live/status.json` (1 occurrences)
+- `app/tests/fixtures/functional/live/view-generating.json` (1 occurrences)
+- `app/tests/fixtures/functional/live/view-needs-papers.json` (1 occurrences)
+- `app/tests/fixtures/functional/live/view-ready.json` (1 occurrences)
+- `experiments/mvp/frontier/lab/c1/leader/bench-0.12.0/run.sh` (2 occurrences)
+- `experiments/mvp/frontier/lab/c4/c2-hatch/REPORT.md` (1 occurrences)
+- `experiments/mvp/frontier/lab/c5/c5-securing/env.sh` (6 occurrences)
+- `experiments/mvp/frontier/lab/c5/leader/run_f1700.sh` (1 occurrences)
+- `experiments/mvp/frontier/lab/c6/c5-securing/env.sh` (6 occurrences)
+- `experiments/mvp/frontier/lab/c6/c6-lifts/env.sh` (6 occurrences)
+- `experiments/mvp/frontier/lab/c6/c6-xl/ships/boundary-generator/freeboard.py` (1 occurrences)
+- `experiments/mvp/frontier/lab/c6/c6-xl/ships/boundary-generator/generate.py` (1 occurrences)
+- `experiments/mvp/frontier/lab/c6/c6-xl/ships/generator/freeboard.py` (1 occurrences)
+- `experiments/mvp/frontier/lab/c6/c6-xl/ships/generator/generate.py` (1 occurrences)
+- `experiments/mvp/frontier/lab/c6/leader/final/run.sh` (2 occurrences)
+- `experiments/mvp/frontier/lab/c6/leader/run_holdout.sh` (1 occurrences)
+- `experiments/mvp/frontier/lab/c6/leader/run_holdout2.sh` (1 occurrences)
+- `experiments/mvp/frontier/lab/c6/leader/run_holdout2_shards.sh` (1 occurrences)
+- `experiments/mvp/frontier/lab/c6/leader/run_holdout_arms.sh` (2 occurrences)
+- `experiments/mvp/frontier/public/larsen_pacino/run_part2.sh` (1 occurrences)
+- `experiments/mvp/refs_tools/approved-small-v21-report.md` (5 occurrences)
+- `experiments/mvp/repo/fresh-clone-evidence/app-diagnostic/prep_diagnostic.py` (1 occurrences)
+- `experiments/mvp/repo/fresh-clone-evidence/app-diagnostic/run_app_probes.py` (1 occurrences)
+- `experiments/mvp/repo/fresh-clone-evidence/app-diagnostic/run_http_stage.py` (1 occurrences)
+- `experiments/mvp/repo/fresh-clone-tests-green.py` (1 occurrences)
+- `experiments/mvp/repo/fresh-clone-tests.py` (1 occurrences)
+- `experiments/mvp/sft/final-validation/after_loop.sh` (1 occurrences)
+- `experiments/mvp/video/site/README.md` (1 occurrences)
+
+## Preserved signed/hashed files needing path regeneration
+
+- `experiments/mvp/frontier/lab/c4/c2-layout/FAILURES-FIXED.md`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/lab/c4/c2-layout/FAILURES.md`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/logs/seq_cal.sh`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/run_benchmark.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/tests/test_evaluator.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/tools/calibrate_fb_vm.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/tools/calibrate_release.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/tools/check_heights.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/tools/explore_data.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/tools/inspect_plan.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/tools/lcg_frames.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/tools/plan_stats.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/frontier/public/larsen_pacino/tools/reverify.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/gold/quality-d149/run_all.sh`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/binding/RESULTS-CURRENT.md`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/copilot/fixtures/fresh-v3.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered-report/p22-playback-manifest.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/playback-manifest.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/copilot/fixtures/live-scenarios.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/copilot/fixtures/negotiation-v1.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/copilot/fixtures/negotiation.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/copilot/fixtures/revalidated-scenarios.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/copilot/fixtures/tuned-v2.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/copilot/fixtures/tuned-v3.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/explain/budget/.spend.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/freeze/manifest-pipeline-v3-superseded.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/freeze/manifest-pipeline.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/freeze/suites/v4/pipeline.log`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/README.md`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/fixtures/backup-base.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/fixtures/hero-base.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/hero-coverage/hero-impossible-plain.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/hero-coverage/manifest.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/hero-facts-close-bay-9.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/hero-instruction-candidates.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/store/4313cb975de66daed1c87a94a412765be21e636bc9c87e6e188ed1d1c035c9e5.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/store/a8c3afc17f1d575bc8cea051969e52db8926a34eba881a3e1d166a45576f8f52.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/lattice/store/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/outcome.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/regeneration.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/package/fixtures/verification-summary.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/radio/hero-selection.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/radio/readings.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/reader_final/readings/hero-candidates.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/reader_final/readings/hero-readings.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/reader_final/readings/timing.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/reader_final/results.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sandbox/fixtures/demo_candidates190.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sandbox/fixtures/profile190_lowload.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/SECONDARY-POOLED.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/config.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/test_ext_report.py.txt`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/test_final_report.py.txt`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/ext-1/REPORT.md`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/ext-1/config.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/ext-1/instruction-allocation.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/ext-1/opened-maps.jsonl`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/ext-1/report.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/final-3/freeze.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/final-3/instruction-allocation.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/final-3/instruction-prepass/row.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/final-3/report.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/runs/refusals/examples/impossible-tier-with-alternative.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/runs/refusals/witness-audit.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/ood-1/results/glimmer-adopted.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/ood-1/results/glimmer-untrained.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/results-final/final-adoption-d266.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/results-final/final-adoption.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/results-final/final-xray.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/results-final/mask-study/report-adopted.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/results-final/mask-study/report-base.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/results-final/mask-study/report.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/results-final/sealed-summary.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/reader/v3/results-final/selection.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/runs/showcase-v2-gold/manifest.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/showcase/reader/recordings.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/strategy/fitted-rule/frozen-source/run2.sh`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/strategy/fitted-rule/frozen-source/runall.sh`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/ui/functional/verification/2026-11-03-tiny-d39448/packet.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/ui/functional/verification/2026-11-03-tiny-d39448/run/package/packet.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/mvp/ui/v6_land_after.sh`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/review/v6/ext1-recount/final.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/sft-pilot/pipeline-test/c1-loop/config.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/spark-planner/w2-pilot/run_pilot.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `experiments/spark-planner/w2-pilot/summarize.py`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+- `src/stowage/linear/margin_policy_data.json`: kept byte-for-byte; regenerate its bundle or explicitly accept the unchanged paths.
+
+## Incomplete bundles
+
+- `app/static/planner-data/boxes.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/static/planner-data/moves.json`: 4 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/static/planner-data/plan-after.json`: 5 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/static/planner-data/plan-before.json`: 5 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/static/planner-data/ship.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/static/planner-data/stress.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/tests/fixtures/functional/live/planner-boxes.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/tests/fixtures/functional/live/planner-plan-before.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/tests/fixtures/functional/live/planner-ship.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/tests/fixtures/functional/live/view-needs-papers.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/tests/fixtures/functional/live/view-ready.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `app/tests/fixtures/model_run/manifest.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/frontier/engine/peel_ladder/assignment-frozen-hashes.json`: 224 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/frontier/engine/source-manifest-0.13.0-review-fixes.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/binding/provenance-pins.json`: 242 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/agency-v4-freeze.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/agency-v5-freeze.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/agency-v6-freeze.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/agency-v6-tuned-rescored.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/attack-v1.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/fresh-v3.json`: 9 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-goal-scorer-freeze.json`: 4 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-postfix-scenarios-freeze.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-scenarios-freeze.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered-report/delivery-audit.json`: 6 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered-report/hero-shot10-report.json`: 5 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered-report/p22-playback-manifest.json`: 36 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/playback-manifest.json`: 10 payload(s) absent at their raw path; restore reviewed lossless archives before bundle verification.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/receipt-manifest.json`: 5 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/run-authorization.json`: 39 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/shot10-progress.json`: 4 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/shot10.json`: 4 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/live-scenarios.json`: 5 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/negotiation-bay.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/negotiation-v1.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/negotiation.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/offline-followup.json`: 9 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/order-diagnosis.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/plain-v1.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/plain.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/policy-v2-freeze.json`: 5 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/policy-v3-freeze.json`: 5 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/real-attack.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/real-negotiation.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/real-plain.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/revalidated-scenarios.json`: 5 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/runtime7-freeze.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/tuned-v2.json`: 6 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/tuned-v3.json`: 6 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/copilot/fixtures/violation-audit.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/explain/fixtures/hero/archive/pre-D294-v1.provenance.json`: 1086 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/explain/fixtures/hero/archive/pre-v4-v3.provenance.json`: 353 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/freeze/manifest-pipeline-v3-superseded.json`: 4292 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/freeze/manifest-pipeline.json`: 4100 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/intake/fixtures/SOURCE_FREEZE.json`: 10 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/intake/fixtures/SOURCE_FREEZE.v1.json`: 10 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/intake/fixtures/freeze.json`: 7 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/intake_lora/fixtures/recorded_complete_mock_run.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/intake_lora/fixtures/recorded_mock_run.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/lattice/fixtures/backup-base.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/lattice/fixtures/hero-base.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/lattice/fixtures/hero-instruction.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/lattice/hero-coverage/manifest.json`: 92 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/lattice/store/4313cb975de66daed1c87a94a412765be21e636bc9c87e6e188ed1d1c035c9e5.json`: 12 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/lattice/store/72ccfc883f3db82da140879280c499b280fa1edd179c31f5e69f06056ea32530.json`: 16 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/lattice/store/a8c3afc17f1d575bc8cea051969e52db8926a34eba881a3e1d166a45576f8f52.json`: 11 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/lattice/store/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/complete/engine-manifest.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/complete/packet.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/complete/receipt.json`: 54 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/complete/rule-coverage.json`: 54 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/hero-acceptance.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/outcome.json`: 100 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/package/engine-manifest.json`: 245 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/package/note-evidence.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/package/provenance.json`: 58 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/package/receipt.json`: 55 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/package/rule-coverage.json`: 54 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/package/runner-receipt.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/regeneration.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/hero-run/stored-candidate.json`: 16 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/fixtures/historical-engine-manifest.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/package/hero-run-anchor.json`: 58 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/radio/hero-selection.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/radio/readings.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/reader_final/readings/hero-candidates.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/reader_final/readings/hero-readings.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/reader_final/readings/timing.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/reader_final/results.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/runner/fixtures/cold-start.json`: 5 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/runner/fixtures/logic-review-verification.json`: 30 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/runner/fixtures/logic3-verification.json`: 21 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/runner/fixtures/profile-selection.json`: 68 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/runner/fixtures/profile-study-verification.json`: 36 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/runner/fixtures/selected-profiles-verification.json`: 6 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sandbox/fixtures/holdout.measure-start-7378.json`: 6 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sandbox/fixtures/holdout.readiness.json`: 12 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sandbox/fixtures/holdout.recovery-proof.json`: 6 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sandbox/fixtures/perf_fast190_low.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sandbox/fixtures/profile190_loaded.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sandbox/fixtures/profile190_lowload.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sandbox/fixtures/securing190.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sandbox/fixtures/securing190_basewarm.json`: 4 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/d284/archive-receipt.json`: 3089 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/POOL-VERIFICATION.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/PRECOMMIT.json`: 63 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/REPORT-AUDIT.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/config.json`: 64 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/map-cache-copy-proof.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/map-final-verification.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/map-seed-proof.json`: 14371 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/maps-manifest.json`: 24 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/rows-archive-verification.json`: 4 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/runtime-projection.json`: 1 payload(s) absent at their raw path; restore reviewed lossless archives before bundle verification.
+- `experiments/mvp/pipeline/sealed/measurements/postrun-d288/contention-interrupted-1.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/ext-1/config.json`: 88 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/ext-1/instruction-allocation.json`: 24 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/ext-1/report.json`: 63 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/ext-1/rows-archive/manifest.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/final-3/freeze.json`: 4289 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/final-3/instruction-allocation.json`: 24 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/final-3/instruction-prepass/row.json`: 24 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/final-3/preregistration.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/final-3/report.json`: 69 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/yard_vision/fixtures/evaluation_lock.json`: 4 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/yard_vision/fixtures/manifest.json`: 97 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/reader/v3/results-final/final-adoption-d266.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/reader/v3/results-final/final-adoption.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/reader/v3/results-final/final-xray.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/reader/v3/results-final/mask-study/report-adopted.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/reader/v3/results-final/mask-study/report-base.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/reader/v3/results-final/mask-study/report.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/reader/v3/results-final/sealed-summary.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/reader/v3/results-final/selection.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/showcase/reader/recordings.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/ui/fixtures/verify-recorded.json`: 25 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/ui/functional/verification/2026-11-03-tiny-d39448/packet.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/ui/functional/verification/2026-11-03-tiny-d39448/run/package/engine-manifest.json`: 245 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/ui/functional/verification/2026-11-03-tiny-d39448/run/package/packet.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/ui/functional/verification/2026-11-03-tiny-d39448/run/package/receipt.json`: 54 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/ui/functional/verification/2026-11-03-tiny-d39448/run/package/rule-coverage.json`: 54 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/video/film-inventory-20261102-v4.json`: 395 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/video/film-inventory-20261102.json`: 381 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/video/film-inventory-20261103-final.json`: 422 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/video/site/play/api/functional/calls/c20261104-030907-b8bb31/file/runs/1/outcome.json`: 24 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/video/site/play/api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/package.json`: 18 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/video/site/play/api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/receipt.json`: 72 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/review/v6/ext1-recount/comparison.json`: 8 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/review/v6/ext1-recount/final.json`: 104 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/sft-pilot/pipeline-test/c1-loop/config.json`: 2 payload(s) absent at their raw path; restore reviewed lossless archives before bundle verification.
+- `experiments/sft-pilot/pipeline-test/c1-loop/manifest.json`: 1 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `src/stowage/linear/margin_policy_data.json`: 366 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `tests/feasibility/data/d49-feeder500-light.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+
+## Lossless evidence archives
+
+- `experiments/mvp/pipeline/sealed/runs/final-3/rows.json`: 284601065 original bytes, SHA-256 `c0d54bce9d09478c9364aac368a758379f8e0ef1542a33f7cbba8926bda9fd88`. Concatenate `experiments/mvp/pipeline/sealed/runs/final-3/rows.json.xz` in listed order, xz-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/sealed/runs/interrupted-1/rows.json`: 39732522 original bytes, SHA-256 `d8543f6848a1c545ae508ece9263191eb3578c9fd4e220a43e6ead467691a9a6`. Concatenate `experiments/mvp/pipeline/sealed/runs/interrupted-1/rows.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/sealed/runs/interrupted-2/rows.json`: 116264700 original bytes, SHA-256 `77e341fa4c1e80255d3fa2ccfcb76486f3e57117cd327a96dbab458ecd243845`. Concatenate `experiments/mvp/pipeline/sealed/runs/interrupted-2/rows.json.xz` in listed order, xz-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/33989003a2ad03aed9b67976cac4422b0c9fa22edaa2d4e321c54999736db02a.json`: 4608472 original bytes, SHA-256 `6bf8ffe70259d87ae2043ce92036fb5f0336ff3429c9bc80bd1ebab0c1789536`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/33989003a2ad03aed9b67976cac4422b0c9fa22edaa2d4e321c54999736db02a.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/72ccfc883f3db82da140879280c499b280fa1edd179c31f5e69f06056ea32530.json`: 8080460 original bytes, SHA-256 `a351c008fb5a9746fdbd3c762db34f74c35f670d8ac1e5bd0a56bfd44ee2dec9`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/72ccfc883f3db82da140879280c499b280fa1edd179c31f5e69f06056ea32530.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/9381a5a54b03ee22ba61bb73d2b68d07ffebdc604968672bcbd349dcdf84018a.json`: 8019076 original bytes, SHA-256 `1d43178ad9822576b0d72c8aa6f0bceb9364b9b3be0f5298851dd2b91a27ce7b`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/9381a5a54b03ee22ba61bb73d2b68d07ffebdc604968672bcbd349dcdf84018a.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json`: 11293073 original bytes, SHA-256 `ef751e0c50f6c926956322cc4425b6940fd3ecc9c1e3538d6348f7da74b6eede`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/original-candidate-gate.json`: 1631571 original bytes, SHA-256 `62c00706de2c42f7711a53a990e90bb7cb1d755119d86b2ab78faa730a80096f`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/native/original-candidate-gate.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/33989003a2ad03aed9b67976cac4422b0c9fa22edaa2d4e321c54999736db02a.json`: 2919423 original bytes, SHA-256 `cdfbf0efd46f70b53a920b77d29e5256d90210de64e0ffd4ca7c17cdcabb1bab`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/33989003a2ad03aed9b67976cac4422b0c9fa22edaa2d4e321c54999736db02a.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/72ccfc883f3db82da140879280c499b280fa1edd179c31f5e69f06056ea32530.json`: 4288465 original bytes, SHA-256 `44c6675e6b9f03e9a3ad23aaf5c5469d1f0268d14ede82602eeaa4dcb3ac8b0c`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/72ccfc883f3db82da140879280c499b280fa1edd179c31f5e69f06056ea32530.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/9381a5a54b03ee22ba61bb73d2b68d07ffebdc604968672bcbd349dcdf84018a.json`: 4261850 original bytes, SHA-256 `234cbd0fe9b3241ce97c6323a025b71142d27dc70405586395c052d57f0e2338`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/9381a5a54b03ee22ba61bb73d2b68d07ffebdc604968672bcbd349dcdf84018a.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/catalogue.json`: 555 original bytes, SHA-256 `6d66050f7ac50c49c61dee6a492e72546bcf91cefa87f96d627d027b04eec9d9`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/catalogue.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json`: 8937287 original bytes, SHA-256 `f1f20eedac604f28c7db46f05201cfa2497e3d4e06c2f76d13acb35f68c570c4`. Concatenate `experiments/mvp/pipeline/copilot/fixtures/hero-shot10-delivered/store/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/explain/fixtures/hero/archive/pre-D294-v1.tar`: 553400320 original bytes, SHA-256 `d86ea3ac74ebce65042cf0065e09fd6441b97c085ffacccd671f1af6af3d4871`. Concatenate `experiments/mvp/pipeline/explain/fixtures/hero/archive/pre-D294-v1.tar.xz` in listed order, xz-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/explain/fixtures/hero/archive/pre-v4-v3.tar`: 693073920 original bytes, SHA-256 `68436521c4c4b672d84f7264f676d523c56446ec2f6231cb9f47ebf60b1ad3fe`. Concatenate `experiments/mvp/pipeline/explain/fixtures/hero/archive/pre-v4-v3.tar.xz` in listed order, xz-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/freeze/manifest-pipeline-v1-interrupted.json`: 3679013 original bytes, SHA-256 `3b9600516e625f6fec871a9bd994b7e67bd4c90a1fc5e12cc4d0d473c41e2a28`. Concatenate `experiments/mvp/pipeline/freeze/manifest-pipeline-v1-interrupted.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/freeze/manifest-pipeline-v2-interrupted.json`: 3679092 original bytes, SHA-256 `1af6c500f3ce2ce29a2eb3c1a8f2c86da162439dfb7cf1833f0577acf7c88731`. Concatenate `experiments/mvp/pipeline/freeze/manifest-pipeline-v2-interrupted.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/freeze/suites/v4/app.xml`: 4622916 original bytes, SHA-256 `bd131db282db780fbe0fff2fc6f97bbad20b41bfaa5ec771344eb41a5781baee`. Concatenate `experiments/mvp/pipeline/freeze/suites/v4/app.xml.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/freeze/suites/v4/pipeline.xml`: 667852 original bytes, SHA-256 `b6ed2507e9c4b3296b349c1f9f75393d3739a6712e005e4521081f4a9af2f515`. Concatenate `experiments/mvp/pipeline/freeze/suites/v4/pipeline.xml.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/freeze/suites/v4/repo.xml`: 2488320 original bytes, SHA-256 `b1f2b0f16e31b993e74e6b487d35780ef36714d319d41365964dc652c7ac1f6c`. Concatenate `experiments/mvp/pipeline/freeze/suites/v4/repo.xml.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/answers.json`: 2275 original bytes, SHA-256 `9d0c8f8c887e7a5b1e8e886ea1eedcb6bd51c9de511b7080e16bafad44530a16`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/answers.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/base_instance.json`: 5295031 original bytes, SHA-256 `8935390d5274ba547fb085baed5f0627c249227d00062faf04f9e7a663142e60`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/base_instance.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/documents.json`: 9435 original bytes, SHA-256 `5d9e8d6c7ebbd1571d6ca463fadcbc124539d73a747eececfacd2b59f297bc46`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/documents.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/expected.json`: 12464 original bytes, SHA-256 `129e4d299a767673e7d29a1ab5cfa0b40441910ffe85fe9a09785785b40768d1`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/expected.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/final.json`: 7925673 original bytes, SHA-256 `d0b85a9339aa35a0d1fc8308356b45bf5972ed45f78299f4b46fe83d09062889`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/final.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/metrics.json`: 3191 original bytes, SHA-256 `9043a76e1124eb7ac2ee6717456f1c9343574ec8a50d778e8042c8447946186b`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/metrics.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/oracle_reading.json`: 110947 original bytes, SHA-256 `c3273593c13a11e380118fc8dcf6dd3bddca2dbefee9f54eaea63e17296505de`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/oracle_reading.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/reading.json`: 4000221 original bytes, SHA-256 `2c36543a9a142b64ae7d1871a2c87d9fdb1427deac05ad03b2caa2070fbe76fd`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/reading.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/spark_raw.json`: 100699 original bytes, SHA-256 `baee5098ed9f887bb44beb73d31975238dd9fc2c0a0f79902879b2b4d915e241`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/spark_raw.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/dev/spark_response.json`: 46609 original bytes, SHA-256 `8318115482436ea07e4aa0a2af2baf8ca6227728b2bdefcc22c357e21bad8321`. Concatenate `experiments/mvp/pipeline/intake/fixtures/dev/spark_response.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/answers.json`: 32947 original bytes, SHA-256 `617681c21e77a0605dc7a4e2cebab0abb73e8b5374f655523c3ec1ed8ef8b483`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/answers.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/base_instance.json`: 5294047 original bytes, SHA-256 `d50f8ebf8297ad58dcf3ed66ecc90042893bd2c6049ec08fe545e0e99098bef3`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/base_instance.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/documents.json`: 8952 original bytes, SHA-256 `9d88b7183c5d1792c36aabc1774119357b3f31c958af0300a32ad976df538cc9`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/documents.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/expected.json`: 11942 original bytes, SHA-256 `a0f1596de690b853f524d57b57f39c8627b2eafaeb9a3c20d0292ecfab990c96`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/expected.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/final.json`: 8118375 original bytes, SHA-256 `5766fbcbc3218ea0983765ea16919f640c78d3396ff1daffbedf705809543bea`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/final.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/metrics.json`: 4975 original bytes, SHA-256 `6a510157c6ce5cbe39aa48d3eb2851247431ab65f1709045779f94d1b44bacbe`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/metrics.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/oracle_reading.json`: 103665 original bytes, SHA-256 `8e869c324eb8eef12d6bef279df46656d638101ef06f0c9da1d40db5e6c97c04`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/oracle_reading.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/reading.json`: 4017844 original bytes, SHA-256 `ac0c93fa4fdfad3a614b05810eba8336f9c5cf5d35c516d4fa6baa09dd778aa6`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/reading.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/spark_raw.json`: 91630 original bytes, SHA-256 `ec59b4751b2c6e9eeb70e6942c2906d5248bdd6c14462d823663129874b918fe`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/spark_raw.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/pipeline/intake/fixtures/heldout/spark_response.json`: 41773 original bytes, SHA-256 `29ec61d93a6a6438c004894d5e3b80018d2b3e0451c39a4c523a7cb4da13834f`. Concatenate `experiments/mvp/pipeline/intake/fixtures/heldout/spark_response.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/mask-study/adopted.jsonl`: 22964683 original bytes, SHA-256 `33a958b19d851483caf0bbfad6759c15010078baabcc4bf222cf47c821506bab`. Concatenate `experiments/mvp/reader/v3/results-final/mask-study/adopted.jsonl.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/mask-study/base.jsonl`: 18311954 original bytes, SHA-256 `09a76c32cb3a210a7b2a7742b0e3e671d4ff1e10591a327095dab6262cc5a99a`. Concatenate `experiments/mvp/reader/v3/results-final/mask-study/base.jsonl.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/adapter-v2.json`: 79866 original bytes, SHA-256 `31bd5abac0657f02dcaee7f4c599dbd8ec23f88734a4905dee9cf45a4f3967ab`. Concatenate `experiments/mvp/reader/v3/results-final/selection/adapter-v2.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/adapter-v2.predictions.jsonl`: 78114 original bytes, SHA-256 `a570be295c9da25116e3188ebe52bde0743ae6849ae7e5fc15b5aee453e2bfd1`. Concatenate `experiments/mvp/reader/v3/results-final/selection/adapter-v2.predictions.jsonl.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/best-val-loss.json`: 79877 original bytes, SHA-256 `880cd672bccde659805b2dca163ba61ec5a44f96fad53f033f68016a5b0685a2`. Concatenate `experiments/mvp/reader/v3/results-final/selection/best-val-loss.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/best-val-loss.predictions.jsonl`: 78751 original bytes, SHA-256 `7d0ddc9dc68230fbed89ef07c781acb800d8fef6d960b0232bebcc318d689ee9`. Concatenate `experiments/mvp/reader/v3/results-final/selection/best-val-loss.predictions.jsonl.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/final.json`: 79881 original bytes, SHA-256 `0108c419a9f2aac07ed686f26f968157bcb46378d72fc74fce9f6e6eecb5ef8f`. Concatenate `experiments/mvp/reader/v3/results-final/selection/final.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/final.predictions.jsonl`: 79233 original bytes, SHA-256 `41a7fe2bad319933f3f75f214218eaab0e2e6c80a7f31fafd01a9e3ae01fd6c5`. Concatenate `experiments/mvp/reader/v3/results-final/selection/final.predictions.jsonl.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/swa-last-3.json`: 79885 original bytes, SHA-256 `0001a5f35119357cb903c9321674879f4602d450e973264dc404e47b4b7fb6f7`. Concatenate `experiments/mvp/reader/v3/results-final/selection/swa-last-3.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/swa-last-3.predictions.jsonl`: 79310 original bytes, SHA-256 `cf5470fad7e63cb51112a4acd4075c485bba6b0d4537dfe66bed95a45a45d505`. Concatenate `experiments/mvp/reader/v3/results-final/selection/swa-last-3.predictions.jsonl.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/swa-last-5.json`: 79876 original bytes, SHA-256 `e80b81699e40bf45670944db062152ca3470d6e9f535181690a0061185fd7068`. Concatenate `experiments/mvp/reader/v3/results-final/selection/swa-last-5.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/mvp/reader/v3/results-final/selection/swa-last-5.predictions.jsonl`: 78875 original bytes, SHA-256 `ccf1ab23aa42a8dd718391febbcd2f3c53feee428368094051ae14a1ff48e514`. Concatenate `experiments/mvp/reader/v3/results-final/selection/swa-last-5.predictions.jsonl.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/solver-diag-1028/pilot-d58/generation/instances/random_yard/tiny/seed-110280001.json`: 7724756 original bytes, SHA-256 `5a3919e5f13b85fd38b35ca48a5767628f2c9f6a8d18aea28f4dbcaef1fe36ad`. Concatenate `experiments/solver-diag-1028/pilot-d58/generation/instances/random_yard/tiny/seed-110280001.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/solver-diag-1028/pilot-d58/generation/instances/random_yard/tiny/seed-110280002.json`: 12517204 original bytes, SHA-256 `edff3459e666d67ce09eafea015a3fad0e52daaad8c80d52f954ea64de9b9773`. Concatenate `experiments/solver-diag-1028/pilot-d58/generation/instances/random_yard/tiny/seed-110280002.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+- `experiments/splits/v1/manifest.json`: 3439235 original bytes, SHA-256 `0649a55adab5b70ea3831eb0b3299d6339d42cebce25cddf5a9fd47dde8f96d2`. Concatenate `experiments/splits/v1/manifest.json.gz` in listed order, gzip-decompress to the original path, and verify that SHA-256. Embedded paths are unchanged.
+
+See EXPORT-REPORT.json for every skipped file and integrity marker.
+
+Only exact selected files are copied; unchanged tracked dependencies are not added automatically.
+Preserved bytes are not a new signature/hash verification; missing payloads need closure review.
+Draft README/NOTICE/licence recommendation are not installed automatically.
+All evidence archives preserve original bytes and paths. Restore archived witnesses before standalone bundle verification; current app playback does not read those witnesses.
+Licence (user item 140), TTS rights (item 134), labels and fresh-copy execution remain release decisions.
+
+## Release overlays
+
+- `.gitignore` (953 bytes).
+- `README.md` (31261 bytes).
+- `NOTICE` (4205 bytes).
+- `LICENSE` (11358 bytes).
+- `hf-reader-bundle/README.md` (1642 bytes).
+- `experiments/instances-v2/manifest.json` (160540 bytes).
+- `experiments/splits/v1/manifest.json` (514659 bytes).
+- `experiments/mvp/corpus/test-v3/manifest.json` (6732 bytes).
+- `experiments/mvp/corpus/manifest.json` (172134 bytes).
+- `experiments/mvp/corpus/train.requested.json` (214272 bytes).
+- `experiments/mvp/corpus/val.requested.json` (9748 bytes).
+- `experiments/mvp/corpus/test.requested.json` (2547 bytes).
+- `experiments/mvp/corpus/showcase/feeder_500-small.selection.json` (900 bytes).
+- `experiments/mvp/corpus/showcase/feeder_800-small.selection.json` (180 bytes).
+- `experiments/mvp/corpus/showcase/feeder_1700-full.selection.json` (107 bytes).
+- `experiments/mvp/corpus/showcase/feeder_1700-small.selection.json` (144 bytes).
+- `experiments/mvp/corpus/archive/v1/manifest.json` (64960 bytes).
+- `experiments/mvp/corpus/archive/v1/train.requested.json` (171072 bytes).
+- `experiments/mvp/corpus/archive/v1/val.requested.json` (12372 bytes).
+- `experiments/mvp/corpus/archive/v1/test.requested.json` (3762 bytes).
+- `experiments/mvp/corpus/archive/v1/showcase/feeder_500-small.selection.json` (177 bytes).
+- `experiments/mvp/corpus/archive/v1/showcase/feeder_800-medium.selection.json` (107 bytes).
+- `experiments/mvp/corpus/archive/v1/showcase/feeder_1700-full.selection.json` (107 bytes).
+- `experiments/mvp/corpus/archive/v1/showcase/feeder_1700-medium.selection.json` (107 bytes).
+- `experiments/mvp/corpus/archive/v2-before-D90/manifest.json` (58456 bytes).
+- `experiments/mvp/corpus/archive/v2-before-D90/train.requested.json` (214272 bytes).
+- `experiments/mvp/corpus/archive/v2-before-D90/val.requested.json` (9748 bytes).
+- `experiments/mvp/corpus/archive/v2-before-D90/test.requested.json` (2132 bytes).
+
+Derived seed inventories retain seed/split/protection metadata only; they are not historical manifests. Original archived evidence remains byte-exact.

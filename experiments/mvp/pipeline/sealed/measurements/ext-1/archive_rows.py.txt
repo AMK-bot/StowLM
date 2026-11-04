@@ -1,0 +1,193 @@
+"""Lossless, bounded gzip volumes; raw input and existing artifacts are read-only."""
+from __future__ import annotations
+import argparse
+import gzip
+import hashlib
+import json
+import math
+from pathlib import Path
+
+LIMIT = 50_000_000
+CHUNK = 40_000_000
+BUFFER = 1_048_576
+SCHEMA = 'stowlm.ext1.rows-archive/1'
+
+
+def identity(path):
+    size = 0
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda: stream.read(BUFFER), b''):
+            size += len(block)
+            digest.update(block)
+    return dict(bytes=size, sha256=digest.hexdigest())
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def verify(manifest_path, source=None):
+    manifest_path = Path(manifest_path)
+    data = json.loads(manifest_path.read_text())
+    require(data['schema_version'] == SCHEMA, 'Unknown archive schema')
+    cap = data['strict_volume_limit_bytes']
+    require(isinstance(cap, int) and 0 < cap <= LIMIT, 'Invalid strict volume limit')
+    chunk = data['raw_chunk_bytes']
+    require(isinstance(chunk, int) and chunk > 0, 'Invalid chunk size')
+    raw = data['raw']
+    require(isinstance(raw['bytes'], int) and raw['bytes'] >= 0, 'Invalid raw size')
+    volumes = data['volumes']
+    require(len(volumes) == max(1, math.ceil(raw['bytes'] / chunk)), 'Missing or extra volume')
+    combined = hashlib.sha256()
+    combined_size = 0
+    names = set()
+    for index, volume in enumerate(volumes, 1):
+        name = volume['file']
+        require(isinstance(name, str) and Path(name).name == name and name not in ('.', '..') and name not in names,
+                'Invalid or duplicate volume filename')
+        names.add(name)
+        require(volume['index'] == index, 'Volume order mismatch')
+        path = manifest_path.parent / name
+        require(not path.is_symlink(), 'Symlink volume rejected')
+        compressed = identity(path)
+        require(compressed['bytes'] < cap, 'Volume exceeds strict size limit')
+        require(compressed == dict(bytes=volume['compressed_bytes'], sha256=volume['sha256']),
+                'Compressed volume identity mismatch')
+        digest = hashlib.sha256()
+        size = 0
+        with gzip.open(path, 'rb') as stream:
+            for block in iter(lambda: stream.read(BUFFER), b''):
+                size += len(block)
+                require(size <= chunk, 'Expanded volume exceeds registered chunk size')
+                digest.update(block)
+                combined.update(block)
+                combined_size += len(block)
+        expected_size = min(chunk, max(0, raw['bytes'] - (index - 1) * chunk))
+        require(size == expected_size == volume['raw_bytes'], 'Raw volume size mismatch')
+        require(digest.hexdigest() == volume['raw_sha256'], 'Raw volume hash mismatch')
+    actual = dict(bytes=combined_size, sha256=combined.hexdigest())
+    require(actual == dict(bytes=raw['bytes'], sha256=raw['sha256']), 'Reconstruction differs from original bytes')
+    if source is not None:
+        require(identity(source) == actual, 'Original file differs from archive')
+    return dict(verified=True, volumes=len(volumes), **actual)
+
+
+def build(source, destination, *, chunk_bytes=CHUNK, strict_limit=LIMIT):
+    source, destination = Path(source), Path(destination)
+    require(source.is_file() and not source.is_symlink(), 'Source must be a regular file')
+    require(isinstance(chunk_bytes, int) and chunk_bytes > 0, 'Invalid chunk size')
+    require(isinstance(strict_limit, int) and 0 < strict_limit <= LIMIT, 'Invalid strict volume limit')
+    before_stat = source.stat()
+    before = identity(source)
+    destination.mkdir(parents=False, exist_ok=False)
+    volumes = []
+    generation = hashlib.sha256()
+    generated_size = 0
+    with source.open('rb') as raw:
+        index = 0
+        while generated_size < before['bytes'] or index == 0:
+            index += 1
+            name = f'rows.json.part-{index:04d}.gz'
+            path = destination / name
+            size = 0
+            digest = hashlib.sha256()
+            with path.open('xb') as output:
+                with gzip.GzipFile(filename='', mode='wb', fileobj=output, compresslevel=6, mtime=0) as zipped:
+                    while size < chunk_bytes:
+                        block = raw.read(min(BUFFER, chunk_bytes - size))
+                        if not block:
+                            break
+                        zipped.write(block)
+                        size += len(block)
+                        generated_size += len(block)
+                        digest.update(block)
+                        generation.update(block)
+            compressed = identity(path)
+            require(compressed['bytes'] < strict_limit, 'Volume exceeds strict size limit; no manifest published')
+            volumes.append(dict(index=index, file=name, compressed_bytes=compressed['bytes'],
+                                sha256=compressed['sha256'], raw_bytes=size, raw_sha256=digest.hexdigest()))
+            require(size or before['bytes'] == 0, 'Source shrank while archiving')
+        require(not raw.read(1), 'Source grew while archiving')
+    require(dict(bytes=generated_size, sha256=generation.hexdigest()) == before,
+            'Source changed while archiving')
+    after = identity(source)
+    after_stat = source.stat()
+    require(before == after and before_stat.st_size == after_stat.st_size and before_stat.st_mtime_ns == after_stat.st_mtime_ns,
+            'Original file changed during archive creation')
+    data = dict(schema_version=SCHEMA, format='ordered independent gzip members of raw byte chunks',
+                raw=dict(file=source.name, **before), raw_chunk_bytes=chunk_bytes,
+                strict_volume_limit_bytes=strict_limit, volumes=volumes,
+                original_before=before, original_after=after,
+                original_mtime_ns_before=before_stat.st_mtime_ns, original_mtime_ns_after=after_stat.st_mtime_ns,
+                original_unchanged=True,
+                reconstruction='Concatenate decompressed volumes in manifest order; concatenating gzip members then gzip -dc is equivalent.')
+    # Verify the complete stream before publishing the public manifest.
+    temporary = destination / 'manifest.verifying.json'
+    with temporary.open('x') as stream:
+        json.dump(data, stream, indent=2)
+        stream.write('\n')
+    verification = verify(temporary, source)
+    require(identity(source) == before, 'Original changed during roundtrip verification')
+    data['roundtrip_verification'] = verification
+    manifest = destination / 'manifest.json'
+    with manifest.open('x') as stream:
+        json.dump(data, stream, indent=2)
+        stream.write('\n')
+    temporary.unlink()
+    readme = f'''# Lossless rows archive
+
+Original: `../{source.name}`; {before['bytes']:,} bytes.
+SHA256: `{before['sha256']}`. The original remains unchanged.
+
+Each ordered volume is an independent gzip member of at most {chunk_bytes:,}
+raw bytes. Every compressed volume is strictly below {strict_limit:,} bytes.
+`manifest.json` records the byte size and SHA256 of the original, each compressed
+volume and each uncompressed chunk. Archive creation streamed every decompressed
+chunk through SHA256 and matched the original bytes exactly.
+
+From this directory, reconstruct to a new file (never redirect over the original):
+
+```sh
+cat rows.json.part-*.gz | gzip -dc > rows.reconstructed.json
+shasum -a 256 rows.reconstructed.json
+wc -c < rows.reconstructed.json
+```
+
+Expected size: {before['bytes']}; expected SHA256: `{before['sha256']}`.
+The four-digit volume names sort in manifest order for this archive. When using
+an API, decompress each file in manifest order and concatenate the raw chunks.
+
+From repository root, verify all volumes without creating a reconstructed file:
+
+```sh
+python3 experiments/mvp/pipeline/sealed/measurements/ext-1/archive_rows.py.txt verify experiments/mvp/pipeline/sealed/runs/ext-1/rows-archive/manifest.json
+```
+
+The archive contains the unchanged serialized rows; no metrics were recomputed.
+'''
+    with (destination / 'README.md').open('x') as stream:
+        stream.write(readme)
+    return data
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest='command', required=True)
+    create = sub.add_parser('build')
+    create.add_argument('source', type=Path)
+    create.add_argument('destination', type=Path)
+    check = sub.add_parser('verify')
+    check.add_argument('manifest', type=Path)
+    check.add_argument('--source', type=Path)
+    args = parser.parse_args()
+    if args.command == 'build':
+        data = build(args.source, args.destination)
+        print(json.dumps(data['roundtrip_verification']))
+    else:
+        print(json.dumps(verify(args.manifest, args.source)))
+
+
+if __name__ == '__main__':
+    main()

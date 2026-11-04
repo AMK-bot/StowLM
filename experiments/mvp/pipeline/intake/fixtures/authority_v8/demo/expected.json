@@ -1,0 +1,539 @@
+{
+  "synthetic": true,
+  "label": "Independently authored synthetic ground truth; not model output",
+  "case_label": "demo",
+  "source_map": "experiments/mvp/pipeline/maps/dev/feeder_500-simulated_yard-f70-r0.json",
+  "source_map_sha256": "255d8df70e8a3480bac37a77929d3fa12c555c7e2c227495cc84f5935a9fff8e",
+  "base_instance_sha256": "dcdf1772058fa882dedd24a409b21f42a0eeff2529d80e756e3b70335264e7af",
+  "rows": [
+    {
+      "category": null,
+      "dg": {
+        "un_number": "1263",
+        "imdg_class": "3",
+        "subsidiary_risks": [],
+        "packing_group": "III",
+        "stowage_category": "A",
+        "stowage_codes": [],
+        "segregation_codes": [],
+        "handling_codes": [],
+        "marine_pollutant": false,
+        "limited_quantity": false,
+        "flashpoint_c": null,
+        "additional": [
+          {
+            "un_number": "3082",
+            "imdg_class": "9",
+            "subsidiary_risks": [],
+            "packing_group": "III",
+            "stowage_category": "A",
+            "stowage_codes": [],
+            "segregation_codes": [],
+            "handling_codes": [],
+            "marine_pollutant": true,
+            "limited_quantity": false,
+            "flashpoint_c": null,
+            "additional": [],
+            "packing_form": null,
+            "ctu_closed": null,
+            "protected_from_heat": null,
+            "clear_living_quarters": null,
+            "ventilation_compliant": null,
+            "shaded": null,
+            "air_circulation": null,
+            "dry": null,
+            "handling_compliant": null,
+            "subsidiary_hazards_verified": null,
+            "special_provisions": null,
+            "short_international_voyage": null,
+            "bulk_container_type": null,
+            "verified_provisions": null,
+            "verified_segregation_codes": null,
+            "shipment_provenance": null
+          }
+        ],
+        "packing_form": null,
+        "ctu_closed": null,
+        "protected_from_heat": null,
+        "clear_living_quarters": null,
+        "ventilation_compliant": null,
+        "shaded": null,
+        "air_circulation": null,
+        "dry": null,
+        "handling_compliant": null,
+        "subsidiary_hazards_verified": null,
+        "special_provisions": null,
+        "short_international_voyage": null,
+        "bulk_container_type": null,
+        "verified_provisions": null,
+        "verified_segregation_codes": null,
+        "shipment_provenance": null
+      },
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 13060.0,
+      "height_m": 2.591,
+      "id": "QZXU0000009",
+      "iso_type": "22G1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "VNSGN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 2200.0,
+      "weight_class": "M"
+    },
+    {
+      "category": null,
+      "dg": {
+        "un_number": "3082",
+        "imdg_class": "9",
+        "subsidiary_risks": [],
+        "packing_group": "III",
+        "stowage_category": "A",
+        "stowage_codes": [],
+        "segregation_codes": [],
+        "handling_codes": [],
+        "marine_pollutant": true,
+        "limited_quantity": true,
+        "flashpoint_c": null,
+        "additional": [],
+        "packing_form": null,
+        "ctu_closed": null,
+        "protected_from_heat": null,
+        "clear_living_quarters": null,
+        "ventilation_compliant": null,
+        "shaded": null,
+        "air_circulation": null,
+        "dry": null,
+        "handling_compliant": null,
+        "subsidiary_hazards_verified": null,
+        "special_provisions": null,
+        "short_international_voyage": null,
+        "bulk_container_type": null,
+        "verified_provisions": null,
+        "verified_segregation_codes": null,
+        "shipment_provenance": null
+      },
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 13800.0,
+      "height_m": 2.896,
+      "id": "QZXU0000014",
+      "iso_type": "45G1",
+      "length_ft": 40,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "SGSIN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 3900.0,
+      "weight_class": "M"
+    },
+    {
+      "category": null,
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 14540.0,
+      "height_m": 2.896,
+      "id": "QZXU0000020",
+      "iso_type": "45R1",
+      "length_ft": 40,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "VNSGN",
+      "pol": "THLCH",
+      "reefer": true,
+      "reefer_setpoint_c": -18.0,
+      "special_stowage": [],
+      "tare_kg": 4500.0,
+      "weight_class": "M"
+    },
+    {
+      "category": null,
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 15280.0,
+      "height_m": 2.591,
+      "id": "QZXU0000040",
+      "iso_type": "22R1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "SGSIN",
+      "pol": "THLCH",
+      "reefer": true,
+      "reefer_setpoint_c": 4.0,
+      "special_stowage": [],
+      "tare_kg": 3000.0,
+      "weight_class": "M"
+    },
+    {
+      "category": "VNSGN:45G1:M:loaded",
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 16020.0,
+      "height_m": 2.896,
+      "id": "QZXU0000035",
+      "iso_type": "45G1",
+      "length_ft": 40,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "VNSGN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 3900.0,
+      "weight_class": "M"
+    },
+    {
+      "category": "SGSIN:45G1:M:loaded",
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 16760.0,
+      "height_m": 2.896,
+      "id": "QZXU0000061",
+      "iso_type": "45G1",
+      "length_ft": 40,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "SGSIN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 3900.0,
+      "weight_class": "M"
+    },
+    {
+      "category": "VNSGN:22G1:M:loaded",
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 17500.0,
+      "height_m": 2.591,
+      "id": "QZXU0000143",
+      "iso_type": "22G1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "VNSGN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 2200.0,
+      "weight_class": "M"
+    },
+    {
+      "category": "SGSIN:45G1:M:loaded",
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 18240.0,
+      "height_m": 2.896,
+      "id": "QZXU0000077",
+      "iso_type": "45G1",
+      "length_ft": 40,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "SGSIN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 3900.0,
+      "weight_class": "M"
+    },
+    {
+      "category": "VNSGN:22G1:L:empty",
+      "dg": null,
+      "direct_delivery": false,
+      "empty": true,
+      "gross_mass_kg": 2200.0,
+      "height_m": 2.591,
+      "id": "QZXU0000159",
+      "iso_type": "22G1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "VNSGN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 2200.0,
+      "weight_class": "L"
+    },
+    {
+      "category": "SGSIN:45G1:M:loaded",
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 19720.0,
+      "height_m": 2.896,
+      "id": "QZXU0000082",
+      "iso_type": "45G1",
+      "length_ft": 40,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "SGSIN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 3900.0,
+      "weight_class": "M"
+    },
+    {
+      "category": "VNSGN:22G1:H:loaded",
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 20460.0,
+      "height_m": 2.591,
+      "id": "QZXU0000170",
+      "iso_type": "22G1",
+      "length_ft": 20,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "VNSGN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 2200.0,
+      "weight_class": "H"
+    },
+    {
+      "category": "SGSIN:45G1:H:loaded",
+      "dg": null,
+      "direct_delivery": false,
+      "empty": false,
+      "gross_mass_kg": 21200.0,
+      "height_m": 2.896,
+      "id": "QZXU0000098",
+      "iso_type": "45G1",
+      "length_ft": 40,
+      "max_gross_mass_kg": null,
+      "oog": null,
+      "pod": "SGSIN",
+      "pol": "THLCH",
+      "reefer": false,
+      "reefer_setpoint_c": null,
+      "special_stowage": [],
+      "tare_kg": 3900.0,
+      "weight_class": "H"
+    }
+  ],
+  "traps": [
+    {
+      "kind": "image_pod",
+      "row_id": "QZXU0000082",
+      "field": "pod",
+      "reason": "cross_document_conflict",
+      "expected": "question_or_rejection",
+      "plausible": true
+    },
+    {
+      "kind": "declared_vs_vgm",
+      "row_id": "QZXU0000170",
+      "field": "gross_mass_kg",
+      "reason": "cross_document_conflict",
+      "expected": "question_or_rejection",
+      "plausible": true
+    },
+    {
+      "kind": "amendment_pod",
+      "row_id": "QZXU0000098",
+      "field": "pod",
+      "reason": "amendment_review",
+      "expected": "question_or_rejection",
+      "plausible": true
+    }
+  ],
+  "answers": [
+    {
+      "row_id": "QZXU0000082",
+      "field": "pod",
+      "value": "SGSIN",
+      "reason": "cross_document_conflict"
+    },
+    {
+      "row_id": "QZXU0000170",
+      "field": "gross_mass_kg",
+      "value": 20460.0,
+      "reason": "cross_document_conflict"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "pod",
+      "value": "SGSIN",
+      "reason": "amendment_review"
+    }
+  ],
+  "clean_control_ids": [
+    "QZXU0000009",
+    "QZXU0000014",
+    "QZXU0000020",
+    "QZXU0000040",
+    "QZXU0000035",
+    "QZXU0000061",
+    "QZXU0000143",
+    "QZXU0000077",
+    "QZXU0000159"
+  ],
+  "tally_cells": [
+    {
+      "row_id": "QZXU0000009",
+      "field": "pod",
+      "value": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "pod",
+      "value": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "pod",
+      "value": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "pod",
+      "value": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "pod",
+      "value": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "pod",
+      "value": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000143",
+      "field": "pod",
+      "value": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "pod",
+      "value": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000159",
+      "field": "pod",
+      "value": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "pod",
+      "value": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000170",
+      "field": "pod",
+      "value": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "pod",
+      "value": "SGSIN"
+    }
+  ],
+  "booking_ref": "SYN-LCH-260103",
+  "auxiliary_metadata": {
+    "QZXU0000009": {
+      "seal": "SYN1030000",
+      "commodity": "PACKAGED PAINT"
+    },
+    "QZXU0000014": {
+      "seal": "SYN1030001",
+      "commodity": "ENVIRONMENTALLY HAZARDOUS LIQUID IN PACKAGES"
+    },
+    "QZXU0000020": {
+      "seal": "SYN1030002",
+      "commodity": "FROZEN FRUIT"
+    },
+    "QZXU0000040": {
+      "seal": "SYN1030003",
+      "commodity": "CHILLED FRUIT"
+    },
+    "QZXU0000035": {
+      "seal": "SYN1030004",
+      "commodity": "CARTONS OF MACHINE PARTS"
+    },
+    "QZXU0000061": {
+      "seal": "SYN1030005",
+      "commodity": "CARTONS OF MACHINE PARTS"
+    },
+    "QZXU0000143": {
+      "seal": "SYN1030006",
+      "commodity": "CARTONS OF MACHINE PARTS"
+    },
+    "QZXU0000077": {
+      "seal": "SYN1030007",
+      "commodity": "CARTONS OF MACHINE PARTS"
+    },
+    "QZXU0000159": {
+      "seal": "SYN1030008",
+      "commodity": "EMPTY CONTAINER"
+    },
+    "QZXU0000082": {
+      "seal": "SYN1030009",
+      "commodity": "CARTONS OF MACHINE PARTS"
+    },
+    "QZXU0000170": {
+      "seal": "SYN1030010",
+      "commodity": "CARTONS OF MACHINE PARTS"
+    },
+    "QZXU0000098": {
+      "seal": "SYN1030011",
+      "commodity": "CARTONS OF MACHINE PARTS"
+    }
+  },
+  "derived_fields": {
+    "QZXU0000061": [
+      "tare_kg"
+    ]
+  },
+  "derivation_labels": {
+    "QZXU0000061": {
+      "tare_kg": "Synthetic representative ISO45G1 tare 3900 kg, only because no tare is stated; not a plate measurement."
+    }
+  },
+  "caption": "12 synthetic booked boxes on a selected map section; not a whole ship or 195-box test.",
+  "business_fields": [
+    "id",
+    "iso_type",
+    "pol",
+    "pod",
+    "gross_mass_kg",
+    "tare_kg",
+    "empty",
+    "reefer",
+    "reefer_setpoint_c",
+    "dg",
+    "oog"
+  ],
+  "base_amendments": [
+    "Selected twelve original yard-backed load IDs; ship and yard retained",
+    "Synthetic cargo business facts replaced by the declared booking/shipper forms",
+    "Rounded whole-ten-kg VGMs; explicit form authority and complete booking-scoped lists",
+    "No plate rating inferred; declared intake ceiling retained; one absent tare is a labelled representative approximation"
+  ]
+}

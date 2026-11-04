@@ -21,14 +21,28 @@ __pycache__/
 
 # Credentials, signing keys and local metadata
 .env*
+!/.env.example
 .keys/
+/.claude/
 .DS_Store
+
+# Functional app private runtime output
+/experiments/mvp/ui/functional/calls/
+/experiments/mvp/ui/functional/cache/
+/experiments/mvp/ui/functional/spend/
 
 # User recordings; keep the camera folder's recording instructions
 /experiments/mvp/video/record-kit/vo/*.wav
+/experiments/mvp/video/record-kit/vo/*
+!/experiments/mvp/video/record-kit/vo/README.md
 /experiments/mvp/video/record-kit/cam/*
 !/experiments/mvp/video/record-kit/cam/README.md
 
 # Local video tools and the unmodified third-party checkout
 /experiments/mvp/video/.tools/
 /experiments/mvp/video/brag-vendor/
+
+# Runtime caches the checker, runner and apps rebuild on demand (some derive from the downloaded hull data)
+/experiments/cache/
+/experiments/mvp/pipeline/runner/cache/
+/experiments/mvp/ui/cache/

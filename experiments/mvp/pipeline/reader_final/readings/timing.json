@@ -1,0 +1,17 @@
+{
+  "sentences": 200,
+  "model_load_s": 2.543505208042916,
+  "first_sentence_s": 4.253033375018276,
+  "cold_start_s": 6.796538583061192,
+  "warm_median_s": 3.4370462500373833,
+  "warm_p90_s": 4.639892207982484,
+  "warm_mean_s": 3.6219045732140507,
+  "identity": {
+    "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+    "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+    "name": "swa-last-5",
+    "adapter_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+    "decoding_policy": "reader-v3-schema-mask/2-d224"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "label": "Independent pre-outcome source/manifest audit; no candidate checker calls",
+  "created_utc": "2026-11-02T02:41:54.381419+00:00",
+  "manifest_sha256": "b12ae05218abc7d85a25537db9e12353f5940969990d40731910eb288206de2c",
+  "readiness_sha256": "8a52b3a1633ad413ac53fcf1cf9dbb062ee698e38f15fe07c85c4ef157d9b2cc",
+  "checks": {
+    "manifest_digest": true,
+    "40_same_preserved_requests": true,
+    "20_swap_20_empty": true,
+    "no_candidate_fulls_before_freeze": true,
+    "same34boxes": true,
+    "40clear": true,
+    "archive_pins_match": true,
+    "readiness_after_freeze": true,
+    "readiness_bound_to_manifest": true,
+    "270_dependency_fingerprint": true,
+    "dependencies_still_match": true,
+    "gates_same_as_recovery": true,
+    "numerical_dependencies_explicit": true
+  },
+  "passed": true
+}

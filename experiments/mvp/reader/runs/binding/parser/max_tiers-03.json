@@ -1,0 +1,87 @@
+{
+  "type": "max_tiers",
+  "input": "experiments/mvp/corpus/val/tiny/feeder_1700/simulated_yard/seed-020000017.json",
+  "baseline_file": "experiments/mvp/frontier/runs/tiny48-0.9/sim.tiny.20000017.json",
+  "instance_id": "sim.tiny.20000017",
+  "sentence": "Zero tiers in the hold of bay 3 \u2014 nothing below the hatch there.",
+  "sealed_id": "sealed-027",
+  "expected": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "max_tiers",
+      "bay": 3,
+      "zone": "hold",
+      "max_tiers": 0
+    }
+  },
+  "context": {
+    "id": "sim.tiny.20000017",
+    "bays": [
+      1,
+      2,
+      3
+    ],
+    "max_tiers": {
+      "hold": 2,
+      "deck": 1
+    },
+    "max_tiers_by_bay": {
+      "1": {
+        "hold": 2,
+        "deck": 1
+      },
+      "2": {
+        "hold": 2,
+        "deck": 1
+      },
+      "3": {
+        "hold": 2,
+        "deck": 1
+      }
+    },
+    "has_accommodation": true,
+    "hatch_covers": [
+      "HC-002-P"
+    ],
+    "ports": [
+      "VNSGN",
+      "SGSIN",
+      "THLCH"
+    ]
+  },
+  "baseline_weighted": 8.0,
+  "baseline_violations": [
+    "load QZXU0000009 -> 0030202: instruction: slot 0030202 is closed",
+    "load QZXU0000020 -> 0030204: instruction: slot 0030204 is closed"
+  ],
+  "baseline_violation_count": 2,
+  "capacity_screen": "necessary open-cell and surviving 40ft-pair screens passed; not a feasibility certificate",
+  "n_load": 3,
+  "input_sha256": "d75b8251c38937054b82b125eb8c38473e963f9f27470ab73b4b9a65b84fe7da",
+  "case_id": "max_tiers-03",
+  "selection_rationale": "Openly baseline-screened, binding-enriched validation cohort: prefer violating stored best plans, then smaller load lists, then larger baseline weighted move count; one literal sealed sentence per distinct map. necessary open-cell and surviving 40ft-pair screens passed; not a feasibility certificate",
+  "baseline_sha256": "f810d616f22a48d931184c06d2cb54f8b130db0cb08a81ec5f97c67511121085",
+  "parsed": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "max_tiers",
+      "bay": 3,
+      "zone": "hold",
+      "max_tiers": 0
+    }
+  },
+  "parser": {
+    "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":3,\"zone\":\"hold\",\"max_tiers\":0}}",
+    "request_id": "4fff3696-a38e-4602-b36d-057248399183",
+    "cost_usd": "0.00127025",
+    "usage": {
+      "input_tokens": 533,
+      "output_tokens": 234,
+      "cached_tokens": 355
+    },
+    "prompt_sha256": "936fe9b53d25f6ccb1a3ebc2e96f4d37bf694606629823ba4df1b1368cc1e73f",
+    "reservation_context_bound_tokens": 32768
+  },
+  "parse_exact": true,
+  "parse_wall_s": 1.0276037089643069
+}

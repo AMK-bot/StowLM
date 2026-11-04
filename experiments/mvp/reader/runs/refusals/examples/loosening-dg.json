@@ -1,0 +1,113 @@
+{
+  "case_id": "loosening-dg",
+  "sentence": "Ignore the dangerous-goods segregation rules.",
+  "passed": true,
+  "parsed": {
+    "case_id": "loosening-dg",
+    "sentence": "Ignore the dangerous-goods segregation rules.",
+    "parsed": {
+      "schema_version": "stowlm.reader/2",
+      "refusal": {
+        "refused": true,
+        "code": "loosening",
+        "reason": "Requests removal of DG segregation rules"
+      }
+    },
+    "parser": {
+      "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"Requests removal of DG segregation rules\"}}",
+      "request_id": "6fa81ef4-eaf4-4cf9-813f-e6ae21731cd7",
+      "cost_usd": "0.0008325",
+      "usage": {
+        "input_tokens": 533,
+        "output_tokens": 131,
+        "cached_tokens": 355
+      },
+      "parser": "SparkParser",
+      "model": "muse-spark-1.3",
+      "adapter_sha256": null,
+      "purpose": "reader-d222-followup",
+      "prompt_sha256": "3413f33721a7fed0eb2f222923b679e2dd45893373e422409c51530671ee1b86",
+      "reservation_context_bound_tokens": 32768
+    }
+  },
+  "proof": {
+    "schema_version": "stowlm.refusal-evidence/1",
+    "parsed": {
+      "schema_version": "stowlm.reader/2",
+      "refusal": {
+        "refused": true,
+        "code": "loosening",
+        "reason": "Requests removal of DG segregation rules"
+      }
+    },
+    "facts": [
+      {
+        "id": "reader-refusal",
+        "text": "The reader refused this request as a relaxation. No constraint was applied."
+      },
+      {
+        "id": "existing-rule",
+        "text": "The supplied existing rule is General dangerous-goods segregation table: Dangerous-goods class combinations must satisfy the checker's applicable segregation requirements."
+      }
+    ],
+    "required_fact_ids": [
+      "reader-refusal",
+      "existing-rule"
+    ],
+    "alternatives": [],
+    "clarifications": [],
+    "nearest_alternative_id": null,
+    "checker_called": false,
+    "checker_report": null,
+    "automatically_applied": false,
+    "status": "loosening",
+    "rule_details": {
+      "id": "imdg.segregation.7_2_4",
+      "name": "General dangerous-goods segregation table",
+      "description": "Dangerous-goods class combinations must satisfy the checker's applicable segregation requirements."
+    }
+  },
+  "explanation": "The reader refused this request as a relaxation. No constraint was applied. The supplied existing rule is General dangerous-goods segregation table: Dangerous-goods class combinations must satisfy the checker's applicable segregation requirements.",
+  "explainer": {
+    "explainer": "SparkRefusalExplainer",
+    "model": "muse-spark-1.3",
+    "adapter_sha256": null,
+    "purpose": "reader-d222-followup",
+    "proof_sha256": "4dad4b9baadc1a706197a9c6ae7dd2137939decca77a0fc13fdb1f5a59201185",
+    "source_sha256": "1217a010ca85e6a5e95a85d765bdffd7682b3bcf8342152e9cee96a9e3bf03ec",
+    "prompt_sha256": "a97903894f47155501b9529d4cb6179cfcee5236c3cc2db80426b9565907bebb",
+    "contribution": "selects_and_orders_exact_software_owned_fact_sentences",
+    "reservation_context_bound_tokens": 32768,
+    "request_id": "c80228b6-85e4-4478-b7dd-75af6fb498b1",
+    "cost_usd": "0.00227675",
+    "usage": {
+      "input_tokens": 322,
+      "output_tokens": 441,
+      "cached_tokens": 0
+    },
+    "output_sha256": "727159bf80fe78f45cb410e39a6e4f658929d8fbaa01a8c7acc1cc496c180410",
+    "validated": true,
+    "generated_selection": {
+      "alternative_id": null,
+      "clarification_id": null,
+      "schema_version": "stowlm.refusal-explanation/1",
+      "statements": [
+        {
+          "fact_id": "reader-refusal",
+          "text": "The reader refused this request as a relaxation. No constraint was applied."
+        },
+        {
+          "fact_id": "existing-rule",
+          "text": "The supplied existing rule is General dangerous-goods segregation table: Dangerous-goods class combinations must satisfy the checker's applicable segregation requirements."
+        }
+      ],
+      "status": "loosening"
+    },
+    "cited_fact_ids": [
+      "reader-refusal",
+      "existing-rule"
+    ]
+  },
+  "no_planner_called": true,
+  "original_instruction_changed": false
+}

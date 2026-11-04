@@ -1,0 +1,47 @@
+{
+  "schema_version": "stowlm.ext1.final-verification/1",
+  "ready": true,
+  "accepted": 24,
+  "failed": 0,
+  "claims": 24,
+  "owned_child_spawns": 24,
+  "producer_redraws": 0,
+  "planners_run": 0,
+  "old_map_payloads_opened": 0,
+  "source_files_checked": 489,
+  "source_drifts": [],
+  "excluded_files_checked": 8203,
+  "nonexcluded_files": [],
+  "allowed_write_events": 816,
+  "unknown_write_denials": [],
+  "recovered_false_positive_cleanup_denials": 16,
+  "map_bytes_hash_checked": 24,
+  "claim_map_mtime_rechecked": 16,
+  "canonical_digest_comparison": "Both canonical serializers captured on actual first save; compared to all recorded external digest metadata",
+  "tests": {
+    "offline_tests": 9,
+    "passed": 9,
+    "regression_failed_before_passed_after": true
+  },
+  "pins": {
+    "PREREG.md": "ba3dcc46f4b773b484d156288d8ee5c5fe682b2fc8f4d5096ee2e37de211e206",
+    "maps-manifest.json": "41ffddc689abb2c11c2c62cd61165b81b0fa13dccfcba23c6f577175dba5116f",
+    "map-seed-proof.json": "e7c5f68801770b7fdf6cf7746fd09c72185ca0ac3db90974e9f71e1dd1dfbe2b",
+    "map-prior-identities.json": "1053c5e8a5d63fc6d35a6886359622a6ff1b7e5a785e2de3e30ef9391afb3fc4",
+    "map-digest-proof.json": "34b4bc97df7abab294762bcab8ebe37e2eda537461aeb5159539fada6bd2b1a7",
+    "map-runtime-source-proof.json": "7f648e136a6b4263b27e276ac7bb75fae08874b67a535fe86726654543303a85",
+    "map-exclusion-proof.json": "7c0f183311fa7334a5429121a29904ba0d1d576a84388d412dffc06175984b29",
+    "map-guard-regression.json": "d7fa7c9e35ec4a52adf86a6f78c1fd5a0c8d68a9bc5b914f6ac4df2af01bef35",
+    "map_final_verify.py.txt": "1d8ebd61492ab7150e6762d164f43ab66066582f52aad5142223925f30e9948a",
+    "map_recover_cleanup.py.txt": "3a7a9a5e601adeb6682f6b1689433f1742a95284a3230dc8d75fa108e6104739"
+  },
+  "incident_summary_sha256": "dea1ad6ba895f3d30825e8d44dcd580be6c44c8e78aa408747db1a6c8f1cd8e0",
+  "verification_completed_utc": "2026-11-03T03:27:54Z",
+  "coverage_limits": [
+    "A closed-world statement about recorded external identity metadata, not unknown unrecorded payload contents.",
+    "Forbidden raw trees are not entered. Their public corpus/envelope manifests and requested lists are explicitly covered.",
+    "Plan/job/row payloads and symlinks are not opened. Identity values recorded only there are outside directly auditable metadata coverage.",
+    "Synthetic test workspaces and tool environments are excluded; their fake seeds are not experimental cohorts.",
+    "All hexadecimal metadata values are retained conservatively; an unknown recorded canonical identity outside selected metadata cannot be certified."
+  ]
+}

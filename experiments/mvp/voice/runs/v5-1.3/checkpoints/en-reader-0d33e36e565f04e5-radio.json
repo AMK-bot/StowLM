@@ -1,0 +1,45 @@
+{
+  "answer": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 5760,
+    "audio_seconds": 5.76,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00025",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "eddc9566adcd491d831879803b4aabc8",
+    "session_id": "voyager/transcribe/99366F350A664318AB92E3B62004148B"
+  },
+  "asr_latency_s": 1.3796179170021787,
+  "audio_sha256": "b019f869d596b1964e5a2150a5bbfe132bada4fcb1d84b1cb9832beb4ed30b65",
+  "canonical": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 4.248981500044465,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.003217",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "22f8e4b7528a40a43369d3b76169a2c93e4e0cdfaa5df4fc4df1aac70dc23c9b",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "6f974c42-ce86-46a2-8691-a1a39302acb3"
+  },
+  "parser_latency_s": 2.7723586250212975,
+  "script": "A physical cover and its hold space must serve the same single discharge port.",
+  "source_id": "reader-0d33e36e565f04e5",
+  "started_utc": "2026-11-01T01:34:44.993653+00:00",
+  "status": "complete",
+  "transcript": "A physical cover and it hold space must serve the same single discharge port."
+}

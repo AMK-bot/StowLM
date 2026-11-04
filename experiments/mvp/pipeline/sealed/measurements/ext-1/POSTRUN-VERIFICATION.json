@@ -1,0 +1,34 @@
+{
+  "archive": {
+    "maximum_compressed_bytes": 6999573,
+    "raw_sha256": "6d3ffd91f22b3d06671b9ecbdefc07f4ebb5c0f271b62272b704a5b9a9dd6660",
+    "roundtrip_bytes": 132080123,
+    "volumes": 4
+  },
+  "artifacts": {
+    "FIGURES.json": "ae32ad75b8027311f667038b76da4fb274ce50a6c089fad2b2b073b42ac2882f",
+    "POOL-VERIFICATION.json": "a3ab0e1d3a482e03ab3abca68e0f392251bcd843731e598c2eb3338369025a3c",
+    "REPORT-AUDIT.json": "e680a91eeed8dee9197021efe2f74bd681a0a21e57f1336e028023867a5b59fb",
+    "SECONDARY-POOLED.json": "44b4c15e7c1617a43dabdb6184f558e7a1c6bfbb07c8347559a3e66312f35151",
+    "SUMMARY.md": "710dcba6dba4955edb3c422e970319ae7373d7cc407ff8e7c77f54def07758a9",
+    "postrun-freeze-verification.json": "4c59ee31a4b2ca9696a97a8241c5b36ccf8a729d46e5b56815925b905dde3c29",
+    "postrun-tests.xml": "611134428cc3926e5da56f32a44fa54db83d151bf4f10f581d5bb1133458c4ba"
+  },
+  "created_utc": "2026-11-03T06:08:57.944999+00:00",
+  "discrepancies": [],
+  "figure_facts_checked": 167,
+  "frozen_manifest": {
+    "manifest_sha256": "acf2f275efa73f45c43709f4a52807dd480390e1497f085cab11d3604265bbec",
+    "ok": true,
+    "tree_digest": "9685cd1f2f6bf8eb492d933f1a456c14a7642aed60fdd233b5c65400ff19dcb8"
+  },
+  "independent_recount_consulted": false,
+  "source_references_checked": 382,
+  "source_reports_and_rows_unchanged": true,
+  "tests": {
+    "failed": 0,
+    "passed": 11,
+    "source": "postrun-tests.xml"
+  },
+  "verified": true
+}

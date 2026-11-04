@@ -1,0 +1,219 @@
+"""Prospectively registered ext-1 reporting; no map payload or model is opened."""
+from __future__ import annotations
+
+import csv
+import hashlib
+import json
+from pathlib import Path
+
+from experiments.mvp.pipeline.sealed import report as canonical
+from experiments.mvp.pipeline.sealed.common import ROOT, HarnessError, atomic_json, object_hash
+
+HOME = ROOT/'experiments/mvp/pipeline/sealed/measurements/ext-1'
+RUN = ROOT/'experiments/mvp/pipeline/sealed/runs/ext-1'
+LABEL = 'fresh held-out extension, run after the freeze; not the pre-registered sealed claim'
+ARMS = ('pipeline','instruction','twostep')
+TIMING = {'wall_s','reading_wall_s','child_elapsed_s','audit_elapsed_s'}
+
+
+def _public_arm(values, expected):
+    return {k:v for k,v in canonical._arm_summary(values, expected).items() if k not in TIMING}
+
+
+def summarize(rows, maps, *, metadata=None):
+    """Pure JSON API. Missing trials stay explicit; no sensitivity is inferred."""
+    metadata = dict(metadata or {})
+    expected = {m['map_id']:m for m in maps}
+    if len(expected) != len(maps) or not maps:
+        raise ValueError('Unique nonempty registered map population required')
+    cells = {a:{} for a in ARMS}
+    for row in rows:
+        arm, iid = row['arm'],row['map_id']
+        if arm not in cells or iid not in expected or iid in cells[arm]:
+            raise ValueError('Duplicate or unregistered extension map/arm')
+        if row.get('map_sha256') != expected[iid]['sha256']:
+            raise ValueError('Extension result map hash differs')
+        if row.get('ship_id') not in (None,expected[iid].get('ship_id')):
+            raise ValueError('Extension result ship differs')
+        cells[arm][iid] = dict(row,ship_id=expected[iid].get('ship_id'))
+    for arm in ARMS:
+        for iid, item in expected.items():
+            cells[arm].setdefault(iid, _missing(item,arm))
+    rows = [cells[arm][m['map_id']] for m in maps for arm in ARMS]
+    n = len(maps)
+    arm_summaries = {a:_public_arm(v,n) for a,v in cells.items()}
+    ships = sorted({str(m.get('ship_id','unknown')) for m in maps})
+    by_ship = {}
+    for ship in ships:
+        ids = {m['map_id'] for m in maps if str(m.get('ship_id','unknown')) == ship}
+        by_ship[ship] = dict(expected_maps=len(ids),arms={
+            a:_public_arm({i:r for i,r in v.items() if i in ids},len(ids)) for a,v in cells.items()})
+    instruction = canonical._instruction_binding(cells['pipeline'],cells['instruction'],n)
+    types = {kind:set() for kind in canonical.RULE_TYPES}
+    for iid,row in cells['instruction'].items():
+        kind = row.get('instruction_type') or 'unavailable'
+        types.setdefault(kind,set()).add(iid)
+    instruction_types, instruction_by_type = {},{}
+    for kind,ids in types.items():
+        instruction_types[kind] = _public_arm({i:cells['instruction'][i] for i in ids},len(ids))
+        binding = canonical._instruction_binding(
+            {i:cells['pipeline'][i] for i in ids},{i:cells['instruction'][i] for i in ids},len(ids))
+        instruction_by_type[kind] = binding
+    instruction['by_type'] = instruction_by_type
+    pending = sum(r.get('status') == 'not_run' for r in rows)
+    errors = sum(r.get('status') == 'error' or bool(r.get('audit_error')) for r in rows)
+    audits = sum(r.get('audit_verified') is True and r.get('audit_fresh_process') is True for r in rows)
+    pilot = bool(metadata.get('development_pilot'))
+    label = (metadata.get('label') or 'DRY RUN on development maps; excluded from extension results') if pilot else LABEL
+    assigned = (set(types) == set(canonical.RULE_TYPES) and all(len(v)==6 for v in types.values()))
+    complete = pending == 0
+    summary = dict(schema_version='stowlm.ext-1.report/1',decision='D320A',label=label,
+        development_pilot=pilot,sealed_claim_eligible=False,wall_times_quotable=False,
+        lift_saving_quotable=False,secondary_pooling_only=True,
+        manifest_sha256=metadata.get('manifest_sha256'),tree_digest=metadata.get('tree_digest'),
+        preregistration_sha256=metadata.get('preregistration_sha256'),
+        config_sha256=metadata.get('config_sha256'),
+        complete=complete,population_accounted=True,rows=len(rows),expected_rows=3*n,
+        terminal_rows=len(rows)-pending,pending_rows=pending,error_rows=errors,
+        provisional=not complete or bool(errors) or audits != len(rows) or pilot,
+        verified_complete=complete and not errors and audits == len(rows),
+        fresh_audits_complete=audits == len(rows),fresh_audited_rows=audits,
+        instruction_assignment_complete=assigned,expected_maps=n,
+        arms=arm_summaries,by_ship=by_ship,instruction=instruction,
+        instruction_by_type=instruction_by_type,instruction_types=instruction_types,
+        pass_tables={name:canonical._pass_table(cells[left],cells[right],set(expected))
+            for name,left,right in (('pipeline_vs_twostep','pipeline','twostep'),
+                                   ('instruction_vs_pipeline','instruction','pipeline'))},
+        cohorts={'envelope24':dict(expected_maps=n,arms=arm_summaries,by_ship=by_ship,
+            instruction_binding=instruction,instruction_types=instruction_types)},
+        provenance=metadata,reason=metadata.get('reason'),
+        notes=['Planning step from a clean load list, templated sentences; synthetic ships/cargo and simulated port.',
+            'Pass means complete L0 with a fresh independent audit and every intended confirmed instruction obeyed.',
+            'Every unavailable/error/out-of-envelope/not-run trial remains in its registered denominator.',
+            'The binding denominator is the same as3.1: a fresh-audited returned no-rule plan breaking the rule; baseline L0 is not required.',
+            'Confirmation source sealed_expected_match is expected-rule equality, not a human planner confirmation.',
+            'Instruction cost is signed instructed-minus-baseline on mutual L0 passes; negative changes are search variation.',
+            'Already-obeyed pairs are a search-noise floor; lift metrics are secondary diagnostics, never a new lift-saving claim.',
+            'Other work may run beside the extension. Raw artifacts retain operational times; report/CSV publish no wall-time benchmark.',
+            'Extension results remain separate from final3 and interrupted attempts. Any48-map pooled figure is secondary and requires both verified reports.',
+            canonical.CONFOUND])
+    return summary,rows
+
+
+def _missing(item,arm,**fields):
+    return dict(map_id=item['map_id'],map_sha256=item['sha256'],cohort='envelope24',
+        ship_id=item.get('ship_id'),arm=arm,status='not_run',passed=False,
+        audit_verified=False,audit_fresh_process=False,
+        instruction_type=item.get('instruction_type') if arm=='instruction' else None,**fields)
+
+
+def _within(path):
+    path = Path(path).absolute()
+    if any(p.is_symlink() for p in (path,*path.parents)):
+        raise HarnessError('Extension report path cannot be a symlink: '+str(path))
+    path = path.resolve()
+    if not any(path.is_relative_to(p.resolve()) for p in (HOME,RUN)):
+        raise HarnessError('Extension report path escapes registered roots: '+str(path))
+    return path
+
+
+def _hash(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def write_reports(config, *, reason=None):
+    """Controller API: retain72 rows in finally and return terminal completion."""
+    run = _within(config['run_dir'])
+    run.mkdir(parents=True,exist_ok=True)
+    maps = [dict(m) for m in config['maps']]
+    allocation = _within(run/'instruction-allocation.json')
+    if allocation.is_file():
+        prepared = {m['map_id']:m for m in json.loads(allocation.read_text())}
+        for item in maps:
+            item['instruction_type'] = prepared.get(item['map_id'],{}).get('instruction_type')
+    rows = []
+    for item in maps:
+        for arm in ARMS:
+            target = _within(run/'jobs'/object_hash(dict(map_id=item['map_id'],arm=arm))[:24])
+            result = _within(target/'result.json')
+            if result.is_file():
+                row = json.loads(result.read_text())
+            else:
+                row = _missing(item,arm,dispatched=(target/'DISPATCHED.json').exists())
+            if arm=='instruction' and not row.get('instruction_type'):
+                row['instruction_type'] = item.get('instruction_type')
+            rows.append(row)
+    metadata = {k:config.get(k) for k in ('decision','label','manifest_path','manifest_sha256',
+        'preregistration_path','preregistration_sha256','maps_manifest_path','maps_manifest_sha256',
+        'development_pilot','profile','confirmation_source','artifacts')}
+    metadata.update(config_sha256=object_hash(config),reason=reason,
+                    reporter_source_sha256=_hash(__file__))
+    manifest = Path(config.get('manifest_path',''))
+    if (manifest.resolve().is_relative_to(ROOT/'experiments/mvp/pipeline/freeze')
+            and manifest.is_file() and _hash(manifest)==config.get('manifest_sha256')):
+        metadata['tree_digest'] = json.loads(manifest.read_text()).get('tree_sha256')
+    identity = _within(run/'STARTED.json')
+    if identity.is_file():
+        metadata['run_identity'] = json.loads(identity.read_text())
+    summary,rows = summarize(rows,maps,metadata=metadata)
+    for row in rows:
+        row.update(label=summary['label'],development_pilot=summary['development_pilot'],
+            sealed_claim_eligible=False,wall_times_quotable=False,
+            manifest_sha256=config.get('manifest_sha256'),tree_digest=metadata.get('tree_digest'))
+    atomic_json(_within(run/'rows.json'),rows)
+    atomic_json(_within(run/'report.json'),summary)
+    fields = tuple(k for k in canonical.CSV_FIELDS if not (
+        k in TIMING or k.endswith('_s') or k.endswith('_wall_s') or k in {'timeout_s'})) + (
+        'label','development_pilot','sealed_claim_eligible','wall_times_quotable','manifest_sha256','tree_digest',
+        'extension_config_sha256','reading_sha256','reading_allocation_sha256',
+        'instruction_allocation_sha256','run_id','audit_pid','planning_pid','audited_target_sha256','plan_sha256')
+    baseline = {r['map_id']:r for r in rows if r['arm']=='pipeline'}
+    with _within(run/'per-map.csv').open('w',newline='') as stream:
+        writer=csv.DictWriter(stream,fieldnames=fields);writer.writeheader()
+        for row in rows:
+            flat={k:row.get(k) for k in fields};flat['passed']=canonical.passed(row)
+            flat['level']=canonical._level(row.get('level'))
+            if row['arm']=='instruction':
+                base=baseline[row['map_id']];flat['plan_difference_boxes']=canonical._plan_difference(base,row)
+                if canonical.passed(base) and canonical.passed(row):
+                    for metric in ('lifts_total','lifts_current_port'):
+                        if canonical._number(base.get(metric)) and canonical._number(row.get(metric)):
+                            flat['instruction_'+metric+'_change']=row[metric]-base[metric]
+            writer.writerow(flat)
+    _within(run/'REPORT.md').write_text(_markdown(summary))
+    return summary
+
+
+def _count(k,n,interval):
+    return f'{k}/{n}; exact95% '+('unavailable' if interval is None else str(interval))
+
+
+def _markdown(summary):
+    lines=['# Fresh held-out extension','',summary['label'],'',*summary['notes'],'',
+        'Provenance: '+json.dumps(summary['provenance'],sort_keys=True),'',
+        '| Population | Arm | L0 passes and exact95% | Out of envelope | Relaxed levels | Statuses |',
+        '|---|---|---|---:|---|---|']
+    populations=[('all24' if summary['expected_maps']==24 else 'development pilot',summary['arms'])]+[
+        (ship,cell['arms']) for ship,cell in summary['by_ship'].items()]
+    for name,arms in populations:
+        for arm,cell in arms.items():
+            lines.append(f"| {name} | {arm} | {_count(cell['passes_L0'],cell['expected_maps'],cell['passes_L0_exact95'])} | {cell['out_of_envelope']} | {cell['relaxed_by_level']} | {cell['statuses']} |")
+    lines += ['', '| Instruction population | Binding obedient / baseline broke rule | Already obeyed | Counterfactual unavailable | Reader failures | Engine failures |',
+        '|---|---|---|---:|---:|---:|']
+    entries=[('all',summary['instruction'],summary['arms']['instruction'])]+[
+        (kind,binding,summary['instruction_types'][kind]) for kind,binding in summary['instruction_by_type'].items()]
+    for name,binding,arm in entries:
+        lines.append(f"| {name} | {_count(binding['binding_obedient_passes'],binding['rule_broken_maps'],binding['binding_obedient_exact95'])} | {_count(binding['already_obeyed'],binding['expected_maps'],binding['already_obeyed_exact95'])} | {binding['counterfactual_unavailable']} | {arm['reader_failures']} | {arm['engine_failures']} |")
+    lines += ['', '| Type | Instructed L0 passes | Recheck passes | Recheck failed | Unavailable |',
+        '|---|---|---|---:|---:|']
+    for kind,cell in summary['instruction_types'].items():
+        checks=cell['instruction_recheck']
+        lines.append(f"| {kind} | {_count(cell['passes_L0'],cell['expected_maps'],cell['passes_L0_exact95'])} | {_count(checks['passed'],checks['passed_denominator'],checks['passed_exact95'])} | {checks['failed']} | {checks['unavailable']} |")
+    lines += ['', '| Instruction population | Mean boxes in different cells | Signed total lift change (paired95%) | Already-obeyed noise floor (paired95%) |',
+        '|---|---:|---|---|']
+    for name,binding,arm in entries:
+        cost=binding['signed_lift_change']['lifts_total'];noise=binding['already_obeyed_noise_floor']['lifts_total']
+        lines.append(f"| {name} | {binding['plan_difference']['mean_boxes']} | {cost['mean_difference_left_minus_right']} {cost['paired_bootstrap95_mean_difference']} | {noise['mean_difference_left_minus_right']} {noise['paired_bootstrap95_mean_difference']} |")
+    lines += ['', 'All current-port and projected later-port signed diagnostics are separate in report.json. No new lift-saving claim.',
+        'Per-map outcomes and provenance: per-map.csv. Operational timing remains in raw artifacts only.','']
+    return '\n'.join(lines)

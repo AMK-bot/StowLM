@@ -1,0 +1,20 @@
+{
+  "schema_version": "stowlm.voyage-packet/1",
+  "packet_id": "synthetic-runner-tiny",
+  "created_utc": "2026-11-01T00:00:00Z",
+  "synthetic": true,
+  "base_instance": {
+    "path": "experiments/mvp/corpus/val/tiny/feeder_1700/random_yard/seed-020000008.json",
+    "sha256": "37c8c1b1ba1920ef4aefcf71b44caec7b56d03a4ce1d2b14059b9405c6456d64"
+  },
+  "load_list": null,
+  "yard_state": null,
+  "standing": "A physical cover and its hold space must serve the same single discharge port.",
+  "voyage_sentences": [
+    {
+      "text": "No containers on deck in bay 2.",
+      "origin": "typed"
+    }
+  ],
+  "profile": "live"
+}

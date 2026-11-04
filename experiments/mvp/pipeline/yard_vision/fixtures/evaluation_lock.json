@@ -1,0 +1,16 @@
+{
+  "locked_utc": "2026-11-02T00:54:31.460543+00:00",
+  "frozen_manifest_sha256": "25a5a9edaf5271e39795e22dbadd5326c837479f462504da445159b5a015c6bf",
+  "source_sha256": {
+    "clients.py": "6187ae506021862d10148258705941a245d8b66294451ab98e2402b905e07fd4",
+    "reader.py": "c13620852fc73b3cadcf0967515f29ae537b00804af20807b975d0eb9ea2de5d",
+    "render.py": "b341d91369fc31611047f6b895c6673a3f1d8d28efaed5a9e347dc79de91be87",
+    "metrics.py": "8440afad3fad59f768f22e657e8cc340088089bb43768daad9ef4cd1c7d0db7d"
+  },
+  "development_clean_complete": 2,
+  "development_repaints_discarded": 4,
+  "final_repaint": "source_state synthesis manifest, v2",
+  "held_out": "cases03-06: one clean read and one v2 repaint each; read photo only if strict independent preservation audit passes",
+  "strict_pair_audit": "require exact geometry/counts AND original identities retained; changed/unverifiable identity is a changed scene",
+  "no_tuning_after_lock": true
+}

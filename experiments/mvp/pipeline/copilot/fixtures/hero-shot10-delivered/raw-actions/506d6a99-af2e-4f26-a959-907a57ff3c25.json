@@ -1,0 +1,5 @@
+{
+  "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+  "request_id": "506d6a99-af2e-4f26-a959-907a57ff3c25",
+  "raw": "{\"say\": \"Found the stored plan for your confirmed rule and checked it:\\n- Confirmed rule: DG keep-away for IMDG class 2.2, min_bays 3 away_from accommodation.\\n- Stored plan status: checked_plan, full checker passed true, instruction audit passed true. All stability, strength, lashing, visibility and voyage parts passed true.\\n- Operational change: the plan enforces at least 3 bays separation for the 87 boxes to load from accommodation. To achieve that within 240 physical cells it uses 46 relocations current-port lifts and 12 hatch_cover_lifts current-port lifts, with loads 87 current-port lifts.\\n- Lift cost: weighted nonproductive 70.0 weighted lifts; includes projected later-port lifts. Projected later-port lifts are 6 at call_index 1 and 6 at call_index 2, 0 at call_index 3.\\n- Envelope still in_envelope true: 87 boxes to load, box_limit 195, physical_cell_fill 0.5958333333333333 in the planned half-ship section of feeder_500.\\nNo new plan was created; this is the reused recorded gate already verified.\"}"
+}

@@ -1,0 +1,196 @@
+{
+  "discrepancies": [],
+  "independent_recount_consulted": false,
+  "preregistration_sha256": "ba3dcc46f4b773b484d156288d8ee5c5fe682b2fc8f4d5096ee2e37de211e206",
+  "presentation_additions": "Secondary pooled descriptive figures and concise source-cited story figures added separately; original run report and rows retained unchanged",
+  "registered_metrics": {
+    "all_map_denominators": true,
+    "already_obeyed_and_unavailable": true,
+    "binding_overall_and_type": true,
+    "by_ship": true,
+    "deadline_incumbents_proved_before_wall": true,
+    "exact_label": true,
+    "full_L0_and_exact_intervals": true,
+    "instruction_rechecks": true,
+    "no_wall_benchmark": true,
+    "per_map_csv": true,
+    "plan_difference": true,
+    "reader_engine_failures_by_type": true,
+    "relaxed_levels_and_out_of_envelope": true,
+    "relaxed_never_pass": true,
+    "signed_current_and_later_lifts": true
+  },
+  "reports": {
+    "ext1": {
+      "arms": {
+        "instruction": {
+          "deadline_incumbent_map_ids": [
+            "ext-1:306320102",
+            "ext-1:306320301",
+            "ext-1:306320500",
+            "ext-1:306320700"
+          ],
+          "deadline_incumbent_passes": 4,
+          "denominator": 24,
+          "exact95": [
+            0.6261582865113173,
+            0.9526463733927428
+          ],
+          "passes": 20,
+          "relaxed_by_level": {
+            "L4": 2
+          },
+          "statuses": {
+            "checked_plan": 16,
+            "deadline_exceeded": 6,
+            "relaxed_plan": 2
+          }
+        },
+        "pipeline": {
+          "deadline_incumbent_map_ids": [
+            "ext-1:306320100",
+            "ext-1:306320300",
+            "ext-1:306320301"
+          ],
+          "deadline_incumbent_passes": 3,
+          "denominator": 24,
+          "exact95": [
+            0.8575264022774742,
+            1.0
+          ],
+          "passes": 24,
+          "relaxed_by_level": {},
+          "statuses": {
+            "checked_plan": 21,
+            "deadline_exceeded": 3
+          }
+        },
+        "twostep": {
+          "deadline_incumbent_map_ids": [],
+          "deadline_incumbent_passes": 0,
+          "denominator": 24,
+          "exact95": [
+            0.0010543524454697459,
+            0.21120168345697315
+          ],
+          "passes": 1,
+          "relaxed_by_level": {
+            "L4": 6,
+            "L5": 3
+          },
+          "statuses": {
+            "checked_plan": 1,
+            "no_checked_plan": 14,
+            "relaxed_plan": 9
+          }
+        }
+      },
+      "binding": {
+        "already_obeyed": 2,
+        "binding_obedient_passes": 18,
+        "counterfactual_unavailable": 0,
+        "rule_broken_maps": 22
+      },
+      "note": "Aggregate/row/CSV consistency and published fresh-audit evidence, not a rerun of the checker or independent recount",
+      "report_path": "experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+      "report_sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa",
+      "rows_path": "experiments/mvp/pipeline/sealed/runs/ext-1/rows.json",
+      "rows_sha256": "6d3ffd91f22b3d06671b9ecbdefc07f4ebb5c0f271b62272b704a5b9a9dd6660",
+      "source_hashes": {
+        "COMPLETE.json": "26bbe635df8ec0b30f74370a3964b1c80b4decd22d3385ef727e2ffeef5563d8",
+        "REPORT.md": "f86cab4547272208b441fd6e2c02bc080dc414d1674486b37ded59b7ba1aa3f6",
+        "report.json": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa",
+        "rows.json": "6d3ffd91f22b3d06671b9ecbdefc07f4ebb5c0f271b62272b704a5b9a9dd6660"
+      },
+      "verified": true
+    },
+    "final3": {
+      "arms": {
+        "instruction": {
+          "deadline_incumbent_map_ids": [
+            "envelope:306110301",
+            "envelope:306110501",
+            "envelope:306110700",
+            "envelope:306110701"
+          ],
+          "deadline_incumbent_passes": 4,
+          "denominator": 24,
+          "exact95": [
+            0.5328871975773306,
+            0.902269590525467
+          ],
+          "passes": 18,
+          "relaxed_by_level": {
+            "L4": 1,
+            "L5": 2
+          },
+          "statuses": {
+            "checked_plan": 14,
+            "deadline_exceeded": 7,
+            "relaxed_plan": 3
+          }
+        },
+        "pipeline": {
+          "deadline_incumbent_map_ids": [
+            "envelope:306110100",
+            "envelope:306110301",
+            "envelope:306110302",
+            "envelope:306110502",
+            "envelope:306110701",
+            "envelope:306110702"
+          ],
+          "deadline_incumbent_passes": 6,
+          "denominator": 24,
+          "exact95": [
+            0.8575264022774742,
+            1.0
+          ],
+          "passes": 24,
+          "relaxed_by_level": {},
+          "statuses": {
+            "checked_plan": 18,
+            "deadline_exceeded": 6
+          }
+        },
+        "twostep": {
+          "deadline_incumbent_map_ids": [],
+          "deadline_incumbent_passes": 0,
+          "denominator": 24,
+          "exact95": [
+            0.0,
+            0.1424735977225257
+          ],
+          "passes": 0,
+          "relaxed_by_level": {
+            "L4": 9,
+            "L5": 1
+          },
+          "statuses": {
+            "no_checked_plan": 14,
+            "relaxed_plan": 10
+          }
+        }
+      },
+      "binding": {
+        "already_obeyed": 6,
+        "binding_obedient_passes": 13,
+        "counterfactual_unavailable": 0,
+        "rule_broken_maps": 18
+      },
+      "note": "Aggregate/row/CSV consistency and published fresh-audit evidence, not a rerun of the checker or independent recount",
+      "report_path": "experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+      "report_sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c",
+      "rows_path": "experiments/mvp/pipeline/sealed/runs/final-3/rows.json",
+      "rows_sha256": "c0d54bce9d09478c9364aac368a758379f8e0ef1542a33f7cbba8926bda9fd88",
+      "source_hashes": {
+        "COMPLETE.json": "b89686a431e16c49c0fef915493e3406a0c7ff09d9b33f206450ce928d0d6c20",
+        "REPORT.md": "41c6f0cfae98e19a2af32084f0084d5db8cd8cf64ce9e9bee0bd893605de19ce",
+        "report.json": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c",
+        "rows.json": "c0d54bce9d09478c9364aac368a758379f8e0ef1542a33f7cbba8926bda9fd88"
+      },
+      "verified": true
+    }
+  },
+  "scope": "Both complete published reports match their unmodified fresh-audited rows; no map opened, no planner/checker run, no independent recount read",
+  "verified": true
+}

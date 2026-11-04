@@ -1,0 +1,31 @@
+{
+  "synthetic": true,
+  "recorded_utc": "2026-11-02T02:52:44.905403+00:00",
+  "focused": {
+    "session": 76623,
+    "exit_code": 0,
+    "passed": 12,
+    "wall_s": 2.47,
+    "log": "holdout.tests.log",
+    "log_sha256": "bea24eea434605b57f543ab77a2ae7f00d78ce7472609c03ce24994393f5c6ff",
+    "cancel_note": "Ctrl-C attempted per root after completion; session had already exited0, log confirms passed."
+  },
+  "broad": {
+    "passed": 114,
+    "wall_s": 21.13,
+    "source": "Reported by parent /root; not a second broad run by this agent."
+  },
+  "measurement": {
+    "session": 54942,
+    "exit_code": 0,
+    "pids": [
+      7378,
+      7394,
+      7395,
+      7396,
+      7397
+    ],
+    "raw_kill_zero_result": "no such process for every recorded measurement PID",
+    "results_sha256": "251de4734193ba0e87e939da7a7a2d9a9960c69278fd34a9e5544085c369e6c4"
+  }
+}

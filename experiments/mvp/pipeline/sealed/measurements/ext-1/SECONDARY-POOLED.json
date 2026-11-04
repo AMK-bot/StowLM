@@ -1,0 +1,616 @@
+{
+  "arms": {
+    "instruction": {
+      "components": [
+        {
+          "denominator": {
+            "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; instruction complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/instruction/expected_maps",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+              "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+            },
+            "value": 24
+          },
+          "exact95": {
+            "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; instruction complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/instruction/passes_L0_exact95",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+              "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+            },
+            "value": [
+              0.5328871975773306,
+              0.902269590525467
+            ]
+          },
+          "interval_method": "exact two-sided Clopper-Pearson 95%",
+          "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; instruction complete L0 passes",
+          "numerator": {
+            "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; instruction complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/instruction/passes_L0",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+              "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+            },
+            "value": 18
+          }
+        },
+        {
+          "denominator": {
+            "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; instruction complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/instruction/expected_maps",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+              "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+            },
+            "value": 24
+          },
+          "exact95": {
+            "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; instruction complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/instruction/passes_L0_exact95",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+              "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+            },
+            "value": [
+              0.6261582865113173,
+              0.9526463733927428
+            ]
+          },
+          "interval_method": "exact two-sided Clopper-Pearson 95%",
+          "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; instruction complete L0 passes",
+          "numerator": {
+            "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; instruction complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/instruction/passes_L0",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+              "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+            },
+            "value": 20
+          }
+        }
+      ],
+      "denominator": {
+        "derivation": "sum component denominators",
+        "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; instruction",
+        "sources": [
+          {
+            "json_pointer": "/cohorts/envelope24/arms/instruction/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/instruction/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          }
+        ],
+        "value": 48
+      },
+      "exact95": {
+        "denominator": 48,
+        "derivation": "Clopper-Pearson recomputed from summed k,n; intervals are not averaged",
+        "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; instruction",
+        "numerator": 38,
+        "sources": [
+          {
+            "json_pointer": "/cohorts/envelope24/arms/instruction/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/instruction/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/instruction/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/instruction/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          }
+        ],
+        "value": [
+          0.6500897597426734,
+          0.895309316967094
+        ]
+      },
+      "interval_method": "exact two-sided Clopper-Pearson 95%",
+      "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; instruction",
+      "numerator": {
+        "derivation": "sum component numerators",
+        "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; instruction",
+        "sources": [
+          {
+            "json_pointer": "/cohorts/envelope24/arms/instruction/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/instruction/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          }
+        ],
+        "value": 38
+      }
+    },
+    "pipeline": {
+      "components": [
+        {
+          "denominator": {
+            "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; pipeline complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/pipeline/expected_maps",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+              "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+            },
+            "value": 24
+          },
+          "exact95": {
+            "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; pipeline complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/pipeline/passes_L0_exact95",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+              "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+            },
+            "value": [
+              0.8575264022774742,
+              1.0
+            ]
+          },
+          "interval_method": "exact two-sided Clopper-Pearson 95%",
+          "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; pipeline complete L0 passes",
+          "numerator": {
+            "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; pipeline complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/pipeline/passes_L0",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+              "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+            },
+            "value": 24
+          }
+        },
+        {
+          "denominator": {
+            "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; pipeline complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/pipeline/expected_maps",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+              "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+            },
+            "value": 24
+          },
+          "exact95": {
+            "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; pipeline complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/pipeline/passes_L0_exact95",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+              "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+            },
+            "value": [
+              0.8575264022774742,
+              1.0
+            ]
+          },
+          "interval_method": "exact two-sided Clopper-Pearson 95%",
+          "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; pipeline complete L0 passes",
+          "numerator": {
+            "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; pipeline complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/pipeline/passes_L0",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+              "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+            },
+            "value": 24
+          }
+        }
+      ],
+      "denominator": {
+        "derivation": "sum component denominators",
+        "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; pipeline",
+        "sources": [
+          {
+            "json_pointer": "/cohorts/envelope24/arms/pipeline/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/pipeline/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          }
+        ],
+        "value": 48
+      },
+      "exact95": {
+        "denominator": 48,
+        "derivation": "Clopper-Pearson recomputed from summed k,n; intervals are not averaged",
+        "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; pipeline",
+        "numerator": 48,
+        "sources": [
+          {
+            "json_pointer": "/cohorts/envelope24/arms/pipeline/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/pipeline/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/pipeline/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/pipeline/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          }
+        ],
+        "value": [
+          0.9260272146527198,
+          1.0
+        ]
+      },
+      "interval_method": "exact two-sided Clopper-Pearson 95%",
+      "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; pipeline",
+      "numerator": {
+        "derivation": "sum component numerators",
+        "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; pipeline",
+        "sources": [
+          {
+            "json_pointer": "/cohorts/envelope24/arms/pipeline/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/pipeline/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          }
+        ],
+        "value": 48
+      }
+    },
+    "twostep": {
+      "components": [
+        {
+          "denominator": {
+            "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; twostep complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/twostep/expected_maps",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+              "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+            },
+            "value": 24
+          },
+          "exact95": {
+            "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; twostep complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/twostep/passes_L0_exact95",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+              "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+            },
+            "value": [
+              0.0,
+              0.1424735977225257
+            ]
+          },
+          "interval_method": "exact two-sided Clopper-Pearson 95%",
+          "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; twostep complete L0 passes",
+          "numerator": {
+            "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; twostep complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/twostep/passes_L0",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+              "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+            },
+            "value": 0
+          }
+        },
+        {
+          "denominator": {
+            "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; twostep complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/twostep/expected_maps",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+              "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+            },
+            "value": 24
+          },
+          "exact95": {
+            "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; twostep complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/twostep/passes_L0_exact95",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+              "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+            },
+            "value": [
+              0.0010543524454697459,
+              0.21120168345697315
+            ]
+          },
+          "interval_method": "exact two-sided Clopper-Pearson 95%",
+          "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; twostep complete L0 passes",
+          "numerator": {
+            "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; twostep complete L0 passes",
+            "source": {
+              "json_pointer": "/cohorts/envelope24/arms/twostep/passes_L0",
+              "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+              "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+            },
+            "value": 1
+          }
+        }
+      ],
+      "denominator": {
+        "derivation": "sum component denominators",
+        "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; twostep",
+        "sources": [
+          {
+            "json_pointer": "/cohorts/envelope24/arms/twostep/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/twostep/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          }
+        ],
+        "value": 48
+      },
+      "exact95": {
+        "denominator": 48,
+        "derivation": "Clopper-Pearson recomputed from summed k,n; intervals are not averaged",
+        "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; twostep",
+        "numerator": 1,
+        "sources": [
+          {
+            "json_pointer": "/cohorts/envelope24/arms/twostep/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/twostep/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/twostep/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/twostep/expected_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          }
+        ],
+        "value": [
+          0.0005273152534231193,
+          0.11069616059315218
+        ]
+      },
+      "interval_method": "exact two-sided Clopper-Pearson 95%",
+      "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; twostep",
+      "numerator": {
+        "derivation": "sum component numerators",
+        "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; twostep",
+        "sources": [
+          {
+            "json_pointer": "/cohorts/envelope24/arms/twostep/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          {
+            "json_pointer": "/cohorts/envelope24/arms/twostep/passes_L0",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          }
+        ],
+        "value": 1
+      }
+    }
+  },
+  "available": true,
+  "binding": {
+    "components": [
+      {
+        "denominator": {
+          "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; binding obedient passes / no-rule plans breaking the rule",
+          "source": {
+            "json_pointer": "/cohorts/envelope24/instruction_binding/rule_broken_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          "value": 18
+        },
+        "exact95": {
+          "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; binding obedient passes / no-rule plans breaking the rule",
+          "source": {
+            "json_pointer": "/cohorts/envelope24/instruction_binding/binding_obedient_exact95",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          "value": [
+            0.46519803441694374,
+            0.9030507874744407
+          ]
+        },
+        "interval_method": "exact two-sided Clopper-Pearson 95%",
+        "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; binding obedient passes / no-rule plans breaking the rule",
+        "numerator": {
+          "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; binding obedient passes / no-rule plans breaking the rule",
+          "source": {
+            "json_pointer": "/cohorts/envelope24/instruction_binding/binding_obedient_passes",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+            "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+          },
+          "value": 13
+        }
+      },
+      {
+        "denominator": {
+          "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; binding obedient passes / no-rule plans breaking the rule",
+          "source": {
+            "json_pointer": "/cohorts/envelope24/instruction_binding/rule_broken_maps",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          },
+          "value": 22
+        },
+        "exact95": {
+          "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; binding obedient passes / no-rule plans breaking the rule",
+          "source": {
+            "json_pointer": "/cohorts/envelope24/instruction_binding/binding_obedient_exact95",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          },
+          "value": [
+            0.5971542169221287,
+            0.9481327006875631
+          ]
+        },
+        "interval_method": "exact two-sided Clopper-Pearson 95%",
+        "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; binding obedient passes / no-rule plans breaking the rule",
+        "numerator": {
+          "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim; binding obedient passes / no-rule plans breaking the rule",
+          "source": {
+            "json_pointer": "/cohorts/envelope24/instruction_binding/binding_obedient_passes",
+            "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+            "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+          },
+          "value": 18
+        }
+      }
+    ],
+    "denominator": {
+      "derivation": "sum component denominators",
+      "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; binding obedience",
+      "sources": [
+        {
+          "json_pointer": "/cohorts/envelope24/instruction_binding/rule_broken_maps",
+          "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+          "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+        },
+        {
+          "json_pointer": "/cohorts/envelope24/instruction_binding/rule_broken_maps",
+          "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+          "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+        }
+      ],
+      "value": 40
+    },
+    "exact95": {
+      "denominator": 40,
+      "derivation": "Clopper-Pearson recomputed from summed k,n; intervals are not averaged",
+      "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; binding obedience",
+      "numerator": 31,
+      "sources": [
+        {
+          "json_pointer": "/cohorts/envelope24/instruction_binding/binding_obedient_passes",
+          "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+          "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+        },
+        {
+          "json_pointer": "/cohorts/envelope24/instruction_binding/binding_obedient_passes",
+          "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+          "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+        },
+        {
+          "json_pointer": "/cohorts/envelope24/instruction_binding/rule_broken_maps",
+          "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+          "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+        },
+        {
+          "json_pointer": "/cohorts/envelope24/instruction_binding/rule_broken_maps",
+          "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+          "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+        }
+      ],
+      "value": [
+        0.6154883226965773,
+        0.891603361015928
+      ]
+    },
+    "interval_method": "exact two-sided Clopper-Pearson 95%",
+    "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; binding obedience",
+    "numerator": {
+      "derivation": "sum component numerators",
+      "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim; binding obedience",
+      "sources": [
+        {
+          "json_pointer": "/cohorts/envelope24/instruction_binding/binding_obedient_passes",
+          "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+          "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+        },
+        {
+          "json_pointer": "/cohorts/envelope24/instruction_binding/binding_obedient_passes",
+          "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+          "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+        }
+      ],
+      "value": 31
+    }
+  },
+  "components": {
+    "ext1": {
+      "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim",
+      "source": {
+        "json_pointer": "/label",
+        "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+        "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+      },
+      "value": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim"
+    },
+    "final3": {
+      "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim",
+      "source": {
+        "json_pointer": "/label",
+        "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+        "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+      },
+      "value": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim"
+    }
+  },
+  "label": "SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim",
+  "lift_saving_quotable": false,
+  "manifest_epochs": {
+    "ext1": {
+      "label": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim",
+      "source": {
+        "json_pointer": "/manifest_sha256",
+        "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/ext-1/report.json",
+        "sha256": "b23c2e6018bb5166b82b74c9d1692180374547d6090fb3ff1b4f2828a39be3fa"
+      },
+      "value": "acf2f275efa73f45c43709f4a52807dd480390e1497f085cab11d3604265bbec"
+    },
+    "final3": {
+      "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim",
+      "source": {
+        "json_pointer": "/manifest_sha256",
+        "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+        "sha256": "282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c"
+      },
+      "value": "a11b42021a33f939739b6ea93d9517cd59209476b1dec840700503a10b14fdbd"
+    }
+  },
+  "scope": "Same synthetic generator family, not new voyage types, independent replication, or recovery of a sealed claim.",
+  "sealed_claim_eligible": false,
+  "unavailable_reason": null,
+  "verification": {
+    "json_pointer": "",
+    "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/POOL-VERIFICATION.json",
+    "sha256": "a3ab0e1d3a482e03ab3abca68e0f392251bcd843731e598c2eb3338369025a3c"
+  },
+  "wall_times_quotable": false
+}

@@ -1,0 +1,38 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 25,
+      "max_tiers": 2,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "bay": 25,
+      "max_tiers": 2,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.1077592500369065,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00131425",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "c440457057161755d7a8b164eec40424b70f3b7a1f586d7dff5441ac1a29d7a0",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "acab8a07-811c-458c-a8c8-532a27bab08a"
+  },
+  "parser_latency_s": 1.1077384590171278,
+  "script": "Bay 25's below-deck stacks must top out at 2 tiers.",
+  "source_id": "reader-0841073b46fd8a2d",
+  "started_utc": "2026-11-01T01:30:52.333837+00:00",
+  "status": "complete"
+}

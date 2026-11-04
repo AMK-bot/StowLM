@@ -1,0 +1,269 @@
+"""Post-run ext-1 figures; immutable reports/rows are the only result inputs.
+
+No map, planner, checker or model is invoked. SECONDARY pooling additionally
+requires a hash-bound consistency receipt for both source reports.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import re
+
+from experiments.mvp.pipeline.sealed.report import binomial95, passed as original_passed
+
+ROOT=Path(__file__).resolve().parents[6]
+HOME=ROOT/'experiments/mvp/pipeline/sealed/measurements/ext-1'
+SEALED=ROOT/'experiments/mvp/pipeline/sealed'
+LABEL='fresh held-out extension, run after the freeze; not the pre-registered sealed claim'
+POOL_LABEL='SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim'
+ARMS=('pipeline','twostep','instruction')
+
+
+def digest(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+class Source:
+    def __init__(self,path,raw=None):
+        self.path=str(path)
+        self.raw=Path(path).read_bytes() if raw is None else raw
+        self.sha256=digest(self.raw)
+        self.data=json.loads(self.raw)
+
+    def get(self,*parts):
+        value=self.data
+        for part in parts:
+            value=value[int(part)] if isinstance(value,list) else value[part]
+        return value
+
+    def reference(self,*parts):
+        return dict(path=self.path,sha256=self.sha256,json_pointer=('/'+'/'.join(
+            str(p).replace('~','~0').replace('/','~1') for p in parts)) if parts else '')
+
+    def fact(self,*parts):
+        return dict(value=self.get(*parts),source=self.reference(*parts))
+
+
+def is_pass(row):
+    """A clean deadline may pass only through its verified published incumbent."""
+    return bool(original_passed(row) and (row.get('status')!='deadline_exceeded' or
+        row.get('deadline_incumbent_verified') is True))
+
+
+def audited_plan(row):
+    return (row.get('audit_verified') is True and row.get('audit_fresh_process') is True and
+            (row.get('plan') is not None or row.get('status') in {'checked_plan','relaxed_plan'}))
+
+
+def validate_report(report,rows,*,extension):
+    data=report.data
+    if not all(data.get(k) is True for k in ('complete','population_accounted',
+            'fresh_audits_complete','instruction_assignment_complete')):
+        raise ValueError('Incomplete or unverified report cannot enter final figures or a pool')
+    if extension:
+        if not data.get('verified_complete') or data.get('development_pilot') or data.get('provisional'):
+            raise ValueError('Extension report must be verified and exclude development pilots')
+        if data.get('label')!=LABEL:
+            raise ValueError('Extension label differs from registration')
+    elif data.get('provisional') and not (data.get('post_registration') is True and data.get('protocol_deviation')=='D284'):
+        raise ValueError('Only the disclosed final3 D284 provisional label is allowed')
+    if not isinstance(rows.data,list) or len(rows.data)!=data.get('rows') or data.get('rows')!=data.get('expected_rows'):
+        raise ValueError('Report row population differs from committed rows')
+    if any(r.get('audit_verified') is not True or r.get('audit_fresh_process') is not True
+           or r.get('status') in {'error','not_run'} for r in rows.data):
+        raise ValueError('Unverified or unfinished row cannot enter a pooled figure')
+    envelope=[r for r in rows.data if r.get('cohort')=='envelope24' and r.get('arm') in ARMS]
+    cells={a:{} for a in ARMS}
+    hashes={}
+    for row in envelope:
+        iid,arm=row['map_id'],row['arm']
+        if iid in cells[arm]:raise ValueError('Duplicate map/arm')
+        cells[arm][iid]=row
+        h=row.get('map_sha256')
+        if not isinstance(h,str) or len(h)!=64 or (iid in hashes and hashes[iid]!=h):
+            raise ValueError('Map identities differ between arms')
+        hashes[iid]=h
+    if len(hashes)!=24 or any(set(c)!=set(hashes) for c in cells.values()):
+        raise ValueError('Exactly24 common envelope maps per registered arm required')
+    cohort=data['cohorts']['envelope24']
+    for arm,cell in cells.items():
+        summary=cohort['arms'][arm];count=sum(is_pass(r) for r in cell.values())
+        if summary['expected_maps']!=24 or summary['passes_L0']!=count or summary['passes_L0_exact95']!=binomial95(count,24):
+            raise ValueError('Reported passes/interval differ from fresh-audited rows')
+    broken={i for i,r in cells['pipeline'].items() if audited_plan(r) and r.get('counterfactual_instruction_recheck') is False}
+    already={i for i,r in cells['pipeline'].items() if audited_plan(r) and r.get('counterfactual_instruction_recheck') is True}
+    binding=cohort['instruction_binding'];k=sum(is_pass(cells['instruction'][i]) for i in broken)
+    if (binding['binding_obedient_passes']!=k or binding['rule_broken_maps']!=len(broken)
+            or binding['already_obeyed']!=len(already)
+            or binding['counterfactual_unavailable']!=24-len(broken)-len(already)
+            or binding['binding_obedient_exact95']!=binomial95(k,len(broken))):
+        raise ValueError('Reported binding obedience differs from same-map fresh-audited rows')
+    return set(hashes.values())
+
+
+def count(report,path,*,binding=False,label):
+    names=('binding_obedient_passes','rule_broken_maps','binding_obedient_exact95') if binding else (
+        'passes_L0','expected_maps','passes_L0_exact95')
+    return dict(label=label,numerator=report.fact(*path,names[0]),
+        denominator=report.fact(*path,names[1]),exact95=report.fact(*path,names[2]),
+        interval_method='exact two-sided Clopper-Pearson 95%')
+
+
+def component(report,*,extension):
+    label=report.get('label');base=('cohorts','envelope24');cohort=report.get(*base)
+    result=dict(label=report.fact('label'),manifest_sha256=report.fact('manifest_sha256'),
+        tree_digest=report.fact('tree_digest'),cohort='envelope24',
+        arms={a:count(report,base+('arms',a),label=label+'; '+a+' complete L0 passes') for a in ARMS},
+        binding=count(report,base+('instruction_binding',),binding=True,
+                      label=label+'; binding obedient passes / no-rule plans breaking the rule'),
+        already_obeyed=report.fact(*base,'instruction_binding','already_obeyed'),
+        counterfactual_unavailable=report.fact(*base,'instruction_binding','counterfactual_unavailable'),
+        by_ship={},instruction_by_type={},role='PRIMARY extension' if extension else 'Separate original 3.1')
+    for ship,data in cohort['by_ship'].items():
+        result['by_ship'][ship]={a:count(report,base+('by_ship',ship,'arms',a),label=label+'; '+ship+'; '+a)
+                                 for a in ARMS}
+    for kind in cohort['instruction_binding']['by_type']:
+        path=base+('instruction_binding','by_type',kind)
+        result['instruction_by_type'][kind]=dict(binding=count(report,path,binding=True,label=label+'; '+kind),
+            already_obeyed=report.fact(*path,'already_obeyed'),
+            instructed_L0=count(report,base+('instruction_types',kind),label=label+'; '+kind+' instructed L0'))
+    return result
+
+
+def verify_receipt(receipt,reports):
+    if receipt is None or receipt.data.get('verified') is not True:
+        return False,'Hash-bound consistency receipt not supplied'
+    for name,(report,rows) in reports.items():
+        claim=receipt.data.get('reports',{}).get(name,{})
+        if not (claim.get('verified') is True and claim.get('report_sha256')==report.sha256
+                and claim.get('rows_sha256')==rows.sha256):
+            return False,'Independent verification is absent or binds different '+name+' bytes'
+    return True,None
+
+
+def label_facts(value,inherited='Final report figures'):
+    """Every numeric/source fact retains its own primary/original/pool context."""
+    if isinstance(value,dict):
+        label=value.get('label')
+        if isinstance(label,str):inherited=label
+        elif isinstance(label,dict) and isinstance(label.get('value'),str):inherited=label['value']
+        if 'value' in value:
+            value.setdefault('label',inherited)
+        for child in value.values():label_facts(child,inherited)
+    elif isinstance(value,list):
+        for child in value:label_facts(child,inherited)
+
+
+def pooled_count(left,right,*,label):
+    k=left['numerator']['value']+right['numerator']['value']
+    n=left['denominator']['value']+right['denominator']['value']
+    return dict(label=label,numerator=dict(value=k,derivation='sum component numerators',
+        sources=[left['numerator']['source'],right['numerator']['source']]),
+        denominator=dict(value=n,derivation='sum component denominators',
+        sources=[left['denominator']['source'],right['denominator']['source']]),
+        exact95=dict(value=binomial95(k,n),derivation='Clopper-Pearson recomputed from summed k,n; intervals are not averaged',
+            numerator=k,denominator=n,sources=[left['numerator']['source'],right['numerator']['source'],
+                left['denominator']['source'],right['denominator']['source']]),
+        components=[left,right],interval_method='exact two-sided Clopper-Pearson 95%')
+
+
+def build(ext_report,ext_rows,old_report,old_rows,*,verification=None,disclosure=None):
+    ext_hashes=validate_report(ext_report,ext_rows,extension=True)
+    old_hashes=validate_report(old_report,old_rows,extension=False)
+    if ext_hashes & old_hashes:raise ValueError('Original and extension map digests overlap')
+    extension=component(ext_report,extension=True);original=component(old_report,extension=False)
+    permitted,reason=verify_receipt(verification,dict(ext1=(ext_report,ext_rows),final3=(old_report,old_rows)))
+    pool=dict(label=POOL_LABEL,available=permitted,unavailable_reason=reason,
+        components=dict(ext1=extension['label'],final3=original['label']),
+        manifest_epochs=dict(ext1=extension['manifest_sha256'],final3=original['manifest_sha256']),
+        scope='Same synthetic generator family, not new voyage types, independent replication, or recovery of a sealed claim.',
+        sealed_claim_eligible=False,lift_saving_quotable=False,wall_times_quotable=False,
+        verification=verification.reference() if verification else None)
+    if permitted:
+        pool['arms']={a:pooled_count(original['arms'][a],extension['arms'][a],label=POOL_LABEL+'; '+a)
+                      for a in ARMS}
+        pool['binding']=pooled_count(original['binding'],extension['binding'],label=POOL_LABEL+'; binding obedience')
+    figures=dict(schema='stowlm.ext-1.final-figures/1',primary=extension,separate_original_3_1=original,
+        secondary_pooled=pool,original_partial_run_disclosure=(
+            dict(disclosure,label=original['label']['value']) if disclosure else None),
+        inputs={name:source.reference() for name,source in dict(ext1_report=ext_report,ext1_rows=ext_rows,
+            final3_report=old_report,final3_rows=old_rows).items()},
+        validation='Report completeness, exact counts/intervals and fresh audit flags checked against committed result rows; no fresh checker rerun.',
+        wall_times_quotable=False,lift_saving_quotable=False,
+        wording='Planning step from a clean load list, templated sentences. Confirmation is exact expected-rule match, not a human planner. Synthetic 500–800 TEU feeder sections, up to195 boxes and70% regional fill, empty ship on arrival and one loading call.')
+    label_facts(figures)
+    return figures,pool
+
+
+def fmt(value):
+    k=value['numerator']['value'];n=value['denominator']['value'];lo,hi=value['exact95']['value']
+    return f'{k}/{n} (exact95% {100*lo:.1f}–{100*hi:.1f}%)'
+
+
+def summary_text(figures):
+    ext=figures['primary'];old=figures['separate_original_3_1'];pool=figures['secondary_pooled']
+    text=(ext['label']['value']+'. Complete L0 full-checker passes: pipeline '+fmt(ext['arms']['pipeline'])+', simple two-step '+fmt(ext['arms']['twostep'])+
+        ', instructed L0 '+fmt(ext['arms']['instruction'])+'. Of the no-rule plans breaking their instruction, '+
+        fmt(ext['binding'])+' became checked obedient plans; '+str(ext['already_obeyed']['value'])+' already obeyed.\n\n'+
+        'Separate original 3.1 ('+old['label']['value']+'): pipeline '+fmt(old['arms']['pipeline'])+', simple two-step '+fmt(old['arms']['twostep'])+
+        ', instructed L0 '+fmt(old['arms']['instruction'])+', binding obedience '+fmt(old['binding'])+'. '+
+        figures['original_partial_run_disclosure']['value']+'\n\n')
+    if pool['available']:
+        text+=('SECONDARY pooled descriptive figure, both completed cohorts: pipeline '+fmt(pool['arms']['pipeline'])+
+            ', simple two-step '+fmt(pool['arms']['twostep'])+', binding obedience '+fmt(pool['binding'])+
+            '. Both component counts and frozen epochs are recorded in SECONDARY-POOLED.json.\n\n')
+    else:text+='SECONDARY pooling is unavailable: '+pool['unavailable_reason']+'.\n\n'
+    return text+('Synthetic 500–800 TEU feeder sections, up to195 boxes and70% regional fill, empty ship on arrival and one loading call. '+
+        'Planning step from a clean load list, templated sentences. Confirmation means exact expected-rule match, not a human planner. '+
+        'The comparator is a simple two-step planner, modelled from one field expert\'s description. Same synthetic generator family; '+
+        'no independent replication or recovered sealed claim. No wall-time or lift-saving claim.\n')
+
+
+def report_text(figures):
+    text=summary_text(figures)+'\n'
+    for name in ('primary','separate_original_3_1'):
+        component=figures[name]
+        text+='## '+component['label']['value']+'\n\n'
+        text+='| Ship | Arm | Complete L0 passes and exact95% |\n|---|---|---|\n'
+        for ship,arms in component['by_ship'].items():
+            for arm,value in arms.items():text+='| '+ship+' | '+arm+' | '+fmt(value)+' |\n'
+        text+='\n| Rule type | Binding obedient / baseline rule-broken | Instructed L0 | Already obeyed |\n|---|---|---|---:|\n'
+        for kind,values in component['instruction_by_type'].items():
+            text+='| '+kind+' | '+fmt(values['binding'])+' | '+fmt(values['instructed_L0'])+' | '+str(values['already_obeyed']['value'])+' |\n'
+        text+='\nManifest: '+component['manifest_sha256']['value']+'; tree: '+component['tree_digest']['value']+'.\n\n'
+    return text+'Every figure and derived interval has source paths, JSON pointers and byte hashes in FIGURES.json. Raw original run artifacts remain unchanged.\n'
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--verification',type=Path)
+    args=parser.parse_args()
+    names=('final_report.py.txt','test_final_report.py.txt','FIGURES.json','SUMMARY.md','SECONDARY-POOLED.json','REPORT.md')
+    from experiments.mvp.pipeline.freeze.product_outputs import excluded_pipeline
+    for name in names:
+        if not excluded_pipeline((HOME/name).relative_to(ROOT).as_posix()):raise ValueError('Output is not freeze-excluded')
+    headline=ROOT/'docs/headline.md';raw=headline.read_bytes();text=raw.decode()
+    match=re.search(r'partial-run sentence goes with it \(logic7 L1\): "([^"]+)"',text)
+    if not match:raise ValueError('Required original3.1 disclosure is missing from headline contract')
+    disclosure=dict(value=match.group(1),source=dict(path=str(headline),sha256=digest(raw),
+        text_locator='Numbers we may quote and how / logic7 L1 required partial-run disclosure'))
+    verification=Source(args.verification) if args.verification else None
+    ext_report=Source(SEALED/'runs/ext-1/report.json');ext_rows=Source(SEALED/'runs/ext-1/rows.json')
+    old_report=Source(SEALED/'runs/final-3/report.json');old_rows=Source(SEALED/'runs/final-3/rows.json')
+    figures,pool=build(ext_report,ext_rows,old_report,old_rows,verification=verification,disclosure=disclosure)
+    figures['generator']=dict(path=str(Path(__file__)),sha256=digest(Path(__file__).read_bytes()))
+    registration=HOME/'PREREG.md'
+    figures['scope_source']=dict(path=str(registration),sha256=digest(registration.read_bytes()),
+        text_locator='Maps and seeds / envelope and generation scope; Metrics and reporting / secondary pooling')
+    interval_source=SEALED/'report.py'
+    figures['exact_interval_method_source']=dict(path=str(interval_source),sha256=digest(interval_source.read_bytes()),
+        function='binomial95: exact two-sided Clopper-Pearson95%')
+    for name,value in (('FIGURES.json',figures),('SECONDARY-POOLED.json',pool)):
+        (HOME/name).write_text(json.dumps(value,indent=2,sort_keys=True)+'\n')
+    (HOME/'SUMMARY.md').write_text(summary_text(figures));(HOME/'REPORT.md').write_text(report_text(figures))
+    print(json.dumps(dict(pool_available=pool['available'],outputs=list(names[2:]))))
+
+
+if __name__=='__main__':main()

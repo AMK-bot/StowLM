@@ -1,0 +1,53 @@
+{
+  "document:sheet:demo-reefer_list:unmapped_sheet_headers": {
+    "action": "reviewed_sheet"
+  },
+  "QZXU0000098:amendment:amendment_review": {
+    "action": "reviewed"
+  },
+  "QZXU0000020:reefer:model_sheet_value": {
+    "value": true,
+    "field": "reefer",
+    "quote": "Synthetic planner confirms QZXU0000020 reefer; not model output."
+  },
+  "QZXU0000020:reefer_setpoint_c:model_sheet_value": {
+    "value": -18.0,
+    "field": "reefer_setpoint_c",
+    "quote": "Synthetic planner confirms QZXU0000020 reefer_setpoint_c; not model output."
+  },
+  "QZXU0000040:reefer:model_sheet_value": {
+    "value": true,
+    "field": "reefer",
+    "quote": "Synthetic planner confirms QZXU0000040 reefer; not model output."
+  },
+  "QZXU0000040:reefer_setpoint_c:model_sheet_value": {
+    "value": 4.0,
+    "field": "reefer_setpoint_c",
+    "quote": "Synthetic planner confirms QZXU0000040 reefer_setpoint_c; not model output."
+  },
+  "QZXU0000082:pod:cross_document_conflict": {
+    "value": "SGSIN",
+    "field": "pod",
+    "quote": "Synthetic planner confirms QZXU0000082 pod; not model output."
+  },
+  "QZXU0000098:pod:cross_document_conflict": {
+    "value": "SGSIN",
+    "field": "pod",
+    "quote": "Synthetic planner confirms QZXU0000098 pod; not model output."
+  },
+  "QZXU0000170:gross_mass_kg:cross_document_conflict": {
+    "value": 20460.0,
+    "field": "gross_mass_kg",
+    "quote": "Synthetic planner confirms QZXU0000170 gross_mass_kg; not model output."
+  },
+  "QZXU0000020:reefer_setpoint_c:reefer_dependency": {
+    "value": -18.0,
+    "field": "reefer_setpoint_c",
+    "quote": "Synthetic planner confirms QZXU0000020 reefer_setpoint_c; not model output."
+  },
+  "QZXU0000040:reefer_setpoint_c:reefer_dependency": {
+    "value": 4.0,
+    "field": "reefer_setpoint_c",
+    "quote": "Synthetic planner confirms QZXU0000040 reefer_setpoint_c; not model output."
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "receipt_sha256": "a27c788be615b228d0e5c69244b9f924abf3a1d02d63cb347f7709c1e3ea46e9",
+  "package": {
+    "index_sha256": "acd3f5e3661fd243c2f07b6bc2133814b075332cea61f08e31d213e4d59167e3",
+    "files": {
+      "ballast-plan.csv": "cb6887d76134fcefbce4952ae54a4b5a8e087daf3d52cb06862dbf43c7c02695",
+      "bay-plan.html": "af7c88b54aff4fe52a72fa9decedf6e0beb5fe4f96fe79913101f2ddd672a995",
+      "cargo-work.json": "3364d0c1b0c30ef125a62dba1ffa7a0f297dfd4e3ea26b0b1becacd4424641a5",
+      "checker-report.json": "5becb43b4d4f2f0057fcfb9c2e86c7a88a7eff22af2225ebd928c60039285a07",
+      "crane-sequence.csv": "a2990d27d34c888ea5337813dd431e2c66b396b5fbc888e64f3bef70ca5de476",
+      "engine-manifest.json": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+      "handover-scope.json": "a13a9d1ebfc7e7fd855f3662f6fd0e4d4694bf111d4f4192830c17f86da726c4",
+      "hero-provenance.json": "581ceab1583c6624714afcc7d17f2208cca5dc943da4ae8083cbcae833521d54",
+      "instance.json": "ab8e756ae4bae2cb23c66d4a10b45612a8dbdedb00db3a24aa9e1da3d62d04ed",
+      "manifest.csv": "7c85da212c24acf8156259921fc7826178c6628c8f39139e96bb2073ef6fc550",
+      "not-included.html": "2456809ef5e022ce7010b08da028db1623fd68952f958cb59e0afe637c787291",
+      "note-evidence.json": "503c73ddc28964788bac2a56e5b2459480bbb6b94a18c7ca76c7a86134843fc6",
+      "note-to-master.md": "c4a21d0d45e5c49224154e9787d0cdd920da2d2efe7713f464f31f733f52ab13",
+      "packet.json": "1dbc4f182e0648e80310a7b47cf19dc2b9710dace3f277b2b704592f37f9400e",
+      "plan.json": "cba019a3e69b68c93a30ac62f599fab76f29cb8bdfeab7246fb6c9d74e95c6d3",
+      "provenance.json": "e6229b6475928b01719ba5765d518fbaf4f02a774d8b489bda3068ba9504f24f",
+      "restows.csv": "101bab72459d1b2f4ff1b3443fd376d9f82813c8258e2e0ea7800f0063002093",
+      "rule-coverage.json": "0acd766ce207ca9df380ec64e9a8a123376b0bb349701210d0d94c036efc0a39",
+      "runner-receipt.json": "68ad496eaea91c81e4b837e6dcf9b224f512a4696966c622482b2f58aa6a9248",
+      "stability-summary.md": "d2a6e9b3e114cdad0e9cfa2756f397ea61f7c724a51fa39dbc4adf234fb1398a",
+      "stability.json": "589d069c0d71a690559f89780fe59cfbc860956c7d10a5ac8bb68ab62af2435e",
+      "tank-plan.csv": "a2a45eb365af2454f3b41c0d98c46a5392ac43c09db6cf98b17b2cea1c995804",
+      "weight-by-port.csv": "d3e4161695cb3967053b84a066c5720af53b83d103b69e185e9d97cb2390903b",
+      "yard-sequence.csv": "8b27a95cd5c22b9a6cb928025e3f54eb8c1e5612987791bd21f6750437e182f5",
+      "receipt.json": "a27c788be615b228d0e5c69244b9f924abf3a1d02d63cb347f7709c1e3ea46e9"
+    }
+  },
+  "package_pipeline_sha256": "acf2f275efa73f45c43709f4a52807dd480390e1497f085cab11d3604265bbec",
+  "measured_utc": "2026-11-02T23:04:38+00:00",
+  "machine": "shared development machine, load 2, one thread per process",
+  "verify": {
+    "tamper": false,
+    "status": "done",
+    "reason": null,
+    "elapsed_s": 8.21,
+    "wall_s": 7.984037082991563,
+    "passed": true,
+    "checks": [
+      {
+        "name": "files",
+        "state": "passed",
+        "at_s": 0.12,
+        "errors": []
+      },
+      {
+        "name": "chain",
+        "state": "passed",
+        "at_s": 0.12,
+        "errors": []
+      },
+      {
+        "name": "signature",
+        "state": "passed",
+        "at_s": 0.12,
+        "errors": []
+      },
+      {
+        "name": "checker",
+        "state": "passed",
+        "at_s": 8.1,
+        "errors": []
+      },
+      {
+        "name": "rules",
+        "state": "passed",
+        "at_s": 8.1,
+        "errors": []
+      },
+      {
+        "name": "coverage",
+        "state": "passed",
+        "at_s": 8.1,
+        "errors": []
+      },
+      {
+        "name": "handover",
+        "state": "passed",
+        "at_s": 8.1,
+        "errors": []
+      }
+    ],
+    "tampered": null
+  },
+  "tamper": {
+    "tamper": true,
+    "status": "done",
+    "reason": null,
+    "elapsed_s": 2.76,
+    "wall_s": 2.5746605830499902,
+    "passed": false,
+    "checks": [
+      {
+        "name": "files",
+        "state": "failed",
+        "at_s": 0.12,
+        "errors": [
+          "plan.json: sha256 mismatch"
+        ]
+      },
+      {
+        "name": "chain",
+        "state": "passed",
+        "at_s": 0.12,
+        "errors": []
+      },
+      {
+        "name": "signature",
+        "state": "passed",
+        "at_s": 0.12,
+        "errors": []
+      },
+      {
+        "name": "checker",
+        "state": "failed",
+        "at_s": 2.69,
+        "errors": [
+          "plan_sha256 differs from signed receipt",
+          "lifts differs from fresh checker classification",
+          "level differs from fresh checker classification",
+          "broken_rules differs from fresh checker classification",
+          "boxes_ashore differs from fresh checker classification",
+          "completed differs from fresh checker classification",
+          "full checker rejected plan: checker.missing_vessel_data, expert.moves.bottom_up, expert.moves.hatch_clear, objective.all_loaded",
+          "fresh checker verdict differs from receipt"
+        ],
+        "broken_rules": [
+          "checker.missing_vessel_data",
+          "expert.moves.bottom_up",
+          "expert.moves.hatch_clear",
+          "objective.all_loaded"
+        ]
+      },
+      {
+        "name": "rules",
+        "state": "passed",
+        "at_s": 2.69,
+        "errors": []
+      },
+      {
+        "name": "coverage",
+        "state": "passed",
+        "at_s": 2.69,
+        "errors": []
+      },
+      {
+        "name": "handover",
+        "state": "failed",
+        "at_s": 2.69,
+        "errors": [
+          "handover evidence: Cannot account for departure: move replay failed"
+        ]
+      }
+    ],
+    "tampered": {
+      "file": "plan.json",
+      "line": 18,
+      "before": "0110302",
+      "after": "0110304"
+    }
+  },
+  "pipeline_sha256": null,
+  "film_manifest_sha256": null,
+  "build": "Development build, not frozen"
+}

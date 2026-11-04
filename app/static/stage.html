@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StowLM · Stage</title>
+<link rel="stylesheet" href="/stage.css">
+<link rel="stylesheet" href="/stage-director.css">
+<script src="/stage-rules.js" defer></script>
+<script src="/stage-fillv5.js" defer></script>
+<script src="/stage-fillv6.js" defer></script>
+<script src="/stage-story.js" defer></script>
+<script src="/stage-shots.js" defer></script>
+<script src="/stage-director.js" defer></script>
+<script src="/stage-scene.js" defer></script>
+<script src="/stage-yard.js" defer></script>
+<script src="/stage-gauges.js" defer></script>
+<script src="/stage-bays.js" defer></script>
+<script src="/stage.js" defer></script>
+<link rel="stylesheet" href="/stage-instruct.css">
+<script src="/stage-instruct.js" defer></script>
+<link rel="stylesheet" href="/stage-brief.css">
+<script src="/stage-brief.js" defer></script>
+<link rel="stylesheet" href="/stage-v6.css">
+<link rel="stylesheet" href="/stage-v6intake.css">
+<link rel="stylesheet" href="/stage-v6replan.css">
+<link rel="stylesheet" href="/stage-v6breakit.css">
+<link rel="stylesheet" href="/stage-v6copilot.css">
+<link rel="stylesheet" href="/stage-v6package.css">
+<script src="/stage-v6.js" defer></script>
+<script src="/stage-v6intake.js" defer></script>
+<script src="/stage-v6voice.js" defer></script>
+<script src="/stage-v6reading.js" defer></script>
+<script src="/stage-v6replan.js" defer></script>
+<script src="/stage-v6xray.js" defer></script>
+<script src="/stage-v6breakit.js" defer></script>
+<script src="/stage-v6copilot.js" defer></script>
+<script src="/stage-v6package.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="brand-text">
+      <div class="brand-name">Stow<b>LM</b></div>
+      <div class="brand-sub" id="brand-sub">Muse Glimmer 30B <i>·</i> Muse Spark <i>·</i> search <i>·</i> checker</div>
+    </div>
+  </div>
+  <div class="kpis" id="kpis">
+    <div class="kpi kpi-hero" id="kpi-moves"><div class="kpi-label">Moves vs two-step</div><div class="kpi-value" id="kpi-moves-v">—</div><div class="kpi-sub" id="kpi-moves-s"></div></div>
+    <div class="kpi" id="kpi-hours"><div class="kpi-label">Crane-hours vs two-step</div><div class="kpi-value" id="kpi-hours-v">—</div><div class="kpi-sub">this slice</div></div>
+    <div class="kpi" id="kpi-usd"><div class="kpi-label">USD vs two-step</div><div class="kpi-value" id="kpi-usd-v">—</div><div class="kpi-sub" id="kpi-scn"></div></div>
+    <div class="kpi" id="kpi-thb"><div class="kpi-label">THB vs two-step</div><div class="kpi-value" id="kpi-thb-v">—</div><div class="kpi-sub">บาท · this slice</div></div>
+  </div>
+  <div class="call">
+    <div class="call-line"><span class="verdict" id="verdict">LOADING…</span><span class="rung" id="rung">—</span></div>
+    <div class="call-vessel" id="vessel">—</div>
+    <div class="call-port" id="port">—</div>
+  </div>
+  <div class="picker" id="picker">
+    <label for="plan-select">Plan</label>
+    <select id="plan-select" aria-label="Select plan"><option>Loading…</option></select>
+  </div>
+</header>
+
+<main class="stage">
+  <section class="panel ship-panel" id="ship-panel">
+    <div class="panel-head">
+      <div class="ph-title"><span class="eyebrow">Loading sequence</span><span class="ph-planner" id="planner-label">—</span></div>
+      <div class="legend" id="legend"></div>
+      <div class="view-toggle" role="group" aria-label="Ship view"><button type="button" data-view="iso" class="on" title="3D ship view">3D</button><button type="button" data-view="bays" title="Bay plan of every bay (key B)">BAY PLAN</button></div>
+      <button class="xray-btn" id="xray-btn" type="button" aria-pressed="false" title="Show the feasibility mask at this lift (key X)"><span class="xr-dot"></span>X-RAY</button>
+    </div>
+    <div class="ship-wrap" id="ship-wrap">
+      <canvas id="ship-canvas"></canvas>
+      <canvas id="bays-canvas" hidden></canvas>
+      <div class="watermark" id="watermark" hidden></div>
+      <div class="preview-tag" id="preview-tag" hidden></div>
+      <aside class="outcome-card" id="outcome-card" hidden></aside>
+      <div class="devhud" id="devhud" hidden></div>
+      <div class="event-cap" id="event-cap"></div>
+      <aside class="xray-card" id="xray-card" hidden></aside>
+      <div class="tooltip" id="tooltip" hidden></div>
+      <div class="loading" id="loading">Loading plan…</div>
+    </div>
+  </section>
+
+  <section class="panel yard-panel">
+    <div class="panel-head"><div class="ph-title"><span class="eyebrow">Container yard</span><span class="ph-note" id="yard-note">boxes leave the stacks as they load · rehandles flash red</span></div><div class="yard-stats" id="yard-stats"></div></div>
+    <div class="yard-wrap" id="yard-wrap"><canvas id="yard-canvas"></canvas></div>
+  </section>
+
+  <section class="panel spark-panel">
+    <div class="panel-head"><div class="ph-title"><span class="eyebrow" id="spark-title">Plan explanation</span><span class="ph-note" id="spark-note"></span></div><span class="src-badge" id="spark-src">—</span></div>
+    <div class="spark-body" id="spark-body"></div>
+    <div class="spark-foot"><span id="spark-box">Click a box to ask about it</span><button type="button" id="spark-live" disabled>Ask Spark live</button></div>
+  </section>
+
+  <section class="panel play-panel">
+    <div class="transport">
+      <button type="button" id="btn-back" title="Step back (←)" aria-label="Step back">⏮</button>
+      <button type="button" id="btn-play" class="play" title="Play / pause (space)" aria-label="Play">▶</button>
+      <button type="button" id="btn-fwd" title="Step forward (→)" aria-label="Step forward">⏭</button>
+    </div>
+    <div class="scrub">
+      <canvas id="strip-canvas" aria-hidden="true"></canvas>
+      <input type="range" id="scrub" min="0" max="0" value="0" step="1" aria-label="Lift">
+    </div>
+    <div class="lift-count"><b id="lift-now">0</b><span>/ <i id="lift-total">0</i> lifts</span></div>
+    <div class="speeds" id="speeds" role="group" aria-label="Playback speed"></div>
+  </section>
+
+  <section class="panel physics-panel">
+    <div class="panel-head"><div class="ph-title"><span class="eyebrow">Ship physics</span><span class="ph-note" id="phys-frame">—</span></div><span class="src-badge" id="phys-status">—</span></div>
+    <div class="phys-grid" id="phys-grid">
+      <div class="gauge"><canvas id="g-gm"></canvas></div>
+      <div class="gauge"><canvas id="g-heel"></canvas></div>
+      <div class="gauge"><canvas id="g-draught"></canvas></div>
+      <div class="chart sf"><canvas id="c-sf"></canvas></div>
+      <div class="chart bm"><canvas id="c-bm"></canvas></div>
+      <div class="chart gz"><canvas id="c-gz"></canvas></div>
+    </div>
+    <div class="phys-pending" id="phys-pending" hidden><div class="pp-title">Computing physics keyframes…</div><div class="pp-bar"><i id="pp-fill"></i></div><div class="pp-sub" id="pp-sub"></div></div>
+    <div class="phys-note" id="phys-note"></div>
+  </section>
+
+  <section class="panel race-panel">
+    <div class="panel-head"><div class="ph-title"><span class="eyebrow">Move count</span><span class="ph-note" title="Bars: blue = productive lifts (load/discharge), amber hatch = non-productive (yard rehandle, restow, hatch cover)">fewest crane lifts wins · <span class="np-key">▨</span> non-productive</span></div><div class="race-delta" id="race-delta"></div></div>
+    <div class="race" id="race"></div>
+  </section>
+
+  <section class="panel rules-panel">
+    <div class="panel-head"><div class="ph-title"><span class="eyebrow">Rule checker</span><span class="ph-note" id="rules-note">full-plan verdict</span></div><span class="src-badge" id="rules-badge">—</span></div>
+    <div class="rules" id="rules"></div>
+  </section>
+</main>
+<footer class="scope" id="scope"></footer>
+</body>
+</html>

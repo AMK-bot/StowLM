@@ -1,0 +1,21 @@
+{
+  "schema_version": "stowlm.intake-source-freeze/1",
+  "frozen_before_heldout_reading": true,
+  "frozen_utc": "2026-11-02T00:24:21.066577+00:00",
+  "input_freeze_sha256": "62f6050efd3406bd495a491c6f7091e008447d8895c422114f915de2faca5da2",
+  "source_files": {
+    "__init__.py": "c18b6ba24e20a9e55163825c18d1261b25cd331a7ba688d18f1a0fa14a3255df",
+    "admission.py": "447c39e6bd2e584c9c3e7a7b69994e474ae870718ca2448769ab8ecd66c762e9",
+    "conftest.py": "b72d713bd7e2d43ba735b7b044f06492b08b26f113215fe1cf1249a250cd6991",
+    "make_fixtures.py": "22a068e58a3b837b7c8ba73ef819e0d00eb5741acacb36c9dcc9529b8944f16f",
+    "measure.py": "ea5ab1deb2e8a08dd3f51736d8ff648a3f380aa6631fc4a52f64005b7b57af9e",
+    "record.py": "bf9b6f18a5cf6e2e35128908cc4b59870352057bf8d270ea20d695be6421f507",
+    "spark_reader.py": "4164211d7ba96b5904014e58ae71f219b212aaf5b936e135e9714b4a7b0312fd",
+    "test_intake.py": "056fc81303a321214da7b410db8f7e7d5379a1095a5886755b71f62165e152b1",
+    "test_spark_reader.py": "4498770257fafd2786efa07a9259e6045d4d8a6ced0ab870305ad686e10cef6b",
+    "test_validation.py": "420ece379d2870db015c1d7460ae29a530c39bd6ceac6213e8ed68609974eb56",
+    "validation.py": "69328f3fd85a29d7639852dea3fc00346908751f79b9b3d3d960097e06d2fd7f"
+  },
+  "prompt_sha256": "aea69db7f4ff55909ecb264e9455508fb27921a833ac0191f3386cfaf762a4e6",
+  "verification": "38 offline tests passed; independent code and logic review in REVIEW.md; no heldout model read or score yet"
+}

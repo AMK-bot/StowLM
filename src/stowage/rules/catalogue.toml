@@ -1,0 +1,1117 @@
+# Rule catalogue. Entries remain provisional where numeric policies need verification.
+# Hard means every departure condition and every applicable new placement must pass;
+# a better move count never buys a violation. Physical access must hold for every move.
+# Soft entries rank margins and heavy-under-deck preference AFTER hard feasibility,
+# full feasible intake and minimum move count (D11); they have no safety waiver.
+# Tolerated-if-inherited is still hard for new placements: Stage B may leave an
+# already-on-board preference violation alone, only for entries explicitly tagged
+# that way. It never waives stability, strength, stack mass, DG or lashing safety.
+# SI values: kg, m, rad, N, N*m, m*rad, N/m, N/m^2; unit "1" means a count,
+# fraction, boolean, symbolic table name or dimensionless classification.
+# Profile fields resolve against the frozen pydantic Instance, Vessel and PortProfile.
+# Dotted paths traverse each element of lists (e.g. vessel.stacks.max_mass_kg).
+# instance.rule_overrides means lookup [rule.id][parameter name], not the whole map;
+# each entry names those keys in provenance. Units describe the selected/derived value.
+# Provenance explains derivations where the field supplies geometry or table samples.
+# Profile values carry their own synthetic/public provenance. D25 permits the
+# provisional class defaults. Legacy ship consumers still use these until L2;
+# D61 actual-kg parameters and pending contracts are additive L1 metadata.
+# D32 similarly supplies provisional E8 heat and E9 OOG clearances (Q12/Q13).
+# Shared weight_classes.parameters owns the boundaries; shared_parameter references
+# are materialised into Parameter.value by the loader for all consumers.
+# E1/E2 weight_order_tolerance_kg is zero: equal masses are allowed, inversions are not.
+# References to IMDG tables name task 1.3 data; no segregation cells live here.
+# Regulatory URLs and source-version caveats are in docs/data-sources.md section 4.
+# These records describe required enforcement locations, not implemented coverage.
+# Recommendatory IS B2.3 is adopted as a hard project second check when applicable.
+# IRS source is grouped as IACS member guidance, not misrepresented as an IACS UR.
+# APPROXIMATION: lashing demand remains approximate under D2; see its entry.
+
+schema_version = 1
+
+# One switch for every D61/D62/D64 execution consumer. The leader flips it only
+# after reviewed L2-L4 and mask migration; legacy behaviour remains active while off.
+# Read through catalogue.rule_freeze_v1_enabled(); test with rule_freeze_v1(enabled=True).
+# The test helper overrides the whole effective snapshot/SHA without editing this file.
+[activation]
+rule_freeze_v1 = false
+
+[weight_classes]
+status = "provisional"
+open_question = [2, 4, 11]
+
+[weight_classes.parameters.labels]
+value = ["L", "M", "H"]
+unit = "1"
+provenance = { assumption = "D25 provisional class order by VGM, pending expert Q2/Q4/Q11; labels are ranked light to heavy." }
+
+[weight_classes.parameters.medium_min_kg]
+value = 10000
+unit = "kg"
+provenance = { assumption = "D25 provisional inclusive lower bound for M, pending expert Q2/Q4/Q11: L < 10000 kg <= M." }
+
+[weight_classes.parameters.heavy_min_kg]
+value = 20000
+unit = "kg"
+provenance = { "assumption" = "D25 synthetic inclusive lower bound for H: M < 20000 kg <= H; no numeric threshold was confirmed in expert Q11. This shared boundary serves yard clustering and active legacy E1/E2/legacy E6 until activation.rule_freeze_v1. The pending E6 heavy_on_deck_threshold_kg is independent." }
+
+[[rules]]
+id = "expert.physical.slot_occupancy"
+title = "One container per occupied slot footprint"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["One container per slot; 20ft vs 40ft slot compatibility; 20s not on top of 40s **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "max_occupancy" = { "unit" = "1", "provenance" = { "assumption" = "One occupied footprint per physical slot; a 40-foot box reserves both 20-foot cells." }, "value" = 1 } }
+
+[[rules]]
+id = "expert.physical.size_fit"
+title = "20/40-foot size compatibility"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["One container per slot; 20ft vs 40ft slot compatibility; 20s not on top of 40s **(verify)**", "Physical access: only the top box is reachable; below deck needs the hatch cover clear; ship stacks fill bottom-up"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "compatible_footprints" = { "unit" = "1", "provenance" = { "assumption" = "Read Cell accepts_20, accepts_40 and accepts_45 and the occupied partner-cell geometry; no fleet-wide permitted-size list." }, "profile_field" = "vessel.cells" }, "accepts_20" = { "unit" = "1", "provenance" = { "assumption" = "Each occupied physical cell must accept this container size, including both partner cells for 40/45-foot boxes." }, "profile_field" = "vessel.cells.accepts_20" }, "accepts_40" = { "unit" = "1", "provenance" = { "assumption" = "Each occupied physical cell must accept this container size, including both partner cells for 40/45-foot boxes." }, "profile_field" = "vessel.cells.accepts_40" }, "accepts_45" = { "unit" = "1", "provenance" = { "assumption" = "Each occupied physical cell must accept this container size, including both partner cells for 40/45-foot boxes." }, "profile_field" = "vessel.cells.accepts_45" } }
+
+[[rules]]
+id = "expert.physical.no_20_on_40"
+title = "No 20-foot box supported by a 40-foot box"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["One container per slot; 20ft vs 40ft slot compatibility; 20s not on top of 40s **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "prohibited" = { "unit" = "1", "provenance" = { "assumption" = "domain.md marks 20s on 40s as verify; conservative prohibition until verified." }, "value" = true } }
+
+[[rules]]
+id = "expert.physical.stack_weight"
+title = "Stack gross mass within loading-manual limit"
+source = "expert"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Stack weight limits per stack; tier height limits (incl. high cubes)", "Weight order in a stack: heavy at the bottom, light on top; the stack total within its stacking-weight limit (E1, E2, E7)"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "limit" = { "unit" = "kg", "provenance" = { "assumption" = "Use synthetic loading manual table indexed by stack, container size, and loading-condition GM; Annabella section 5 shows GM dependence." }, "profile_field" = "vessel.stacks.max_mass_kg" } }
+open_question = [2, 4]
+expert_rules = ["E7"]
+description = "Stack safety limit is never relaxed for inherited cargo."
+
+[[rules]]
+id = "expert.physical.tier_height"
+title = "Stack height including high cubes within vessel clearance"
+source = "expert"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Stack weight limits per stack; tier height limits (incl. high cubes)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "height_limit" = { "unit" = "m", "provenance" = { "assumption" = "Read vessel loading-manual clearances, including hatch and under-deck headroom." }, "profile_field" = "vessel.stacks.max_height_m" }, "container_heights" = { "unit" = "m", "provenance" = { "assumption" = "Synthetic type dimensions include standard and high-cube containers." }, "profile_field" = "instance.containers.height_m" } }
+
+[[rules]]
+id = "expert.physical.reefer_plug"
+title = "Reefers require a powered compatible plug"
+source = "expert"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Reefers only in slots with plugs"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "plug_available" = { "unit" = "1", "provenance" = { "assumption" = "Per-slot powered reefer connection availability; no fleet-wide plug count." }, "profile_field" = "vessel.cells.reefer_plug" } }
+
+[[rules]]
+id = "expert.rotation.no_overstow"
+title = "Current rotation access and projected restow accounting"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Earlier-port discharges must be physically accessible, directly or through explicitly planned, legal and counted restows"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "discharge_order" = { "unit" = "1", "provenance" = { "assumption" = "Instance rotation defines ordering; identical POD does not cause an overstow." }, "value" = "instance.rotation.calls.index" } }
+description = "Current-call replay rejects physically inaccessible discharges and illegal restow returns. APPROXIMATION: D15 adds the minimum forced restow-lift count under its fixed-departure-stow, no-future-load counting scenario to the D11 move objective. These abstract future counts do not construct supported return positions or certify an executable future policy, and are not a minimum over arbitrary executable plans. Stage B executable future restows (10.4/11.2) remain unimplemented; future blockers are currently counted rather than rejected for absence of an explicit future sequence. Hard current-call access and safety rules still apply."
+open_question = [1, 4]
+
+[[rules]]
+id = "expert.rotation.hatch_overstow"
+title = "Current hatch access and projected blocker accounting"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Earlier-port discharges must be physically accessible, directly or through explicitly planned, legal and counted restows"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "hatch_membership" = { "unit" = "1", "provenance" = { "assumption" = "Each HatchCover links hold_stack_ids below it and deck_stack_ids whose boxes must be removed before lifting it. Stack.hatch_cover_id supplies the inverse relation." }, "profile_field" = "vessel.hatch_covers" }, "hold_stack_ids" = { "unit" = "1", "provenance" = { "assumption" = "Hold stacks reached through this hatch cover." }, "profile_field" = "vessel.hatch_covers.hold_stack_ids" }, "deck_stack_ids" = { "unit" = "1", "provenance" = { "assumption" = "Cover blockers: these deck stacks must be clear before lifting this hatch cover." }, "profile_field" = "vessel.hatch_covers.deck_stack_ids" } }
+description = "Current-call replay requires clear hatch access, legal cover operations and supported restow returns. APPROXIMATION: D15 adds the minimum forced blocker and cover lifts under its fixed-departure-stow, no-future-load counting scenario to the D11 move objective. This abstract objective accounting does not certify an executable later-port restow/hatch sequence or a minimum over arbitrary executable plans. Stage B executable future restows (10.4/11.2) remain unimplemented; absence of an explicit future policy is not currently rejected. Hard current-call access and safety rules still apply."
+open_question = [1, 4]
+
+[[rules]]
+id = "imdg.segregation.7_2_4"
+title = "General dangerous-goods segregation table"
+source = "IMDG"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMDG segregation between classes (4 levels: \"away from\", \"separated from\", \"separated by a complete compartment or hold from\", \"separated longitudinally by an intervening complete compartment or hold from\")"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "table" = { "unit" = "1", "provenance" = { "document" = "IMO MSC.556(108), IMDG Code Amendment 42-24", "clause" = "7.2.4" }, "value" = "imdg_42_24.general_segregation_7_2_4" } }
+expert_rules = ["E11"]
+description = "Reference only: actual per-class cells belong to task 1.3 under rules/imdg/."
+
+[[rules]]
+id = "imdg.segregation.7_4_3"
+title = "Container-ship dangerous-goods segregation"
+source = "IMDG"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMDG segregation between classes (4 levels: \"away from\", \"separated from\", \"separated by a complete compartment or hold from\", \"separated longitudinally by an intervening complete compartment or hold from\")"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "table" = { "unit" = "1", "provenance" = { "document" = "IMO MSC.556(108), IMDG Code Amendment 42-24", "clause" = "7.4.3" }, "value" = "imdg_42_24.containership_segregation_7_4_3" } }
+expert_rules = ["E11"]
+description = "Table must account for open/closed CTUs, on/under deck, and compartment/hold geometry; four levels are not replaced with one distance."
+
+[[rules]]
+id = "imdg.stowage.3_2"
+title = "DG list, stowage categories and special provisions"
+source = "IMDG"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Stowage categories and special provisions (e.g. on deck only, away from living quarters, protected from heat)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "dangerous_goods_list" = { "unit" = "1", "provenance" = { "document" = "IMO MSC.556(108), IMDG Code Amendment 42-24", "clause" = "3.2" }, "value" = "imdg_42_24.dangerous_goods_list_3_2" }, "stowage_provisions" = { "unit" = "1", "provenance" = { "document" = "IMO MSC.556(108), IMDG Code Amendment 42-24", "clause" = "3.2 and 7.1" }, "value" = "imdg_42_24.stowage_and_handling_provisions" }, "sw1_minimum_distance_m" = { "unit" = "m", "provenance" = { "document" = "IMO MSC.556(108), IMDG Code Amendment 42-24", "clause" = "7.1.2", "page" = 477 }, "value" = 2.4 }, "sw2_minimum_distance_m" = { "unit" = "m", "provenance" = { "document" = "IMO MSC.556(108), IMDG Code Amendment 42-24", "clause" = "7.1.2", "page" = 477 }, "value" = 3.0 }, "sw1_surface_temperature_threshold_k" = { "unit" = "K", "provenance" = { "document" = "IMO MSC.556(108), IMDG Code Amendment 42-24", "clause" = "7.1.2", "page" = 477 }, "value" = 328.15 } }
+description = "Apply selected UN entry category and provision codes, including deck restrictions, accommodation separation, heat protection, subsidiary risks and specific segregation. eCFR is bulk input only, never the authority."
+
+[[rules]]
+id = "iscode.loading.displacement"
+title = "Displacement within vessel loading limits"
+source = "IS Code"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Displacement/draft within limits; GM ≥ minimum after free-surface correction"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum" = { "unit" = "kg", "provenance" = { "assumption" = "D40 synthetic loading manual: baseline vessel.hull.min_displacement_kg, with evidence in vessel.hull.min_displacement_kg_provenance. Independent lightship and summer load-line displacement limits are vessel-builder policy, not hydrostatic-table endpoints. instance.rule_overrides['iscode.loading.displacement']['minimum'] may only tighten: raise the minimum. Require finite ordered bounds and their provenance; missing/unknown policy must fail closed; no numeric fallback." }, "profile_field" = "vessel.hull.min_displacement_kg" }, "maximum" = { "unit" = "kg", "provenance" = { "assumption" = "D40 synthetic loading manual: baseline vessel.hull.max_displacement_kg, with evidence in vessel.hull.max_displacement_kg_provenance. Independent lightship and summer load-line displacement limits are vessel-builder policy, not hydrostatic-table endpoints. instance.rule_overrides['iscode.loading.displacement']['maximum'] may only tighten: lower the maximum. Require finite ordered bounds and their provenance; missing/unknown policy must fail closed; no numeric fallback." }, "profile_field" = "vessel.hull.max_displacement_kg" } }
+
+[[rules]]
+id = "iscode.loading.draft"
+title = "Draught within vessel limits"
+source = "IS Code"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Displacement/draft within limits; GM ≥ minimum after free-surface correction"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "max_draft" = { "unit" = "m", "provenance" = { "assumption" = "Synthetic vessel draught limit; evaluate fore, aft and any controlling station." }, "profile_field" = "vessel.hull.max_draught_m" } }
+
+[[rules]]
+id = "iscode.loading.gm"
+title = "Effective GM after free-surface correction"
+source = "IS Code"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Displacement/draft within limits; GM ≥ minimum after free-surface correction"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum_gm" = { "unit" = "m", "provenance" = { "assumption" = "Use loading-manual minimum GM curve as applicable, in addition to A 2.2.4 floor." }, "profile_field" = "vessel.hull.min_gm_m" } }
+
+[[rules]]
+id = "iscode.b3_1.free_surface"
+title = "Free-surface correction over relevant tank fillings"
+source = "IS Code"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Displacement/draft within limits; GM ≥ minimum after free-surface correction"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "full_tank_threshold" = { "unit" = "1", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "B 3.1; mandatory through A 2.1.2" }, "value" = 0.98 }, "tank_geometry" = { "unit" = "m^4", "provenance" = { "assumption" = "Tank sounding-table transverse free-surface inertia versus volume_m3, tank content_density_kg_m3 and actual filling determine correction; include B 3.1 maximum-correction cases." }, "profile_field" = "vessel.tanks.table.fsm_m4" } }
+description = "Apply maximum correction over filling range, including tanks less than 98 percent full; do not substitute a fixed GM deduction."
+
+[[rules]]
+id = "iscode.a2_2.gz_area_0_30"
+title = "GZ area to 30 degrees"
+source = "IS Code"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum" = { "unit" = "m*rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.1" }, "value" = 0.055 }, "upper_angle" = { "unit" = "rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.1" }, "value" = 0.5235987755982988 } }
+description = "Angles are radians. Area integration is cut off at downflooding where the clause requires it; use hull-derived cross curves, not a small-angle GM surrogate."
+
+[[rules]]
+id = "iscode.a2_2.gz_area_0_40"
+title = "GZ area to 40 degrees or downflooding"
+source = "IS Code"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum" = { "unit" = "m*rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.1" }, "value" = 0.09 }, "upper_angle" = { "unit" = "rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.1" }, "value" = 0.6981317007977318 } }
+description = "Angles are radians. Area integration is cut off at downflooding where the clause requires it; use hull-derived cross curves, not a small-angle GM surrogate."
+
+[[rules]]
+id = "iscode.a2_2.gz_area_30_40"
+title = "GZ area from 30 to 40 degrees or downflooding"
+source = "IS Code"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum" = { "unit" = "m*rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.1" }, "value" = 0.03 }, "lower_angle" = { "unit" = "rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.1" }, "value" = 0.5235987755982988 }, "upper_angle" = { "unit" = "rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.1" }, "value" = 0.6981317007977318 } }
+description = "Angles are radians. Area integration is cut off at downflooding where the clause requires it; use hull-derived cross curves, not a small-angle GM surrogate."
+
+[[rules]]
+id = "iscode.a2_2.gz_at_30"
+title = "Righting lever at 30 degrees or greater"
+source = "IS Code"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum" = { "unit" = "m", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.2" }, "value" = 0.2 }, "minimum_angle" = { "unit" = "rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.2" }, "value" = 0.5235987755982988 } }
+description = "Angles are radians. Area integration is cut off at downflooding where the clause requires it; use hull-derived cross curves, not a small-angle GM surrogate."
+
+[[rules]]
+id = "iscode.a2_2.max_gz_angle"
+title = "Maximum GZ occurs at 25 degrees or greater"
+source = "IS Code"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum" = { "unit" = "rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.3" }, "value" = 0.4363323129985824 } }
+description = "Angles are radians. Area integration is cut off at downflooding where the clause requires it; use hull-derived cross curves, not a small-angle GM surrogate."
+
+[[rules]]
+id = "iscode.a2_2.initial_gm"
+title = "Initial corrected GM floor"
+source = "IS Code"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum" = { "unit" = "m", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.2.4" }, "value" = 0.15 } }
+description = "Angles are radians. Area integration is cut off at downflooding where the clause requires it; use hull-derived cross curves, not a small-angle GM surrogate."
+
+[[rules]]
+id = "iscode.a2_3.weather"
+title = "Severe wind and rolling criterion"
+source = "IS Code"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "wind_pressure" = { "unit" = "N/m^2", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.3" }, "value" = 504.0 }, "gust_multiplier" = { "unit" = "1", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.3" }, "value" = 1.5 }, "max_steady_heel" = { "unit" = "rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.3" }, "value" = 0.2792526803190927 }, "deck_edge_fraction" = { "unit" = "1", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.3" }, "value" = 0.8 }, "roll_coefficient" = { "unit" = "rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.3" }, "value" = 1.9024088846738192 }, "weather_tables" = { "unit" = "1", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.3" }, "value" = "iscode_2008.a2_3.k_x1_x2_r_s" }, "bilge_keel_area_m2" = { "unit" = "m^2", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "A 2.3.4, table 2.3.4-3", "page" = 16, "assumption" = "D40 synthetic design: baseline vessel.hull.bilge_keel_area_m2, with evidence in vessel.hull.bilge_keel_area_m2_provenance. Explicit 0 m^2 declares no bilge/bar keels; None is unknown and must fail closed, as must missing provenance. instance.rule_overrides['iscode.a2_3.weather']['bilge_keel_area_m2'] may only tighten: reduce the declared area, remaining finite and nonnegative. Never infer area from the legacy bilge_keel flag; no numeric fallback." }, "profile_field" = "vessel.hull.bilge_keel_area_m2" } }
+description = "Compute wind levers and roll from vessel geometry and IS Code factors; steady heel <= min(16 degrees, 0.8 deck-edge immersion angle), area b >= area a. In SI mass kg: lw1=P*A*Z/(g*displacement_kg); the source 1000 factor applies only to displacement in tonnes."
+
+[[rules]]
+id = "iscode.b2_3.containership_second_check"
+title = "Additional containership stability check"
+source = "IS Code"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "length_threshold" = { "unit" = "m", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "B 2.3" }, "value" = 100.0 }, "area_coefficients" = { "unit" = "m*rad", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "B 2.3.2" }, "value" = [0.009, 0.016, 0.006, 0.029] }, "gz_at_30_coefficient" = { "unit" = "m", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "B 2.3.2" }, "value" = 0.033 }, "max_gz_coefficient" = { "unit" = "m", "provenance" = { "document" = "IMO MSC.267(85), 2008 Intact Stability Code", "clause" = "B 2.3.2" }, "value" = 0.042 }, "form_factor" = { "unit" = "1", "provenance" = { "assumption" = "Derive C per IS Code B 2.3.2.6 from HullModel dimensions and loading condition; this field supplies geometry, not a stored form factor or fleet constant." }, "profile_field" = "vessel.hull" } }
+description = "Recommendatory source adopted as a hard second check by this project when applicable to containerships over 100 m. Divide each coefficient by C; retain clause-specific integration angles and downflooding cutoffs. Criteria derived for ships shorter than 200 m; applicability requires source verification."
+
+[[rules]]
+id = "iscode.loading.trim"
+title = "Trim within loading-manual limits"
+source = "IS Code"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Trim and list within limits"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum" = { "unit" = "m", "provenance" = { "assumption" = "D40 synthetic loading manual: baseline vessel.hull.min_trim_m, with evidence in vessel.hull.min_trim_m_provenance. Signed aft-minus-forward trim limits are independently declared; never derive one trim bound from the other. instance.rule_overrides['iscode.loading.trim']['minimum'] may only tighten: raise the minimum. Require finite ordered bounds and their provenance; missing/unknown policy must fail closed; no numeric fallback." }, "profile_field" = "vessel.hull.min_trim_m" }, "maximum" = { "unit" = "m", "provenance" = { "assumption" = "D40 synthetic loading manual: baseline vessel.hull.max_trim_m, with evidence in vessel.hull.max_trim_m_provenance. Signed aft-minus-forward trim limits are independently declared; never derive one trim bound from the other. instance.rule_overrides['iscode.loading.trim']['maximum'] may only tighten: lower the maximum. Require finite ordered bounds and their provenance; missing/unknown policy must fail closed; no numeric fallback." }, "profile_field" = "vessel.hull.max_trim_m" } }
+
+[[rules]]
+id = "iscode.loading.list"
+title = "List within loading-manual limits"
+source = "IS Code"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Trim and list within limits"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "max_absolute_list" = { "unit" = "rad", "provenance" = { "assumption" = "Synthetic vessel loading manual; no hard-coded operational angle." }, "profile_field" = "vessel.hull.max_list_rad" } }
+
+[[rules]]
+id = "iacs.s11a.longitudinal_strength"
+title = "Station-wise shear, bending and applicable torsion envelopes"
+source = "IACS"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Shear force and bending moment along the hull within limits at each station"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+# data/raw/iacs/ur-s11a.txt, PDF p1, S11A.1.1.2(i): "90 m ≤ L ≤ 500 m".
+# This is the wave-load formula domain; outside it direct calculations may be required.
+parameters = { "minimum_length" = { "unit" = "m", "provenance" = { "document" = "IACS UR S11A (revision currency unconfirmed)", "clause" = "S11A.1.1.2(i)", "page" = 1 }, "value" = 90.0 }, "maximum_length" = { "unit" = "m", "provenance" = { "document" = "IACS UR S11A (revision currency unconfirmed)", "clause" = "S11A.1.1.2(i)", "page" = 1 }, "value" = 500.0 }, "length_beam_ratio_range" = { "unit" = "1", "provenance" = { "document" = "IACS UR S11A (revision currency unconfirmed)", "clause" = "scope" }, "value" = [5.0, 9.0] }, "beam_draft_ratio_range" = { "unit" = "1", "provenance" = { "document" = "IACS UR S11A (revision currency unconfirmed)", "clause" = "scope" }, "value" = [2.0, 6.0] }, "block_coefficient_range" = { "unit" = "1", "provenance" = { "document" = "IACS UR S11A (revision currency unconfirmed)", "clause" = "scope" }, "value" = [0.55, 0.9] }, "torsion_whipping_beam_threshold" = { "unit" = "m", "provenance" = { "document" = "IACS UR S11A (revision currency unconfirmed)", "clause" = "scope" }, "value" = 32.26 }, "shear_envelopes" = { "unit" = "N", "provenance" = { "assumption" = "Station-wise upper signed permissible still-water shear; synthetic limits must account for applicable S11A wave-load allowances." }, "profile_field" = "vessel.hull.stations.max_shear_n" }, "minimum_shear_envelopes" = { "unit" = "N", "provenance" = { "assumption" = "Station-wise lower signed permissible still-water shear." }, "profile_field" = "vessel.hull.stations.min_shear_n" }, "bending_envelopes" = { "unit" = "N*m", "provenance" = { "assumption" = "Station-wise upper signed hogging bound." }, "profile_field" = "vessel.hull.stations.max_bending_nm" }, "minimum_bending_envelopes" = { "unit" = "N*m", "provenance" = { "assumption" = "Station-wise lower signed sagging bound." }, "profile_field" = "vessel.hull.stations.min_bending_nm" }, "torsion_envelopes" = { "unit" = "N*m", "provenance" = { "assumption" = "Applicable torsion and whipping evaluation; do not omit for wide ships." }, "profile_field" = "vessel.hull.stations.max_torsion_nm" } }
+description = "Integrate weight minus buoyancy; enforce signed station envelopes plus wave loading. Outside S11A applicability, fail closed pending a justified alternative; never extrapolate silently."
+
+[[rules]]
+id = "iacs.s1.loading_instrument"
+title = "Loading instrument station read-out contract"
+source = "IACS"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Shear force and bending moment along the hull within limits at each station"]
+enforced_by = ["checker"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "length_threshold" = { "unit" = "m", "provenance" = { "document" = "IACS UR S1 rev.7 (latest to confirm)", "clause" = "loading instrument requirement" }, "value" = 100.0 }, "stations" = { "unit" = "m", "provenance" = { "assumption" = "Loading manual specifies stations and applicable torsion output." }, "profile_field" = "vessel.hull.stations.x_m" } }
+description = "Checker reports still-water SF/BM at read-out points and torsion where applicable; this catalogue entry does not claim the software is class-approved."
+
+[[rules]]
+id = "iacs.rec48.validation"
+title = "Strength read-out positions and validation tolerance"
+source = "IACS"
+scope = "vessel"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Shear force and bending moment along the hull within limits at each station"]
+enforced_by = ["checker"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "relative_tolerance" = { "unit" = "1", "provenance" = { "document" = "IACS Recommendation 48 rev.1", "clause" = "loading instrument accuracy" }, "value" = 0.05 }, "stations" = { "unit" = "m", "provenance" = { "assumption" = "At transverse bulkheads and mid-hold where required by the loading manual." }, "profile_field" = "vessel.hull.stations.x_m" } }
+description = "Validation tolerance against reference cases, not a relaxation of departure strength limits."
+
+[[rules]]
+id = "iacs.l5.validation"
+title = "Stability software reference-case tolerances"
+source = "IACS"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Displacement/draft within limits; GM ≥ minimum after free-surface correction", "IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**", "Trim and list within limits"]
+enforced_by = ["checker"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "displacement_relative" = { "unit" = "1", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.02 }, "kg_gmt_relative" = { "unit" = "1", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.01 }, "kg_gmt_absolute" = { "unit" = "m", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.05 }, "gz_relative" = { "unit" = "1", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.05 }, "gz_absolute" = { "unit" = "m", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.05 }, "gz_area_relative" = { "unit" = "1", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.05 }, "gz_area_absolute" = { "unit" = "m*rad", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.0012 }, "free_surface_moment_relative" = { "unit" = "1", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.02 }, "draft_relative" = { "unit" = "1", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.01 }, "draft_absolute" = { "unit" = "m", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.05 }, "equilibrium_angle_absolute" = { "unit" = "rad", "provenance" = { "document" = "IACS UR L5 rev.4 (latest to confirm)", "clause" = "software test tolerances" }, "value" = 0.017453292519943295 } }
+description = "Test tolerances only, never safety margins. Apply relative-or-absolute criteria per the standard when comparing against independent reference cases."
+
+[[rules]]
+id = "solas.v22.visibility"
+title = "Bridge forward visibility and blind-sector limits"
+source = "SOLAS"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["SOLAS V/22: view of the sea surface from the conning position not obscured by more than 2 ship lengths or 500 m, whichever is less **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "minimum_length" = { "unit" = "m", "provenance" = { "document" = "SOLAS V/22; MSC.99(73); MSC.1/Circ.1350/Rev.1", "clause" = "V/22.1" }, "value" = 55.0 }, "ship_length_multiplier" = { "unit" = "1", "provenance" = { "document" = "SOLAS V/22; MSC.99(73); MSC.1/Circ.1350/Rev.1", "clause" = "V/22.1" }, "value" = 2.0 }, "max_blind_distance" = { "unit" = "m", "provenance" = { "document" = "SOLAS V/22; MSC.99(73); MSC.1/Circ.1350/Rev.1", "clause" = "V/22.1" }, "value" = 500.0 }, "forward_half_angle" = { "unit" = "rad", "provenance" = { "document" = "SOLAS V/22; MSC.99(73); MSC.1/Circ.1350/Rev.1", "clause" = "V/22.1" }, "value" = 0.17453292519943295 }, "max_blind_sector" = { "unit" = "rad", "provenance" = { "document" = "SOLAS V/22; MSC.99(73); MSC.1/Circ.1350/Rev.1", "clause" = "V/22.1" }, "value" = 0.17453292519943295 }, "max_forward_blind_sector" = { "unit" = "rad", "provenance" = { "document" = "SOLAS V/22; MSC.99(73); MSC.1/Circ.1350/Rev.1", "clause" = "V/22.1" }, "value" = 0.08726646259971647 }, "max_total_blind_sectors" = { "unit" = "rad", "provenance" = { "document" = "SOLAS V/22; MSC.99(73); MSC.1/Circ.1350/Rev.1", "clause" = "V/22.1" }, "value" = 0.3490658503988659 }, "min_clear_sector" = { "unit" = "rad", "provenance" = { "document" = "SOLAS V/22; MSC.99(73); MSC.1/Circ.1350/Rev.1", "clause" = "V/22.1" }, "value" = 0.08726646259971647 } }
+description = "Applies to ships >=55 m built on/after 1998-07-01. Evaluate line of sight from conning position over forward +/-10 degrees and relevant blind sectors; max obscured sea distance=min(2L,500 m)."
+
+[[rules]]
+id = "solas.vi2.verified_gross_mass"
+title = "Verified gross mass required before stowage"
+source = "SOLAS"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Stack weight limits per stack; tier height limits (incl. high cubes)", "Displacement/draft within limits; GM ≥ minimum after free-surface correction", "Shear force and bending moment along the hull within limits at each station"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "vgm_required" = { "unit" = "1", "provenance" = { "document" = "SOLAS VI/2; MSC.380(94); MSC.1/Circ.1475", "clause" = "VI/2" }, "value" = true }, "declared_mass_exact" = { "unit" = "1", "provenance" = { "assumption" = "D10 and data-sources section 4: treat declared verified gross masses as exact; misdeclared weights are separate scenarios." }, "value" = true } }
+
+[[rules]]
+id = "iacs.member_irs.container_securing"
+title = "Container securing force limits (approximate demand model)"
+source = "IACS"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Lashing forces"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "wind_20_transverse" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 15700.0 }, "wind_20_longitudinal" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 6400.0 }, "wind_40_transverse" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 31600.0 }, "wind_40_longitudinal" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 6400.0 }, "closed_end_stiffness" = { "unit" = "N/m", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 15700000.0 }, "door_end_stiffness" = { "unit" = "N/m", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 3700000.0 }, "transverse_racking" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 150000.0 }, "longitudinal_racking" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 75000.0 }, "corner_casting_tension" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 250000.0 }, "corner_post_compression" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 848000.0 }, "horizontal_lashing_pull" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 150000.0 }, "vertical_lashing_pull" = { "unit" = "N", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 225000.0 }, "fitting_swl_fraction" = { "unit" = "1", "provenance" = { "document" = "Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance)", "clause" = "published force limits and stiffness; page verification pending" }, "value" = 0.85 } }
+description = "APPROXIMATION: D2 lashing demand remains approximate until the IRS method and accelerations in Main Rules Pt.3 Ch.5 are implemented and verified. Published limits are not a complete force model. Vessel securing geometry, SWLs and acceleration assumptions must accompany evaluations."
+
+[[rules]]
+id = "expert.e6.heavy_under_deck"
+title = "Heavy containers must stow under deck"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Heavy containers under deck, for stability (E6)"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62"]
+parameters = { "heavy_threshold" = { "shared_parameter" = "heavy_min_kg", "unit" = "kg", "provenance" = { "assumption" = "D25 pending expert Q2/Q4/Q11: heavy is class H using the shared inclusive boundary. Override instance.rule_overrides[rule_id][heavy_threshold] first, else use this shared default." }, "superseded_by" = "pending_contract.parameters" }, "allow_on_deck_if_no_compatible_hold_cell" = { "value" = true, "unit" = "1", "provenance" = { "assumption" = "D25 pending expert Q2/Q4/Q11: an H box may be on deck only if no compatible hold cell is empty at departure. Override instance.rule_overrides[rule_id][allow_on_deck_if_no_compatible_hold_cell] first. Compatibility includes the box footprint and applicable hard placement rules, not merely aggregate hold capacity." }, "superseded_by" = "pending_contract.parameters" } }
+expert_rules = ["E6"]
+open_question = [11]
+description = "D25: class H containers must be under deck unless no compatible hold cell remains empty at departure. This conditional rule stays hard; the fallback does not waive stability, strength, stack mass, DG or other safety checks."
+pending_contract = { "hardness" = "soft", "enforced_by" = ["solver"], "activation" = "activation.rule_freeze_v1 = true after reviewed coordinated L2-L4 migration; this complete contract replaces legacy metadata only at the shared flip.", "penalty" = { "kind" = "tie_break", "priority" = 4, "metric" = "heavy_on_deck_count", "description" = "Minimise heavy_on_deck_count only among equal-intake, equal-move feasible plans; never reject a placement." }, "title" = "Prefer heavy containers under deck", "description" = "D61/C2: heavy containers may occupy any physically legal position while obeying kg weight order. Minimise heavy_on_deck_count only at D11 level 4, after hard feasibility, full feasible intake and minimum moves; never reject a placement for this preference. The 20000 kg threshold is provisional and independent of yard clustering.", "parameters" = { "heavy_on_deck_threshold_kg" = { "value" = 20000, "unit" = "kg", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q11", "assumption" = "D61/C2 provisional synthetic threshold, not numerically confirmed by expert Q11; independent of legacy shared weight classes. Active only with activation.rule_freeze_v1." } }, "metric" = { "value" = "heavy_on_deck_count", "unit" = "1", "provenance" = { "assumption" = "Pending D61/C2 metric, inactive until coordinated rule freeze v1 activation: count on-deck boxes with gross mass >= heavy_on_deck_threshold_kg; minimise only as a level-4 tie-break. This threshold is independent of legacy shared heavy_threshold." } } } }
+
+[[rules]]
+id = "expert.e1.heavy_bottom"
+title = "Heavy containers low in each stack"
+source = "expert"
+scope = "global"
+hardness = "tolerated_if_inherited"
+status = "provisional"
+domain_rows = ["Weight order in a stack: heavy at the bottom, light on top; the stack total within its stacking-weight limit (E1, E2, E7)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62"]
+parameters = { "heavy_threshold" = { "shared_parameter" = "heavy_min_kg", "unit" = "kg", "provenance" = { "assumption" = "D25 pending expert Q2/Q4/Q11: heavy is class H using the shared inclusive boundary. Override instance.rule_overrides[rule_id][heavy_threshold] first, else use this shared default." }, "superseded_by" = "pending_contract.parameters" } }
+expert_rules = ["E1", "E7"]
+open_question = []
+description = "D25: heavy means class H; heavy-at-bottom is implied by E2 class ordering but keeps its own reporting id. New placements obey class order; Stage B may retain inherited ordering preferences without relaxing safety limits."
+pending_contract = { "hardness" = "tolerated_if_inherited", "enforced_by" = ["checker", "feasibility_engine", "solver"], "activation" = "activation.rule_freeze_v1 = true after reviewed coordinated L2-L4 migration; this complete contract replaces legacy metadata only at the shared flip.", "title" = "Gross mass non-increasing upward", "description" = "D61/C1: every box A directly or indirectly above B in the same physical ship stack requires gross(A) <= gross(B) + weight_order_tolerance_kg. Equal masses are allowed. A long box above two 20-foot boxes is compared with each; a 20-foot box above a long box is compared with that long box. E1 and E2 use the same kg check, retaining both ids. D25 classes apply only to yard gate-in clustering. New placements obey this rule; Stage B may retain inherited preference breaches without waiving safety limits. One shared tolerance governs E1 and E2. Set instance.rule_overrides['expert.e2.weight_order']['weight_order_tolerance_kg']. An E1 override requires an equal explicit E2 override; otherwise fail closed. The default is 0 kg.", "parameters" = { "weight_order_mode" = { "value" = "gross_mass_kg", "unit" = "1", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q2 and Q11" } }, "weight_order_tolerance_kg" = { "value" = 0, "unit" = "kg", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q2 and Q11", "assumption" = "D61/C1: provisional strict zero tolerance, pending numeric confirmation (follow-up Q24). One shared tolerance governs E1 and E2. Set instance.rule_overrides['expert.e2.weight_order']['weight_order_tolerance_kg']. An E1 override requires an equal explicit E2 override; otherwise fail closed. The default is 0 kg." } } } }
+
+[[rules]]
+id = "expert.e2.weight_order"
+title = "No heavier container above a lighter container"
+source = "expert"
+scope = "global"
+hardness = "tolerated_if_inherited"
+status = "provisional"
+domain_rows = ["Weight order in a stack: heavy at the bottom, light on top; the stack total within its stacking-weight limit (E1, E2, E7)"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62"]
+parameters = { "order_mode" = { "value" = "weight_class", "unit" = "1", "provenance" = { "assumption" = "D25 pending expert Q2/Q4/Q11: compare VGM classes, not kg differences. Override instance.rule_overrides[rule_id][order_mode] first." }, "superseded_by" = "pending_contract.parameters" }, "class_order" = { "shared_parameter" = "labels", "unit" = "1", "provenance" = { "assumption" = "D25 pending expert Q2/Q4/Q11: use shared labels and shared VGM boundaries; override instance.rule_overrides[rule_id][class_order] first." }, "superseded_by" = "pending_contract.parameters" }, "tolerance" = { "value" = 0, "unit" = "classes", "provenance" = { "assumption" = "D25 pending expert Q2/Q4/Q11: zero class-rank inversions. Same-class boxes may have any kg order; this is not a kg tolerance. Override instance.rule_overrides[rule_id][tolerance] first." }, "superseded_by" = "pending_contract.parameters" }, "medium_min_kg" = { "shared_parameter" = "medium_min_kg", "unit" = "kg", "provenance" = { "assumption" = "D25 pending expert Q2/Q4/Q11: shared inclusive VGM class boundary; override instance.rule_overrides[rule_id][medium_min_kg] first." }, "superseded_by" = "pending_contract.parameters" }, "heavy_min_kg" = { "shared_parameter" = "heavy_min_kg", "unit" = "kg", "provenance" = { "assumption" = "D25 pending expert Q2/Q4/Q11: shared inclusive VGM class boundary; override instance.rule_overrides[rule_id][heavy_min_kg] first." }, "superseded_by" = "pending_contract.parameters" } }
+expert_rules = ["E2", "E7"]
+open_question = []
+description = "D25: within each ship stack, no box may be above a lighter VGM class (L < M < H); same-class boxes may be in any mass order. Stack mass safety limits remain independent and hard. Stage B inherited preference violations alone may remain."
+pending_contract = { "hardness" = "tolerated_if_inherited", "enforced_by" = ["checker", "feasibility_engine", "linear_model", "solver"], "activation" = "activation.rule_freeze_v1 = true after reviewed coordinated L2-L4 migration; this complete contract replaces legacy metadata only at the shared flip.", "title" = "Gross mass non-increasing upward", "description" = "D61/C1: every box A directly or indirectly above B in the same physical ship stack requires gross(A) <= gross(B) + weight_order_tolerance_kg. Equal masses are allowed. A long box above two 20-foot boxes is compared with each; a 20-foot box above a long box is compared with that long box. E1 and E2 use the same kg check, retaining both ids. D25 classes apply only to yard gate-in clustering. New placements obey this rule; Stage B may retain inherited preference breaches without waiving safety limits. One shared tolerance governs E1 and E2. Set instance.rule_overrides['expert.e2.weight_order']['weight_order_tolerance_kg']. An E1 override requires an equal explicit E2 override; otherwise fail closed. The default is 0 kg.", "parameters" = { "weight_order_mode" = { "value" = "gross_mass_kg", "unit" = "1", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q2 and Q11" } }, "weight_order_tolerance_kg" = { "value" = 0, "unit" = "kg", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q2 and Q11", "assumption" = "D61/C1: provisional strict zero tolerance, pending numeric confirmation (follow-up Q24). One shared tolerance governs E1 and E2. Set instance.rule_overrides['expert.e2.weight_order']['weight_order_tolerance_kg']. An E1 override requires an equal explicit E2 override; otherwise fail closed. The default is 0 kg." } } } }
+
+[[rules]]
+id = "expert.e8.under_deck"
+title = "Honour under-deck booking request"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Special stowage requests per box: under deck, on deck, away from heat, top stowage (E8)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4", "docs/expert/2026-10-28-written-answers.md: Q12, 28 Oct 2026"]
+parameters = { "required_location" = { "unit" = "1", "provenance" = { "assumption" = "E8 booking condition; request read from container.special_stowage." }, "value" = "under_deck" } }
+open_question = [4, 12]
+expert_rules = ["E8"]
+description = "D61/C3, expert Q12 (28 Oct 2026): special-stowage requests are binding hard booking conditions and create no killed slots. An unplaceable request makes the instance infeasible; any shipper waiver must first amend the booking, outside this model."
+
+[[rules]]
+id = "expert.e8.on_deck"
+title = "Honour on-deck booking request"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Special stowage requests per box: under deck, on deck, away from heat, top stowage (E8)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4", "docs/expert/2026-10-28-written-answers.md: Q12, 28 Oct 2026"]
+parameters = { "required_location" = { "unit" = "1", "provenance" = { "assumption" = "E8 booking condition; request read from container.special_stowage." }, "value" = "on_deck" } }
+open_question = [4, 12]
+expert_rules = ["E8"]
+description = "D61/C3, expert Q12 (28 Oct 2026): special-stowage requests are binding hard booking conditions and create no killed slots. An unplaceable request makes the instance infeasible; any shipper waiver must first amend the booking, outside this model."
+
+[[rules]]
+id = "expert.e8.away_from_heat"
+title = "Honour heat-separation booking request"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Special stowage requests per box: under deck, on deck, away from heat, top stowage (E8)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4", "docs/expert/2026-10-28-written-answers.md: Q12, 28 Oct 2026"]
+parameters = { "heat_sources" = { "unit" = "m", "provenance" = { "assumption" = "Engine room and heated tanks represented geometrically in vessel profile." }, "profile_field" = "vessel.heat_sources" }, "minimum_clearance" = { "value" = 2.4, "unit" = "m", "provenance" = { "document" = "IMDG Code Amendment 42-24 (MSC.556(108)); data/raw/imdg-42-24/msc556-108.txt around line 42089", "clause" = "7.1.2, definition: Protected from sources of heat", "assumption" = "D32 provisional pending expert Q12: apply the IMDG 2.4 m separation from heated ship structures whose surface temperature is liable to exceed 55 degrees Celsius to expert E8 booking requests. Examples include heated tank walls and machinery-space bulkheads; this is not a universal distance from every warm object. Lookup instance.rule_overrides['expert.e8.away_from_heat']['minimum_clearance'] first, else this default." } } }
+open_question = [4, 12]
+expert_rules = ["E8"]
+description = "D32 provisional default for heat-separation requests: at least 2.4 m from applicable heated ship structures. Vessel heat-source geometry identifies those structures; the numeric heat clearance remains provisional pending expert confirmation. D61/C3, expert Q12 (28 Oct 2026): special-stowage requests are binding hard booking conditions and create no killed slots. An unplaceable request makes the instance infeasible; any shipper waiver must first amend the booking, outside this model."
+
+[[rules]]
+id = "expert.e8.top_stowage"
+title = "Honour top-stowage booking request"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Special stowage requests per box: under deck, on deck, away from heat, top stowage (E8)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4", "docs/expert/2026-10-28-written-answers.md: Q12, 28 Oct 2026"]
+parameters = { "must_be_top_of_stack" = { "unit" = "1", "provenance" = { "assumption" = "Expert Q12, 28 Oct 2026: top stowage means the top occupied tier of its stack; the request itself creates no killed slots." }, "value" = true } }
+open_question = [4, 12]
+expert_rules = ["E8"]
+description = "D61/C3, expert Q12 (28 Oct 2026): special-stowage requests are binding hard booking conditions and create no killed slots. An unplaceable request makes the instance infeasible; any shipper waiver must first amend the booking, outside this model."
+
+[[rules]]
+id = "expert.e9.over_height"
+title = "Over-height cargo at top of stack"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Out-of-gauge (OOG) cargo (E9)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62"]
+parameters = { "top_only" = { "unit" = "1", "provenance" = { "assumption" = "E9 conservative provisional rule: over-height cargo only at top; question 13 outstanding." }, "value" = true, "superseded_by" = "pending_contract.parameters" }, "vertical_clearance" = { "unit" = "m", "provenance" = { "assumption" = "Evaluate actual container height plus over-height against vessel geometry." }, "profile_field" = "vessel.stacks.max_height_m", "superseded_by" = "pending_contract.parameters" } }
+expert_rules = ["E9"]
+open_question = [13]
+description = "Legacy physical OOG geometry applies until activation.rule_freeze_v1; the reviewed D61 contract is staged separately."
+pending_contract = { "hardness" = "hard", "enforced_by" = ["checker", "feasibility_engine", "solver"], "activation" = "activation.rule_freeze_v1 = true after reviewed coordinated L2-L4 migration; this complete contract replaces legacy metadata only at the shared flip.", "title" = "Reserve slots killed by over-height cargo", "description" = "D61/C4: over-height OOG may be on deck or under deck wherever physically possible. Reserve the cells killed above its actual over-height envelope; directly killed cells must remain empty. This is not a top-stowage booking request. Report killed_slots as broken space in TEU, including directly killed cells and every cell above each kill in its physical column, counted once each. The upward closure changes only the broken-space metric, not the hard reservation rule. Fewer lost TEU is a D11 level-4 tie-break only after hard feasibility, full intake and move count.", "parameters" = { "under_deck_allowed" = { "value" = true, "unit" = "1", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q13" } }, "killed_slots_must_be_empty" = { "value" = true, "unit" = "1", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q13" } }, "tie_break_metric" = { "value" = "killed_slots", "unit" = "1", "provenance" = { "assumption" = "D61/C4 broken space: killed_slots reports unique lost capacity in TEU for the reported stow state: directly killed physical 20-foot cells plus every cell above each kill in its physical column, counted once. This upward closure is metric-only; hard reservations remain the directly killed cells. Minimise only at D11 level 4 after hard feasibility, full intake and move count." } }, "objective_priority" = { "value" = 4, "unit" = "1", "provenance" = { "assumption" = "D11/D61: killed slots never trade against hard rules, intake or move count." } }, "vertical_clearance" = { "unit" = "m", "provenance" = { "assumption" = "Evaluate actual container height plus over-height against vessel geometry." }, "profile_field" = "vessel.stacks.max_height_m" } } }
+
+[[rules]]
+id = "expert.e9.over_width_length"
+title = "Reserve OOG neighbouring slot clearances"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Out-of-gauge (OOG) cargo (E9)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62"]
+parameters = { "slot_geometry" = { "unit" = "m", "provenance" = { "assumption" = "Cell lcg_m, tcg_m and vcg_base_m, Stack.base_z_m and actual box heights below determine cargo envelopes. Compute blocked neighbours from real OOG dimensions, not a fixed one-slot blanket." }, "profile_field" = "vessel.cells", "superseded_by" = "pending_contract.parameters" }, "oog_clearance" = { "value" = 0.0, "unit" = "m", "provenance" = { "assumption" = "D32 provisional pending expert Q13: no additional margin beyond the declared OOG overhang envelope. Neighbours whose box envelope intersects the OOG envelope are blocked; zero extra clearance never permits physical overlap. Lookup instance.rule_overrides['expert.e9.over_width_length']['oog_clearance'] first, else this default." }, "superseded_by" = "pending_contract.parameters" } }
+expert_rules = ["E9"]
+open_question = [13]
+description = "D32: reserve all intersections with the declared OOG envelope; default additional clearance is zero metres, pending Q13. Explicit overrides may require more clearance. No on-deck-only restriction assumed without source confirmation."
+pending_contract = { "hardness" = "hard", "enforced_by" = ["checker", "feasibility_engine", "solver"], "activation" = "activation.rule_freeze_v1 = true after reviewed coordinated L2-L4 migration; this complete contract replaces legacy metadata only at the shared flip.", "title" = "Reserve slots killed by over-width or over-length OOG cargo", "description" = "D61/C4: over-width and over-length OOG may be on deck or under deck wherever physically possible. Reserve adjacent physical cells in the direction of each overhang, including farther or diagonal cells intersected by the actual OOG envelope; directly killed cells must remain empty regardless of decision or fixed-cargo ownership. APPROXIMATION: represented holds are cell-guided with zero lateral/longitudinal clearance, so positive over-width or over-length is rejected under deck in the current geometry. This is not a top-stowage booking request. Report killed_slots as broken space in TEU, including directly killed cells and every cell above each kill in its physical column, counted once each. The upward closure changes only the broken-space metric, not the hard reservation rule. Fewer lost TEU is a D11 level-4 tie-break only after hard feasibility, full intake and move count.", "parameters" = { "under_deck_allowed" = { "value" = true, "unit" = "1", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q13" } }, "killed_slots_must_be_empty" = { "value" = true, "unit" = "1", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q13" } }, "tie_break_metric" = { "value" = "killed_slots", "unit" = "1", "provenance" = { "assumption" = "D61/C4 broken space: killed_slots reports unique lost capacity in TEU for the reported stow state: directly killed physical 20-foot cells plus every cell above each kill in its physical column, counted once. This upward closure is metric-only; hard reservations remain the directly killed cells. Minimise only at D11 level 4 after hard feasibility, full intake and move count." } }, "objective_priority" = { "value" = 4, "unit" = "1", "provenance" = { "assumption" = "D11/D61: killed slots never trade against hard rules, intake or move count." } } } }
+
+[[rules]]
+id = "port.e3.yard_height"
+title = "Port yard equipment stack-height limit"
+source = "expert"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Height limit per port, e.g. only 2 or 3 high (E3)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62", "experiments/fleet/orders/w2-x1-contract.md: A8, user decision 29 Oct 2026", "docs/decisions.md: D62 amendment, two heights"]
+parameters = { "max_tiers" = { "profile_field" = "port.yard_max_tiers", "unit" = "tiers", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q3", "assumption" = "D62 amendment/A8: independent synthetic yard limit; resolve min(block.max_tiers, yard_max_tiers, equipment.stack_tiers), without quay H. Laem Chabang-like yard height 5 is synthetic RTG; expert Q3 establishes quay H=8 only." } }, "activation_path" = { "value" = "Always active legacy port.e3.yard_height through its declared profile/override field; independent of activation.rule_freeze_v1. Additional D62 governing height/crossing rules apply only after the shared switch is on.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D61/D62/D64; Addendum 1 A3-A5", "assumption" = "Addendum 1 A5: explicit activation route; legacy port rules remain active while new D61/D62/D64 rules are gated." } } }
+expert_rules = ["E3"]
+open_question = []
+description = "D62 amendment/A8: retained yard equipment storage limit. Effective yard height is min(block.max_tiers, yard_max_tiers, equipment.stack_tiers), without quay H; yard_blocking_tiers(port, block) exposes this same threshold for yard crossing."
+
+[[rules]]
+id = "port.e3.quay_height"
+title = "Port quay-crane reachable height"
+source = "expert"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Height limit per port, e.g. only 2 or 3 high (E3)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62"]
+parameters = { "max_on_deck_tiers" = { "profile_field" = "port.quay_crane.max_on_deck_tiers", "unit" = "tiers", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q3", "assumption" = "D62/C6: current-call quay cap equals H; max_lift_height_m is informational." } }, "activation_path" = { "value" = "Always active legacy port.e3.quay_height through its declared profile/override field; independent of activation.rule_freeze_v1. Additional D62 governing height/crossing rules apply only after the shared switch is on.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D61/D62/D64; Addendum 1 A3-A5", "assumption" = "Addendum 1 A5: explicit activation route; legacy port rules remain active while new D61/D62/D64 rules are gated." } } }
+expert_rules = ["E3"]
+open_question = []
+description = "D62/C6: retained compatibility field equals current-call H. Count on-deck tiers from the deck or hatch-cover base (lowest tier = 1), independently of metre-based lift height and vessel limits. Later calls use PortCall.max_on_deck_tiers with the same semantics."
+pending_contract = { "hardness" = "hard", "enforced_by" = ["checker", "feasibility_engine", "solver"], "activation" = "activation.rule_freeze_v1 = true; merged quay-height metadata replaces the legacy active metadata only at the shared reviewed flip.", "title" = "Quay-crane maximum on-deck tier height", "description" = "D62/C6 and A8: H >= 1 governs only on-deck ship tiers at the resolved call port, independently of yard storage and crossing heights. No on-deck stack may exceed H tiers from the deck or hatch-cover base (lowest tier = 1), in addition to vessel limits and D55. The retained current-call max_on_deck_tiers compatibility cap equals explicit H; without an explicit H declaration its existing legacy cap remains applicable. Later calls resolve PortCall.archetype and known quay limits, with unknown environment-only limits skipped rather than replaced by placeholders. Metre-based lift height stays informational. Laem Chabang-like quay H=8 is expert Q3, 28 Oct 2026; its independent synthetic RTG yard remains 5. D62/A8 provenance is carried by the pending parameters while the existing active references remain byte-identical off.", "parameters" = { "max_on_deck_tiers" = { "profile_field" = "port.quay_crane.max_on_deck_tiers", "unit" = "tiers", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q3", "assumption" = "D62/C6: current-call quay cap equals H; max_lift_height_m is informational." } }, "activation_path" = { "value" = "The legacy max_on_deck_tiers cap remains applicable. With activation.rule_freeze_v1 = true, the merged D62 on-deck quay H contract applies wherever the resolved operational port height is known. Current-call quay_crane.max_on_deck_tiers equals explicit H; later calls resolve PortCall.archetype and retain identical tier-count semantics. Environment-only profiles have unknown crane limits and are skipped. Yard height remains independent.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md and experiments/fleet/orders/w2-x1-contract.md", "clause" = "D62 amendment; C6; Addendum 1 A3/A8", "assumption" = "Additive pending metadata preserves every active legacy quay-height field with rule-freeze-v1 off. The existing shared snapshot projection activates this complete merged contract only with the one switch on." } }, "max_crane_height_tiers" = { "profile_field" = "port.max_crane_height_tiers", "unit" = "tiers", "provenance" = { "assumption" = "User specification D62 amendment/A8: quay/on-deck height only; Laem Chabang-like H=8 from expert Q3, 28 Oct 2026; other quay values synthetic from existing crane parameters. Yard height is independent.", "document" = "docs/decisions.md and experiments/fleet/orders/w2-x1-contract.md", "clause" = "D62 amendment; C6; Addendum 1 A8" } } } }
+
+[[rules]]
+id = "port.call.draft"
+title = "Maximum port or berth draught for the call"
+source = "port"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Displacement/draft within limits; GM ≥ minimum after free-surface correction"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "max_draft" = { "unit" = "m", "provenance" = { "assumption" = "Per-call berth/tide limit; profile cites terminal source. Example published port values in data-sources section 4 are anchors, not universal limits." }, "profile_field" = "port.max_draught_m" }, "activation_path" = { "value" = "Always active legacy port.call.draft through its declared profile/override field; independent of activation.rule_freeze_v1. Additional D62 governing height/crossing rules apply only after the shared switch is on.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D61/D62/D64; Addendum 1 A3-A5", "assumption" = "Addendum 1 A5: explicit activation route; legacy port rules remain active while new D61/D62/D64 rules are gated." } } }
+
+[[rules]]
+id = "port.call.length"
+title = "Maximum permitted vessel length at port"
+source = "port"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["One container per slot; 20ft vs 40ft slot compatibility; 20s not on top of 40s **(verify)**"]
+enforced_by = ["checker", "feasibility_engine", "linear_model", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "max_loa" = { "unit" = "m", "provenance" = { "assumption" = "Per-port berth length allowance must be declared; Bangkok source snippet remains provisional. Required lookup: instance.rule_overrides['port.call.length']['max_loa']. Require explicit synthetic/public policy; no numeric fallback." }, "profile_field" = "instance.rule_overrides" }, "activation_path" = { "value" = "Always active legacy port.call.length through its declared profile/override field; independent of activation.rule_freeze_v1. Additional D62 governing height/crossing rules apply only after the shared switch is on.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D61/D62/D64; Addendum 1 A3-A5", "assumption" = "Addendum 1 A5: explicit activation route; legacy port rules remain active while new D61/D62/D64 rules are gated." } } }
+
+[[rules]]
+id = "expert.moves.top_access"
+title = "Only top cargo is physically reachable"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Physical access: only the top box is reachable; below deck needs the hatch cover clear; ship stacks fill bottom-up"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "top_only" = { "unit" = "1", "provenance" = { "assumption" = "domain.md Moves: both ship and yard extraction require an unobstructed upper path." }, "value" = true } }
+open_question = [1]
+description = "Blocking boxes must be lifted first; attempted moves are rejected with this id."
+
+[[rules]]
+id = "expert.moves.hatch_clear"
+title = "Below-deck access requires clear and open hatch"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Physical access: only the top box is reachable; below deck needs the hatch cover clear; ship stacks fill bottom-up"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "hatch_geometry" = { "unit" = "1", "provenance" = { "assumption" = "Each HatchCover links hold_stack_ids below it and deck_stack_ids whose boxes must be removed before lifting it. Stack.hatch_cover_id supplies the inverse relation." }, "profile_field" = "vessel.hatch_covers" }, "hold_stack_ids" = { "unit" = "1", "provenance" = { "assumption" = "Hold stacks reached through this hatch cover." }, "profile_field" = "vessel.hatch_covers.hold_stack_ids" }, "deck_stack_ids" = { "unit" = "1", "provenance" = { "assumption" = "Cover blockers: these deck stacks must be clear before lifting this hatch cover." }, "profile_field" = "vessel.hatch_covers.deck_stack_ids" } }
+open_question = [1]
+
+[[rules]]
+id = "expert.moves.bottom_up"
+title = "Ship stacks must fill bottom-up"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Physical access: only the top box is reachable; below deck needs the hatch cover clear; ship stacks fill bottom-up"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/domain.md: Constraint catalogue", "docs/data-sources.md: section 4"]
+parameters = { "support_required" = { "unit" = "1", "provenance" = { "assumption" = "domain.md Moves: placement requires lowest available supported compatible slot; no floating box or gap." }, "value" = true } }
+
+[[rules]]
+id = "iscode.stability.margin"
+title = "Stability safety margin tie-break"
+source = "IS Code"
+scope = "global"
+hardness = "soft"
+status = "provisional"
+domain_rows = ["Displacement/draft within limits; GM ≥ minimum after free-surface correction", "IMO 2008 Intact Stability Code GZ-curve criteria: area to 30° ≥ 0.055 m·rad, to 40° ≥ 0.09, 30–40° ≥ 0.03; GZ ≥ 0.20 m at ≥ 30°; max GZ at ≥ 25°; initial GM ≥ 0.15 m **(verify)**", "Trim and list within limits"]
+enforced_by = ["solver"]
+references = ["docs/decisions.md: D11"]
+parameters = { "objective_priority" = { "unit" = "1", "provenance" = { "assumption" = "D11 priority 4: stability margin after all hard rules, intake and move count." }, "value" = 4 } }
+description = "Select larger normalised minimum stability margin among equal-move feasible plans. The margin definition is provisional and must be recorded by the solver."
+penalty = { "kind" = "tie_break", "priority" = 4, "description" = "Maximise the minimum normalised safety margin only among plans with equal moves; never relax a hard bound." }
+
+[[rules]]
+id = "iacs.strength.margin"
+title = "Strength safety margin tie-break"
+source = "IACS"
+scope = "global"
+hardness = "soft"
+status = "provisional"
+domain_rows = ["Shear force and bending moment along the hull within limits at each station"]
+enforced_by = ["solver"]
+references = ["docs/decisions.md: D11"]
+parameters = { "objective_priority" = { "unit" = "1", "provenance" = { "assumption" = "D11 priority 4: strength margin after all hard rules, intake and move count." }, "value" = 4 } }
+description = "Select larger normalised minimum station strength margin among equal-move feasible plans; no fixed weighted sum with moves or hard violations."
+penalty = { "kind" = "tie_break", "priority" = 4, "description" = "Maximise the minimum normalised safety margin only among plans with equal moves; never relax a hard bound." }
+[[rules]]
+id = "port.dg.refused_class"
+title = "Port-refused dangerous-goods classes"
+source = "expert"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Stowage categories and special provisions (e.g. on deck only, away from living quarters, protected from heat)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62", "docs/decisions.md: D66", "experiments/fleet/orders/w2-x1-contract.md: Addendum 1 A3-A4", "IMDG Code Amendment 42-24: 2.0.3"]
+parameters = { "classes" = { "profile_field" = "port.port_rules", "unit" = "1", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q9", "assumption" = "Expert Q9, 28 Oct 2026: select the matching PortRuleRef.params.classes for this rule id; Laem Chabang-like value is [7]. No rule ref means no port-specific class restriction." } }, "include_subsidiary_risks" = { "value" = false, "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D66", "assumption" = "D66/Addendum 1 A4: primary class only; subsidiary risks and recursive DangerousGoods.additional declarations do not trigger this port rule." } }, "activation_path" = { "value" = "activation.rule_freeze_v1 = true AND matching PortRuleRef in the resolved current/later PortProfile.port_rules; no matching rule ref means no restriction. Later calls resolve from PortCall.archetype.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D61/D62/D64; Addendum 1 A3-A5", "assumption" = "Addendum 1 A5: explicit activation route; legacy port rules remain active while new D61/D62/D64 rules are gated." } } }
+expert_rules = ["E12"]
+open_question = [9]
+description = "D61/C5 and D66/A4: primary class only. Primary class 7 is refused for loading, discharge or restow at this port; generators exclude it for POL, POD and transshipment calls. IMDG 2.0.3 gives class 7 precedence, so class 7 is never a subsidiary risk; no recursive compound-declaration expansion applies. A box staying on board without handling is not refused by C5 as written; expert follow-up Q27 remains open. Resolve later calls from PortCall.archetype and check the destination/transshipment profile at POL; D63 reclassification stays deferred."
+
+[[rules]]
+id = "port.dg.direct_delivery"
+title = "Dangerous goods delivered directly at ship side"
+source = "expert"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Stowage categories and special provisions (e.g. on deck only, away from living quarters, protected from heat)"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62", "docs/decisions.md: D66", "experiments/fleet/orders/w2-x1-contract.md: Addendum 1 A3-A4"]
+parameters = { "classes" = { "profile_field" = "port.port_rules", "unit" = "1", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q9", "assumption" = "Expert Q9, 28 Oct 2026: select the matching PortRuleRef.params.classes for this rule id; Laem Chabang-like value is [1]. No rule ref means no port-specific class restriction." } }, "include_subsidiary_risks" = { "value" = false, "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D66", "assumption" = "D66/Addendum 1 A4: primary class only; subsidiary risks and recursive DangerousGoods.additional declarations do not trigger this port rule." } }, "activation_path" = { "value" = "activation.rule_freeze_v1 = true AND matching PortRuleRef in the resolved current/later PortProfile.port_rules; no matching rule ref means no restriction. Later calls resolve from PortCall.archetype.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D61/D62/D64; Addendum 1 A3-A5", "assumption" = "Addendum 1 A5: explicit activation route; legacy port rules remain active while new D61/D62/D64 rules are gated." } }, "exempt_divisions" = { "value" = [], "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D66", "assumption" = "D66/A4 default empty exemption set: all class-1 divisions, including 1.4S, apply. A confirmed exemption can be declared by PortRuleRef.params.exempt_divisions; no implicit exemption." } } }
+expert_rules = ["E12"]
+open_question = [9]
+description = "D61/C5 and D66/A4: primary class only; no subsidiary-risk or recursive compound-declaration matching. Configured parent class 1 includes all class-1 divisions and compatibility groups, including 1.4S and 1.1D, unless listed in exempt_divisions (default empty). Preserve original hazard class strings for independent IMDG checks. Container.direct_delivery is derived from the current port rule and must match in both directions. Such exports load from a truck in one lift and imports discharge to a truck in one lift; never place or retrieve them in the yard. APPROXIMATION: no truck timing is modelled; the direct-delivery box is available when its lift comes."
+
+[[rules]]
+id = "port.e3.quay_crossing"
+title = "Quay crane crossing past on-deck stacks"
+source = "user specification (D62)"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Height limit per port, e.g. only 2 or 3 high (E3)", "Physical access: only the top box is reachable; below deck needs the hatch cover clear; ship stacks fill bottom-up"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: Q3, 28 Oct 2026", "docs/decisions.md: D62 amendment, separate quay and yard heights", "experiments/fleet/orders/w2-x1-contract.md: C6 and Addendum 1 A2/A3/A8", "docs/decisions.md: D69, sequencing and counted blocker clearance"]
+parameters = { "max_crane_height_tiers" = { "profile_field" = "port.max_crane_height_tiers", "unit" = "tiers", "provenance" = { "document" = "docs/decisions.md and experiments/fleet/orders/w2-x1-contract.md", "clause" = "D62 amendment; C6; Addendum 1 A2/A8; D69", "assumption" = "On-deck ship stack height >= the resolved quay H blocks crossing. This parameter never supplies the independent yard threshold." } }, "berthing_side" = { "profile_field" = "port.berthing_side", "unit" = "1", "provenance" = { "assumption" = "User specification (D62), C6: ship side at quay; port default is synthetic." } }, "activation_path" = { "value" = "INACTIVE while activation.rule_freeze_v1 is false. When true, ship-side crossing applies at an operational resolved PortProfile with known max_crane_height_tiers and berthing_side; later calls resolve PortCall.archetype. Environment-only unknown crane limits are skipped. No PortRuleRef opt-in.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md and experiments/fleet/orders/w2-x1-contract.md", "clause" = "D62; Addendum 1 A2/A3/A8; D69", "assumption" = "One shared rule-freeze-v1 switch; separate ship geometry and quay H from yard equipment limits." } } }
+expert_rules = ["E3"]
+open_question = []
+description = "D62/C6, Addenda A2/A8 and D69: H governs ship-side crossing; an on-deck stack at height >= H blocks the path, excluding source and target stacks. Ship checks on-deck stacks only; hold contents never block because cranes pass over hatch covers. Load/discharge from/to quay or either truck checks rows strictly between the quay-side edge and the target row in its bay, including both 20-foot sub-bays for a 40-foot footprint. A same-bay shift goes directly along the boom through rows strictly between source and target. A shift to another bay goes via the quay: source row to quay edge in the source bay, then quay edge to target row in the target bay. A hatch-cover lift off/on checks rows between the quay-side edge and the cover's quay-side-most row; its own rows are already clear, and the cover lands on the quay. APPROXIMATION: cranes do not gantry with cargo over the ship; a cover landing elsewhere requires a labelled approximation. Under D69, Stage A without a ship-side shift action sequences a bay's far rows before near rows. An action that brings a row to H while a farther row in the same bay still needs a lift at this call is a dead end. Existing H-high blockers require a counted shift where the action is available; unshiftable fixed-background blockers are rejected and counted. Unknown later-call crane limits are skipped, never replaced by placeholders."
+
+[[rules]]
+id = "port.e3.yard_crossing"
+title = "Yard crane crossing past stacks at the effective yard limit"
+source = "user specification (D62)"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Height limit per port, e.g. only 2 or 3 high (E3)", "Physical access: only the top box is reachable; below deck needs the hatch cover clear; ship stacks fill bottom-up"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: Q3, 28 Oct 2026", "docs/decisions.md: D62 amendment, separate quay and yard heights", "experiments/fleet/orders/w2-x1-contract.md: C6 and Addendum 1 A2/A3/A8", "docs/decisions.md: D69, sequencing and counted blocker clearance"]
+parameters = { "yard_max_tiers" = { "profile_field" = "port.yard_max_tiers", "unit" = "tiers", "provenance" = { "document" = "docs/decisions.md and experiments/fleet/orders/w2-x1-contract.md", "clause" = "D62 amendment; C6; Addendum 1 A2/A8; D69", "assumption" = "Independent port-wide yard storage limit; resolve the minimum with the actual traversed block and its referenced equipment." } }, "block_max_tiers" = { "profile_field" = "port.yard.blocks.max_tiers", "unit" = "tiers", "provenance" = { "document" = "docs/decisions.md and experiments/fleet/orders/w2-x1-contract.md", "clause" = "D62 amendment; C6; Addendum 1 A2/A8; D69", "assumption" = "Use the actual traversed YardBlock, not the minimum or maximum of unrelated blocks." } }, "equipment_stack_tiers" = { "profile_field" = "port.equipment.stack_tiers", "unit" = "tiers", "provenance" = { "document" = "docs/decisions.md and experiments/fleet/orders/w2-x1-contract.md", "clause" = "D62 amendment; C6; Addendum 1 A2/A8; D69", "assumption" = "Resolve each traversed block.equipment_id to its Equipment.stack_tiers; clearance notation is informational, not the storage limit." } }, "truck_lane_side" = { "profile_field" = "port.yard.blocks.truck_lane_side", "unit" = "1", "provenance" = { "assumption" = "User specification (D62), C6: low is row 1 side, high is row n side; low default is synthetic." } }, "effective_yard_limit" = { "value" = "min(block.max_tiers, yard_max_tiers, equipment.stack_tiers)", "unit" = "tiers", "provenance" = { "document" = "docs/decisions.md and experiments/fleet/orders/w2-x1-contract.md", "clause" = "D62 amendment; Addendum 1 A8", "assumption" = "Quay H is not an input. Yard storage and crossing share the same effective independent yard limit." } }, "activation_path" = { "value" = "INACTIVE while activation.rule_freeze_v1 is false. When true, yard crossing applies at an operational resolved PortProfile with known block, yard and referenced equipment limits; H is not required for yard crossing. Environment-only unknown operating limits are skipped. No PortRuleRef opt-in.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md and experiments/fleet/orders/w2-x1-contract.md", "clause" = "D62 amendment; Addendum 1 A2/A8; D69", "assumption" = "One shared switch, independent yard activation inputs. Known yard operating limits do not depend on known quay H." } } }
+expert_rules = ["E3"]
+open_question = []
+description = "D62/C6, Addenda A2/A8 and D69: yard blocking height is yard_blocking_tiers(port, block) = min(block.max_tiers, yard_max_tiers, equipment.stack_tiers), independent of quay H. A yard stack at or above that effective yard height blocks its crossing path; exclude source and target stacks. Yard 40'/45' footprints check the union of every 20-foot bay they span. Same-bay yard lifts cross intervening rows; lane lifts use rows toward truck_lane_side; between blocks use both lane crossings. APPROXIMATION: between yard bays in one block, traverse intervening rows in the source bay, then intervening bays at the destination row. D69 yard dig-out clears a blocking top box first through legal crossing paths, counting each extra lift. It requires no new planner action. Clearance notation remains informational and never substitutes for the effective storage/equipment limit. Laem Chabang-like yard height remains synthetic RTG 5 with activation on or off; no quay H value enlarges or shrinks it."
+
+[[rules]]
+id = "port.stability.cargo_operations"
+title = "Stability throughout cargo operations"
+source = "expert"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Displacement/draft within limits; GM ≥ minimum after free-surface correction", "Trim and list within limits", "Shear force and bending moment along the hull within limits at each station"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["docs/expert/2026-10-28-written-answers.md: 28 Oct 2026", "experiments/fleet/orders/w2-x1-contract.md", "docs/decisions.md: D61 / D62", "docs/decisions.md: D64", "experiments/fleet/orders/w2-x1-contract.md: Addendum 1 A5", "Indian Register of Shipping Main Rules Pt3 Ch6 2.1.9 (harbour bending envelope)", "2008 IS Code B 3.7 (timber analogy; synthetic in-port adoption)", "stability.open_hatch_immersion"]
+parameters = { "intermediate_stability" = { "value" = true, "unit" = "1", "provenance" = { "document" = "Expert written answers, 28 Oct 2026", "clause" = "Q6" } }, "equilibrium_frequency" = { "value" = "every_lift", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "D64: load, discharge, restow and hatch-cover events; include arrival through final pre-departure state." } }, "minimum_fluid_gm_m" = { "value" = 0.15, "unit" = "m", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "APPROXIMATION: D64 synthetic/borrowed GM floor, based on IS Code B 3.7 timber analogy; not expert numeric confirmation." } }, "max_list_rad" = { "profile_field" = "vessel.hull.max_list_rad", "unit" = "rad", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "APPROXIMATION: D64 adopts the synthetic vessel operating list limit; crane practice remains unverified." } }, "maximum_trim_angle_rad" = { "value" = 0.017453292519943295, "unit" = "rad", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "APPROXIMATION: D64 trim bound is Lpp * tan(this angle); one degree is synthetic/borrowed, not expert confirmed." } }, "length_between_perpendiculars_m" = { "profile_field" = "vessel.hull.lpp_m", "unit" = "m", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "D64 uses vessel Lpp for maximum trim magnitude Lpp * tan(maximum_trim_angle_rad)." } }, "harbour_wave_bending_fraction" = { "value" = 0.5, "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "APPROXIMATION: D64/IRS Pt3 Ch6 2.1.9 harbour envelope applied to D22 synthetic permissible: sign-specific still-water limit plus this fraction of absolute wave moment." } }, "harbour_bending_mode" = { "value" = "per_sign", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "D64: hog <= perm_hog + 0.5*abs(M_wv,hog); sag <= perm_sag + 0.5*abs(M_wv,sag). Never combine unlike signs." } }, "strength_sampling_events" = { "value" = ["hatch_cover_events", "bay_completions", "last_discharge", "departure"], "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "APPROXIMATION: D64 strength sampling includes these states and the top surrogate states." } }, "strength_top_surrogate_count" = { "value" = 3, "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "APPROXIMATION: D64 samples the top 3 states by max-over-stations surrogate ratio." } }, "shear_limit_mode" = { "value" = "seagoing", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "APPROXIMATION: D64 still-water shear limit equals the seagoing permissible." } }, "open_hatch_condition" = { "value" = "immersion_angle_exceeds_max_list_rad", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "APPROXIMATION: D64 deck-edge/coaming immersion angle at equilibrium trim must exceed max_list_rad; open hatches may then remain open." } }, "maximum_draughts" = { "value" = ["berth", "load_line"], "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "D64 applies both upper draught limits, with no lower draught bound in port." } }, "lower_draught_bound_applied" = { "value" = false, "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "D64 excludes minimum forward draught and seagoing lower draught/displacement bands from in-port criteria." } }, "ballast_changeover_mode" = { "value" = "single_index_k", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "APPROXIMATION: D64 arrival fills up to longest passing prefix k, departure fills thereafter, each with HEEL-P/S transfer preserving pair total; pump time is not modelled." } }, "report_ballast_changeover_index" = { "value" = true, "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "D64 checker report records changeover move index k." } }, "departure_full_seagoing_check" = { "value" = true, "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D64", "assumption" = "D64 departure keeps full D57 checks; in-port criteria omit seagoing GZ/weather, D40 trim window, lower forward draught, visibility and lashing accelerations." } }, "activation_path" = { "value" = "activation.rule_freeze_v1 = true: automatically applies to every operational current-port cargo sequence; no PortRuleRef opt-in. Checker evaluates every lift and departure keeps full D57.", "unit" = "1", "provenance" = { "document" = "docs/decisions.md", "clause" = "D61/D62/D64; Addendum 1 A3-A5", "assumption" = "Addendum 1 A5: explicit activation route; legacy port rules remain active while new D61/D62/D64 rules are gated." } } , "equilibrium_residual_tolerance" = {"value" = 2e-06, "unit" = "1", "provenance" = {"document" = "Existing checker numerical policy, 28 Oct 2026", "clause" = "D64 P1; stability._in_port_criteria, hydrostatics._solve, stability_tables._solve, stability_equilibrium.floating_equilibrium", "assumption" = "Numerical implementation default, not a safety allowance or expert-confirmed physical limit. P1 maximum finite scaled residual norm; larger residuals fail hard."}}, "equilibrium_solver_tolerance" = {"value" = 2e-10, "unit" = "1", "provenance" = {"document" = "Existing checker numerical policy, 28 Oct 2026", "clause" = "D64 P1; stability._in_port_criteria, hydrostatics._solve, stability_tables._solve, stability_equilibrium.floating_equilibrium", "assumption" = "Numerical implementation default, not a safety allowance or expert-confirmed physical limit. Direct/table bounded least-squares xtol, ftol and gtol."}}, "equilibrium_max_function_evaluations" = {"value" = 100, "unit" = "1", "provenance" = {"document" = "Existing checker numerical policy, 28 Oct 2026", "clause" = "D64 P1; stability._in_port_criteria, hydrostatics._solve, stability_tables._solve, stability_equilibrium.floating_equilibrium", "assumption" = "Numerical implementation default, not a safety allowance or expert-confirmed physical limit. Direct/table bounded least-squares max_nfev; function evaluations, not a universal iteration cap."}}, "equilibrium_root_tolerance" = {"value" = 1e-09, "unit" = "1", "provenance" = {"document" = "Existing checker numerical policy, 28 Oct 2026", "clause" = "D64 P1; stability._in_port_criteria, hydrostatics._solve, stability_tables._solve, stability_equilibrium.floating_equilibrium", "assumption" = "Numerical implementation default, not a safety allowance or expert-confirmed physical limit. Table root tolerance and coupled liquid/hull root xtol."}}, "equilibrium_liquid_cg_tolerance_m" = {"value" = 1e-07, "unit" = "m", "provenance" = {"document" = "Existing checker numerical policy, 28 Oct 2026", "clause" = "D64 P1; stability._in_port_criteria, hydrostatics._solve, stability_tables._solve, stability_equilibrium.floating_equilibrium", "assumption" = "Numerical implementation default, not a safety allowance or expert-confirmed physical limit. Liquid/hull CG residual norm must be strictly below this value."}}, "equilibrium_liquid_fixed_point_iterations" = {"value" = 6, "unit" = "1", "provenance" = {"document" = "Existing checker numerical policy, 28 Oct 2026", "clause" = "D64 P1; stability._in_port_criteria, hydrostatics._solve, stability_tables._solve, stability_equilibrium.floating_equilibrium", "assumption" = "Numerical implementation default, not a safety allowance or expert-confirmed physical limit. Maximum initial liquid/hull fixed-point iterations before coupled-root fallback."}}, "equilibrium_liquid_root_max_function_evaluations" = {"value" = 80, "unit" = "1", "provenance" = {"document" = "Existing checker numerical policy, 28 Oct 2026", "clause" = "D64 P1; stability._in_port_criteria, hydrostatics._solve, stability_tables._solve, stability_equilibrium.floating_equilibrium", "assumption" = "Numerical implementation default, not a safety allowance or expert-confirmed physical limit. Coupled liquid/hull root maxfev option; function evaluations, not physical lifts."}}, "equilibrium_nonconvergence_is_hard" = {"value" = true, "unit" = "1", "provenance" = {"document" = "Existing checker numerical policy, 28 Oct 2026", "clause" = "D64 P1; stability._in_port_criteria, hydrostatics._solve, stability_tables._solve, stability_equilibrium.floating_equilibrium", "assumption" = "Numerical implementation default, not a safety allowance or expert-confirmed physical limit. P1 rejects non-convergence; never certify an unfinished equilibrium solve."}} }
+expert_rules = ["E13"]
+open_question = [6]
+description = "D61/C7 and D64/A5: equilibrium is checked every lift from arrival to final pre-departure state: upright floating equilibrium, fluid GM >= 0.15 m, absolute list <= max_list_rad, absolute trim <= Lpp * tan(maximum_trim_angle_rad), berth/load-line upper draughts and no lower draught bound. Open hatch immersion angle must exceed the list limit. At sampled states apply harbour BM per sign (permissible hog/sag plus 0.5 absolute wave moment of the same sign), seagoing still-water shear limits and static stack limits where operations are not load-only. Strength samples are hatch-cover events, bay completions, after last discharge, departure and top 3 surrogate ratios. A single ballast changeover k uses arrival then departure fills with HEEL-P/S pair-total-preserving transfers; report k. APPROXIMATION: the single total order of MovePlan.moves represents concurrent cranes; GM/list/trim/open-hatch/harbour/shear bounds, sampling, two-vector ballast and instantaneous changeover remain synthetic or borrowed. Seagoing GZ/weather, D40 trim window, lower forward draught, visibility and lashing are departure-only; departure retains full D57 checks. Feasibility uses only a sound necessary in-port screen and must not reject a checker-acceptable state; outside qualified linear domains it returns undecided. P1 numerical policy pins the scaled equilibrium residual tolerance, solver tolerances, bounded-solver function evaluations and liquid fixed-point iteration limit; non-convergence fails hard. Cross-reference stability.open_hatch_immersion: the same physical condition is reported there by strength for an actually immersed open coaming, while D64 P4 adds the strict immersion angle margin above the list limit (including deck edges). These are explained views of one flooding guard, not independent unexplained hazards."
+
+[[rules]]
+id = "stability.open_hatch_immersion"
+title = "Open hatch coamings remain above the waterline"
+source = "expert"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["Displacement/draft within limits; GM ≥ minimum after free-surface correction", "Physical access: only the top box is reachable; below deck needs the hatch cover clear; ship stacks fill bottom-up"]
+enforced_by = ["checker", "feasibility_engine", "solver"]
+references = ["port.stability.cargo_operations", "docs/decisions.md: D64 P4", "docs/expert/2026-10-28-written-answers.md: Q6, 28 Oct 2026", "src/stowage/checker/strength.py: check_strength open-coaming guard", "src/stowage/checker/stability.py: _in_port_criteria"]
+expert_rules = ["E13"]
+open_question = [6]
+description = "Global physical guard applies in port and seagoing states: every corner of an open hatch coaming must remain strictly above the waterline at actual floating equilibrium. An immersed or just-wetted lip fails under stability.open_hatch_immersion because flooded/open-hold buoyancy is not modelled; missing coaming geometry cannot certify a dry opening. This existing physical guard is active independently of rule-freeze-v1. Cross-reference port.stability.cargo_operations: when activated, D64 P4 reports the same physical condition through its aggregate id with an additional strict immersion angle margin above vessel.hull.max_list_rad, including deck edges and open coamings at equilibrium trim. The two ids describe actual immersion and the preventive angular margin, respectively; neither permits flooding. APPROXIMATION: D64's operating angular margin is synthetic; this catalogue addition changes no checker behaviour."
+parameters = { operating_conditions = { value = ["port", "seagoing"], unit = "1", provenance = { assumption = "Existing strength checker open-coaming guard applies to either operating phase; global scope includes both." } }, minimum_coaming_clearance_m = { value = 0, unit = "m", provenance = { assumption = "Existing physical dry-opening boundary: waterline contact or immersion cannot use closed-coaming buoyancy." } }, strict_clearance = { value = true, unit = "1", provenance = { assumption = "Existing check rejects lip <= waterline, so clearance must be strictly positive." } }, activation_path = { value = "Existing physical strength guard whenever ShipState.covers_off is nonempty, in port or seagoing states; independent of activation.rule_freeze_v1. D64 angular-margin companion is gated by that switch through port.stability.cargo_operations.", unit = "1", provenance = { assumption = "Describe existing checker applicability without changing execution or activating D64." } } }
+
+# D74: metadata stays visible but INACTIVE with rule-freeze-v1 off.
+# Native model/design hours and hourly rates are explicit; all SI time conversions use 3600 s/h.
+[[rules]]
+id = "port.ballast.transfer_rate"
+title = "Reported ballast delay and hard HEEL/pumping-window safety"
+source = "port"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+domain_rows = ["In-port ballast changeover pumping time and rate-limited HEEL split path"]
+enforced_by = ["checker", "solver"]
+references = ["docs/decisions.md: D74 specification, parameter amendment and user decision reporting R1 delay, 29 Oct 2026", "experiments/stability/in-port-criteria/DESIGN.md: Addendum B.1, B.2, B.3, B.5 and B.8 (rev 3.2)", "docs/decisions.md: D64 and D75", "experiments/review/w2/logic-d74.md", "https://www.marine-marchande.net/Voyage/Bruno/Henrike-Schepers/specification-container-feeders-800.pdf", "https://www.damen.com/vessels/cargo/container-feeders/container-feeder-800", "https://www.framo.com/media/azejuddh/framo-anti-heeling_system-brochure-small.pdf"]
+description = "D74 is a plan-level port contract, reported separately from port.stability.cargo_operations. Under the 29 Oct user decision, R1 is reported ballast delay in hours per plan and per method, beside moves and outside the D11 objective: a positive delay causes no R1 violation or rejection. Hardness applies only to R2, the reachable rate-limited HEEL split path with exact re-evaluation of off-ideal splits, and the pumping-window stability checks. All actual pumping states, including waiting while cranes pause or departure is delayed, must pass the hard window checks at both endpoint fills with maximum worked-tank FSM; reporting delay never bypasses stability. It runs after the independent parallel per-state P1-P6 checks; it is not an additional per-state P-criterion. All methods use the same actual final lift order (D75), and the finisher still prefers the smallest P among candidates passing every hard check. The D64/D75 legacy unlimited-transfer/pump-time-not-modelled note is superseded only when this D74 contract is activated by the single shared rule-freeze-v1 switch. APPROXIMATION: amended rates, crane productivity, allowances and window/path surrogates are synthetic, UNVERIFIED pending expert Q23/Q30. Public Damen and Framo anti-heeling figures provide context, not verified ratings for our synthetic ships. APPROXIMATION: gravity draining is not modelled (conservative). This entry is inactive metadata with the switch off and changes no legacy rule semantics or execution."
+
+[rules.parameters.evaluation_level]
+value = "plan"
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8" }
+
+[rules.parameters.activation_path]
+value = "INACTIVE metadata while rule_freeze_v1_enabled() is false. Active only when the single activation.rule_freeze_v1 switch is true, for every operational current-port plan; no PortRuleRef opt-in. R2 HEEL path and all actual pumping-window states, including waiting, remain hard; R1 is reported delay only, with no R1 rejection. Missing operating parameters fail closed when active. Legacy off-state output and other rule semantics are unchanged."
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8" }
+
+[rules.parameters.ballast_pump_m3_h]
+profile_field = "vessel.ballast_system.ballast_pump_m3_h"
+unit = "m^3/h"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md; experiments/review/w2/logic-d74.md", "clause" = "D74 parameter amendment, 29 Oct 2026; DESIGN Addendum B.2/B.8", "assumption" = "APPROXIMATION: synthetic, UNVERIFIED pending expert Q23/Q30. Amended ship profile values 500/700/1000 m^3/h for 500/800/1700; illustrative ranges 200-500/300-700/400-1000 m^3/h remain UNVERIFIED. The parameter amendment selected the lenient end of these ranges; the subsequent user decision reports R1 delay without rejection. Gravity draining is not modelled (conservative). These are source context, never catalogue fallbacks. Keep the native model unit; multiply time in seconds by 1/3600 to obtain hours." }
+
+[rules.parameters.heel_transfer_m3_h]
+profile_field = "vessel.ballast_system.heel_transfer_m3_h"
+unit = "m^3/h"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md; experiments/review/w2/logic-d74.md; Damen Container Feeder 800 specification and Framo anti-heeling brochure", "clause" = "D74 parameter amendment, 29 Oct 2026; DESIGN Addendum B.2/B.8", "url" = "https://www.marine-marchande.net/Voyage/Bruno/Henrike-Schepers/specification-container-feeders-800.pdf", "assumption" = "APPROXIMATION: synthetic, UNVERIFIED pending expert Q23/Q30. Amended ship profile values 600/1000/1500 m^3/h for 500/800/1700. Public context: Damen CF800 anti-heeling system 1120 m^3/h; Framo commercial anti-heeling pumps 200-2200 m^3/h. This commercial context supersedes the obsolete vessel-specific HEEL bands; it does not verify our synthetic rates. Both public source URLs are in this rule's references and the logic review. Source context only, never fallback. R2 multiplies t_lift_s by 1/3600 before using this hourly rate." }
+
+[rules.parameters.max_cranes]
+profile_field = "vessel.ballast_system.max_cranes"
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md; experiments/review/w2/logic-d74.md", "clause" = "D74 parameter amendment, 29 Oct 2026; DESIGN Addendum B.2/B.8", "assumption" = "APPROXIMATION: synthetic, UNVERIFIED pending expert Q23/Q30. Profile maxima 2/2/3 cranes for 500/800/1700 are not runtime defaults. Working cranes are the minimum of this field and the existing canonical port.quay_crane.count." }
+
+[rules.parameters.gross_moves_per_hour]
+profile_field = "port.quay_crane.gross_moves_per_hour"
+unit = "moves/h"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md; experiments/review/w2/logic-d74.md", "clause" = "D74 parameter amendment, 29 Oct 2026; DESIGN Addendum B.2/B.8", "assumption" = "APPROXIMATION: synthetic, UNVERIFIED pending expert Q23/Q30. Amended productivity is 25 gross moves/h per crane at main ports; 20 at small_feeder/cat_lai_like; illustrative range 20-35 remains UNVERIFIED. No public capacity source verified. More/faster cranes shorten nominal pumping time available and may increase reported R1 delay; they also reduce the per-lift time for the hard R2 HEEL path. R1 delay is not a rejection constraint." }
+
+[rules.parameters.pre_operation_allowance_h]
+profile_field = "port.quay_crane.pre_operation_allowance_h"
+unit = "h"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md; experiments/review/w2/logic-d74.md", "clause" = "D74 parameter amendment, 29 Oct 2026; DESIGN Addendum B.2/B.8", "assumption" = "APPROXIMATION: synthetic, UNVERIFIED pending expert Q23/Q30. Amended A=1.0 h in profiles, illustrative range 0.25-1.5 h. Convert to seconds with 3600 s/h. This is a declared operating allowance, never an inferred wait or fallback." }
+
+[rules.parameters.post_operation_allowance_h]
+profile_field = "port.quay_crane.post_operation_allowance_h"
+unit = "h"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md; experiments/review/w2/logic-d74.md", "clause" = "D74 parameter amendment, 29 Oct 2026; DESIGN Addendum B.2/B.8", "assumption" = "APPROXIMATION: synthetic, UNVERIFIED pending expert Q23/Q30. Amended B=1.0 h in profiles, illustrative range 0.25-1.0 h. Convert to seconds with 3600 s/h. Available only when k=n+1 and no in-port state requires departure ballast." }
+
+[rules.parameters.port_cranes]
+profile_field = "port.quay_crane.count"
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.2/B.8", "assumption" = "Existing canonical model count is the DESIGN count_per_berth quantity; any count_per_berth property is an alias, not an independent parameter. Use actual declared cranes working the ship subject to ship max_cranes." }
+
+[rules.parameters.water_density_kg_m3]
+profile_field = "port.water_density_kg_m3"
+unit = "kg/m^3"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.2/B.8; D34", "assumption" = "Use actual declared port water density: ballast is taken from and returned to this harbour. Do not replace it by a fixed sea-water density or a tank content density." }
+
+[rules.parameters.seconds_per_hour]
+value = 3600
+unit = "s/h"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8", "assumption" = "Exact unit conversion. Profile rates and allowances deliberately retain the design/model native m^3/h, moves/h and h units; every formula below explicitly converts seconds and hours." }
+
+[rules.parameters.sequence_contract]
+value = "Use the actual ordered plan after any shared terminal resequencing. Count every MovePlan.moves entry as one lift, including hatch-cover events; n is the number of entries and states run from s_0 to s_n."
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8; D75", "assumption" = "APPROXIMATION: D64/D75 one total crane order is shared identically by every method. This metadata does not reorder lifts or alter move counts." }
+
+[rules.parameters.working_cranes_formula]
+value = "n_c = min(port_cranes, max_cranes)"
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8" }
+
+[rules.parameters.lift_time_formula]
+value = "t_lift_s = 3600 / (gross_moves_per_hour * n_c)"
+unit = "s"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; DESIGN Addendum B.1/B.8", "assumption" = "Native gross crane moves per hour per crane. Higher productivity or concurrency reduces nominal pumping time available, potentially increasing reported R1 delay and tightening R2 per-lift HEEL reach. R1 delay never rejects a plan." }
+
+[rules.parameters.pumped_mass_formula]
+value = "P_kg = max(sum_positive_delta_kg, sum_negative_delta_kg), over non-HEEL adjustable tanks; delta_kg = m_dep_kg - m_arr_kg."
+unit = "kg"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8", "assumption" = "R1 lower bound on water actually pumped. An internal transfer pumps each kg once, while intake and discharge each pump their own kg; do not substitute sum(abs(delta_kg)) for P." }
+
+[rules.parameters.absolute_change_formula]
+value = "abs_change_kg = sum(abs(delta_kg)) = sum_positive_delta_kg + sum_negative_delta_kg, over non-HEEL adjustable tanks."
+unit = "kg"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; DESIGN Addendum B.1/B.8", "assumption" = "Diagnostic total only; pump time and reported R1 ballast delay use P=max(sum_positive_delta_kg,sum_negative_delta_kg), not this larger total. Neither this diagnostic nor an R1 time overrun is a rejection constraint." }
+
+[rules.parameters.pump_time_formula]
+value = "tau_s = 3600 * P_kg / (water_density_kg_m3 * ballast_pump_m3_h)"
+unit = "s"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8", "assumption" = "Equivalent native-hours formula tau_h = P_kg/(rho_port_kg_m3*R_ballast_m3_h). All comparisons use consistent units; 3600 converts the resulting hours to seconds." }
+
+[rules.parameters.available_time_formula]
+value = "T_s(k) = 3600 * A_h + k * t_lift_s + (3600 * B_h if k == n + 1 else 0)"
+unit = "s"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; DESIGN Addendum B.1/B.8", "assumption" = "A is the pre-operation allowance, B is post-operation. This is the nominal schedule reference for reported delay, not a hard pumping deadline. Departure ballast must physically be in place for any state using it; waiting for pumping does not waive its hard stability checks. Post-operation allowance is usable only if no in-port state needs departure ballast (k=n+1)." }
+
+[rules.parameters.r1_pass_condition]
+value = "tau_s <= T_s(k)"
+unit = "1"
+superseded_by = "ballast_delay_formula"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; historical DESIGN Addendum B.1/B.8", "assumption" = "Historical compatibility diagnostic only; not a hard constraint, acceptance test or rejection condition. The active R1 contract reports ballast_delay_h through ballast_delay_formula." }
+
+[rules.parameters.ballast_delay_formula]
+value = "ballast_delay_h = max(0, (tau_s - T_s(k)) / 3600)"
+unit = "h"
+provenance = { "document" = "docs/decisions.md", "clause" = "D74 user decision, 29 Oct 2026", "assumption" = "Nonnegative extra pumping time beyond the nominal crane-plan allowance, converted from seconds to hours. Report per plan and per method; positive delay never emits an R1 violation or rejection." }
+
+[rules.parameters.ballast_delay_reporting]
+value = "Report ballast_delay_h in hours per plan and per method, beside moves. It is outside the D11 move objective; positive delay never emits an R1 violation or rejects a plan. R2 and actual pumping-window stability, including waiting states, stay hard."
+unit = "1"
+provenance = { "document" = "docs/decisions.md", "clause" = "D74 user decision, 29 Oct 2026; D11", "assumption" = "Operational waiting time is a reported quantity, not an objective penalty or an R1 safety rejection. Reporting delay never bypasses the hard stability checks during pumping." }
+
+[rules.parameters.r1_delay_is_rejection]
+value = false
+unit = "1"
+provenance = { "document" = "docs/decisions.md", "clause" = "D74 user decision, 29 Oct 2026", "assumption" = "R1 delay is reported only and cannot cause a changeover_time violation or any renamed R1 rejection." }
+
+[rules.parameters.ballast_delay_in_objective]
+value = false
+unit = "1"
+provenance = { "document" = "docs/decisions.md", "clause" = "D74 user decision, 29 Oct 2026; D11", "assumption" = "Report delay beside moves without adding it to the D11 objective or trading hard feasibility for less delay." }
+
+[rules.parameters.pumping_window_formula]
+value = "m = ceil(max(0, tau_s - 3600 * A_h) / t_lift_s) is an equivalent-lift duration. Hard checks cover actual pumping states, including waiting, at arrival and departure endpoint fills with maximum worked-tank FSM. If m exceeds the preceding lifts, no fictitious pre-arrival or negative-index states are implied. For k=n+1 the nominal reference also includes B."
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; DESIGN Addendum B.1/B.8", "assumption" = "APPROXIMATION: all actual pumping states, including waiting, must pass P1-P6 at both endpoint fills with maximum FSM for changed tanks. Near-linear trim/list/draught and that FSM charge stand in for checking every intermediate fill; mild KM(draught) nonlinearity is not searched. Equivalent-lift accounting does not define a waiting scheduler or create pre-arrival states. Pass-1 k remains candidate-independent; delay reporting cannot bypass stability." }
+
+[rules.parameters.pumping_window_waiting_states_hard]
+value = true
+unit = "1"
+provenance = { "document" = "docs/decisions.md", "clause" = "D74 user decision, 29 Oct 2026", "assumption" = "Every actual state used during pumping, including waiting for cranes or departure, remains subject to hard pumping-window stability checks at both endpoint fills with maximum worked-tank FSM. This contract does not prescribe a future waiting-scheduling algorithm." }
+
+[rules.parameters.pumping_window_endpoint_fills]
+value = ["arrival", "departure"]
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8" }
+
+[rules.parameters.worked_tanks_maximum_fsm]
+value = true
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8", "assumption" = "The changed tanks are being worked: charge maximum FSM in both endpoint checks and re-run arrival-fill window states with that charge." }
+
+[rules.parameters.heel_step_formula]
+value = "delta_kg = water_density_kg_m3 * heel_transfer_m3_h * t_lift_s / 3600"
+unit = "kg"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8", "assumption" = "R2 hourly HEEL rate must be converted using t_lift_s/3600 h; omitting 1/3600 would overstate per-lift pump authority by 3600." }
+
+[rules.parameters.heel_initial_reach_formula]
+value = "Reach_0 = [s_arr_kg - rho_port_kg_m3 * R_heel_m3_h * A_h, s_arr_kg + rho_port_kg_m3 * R_heel_m3_h * A_h] intersect [lo_0, hi_0]"
+unit = "kg"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8", "assumption" = "Arrival split is declared by the generator; the assumed 50/50 pre-fill is not set by this rule or by the catalogue. Initial allowance A is already in hours." }
+
+[rules.parameters.heel_reach_formula]
+value = "Reach_i = (Reach_(i-1) + [-delta_kg, delta_kg]) intersect [lo_i, hi_i]"
+unit = "kg"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8" }
+
+[rules.parameters.heel_path_method]
+value = "R2 passes iff every Reach_i is nonempty. A forward-backward sweep computes the feasible band and chooses the feasible split closest to each unconstrained ideal."
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8", "assumption" = "APPROXIMATION: admissible intervals use list linearisation at equilibrium GM_fluid with exact endpoint verification. A missed feasible path is a false rejection reported as heel_path_linearised_miss; every used off-ideal split is rechecked exactly, never accepted solely from linearisation." }
+
+[rules.parameters.heel_path_exact_recheck]
+value = true
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8", "assumption" = "Re-evaluate every chosen split differing from the ideal with the exact state check, in parallel. A physical failure belongs to port.stability.cargo_operations, not the pump-rate diagnostic." }
+
+[rules.parameters.heel_total_preserved_at_changeover]
+value = true
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8", "assumption" = "D64 HEEL total is unchanged at k, so the constrained HEEL path is continuous through the single changeover; only the split varies." }
+
+[rules.parameters.exact_recheck_failure_rule]
+value = "port.stability.cargo_operations"
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.1/B.8" }
+
+[rules.parameters.rate_violation_codes]
+value = ["heel_step"]
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; DESIGN Addendum B.1/B.8", "assumption" = "Only R2 HEEL rate/path failure emits a rate violation. Pumping-window physical failures use the existing port.stability.cargo_operations rule; R1 delay emits no violation code." }
+
+[rules.parameters.reported_metrics]
+value = ["changeover_k", "lifts_after_k", "pumped_mass_t", "abs_change_t", "pump_time_required_h", "pump_time_available_h", "ballast_delay_h", "pump_window_lifts", "ballast_pump_m3_h", "t_lift_s", "cranes", "gross_moves_per_hour", "heel_step_limit_t", "heel_max_step_t", "heel_max_ideal_step_t", "heel_path_feasible", "heel_path_linearised_miss", "rate_check_rule"]
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; DESIGN Addendum B.3/B.8", "assumption" = "Reports retain the DESIGN names and add ballast_delay_h in hours per plan and per method, beside moves and outside the D11 objective. Convert internal kg to t by /1000 and seconds to h by /3600; reports never change the physical formula units. R1 delay is not a rule violation." }
+
+[rules.parameters.finisher_rate_margin_formula]
+value = "c_rate = (C_kg - P_kg) / C_kg, where C_kg = water_density_kg_m3 * ballast_pump_m3_h * T_s(k) / 3600"
+unit = "1"
+superseded_by = "ballast_delay_formula"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; historical DESIGN Addendum B.5/B.8", "assumption" = "Historical compatibility diagnostic only; not a hard constraint, search bound or acceptance condition. A negative historical margin never rejects a candidate. The active R1 contract reports ballast_delay_h; exact pumping-window, suffix and R2 safety checks remain mandatory." }
+
+[rules.parameters.finisher_preference]
+value = "Among candidates passing every exact check prefer the smallest P; seed order arrival fills, D58 witness, berth witness, LP seed with minimum P."
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; DESIGN Addendum B.5/B.8; D11", "assumption" = "The finisher still prefers the smallest P among candidates passing all hard safety checks. R1 delay is reported beside moves and is not a search constraint or part of the D11 objective. R2 and pumping-window checks remain hard; the pumped-mass preference is subordinate to hard feasibility." }
+
+[rules.parameters.mask_screens_pump_rates]
+value = false
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74 user decision, 29 Oct 2026; DESIGN Addendum B.5/B.8", "assumption" = "The mask stays necessary and does not screen pump rates. The whole-plan checker/finisher reports R1 delay without rejection and owns hard R2 and pumping-window checks; no feasibility-engine rate enforcement is claimed." }
+
+[rules.parameters.missing_parameter_policy]
+value = "When active, missing declared operating rates/counts/allowances or non-operational unknown limits fail closed; never infer zero pumping cost or use synthetic catalogue fallback values."
+unit = "1"
+provenance = { "document" = "docs/decisions.md and experiments/stability/in-port-criteria/DESIGN.md", "clause" = "D74; DESIGN Addendum B.2/B.8", "assumption" = "Model/loader optional fields preserve saved off-state inputs. Operational rate validation belongs to the activated checker/finisher, not this metadata loader." }
+
+# Existing project-contract emissions: metadata only; diagnostics are not physical infeasibility.
+# Source identifies the user D62 catalogue-consistency registration ruling. The
+# underlying contracts remain D11/D68 and the code references below, not new
+# expert physics requirements. Reuse the existing source vocabulary so live
+# processes can revalidate this content with their already imported loader.
+
+[[rules]]
+source = "user specification (D62)"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+enforced_by = ["checker"]
+expert_rules = []
+open_question = []
+id = "checker.internal_error"
+title = "Checker component did not complete normally"
+domain_rows = ["Checker completion and internal or numerical diagnostics"]
+references = ["src/stowage/checker/full.py: _failed and component exception boundaries", "docs/decisions.md: D68, per-method failure cause and undecided reporting", "Project contract: no unfinished checker evaluation certifies a plan"]
+description = "Existing checker diagnostic for an internal or numerical exception while a required component is evaluated. Hard means the plan is not certified; classify the result as diagnostic/compute-undecided, never as proof of physical infeasibility. Preserve the component and exception details so an implementation or numerical failure can be distinguished from an actual constraint violation. Catalogue registration adds no exception handling, execution path or physical limit."
+parameters = { "classification" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Project reporting taxonomy. A hard diagnostic denies certification; it does not assert a physically impossible loading condition." }, "value" = "diagnostic" }, "physical_violation" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "D68: diagnostic/compute-undecided or invalid-input outcomes must be reported separately from observed physical-rule failures." }, "value" = false }, "diagnostic_kind" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Classify the already emitted diagnostic without executing, suppressing or replacing the existing checker path." }, "value" = "internal_or_numerical_error" } }
+
+[[rules]]
+source = "user specification (D62)"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+enforced_by = ["checker"]
+expert_rules = []
+open_question = []
+id = "checker.missing_vessel_data"
+title = "Required vessel evidence is unavailable"
+domain_rows = ["Checker evidence completeness for attempted vessel-physics parts"]
+references = ["src/stowage/checker/full.py: missing hull or bridge evidence", "src/stowage/model/vessel.py: Vessel.hull and Vessel.bridge optional diagnostic contracts", "docs/decisions.md: D68, missing-input and undecided reporting"]
+description = "Existing fail-closed diagnostic when an attempted checker part lacks required vessel evidence, such as a hull or bridge. This is an undecided missing-data result, not physical infeasibility: a geometry-only slice or incomplete model cannot certify that physics part, but the absent evidence does not demonstrate that no valid loading condition exists. No missing numerical data is replaced by a permissive default."
+parameters = { "classification" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Project reporting taxonomy. A hard diagnostic denies certification; it does not assert a physically impossible loading condition." }, "value" = "diagnostic" }, "physical_violation" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "D68: diagnostic/compute-undecided or invalid-input outcomes must be reported separately from observed physical-rule failures." }, "value" = false }, "diagnostic_kind" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Classify the already emitted diagnostic without executing, suppressing or replacing the existing checker path." }, "value" = "missing_required_evidence" }, "hull_evidence" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Optional model field. Whether it is required depends on the checker component actually attempted; the catalogue does not infer a hull or change geometry-only parsing." }, "profile_field" = "vessel.hull" }, "bridge_evidence" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Optional model field. Missing required visibility/conning evidence remains unknown, never evidence of unrestricted visibility." }, "profile_field" = "vessel.bridge" } }
+
+[[rules]]
+source = "user specification (D62)"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+enforced_by = ["checker"]
+expert_rules = []
+open_question = []
+id = "checker.invalid_ballast"
+title = "Declared departure ballast input is invalid"
+domain_rows = ["Departure ballast declaration input validity"]
+references = ["src/stowage/checker/full.py: _ballast and departure_condition", "src/stowage/model/plan.py: BallastCondition", "docs/decisions.md: D11 and D68, hard input validity versus physical infeasibility"]
+description = "Existing diagnostic for an invalid departure ballast declaration, including an unknown or fixed tank, a non-finite mass, or a mass outside the declared capacity. Hard rejects certification of that candidate input. Report it as invalid-input/undecided with respect to physical infeasibility; it does not prove that no feasible ballast programme exists. This metadata does not change the existing treatment of omitted adjustable tanks, fixed contents or the freeze-gated D64/D74 checks."
+parameters = { "classification" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Project reporting taxonomy. A hard diagnostic denies certification; it does not assert a physically impossible loading condition." }, "value" = "diagnostic" }, "physical_violation" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "D68: diagnostic/compute-undecided or invalid-input outcomes must be reported separately from observed physical-rule failures." }, "value" = false }, "diagnostic_kind" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Classify the already emitted diagnostic without executing, suppressing or replacing the existing checker path." }, "value" = "invalid_ballast_input" } }
+
+[[rules]]
+source = "user specification (D62)"
+scope = "port"
+hardness = "hard"
+status = "provisional"
+enforced_by = ["checker", "feasibility_engine", "solver"]
+expert_rules = []
+open_question = []
+id = "port.call.profile_resolution"
+title = "Required call profile could not be resolved"
+domain_rows = ["Required current or later call profile resolution"]
+references = ["src/stowage/moves/_projection.py: existing profile-resolution diagnostic", "src/stowage/model/port.py: PortCall.archetype and PortProfile", "docs/decisions.md: D62/D66 later-call capabilities and D68 diagnostic reporting"]
+description = "Existing diagnostic when a consumer cannot resolve or validate a required current/later call profile, such as an explicit unknown archetype or a contradictory declared identity. The result is undecided capability/input resolution, not proof of physical infeasibility. It supplies no crane, yard or berth limit and does not replace legitimately unknown environment-only capabilities with guessed values. Follow the existing consuming path and its activation gate; catalogue registration creates no new execution or operating restriction."
+parameters = { "classification" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Project reporting taxonomy. A hard diagnostic denies certification; it does not assert a physically impossible loading condition." }, "value" = "diagnostic" }, "physical_violation" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "D68: diagnostic/compute-undecided or invalid-input outcomes must be reported separately from observed physical-rule failures." }, "value" = false }, "diagnostic_kind" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Classify the already emitted diagnostic without executing, suppressing or replacing the existing checker path." }, "value" = "call_profile_resolution" }, "declared_archetypes" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Resolve declared archetypes through the shared port-profile lookup; do not invent an operational profile for an environment-only call." }, "profile_field" = "instance.rotation.calls.archetype" }, "activation_path" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Register the already emitted diagnostic without activating additional physics or capability checks." }, "value" = "Diagnostic only on existing paths that attempt required profile resolution; follow the consumer activation path, including activation.rule_freeze_v1 for gated D62/D64 paths. No new PortRuleRef opt-in or operational restriction." } }
+
+[[rules]]
+source = "user specification (D62)"
+scope = "global"
+hardness = "hard"
+status = "provisional"
+enforced_by = ["checker", "solver"]
+expert_rules = []
+open_question = []
+id = "objective.all_loaded"
+title = "Every required load-list container is aboard at departure"
+domain_rows = ["All required current-call cargo is loaded in the completed plan"]
+references = ["src/stowage/checker/full.py: check, shut_out and objective.all_loaded", "src/stowage/model/instance.py: Instance.load_list", "docs/decisions.md: D11, full required intake before move minimisation"]
+description = "Existing hard completed-plan requirement: every container in instance.load_list must be aboard at departure. A prefix may legitimately leave required cargo in the yard or on a truck, so this is not a prefix physics predicate or a feasibility-mask rule. Missing required intake rejects that candidate plan; it is a plan contract, not a claim of physical infeasibility of the instance. Catalogue registration does not change move counting, shut-out reporting, objective priorities or any current acceptance behavior."
+parameters = { "classification" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "D11 required-intake contract, separate from physical constraints and from checker execution diagnostics." }, "value" = "plan_contract" }, "evaluation_level" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Evaluate the completed current-call departure, not every partial decode or prefix." }, "value" = "plan" }, "physical_violation" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "A missing required box is a candidate-plan contract violation; it does not prove that no physically feasible plan could load the instance." }, "value" = false }, "required_load_list" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "The existing declared required load list is authoritative; no catalogue fallback or subset is invented." }, "profile_field" = "instance.load_list" }, "check_stage" = { "unit" = "1", "provenance" = { "document" = "src/stowage/checker/full.py, src/stowage/model and docs/decisions.md", "clause" = "D11; D68; checker/full.py existing emitted contract", "assumption" = "Match the existing final-ship comparison and shut-out reporting in full.check." }, "value" = "departure" } }

@@ -1,0 +1,263 @@
+{
+  "case_id": "impossible-bay-2",
+  "sentence": "Bay 2 is closed.",
+  "passed": true,
+  "parsed": {
+    "case_id": "impossible-bay-2",
+    "sentence": "Bay 2 is closed.",
+    "parsed": {
+      "schema_version": "stowlm.reader/2",
+      "constraint": {
+        "type": "close_bay",
+        "bay": 2
+      }
+    },
+    "parser": {
+      "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":2}}",
+      "request_id": "5d4b903c-51fa-4037-8a41-8e64e4e9f9c0",
+      "cost_usd": "0.001314",
+      "usage": {
+        "input_tokens": 531,
+        "output_tokens": 153,
+        "cached_tokens": 0
+      },
+      "parser": "SparkParser",
+      "model": "muse-spark-1.3",
+      "adapter_sha256": null,
+      "purpose": "reader-d222-followup",
+      "prompt_sha256": "065a5f19df17b643a7165a577b6de3e138e0551c8578b1a08cc91575ad4db00b",
+      "reservation_context_bound_tokens": 32768
+    }
+  },
+  "proof": {
+    "schema_version": "stowlm.refusal-evidence/1",
+    "parsed": {
+      "schema_version": "stowlm.reader/2",
+      "constraint": {
+        "type": "close_bay",
+        "bay": 2
+      }
+    },
+    "facts": [
+      {
+        "id": "preplanning-proof",
+        "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+      },
+      {
+        "id": "cell-capacity",
+        "text": "The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+      },
+      {
+        "id": "no-fit-boxes",
+        "text": "Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122."
+      }
+    ],
+    "required_fact_ids": [
+      "preplanning-proof",
+      "cell-capacity",
+      "no-fit-boxes"
+    ],
+    "alternatives": [],
+    "clarifications": [],
+    "nearest_alternative_id": null,
+    "checker_called": false,
+    "checker_report": null,
+    "automatically_applied": false,
+    "status": "static_impossible",
+    "proof": {
+      "load_boxes": [
+        {
+          "container_id": "QZXU0000009",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000014",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000020",
+          "length_ft": 20,
+          "demand_cells": 1,
+          "size_compatible_footprints": 68,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000035",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000040",
+          "length_ft": 20,
+          "demand_cells": 1,
+          "size_compatible_footprints": 68,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000056",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000061",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000077",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000082",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000098",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000101",
+          "length_ft": 20,
+          "demand_cells": 1,
+          "size_compatible_footprints": 68,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000117",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        },
+        {
+          "container_id": "QZXU0000122",
+          "length_ft": 40,
+          "demand_cells": 2,
+          "size_compatible_footprints": 34,
+          "allowed_footprints": 0
+        }
+      ],
+      "load_box_count": 13,
+      "demand_cells": 23,
+      "demand_teu": 23,
+      "physical_cells": 68,
+      "open_cells": 0,
+      "nofit_ids": [
+        "QZXU0000009",
+        "QZXU0000014",
+        "QZXU0000020",
+        "QZXU0000035",
+        "QZXU0000040",
+        "QZXU0000056",
+        "QZXU0000061",
+        "QZXU0000077",
+        "QZXU0000082",
+        "QZXU0000098",
+        "QZXU0000101",
+        "QZXU0000117",
+        "QZXU0000122"
+      ],
+      "retained_conflicts": [],
+      "proven_impossible": true,
+      "proof_reasons": [
+        "total_open_cell_shortfall",
+        "no_size_compatible_allowed_footprint"
+      ],
+      "per_box_open_cells": {
+        "QZXU0000009": 0,
+        "QZXU0000014": 0,
+        "QZXU0000020": 0,
+        "QZXU0000035": 0,
+        "QZXU0000040": 0,
+        "QZXU0000056": 0,
+        "QZXU0000061": 0,
+        "QZXU0000077": 0,
+        "QZXU0000082": 0,
+        "QZXU0000098": 0,
+        "QZXU0000101": 0,
+        "QZXU0000117": 0,
+        "QZXU0000122": 0
+      },
+      "constraint": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 2
+        }
+      },
+      "planning_attempted": false,
+      "checker_called": false,
+      "checker_report": null,
+      "scope": "necessary geometry only; screen pass does not guarantee a plan"
+    }
+  },
+  "explanation": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122.",
+  "explainer": {
+    "explainer": "SparkRefusalExplainer",
+    "model": "muse-spark-1.3",
+    "adapter_sha256": null,
+    "purpose": "reader-d222-followup",
+    "proof_sha256": "17dcdababfaf9008b875d2efe9ab67ef4ab11a7ef40144232d9bf85225c19736",
+    "source_sha256": "1217a010ca85e6a5e95a85d765bdffd7682b3bcf8342152e9cee96a9e3bf03ec",
+    "prompt_sha256": "e20032efe27ed197b5889e736de7fbf767e1c3ac16583cf07a5bc027f840c85f",
+    "contribution": "selects_and_orders_exact_software_owned_fact_sentences",
+    "reservation_context_bound_tokens": 32768,
+    "request_id": "6410cd77-1134-4cec-8447-e2c9ede2e962",
+    "cost_usd": "0.002398",
+    "usage": {
+      "input_tokens": 572,
+      "output_tokens": 396,
+      "cached_tokens": 0
+    },
+    "output_sha256": "5c26dd6e9937beef89343c461f696bd88492cae731020f81316e119191e2d5b0",
+    "validated": true,
+    "generated_selection": {
+      "alternative_id": null,
+      "clarification_id": null,
+      "schema_version": "stowlm.refusal-explanation/1",
+      "statements": [
+        {
+          "fact_id": "preplanning-proof",
+          "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+        },
+        {
+          "fact_id": "cell-capacity",
+          "text": "The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+        },
+        {
+          "fact_id": "no-fit-boxes",
+          "text": "Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122."
+        }
+      ],
+      "status": "static_impossible"
+    },
+    "cited_fact_ids": [
+      "preplanning-proof",
+      "cell-capacity",
+      "no-fit-boxes"
+    ]
+  },
+  "no_planner_called": true,
+  "original_instruction_changed": false
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic suite output. No model, network or suite execution required. -->
+<testsuites tests="6" failures="1" errors="1" skipped="2">
+  <testsuite name="outer" tests="6" failures="1" errors="1" skipped="2">
+    <testsuite name="synthetic" tests="6" failures="1" errors="1" skipped="2">
+      <testcase name="passes" time="0.1" />
+      <testcase name="passes_again" time="0.2" />
+      <testcase name="fails" time="0.3"><failure message="synthetic failure" /></testcase>
+      <testcase name="errors" time="0.4"><error message="synthetic error" /></testcase>
+      <testcase name="skips" time="0"><skipped type="pytest.skip" /></testcase>
+      <testcase name="expected_failure" time="0"><skipped type="pytest.xfail" /></testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

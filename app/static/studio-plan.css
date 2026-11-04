@@ -1,0 +1,18 @@
+/* The shell owns type and surfaces; this turn arranges content and supplies v3 actor dots. */
+.st-plan-view { display: grid; gap: 12px; width: 100%; max-width: 460px; min-width: 0; }
+.st-plan-rule { display: grid; gap: 6px; }
+.st-plan-labels { display: grid; gap: 6px; min-width: 0; }
+.st-plan-provenance { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+.st-plan-credits { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.st-plan-engine-dot { display: inline-block; width: 6px; height: 6px; margin: 0 6px 1px 0; vertical-align: middle; border-radius: 50%; background: var(--st-c-engine); }
+.st-plan-progress { display: grid; gap: 8px; }
+.st-plan-progress-head { display: grid; justify-items: start; gap: 4px; min-width: 0; }
+.st-plan-replay { min-height: 32px; }
+.st-plan-rules { display: grid; grid-template-columns: minmax(0, 1fr); gap: 7px; }
+.st-plan-rule-row { display: flex; align-items: flex-start; gap: 7px; min-width: 0; }
+.st-plan-rule-row > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+.st-plan-tick { display: inline-block; width: 14px; flex-shrink: 0; }
+.st-plan-result { display: grid; gap: 6px; }
+.st-plan-check::before { background: var(--st-c-checker); }
+.st-plan-details > div { margin-top: 10px; }
+.st-plan-view [hidden] { display: none !important; }

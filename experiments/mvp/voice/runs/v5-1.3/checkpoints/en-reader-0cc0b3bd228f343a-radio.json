@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "not_an_instruction",
+      "reason": "No stowage restriction instruction detected.",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 2240,
+    "audio_seconds": 2.208,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00010",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "e277b525f2b547c6be7c8fc3085d35b5",
+    "session_id": "voyager/transcribe/21EE53C5741047FDA0A84D51E751B290"
+  },
+  "asr_latency_s": 0.8490517089958303,
+  "audio_sha256": "06478d0ee63859f72d50f3c2dc5465322db381b1dbb178d4bb703062722242da",
+  "canonical": {
+    "refusal": {
+      "code": "not_an_instruction",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 2.0588523750193417,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.001043",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "a404cddc9bed08c203262064f64cd4e410fd11123559ef3dcc57e6df1203067c",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "56a306f3-7823-4065-ae85-945f6521769b"
+  },
+  "parser_latency_s": 1.1148989579523914,
+  "script": "Keep bay 1 sealed shut.",
+  "source_id": "reader-0cc0b3bd228f343a",
+  "started_utc": "2026-11-01T01:33:22.577922+00:00",
+  "status": "complete",
+  "transcript": "Heat day day one seal shut."
+}

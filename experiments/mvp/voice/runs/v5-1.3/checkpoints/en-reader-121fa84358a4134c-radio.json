@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "ambiguous",
+      "reason": "Unclear restriction and missing hold/deck zone for tier limit.",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 5120,
+    "audio_seconds": 5.088,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00025",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "144c0c7c202e49a88c99a3e4b073c16d",
+    "session_id": "voyager/transcribe/699C37125AF849609D35365A4DB0979B"
+  },
+  "asr_latency_s": 1.216792458028067,
+  "audio_sha256": "59b53ca32ee7a22a04e334443b8eeca2e08f278f08f1989cdba91f0dee1e805d",
+  "canonical": {
+    "refusal": {
+      "code": "ambiguous",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 3.1499262920115143,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0018547",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "74c5bd626edfdd4902d19b1ec72151cb98b309d273673957c1d7ff727029d4aa",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "0a866253-2416-43b0-ac47-bda54def9985"
+  },
+  "parser_latency_s": 1.8346829160000198,
+  "script": "Bay 23's weather-deck stacks must top out at 2 tiers.",
+  "source_id": "reader-121fa84358a4134c",
+  "started_utc": "2026-11-01T01:33:57.175401+00:00",
+  "status": "complete",
+  "transcript": "Bay 23's 23's weather detect stats must pop out at two tiers."
+}

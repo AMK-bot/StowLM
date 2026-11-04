@@ -1,0 +1,3113 @@
+{
+  "format": "xray.trace/1",
+  "source": {
+    "kind": "recorded",
+    "label": "Recorded answer",
+    "synthetic": true
+  },
+  "sentence": "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.",
+  "context": {
+    "id": "feeder_500",
+    "bays": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23
+    ],
+    "max_tiers_by_bay": {
+      "1": {
+        "hold": 2,
+        "deck": 5
+      },
+      "2": {
+        "hold": 2,
+        "deck": 5
+      },
+      "3": {
+        "hold": 2,
+        "deck": 5
+      },
+      "21": {
+        "hold": 2,
+        "deck": 5
+      },
+      "22": {
+        "hold": 2,
+        "deck": 5
+      },
+      "23": {
+        "hold": 2,
+        "deck": 5
+      }
+    },
+    "max_tiers": {
+      "hold": 3,
+      "deck": 5
+    },
+    "has_accommodation": true,
+    "hatch_covers": [
+      "HC-002-P",
+      "HC-002-S",
+      "HC-006-P",
+      "HC-006-S",
+      "HC-010-P",
+      "HC-010-S",
+      "HC-014-P",
+      "HC-014-S",
+      "HC-018-P",
+      "HC-018-S",
+      "HC-022-P",
+      "HC-022-S"
+    ],
+    "ports": [
+      "SGSIN",
+      "MYPKG",
+      "THLCH"
+    ],
+    "allowed_imdg_classes": [
+      "1",
+      "2",
+      "2.1",
+      "2.2",
+      "2.3",
+      "3",
+      "4.1",
+      "5.1",
+      "5.2",
+      "6.1",
+      "6.2",
+      "7",
+      "8"
+    ]
+  },
+  "decoding_policy": "reader-v3-schema-mask/2-d224",
+  "probability_basis": "full-vocabulary softmax of raw logits before the mask",
+  "reason_basis": "inferred by whole-token counterfactual grammar; compound failures use not_in_grammar",
+  "top_k": 8,
+  "steps": [
+    {
+      "step": 1,
+      "top_k": [
+        {
+          "token_id": 7564,
+          "token": "{\"",
+          "probability": 0.9999985011978811,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 30274,
+          "token": "[{\"",
+          "probability": 6.681510950426889e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 11906,
+          "token": " {\"",
+          "probability": 3.3596746944332745e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 48989,
+          "token": "{'",
+          "probability": 1.9444305389199448e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2733,
+          "token": "[\"",
+          "probability": 6.719772132789958e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 110113,
+          "token": "[]{\"",
+          "probability": 5.930178093261419e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 5473,
+          "token": "{{",
+          "probability": 4.012559211667502e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 103,
+          "token": "{",
+          "probability": 3.005267989320754e-08,
+          "blocked": false,
+          "reason": null
+        }
+      ],
+      "chosen": {
+        "token_id": 7564,
+        "token": "{\"",
+        "probability": 0.9999985011978811
+      },
+      "json_so_far": "{\"",
+      "is_stop": false
+    },
+    {
+      "step": 2,
+      "top_k": [
+        {
+          "token_id": 35957,
+          "token": "schema",
+          "probability": 0.9999975545202503,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 17541,
+          "token": " schema",
+          "probability": 2.1907810245865106e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 30938,
+          "token": "kind",
+          "probability": 1.4005194527405505e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 312,
+          "token": "st",
+          "probability": 5.6145744568439175e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 156803,
+          "token": "schule",
+          "probability": 8.67775965819969e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2584,
+          "token": "type",
+          "probability": 3.6174284174018054e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 6291,
+          "token": "chema",
+          "probability": 2.6465671667668768e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 144992,
+          "token": "sentence",
+          "probability": 2.299377401897957e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 35957,
+        "token": "schema",
+        "probability": 0.9999975545202503
+      },
+      "json_so_far": "{\"schema",
+      "is_stop": false
+    },
+    {
+      "step": 3,
+      "top_k": [
+        {
+          "token_id": 18778,
+          "token": "_version",
+          "probability": 0.999981581363361,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 4518,
+          "token": " version",
+          "probability": 7.4111982927678765e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 23264,
+          "token": "_VERSION",
+          "probability": 2.947971006064132e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 62311,
+          "token": "-version",
+          "probability": 1.8161922500812168e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 13635,
+          "token": " Version",
+          "probability": 1.018791518560804e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 170680,
+          "token": "_versions",
+          "probability": 8.851414105185125e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3105,
+          "token": "version",
+          "probability": 4.812430375843506e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 7301,
+          "token": "Version",
+          "probability": 3.704259901641467e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 18778,
+        "token": "_version",
+        "probability": 0.999981581363361
+      },
+      "json_so_far": "{\"schema_version",
+      "is_stop": false
+    },
+    {
+      "step": 4,
+      "top_k": [
+        {
+          "token_id": 4971,
+          "token": "\":\"",
+          "probability": 0.999999779341186,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 55267,
+          "token": "\\\":\\\"",
+          "probability": 6.719780721634593e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 143069,
+          "token": "loos",
+          "probability": 8.883566562482639e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8306,
+          "token": "hold",
+          "probability": 8.025633576862987e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 508,
+          "token": "=\"",
+          "probability": 7.082596772860513e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 110260,
+          "token": "ˈ",
+          "probability": 5.8716789570319e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 825,
+          "token": "11",
+          "probability": 5.60279520123085e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 84308,
+          "token": " `\"",
+          "probability": 5.60279520123085e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 4971,
+        "token": "\":\"",
+        "probability": 0.999999779341186
+      },
+      "json_so_far": "{\"schema_version\":\"",
+      "is_stop": false
+    },
+    {
+      "step": 5,
+      "top_k": [
+        {
+          "token_id": 312,
+          "token": "st",
+          "probability": 0.9999945929810398,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1048,
+          "token": "ST",
+          "probability": 9.422403869936625e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 145314,
+          "token": "stay",
+          "probability": 8.851529278522712e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 403,
+          "token": "ст",
+          "probability": 8.315242230120177e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 4423,
+          "token": "ست",
+          "probability": 4.0525254064059244e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8747,
+          "token": "sta",
+          "probability": 1.9142774561193462e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 15688,
+          "token": "スト",
+          "probability": 1.5381651482959653e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 28312,
+          "token": "ston",
+          "probability": 1.3363810398583036e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 312,
+        "token": "st",
+        "probability": 0.9999945929810398
+      },
+      "json_so_far": "{\"schema_version\":\"st",
+      "is_stop": false
+    },
+    {
+      "step": 6,
+      "top_k": [
+        {
+          "token_id": 17081,
+          "token": "owl",
+          "probability": 0.9999961537029333,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 9953,
+          "token": "ól",
+          "probability": 8.315255207970947e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 925,
+          "token": "oll",
+          "probability": 7.571126024376837e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 832,
+          "token": "oul",
+          "probability": 5.539154128158747e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 374,
+          "token": "ow",
+          "probability": 3.359666807602082e-07,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 53938,
+          "token": "owel",
+          "probability": 2.9648955514251134e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 5116,
+          "token": "ola",
+          "probability": 1.4677297285922272e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 157333,
+          "token": "oyl",
+          "probability": 1.255415765101553e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 17081,
+        "token": "owl",
+        "probability": 0.9999961537029333
+      },
+      "json_so_far": "{\"schema_version\":\"stowl",
+      "is_stop": false
+    },
+    {
+      "step": 7,
+      "top_k": [
+        {
+          "token_id": 89,
+          "token": "m",
+          "probability": 0.9999959555555669,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 850,
+          "token": "م",
+          "probability": 3.28874658015989e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 377,
+          "token": "м",
+          "probability": 7.112413278195e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2511,
+          "token": "म",
+          "probability": 1.2824876899019886e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 33454,
+          "token": "mr",
+          "probability": 4.004121847741431e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 5520,
+          "token": "mm",
+          "probability": 3.465278631339149e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 200007,
+          "token": "<|eom|>",
+          "probability": 3.424906912435196e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 9095,
+          "token": "ম",
+          "probability": 1.7356583476035472e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 89,
+        "token": "m",
+        "probability": 0.9999959555555669
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm",
+      "is_stop": false
+    },
+    {
+      "step": 8,
+      "top_k": [
+        {
+          "token_id": 101160,
+          "token": ".reader",
+          "probability": 0.9999874930941213,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 26,
+          "token": ".",
+          "probability": 1.1125592120829721e-05,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 117152,
+          "token": ".Reader",
+          "probability": 4.450796834026116e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 85966,
+          "token": ".writer",
+          "probability": 8.36279947914759e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 182185,
+          "token": "\treader",
+          "probability": 7.979839009166287e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2071,
+          "token": ".g",
+          "probability": 7.496365004359354e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8589,
+          "token": ".read",
+          "probability": 4.075702958497463e-08,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 76425,
+          "token": ".ready",
+          "probability": 3.950306761229301e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 101160,
+        "token": ".reader",
+        "probability": 0.9999874930941213
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader",
+      "is_stop": false
+    },
+    {
+      "step": 9,
+      "top_k": [
+        {
+          "token_id": 27,
+          "token": "/",
+          "probability": 0.9999952734859804,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 756,
+          "token": " /",
+          "probability": 1.653684504515096e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 12952,
+          "token": "/or",
+          "probability": 4.3138937753828564e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 5889,
+          "token": "/f",
+          "probability": 2.8736727757248366e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 11562,
+          "token": "/x",
+          "probability": 2.006146914575704e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 5793,
+          "token": "/w",
+          "probability": 1.5381661950306078e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 25,
+          "token": "-",
+          "probability": 1.4677284366666686e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 7535,
+          "token": "/in",
+          "probability": 1.400516258099871e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 27,
+        "token": "/",
+        "probability": 0.9999952734859804
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/",
+      "is_stop": false
+    },
+    {
+      "step": 10,
+      "top_k": [
+        {
+          "token_id": 30,
+          "token": "2",
+          "probability": 0.9999989921476512,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 6111,
+          "token": "²",
+          "probability": 3.4663239191157396e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1368,
+          "token": "22",
+          "probability": 2.3090695313476234e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 29,
+          "token": "1",
+          "probability": 1.514324769796954e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 20781,
+          "token": "223",
+          "probability": 7.042264188167463e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 29589,
+          "token": "₂",
+          "probability": 4.546827495806237e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 31,
+          "token": "3",
+          "probability": 2.890139399550106e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2974,
+          "token": "02",
+          "probability": 1.6858033842776867e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 30,
+        "token": "2",
+        "probability": 0.9999989921476512
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2",
+      "is_stop": false
+    },
+    {
+      "step": 11,
+      "top_k": [
+        {
+          "token_id": 3353,
+          "token": "\",\"",
+          "probability": 0.9999881716731458,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 139201,
+          "token": ".\",\"",
+          "probability": 4.0928793894871955e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 706,
+          "token": "\",",
+          "probability": 2.2603026710660303e-06,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1236,
+          "token": "\",\n",
+          "probability": 1.55348179264628e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3814,
+          "token": ",\"",
+          "probability": 1.55348179264628e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 4997,
+          "token": "','",
+          "probability": 6.475875576163181e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 144319,
+          "token": "\",\"+",
+          "probability": 6.276633830750998e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 131486,
+          "token": "\",'",
+          "probability": 3.156089693462317e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 3353,
+        "token": "\",\"",
+        "probability": 0.9999881716731458
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"",
+      "is_stop": false
+    },
+    {
+      "step": 12,
+      "top_k": [
+        {
+          "token_id": 53908,
+          "token": "constraint",
+          "probability": 0.9952686989202172,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1693,
+          "token": "ref",
+          "probability": 0.004609008462728893,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 23836,
+          "token": " constraint",
+          "probability": 6.574397480092201e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 18598,
+          "token": "condition",
+          "probability": 7.376269543111285e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2851,
+          "token": "code",
+          "probability": 5.926999087505012e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 27175,
+          "token": "Constraint",
+          "probability": 5.069630974452768e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 46420,
+          "token": "constant",
+          "probability": 3.0748866194344384e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 85706,
+          "token": "_constraint",
+          "probability": 3.0748866194344384e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 53908,
+        "token": "constraint",
+        "probability": 0.9952686989202172
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint",
+      "is_stop": false
+    },
+    {
+      "step": 13,
+      "top_k": [
+        {
+          "token_id": 33678,
+          "token": "\":{\"",
+          "probability": 0.9999997415254513,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 196340,
+          "token": "\\\":{\\\"",
+          "probability": 1.4908484575431623e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 58045,
+          "token": "\":{\n",
+          "probability": 5.570893675354889e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 184700,
+          "token": "\":{",
+          "probability": 1.1861117085546152e-08,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 93163,
+          "token": "\":[{\"",
+          "probability": 9.355467118466043e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3353,
+          "token": "\",\"",
+          "probability": 4.663059736423274e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 95184,
+          "token": "\",{\"",
+          "probability": 2.8616276704011863e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 28816,
+          "token": "\"][\"",
+          "probability": 2.2993824306605925e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 33678,
+        "token": "\":{\"",
+        "probability": 0.9999997415254513
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"",
+      "is_stop": false
+    },
+    {
+      "step": 14,
+      "top_k": [
+        {
+          "token_id": 2584,
+          "token": "type",
+          "probability": 0.9999601426029674,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 30938,
+          "token": "kind",
+          "probability": 1.4738611749171417e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 655,
+          "token": "ype",
+          "probability": 1.045124071188193e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1390,
+          "token": " type",
+          "probability": 3.3930210840685044e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1295,
+          "token": "Type",
+          "probability": 3.089380853425289e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 14951,
+          "token": "-type",
+          "probability": 2.482387254449995e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 4156,
+          "token": "_type",
+          "probability": 1.5779013423412892e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 50631,
+          "token": "tipo",
+          "probability": 7.453478176471745e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 2584,
+        "token": "type",
+        "probability": 0.9999601426029674
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type",
+      "is_stop": false
+    },
+    {
+      "step": 15,
+      "top_k": [
+        {
+          "token_id": 4971,
+          "token": "\":\"",
+          "probability": 0.999999058694416,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 55267,
+          "token": "\\\":\\\"",
+          "probability": 2.4966996248597515e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 143069,
+          "token": "loos",
+          "probability": 1.2359559381477504e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2851,
+          "token": "code",
+          "probability": 8.105596934633845e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 81783,
+          "token": "\"=>\"",
+          "probability": 7.734414626687034e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 508,
+          "token": "=\"",
+          "probability": 4.691159606015528e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8306,
+          "token": "hold",
+          "probability": 4.372641560823413e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 110260,
+          "token": "ˈ",
+          "probability": 3.711012693749105e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 4971,
+        "token": "\":\"",
+        "probability": 0.999999058694416
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"",
+      "is_stop": false
+    },
+    {
+      "step": 16,
+      "top_k": [
+        {
+          "token_id": 45200,
+          "token": "dg",
+          "probability": 0.9993217481009451,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 65476,
+          "token": "DG",
+          "probability": 0.00027791965911897485,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 84687,
+          "token": " dg",
+          "probability": 0.0001794384183755082,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 83,
+          "token": "g",
+          "probability": 3.761233578388931e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 23684,
+          "token": "dh",
+          "probability": 3.761233578388931e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 30250,
+          "token": "dog",
+          "probability": 1.5196757396980963e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 17027,
+          "token": "deg",
+          "probability": 1.4729202325428166e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 15206,
+          "token": "dig",
+          "probability": 1.3836805069329845e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 45200,
+        "token": "dg",
+        "probability": 0.9993217481009451
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg",
+      "is_stop": false
+    },
+    {
+      "step": 17,
+      "top_k": [
+        {
+          "token_id": 128110,
+          "token": "_keep",
+          "probability": 0.9996793661112638,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 11968,
+          "token": "_class",
+          "probability": 8.218229361057496e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 25368,
+          "token": "keep",
+          "probability": 7.029424082721195e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 11516,
+          "token": "_per",
+          "probability": 3.3204648217096796e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 75,
+          "token": "_",
+          "probability": 2.840144069738049e-05,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 22834,
+          "token": " Keep",
+          "probability": 1.7497620017162935e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 10366,
+          "token": "_k",
+          "probability": 1.2025926642154392e-05,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 8071,
+          "token": "ening",
+          "probability": 8.93690982846861e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 128110,
+        "token": "_keep",
+        "probability": 0.9996793661112638
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep",
+      "is_stop": false
+    },
+    {
+      "step": 18,
+      "top_k": [
+        {
+          "token_id": 75,
+          "token": "_",
+          "probability": 0.9998804300416684,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 128110,
+          "token": "_keep",
+          "probability": 7.966983089778497e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 13524,
+          "token": "_from",
+          "probability": 7.88838150095937e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 11516,
+          "token": "_per",
+          "probability": 7.64568151695821e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2073,
+          "token": "_b",
+          "probability": 3.3401508841280264e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 7130,
+          "token": "_A",
+          "probability": 1.873654835445329e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 11968,
+          "token": "_class",
+          "probability": 1.2481231972956007e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 10790,
+          "token": "_a",
+          "probability": 1.2097224835397713e-06,
+          "blocked": false,
+          "reason": null
+        }
+      ],
+      "chosen": {
+        "token_id": 75,
+        "token": "_",
+        "probability": 0.9998804300416684
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_",
+      "is_stop": false
+    },
+    {
+      "step": 19,
+      "top_k": [
+        {
+          "token_id": 27755,
+          "token": "away",
+          "probability": 0.9999541365504616,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 18497,
+          "token": "await",
+          "probability": 1.952537093434278e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 4614,
+          "token": "way",
+          "probability": 5.421999687619622e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 93331,
+          "token": "Away",
+          "probability": 5.421999687619622e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 6851,
+          "token": " away",
+          "probability": 3.6118304491441177e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 87947,
+          "token": "aways",
+          "probability": 3.187429184030412e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 41586,
+          "token": "aware",
+          "probability": 2.260225740477357e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 409,
+          "token": "ay",
+          "probability": 1.7602655766019117e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 27755,
+        "token": "away",
+        "probability": 0.9999541365504616
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away",
+      "is_stop": false
+    },
+    {
+      "step": 20,
+      "top_k": [
+        {
+          "token_id": 3353,
+          "token": "\",\"",
+          "probability": 0.9999091062558413,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 33678,
+          "token": "\":{\"",
+          "probability": 9.028033477147224e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1236,
+          "token": "\",\n",
+          "probability": 2.4577707823749926e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 79525,
+          "token": "\\\",\\\"",
+          "probability": 7.855507248050137e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 144319,
+          "token": "\",\"+",
+          "probability": 6.214217711964086e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 131486,
+          "token": "\",'",
+          "probability": 4.8396376202538236e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 139201,
+          "token": ".\",\"",
+          "probability": 3.980977316561264e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8071,
+          "token": "ening",
+          "probability": 3.07626083873681e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 3353,
+        "token": "\",\"",
+        "probability": 0.9999091062558413
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"",
+      "is_stop": false
+    },
+    {
+      "step": 21,
+      "top_k": [
+        {
+          "token_id": 324,
+          "token": "im",
+          "probability": 0.999611465842324,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1419,
+          "token": "min",
+          "probability": 0.00021650679839403157,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8749,
+          "token": "imm",
+          "probability": 2.9301008883308466e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3122,
+          "token": "img",
+          "probability": 2.5858049582123433e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 7992,
+          "token": "ım",
+          "probability": 1.3002243874629957e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 685,
+          "token": "ime",
+          "probability": 1.0779238773750984e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3652,
+          "token": "mi",
+          "probability": 1.0126157711247188e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 9682,
+          "token": "imb",
+          "probability": 8.394879597910916e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 324,
+        "token": "im",
+        "probability": 0.999611465842324
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"im",
+      "is_stop": false
+    },
+    {
+      "step": 22,
+      "top_k": [
+        {
+          "token_id": 45200,
+          "token": "dg",
+          "probability": 0.9997117454475699,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 21953,
+          "token": "dm",
+          "probability": 0.00010887737640635617,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 23684,
+          "token": "dh",
+          "probability": 4.984769526099548e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 5628,
+          "token": "md",
+          "probability": 2.5860643625002222e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 12693,
+          "token": "ding",
+          "probability": 2.4293826434091123e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 19306,
+          "token": "mg",
+          "probability": 1.5685273238465907e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3679,
+          "token": "df",
+          "probability": 8.937199292489457e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 324,
+          "token": "im",
+          "probability": 7.1812413770731815e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 45200,
+        "token": "dg",
+        "probability": 0.9997117454475699
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg",
+      "is_stop": false
+    },
+    {
+      "step": 23,
+      "top_k": [
+        {
+          "token_id": 11968,
+          "token": "_class",
+          "probability": 0.9996556436049947,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1619,
+          "token": "class",
+          "probability": 0.00020339830337659406,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 23932,
+          "token": "-class",
+          "probability": 5.6481668956696566e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 700,
+          "token": " class",
+          "probability": 5.4743910691521124e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 12232,
+          "token": "_cl",
+          "probability": 5.1721638585656395e-06,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 39616,
+          "token": "_classes",
+          "probability": 4.709308783979352e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3125,
+          "token": "Class",
+          "probability": 3.843625809261108e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 6302,
+          "token": " Class",
+          "probability": 1.9027327499362582e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 11968,
+        "token": "_class",
+        "probability": 0.9996556436049947
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class",
+      "is_stop": false
+    },
+    {
+      "step": 24,
+      "top_k": [
+        {
+          "token_id": 4971,
+          "token": "\":\"",
+          "probability": 0.9999988458953223,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 508,
+          "token": "=\"",
+          "probability": 4.31390918645012e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 55267,
+          "token": "\\\":\\\"",
+          "probability": 2.829130715645206e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 6624,
+          "token": ":\"",
+          "probability": 7.153162666225271e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 825,
+          "token": "11",
+          "probability": 5.2333656030080383e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 738,
+          "token": "12",
+          "probability": 4.3386124709773934e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 143069,
+          "token": "loos",
+          "probability": 3.596836070940876e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 36,
+          "token": "8",
+          "probability": 1.464651147950421e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 4971,
+        "token": "\":\"",
+        "probability": 0.9999988458953223
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"",
+      "is_stop": false
+    },
+    {
+      "step": 25,
+      "top_k": [
+        {
+          "token_id": 30,
+          "token": "2",
+          "probability": 0.9999751801025836,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1368,
+          "token": "22",
+          "probability": 1.7778426676041946e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 34,
+          "token": "6",
+          "probability": 1.0676775097307826e-06,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 31,
+          "token": "3",
+          "probability": 1.002990199513259e-06,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 451,
+          "token": "20",
+          "probability": 6.475791443373531e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 29,
+          "token": "1",
+          "probability": 6.27655228645516e-07,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 33,
+          "token": "5",
+          "probability": 5.368619669820141e-07,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 32,
+          "token": "4",
+          "probability": 2.873615033643078e-07,
+          "blocked": false,
+          "reason": null
+        }
+      ],
+      "chosen": {
+        "token_id": 30,
+        "token": "2",
+        "probability": 0.9999751801025836
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2",
+      "is_stop": false
+    },
+    {
+      "step": 26,
+      "top_k": [
+        {
+          "token_id": 26,
+          "token": ".",
+          "probability": 0.9926542143657259,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 3353,
+          "token": "\",\"",
+          "probability": 0.007119819544326587,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1943,
+          "token": ".b",
+          "probability": 3.509777222859921e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 681,
+          "token": ".s",
+          "probability": 2.9097075160772147e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 30,
+          "token": "2",
+          "probability": 2.733417249569487e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1625,
+          "token": ".h",
+          "probability": 1.9998107802173798e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2071,
+          "token": ".g",
+          "probability": 1.4630928217430128e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1101,
+          "token": ".l",
+          "probability": 1.1394578352796098e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 26,
+        "token": ".",
+        "probability": 0.9926542143657259
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.",
+      "is_stop": false
+    },
+    {
+      "step": 27,
+      "top_k": [
+        {
+          "token_id": 30,
+          "token": "2",
+          "probability": 0.9999276394445571,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1368,
+          "token": "22",
+          "probability": 7.03116986102503e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 29,
+          "token": "1",
+          "probability": 1.328682958436346e-06,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 6111,
+          "token": "²",
+          "probability": 2.3089047728288773e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 31,
+          "token": "3",
+          "probability": 1.400421535077547e-07,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 20781,
+          "token": "223",
+          "probability": 1.1978440162892674e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1699,
+          "token": "21",
+          "probability": 4.954498148315199e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 15240,
+          "token": "222",
+          "probability": 3.8285394307198476e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 30,
+        "token": "2",
+        "probability": 0.9999276394445571
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2",
+      "is_stop": false
+    },
+    {
+      "step": 28,
+      "top_k": [
+        {
+          "token_id": 3353,
+          "token": "\",\"",
+          "probability": 0.9999867631961631,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 3814,
+          "token": ",\"",
+          "probability": 8.6646135314678e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 33678,
+          "token": "\":{\"",
+          "probability": 2.2602994874440872e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 14,
+          "token": "\"",
+          "probability": 8.315177123210283e-07,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 139201,
+          "token": ".\",\"",
+          "probability": 3.1071546816693616e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 4997,
+          "token": "','",
+          "probability": 2.9189016961422454e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 131486,
+          "token": "\",'",
+          "probability": 2.4966689266649797e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 144319,
+          "token": "\",\"+",
+          "probability": 1.2554039760659672e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 3353,
+        "token": "\",\"",
+        "probability": 0.9999867631961631
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"",
+      "is_stop": false
+    },
+    {
+      "step": 29,
+      "top_k": [
+        {
+          "token_id": 1419,
+          "token": "min",
+          "probability": 0.9997645759248073,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 4836,
+          "token": "max",
+          "probability": 0.0001055331483751086,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 324,
+          "token": "im",
+          "probability": 6.203973743884719e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1369,
+          "token": " min",
+          "probability": 1.7774682372176443e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 68768,
+          "token": "minimum",
+          "probability": 1.3842936550296509e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 46075,
+          "token": "mini",
+          "probability": 8.93767158513375e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 7587,
+          "token": "amin",
+          "probability": 3.3923574957572627e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 48547,
+          "token": "mine",
+          "probability": 2.6419706741539063e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 1419,
+        "token": "min",
+        "probability": 0.9997645759248073
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min",
+      "is_stop": false
+    },
+    {
+      "step": 30,
+      "top_k": [
+        {
+          "token_id": 2073,
+          "token": "_b",
+          "probability": 0.9999676055252403,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 3580,
+          "token": "_B",
+          "probability": 1.0129765439569317e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1738,
+          "token": "-b",
+          "probability": 8.664447535455833e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 936,
+          "token": "_t",
+          "probability": 1.9637446043629587e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1943,
+          "token": ".b",
+          "probability": 1.505655216055651e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 75,
+          "token": "_",
+          "probability": 1.349660612862281e-06,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 11516,
+          "token": "_per",
+          "probability": 1.3081359212498336e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3660,
+          "token": "_h",
+          "probability": 1.2098279542933953e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 2073,
+        "token": "_b",
+        "probability": 0.9999676055252403
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_b",
+      "is_stop": false
+    },
+    {
+      "step": 31,
+      "top_k": [
+        {
+          "token_id": 1372,
+          "token": "ays",
+          "probability": 0.9998512854884266,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 409,
+          "token": "ay",
+          "probability": 0.00011591554115122247,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 16208,
+          "token": "iers",
+          "probability": 1.1124076711611927e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2905,
+          "token": "ails",
+          "probability": 4.60111806878935e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1331,
+          "token": "als",
+          "probability": 3.3662498897550774e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8878,
+          "token": "ayers",
+          "probability": 2.0577472827902165e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 44940,
+          "token": "bay",
+          "probability": 1.7947990797594496e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2196,
+          "token": "ars",
+          "probability": 9.220806903499198e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 1372,
+        "token": "ays",
+        "probability": 0.9998512854884266
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays",
+      "is_stop": false
+    },
+    {
+      "step": 32,
+      "top_k": [
+        {
+          "token_id": 1217,
+          "token": "\":",
+          "probability": 0.9999797252039105,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 33678,
+          "token": "\":{\"",
+          "probability": 1.045144538251579e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 48068,
+          "token": "”:",
+          "probability": 3.2886932024305024e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 38,
+          "token": ":",
+          "probability": 2.2602835792632325e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 24210,
+          "token": "**:",
+          "probability": 2.190741964363071e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 9961,
+          "token": "\":\n",
+          "probability": 1.2878707624855259e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 10991,
+          "token": "\";",
+          "probability": 3.156063035332496e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 31326,
+          "token": " \":",
+          "probability": 7.380087308413527e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 1217,
+        "token": "\":",
+        "probability": 0.9999797252039105
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":",
+      "is_stop": false
+    },
+    {
+      "step": 33,
+      "top_k": [
+        {
+          "token_id": 31,
+          "token": "3",
+          "probability": 0.9999606756365756,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1922,
+          "token": "33",
+          "probability": 2.355224706839781e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1504,
+          "token": "23",
+          "probability": 8.939424672674488e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 974,
+          "token": "13",
+          "probability": 1.653627290317222e-06,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 2330,
+          "token": "31",
+          "probability": 9.422084285290888e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 32,
+          "token": "4",
+          "probability": 5.804777734705123e-07,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 70796,
+          "token": "③",
+          "probability": 4.450677473478144e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 30,
+          "token": "2",
+          "probability": 4.313744523230225e-07,
+          "blocked": false,
+          "reason": null
+        }
+      ],
+      "chosen": {
+        "token_id": 31,
+        "token": "3",
+        "probability": 0.9999606756365756
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3",
+      "is_stop": false
+    },
+    {
+      "step": 34,
+      "top_k": [
+        {
+          "token_id": 3814,
+          "token": ",\"",
+          "probability": 0.9999726549628069,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 24,
+          "token": ",",
+          "probability": 2.1444821891101123e-05,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 69129,
+          "token": "，\"",
+          "probability": 1.8161760377230996e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 43723,
+          "token": " ,\"",
+          "probability": 1.3925104712688216e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3304,
+          "token": "}}",
+          "probability": 8.579008141100956e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 392,
+          "token": " \"",
+          "probability": 5.368606112968586e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8287,
+          "token": ",'",
+          "probability": 5.122759739957559e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 131145,
+          "token": ",\\\"",
+          "probability": 1.4336961150756267e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 3814,
+        "token": ",\"",
+        "probability": 0.9999726549628069
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"",
+      "is_stop": false
+    },
+    {
+      "step": 35,
+      "top_k": [
+        {
+          "token_id": 27755,
+          "token": "away",
+          "probability": 0.9998250355014413,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 4614,
+          "token": "way",
+          "probability": 0.0001488345934374533,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 1269,
+          "token": "aw",
+          "probability": 6.338141446020242e-06,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 6851,
+          "token": " away",
+          "probability": 4.637083340382877e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 18497,
+          "token": "await",
+          "probability": 4.222112428001349e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 12650,
+          "token": "after",
+          "probability": 1.3707192172149907e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 4836,
+          "token": "max",
+          "probability": 1.2876715381012243e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 16017,
+          "token": "about",
+          "probability": 1.2480540498169786e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 27755,
+        "token": "away",
+        "probability": 0.9998250355014413
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away",
+      "is_stop": false
+    },
+    {
+      "step": 36,
+      "top_k": [
+        {
+          "token_id": 13524,
+          "token": "_from",
+          "probability": 0.9994819365673748,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 1523,
+          "token": "_f",
+          "probability": 0.00012726128819405986,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 610,
+          "token": " from",
+          "probability": 0.00010885234820391235,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 52385,
+          "token": "-from",
+          "probability": 0.00010225731782067625,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8071,
+          "token": "ening",
+          "probability": 6.20221984382192e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 12151,
+          "token": "_for",
+          "probability": 3.821076798407376e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 4502,
+          "token": "From",
+          "probability": 2.5453858952664124e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2986,
+          "token": "from",
+          "probability": 1.5928617915307874e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 13524,
+        "token": "_from",
+        "probability": 0.9994819365673748
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from",
+      "is_stop": false
+    },
+    {
+      "step": 37,
+      "top_k": [
+        {
+          "token_id": 33678,
+          "token": "\":{\"",
+          "probability": 0.9999985188945505,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 58045,
+          "token": "\":{\n",
+          "probability": 5.203566052378553e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3353,
+          "token": "\",\"",
+          "probability": 2.6577214816056805e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 196340,
+          "token": "\\\":{\\\"",
+          "probability": 2.1691690541250463e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 4971,
+          "token": "\":\"",
+          "probability": 2.1024307384556105e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 93163,
+          "token": "\":[{\"",
+          "probability": 9.042441929266865e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 184700,
+          "token": "\":{",
+          "probability": 6.564108895155648e-08,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 57470,
+          "token": "\":[\"",
+          "probability": 4.916290402311337e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 33678,
+        "token": "\":{\"",
+        "probability": 0.9999985188945505
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"",
+      "is_stop": false
+    },
+    {
+      "step": 38,
+      "top_k": [
+        {
+          "token_id": 30938,
+          "token": "kind",
+          "probability": 0.9994887510101228,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 2584,
+          "token": "type",
+          "probability": 0.00023044199409302877,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2851,
+          "token": "code",
+          "probability": 8.477487200937623e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 11839,
+          "token": "king",
+          "probability": 7.481356196528006e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 6386,
+          "token": " kind",
+          "probability": 7.028083738578949e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8306,
+          "token": "hold",
+          "probability": 1.0446313888505199e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 5924,
+          "token": "kin",
+          "probability": 8.660298391223134e-06,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 121815,
+          "token": "-kind",
+          "probability": 7.885291417851505e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 30938,
+        "token": "kind",
+        "probability": 0.9994887510101228
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind",
+      "is_stop": false
+    },
+    {
+      "step": 39,
+      "top_k": [
+        {
+          "token_id": 4971,
+          "token": "\":\"",
+          "probability": 0.9999987664370409,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 508,
+          "token": "=\"",
+          "probability": 6.276700330991078e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 55267,
+          "token": "\\\":\\\"",
+          "probability": 1.1430720485118196e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 6624,
+          "token": ":\"",
+          "probability": 6.312643395035153e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 143069,
+          "token": "loos",
+          "probability": 3.973565829482241e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8306,
+          "token": "hold",
+          "probability": 3.958074364426924e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 29875,
+          "token": "!(\"",
+          "probability": 2.9306391114386046e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 29512,
+          "token": "':'",
+          "probability": 2.501206612375253e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 4971,
+        "token": "\":\"",
+        "probability": 0.9999987664370409
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"",
+      "is_stop": false
+    },
+    {
+      "step": 40,
+      "top_k": [
+        {
+          "token_id": 399,
+          "token": "ac",
+          "probability": 0.9994399821781098,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 125935,
+          "token": "commodation",
+          "probability": 0.0003149614918551487,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 51786,
+          "token": " accommodation",
+          "probability": 0.00010549888490863183,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2177,
+          "token": "AC",
+          "probability": 4.131395693834827e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 2851,
+          "token": "code",
+          "probability": 2.7521028447359726e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 168925,
+          "token": "acoustic",
+          "probability": 1.6692347540147243e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 136794,
+          "token": "acry",
+          "probability": 8.135200470044093e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 80151,
+          "token": "acom",
+          "probability": 4.635297503574056e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 399,
+        "token": "ac",
+        "probability": 0.9994399821781098
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"ac",
+      "is_stop": false
+    },
+    {
+      "step": 41,
+      "top_k": [
+        {
+          "token_id": 125935,
+          "token": "commodation",
+          "probability": 0.999753874547724,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 399,
+          "token": "ac",
+          "probability": 0.00010888196463482905,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 77977,
+          "token": "achadh",
+          "probability": 6.203907337188536e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 51786,
+          "token": " accommodation",
+          "probability": 5.4749290089907276e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 15909,
+          "token": "achment",
+          "probability": 2.7258066487982292e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 8685,
+          "token": "acity",
+          "probability": 1.8443730366695589e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 91822,
+          "token": "aboration",
+          "probability": 1.3706216584588963e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 53006,
+          "token": "cation",
+          "probability": 6.67987647233534e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 125935,
+        "token": "commodation",
+        "probability": 0.999753874547724
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation",
+      "is_stop": false
+    },
+    {
+      "step": 42,
+      "top_k": [
+        {
+          "token_id": 14,
+          "token": "\"",
+          "probability": 0.9963278830147897,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 45299,
+          "token": "}}}",
+          "probability": 0.003593319414265734,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 52121,
+          "token": "\"}}",
+          "probability": 4.249267389823685e-05,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 25581,
+          "token": "usal",
+          "probability": 1.4685075151499631e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 22621,
+          "token": " instruction",
+          "probability": 1.1084876282536644e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 33678,
+          "token": "\":{\"",
+          "probability": 8.906948319568672e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 27755,
+          "token": "away",
+          "probability": 5.518834933279654e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3814,
+          "token": ",\"",
+          "probability": 2.4489681564243427e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 14,
+        "token": "\"",
+        "probability": 0.9963278830147897
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"",
+      "is_stop": false
+    },
+    {
+      "step": 43,
+      "top_k": [
+        {
+          "token_id": 45299,
+          "token": "}}}",
+          "probability": 0.9997200895477383,
+          "blocked": false,
+          "reason": null
+        },
+        {
+          "token_id": 14,
+          "token": "\"",
+          "probability": 0.00026118542830073596,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 3814,
+          "token": ",\"",
+          "probability": 1.618331233159679e-05,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 116034,
+          "token": "}}}{",
+          "probability": 1.458969855604739e-06,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 27755,
+          "token": "away",
+          "probability": 2.168565092907651e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 22621,
+          "token": " instruction",
+          "probability": 1.6626965320430848e-07,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 134606,
+          "token": "}}}\\",
+          "probability": 8.103335721045183e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 194330,
+          "token": " }}}",
+          "probability": 7.792901804582675e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 45299,
+        "token": "}}}",
+        "probability": 0.9997200895477383
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"}}}",
+      "is_stop": false
+    },
+    {
+      "step": 44,
+      "top_k": [
+        {
+          "token_id": 200008,
+          "token": "<|eot|>",
+          "probability": 0.9999998587330543,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 6217,
+          "token": "null",
+          "probability": 9.777224034327427e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 200007,
+          "token": "<|eom|>",
+          "probability": 1.0467400316046777e-08,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 36,
+          "token": "8",
+          "probability": 8.280395191327966e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 200023,
+          "token": "<|message|>",
+          "probability": 3.4780057008722545e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 695,
+          "token": "</",
+          "probability": 1.3050409840443088e-09,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 4836,
+          "token": "max",
+          "probability": 9.075135295851002e-10,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        },
+        {
+          "token_id": 79,
+          "token": "c",
+          "probability": 7.582559356746754e-10,
+          "blocked": true,
+          "reason": "not_in_grammar"
+        }
+      ],
+      "chosen": {
+        "token_id": 200001,
+        "token": "<eos>",
+        "probability": 4.413578808995513e-11
+      },
+      "json_so_far": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"}}}",
+      "is_stop": true
+    }
+  ],
+  "output": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"}}}",
+  "complete": true,
+  "stage_record": {
+    "stage": "reader_xray",
+    "mode": "recorded",
+    "input_sha256": "186395563ea38b39ca9743b2025dc492fcaac8952c037962b719ccd24802d813",
+    "output_sha256": "34d965795881ecc84af75fe9067ffd67abde4951674803895255fb2ca847de5f",
+    "model": "muse-glimmer-30b",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+    "prompt_sha256": "cc329dc6780221699d6b85c069eb6283429131bec4b166d9d422b10d4b7c0b59",
+    "source_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+    "wall_s": 4.909466749988496,
+    "cost_usd": 0.0,
+    "notes": "Observed local inference; no API spend",
+    "prev_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "payload_json": "{\"complete\":true,\"context\":{\"allowed_imdg_classes\":[\"1\",\"2\",\"2.1\",\"2.2\",\"2.3\",\"3\",\"4.1\",\"5.1\",\"5.2\",\"6.1\",\"6.2\",\"7\",\"8\"],\"bays\":[1,2,3,5,6,7,9,10,11,13,14,15,17,18,19,21,22,23],\"has_accommodation\":true,\"hatch_covers\":[\"HC-002-P\",\"HC-002-S\",\"HC-006-P\",\"HC-006-S\",\"HC-010-P\",\"HC-010-S\",\"HC-014-P\",\"HC-014-S\",\"HC-018-P\",\"HC-018-S\",\"HC-022-P\",\"HC-022-S\"],\"id\":\"feeder_500\",\"max_tiers\":{\"deck\":5,\"hold\":3},\"max_tiers_by_bay\":{\"1\":{\"deck\":5,\"hold\":2},\"2\":{\"deck\":5,\"hold\":2},\"21\":{\"deck\":5,\"hold\":2},\"22\":{\"deck\":5,\"hold\":2},\"23\":{\"deck\":5,\"hold\":2},\"3\":{\"deck\":5,\"hold\":2}},\"ports\":[\"SGSIN\",\"MYPKG\",\"THLCH\"]},\"decoding_policy\":\"reader-v3-schema-mask/2-d224\",\"format\":\"xray.trace/1\",\"output\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\\\":{\\\"kind\\\":\\\"accommodation\\\"}}}\",\"probability_basis\":\"full-vocabulary softmax of raw logits before the mask\",\"reason_basis\":\"inferred by whole-token counterfactual grammar; compound failures use not_in_grammar\",\"recorded_utc\":\"2026-11-02T07:32:17.089304+00:00\",\"sentence\":\"Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.\",\"source\":{\"kind\":\"recorded\",\"label\":\"Recorded answer\",\"synthetic\":true},\"stage_record\":{\"adapter_sha256\":\"eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57\",\"cost_usd\":0.0,\"input_sha256\":\"186395563ea38b39ca9743b2025dc492fcaac8952c037962b719ccd24802d813\",\"mode\":\"recorded\",\"model\":\"muse-glimmer-30b\",\"notes\":\"Observed local inference; no API spend\",\"prev_sha256\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"prompt_sha256\":\"cc329dc6780221699d6b85c069eb6283429131bec4b166d9d422b10d4b7c0b59\",\"source_sha256\":\"db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03\",\"stage\":\"reader_xray\",\"wall_s\":4.909466749988496},\"steps\":[{\"chosen\":{\"probability\":0.9999985011978811,\"token\":\"{\\\"\",\"token_id\":7564},\"is_stop\":false,\"json_so_far\":\"{\\\"\",\"step\":1,\"top_k\":[{\"blocked\":false,\"probability\":0.9999985011978811,\"reason\":null,\"token\":\"{\\\"\",\"token_id\":7564},{\"blocked\":true,\"probability\":6.681510950426889e-07,\"reason\":\"not_in_grammar\",\"token\":\"[{\\\"\",\"token_id\":30274},{\"blocked\":true,\"probability\":3.3596746944332745e-07,\"reason\":\"not_in_grammar\",\"token\":\" {\\\"\",\"token_id\":11906},{\"blocked\":true,\"probability\":1.9444305389199448e-07,\"reason\":\"not_in_grammar\",\"token\":\"{'\",\"token_id\":48989},{\"blocked\":true,\"probability\":6.719772132789958e-08,\"reason\":\"not_in_grammar\",\"token\":\"[\\\"\",\"token_id\":2733},{\"blocked\":true,\"probability\":5.930178093261419e-08,\"reason\":\"not_in_grammar\",\"token\":\"[]{\\\"\",\"token_id\":110113},{\"blocked\":true,\"probability\":4.012559211667502e-08,\"reason\":\"not_in_grammar\",\"token\":\"{{\",\"token_id\":5473},{\"blocked\":false,\"probability\":3.005267989320754e-08,\"reason\":null,\"token\":\"{\",\"token_id\":103}]},{\"chosen\":{\"probability\":0.9999975545202503,\"token\":\"schema\",\"token_id\":35957},\"is_stop\":false,\"json_so_far\":\"{\\\"schema\",\"step\":2,\"top_k\":[{\"blocked\":false,\"probability\":0.9999975545202503,\"reason\":null,\"token\":\"schema\",\"token_id\":35957},{\"blocked\":true,\"probability\":2.1907810245865106e-06,\"reason\":\"not_in_grammar\",\"token\":\" schema\",\"token_id\":17541},{\"blocked\":true,\"probability\":1.4005194527405505e-07,\"reason\":\"not_in_grammar\",\"token\":\"kind\",\"token_id\":30938},{\"blocked\":true,\"probability\":5.6145744568439175e-08,\"reason\":\"not_in_grammar\",\"token\":\"st\",\"token_id\":312},{\"blocked\":true,\"probability\":8.67775965819969e-09,\"reason\":\"not_in_grammar\",\"token\":\"schule\",\"token_id\":156803},{\"blocked\":true,\"probability\":3.6174284174018054e-09,\"reason\":\"not_in_grammar\",\"token\":\"type\",\"token_id\":2584},{\"blocked\":true,\"probability\":2.6465671667668768e-09,\"reason\":\"not_in_grammar\",\"token\":\"chema\",\"token_id\":6291},{\"blocked\":true,\"probability\":2.299377401897957e-09,\"reason\":\"not_in_grammar\",\"token\":\"sentence\",\"token_id\":144992}]},{\"chosen\":{\"probability\":0.999981581363361,\"token\":\"_version\",\"token_id\":18778},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\",\"step\":3,\"top_k\":[{\"blocked\":false,\"probability\":0.999981581363361,\"reason\":null,\"token\":\"_version\",\"token_id\":18778},{\"blocked\":true,\"probability\":7.4111982927678765e-06,\"reason\":\"not_in_grammar\",\"token\":\" version\",\"token_id\":4518},{\"blocked\":true,\"probability\":2.947971006064132e-06,\"reason\":\"not_in_grammar\",\"token\":\"_VERSION\",\"token_id\":23264},{\"blocked\":true,\"probability\":1.8161922500812168e-06,\"reason\":\"not_in_grammar\",\"token\":\"-version\",\"token_id\":62311},{\"blocked\":true,\"probability\":1.018791518560804e-06,\"reason\":\"not_in_grammar\",\"token\":\" Version\",\"token_id\":13635},{\"blocked\":true,\"probability\":8.851414105185125e-07,\"reason\":\"not_in_grammar\",\"token\":\"_versions\",\"token_id\":170680},{\"blocked\":true,\"probability\":4.812430375843506e-07,\"reason\":\"not_in_grammar\",\"token\":\"version\",\"token_id\":3105},{\"blocked\":true,\"probability\":3.704259901641467e-07,\"reason\":\"not_in_grammar\",\"token\":\"Version\",\"token_id\":7301}]},{\"chosen\":{\"probability\":0.999999779341186,\"token\":\"\\\":\\\"\",\"token_id\":4971},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"\",\"step\":4,\"top_k\":[{\"blocked\":false,\"probability\":0.999999779341186,\"reason\":null,\"token\":\"\\\":\\\"\",\"token_id\":4971},{\"blocked\":true,\"probability\":6.719780721634593e-08,\"reason\":\"not_in_grammar\",\"token\":\"\\\\\\\":\\\\\\\"\",\"token_id\":55267},{\"blocked\":true,\"probability\":8.883566562482639e-09,\"reason\":\"not_in_grammar\",\"token\":\"loos\",\"token_id\":143069},{\"blocked\":true,\"probability\":8.025633576862987e-09,\"reason\":\"not_in_grammar\",\"token\":\"hold\",\"token_id\":8306},{\"blocked\":true,\"probability\":7.082596772860513e-09,\"reason\":\"not_in_grammar\",\"token\":\"=\\\"\",\"token_id\":508},{\"blocked\":true,\"probability\":5.8716789570319e-09,\"reason\":\"not_in_grammar\",\"token\":\"ˈ\",\"token_id\":110260},{\"blocked\":true,\"probability\":5.60279520123085e-09,\"reason\":\"not_in_grammar\",\"token\":\"11\",\"token_id\":825},{\"blocked\":true,\"probability\":5.60279520123085e-09,\"reason\":\"not_in_grammar\",\"token\":\" `\\\"\",\"token_id\":84308}]},{\"chosen\":{\"probability\":0.9999945929810398,\"token\":\"st\",\"token_id\":312},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"st\",\"step\":5,\"top_k\":[{\"blocked\":false,\"probability\":0.9999945929810398,\"reason\":null,\"token\":\"st\",\"token_id\":312},{\"blocked\":true,\"probability\":9.422403869936625e-07,\"reason\":\"not_in_grammar\",\"token\":\"ST\",\"token_id\":1048},{\"blocked\":true,\"probability\":8.851529278522712e-07,\"reason\":\"not_in_grammar\",\"token\":\"stay\",\"token_id\":145314},{\"blocked\":true,\"probability\":8.315242230120177e-07,\"reason\":\"not_in_grammar\",\"token\":\"ст\",\"token_id\":403},{\"blocked\":true,\"probability\":4.0525254064059244e-07,\"reason\":\"not_in_grammar\",\"token\":\"ست\",\"token_id\":4423},{\"blocked\":true,\"probability\":1.9142774561193462e-07,\"reason\":\"not_in_grammar\",\"token\":\"sta\",\"token_id\":8747},{\"blocked\":true,\"probability\":1.5381651482959653e-07,\"reason\":\"not_in_grammar\",\"token\":\"スト\",\"token_id\":15688},{\"blocked\":true,\"probability\":1.3363810398583036e-07,\"reason\":\"not_in_grammar\",\"token\":\"ston\",\"token_id\":28312}]},{\"chosen\":{\"probability\":0.9999961537029333,\"token\":\"owl\",\"token_id\":17081},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowl\",\"step\":6,\"top_k\":[{\"blocked\":false,\"probability\":0.9999961537029333,\"reason\":null,\"token\":\"owl\",\"token_id\":17081},{\"blocked\":true,\"probability\":8.315255207970947e-07,\"reason\":\"not_in_grammar\",\"token\":\"ól\",\"token_id\":9953},{\"blocked\":true,\"probability\":7.571126024376837e-07,\"reason\":\"not_in_grammar\",\"token\":\"oll\",\"token_id\":925},{\"blocked\":true,\"probability\":5.539154128158747e-07,\"reason\":\"not_in_grammar\",\"token\":\"oul\",\"token_id\":832},{\"blocked\":false,\"probability\":3.359666807602082e-07,\"reason\":null,\"token\":\"ow\",\"token_id\":374},{\"blocked\":true,\"probability\":2.9648955514251134e-07,\"reason\":\"not_in_grammar\",\"token\":\"owel\",\"token_id\":53938},{\"blocked\":true,\"probability\":1.4677297285922272e-07,\"reason\":\"not_in_grammar\",\"token\":\"ola\",\"token_id\":5116},{\"blocked\":true,\"probability\":1.255415765101553e-07,\"reason\":\"not_in_grammar\",\"token\":\"oyl\",\"token_id\":157333}]},{\"chosen\":{\"probability\":0.9999959555555669,\"token\":\"m\",\"token_id\":89},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm\",\"step\":7,\"top_k\":[{\"blocked\":false,\"probability\":0.9999959555555669,\"reason\":null,\"token\":\"m\",\"token_id\":89},{\"blocked\":true,\"probability\":3.28874658015989e-06,\"reason\":\"not_in_grammar\",\"token\":\"م\",\"token_id\":850},{\"blocked\":true,\"probability\":7.112413278195e-07,\"reason\":\"not_in_grammar\",\"token\":\"м\",\"token_id\":377},{\"blocked\":true,\"probability\":1.2824876899019886e-08,\"reason\":\"not_in_grammar\",\"token\":\"म\",\"token_id\":2511},{\"blocked\":true,\"probability\":4.004121847741431e-09,\"reason\":\"not_in_grammar\",\"token\":\"mr\",\"token_id\":33454},{\"blocked\":true,\"probability\":3.465278631339149e-09,\"reason\":\"not_in_grammar\",\"token\":\"mm\",\"token_id\":5520},{\"blocked\":true,\"probability\":3.424906912435196e-09,\"reason\":\"not_in_grammar\",\"token\":\"<|eom|>\",\"token_id\":200007},{\"blocked\":true,\"probability\":1.7356583476035472e-09,\"reason\":\"not_in_grammar\",\"token\":\"ম\",\"token_id\":9095}]},{\"chosen\":{\"probability\":0.9999874930941213,\"token\":\".reader\",\"token_id\":101160},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader\",\"step\":8,\"top_k\":[{\"blocked\":false,\"probability\":0.9999874930941213,\"reason\":null,\"token\":\".reader\",\"token_id\":101160},{\"blocked\":false,\"probability\":1.1125592120829721e-05,\"reason\":null,\"token\":\".\",\"token_id\":26},{\"blocked\":true,\"probability\":4.450796834026116e-07,\"reason\":\"not_in_grammar\",\"token\":\".Reader\",\"token_id\":117152},{\"blocked\":true,\"probability\":8.36279947914759e-08,\"reason\":\"not_in_grammar\",\"token\":\".writer\",\"token_id\":85966},{\"blocked\":true,\"probability\":7.979839009166287e-08,\"reason\":\"not_in_grammar\",\"token\":\"\\treader\",\"token_id\":182185},{\"blocked\":true,\"probability\":7.496365004359354e-08,\"reason\":\"not_in_grammar\",\"token\":\".g\",\"token_id\":2071},{\"blocked\":false,\"probability\":4.075702958497463e-08,\"reason\":null,\"token\":\".read\",\"token_id\":8589},{\"blocked\":true,\"probability\":3.950306761229301e-08,\"reason\":\"not_in_grammar\",\"token\":\".ready\",\"token_id\":76425}]},{\"chosen\":{\"probability\":0.9999952734859804,\"token\":\"/\",\"token_id\":27},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/\",\"step\":9,\"top_k\":[{\"blocked\":false,\"probability\":0.9999952734859804,\"reason\":null,\"token\":\"/\",\"token_id\":27},{\"blocked\":true,\"probability\":1.653684504515096e-06,\"reason\":\"not_in_grammar\",\"token\":\" /\",\"token_id\":756},{\"blocked\":true,\"probability\":4.3138937753828564e-07,\"reason\":\"not_in_grammar\",\"token\":\"/or\",\"token_id\":12952},{\"blocked\":true,\"probability\":2.8736727757248366e-07,\"reason\":\"not_in_grammar\",\"token\":\"/f\",\"token_id\":5889},{\"blocked\":true,\"probability\":2.006146914575704e-07,\"reason\":\"not_in_grammar\",\"token\":\"/x\",\"token_id\":11562},{\"blocked\":true,\"probability\":1.5381661950306078e-07,\"reason\":\"not_in_grammar\",\"token\":\"/w\",\"token_id\":5793},{\"blocked\":true,\"probability\":1.4677284366666686e-07,\"reason\":\"not_in_grammar\",\"token\":\"-\",\"token_id\":25},{\"blocked\":true,\"probability\":1.400516258099871e-07,\"reason\":\"not_in_grammar\",\"token\":\"/in\",\"token_id\":7535}]},{\"chosen\":{\"probability\":0.9999989921476512,\"token\":\"2\",\"token_id\":30},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\",\"step\":10,\"top_k\":[{\"blocked\":false,\"probability\":0.9999989921476512,\"reason\":null,\"token\":\"2\",\"token_id\":30},{\"blocked\":true,\"probability\":3.4663239191157396e-07,\"reason\":\"not_in_grammar\",\"token\":\"²\",\"token_id\":6111},{\"blocked\":true,\"probability\":2.3090695313476234e-07,\"reason\":\"not_in_grammar\",\"token\":\"22\",\"token_id\":1368},{\"blocked\":true,\"probability\":1.514324769796954e-07,\"reason\":\"not_in_grammar\",\"token\":\"1\",\"token_id\":29},{\"blocked\":true,\"probability\":7.042264188167463e-08,\"reason\":\"not_in_grammar\",\"token\":\"223\",\"token_id\":20781},{\"blocked\":true,\"probability\":4.546827495806237e-08,\"reason\":\"not_in_grammar\",\"token\":\"₂\",\"token_id\":29589},{\"blocked\":true,\"probability\":2.890139399550106e-08,\"reason\":\"not_in_grammar\",\"token\":\"3\",\"token_id\":31},{\"blocked\":true,\"probability\":1.6858033842776867e-08,\"reason\":\"not_in_grammar\",\"token\":\"02\",\"token_id\":2974}]},{\"chosen\":{\"probability\":0.9999881716731458,\"token\":\"\\\",\\\"\",\"token_id\":3353},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"\",\"step\":11,\"top_k\":[{\"blocked\":false,\"probability\":0.9999881716731458,\"reason\":null,\"token\":\"\\\",\\\"\",\"token_id\":3353},{\"blocked\":true,\"probability\":4.0928793894871955e-06,\"reason\":\"not_in_grammar\",\"token\":\".\\\",\\\"\",\"token_id\":139201},{\"blocked\":false,\"probability\":2.2603026710660303e-06,\"reason\":null,\"token\":\"\\\",\",\"token_id\":706},{\"blocked\":true,\"probability\":1.55348179264628e-06,\"reason\":\"not_in_grammar\",\"token\":\"\\\",\\n\",\"token_id\":1236},{\"blocked\":true,\"probability\":1.55348179264628e-06,\"reason\":\"not_in_grammar\",\"token\":\",\\\"\",\"token_id\":3814},{\"blocked\":true,\"probability\":6.475875576163181e-07,\"reason\":\"not_in_grammar\",\"token\":\"','\",\"token_id\":4997},{\"blocked\":true,\"probability\":6.276633830750998e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\",\\\"+\",\"token_id\":144319},{\"blocked\":true,\"probability\":3.156089693462317e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\",'\",\"token_id\":131486}]},{\"chosen\":{\"probability\":0.9952686989202172,\"token\":\"constraint\",\"token_id\":53908},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\",\"step\":12,\"top_k\":[{\"blocked\":false,\"probability\":0.9952686989202172,\"reason\":null,\"token\":\"constraint\",\"token_id\":53908},{\"blocked\":false,\"probability\":0.004609008462728893,\"reason\":null,\"token\":\"ref\",\"token_id\":1693},{\"blocked\":true,\"probability\":6.574397480092201e-05,\"reason\":\"not_in_grammar\",\"token\":\" constraint\",\"token_id\":23836},{\"blocked\":true,\"probability\":7.376269543111285e-06,\"reason\":\"not_in_grammar\",\"token\":\"condition\",\"token_id\":18598},{\"blocked\":true,\"probability\":5.926999087505012e-06,\"reason\":\"not_in_grammar\",\"token\":\"code\",\"token_id\":2851},{\"blocked\":true,\"probability\":5.069630974452768e-06,\"reason\":\"not_in_grammar\",\"token\":\"Constraint\",\"token_id\":27175},{\"blocked\":true,\"probability\":3.0748866194344384e-06,\"reason\":\"not_in_grammar\",\"token\":\"constant\",\"token_id\":46420},{\"blocked\":true,\"probability\":3.0748866194344384e-06,\"reason\":\"not_in_grammar\",\"token\":\"_constraint\",\"token_id\":85706}]},{\"chosen\":{\"probability\":0.9999997415254513,\"token\":\"\\\":{\\\"\",\"token_id\":33678},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"\",\"step\":13,\"top_k\":[{\"blocked\":false,\"probability\":0.9999997415254513,\"reason\":null,\"token\":\"\\\":{\\\"\",\"token_id\":33678},{\"blocked\":true,\"probability\":1.4908484575431623e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\\\\\":{\\\\\\\"\",\"token_id\":196340},{\"blocked\":true,\"probability\":5.570893675354889e-08,\"reason\":\"not_in_grammar\",\"token\":\"\\\":{\\n\",\"token_id\":58045},{\"blocked\":false,\"probability\":1.1861117085546152e-08,\"reason\":null,\"token\":\"\\\":{\",\"token_id\":184700},{\"blocked\":true,\"probability\":9.355467118466043e-09,\"reason\":\"not_in_grammar\",\"token\":\"\\\":[{\\\"\",\"token_id\":93163},{\"blocked\":true,\"probability\":4.663059736423274e-09,\"reason\":\"not_in_grammar\",\"token\":\"\\\",\\\"\",\"token_id\":3353},{\"blocked\":true,\"probability\":2.8616276704011863e-09,\"reason\":\"not_in_grammar\",\"token\":\"\\\",{\\\"\",\"token_id\":95184},{\"blocked\":true,\"probability\":2.2993824306605925e-09,\"reason\":\"not_in_grammar\",\"token\":\"\\\"][\\\"\",\"token_id\":28816}]},{\"chosen\":{\"probability\":0.9999601426029674,\"token\":\"type\",\"token_id\":2584},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\",\"step\":14,\"top_k\":[{\"blocked\":false,\"probability\":0.9999601426029674,\"reason\":null,\"token\":\"type\",\"token_id\":2584},{\"blocked\":true,\"probability\":1.4738611749171417e-05,\"reason\":\"not_in_grammar\",\"token\":\"kind\",\"token_id\":30938},{\"blocked\":true,\"probability\":1.045124071188193e-05,\"reason\":\"not_in_grammar\",\"token\":\"ype\",\"token_id\":655},{\"blocked\":true,\"probability\":3.3930210840685044e-06,\"reason\":\"not_in_grammar\",\"token\":\" type\",\"token_id\":1390},{\"blocked\":true,\"probability\":3.089380853425289e-06,\"reason\":\"not_in_grammar\",\"token\":\"Type\",\"token_id\":1295},{\"blocked\":true,\"probability\":2.482387254449995e-06,\"reason\":\"not_in_grammar\",\"token\":\"-type\",\"token_id\":14951},{\"blocked\":true,\"probability\":1.5779013423412892e-06,\"reason\":\"not_in_grammar\",\"token\":\"_type\",\"token_id\":4156},{\"blocked\":true,\"probability\":7.453478176471745e-07,\"reason\":\"not_in_grammar\",\"token\":\"tipo\",\"token_id\":50631}]},{\"chosen\":{\"probability\":0.999999058694416,\"token\":\"\\\":\\\"\",\"token_id\":4971},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"\",\"step\":15,\"top_k\":[{\"blocked\":false,\"probability\":0.999999058694416,\"reason\":null,\"token\":\"\\\":\\\"\",\"token_id\":4971},{\"blocked\":true,\"probability\":2.4966996248597515e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\\\\\":\\\\\\\"\",\"token_id\":55267},{\"blocked\":true,\"probability\":1.2359559381477504e-07,\"reason\":\"not_in_grammar\",\"token\":\"loos\",\"token_id\":143069},{\"blocked\":true,\"probability\":8.105596934633845e-08,\"reason\":\"not_in_grammar\",\"token\":\"code\",\"token_id\":2851},{\"blocked\":true,\"probability\":7.734414626687034e-08,\"reason\":\"not_in_grammar\",\"token\":\"\\\"=>\\\"\",\"token_id\":81783},{\"blocked\":true,\"probability\":4.691159606015528e-08,\"reason\":\"not_in_grammar\",\"token\":\"=\\\"\",\"token_id\":508},{\"blocked\":true,\"probability\":4.372641560823413e-08,\"reason\":\"not_in_grammar\",\"token\":\"hold\",\"token_id\":8306},{\"blocked\":true,\"probability\":3.711012693749105e-08,\"reason\":\"not_in_grammar\",\"token\":\"ˈ\",\"token_id\":110260}]},{\"chosen\":{\"probability\":0.9993217481009451,\"token\":\"dg\",\"token_id\":45200},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg\",\"step\":16,\"top_k\":[{\"blocked\":false,\"probability\":0.9993217481009451,\"reason\":null,\"token\":\"dg\",\"token_id\":45200},{\"blocked\":true,\"probability\":0.00027791965911897485,\"reason\":\"not_in_grammar\",\"token\":\"DG\",\"token_id\":65476},{\"blocked\":true,\"probability\":0.0001794384183755082,\"reason\":\"not_in_grammar\",\"token\":\" dg\",\"token_id\":84687},{\"blocked\":true,\"probability\":3.761233578388931e-05,\"reason\":\"not_in_grammar\",\"token\":\"g\",\"token_id\":83},{\"blocked\":true,\"probability\":3.761233578388931e-05,\"reason\":\"not_in_grammar\",\"token\":\"dh\",\"token_id\":23684},{\"blocked\":true,\"probability\":1.5196757396980963e-05,\"reason\":\"not_in_grammar\",\"token\":\"dog\",\"token_id\":30250},{\"blocked\":true,\"probability\":1.4729202325428166e-05,\"reason\":\"not_in_grammar\",\"token\":\"deg\",\"token_id\":17027},{\"blocked\":true,\"probability\":1.3836805069329845e-05,\"reason\":\"not_in_grammar\",\"token\":\"dig\",\"token_id\":15206}]},{\"chosen\":{\"probability\":0.9996793661112638,\"token\":\"_keep\",\"token_id\":128110},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep\",\"step\":17,\"top_k\":[{\"blocked\":false,\"probability\":0.9996793661112638,\"reason\":null,\"token\":\"_keep\",\"token_id\":128110},{\"blocked\":true,\"probability\":8.218229361057496e-05,\"reason\":\"not_in_grammar\",\"token\":\"_class\",\"token_id\":11968},{\"blocked\":true,\"probability\":7.029424082721195e-05,\"reason\":\"not_in_grammar\",\"token\":\"keep\",\"token_id\":25368},{\"blocked\":true,\"probability\":3.3204648217096796e-05,\"reason\":\"not_in_grammar\",\"token\":\"_per\",\"token_id\":11516},{\"blocked\":false,\"probability\":2.840144069738049e-05,\"reason\":null,\"token\":\"_\",\"token_id\":75},{\"blocked\":true,\"probability\":1.7497620017162935e-05,\"reason\":\"not_in_grammar\",\"token\":\" Keep\",\"token_id\":22834},{\"blocked\":false,\"probability\":1.2025926642154392e-05,\"reason\":null,\"token\":\"_k\",\"token_id\":10366},{\"blocked\":true,\"probability\":8.93690982846861e-06,\"reason\":\"not_in_grammar\",\"token\":\"ening\",\"token_id\":8071}]},{\"chosen\":{\"probability\":0.9998804300416684,\"token\":\"_\",\"token_id\":75},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_\",\"step\":18,\"top_k\":[{\"blocked\":false,\"probability\":0.9998804300416684,\"reason\":null,\"token\":\"_\",\"token_id\":75},{\"blocked\":true,\"probability\":7.966983089778497e-05,\"reason\":\"not_in_grammar\",\"token\":\"_keep\",\"token_id\":128110},{\"blocked\":true,\"probability\":7.88838150095937e-06,\"reason\":\"not_in_grammar\",\"token\":\"_from\",\"token_id\":13524},{\"blocked\":true,\"probability\":7.64568151695821e-06,\"reason\":\"not_in_grammar\",\"token\":\"_per\",\"token_id\":11516},{\"blocked\":true,\"probability\":3.3401508841280264e-06,\"reason\":\"not_in_grammar\",\"token\":\"_b\",\"token_id\":2073},{\"blocked\":true,\"probability\":1.873654835445329e-06,\"reason\":\"not_in_grammar\",\"token\":\"_A\",\"token_id\":7130},{\"blocked\":true,\"probability\":1.2481231972956007e-06,\"reason\":\"not_in_grammar\",\"token\":\"_class\",\"token_id\":11968},{\"blocked\":false,\"probability\":1.2097224835397713e-06,\"reason\":null,\"token\":\"_a\",\"token_id\":10790}]},{\"chosen\":{\"probability\":0.9999541365504616,\"token\":\"away\",\"token_id\":27755},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\",\"step\":19,\"top_k\":[{\"blocked\":false,\"probability\":0.9999541365504616,\"reason\":null,\"token\":\"away\",\"token_id\":27755},{\"blocked\":true,\"probability\":1.952537093434278e-05,\"reason\":\"not_in_grammar\",\"token\":\"await\",\"token_id\":18497},{\"blocked\":true,\"probability\":5.421999687619622e-06,\"reason\":\"not_in_grammar\",\"token\":\"way\",\"token_id\":4614},{\"blocked\":true,\"probability\":5.421999687619622e-06,\"reason\":\"not_in_grammar\",\"token\":\"Away\",\"token_id\":93331},{\"blocked\":true,\"probability\":3.6118304491441177e-06,\"reason\":\"not_in_grammar\",\"token\":\" away\",\"token_id\":6851},{\"blocked\":true,\"probability\":3.187429184030412e-06,\"reason\":\"not_in_grammar\",\"token\":\"aways\",\"token_id\":87947},{\"blocked\":true,\"probability\":2.260225740477357e-06,\"reason\":\"not_in_grammar\",\"token\":\"aware\",\"token_id\":41586},{\"blocked\":true,\"probability\":1.7602655766019117e-06,\"reason\":\"not_in_grammar\",\"token\":\"ay\",\"token_id\":409}]},{\"chosen\":{\"probability\":0.9999091062558413,\"token\":\"\\\",\\\"\",\"token_id\":3353},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"\",\"step\":20,\"top_k\":[{\"blocked\":false,\"probability\":0.9999091062558413,\"reason\":null,\"token\":\"\\\",\\\"\",\"token_id\":3353},{\"blocked\":true,\"probability\":9.028033477147224e-05,\"reason\":\"not_in_grammar\",\"token\":\"\\\":{\\\"\",\"token_id\":33678},{\"blocked\":true,\"probability\":2.4577707823749926e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\",\\n\",\"token_id\":1236},{\"blocked\":true,\"probability\":7.855507248050137e-08,\"reason\":\"not_in_grammar\",\"token\":\"\\\\\\\",\\\\\\\"\",\"token_id\":79525},{\"blocked\":true,\"probability\":6.214217711964086e-08,\"reason\":\"not_in_grammar\",\"token\":\"\\\",\\\"+\",\"token_id\":144319},{\"blocked\":true,\"probability\":4.8396376202538236e-08,\"reason\":\"not_in_grammar\",\"token\":\"\\\",'\",\"token_id\":131486},{\"blocked\":true,\"probability\":3.980977316561264e-08,\"reason\":\"not_in_grammar\",\"token\":\".\\\",\\\"\",\"token_id\":139201},{\"blocked\":true,\"probability\":3.07626083873681e-08,\"reason\":\"not_in_grammar\",\"token\":\"ening\",\"token_id\":8071}]},{\"chosen\":{\"probability\":0.999611465842324,\"token\":\"im\",\"token_id\":324},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"im\",\"step\":21,\"top_k\":[{\"blocked\":false,\"probability\":0.999611465842324,\"reason\":null,\"token\":\"im\",\"token_id\":324},{\"blocked\":true,\"probability\":0.00021650679839403157,\"reason\":\"not_in_grammar\",\"token\":\"min\",\"token_id\":1419},{\"blocked\":true,\"probability\":2.9301008883308466e-05,\"reason\":\"not_in_grammar\",\"token\":\"imm\",\"token_id\":8749},{\"blocked\":true,\"probability\":2.5858049582123433e-05,\"reason\":\"not_in_grammar\",\"token\":\"img\",\"token_id\":3122},{\"blocked\":true,\"probability\":1.3002243874629957e-05,\"reason\":\"not_in_grammar\",\"token\":\"ım\",\"token_id\":7992},{\"blocked\":true,\"probability\":1.0779238773750984e-05,\"reason\":\"not_in_grammar\",\"token\":\"ime\",\"token_id\":685},{\"blocked\":true,\"probability\":1.0126157711247188e-05,\"reason\":\"not_in_grammar\",\"token\":\"mi\",\"token_id\":3652},{\"blocked\":true,\"probability\":8.394879597910916e-06,\"reason\":\"not_in_grammar\",\"token\":\"imb\",\"token_id\":9682}]},{\"chosen\":{\"probability\":0.9997117454475699,\"token\":\"dg\",\"token_id\":45200},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg\",\"step\":22,\"top_k\":[{\"blocked\":false,\"probability\":0.9997117454475699,\"reason\":null,\"token\":\"dg\",\"token_id\":45200},{\"blocked\":true,\"probability\":0.00010887737640635617,\"reason\":\"not_in_grammar\",\"token\":\"dm\",\"token_id\":21953},{\"blocked\":true,\"probability\":4.984769526099548e-05,\"reason\":\"not_in_grammar\",\"token\":\"dh\",\"token_id\":23684},{\"blocked\":true,\"probability\":2.5860643625002222e-05,\"reason\":\"not_in_grammar\",\"token\":\"md\",\"token_id\":5628},{\"blocked\":true,\"probability\":2.4293826434091123e-05,\"reason\":\"not_in_grammar\",\"token\":\"ding\",\"token_id\":12693},{\"blocked\":true,\"probability\":1.5685273238465907e-05,\"reason\":\"not_in_grammar\",\"token\":\"mg\",\"token_id\":19306},{\"blocked\":true,\"probability\":8.937199292489457e-06,\"reason\":\"not_in_grammar\",\"token\":\"df\",\"token_id\":3679},{\"blocked\":true,\"probability\":7.1812413770731815e-06,\"reason\":\"not_in_grammar\",\"token\":\"im\",\"token_id\":324}]},{\"chosen\":{\"probability\":0.9996556436049947,\"token\":\"_class\",\"token_id\":11968},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\",\"step\":23,\"top_k\":[{\"blocked\":false,\"probability\":0.9996556436049947,\"reason\":null,\"token\":\"_class\",\"token_id\":11968},{\"blocked\":true,\"probability\":0.00020339830337659406,\"reason\":\"not_in_grammar\",\"token\":\"class\",\"token_id\":1619},{\"blocked\":true,\"probability\":5.6481668956696566e-05,\"reason\":\"not_in_grammar\",\"token\":\"-class\",\"token_id\":23932},{\"blocked\":true,\"probability\":5.4743910691521124e-05,\"reason\":\"not_in_grammar\",\"token\":\" class\",\"token_id\":700},{\"blocked\":false,\"probability\":5.1721638585656395e-06,\"reason\":null,\"token\":\"_cl\",\"token_id\":12232},{\"blocked\":true,\"probability\":4.709308783979352e-06,\"reason\":\"not_in_grammar\",\"token\":\"_classes\",\"token_id\":39616},{\"blocked\":true,\"probability\":3.843625809261108e-06,\"reason\":\"not_in_grammar\",\"token\":\"Class\",\"token_id\":3125},{\"blocked\":true,\"probability\":1.9027327499362582e-06,\"reason\":\"not_in_grammar\",\"token\":\" Class\",\"token_id\":6302}]},{\"chosen\":{\"probability\":0.9999988458953223,\"token\":\"\\\":\\\"\",\"token_id\":4971},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"\",\"step\":24,\"top_k\":[{\"blocked\":false,\"probability\":0.9999988458953223,\"reason\":null,\"token\":\"\\\":\\\"\",\"token_id\":4971},{\"blocked\":true,\"probability\":4.31390918645012e-07,\"reason\":\"not_in_grammar\",\"token\":\"=\\\"\",\"token_id\":508},{\"blocked\":true,\"probability\":2.829130715645206e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\\\\\":\\\\\\\"\",\"token_id\":55267},{\"blocked\":true,\"probability\":7.153162666225271e-08,\"reason\":\"not_in_grammar\",\"token\":\":\\\"\",\"token_id\":6624},{\"blocked\":true,\"probability\":5.2333656030080383e-08,\"reason\":\"not_in_grammar\",\"token\":\"11\",\"token_id\":825},{\"blocked\":true,\"probability\":4.3386124709773934e-08,\"reason\":\"not_in_grammar\",\"token\":\"12\",\"token_id\":738},{\"blocked\":true,\"probability\":3.596836070940876e-08,\"reason\":\"not_in_grammar\",\"token\":\"loos\",\"token_id\":143069},{\"blocked\":true,\"probability\":1.464651147950421e-08,\"reason\":\"not_in_grammar\",\"token\":\"8\",\"token_id\":36}]},{\"chosen\":{\"probability\":0.9999751801025836,\"token\":\"2\",\"token_id\":30},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2\",\"step\":25,\"top_k\":[{\"blocked\":false,\"probability\":0.9999751801025836,\"reason\":null,\"token\":\"2\",\"token_id\":30},{\"blocked\":true,\"probability\":1.7778426676041946e-05,\"reason\":\"not_in_grammar\",\"token\":\"22\",\"token_id\":1368},{\"blocked\":false,\"probability\":1.0676775097307826e-06,\"reason\":null,\"token\":\"6\",\"token_id\":34},{\"blocked\":false,\"probability\":1.002990199513259e-06,\"reason\":null,\"token\":\"3\",\"token_id\":31},{\"blocked\":true,\"probability\":6.475791443373531e-07,\"reason\":\"not_in_grammar\",\"token\":\"20\",\"token_id\":451},{\"blocked\":false,\"probability\":6.27655228645516e-07,\"reason\":null,\"token\":\"1\",\"token_id\":29},{\"blocked\":false,\"probability\":5.368619669820141e-07,\"reason\":null,\"token\":\"5\",\"token_id\":33},{\"blocked\":false,\"probability\":2.873615033643078e-07,\"reason\":null,\"token\":\"4\",\"token_id\":32}]},{\"chosen\":{\"probability\":0.9926542143657259,\"token\":\".\",\"token_id\":26},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.\",\"step\":26,\"top_k\":[{\"blocked\":false,\"probability\":0.9926542143657259,\"reason\":null,\"token\":\".\",\"token_id\":26},{\"blocked\":false,\"probability\":0.007119819544326587,\"reason\":null,\"token\":\"\\\",\\\"\",\"token_id\":3353},{\"blocked\":true,\"probability\":3.509777222859921e-05,\"reason\":\"not_in_grammar\",\"token\":\".b\",\"token_id\":1943},{\"blocked\":true,\"probability\":2.9097075160772147e-05,\"reason\":\"not_in_grammar\",\"token\":\".s\",\"token_id\":681},{\"blocked\":true,\"probability\":2.733417249569487e-05,\"reason\":\"not_in_grammar\",\"token\":\"2\",\"token_id\":30},{\"blocked\":true,\"probability\":1.9998107802173798e-05,\"reason\":\"not_in_grammar\",\"token\":\".h\",\"token_id\":1625},{\"blocked\":true,\"probability\":1.4630928217430128e-05,\"reason\":\"not_in_grammar\",\"token\":\".g\",\"token_id\":2071},{\"blocked\":true,\"probability\":1.1394578352796098e-05,\"reason\":\"not_in_grammar\",\"token\":\".l\",\"token_id\":1101}]},{\"chosen\":{\"probability\":0.9999276394445571,\"token\":\"2\",\"token_id\":30},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\",\"step\":27,\"top_k\":[{\"blocked\":false,\"probability\":0.9999276394445571,\"reason\":null,\"token\":\"2\",\"token_id\":30},{\"blocked\":true,\"probability\":7.03116986102503e-05,\"reason\":\"not_in_grammar\",\"token\":\"22\",\"token_id\":1368},{\"blocked\":false,\"probability\":1.328682958436346e-06,\"reason\":null,\"token\":\"1\",\"token_id\":29},{\"blocked\":true,\"probability\":2.3089047728288773e-07,\"reason\":\"not_in_grammar\",\"token\":\"²\",\"token_id\":6111},{\"blocked\":false,\"probability\":1.400421535077547e-07,\"reason\":null,\"token\":\"3\",\"token_id\":31},{\"blocked\":true,\"probability\":1.1978440162892674e-07,\"reason\":\"not_in_grammar\",\"token\":\"223\",\"token_id\":20781},{\"blocked\":true,\"probability\":4.954498148315199e-08,\"reason\":\"not_in_grammar\",\"token\":\"21\",\"token_id\":1699},{\"blocked\":true,\"probability\":3.8285394307198476e-08,\"reason\":\"not_in_grammar\",\"token\":\"222\",\"token_id\":15240}]},{\"chosen\":{\"probability\":0.9999867631961631,\"token\":\"\\\",\\\"\",\"token_id\":3353},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"\",\"step\":28,\"top_k\":[{\"blocked\":false,\"probability\":0.9999867631961631,\"reason\":null,\"token\":\"\\\",\\\"\",\"token_id\":3353},{\"blocked\":true,\"probability\":8.6646135314678e-06,\"reason\":\"not_in_grammar\",\"token\":\",\\\"\",\"token_id\":3814},{\"blocked\":true,\"probability\":2.2602994874440872e-06,\"reason\":\"not_in_grammar\",\"token\":\"\\\":{\\\"\",\"token_id\":33678},{\"blocked\":false,\"probability\":8.315177123210283e-07,\"reason\":null,\"token\":\"\\\"\",\"token_id\":14},{\"blocked\":true,\"probability\":3.1071546816693616e-07,\"reason\":\"not_in_grammar\",\"token\":\".\\\",\\\"\",\"token_id\":139201},{\"blocked\":true,\"probability\":2.9189016961422454e-07,\"reason\":\"not_in_grammar\",\"token\":\"','\",\"token_id\":4997},{\"blocked\":true,\"probability\":2.4966689266649797e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\",'\",\"token_id\":131486},{\"blocked\":true,\"probability\":1.2554039760659672e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\",\\\"+\",\"token_id\":144319}]},{\"chosen\":{\"probability\":0.9997645759248073,\"token\":\"min\",\"token_id\":1419},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min\",\"step\":29,\"top_k\":[{\"blocked\":false,\"probability\":0.9997645759248073,\"reason\":null,\"token\":\"min\",\"token_id\":1419},{\"blocked\":true,\"probability\":0.0001055331483751086,\"reason\":\"not_in_grammar\",\"token\":\"max\",\"token_id\":4836},{\"blocked\":true,\"probability\":6.203973743884719e-05,\"reason\":\"not_in_grammar\",\"token\":\"im\",\"token_id\":324},{\"blocked\":true,\"probability\":1.7774682372176443e-05,\"reason\":\"not_in_grammar\",\"token\":\" min\",\"token_id\":1369},{\"blocked\":true,\"probability\":1.3842936550296509e-05,\"reason\":\"not_in_grammar\",\"token\":\"minimum\",\"token_id\":68768},{\"blocked\":true,\"probability\":8.93767158513375e-06,\"reason\":\"not_in_grammar\",\"token\":\"mini\",\"token_id\":46075},{\"blocked\":true,\"probability\":3.3923574957572627e-06,\"reason\":\"not_in_grammar\",\"token\":\"amin\",\"token_id\":7587},{\"blocked\":true,\"probability\":2.6419706741539063e-06,\"reason\":\"not_in_grammar\",\"token\":\"mine\",\"token_id\":48547}]},{\"chosen\":{\"probability\":0.9999676055252403,\"token\":\"_b\",\"token_id\":2073},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_b\",\"step\":30,\"top_k\":[{\"blocked\":false,\"probability\":0.9999676055252403,\"reason\":null,\"token\":\"_b\",\"token_id\":2073},{\"blocked\":true,\"probability\":1.0129765439569317e-05,\"reason\":\"not_in_grammar\",\"token\":\"_B\",\"token_id\":3580},{\"blocked\":true,\"probability\":8.664447535455833e-06,\"reason\":\"not_in_grammar\",\"token\":\"-b\",\"token_id\":1738},{\"blocked\":true,\"probability\":1.9637446043629587e-06,\"reason\":\"not_in_grammar\",\"token\":\"_t\",\"token_id\":936},{\"blocked\":true,\"probability\":1.505655216055651e-06,\"reason\":\"not_in_grammar\",\"token\":\".b\",\"token_id\":1943},{\"blocked\":false,\"probability\":1.349660612862281e-06,\"reason\":null,\"token\":\"_\",\"token_id\":75},{\"blocked\":true,\"probability\":1.3081359212498336e-06,\"reason\":\"not_in_grammar\",\"token\":\"_per\",\"token_id\":11516},{\"blocked\":true,\"probability\":1.2098279542933953e-06,\"reason\":\"not_in_grammar\",\"token\":\"_h\",\"token_id\":3660}]},{\"chosen\":{\"probability\":0.9998512854884266,\"token\":\"ays\",\"token_id\":1372},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\",\"step\":31,\"top_k\":[{\"blocked\":false,\"probability\":0.9998512854884266,\"reason\":null,\"token\":\"ays\",\"token_id\":1372},{\"blocked\":false,\"probability\":0.00011591554115122247,\"reason\":null,\"token\":\"ay\",\"token_id\":409},{\"blocked\":true,\"probability\":1.1124076711611927e-05,\"reason\":\"not_in_grammar\",\"token\":\"iers\",\"token_id\":16208},{\"blocked\":true,\"probability\":4.60111806878935e-06,\"reason\":\"not_in_grammar\",\"token\":\"ails\",\"token_id\":2905},{\"blocked\":true,\"probability\":3.3662498897550774e-06,\"reason\":\"not_in_grammar\",\"token\":\"als\",\"token_id\":1331},{\"blocked\":true,\"probability\":2.0577472827902165e-06,\"reason\":\"not_in_grammar\",\"token\":\"ayers\",\"token_id\":8878},{\"blocked\":true,\"probability\":1.7947990797594496e-06,\"reason\":\"not_in_grammar\",\"token\":\"bay\",\"token_id\":44940},{\"blocked\":true,\"probability\":9.220806903499198e-07,\"reason\":\"not_in_grammar\",\"token\":\"ars\",\"token_id\":2196}]},{\"chosen\":{\"probability\":0.9999797252039105,\"token\":\"\\\":\",\"token_id\":1217},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":\",\"step\":32,\"top_k\":[{\"blocked\":false,\"probability\":0.9999797252039105,\"reason\":null,\"token\":\"\\\":\",\"token_id\":1217},{\"blocked\":true,\"probability\":1.045144538251579e-05,\"reason\":\"not_in_grammar\",\"token\":\"\\\":{\\\"\",\"token_id\":33678},{\"blocked\":true,\"probability\":3.2886932024305024e-06,\"reason\":\"not_in_grammar\",\"token\":\"”:\",\"token_id\":48068},{\"blocked\":true,\"probability\":2.2602835792632325e-06,\"reason\":\"not_in_grammar\",\"token\":\":\",\"token_id\":38},{\"blocked\":true,\"probability\":2.190741964363071e-06,\"reason\":\"not_in_grammar\",\"token\":\"**:\",\"token_id\":24210},{\"blocked\":true,\"probability\":1.2878707624855259e-06,\"reason\":\"not_in_grammar\",\"token\":\"\\\":\\n\",\"token_id\":9961},{\"blocked\":true,\"probability\":3.156063035332496e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\";\",\"token_id\":10991},{\"blocked\":true,\"probability\":7.380087308413527e-08,\"reason\":\"not_in_grammar\",\"token\":\" \\\":\",\"token_id\":31326}]},{\"chosen\":{\"probability\":0.9999606756365756,\"token\":\"3\",\"token_id\":31},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3\",\"step\":33,\"top_k\":[{\"blocked\":false,\"probability\":0.9999606756365756,\"reason\":null,\"token\":\"3\",\"token_id\":31},{\"blocked\":true,\"probability\":2.355224706839781e-05,\"reason\":\"not_in_grammar\",\"token\":\"33\",\"token_id\":1922},{\"blocked\":true,\"probability\":8.939424672674488e-06,\"reason\":\"not_in_grammar\",\"token\":\"23\",\"token_id\":1504},{\"blocked\":false,\"probability\":1.653627290317222e-06,\"reason\":null,\"token\":\"13\",\"token_id\":974},{\"blocked\":true,\"probability\":9.422084285290888e-07,\"reason\":\"not_in_grammar\",\"token\":\"31\",\"token_id\":2330},{\"blocked\":false,\"probability\":5.804777734705123e-07,\"reason\":null,\"token\":\"4\",\"token_id\":32},{\"blocked\":true,\"probability\":4.450677473478144e-07,\"reason\":\"not_in_grammar\",\"token\":\"③\",\"token_id\":70796},{\"blocked\":false,\"probability\":4.313744523230225e-07,\"reason\":null,\"token\":\"2\",\"token_id\":30}]},{\"chosen\":{\"probability\":0.9999726549628069,\"token\":\",\\\"\",\"token_id\":3814},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"\",\"step\":34,\"top_k\":[{\"blocked\":false,\"probability\":0.9999726549628069,\"reason\":null,\"token\":\",\\\"\",\"token_id\":3814},{\"blocked\":false,\"probability\":2.1444821891101123e-05,\"reason\":null,\"token\":\",\",\"token_id\":24},{\"blocked\":true,\"probability\":1.8161760377230996e-06,\"reason\":\"not_in_grammar\",\"token\":\"，\\\"\",\"token_id\":69129},{\"blocked\":true,\"probability\":1.3925104712688216e-06,\"reason\":\"not_in_grammar\",\"token\":\" ,\\\"\",\"token_id\":43723},{\"blocked\":true,\"probability\":8.579008141100956e-07,\"reason\":\"not_in_grammar\",\"token\":\"}}\",\"token_id\":3304},{\"blocked\":true,\"probability\":5.368606112968586e-07,\"reason\":\"not_in_grammar\",\"token\":\" \\\"\",\"token_id\":392},{\"blocked\":true,\"probability\":5.122759739957559e-07,\"reason\":\"not_in_grammar\",\"token\":\",'\",\"token_id\":8287},{\"blocked\":true,\"probability\":1.4336961150756267e-07,\"reason\":\"not_in_grammar\",\"token\":\",\\\\\\\"\",\"token_id\":131145}]},{\"chosen\":{\"probability\":0.9998250355014413,\"token\":\"away\",\"token_id\":27755},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away\",\"step\":35,\"top_k\":[{\"blocked\":false,\"probability\":0.9998250355014413,\"reason\":null,\"token\":\"away\",\"token_id\":27755},{\"blocked\":true,\"probability\":0.0001488345934374533,\"reason\":\"not_in_grammar\",\"token\":\"way\",\"token_id\":4614},{\"blocked\":false,\"probability\":6.338141446020242e-06,\"reason\":null,\"token\":\"aw\",\"token_id\":1269},{\"blocked\":true,\"probability\":4.637083340382877e-06,\"reason\":\"not_in_grammar\",\"token\":\" away\",\"token_id\":6851},{\"blocked\":true,\"probability\":4.222112428001349e-06,\"reason\":\"not_in_grammar\",\"token\":\"await\",\"token_id\":18497},{\"blocked\":true,\"probability\":1.3707192172149907e-06,\"reason\":\"not_in_grammar\",\"token\":\"after\",\"token_id\":12650},{\"blocked\":true,\"probability\":1.2876715381012243e-06,\"reason\":\"not_in_grammar\",\"token\":\"max\",\"token_id\":4836},{\"blocked\":true,\"probability\":1.2480540498169786e-06,\"reason\":\"not_in_grammar\",\"token\":\"about\",\"token_id\":16017}]},{\"chosen\":{\"probability\":0.9994819365673748,\"token\":\"_from\",\"token_id\":13524},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\",\"step\":36,\"top_k\":[{\"blocked\":false,\"probability\":0.9994819365673748,\"reason\":null,\"token\":\"_from\",\"token_id\":13524},{\"blocked\":false,\"probability\":0.00012726128819405986,\"reason\":null,\"token\":\"_f\",\"token_id\":1523},{\"blocked\":true,\"probability\":0.00010885234820391235,\"reason\":\"not_in_grammar\",\"token\":\" from\",\"token_id\":610},{\"blocked\":true,\"probability\":0.00010225731782067625,\"reason\":\"not_in_grammar\",\"token\":\"-from\",\"token_id\":52385},{\"blocked\":true,\"probability\":6.20221984382192e-05,\"reason\":\"not_in_grammar\",\"token\":\"ening\",\"token_id\":8071},{\"blocked\":true,\"probability\":3.821076798407376e-05,\"reason\":\"not_in_grammar\",\"token\":\"_for\",\"token_id\":12151},{\"blocked\":true,\"probability\":2.5453858952664124e-05,\"reason\":\"not_in_grammar\",\"token\":\"From\",\"token_id\":4502},{\"blocked\":true,\"probability\":1.5928617915307874e-05,\"reason\":\"not_in_grammar\",\"token\":\"from\",\"token_id\":2986}]},{\"chosen\":{\"probability\":0.9999985188945505,\"token\":\"\\\":{\\\"\",\"token_id\":33678},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\\\":{\\\"\",\"step\":37,\"top_k\":[{\"blocked\":false,\"probability\":0.9999985188945505,\"reason\":null,\"token\":\"\\\":{\\\"\",\"token_id\":33678},{\"blocked\":true,\"probability\":5.203566052378553e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\":{\\n\",\"token_id\":58045},{\"blocked\":true,\"probability\":2.6577214816056805e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\",\\\"\",\"token_id\":3353},{\"blocked\":true,\"probability\":2.1691690541250463e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\\\\\":{\\\\\\\"\",\"token_id\":196340},{\"blocked\":true,\"probability\":2.1024307384556105e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\":\\\"\",\"token_id\":4971},{\"blocked\":true,\"probability\":9.042441929266865e-08,\"reason\":\"not_in_grammar\",\"token\":\"\\\":[{\\\"\",\"token_id\":93163},{\"blocked\":false,\"probability\":6.564108895155648e-08,\"reason\":null,\"token\":\"\\\":{\",\"token_id\":184700},{\"blocked\":true,\"probability\":4.916290402311337e-08,\"reason\":\"not_in_grammar\",\"token\":\"\\\":[\\\"\",\"token_id\":57470}]},{\"chosen\":{\"probability\":0.9994887510101228,\"token\":\"kind\",\"token_id\":30938},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\\\":{\\\"kind\",\"step\":38,\"top_k\":[{\"blocked\":false,\"probability\":0.9994887510101228,\"reason\":null,\"token\":\"kind\",\"token_id\":30938},{\"blocked\":true,\"probability\":0.00023044199409302877,\"reason\":\"not_in_grammar\",\"token\":\"type\",\"token_id\":2584},{\"blocked\":true,\"probability\":8.477487200937623e-05,\"reason\":\"not_in_grammar\",\"token\":\"code\",\"token_id\":2851},{\"blocked\":true,\"probability\":7.481356196528006e-05,\"reason\":\"not_in_grammar\",\"token\":\"king\",\"token_id\":11839},{\"blocked\":true,\"probability\":7.028083738578949e-05,\"reason\":\"not_in_grammar\",\"token\":\" kind\",\"token_id\":6386},{\"blocked\":true,\"probability\":1.0446313888505199e-05,\"reason\":\"not_in_grammar\",\"token\":\"hold\",\"token_id\":8306},{\"blocked\":false,\"probability\":8.660298391223134e-06,\"reason\":null,\"token\":\"kin\",\"token_id\":5924},{\"blocked\":true,\"probability\":7.885291417851505e-06,\"reason\":\"not_in_grammar\",\"token\":\"-kind\",\"token_id\":121815}]},{\"chosen\":{\"probability\":0.9999987664370409,\"token\":\"\\\":\\\"\",\"token_id\":4971},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\\\":{\\\"kind\\\":\\\"\",\"step\":39,\"top_k\":[{\"blocked\":false,\"probability\":0.9999987664370409,\"reason\":null,\"token\":\"\\\":\\\"\",\"token_id\":4971},{\"blocked\":true,\"probability\":6.276700330991078e-07,\"reason\":\"not_in_grammar\",\"token\":\"=\\\"\",\"token_id\":508},{\"blocked\":true,\"probability\":1.1430720485118196e-07,\"reason\":\"not_in_grammar\",\"token\":\"\\\\\\\":\\\\\\\"\",\"token_id\":55267},{\"blocked\":true,\"probability\":6.312643395035153e-08,\"reason\":\"not_in_grammar\",\"token\":\":\\\"\",\"token_id\":6624},{\"blocked\":true,\"probability\":3.973565829482241e-08,\"reason\":\"not_in_grammar\",\"token\":\"loos\",\"token_id\":143069},{\"blocked\":true,\"probability\":3.958074364426924e-08,\"reason\":\"not_in_grammar\",\"token\":\"hold\",\"token_id\":8306},{\"blocked\":true,\"probability\":2.9306391114386046e-08,\"reason\":\"not_in_grammar\",\"token\":\"!(\\\"\",\"token_id\":29875},{\"blocked\":true,\"probability\":2.501206612375253e-08,\"reason\":\"not_in_grammar\",\"token\":\"':'\",\"token_id\":29512}]},{\"chosen\":{\"probability\":0.9994399821781098,\"token\":\"ac\",\"token_id\":399},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\\\":{\\\"kind\\\":\\\"ac\",\"step\":40,\"top_k\":[{\"blocked\":false,\"probability\":0.9994399821781098,\"reason\":null,\"token\":\"ac\",\"token_id\":399},{\"blocked\":true,\"probability\":0.0003149614918551487,\"reason\":\"not_in_grammar\",\"token\":\"commodation\",\"token_id\":125935},{\"blocked\":true,\"probability\":0.00010549888490863183,\"reason\":\"not_in_grammar\",\"token\":\" accommodation\",\"token_id\":51786},{\"blocked\":true,\"probability\":4.131395693834827e-05,\"reason\":\"not_in_grammar\",\"token\":\"AC\",\"token_id\":2177},{\"blocked\":true,\"probability\":2.7521028447359726e-05,\"reason\":\"not_in_grammar\",\"token\":\"code\",\"token_id\":2851},{\"blocked\":true,\"probability\":1.6692347540147243e-05,\"reason\":\"not_in_grammar\",\"token\":\"acoustic\",\"token_id\":168925},{\"blocked\":true,\"probability\":8.135200470044093e-06,\"reason\":\"not_in_grammar\",\"token\":\"acry\",\"token_id\":136794},{\"blocked\":true,\"probability\":4.635297503574056e-06,\"reason\":\"not_in_grammar\",\"token\":\"acom\",\"token_id\":80151}]},{\"chosen\":{\"probability\":0.999753874547724,\"token\":\"commodation\",\"token_id\":125935},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\\\":{\\\"kind\\\":\\\"accommodation\",\"step\":41,\"top_k\":[{\"blocked\":false,\"probability\":0.999753874547724,\"reason\":null,\"token\":\"commodation\",\"token_id\":125935},{\"blocked\":true,\"probability\":0.00010888196463482905,\"reason\":\"not_in_grammar\",\"token\":\"ac\",\"token_id\":399},{\"blocked\":true,\"probability\":6.203907337188536e-05,\"reason\":\"not_in_grammar\",\"token\":\"achadh\",\"token_id\":77977},{\"blocked\":true,\"probability\":5.4749290089907276e-05,\"reason\":\"not_in_grammar\",\"token\":\" accommodation\",\"token_id\":51786},{\"blocked\":true,\"probability\":2.7258066487982292e-06,\"reason\":\"not_in_grammar\",\"token\":\"achment\",\"token_id\":15909},{\"blocked\":true,\"probability\":1.8443730366695589e-06,\"reason\":\"not_in_grammar\",\"token\":\"acity\",\"token_id\":8685},{\"blocked\":true,\"probability\":1.3706216584588963e-06,\"reason\":\"not_in_grammar\",\"token\":\"aboration\",\"token_id\":91822},{\"blocked\":true,\"probability\":6.67987647233534e-07,\"reason\":\"not_in_grammar\",\"token\":\"cation\",\"token_id\":53006}]},{\"chosen\":{\"probability\":0.9963278830147897,\"token\":\"\\\"\",\"token_id\":14},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\\\":{\\\"kind\\\":\\\"accommodation\\\"\",\"step\":42,\"top_k\":[{\"blocked\":false,\"probability\":0.9963278830147897,\"reason\":null,\"token\":\"\\\"\",\"token_id\":14},{\"blocked\":true,\"probability\":0.003593319414265734,\"reason\":\"not_in_grammar\",\"token\":\"}}}\",\"token_id\":45299},{\"blocked\":false,\"probability\":4.249267389823685e-05,\"reason\":null,\"token\":\"\\\"}}\",\"token_id\":52121},{\"blocked\":true,\"probability\":1.4685075151499631e-05,\"reason\":\"not_in_grammar\",\"token\":\"usal\",\"token_id\":25581},{\"blocked\":true,\"probability\":1.1084876282536644e-05,\"reason\":\"not_in_grammar\",\"token\":\" instruction\",\"token_id\":22621},{\"blocked\":true,\"probability\":8.906948319568672e-06,\"reason\":\"not_in_grammar\",\"token\":\"\\\":{\\\"\",\"token_id\":33678},{\"blocked\":true,\"probability\":5.518834933279654e-07,\"reason\":\"not_in_grammar\",\"token\":\"away\",\"token_id\":27755},{\"blocked\":true,\"probability\":2.4489681564243427e-07,\"reason\":\"not_in_grammar\",\"token\":\",\\\"\",\"token_id\":3814}]},{\"chosen\":{\"probability\":0.9997200895477383,\"token\":\"}}}\",\"token_id\":45299},\"is_stop\":false,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\\\":{\\\"kind\\\":\\\"accommodation\\\"}}}\",\"step\":43,\"top_k\":[{\"blocked\":false,\"probability\":0.9997200895477383,\"reason\":null,\"token\":\"}}}\",\"token_id\":45299},{\"blocked\":true,\"probability\":0.00026118542830073596,\"reason\":\"not_in_grammar\",\"token\":\"\\\"\",\"token_id\":14},{\"blocked\":true,\"probability\":1.618331233159679e-05,\"reason\":\"not_in_grammar\",\"token\":\",\\\"\",\"token_id\":3814},{\"blocked\":true,\"probability\":1.458969855604739e-06,\"reason\":\"not_in_grammar\",\"token\":\"}}}{\",\"token_id\":116034},{\"blocked\":true,\"probability\":2.168565092907651e-07,\"reason\":\"not_in_grammar\",\"token\":\"away\",\"token_id\":27755},{\"blocked\":true,\"probability\":1.6626965320430848e-07,\"reason\":\"not_in_grammar\",\"token\":\" instruction\",\"token_id\":22621},{\"blocked\":true,\"probability\":8.103335721045183e-08,\"reason\":\"not_in_grammar\",\"token\":\"}}}\\\\\",\"token_id\":134606},{\"blocked\":true,\"probability\":7.792901804582675e-08,\"reason\":\"not_in_grammar\",\"token\":\" }}}\",\"token_id\":194330}]},{\"chosen\":{\"probability\":4.413578808995513e-11,\"token\":\"<eos>\",\"token_id\":200001},\"is_stop\":true,\"json_so_far\":\"{\\\"schema_version\\\":\\\"stowlm.reader/2\\\",\\\"constraint\\\":{\\\"type\\\":\\\"dg_keep_away\\\",\\\"imdg_class\\\":\\\"2.2\\\",\\\"min_bays\\\":3,\\\"away_from\\\":{\\\"kind\\\":\\\"accommodation\\\"}}}\",\"step\":44,\"top_k\":[{\"blocked\":true,\"probability\":0.9999998587330543,\"reason\":\"not_in_grammar\",\"token\":\"<|eot|>\",\"token_id\":200008},{\"blocked\":true,\"probability\":9.777224034327427e-08,\"reason\":\"not_in_grammar\",\"token\":\"null\",\"token_id\":6217},{\"blocked\":true,\"probability\":1.0467400316046777e-08,\"reason\":\"not_in_grammar\",\"token\":\"<|eom|>\",\"token_id\":200007},{\"blocked\":true,\"probability\":8.280395191327966e-09,\"reason\":\"not_in_grammar\",\"token\":\"8\",\"token_id\":36},{\"blocked\":true,\"probability\":3.4780057008722545e-09,\"reason\":\"not_in_grammar\",\"token\":\"<|message|>\",\"token_id\":200023},{\"blocked\":true,\"probability\":1.3050409840443088e-09,\"reason\":\"not_in_grammar\",\"token\":\"</\",\"token_id\":695},{\"blocked\":true,\"probability\":9.075135295851002e-10,\"reason\":\"not_in_grammar\",\"token\":\"max\",\"token_id\":4836},{\"blocked\":true,\"probability\":7.582559356746754e-10,\"reason\":\"not_in_grammar\",\"token\":\"c\",\"token_id\":79}]}],\"top_k\":8}",
+  "recorded_utc": "2026-11-02T07:32:17.089304+00:00"
+}

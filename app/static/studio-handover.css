@@ -1,0 +1,44 @@
+/* Layout only; Studio shared classes own typography, surfaces and controls. */
+.st-handover-center { box-sizing: border-box; width: 100%; height: 100%; min-height: 0; display: flex; flex-direction: column; gap: 16px; padding: 20px; overflow: auto; }
+.st-handover-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex: 0 0 auto; }
+.st-handover-heading p { margin: 0; }
+.st-handover-actor { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.st-handover-plan-label { flex: 1; min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+.st-handover-documents { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); grid-template-rows: minmax(240px, 1fr) minmax(240px, 1fr); flex: 1 0 520px; min-height: 0; gap: 16px; }
+.st-handover-document { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; margin: 0; }
+.st-handover-document + .st-handover-document { margin-top: 0; }
+.st-handover-document > header, .st-handover-document > footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex: 0 0 auto; }
+.st-handover-document > header { padding-bottom: 12px; }
+.st-handover-document > footer { padding-top: 10px; }
+.st-handover-document-body { overflow: auto; min-height: 0; min-width: 0; max-width: 100%; }
+.st-handover-crane-scroll { width: 100%; overflow-x: auto; overscroll-behavior-x: contain; }
+.st-handover-crane table { width: max-content; min-width: 100%; }
+.st-handover-document table { width: 100%; }
+.st-handover-document th, .st-handover-document td { white-space: nowrap; }
+.st-handover-bay-viewport { overflow: hidden; flex: 1; min-height: 0; position: relative; }
+.st-handover-bay iframe { width: 1512px; height: 1080px; position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.st-handover-page-button { min-width: 32px; min-height: 32px; }
+.st-handover-metrics, .st-handover-hashes { margin: 12px 0; }
+.st-handover-fine { margin: 8px 0; overflow-wrap: anywhere; }
+.st-handover-note h4 { margin: 0 0 12px; }
+.st-handover-note p { margin: 0 0 12px; }
+.st-handover-inventory { flex: 0 0 auto; }
+.st-handover-inventory p { margin: 10px 0; }
+.st-handover-file-list { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 10px; }
+.st-handover-receipt-title { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.st-handover-signature-note { margin: 10px 0; }
+.st-handover-details { margin: 12px 0; }
+.st-handover-chain > div { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; padding: 8px 0; }
+.st-handover-chain span { grid-column: 1; }
+.st-handover-chain code { grid-column: 2; grid-row: span 2; align-self: center; }
+.st-handover-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.st-handover-run-heading { margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.st-handover-check { display: grid; grid-template-columns: 16px minmax(0, 1fr) 48px; gap: 4px; padding: 4px 0; }
+.st-handover-time { min-width: 48px; white-space: nowrap; justify-self: end; }
+.st-handover-check small { grid-column: 2 / -1; overflow-wrap: anywhere; }
+.st-handover-verdict { margin: 12px 0 0; }
+.st-handover-clean-summary { margin: 10px 0; }
+.st-handover-change { margin: 8px 0 12px; }
+.st-handover-center [hidden], .st-handover-panel [hidden] { display: none !important; }
+@media (min-width: 1700px) { .st-handover-documents { flex-basis: 600px; } }
+@media (max-width: 1250px) { .st-handover-center { padding: 16px; } .st-handover-heading { flex-direction: column; gap: 8px; } .st-handover-documents { grid-template-columns: minmax(0, 1fr); grid-template-rows: repeat(4, 320px); flex-basis: auto; } }

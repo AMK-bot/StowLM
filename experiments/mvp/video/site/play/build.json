@@ -1,0 +1,95 @@
+{
+ "built_utc": "2026-11-04T03:51:22+00:00",
+ "recorded_utc": "2026-11-04T03:45:30+00:00",
+ "call_id": "c20261104-030907-b8bb31",
+ "files": 162,
+ "bytes": 6076916,
+ "routes": 11,
+ "bodies": 95,
+ "anchors": [
+  {
+   "what": "create",
+   "t": 3182,
+   "busy_s": 13.4,
+   "speed": 1.0
+  },
+  {
+   "what": "papers",
+   "t": 19145,
+   "busy_s": 134.2,
+   "speed": 4.47
+  },
+  {
+   "what": "audio",
+   "t": 155505,
+   "busy_s": 1.0,
+   "speed": 1.0
+  },
+  {
+   "what": "read",
+   "t": 158060,
+   "busy_s": 5.1,
+   "speed": 1.0
+  },
+  {
+   "what": "read",
+   "t": 344005,
+   "busy_s": 2.0,
+   "speed": 1.0
+  },
+  {
+   "what": "confirm",
+   "t": 347542,
+   "busy_s": 0.0,
+   "speed": 1.0
+  },
+  {
+   "what": "plan",
+   "t": 349770,
+   "busy_s": 1803.8,
+   "speed": 60.13
+  }
+ ],
+ "static_files": [
+  "planner.css",
+  "planner-bayplan.css",
+  "planner-intake.css",
+  "planner-instruct.css",
+  "planner-plan.css",
+  "planner-stress.css",
+  "planner-copilot.css",
+  "planner-handover.css",
+  "planner-evidence.css",
+  "planner-impact.css",
+  "planner-live.css",
+  "planner-live-intake.css",
+  "planner-live-instruct.css",
+  "studio-pacing.js",
+  "planner-bayplan.js",
+  "planner-loadlist.js",
+  "planner.js",
+  "planner-voyage.js",
+  "planner-intake.js",
+  "planner-instruct.js",
+  "planner-plan.js",
+  "planner-stress.js",
+  "planner-copilot.js",
+  "planner-handover.js",
+  "planner-evidence.js",
+  "planner-impact.js",
+  "planner-live-voyage.js",
+  "planner-live-intake.js",
+  "planner-live-instruct.js",
+  "planner-live-plan.js",
+  "planner-live-review.js"
+ ],
+ "linked_files": 29,
+ "outcome": {
+  "status": "checked_plan",
+  "passed": true,
+  "label": "Passes the full checker",
+  "wall_s": 1802.2097248330247,
+  "first_checked_wall_s": 381.6327602500096
+ },
+ "recording_page_errors": []
+}

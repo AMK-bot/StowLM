@@ -1,0 +1,101 @@
+# APPROXIMATION: Synthetic berth group, not a real terminal; public annual totals are context only.
+id = "singapore_like"
+label = "Singapore-like synthetic gateway port"
+description = "Synthetic gateway-style gate-in only (APPROXIMATION: no transshipment inflow). This yard scenario models local exports arriving by truck, not a transshipment hub's vessel-discharge arrival stream."
+synthetic = true
+schema_version = { value = 1, unit = "version", assumption = "Synthetic parameter-file contract revision." }
+max_crane_height_tiers = { value = 10, unit = "tiers", assumption = "ASSUMPTION: Synthetic governing crane height derived from the existing quay max_on_deck_tier_count; yard/equipment limits remain separate lower caps. Expert Q3 does not establish this port value." }
+berthing_side = "port"
+berthing_side_assumption = "ASSUMPTION: synthetic port-side berthing default; no berth survey is supplied."
+
+berth_depth_m = { value = 18, unit = "m", source = { url = "https://www.globalpsa.com/wp-content/uploads/2026/04/PSA-SINGAPORE.pdf", says = "PSA Singapore 2026.04.R1 factsheet, page 2: Pasir Panjang Terminals maximum depth at Chart Datum is 18 m. Tuas is separately listed as 23 m. The Pasir Panjang figure anchors this synthetic representative berth, not every Singapore berth.", read_date = "2026-10-29" } }
+berth_depth_assumption = "APPROXIMATION: representative synthetic berth; any published depth is context for this scenario, not measured permission at every berth. With rule freeze v1 on, depth is used directly as PortProfile.max_draught_m. No tide or UKC increment is credited; no separate UKC reserve is modelled. Unknown legacy limits remain None with the switch off."
+
+[yard]
+truck_lane_side = "low"
+truck_lane_side_assumption = "ASSUMPTION: synthetic lane at the row-1 side of every block; no yard survey is supplied."
+berth_count = { value = 4, unit = "berths", assumption = "Synthetic regular berth-group dimensions, not a surveyed terminal." }
+block_count = { value = 24, unit = "blocks", assumption = "Synthetic regular berth-group dimensions, not a surveyed terminal." }
+blocks_per_berth = { value = 6, unit = "blocks/berth", assumption = "Synthetic regular berth-group dimensions, not a surveyed terminal." }
+bays_per_block = { value = 40, unit = "bays", assumption = "Synthetic regular berth-group dimensions, not a surveyed terminal." }
+rows_per_bay = { value = 6, unit = "rows", assumption = "Synthetic regular berth-group dimensions, not a surveyed terminal." }
+max_stack_tiers = { value = 5, unit = "tiers", assumption = "Synthetic stored stack height; expert Q3 to confirm yard versus quay limits." }
+initial_occupancy_fraction = { value = 0.55, unit = "fraction", assumption = "Synthetic starting inventory; expert Q8 volume calibration pending." }
+
+[equipment]
+type = "RMG"
+stacking_notation = "1-over-5"
+stack_height_tiers = { value = 5, unit = "tiers", assumption = "Synthetic five stored tiers; expert Q3 pending." }
+clearance_height_tiers = { value = 6, unit = "tiers", assumption = "Synthetic lift clearance over five stored tiers; expert Q3 pending; not a metre specification." }
+count = { value = 24, unit = "machines", assumption = "Synthetic one yard crane per block; expert Q8 pending." }
+
+[quay_crane]
+gross_moves_per_hour = { value = 25, unit = "moves/h/crane", assumption = "APPROXIMATION: synthetic D74 amended per-crane gross productivity; UNVERIFIED range 20-35 moves/h/crane, selected 25; pending expert Q23/Q30, not a measured terminal rate." }
+pre_operation_allowance_h = { value = 1.0, unit = "h", assumption = "APPROXIMATION: synthetic D74 amended pre-operation pumping allowance; UNVERIFIED range 0.25-1.5 h, selected 1.0 h; pending expert Q23/Q30." }
+post_operation_allowance_h = { value = 1.0, unit = "h", assumption = "APPROXIMATION: synthetic D74 amended post-operation pumping allowance; UNVERIFIED range 0.25-1.0 h, selected 1.0 h; pending expert Q23/Q30." }
+max_on_deck_tier_count = { value = 10, unit = "tiers", assumption = "Synthetic count of tiers above deck, not BAPLIE address; expert Q3 pending." }
+count_per_berth = { value = 3, unit = "cranes/berth", assumption = "Synthetic crane availability; expert Q8 pending; no crane scheduling implied." }
+
+[traffic]
+annual_reference_throughput_teu = { value = 41120000, unit = "TEU/year", source = { url = "https://www.mpa.gov.sg/media-centre/details/strong-growth-momentum-for-maritime-singapore", says = "MPA reports 2024 whole-port container throughput of 41.12 million TEU.", read_date = "2026-10-27" } }
+transshipment_fraction = { value = 0.9, unit = "fraction", assumption = "Synthetic fraction of discharged boxes reserved for later loading; expert Q8 pending. Inspired by MPA around 90% transshipment TEU; converting to a berth-group box fraction is an assumption." }
+mean_teu_per_box = { value = 1.7, unit = "TEU/box", assumption = "Synthetic size mix for contextual conversion; expert Q8 pending." }
+
+[[services]]
+id = "singapore_like_feeder"
+kind = "feeder"
+calls_per_week = { value = 8, unit = "calls/week", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+mean_load_boxes = { value = 500, unit = "boxes/call", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+mean_discharge_boxes = { value = 500, unit = "boxes/call", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+call_volume_cv = { value = 0.25, unit = "dimensionless", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+arrival_jitter_s = { value = 21600, unit = "s", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+
+[[services]]
+id = "singapore_like_mainline"
+kind = "mainline"
+calls_per_week = { value = 4, unit = "calls/week", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+mean_load_boxes = { value = 1200, unit = "boxes/call", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+mean_discharge_boxes = { value = 1200, unit = "boxes/call", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+call_volume_cv = { value = 0.25, unit = "dimensionless", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+arrival_jitter_s = { value = 21600, unit = "s", assumption = "Synthetic service workload; expert Q8 pending. Arrival jitter is a uniform plus/minus half-width; CV is standard deviation divided by mean." }
+
+[gate_in]
+process = "piecewise_uniform_before_cutoff"
+window_before_cutoff_s = { value = 259200, unit = "s", assumption = "Synthetic local-export receiving window; expert Q5/Q8 pending." }
+cutoff_before_arrival_s = { value = 21600, unit = "s", assumption = "Synthetic cutoff preceding scheduled arrival; expert Q5/Q8 pending." }
+
+[[gate_in.bins]]
+start_before_cutoff_s = { value = 259200, unit = "s", assumption = "Synthetic local-export arrivals uniform inside [end,start) seconds before cutoff; shares partition window; expert Q5/Q8 pending." }
+end_before_cutoff_s = { value = 172800, unit = "s", assumption = "Synthetic local-export arrivals uniform inside [end,start) seconds before cutoff; shares partition window; expert Q5/Q8 pending." }
+share = { value = 0.2, unit = "fraction", assumption = "Synthetic local-export arrivals uniform inside [end,start) seconds before cutoff; shares partition window; expert Q5/Q8 pending." }
+
+[[gate_in.bins]]
+start_before_cutoff_s = { value = 172800, unit = "s", assumption = "Synthetic local-export arrivals uniform inside [end,start) seconds before cutoff; shares partition window; expert Q5/Q8 pending." }
+end_before_cutoff_s = { value = 86400, unit = "s", assumption = "Synthetic local-export arrivals uniform inside [end,start) seconds before cutoff; shares partition window; expert Q5/Q8 pending." }
+share = { value = 0.35, unit = "fraction", assumption = "Synthetic local-export arrivals uniform inside [end,start) seconds before cutoff; shares partition window; expert Q5/Q8 pending." }
+
+[[gate_in.bins]]
+start_before_cutoff_s = { value = 86400, unit = "s", assumption = "Synthetic local-export arrivals uniform inside [end,start) seconds before cutoff; shares partition window; expert Q5/Q8 pending." }
+end_before_cutoff_s = { value = 0, unit = "s", assumption = "Synthetic local-export arrivals uniform inside [end,start) seconds before cutoff; shares partition window; expert Q5/Q8 pending." }
+share = { value = 0.45, unit = "fraction", assumption = "Synthetic local-export arrivals uniform inside [end,start) seconds before cutoff; shares partition window; expert Q5/Q8 pending." }
+
+[dwell]
+distribution = "gamma"
+import_mean_s = { value = 172800, unit = "s", assumption = "Synthetic dwell model: gamma shape=1/cv^2, scale=mean*cv^2; expert Q8 pending, no measured dwell claim." }
+import_cv = { value = 0.6, unit = "dimensionless", assumption = "Synthetic dwell model: gamma shape=1/cv^2, scale=mean*cv^2; expert Q8 pending, no measured dwell claim." }
+transshipment_mean_s = { value = 172800, unit = "s", assumption = "Synthetic dwell model: gamma shape=1/cv^2, scale=mean*cv^2; expert Q8 pending, no measured dwell claim." }
+transshipment_cv = { value = 0.5, unit = "dimensionless", assumption = "Synthetic dwell model: gamma shape=1/cv^2, scale=mean*cv^2; expert Q8 pending, no measured dwell claim." }
+
+[placement]
+cluster_keys = ["vessel_call_id", "pod", "size_type", "weight_class"]
+preferred_stack_order = "later_retrieval_below_earlier_retrieval"
+noise_model = "independent_cluster_and_order_errors"
+cluster_misplacement_probability = { value = 0.08, unit = "fraction", assumption = "Synthetic independent chance to ignore preferred cluster; expert Q5 pending; all hard cargo compatibility rules remain enforced." }
+retrieval_order_error_probability = { value = 0.18, unit = "fraction", assumption = "Synthetic independent chance to ignore preferred retrieval order among legal stacks; expert Q5 pending; no hard safety constraint relaxed." }
+
+[simulation]
+call_arrival_process = "weekly_schedule_with_uniform_jitter"
+volume_distribution = "negative_binomial"
+overflow_policy = "hold_in_external_queue"
+import_exit_process = "sample_dwell_at_discharge"
+transshipment_connection_policy = "next_compatible_call_after_dwell"

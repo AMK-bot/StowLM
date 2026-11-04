@@ -1,0 +1,381 @@
+{
+ "errors": [],
+ "failed": [],
+ "external": [],
+ "steps": {
+  "01-call-form": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "02-call-created": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "03-cargo-papers": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "04-cargo-reading": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": "Replaying this stage at 4.5× its recorded pace · times shown are the measured ones"
+  },
+  "05-cargo-ready": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "06-spoken-instruction": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "07-transcript": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "08a-reader-refused": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "08b-transcript-corrected": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "08-reader-proposal": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "09-reading-confirmed": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "10-ready-to-generate": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "11-planning": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": "Replaying this stage at 60× its recorded pace · times shown are the measured ones"
+  },
+  "12-plan-checked": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "13-stress-not-live": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "14-copilot-not-live": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "15-export": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "16-api-key-needs-none": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "17-change-input-refused": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  },
+  "18-instruction-change-refused": {
+   "banner": true,
+   "synthetic": true,
+   "badge": "Recorded run",
+   "speed": ""
+  }
+ },
+ "attempts": {
+  "engine_profile_live": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false
+  },
+  "plan_again": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false
+  },
+  "no_instruction": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false
+  },
+  "api_key_chip": {
+   "note": {
+    "kind": "key",
+    "text": "No key needed: this recorded run replays answers recorded from the Functional app, so it makes no calls and accepts no key. To use your own Meta Model API key, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false,
+   "key_panel_opened": false,
+   "chip_text": "\"Recorded run · no key needed\""
+  },
+  "change_ship": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false,
+   "ship_after": "feeder_500"
+  },
+  "type_seed": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "seed_after": "1014265040"
+  },
+  "new_seed": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false,
+   "seed_after": "1014265040"
+  },
+  "other_papers_choice": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false
+  },
+  "upload_papers": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false
+  },
+  "record_in_browser": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false
+  },
+  "upload_wav": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "anchor_moved": false
+  },
+  "type_instruction": {
+   "note": {
+    "kind": "recorded",
+    "text": "This is a recorded run: its inputs are fixed to the recorded track, so this runs nothing. To try your own inputs, install the app and run the Functional app. Install steps ×",
+    "link": "https://github.com/AMK-bot/StowLM#setup-and-run",
+    "install": true
+   },
+   "text_after": ""
+  }
+ },
+ "walk_s": 140.0,
+ "seen": {
+  "form": {
+   "seed": "1014265040",
+   "ship": "feeder_500",
+   "size_class": "medium",
+   "fill_pct": "12",
+   "generator": "random_yard",
+   "port": "laem_chabang_like"
+  },
+  "call_card": "feeder_500 · medium Synthetic ship and cargo, simulated port 17 boxes to load 28 TEU to load 11.7 % section fill Rotation THLCH → SGSIN → MYPKG → THLCH Generator random_yard · experiments/mvp/corpus_tools/build.py Seed 1014265040 (chosen by the planner) Instance 1a42a47d92 Generated in 13.1 s, measured on the recording machine, in this recorded run Fresh seed: in no published map set Headline envelope (500–800 TEU feeders): inside Runner's envelope gate: inside (it admits tiny and small sections of any ship) Inside the envelope: 17 of 195 boxes, fill 11.7 % of 70 %. Start a new call",
+  "intake": "Synthetic ship and cargo, simulated port Muse Spark · Meta Model API, cloud Cargo paper readings 3 bookings at a time: each read has its own ledger and an allocated launch-budget grant; maximum 6. Booking SYN-a3e1c8df9866245f-B1 · done · 6 boxes · 132.3 s from start to answer, including any wait for spend room · $0.0869 Booking SYN-a3e1c8df9866245f-B2 · done · 6 boxes · 123.0 s from start to answer, including any wait for spend room · $0.0842 Booking SYN-a3e1c8df9866245f-B3 · done · 5 boxes · 123.1 s from start to answer, including any wait for spend room · $0.0738 load-list.csv Synthetic document · Unspecified Download Booking B1 · 7 papers Booking B2 · 7 papers Booking B3 · 7 papers Muse Spark · Meta Model API, cloud 132.7 s elapsed for Muse Spark's reading of 3 bookings (up to 3 at a time); 378.5 s of booking time in total; measured on the recording machine, in this recorded run $0.2448 · Muse Spark, this call Booking SYN-a3e1c8df9866245f-B1 · 6 boxes · 132.3 s from start to answer, including any wait for spend room Booking SYN-a3e1c8df9866245f-B2 · 6 boxes · 123.0 s from start to answer, including any wait for spend room Booking SYN-a3e1c8df9866245f-B3 · 5 boxes · 123.1 s from start to answer, including any wait for spend room Read times measured on the recording machine, in this recorded run Your answers · no model 0.000 s to merge your answers, no model call; measured on the recording machine, in this recorded run 17 boxes read by Muse Spark 17 boxes View load list",
+  "audio_label": "Speak an instruction Muse Voice Transcribe · Meta Model API, cloud Record up to 60 seconds, or upload a WAV. The received transcript will appear above for editing. Record in this browser Upload a WAV Generated (synthetic) voice Uploaded audio · Generated voice · radio-instruction.wav Audio not included in this copy. The recorded clip radio-instruction.wav (macOS text-to-speech, generated voice) said: \"Keep bay three empty on this call.\". Transcribe replays what Muse Voice Transcribe heard. Transcribe with Muse Voice",
+  "transcript": "Keep bay three empty empty on this call..",
+  "refused": [
+   "Reader proposal Refused StowLM Reader · fine-tuned Muse Glimmer 30B (LoRA) on the recording laptop, schema-masked decoding Keep bay three empty empty on this call.. StowLM Reader refused to make a rule: The instruction is outside the supported vessel or vocabulary. Nothing was planned from this sentence. Adapter · eff712e18a64 · Reading · 2.85 s · Cold load · 1.60 s Measured on the recording machine, in this recorded run. built to refuse anything else; it can slip, so the planner confirms"
+  ],
+  "edited": "Keep bay three empty on this call.",
+  "reading": "Reader proposal Ready to confirm StowLM Reader · fine-tuned Muse Glimmer 30B (LoRA) on the recording laptop, schema-masked decoding Keep bay three empty on this call. Nothing loads into bay 03. Adapter · eff712e18a64 · Reading · 1.88 s Measured on the recording machine, in this recorded run. built to refuse anything else; it can slip, so the planner confirms Confirm this reading",
+  "confirmed": "Confirmed reading Ready to confirm StowLM Reader · fine-tuned Muse Glimmer 30B (LoRA) on the recording laptop, schema-masked decoding Keep bay three empty on this call. Nothing loads into bay 03. Adapter · eff712e18a64 · Reading · 1.88 s Measured on the recording machine, in this recorded run. built to refuse anything else; it can slip, so the planner confirms Reading confirmed",
+  "hero": "Generate the load plan Engine 0.13.0 plans the fewest extra crane lifts; the full checker decides Ship · 500 TEU, 240 TEU section 17 boxes ready to plan Instruction confirmed Standard Live standard profile: engine deadline 1800 s; not a whole-run guarantee standard is the profile the held-out results used; live is shorter and its pass rate is measured only on development maps Generate plan Inputs ready",
+  "planning": "Checks Stress test Ask copilot Export Engine 0.13.0 Full checker standard profile: engine deadline 1800 s; not a whole-run guarantee. Admission waived: no fleet telemetry (load average 1.87). Frontier Engine 0.13.0 · search software searches; Full checker · software decides. Lifts are extra crane lifts (rehandles now and projected at later ports, hatch-cover lifts; D15). Provenance: who did each stage, where, how long",
+  "result": "Passes the full checker Move 39 of 39 34 extra crane lifts 1802.2 s whole run, admission to package, measured on the recording machine, in this recorded run Plan again",
+  "checks": "Checks Stress test Ask copilot Export Engine 0.13.0 Full checker Passes the full checker It also obeys the instruction the planner confirmed, rechecked on this plan. Plan passed the full checker and every confirmed instruction recheck. Runner engine deadline reached; returning the best checked incumbent after rechecking it. First legal plan: 381.6 s; total wall time: 1802.2 s. 34 extra crane lifts (rehandles now and projected at later ports, hatch-cover lifts; D15) 381.6 s first checked plan, from the start of the run (includes admission), measured on the recording machine, in this recorded run 1802.2 s whole run, admission to package, measured on the recording machine, in this recorded run 54 active checker rules, from the receipt 23 checker parts ran; 0 violations reported · checker 2.2. “Keep bay three empty on this call.” rechecked on this plan: obeyed Frontier Engine 0.13.0 · search software searched; Full checker · software decided. standard profile: engine deadline 1800 s; not a whole-run guarantee. Admission waived: no fleet telemetry (load average 1.87). Plan again on this call Instruction: Confirmed: Nothing loads into bay 03. Change instruction Standard Live standard profile: engine deadline 1800 s; not a whole-run guarantee Plan again At (s) Extra crane lifts Plan Lane 381.6 38 9ab65b4a2c native_full_checker_observer 503.0 34 e84451e560 native_full_checker_observer Each row passed the full checker and every confirmed instruction when it appeared. Provenance: who did each stage, where, how long",
+  "stress": "Checks Stress test Ask copilot Export Stress test is not in the Functional app yet; nothing is replayed in its place.",
+  "copilot": "Checks Stress test Ask copilot Export Ask copilot is not in the Functional app yet; nothing is replayed in its place.",
+  "handover": "Checks Stress test Ask copilot Export Software Written by the runner for this call's plan. Synthetic ship and cargo, simulated port. bay-plan.html Bay plan to print 56.3 KB · 97b297fc65 crane-sequence.csv Crane sequence, every lift in order 3.3 KB · 7acb852677 receipt.json Signed receipt: inputs, engine, checker, hashes 44.8 KB · 5519d0037c The StowLM Reader ran once for this instruction, in the Instructions step; the receipt's reader step re-validated that confirmed reading with no second model call. note-to-master.md Note to the master: checker statements in a fixed order; no model wrote or selected them in this app. This package doesn't name a frozen pipeline: it ran from the working tree, with the pinned engine checked by the runner. 3.2 KB · 50109703cc package.json Package index 2.8 KB · 736de21043 outcome.json The runner's full outcome with the checker evidence case.json How this synthetic case was generated",
+  "package_links": [
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/bay-plan.html",
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/crane-sequence.csv",
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/receipt.json",
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/note-to-master.md",
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/package.json",
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/outcome.json",
+   "api/functional/calls/c20261104-030907-b8bb31/file/case.json"
+  ],
+  "paper_links": [
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/load-list.csv",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-booking-note.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-shipping-instructions.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-vgm.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-dg-declaration.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-gate-slip.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-reefer-list.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-oog-list.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-booking-note.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-shipping-instructions.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-vgm.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-dg-declaration.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-gate-slip.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-reefer-list.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-oog-list.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-booking-note.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-shipping-instructions.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-vgm.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-dg-declaration.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-gate-slip.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-reefer-list.txt",
+   "api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-oog-list.txt"
+  ]
+ },
+ "served": 195,
+ "refused_in_flow": [],
+ "misses_in_flow": [],
+ "anchors_done": 7,
+ "linked": [
+  [
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/bay-plan.html",
+   200,
+   "text/html"
+  ],
+  [
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/crane-sequence.csv",
+   200,
+   "text/csv"
+  ],
+  [
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/receipt.json",
+   200,
+   "application/json"
+  ],
+  [
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/note-to-master.md",
+   200,
+   "text/markdown"
+  ],
+  [
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/package.json",
+   200,
+   "application/json"
+  ],
+  [
+   "api/functional/calls/c20261104-030907-b8bb31/file/runs/1/outcome.json",
+   200,
+   "application/json"
+  ],
+  [
+   "api/functional/calls/c20261104-030907-b8bb31/file/case.json",
+   200,
+   "application/json"
+  ]
+ ],
+ "bay_plan_title": "Synthetic bay plan · StowLM",
+ "fresh_form": {
+  "seed": "1014265040",
+  "ship": "feeder_500",
+  "size_class": "medium",
+  "fill_pct": "12",
+  "generator": "random_yard",
+  "port": "laem_chabang_like"
+ },
+ "attempts_ok": {
+  "engine_profile_live": true,
+  "plan_again": true,
+  "no_instruction": true,
+  "api_key_chip": true,
+  "change_ship": true,
+  "type_seed": true,
+  "new_seed": true,
+  "other_papers_choice": true,
+  "upload_papers": true,
+  "record_in_browser": true,
+  "upload_wav": true,
+  "type_instruction": true
+ },
+ "checks": {
+  "no_console_or_page_errors": true,
+  "no_failed_requests_in_flow": true,
+  "same_origin_only": true,
+  "every_action_replayed": true,
+  "labels_every_step": true,
+  "badge_says_recorded": true,
+  "form_shows_recorded_inputs": true,
+  "audio_not_included_note": true,
+  "outcome_shown": true,
+  "measured_wall_time_shown": true,
+  "linked_files_served": true,
+  "every_change_refused_with_install_link": true,
+  "inputs_unchanged": true
+ }
+}

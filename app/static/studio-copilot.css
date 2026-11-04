@@ -1,0 +1,26 @@
+/* Appearance comes from Studio's shared classes. These rules only arrange response content. */
+.st-copilot-root { display: grid; gap: 16px; min-width: 0; width: 100%; }
+.st-copilot-response { display: grid; gap: 14px; min-width: 0; }
+.st-copilot-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.st-copilot-actor-row { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.st-copilot-actor-row > .st-tile { flex: none; }
+.st-copilot-actor-row > p { margin: 0; }
+.st-copilot-message { min-width: 0; }
+.st-copilot-message-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.st-copilot-proof { display: grid; gap: 8px; }
+.st-copilot-proof > p { margin: 0; }
+.st-copilot-take-head { display: grid; gap: 8px; margin-top: 8px; }
+.st-copilot-take-head > .st-chip { height: auto; min-height: 24px; white-space: normal; overflow-wrap: anywhere; }
+.st-copilot-take-request { margin: 0; }
+.st-copilot-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+.st-copilot-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.st-copilot-card { display: grid; align-content: start; gap: 10px; min-width: 0; }
+.st-copilot-card + .st-copilot-card { margin-top: 0; }
+.st-copilot-card > h3, .st-copilot-card > p { margin: 0; }
+.st-copilot-lifts { display: flex; align-items: baseline; gap: 6px; }
+.st-copilot-result { display: grid; gap: 10px; }
+.st-copilot-result > p { margin: 0; }
+.st-copilot-raw-content { display: grid; gap: 16px; padding-top: 12px; }
+.st-copilot-raw-turn { display: grid; gap: 7px; min-width: 0; }
+.st-copilot-raw-turn p { margin: 0; overflow-wrap: anywhere; }
+.st-copilot-details > p { margin: 10px 0 0; }

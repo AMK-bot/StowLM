@@ -1,0 +1,80 @@
+{
+  "supersedes": {
+    "file": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/results-final/final-adoption.json",
+    "sha256": "2f4407de7d22d0383b097711694e186065c89f553c056c43e78ded14ec1cc8be",
+    "outcome": "adapter-v2",
+    "rule": "D263, fixed by the leader before any result: after the mask study ends, score adapter-v2 through select_adapter's exact path on the same 400-row selection sample. Retain v2 as the adopted reader, per the pre-registered result, unless v2 scores more than 3 points below swa-last-5's 93.25 % there; in that case adopt swa-last-5 for its domain coverage."
+  },
+  "decision": "D266",
+  "reason": "D266, leader, open for veto: D264 retained v2 by a tie-break on exact match. The mask study then measured what that tie-break never looked at: on 84 out-of-scope validation sentences v2 made a rule from 27, 16 naming a real bay, a misreading the checker cannot catch; v3 from 4. The reader promises to refuse what it cannot read, so the safer reader ships. This lowers the headline by two sentences; it is not a selection for a better number.",
+  "outcome": "swa-last-5",
+  "adopted": {
+    "name": "swa-last-5",
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57"
+  },
+  "sealed_128": {
+    "swa-last-5": {
+      "count": 128,
+      "exact_match_count": 118,
+      "exact_match_pct": 92.1875,
+      "loosening_count": 48,
+      "false_acceptance_count": 1
+    },
+    "adapter-v2": {
+      "count": 128,
+      "exact_match_count": 120,
+      "exact_match_pct": 93.75,
+      "loosening_count": 48,
+      "false_acceptance_count": 2
+    },
+    "untrained": {
+      "count": 128,
+      "exact_match_count": 60,
+      "exact_match_pct": 46.875,
+      "loosening_count": 48,
+      "false_acceptance_count": 0
+    }
+  },
+  "selection_400": {
+    "swa-last-5": {
+      "count": 400,
+      "exact_match_count": 373,
+      "exact_match": 0.9325,
+      "malformed_count": 0,
+      "loosening_count": 50,
+      "false_acceptance_count": 0
+    },
+    "adapter-v2": {
+      "count": 400,
+      "exact_match_count": 369,
+      "exact_match": 0.9225,
+      "malformed_count": 0,
+      "loosening_count": 50,
+      "false_acceptance_count": 0
+    }
+  },
+  "out_of_scope_84": {
+    "swa-last-5": {
+      "rows": 84,
+      "refused": 80,
+      "made_a_rule": 4,
+      "naming_a_real_bay": 1
+    },
+    "adapter-v2": {
+      "rows": 84,
+      "refused": 57,
+      "made_a_rule": 27,
+      "naming_a_real_bay": 16
+    }
+  },
+  "gates_swa_last_5": {
+    "R1": true,
+    "R2": false,
+    "R3": false,
+    "all_pass": false
+  },
+  "preregistered_adoption_status": "retain_v2",
+  "sealed_note": "Sealed v3 is spent and was not rerun. Both sealed numbers stand.",
+  "caveat": "Validation overstates sealed: v2 read 91.25 % on validation and 80.47 % sealed. These scores choose an adapter; they are not an accuracy claim."
+}

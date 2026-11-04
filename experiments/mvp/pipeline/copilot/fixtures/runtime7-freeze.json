@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-02T02:23:50.613415+00:00",
+  "label": "Final runtime7; paid model cohorts precede host-confirmation adapter fix. Prompt/authorization/safety unchanged. Final offline tests and scripted native binding probe verify the adapter.",
+  "files": {
+    "agent.py": "8f5465c9438c2d5cbcb662f02f0079f0aba1180e81b433caa2e0ab9853e54d77",
+    "authorization.py": "79d7fe4c892aafe79427a015d65ae657c2974fc6b842379073f9052e933feb43",
+    "safety.py": "dd14923c6173b12c8890d6507ecee7787f57dfd2f7ffdbd3609a3b75c7fe961c",
+    "tools.py": "ee619c4da163f84ff1f5d5c169f9312115fce80ad3a2204ab0f568cc02ea8364",
+    "jobs.py": "0591b53d8400860f68cc1ea3432d0b6cf8d22112dff801e84142ab2f506ab8c9",
+    "agency_evaluate.py": "c3ae9ed2c72c9c7452e44072e4a31f4ae00c68bf2e425b3c9c8234ad8f0cea43",
+    "behavior_scores.py": "5e4dd5f4d013ec962a9488dcc5e98ceb935b79f683fac8b3159e70aa78bd0d25",
+    "agency_fixtures.py": "15034437a78e4962650b976d2af670efe3563a6a471b19119e1437abe17a83cb"
+  },
+  "binding_probe": "binding-background-probe-v2/result.json"
+}

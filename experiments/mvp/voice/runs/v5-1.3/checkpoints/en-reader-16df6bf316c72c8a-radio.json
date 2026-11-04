@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "unsupported",
+      "reason": "hold-only scope omits deck for hatch cover",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 8800,
+    "audio_seconds": 8.76,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00040",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "85fdf382cca047a39fe13b4b70096932",
+    "session_id": "voyager/transcribe/C159E5E0EA5846D68DB1B43E2ECA22BB"
+  },
+  "asr_latency_s": 1.7486796249868348,
+  "audio_sha256": "9efb133bd900173a426d4ca84af97a19e93ade54f46b1b0223b39ae6266dcc29",
+  "canonical": {
+    "refusal": {
+      "code": "unsupported",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 3.3594487500377,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0018799",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "8372ae8a294aa5e712c98904f428b41410536971c7ecea2cb461f87c569ad0bd",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "2f356a38-cb43-427b-911c-00f95b819729"
+  },
+  "parser_latency_s": 1.4989274999825284,
+  "script": "Planner instruction: A physical cover and its hold space must serve the same single discharge port. This is mandatory.",
+  "source_id": "reader-16df6bf316c72c8a",
+  "started_utc": "2026-11-01T01:34:52.364282+00:00",
+  "status": "complete",
+  "transcript": "planner instruction, a physical cover in its hold space must serve the same single discharge port. This is mandatory."
+}

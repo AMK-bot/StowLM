@@ -1,0 +1,849 @@
+{
+  "schema_version": "stowlm.radio-readings/1",
+  "adopted": {
+    "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+    "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+    "name": "swa-last-5",
+    "adapter_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+    "decoding_policy": "reader-v3-schema-mask/2-d224"
+  },
+  "context": {
+    "id": "D192.medium-feeder_500-f60-low-s192200002",
+    "bays": [
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      21,
+      22,
+      23
+    ],
+    "max_tiers": {
+      "hold": 3,
+      "deck": 5
+    },
+    "max_tiers_by_bay": {
+      "1": {
+        "hold": 2,
+        "deck": 5
+      },
+      "2": {
+        "hold": 2,
+        "deck": 5
+      },
+      "3": {
+        "hold": 2,
+        "deck": 5
+      },
+      "9": {
+        "hold": 3,
+        "deck": 5
+      },
+      "10": {
+        "hold": 3,
+        "deck": 5
+      },
+      "11": {
+        "hold": 3,
+        "deck": 5
+      },
+      "21": {
+        "hold": 2,
+        "deck": 5
+      },
+      "22": {
+        "hold": 2,
+        "deck": 5
+      },
+      "23": {
+        "hold": 2,
+        "deck": 5
+      }
+    },
+    "has_accommodation": true,
+    "hatch_covers": [
+      "HC-002-P",
+      "HC-002-S",
+      "HC-010-P",
+      "HC-010-S",
+      "HC-022-P",
+      "HC-022-S"
+    ],
+    "ports": [
+      "SGSIN",
+      "MYPKG",
+      "THLCH"
+    ]
+  },
+  "rows": [
+    {
+      "id": "01-keep-bay-09-empty-that-space-is-held-for-the-next-port-948a945e-clean",
+      "sentence": "Keep bay 09 empty: that space is held for the next port.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "clean",
+      "wav_path": "audio/01-keep-bay-09-empty-that-space-is-held-for-the-next-port-948a945e-clean.wav",
+      "wav_sha256": "4a4f5290efbf89d6d0045b98bd6f573fee8b8a6a9aec6c8f09cdb58146f0acaa",
+      "duration_s": 4.92,
+      "seed": 2492109918,
+      "transcript": "Keep Bay Bayonine empty, that space is held for the next port.",
+      "asr_seconds": 1.3500918339705095,
+      "cost": "0.00020",
+      "asr_evidence": {
+        "audio_seconds": 4.92,
+        "audio_sha256": "4a4f5290efbf89d6d0045b98bd6f573fee8b8a6a9aec6c8f09cdb58146f0acaa",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/B01363E2889F466C8BCC46EF70E037E6",
+        "audio_duration_ms": 4960,
+        "cost_usd": "0.00020",
+        "reservation_id": "3fc8788e673b42a1a8bb0a3aea287fb6",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "binds": false,
+      "verdict": "misread",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "89d9a2a561b55c284018de78d9c7583093214337d387e92a66883c0deb91cd98",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.312152249971405
+      }
+    },
+    {
+      "id": "01-keep-bay-09-empty-that-space-is-held-for-the-next-port-948a945e-radio",
+      "sentence": "Keep bay 09 empty: that space is held for the next port.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "radio",
+      "wav_path": "audio/01-keep-bay-09-empty-that-space-is-held-for-the-next-port-948a945e-radio.wav",
+      "wav_sha256": "4fcac471ff2f9ba6c8fbe620a8235c7d32258b7ed1a142e7835a63c6fa213fc0",
+      "duration_s": 4.92,
+      "seed": 2492109918,
+      "transcript": "Hiteo nine empty. That space is held for the next port.",
+      "asr_seconds": 1.2114699999801815,
+      "cost": "0.00020",
+      "asr_evidence": {
+        "audio_seconds": 4.92,
+        "audio_sha256": "4fcac471ff2f9ba6c8fbe620a8235c7d32258b7ed1a142e7835a63c6fa213fc0",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/8F6F1C84E67648B2B25FCF512159AAC4",
+        "audio_duration_ms": 4960,
+        "cost_usd": "0.00020",
+        "reservation_id": "856b3ff9493044c4978b8b41a6fbcb59",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}",
+      "binds": false,
+      "verdict": "misread",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"not_an_instruction\",\"reason\":\"The sentence does not give a planning instruction.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "7bc98fbb4a93ec981ed80baefbaf67ba0f3a4adeb4ca1dae4e759a284516e20e",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.9537046249606647
+      }
+    },
+    {
+      "id": "02-bay-09-has-damaged-cell-guides-so-load-nothing-there-e1aece84-clean",
+      "sentence": "Bay 09 has damaged cell guides, so load nothing there.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "clean",
+      "wav_path": "audio/02-bay-09-has-damaged-cell-guides-so-load-nothing-there-e1aece84-clean.wav",
+      "wav_sha256": "03ef6af65fa51a17df5e45a56c4b8eba6fbd296554c6faf3e9b994fa6481aede",
+      "duration_s": 4.8,
+      "seed": 3786329732,
+      "transcript": "BO9 has damaged cell guides, so soloed nothing there.",
+      "asr_seconds": 1.097296499996446,
+      "cost": "0.00020",
+      "asr_evidence": {
+        "audio_seconds": 4.8,
+        "audio_sha256": "03ef6af65fa51a17df5e45a56c4b8eba6fbd296554c6faf3e9b994fa6481aede",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/101A601FAAC843E0A18F929C456323D8",
+        "audio_duration_ms": 4800,
+        "cost_usd": "0.00020",
+        "reservation_id": "aa22107c75b24ae6a4b71f20cdc5fc62",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "binds": false,
+      "verdict": "misread",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "f5696c1a43a49e2dde9fde8481eac25010654bd9f61f5c0703f227244178da77",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.748511125042569
+      }
+    },
+    {
+      "id": "02-bay-09-has-damaged-cell-guides-so-load-nothing-there-e1aece84-radio",
+      "sentence": "Bay 09 has damaged cell guides, so load nothing there.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "radio",
+      "wav_path": "audio/02-bay-09-has-damaged-cell-guides-so-load-nothing-there-e1aece84-radio.wav",
+      "wav_sha256": "a58f22b59df580548e99819016666350417cc52670667bb7ed3d550db844d066",
+      "duration_s": 4.8,
+      "seed": 3786329732,
+      "transcript": "ray 09 has 09 has damaged cell guides, so load nothing there.",
+      "asr_seconds": 1.2873363750404678,
+      "cost": "0.00020",
+      "asr_evidence": {
+        "audio_seconds": 4.8,
+        "audio_sha256": "a58f22b59df580548e99819016666350417cc52670667bb7ed3d550db844d066",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/02336083E815426B9485535585E4D868",
+        "audio_duration_ms": 4800,
+        "cost_usd": "0.00020",
+        "reservation_id": "4cf676a9a68f4aab92fceb18435f162e",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "binds": false,
+      "verdict": "misread",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "790f86895f47b7f3b214c742083e3a60cff4090f53e597b72f30b148d8868c06",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.5790078330319375
+      }
+    },
+    {
+      "id": "03-nothing-goes-into-bay-nine-on-this-call-f599610d-clean",
+      "sentence": "Nothing goes into bay nine on this call.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "clean",
+      "wav_path": "audio/03-nothing-goes-into-bay-nine-on-this-call-f599610d-clean.wav",
+      "wav_sha256": "a86595baa4e19e0cf316ff159a5b243d1782ffba355208a1c703ba64a88f9a5d",
+      "duration_s": 2.952,
+      "seed": 4120469773,
+      "transcript": "Nothing goes into Bay 9 on this call.",
+      "asr_seconds": 0.8262272499850951,
+      "cost": "0.00010",
+      "asr_evidence": {
+        "audio_seconds": 2.952,
+        "audio_sha256": "a86595baa4e19e0cf316ff159a5b243d1782ffba355208a1c703ba64a88f9a5d",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/3F9EDB71EB7D4C62AFD54234A1A1F7ED",
+        "audio_duration_ms": 2960,
+        "cost_usd": "0.00010",
+        "reservation_id": "a13fd617a5664b93b8b352a7aad9ae41",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "binds": true,
+      "verdict": "binds_exactly",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "a9290f1a75b518e228b3773ae0507a0fc011ff8749ccb4876b1c9fa6fc9e52a2",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.8937743339920416
+      }
+    },
+    {
+      "id": "03-nothing-goes-into-bay-nine-on-this-call-f599610d-radio",
+      "sentence": "Nothing goes into bay nine on this call.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "radio",
+      "wav_path": "audio/03-nothing-goes-into-bay-nine-on-this-call-f599610d-radio.wav",
+      "wav_sha256": "4b3608080c04e5db9ac6f0244682c9e07122b5eb57f6abbe4599456f7e264c93",
+      "duration_s": 2.952,
+      "seed": 4120469773,
+      "transcript": "Nothing goes into Bay 9 on this call.",
+      "asr_seconds": 0.947082375001628,
+      "cost": "0.00010",
+      "asr_evidence": {
+        "audio_seconds": 2.952,
+        "audio_sha256": "4b3608080c04e5db9ac6f0244682c9e07122b5eb57f6abbe4599456f7e264c93",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/D27DC6DB14E441FE98680690976FABEE",
+        "audio_duration_ms": 2960,
+        "cost_usd": "0.00010",
+        "reservation_id": "2a73373b324942eda8c6c7fe87a9ec48",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "binds": true,
+      "verdict": "binds_exactly",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "a9290f1a75b518e228b3773ae0507a0fc011ff8749ccb4876b1c9fa6fc9e52a2",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.6551251250202768
+      }
+    },
+    {
+      "id": "04-keep-bay-09-empty-this-call-hold-and-deck-cb468ea2-clean",
+      "sentence": "Keep bay 09 empty this call, hold and deck.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "clean",
+      "wav_path": "audio/04-keep-bay-09-empty-this-call-hold-and-deck-cb468ea2-clean.wav",
+      "wav_sha256": "ff50ee6927afbfb3a36bd14beea3f4fbc20a842ed94b17f38e0ff44fafa5a9fe",
+      "duration_s": 3.768,
+      "seed": 3410398882,
+      "transcript": "Keep Bay nine empty this call hold and deck",
+      "asr_seconds": 0.9376153330085799,
+      "cost": "0.00015",
+      "asr_evidence": {
+        "audio_seconds": 3.768,
+        "audio_sha256": "ff50ee6927afbfb3a36bd14beea3f4fbc20a842ed94b17f38e0ff44fafa5a9fe",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/748C4300FB814C3C99FC1365707861DD",
+        "audio_duration_ms": 3840,
+        "cost_usd": "0.00015",
+        "reservation_id": "0a1990c6bbc341b5859f8affe00cc4ed",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "binds": true,
+      "verdict": "binds_exactly",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "cd623123bf0b857a2596ee307082d3904f1818bdd18a73f6ec32b3afead33a6d",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.6544307500007562
+      }
+    },
+    {
+      "id": "04-keep-bay-09-empty-this-call-hold-and-deck-cb468ea2-radio",
+      "sentence": "Keep bay 09 empty this call, hold and deck.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "radio",
+      "wav_path": "audio/04-keep-bay-09-empty-this-call-hold-and-deck-cb468ea2-radio.wav",
+      "wav_sha256": "a5bc16976d500676ec3d959df0ef084a7c708e85ea62cd75eb9457f56eea1014",
+      "duration_s": 3.768,
+      "seed": 3410398882,
+      "transcript": "keep bayo nine empty this call hold and debt",
+      "asr_seconds": 1.0497006249497645,
+      "cost": "0.00015",
+      "asr_evidence": {
+        "audio_seconds": 3.768,
+        "audio_sha256": "a5bc16976d500676ec3d959df0ef084a7c708e85ea62cd75eb9457f56eea1014",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/A83253748C344223A7A87B81F66CBFC3",
+        "audio_duration_ms": 3840,
+        "cost_usd": "0.00015",
+        "reservation_id": "69904489d8a7436c9eb533721c3de9cd",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "binds": false,
+      "verdict": "misread",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "1245ee3539d00ea1b912f5f85a583d9d5b75454476e3e4e4711c3700ddca9425",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.1615149169811048
+      }
+    },
+    {
+      "id": "05-planner-bay-09-is-closed-today-3c4d1ce1-clean",
+      "sentence": "Planner, bay 09 is closed today.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "clean",
+      "wav_path": "audio/05-planner-bay-09-is-closed-today-3c4d1ce1-clean.wav",
+      "wav_sha256": "05145064903b183a64f6ff3a5d313f45a9ac5dc44b78f182f3f11ad99b691c7a",
+      "duration_s": 2.976,
+      "seed": 1011686625,
+      "transcript": "Planner, Bayo Bayo Nine is closed today.",
+      "asr_seconds": 0.8015213750186376,
+      "cost": "0.00015",
+      "asr_evidence": {
+        "audio_seconds": 2.976,
+        "audio_sha256": "05145064903b183a64f6ff3a5d313f45a9ac5dc44b78f182f3f11ad99b691c7a",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/9E9E1061A183407488D74FA99D14BAC8",
+        "audio_duration_ms": 3040,
+        "cost_usd": "0.00015",
+        "reservation_id": "fcff0a7f96574a408e69de383864115f",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "binds": true,
+      "verdict": "binds_exactly",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "b44d5200407cb3788521cf7d5a51a3ae3d15ba6d58d0a08f2b362224dd8b83ac",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.6822634169948287
+      }
+    },
+    {
+      "id": "05-planner-bay-09-is-closed-today-3c4d1ce1-radio",
+      "sentence": "Planner, bay 09 is closed today.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "radio",
+      "wav_path": "audio/05-planner-bay-09-is-closed-today-3c4d1ce1-radio.wav",
+      "wav_sha256": "60f5c9a0e1cd3250b77ddb36dea43da95c3be7c6c2eb5aa32027f201d6f26c1a",
+      "duration_s": 2.976,
+      "seed": 1011686625,
+      "transcript": "Planner 509 is closed today.",
+      "asr_seconds": 0.8432604999979958,
+      "cost": "0.00015",
+      "asr_evidence": {
+        "audio_seconds": 2.976,
+        "audio_sha256": "60f5c9a0e1cd3250b77ddb36dea43da95c3be7c6c2eb5aa32027f201d6f26c1a",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/190C5E1B100D4C7A9CCBAF1F7FEF0DFC",
+        "audio_duration_ms": 3040,
+        "cost_usd": "0.00015",
+        "reservation_id": "7615e535c76c443fa89375cdc3f6aba8",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "binds": false,
+      "verdict": "misread",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "84b3ecd7185e67fdf16b9ab2ba3b9e000db98757c2c80f725a998beff4d8ca8e",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.141561916039791
+      }
+    },
+    {
+      "id": "06-leave-bay-9-completely-empty-6aac4191-clean",
+      "sentence": "Leave bay 9 completely empty.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "clean",
+      "wav_path": "audio/06-leave-bay-9-completely-empty-6aac4191-clean.wav",
+      "wav_sha256": "f9184cb45714e40e6d0c9f3b3f5e9d981b2fb0611099f3729b8c84ac6b7cd1e4",
+      "duration_s": 2.712,
+      "seed": 1789673873,
+      "transcript": "Leave Bay nine completely empty.",
+      "asr_seconds": 0.9177532920148224,
+      "cost": "0.00010",
+      "asr_evidence": {
+        "audio_seconds": 2.712,
+        "audio_sha256": "f9184cb45714e40e6d0c9f3b3f5e9d981b2fb0611099f3729b8c84ac6b7cd1e4",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/437AB44F0233416E9966FDEDE9D722BB",
+        "audio_duration_ms": 2720,
+        "cost_usd": "0.00010",
+        "reservation_id": "1b55ee302b884d6d86d0c60e70f8f516",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "binds": true,
+      "verdict": "binds_exactly",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "edbed2abe6dfe465f98ce19ddd78c2110a48b1e44624b527eb9e967c3302be60",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.689960916992277
+      }
+    },
+    {
+      "id": "06-leave-bay-9-completely-empty-6aac4191-radio",
+      "sentence": "Leave bay 9 completely empty.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "radio",
+      "wav_path": "audio/06-leave-bay-9-completely-empty-6aac4191-radio.wav",
+      "wav_sha256": "0113cc88b1313d09736604189ceaa1787ab25a6a257370c14170b42d91071eed",
+      "duration_s": 2.712,
+      "seed": 1789673873,
+      "transcript": "Leave they day nine completely empty.",
+      "asr_seconds": 0.9312000829959288,
+      "cost": "0.00010",
+      "asr_evidence": {
+        "audio_seconds": 2.712,
+        "audio_sha256": "0113cc88b1313d09736604189ceaa1787ab25a6a257370c14170b42d91071eed",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/6404B1CB99D948CC92FCADB129203B38",
+        "audio_duration_ms": 2720,
+        "cost_usd": "0.00010",
+        "reservation_id": "3b15468dfef143f7960c5115f051a5c1",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "binds": false,
+      "verdict": "misread",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "2d2cc83d0567fbae11680169212652e2e3b1b646ddeed4b9574a227fb14e2c81",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.142520041030366
+      }
+    },
+    {
+      "id": "07-skip-bay-09-entirely-94e527a6-clean",
+      "sentence": "Skip bay 09 entirely.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "clean",
+      "wav_path": "audio/07-skip-bay-09-entirely-94e527a6-clean.wav",
+      "wav_sha256": "a200220ae7f4f533a5d8ad58217c862a8ac4cfcda6da319f51d98d5ff59c6cc2",
+      "duration_s": 2.52,
+      "seed": 2498045862,
+      "transcript": "Skip Bayless entirely.",
+      "asr_seconds": 0.8507798750069924,
+      "cost": "0.00010",
+      "asr_evidence": {
+        "audio_seconds": 2.52,
+        "audio_sha256": "a200220ae7f4f533a5d8ad58217c862a8ac4cfcda6da319f51d98d5ff59c6cc2",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/5DFBCBCABDBC4868B825B56721490F07",
+        "audio_duration_ms": 2560,
+        "cost_usd": "0.00010",
+        "reservation_id": "5d365b93ee244762bc9fb7dec4a39faf",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+      "binds": false,
+      "verdict": "misread",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "983c94e3c3c8a562048e31d0760fe664e728c91760b2f3daea7fc428fe2b4667",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.240481917047873
+      }
+    },
+    {
+      "id": "07-skip-bay-09-entirely-94e527a6-radio",
+      "sentence": "Skip bay 09 entirely.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "radio",
+      "wav_path": "audio/07-skip-bay-09-entirely-94e527a6-radio.wav",
+      "wav_sha256": "a6af2ffc4b141053d473daafe7aba41107ed1179745d29763810cd57499a1dfa",
+      "duration_s": 2.52,
+      "seed": 2498045862,
+      "transcript": "Skip Bayless nine entirely.",
+      "asr_seconds": 0.7348468329873867,
+      "cost": "0.00010",
+      "asr_evidence": {
+        "audio_seconds": 2.52,
+        "audio_sha256": "a6af2ffc4b141053d473daafe7aba41107ed1179745d29763810cd57499a1dfa",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/A18702B4FBBE4FD0B5D55FFB35CBF463",
+        "audio_duration_ms": 2560,
+        "cost_usd": "0.00010",
+        "reservation_id": "9c8ce7d0075e412fa2b650682848f189",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "binds": true,
+      "verdict": "binds_exactly",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "d31f63990a316df60e898c7d4575417ad1b7fadb73538fd1e714a1706c048e45",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.6655631249886937
+      }
+    },
+    {
+      "id": "08-do-not-load-any-containers-in-bay-09-d04f1be1-clean",
+      "sentence": "Do not load any containers in bay 09.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "clean",
+      "wav_path": "audio/08-do-not-load-any-containers-in-bay-09-d04f1be1-clean.wav",
+      "wav_sha256": "ea0c729bb35b1722d5d4de777cbdfed61399d3ca220dcf6f1ee347db1d7fb6eb",
+      "duration_s": 3.24,
+      "seed": 3494845409,
+      "transcript": "Do not load any containers in Bay 9.",
+      "asr_seconds": 0.9346376669709571,
+      "cost": "0.00015",
+      "asr_evidence": {
+        "audio_seconds": 3.24,
+        "audio_sha256": "ea0c729bb35b1722d5d4de777cbdfed61399d3ca220dcf6f1ee347db1d7fb6eb",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/2FD344D67A184C65BC88E72B5C7E7169",
+        "audio_duration_ms": 3280,
+        "cost_usd": "0.00015",
+        "reservation_id": "999f085336314b45950fb2253b1bb783",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "binds": true,
+      "verdict": "binds_exactly",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "449b04dd3079555e33f31cebc78831c9a46bb8b45e8e35d1d4af0b094544dc5a",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.567783208040055
+      }
+    },
+    {
+      "id": "08-do-not-load-any-containers-in-bay-09-d04f1be1-radio",
+      "sentence": "Do not load any containers in bay 09.",
+      "expected_rule": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "condition": "radio",
+      "wav_path": "audio/08-do-not-load-any-containers-in-bay-09-d04f1be1-radio.wav",
+      "wav_sha256": "4baafd04ae41e7ec2ff5716580f44bf57d6e0de0aa826c37f7ea18144f1df55e",
+      "duration_s": 3.24,
+      "seed": 3494845409,
+      "transcript": "Do not load any containers in Bay 09.",
+      "asr_seconds": 1.312011124973651,
+      "cost": "0.00015",
+      "asr_evidence": {
+        "audio_seconds": 3.24,
+        "audio_sha256": "4baafd04ae41e7ec2ff5716580f44bf57d6e0de0aa826c37f7ea18144f1df55e",
+        "model": "muse-voice-transcribe-1.0",
+        "session_id": "voyager/transcribe/3E4BA4E0B7F44D7BAA5F076E754C77AA",
+        "audio_duration_ms": 3280,
+        "cost_usd": "0.00015",
+        "reservation_id": "6d0d16a7b3ad4bd8b5f55e70fd6d1ec3",
+        "purpose": "voice-v5-1.3-asr",
+        "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified"
+      },
+      "reading": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+      "binds": true,
+      "verdict": "binds_exactly",
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "37cd16ef99d8355f9d0c51beae5daf53b1c94de99b450c9bf073248c9741a3e8",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.580783082987182
+      }
+    }
+  ],
+  "summary": {
+    "clean": {
+      "total": 8,
+      "binds": 5,
+      "misread": 3,
+      "malformed": 0
+    },
+    "radio": {
+      "total": 8,
+      "binds": 3,
+      "misread": 5,
+      "malformed": 0
+    }
+  }
+}

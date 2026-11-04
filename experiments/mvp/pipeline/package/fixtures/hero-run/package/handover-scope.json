@@ -1,0 +1,308 @@
+{
+  "synthetic": true,
+  "banner": "Half-ship section: 87 boxes planned in 6 of 12 bays. Other bays hold 168 fixed synthetic background boxes (2,664 t). Stability and strength include them. No ship can sail on this plan alone. Synthetic ships and cargo, simulated port. Full checker passed; local demo receipt. Stored plan, computed on 2026-11-02T04:36:38.695362+00:00, rechecked now. Stored synthetic development fixture; source provenance is recorded separately. Live reading: StowLM Reader swa-last-5. Pipeline: frozen. Checker coverage: 54 active, 8 inactive.",
+  "headline": "An empty section, on a ship whose other bays are a fixed synthetic load",
+  "planned_boxes": 87,
+  "planned_bays": [
+    1,
+    3,
+    9,
+    11,
+    21,
+    23
+  ],
+  "background_bays": [
+    5,
+    7,
+    13,
+    15,
+    17,
+    19
+  ],
+  "all_bays": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23
+  ],
+  "background_boxes": 168,
+  "background_mass_kg": 2663810.4787893104,
+  "background_mass_t": 2663.8104787893103,
+  "background_count_complete": true,
+  "weights": [
+    {
+      "component": "Lightship (closed hatch covers included)",
+      "mass_kg": 2900000.0,
+      "mass_t": 2900.0
+    },
+    {
+      "component": "Planned section cargo aboard",
+      "mass_kg": 957252.8898468819,
+      "mass_t": 957.2528898468819
+    },
+    {
+      "component": "Fixed synthetic background cargo",
+      "mass_kg": 2663810.4787893104,
+      "mass_t": 2663.8104787893103
+    },
+    {
+      "component": "Other fixed loads",
+      "mass_kg": 0.0,
+      "mass_t": 0.0
+    },
+    {
+      "component": "Ballast tanks",
+      "mass_kg": 921002.4394048951,
+      "mass_t": 921.0024394048951
+    },
+    {
+      "component": "Fuel, fresh water and other tanks",
+      "mass_kg": 712882.100000036,
+      "mass_t": 712.882100000036
+    },
+    {
+      "component": "Hatch covers left on quay",
+      "mass_kg": -0.0,
+      "mass_t": -0.0
+    }
+  ],
+  "weight_total_kg": 8154947.908041123,
+  "displacement_kg": 8154947.908041123,
+  "weight_residual_kg": 0.0,
+  "weight_closes": true,
+  "tanks": [
+    {
+      "tank": "APT-P",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 178618.25293628554
+    },
+    {
+      "tank": "APT-S",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 178618.25293628557
+    },
+    {
+      "tank": "DB-A-P",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 50121.21252296202,
+      "departure_mass_kg": 43856.06095759177,
+      "capacity_kg": 50121.21252296202
+    },
+    {
+      "tank": "DB-A-S",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 50121.21252296202,
+      "departure_mass_kg": 43856.06095759177,
+      "capacity_kg": 50121.21252296202
+    },
+    {
+      "tank": "DB-F-P",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 112216.5959502341,
+      "departure_mass_kg": 98189.52145645484,
+      "capacity_kg": 112216.5959502341
+    },
+    {
+      "tank": "DB-F-S",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 112216.5959502341,
+      "departure_mass_kg": 98189.52145645484,
+      "capacity_kg": 112216.5959502341
+    },
+    {
+      "tank": "DB-M-P",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 312434.6319652328,
+      "departure_mass_kg": 273380.30296957865,
+      "capacity_kg": 312434.6319652328
+    },
+    {
+      "tank": "DB-M-S",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 312434.6319652328,
+      "departure_mass_kg": 273380.30296957865,
+      "capacity_kg": 312434.6319652328
+    },
+    {
+      "tank": "DO-P",
+      "kind": "diesel_oil",
+      "adjustable": false,
+      "arrival_mass_kg": 42461.749999995685,
+      "departure_mass_kg": 42461.749999995685,
+      "capacity_kg": 43774.999999995554
+    },
+    {
+      "tank": "DO-S",
+      "kind": "diesel_oil",
+      "adjustable": false,
+      "arrival_mass_kg": 42461.749999995685,
+      "departure_mass_kg": 42461.749999995685,
+      "capacity_kg": 43774.999999995554
+    },
+    {
+      "tank": "FO-A-P",
+      "kind": "fuel_oil",
+      "adjustable": false,
+      "arrival_mass_kg": 130314.65000000314,
+      "departure_mass_kg": 130314.65000000314,
+      "capacity_kg": 134345.00000000326
+    },
+    {
+      "tank": "FO-A-S",
+      "kind": "fuel_oil",
+      "adjustable": false,
+      "arrival_mass_kg": 130314.65000000314,
+      "departure_mass_kg": 130314.65000000314,
+      "capacity_kg": 134345.00000000326
+    },
+    {
+      "tank": "FO-F-P",
+      "kind": "fuel_oil",
+      "adjustable": false,
+      "arrival_mass_kg": 130314.65000002162,
+      "departure_mass_kg": 130314.65000002162,
+      "capacity_kg": 134345.00000002226
+    },
+    {
+      "tank": "FO-F-S",
+      "kind": "fuel_oil",
+      "adjustable": false,
+      "arrival_mass_kg": 130314.65000002162,
+      "departure_mass_kg": 130314.65000002162,
+      "capacity_kg": 134345.00000002226
+    },
+    {
+      "tank": "FPT-P",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 71071.59098407856
+    },
+    {
+      "tank": "FPT-S",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 71071.59098407856
+    },
+    {
+      "tank": "FW-P",
+      "kind": "fresh_water",
+      "adjustable": false,
+      "arrival_mass_kg": 53349.99999999755,
+      "departure_mass_kg": 53349.99999999755,
+      "capacity_kg": 54999.999999997475
+    },
+    {
+      "tank": "FW-S",
+      "kind": "fresh_water",
+      "adjustable": false,
+      "arrival_mass_kg": 53349.99999999755,
+      "departure_mass_kg": 53349.99999999755,
+      "capacity_kg": 54999.999999997475
+    },
+    {
+      "tank": "FWD-DEEP-P",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 100131.41062440611
+    },
+    {
+      "tank": "FWD-DEEP-S",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 100131.41062440613
+    },
+    {
+      "tank": "HEEL-P",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 52269.198969874495,
+      "capacity_kg": 180301.33727528897
+    },
+    {
+      "tank": "HEEL-S",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 37881.46966776999,
+      "capacity_kg": 180301.33727528897
+    },
+    {
+      "tank": "WING-A-P",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 389656.70743010635
+    },
+    {
+      "tank": "WING-A-S",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 389656.70743010635
+    },
+    {
+      "tank": "WING-F-P",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 224607.45387319505
+    },
+    {
+      "tank": "WING-F-S",
+      "kind": "ballast",
+      "adjustable": true,
+      "arrival_mass_kg": 0.0,
+      "departure_mass_kg": 0.0,
+      "capacity_kg": 224607.45387319502
+    }
+  ],
+  "ballast_mass_kg": 921002.4394048951,
+  "ballast_line": "Ballast departure allocation: 921 t. Tank contents are listed in tank-plan.csv; no cargo-work transfer programme is checked.",
+  "weight_by_port": [
+    {
+      "pod": "MYPKG",
+      "boxes": 36,
+      "mass_kg": 416679.87502802204,
+      "mass_t": 416.679875028022
+    },
+    {
+      "pod": "SGSIN",
+      "boxes": 51,
+      "mass_kg": 540573.0148188595,
+      "mass_t": 540.5730148188595
+    }
+  ],
+  "background_port_note": "Fixed background cargo has no declared POD; listed separately, never assigned to a port."
+}

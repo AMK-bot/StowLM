@@ -1,0 +1,103 @@
+{
+  "case_id": "unclear-distance",
+  "sentence": "Keep the dangerous cargo farther away.",
+  "passed": true,
+  "parsed": {
+    "case_id": "unclear-distance",
+    "sentence": "Keep the dangerous cargo farther away.",
+    "parsed": {
+      "schema_version": "stowlm.reader/2",
+      "refusal": {
+        "refused": true,
+        "code": "ambiguous",
+        "reason": "No class, distance, or location specified"
+      }
+    },
+    "parser": {
+      "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"No class, distance, or location specified\"}}",
+      "request_id": "dd96bad3-4581-4d18-a344-3f73588055cd",
+      "cost_usd": "0.0017445",
+      "usage": {
+        "input_tokens": 532,
+        "output_tokens": 254,
+        "cached_tokens": 0
+      },
+      "parser": "SparkParser",
+      "model": "muse-spark-1.3",
+      "adapter_sha256": null,
+      "purpose": "reader-d222-followup",
+      "prompt_sha256": "4e65380d56c9ef41bbb2ecf450078b3bc9cd6ab8c164644837b8574d4bba7faa",
+      "reservation_context_bound_tokens": 32768
+    }
+  },
+  "proof": {
+    "schema_version": "stowlm.refusal-evidence/1",
+    "parsed": {
+      "schema_version": "stowlm.reader/2",
+      "refusal": {
+        "refused": true,
+        "code": "ambiguous",
+        "reason": "No class, distance, or location specified"
+      }
+    },
+    "facts": [
+      {
+        "id": "reader-refusal",
+        "text": "The reader marked the request ambiguous. No constraint was guessed or applied."
+      }
+    ],
+    "required_fact_ids": [
+      "reader-refusal"
+    ],
+    "alternatives": [],
+    "clarifications": [
+      {
+        "id": "clarification-1",
+        "text": "Which IMDG class, which bay, and how many 20-foot bays of clearance do you mean?"
+      }
+    ],
+    "nearest_alternative_id": null,
+    "checker_called": false,
+    "checker_report": null,
+    "automatically_applied": false,
+    "status": "ambiguous"
+  },
+  "explanation": "The reader marked the request ambiguous. No constraint was guessed or applied. Which IMDG class, which bay, and how many 20-foot bays of clearance do you mean?",
+  "explainer": {
+    "explainer": "SparkRefusalExplainer",
+    "model": "muse-spark-1.3",
+    "adapter_sha256": null,
+    "purpose": "reader-d222-followup",
+    "proof_sha256": "9bb5b7093c21a8dd71522c7f5851c69aa74d4837634161c32a7fa0308510fca9",
+    "source_sha256": "1217a010ca85e6a5e95a85d765bdffd7682b3bcf8342152e9cee96a9e3bf03ec",
+    "prompt_sha256": "ba8db20bd1447745e9e776e945c9f5c19cb4b50e5c0232c378cbfaed281e178a",
+    "contribution": "selects_and_orders_exact_software_owned_fact_sentences",
+    "reservation_context_bound_tokens": 32768,
+    "request_id": "7c9e558d-81a9-4ffd-84ee-f61cae27fea6",
+    "cost_usd": "0.00156625",
+    "usage": {
+      "input_tokens": 284,
+      "output_tokens": 285,
+      "cached_tokens": 0
+    },
+    "output_sha256": "998ed279d9bc8afa2bd4d7155551aeb5828346cd4d5e4531014a3832dedf1815",
+    "validated": true,
+    "generated_selection": {
+      "alternative_id": null,
+      "clarification_id": "clarification-1",
+      "schema_version": "stowlm.refusal-explanation/1",
+      "statements": [
+        {
+          "fact_id": "reader-refusal",
+          "text": "The reader marked the request ambiguous. No constraint was guessed or applied."
+        }
+      ],
+      "status": "ambiguous"
+    },
+    "cited_fact_ids": [
+      "reader-refusal"
+    ]
+  },
+  "no_planner_called": true,
+  "original_instruction_changed": false
+}

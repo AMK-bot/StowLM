@@ -1,0 +1,31 @@
+# Cycle 6 runtime snapshot
+
+All files listed below are local cold-start dependencies. No cohort inputs, previous plans, assignments, recipes, ballast solutions, sealed inputs, or `c6/c6-maps` files were opened or copied by this snapshot work.
+
+`source-manifest.json` records each original path and SHA256, each copied SHA256, namespace/path changes, generated bootstrap/check-delegate hashes, and hashes of the unchanged shared `src/stowage` and `params` tree. The selected snapshot digest is `384955c42ecbc7d913815ef0cd27381af328b60dc4f0aa176b4bc0b8c4104c63`. `freeze_dependencies.py` reproduces the snapshot using only standard-library source operations. Do not rerun it after measurement begins.
+
+## Frozen sources
+
+- `frozen_engine12`: Engine **0.12.0**, from `c5/c5-peel/engine_snapshot`. Its original NAME/VERSION are retained. Its loader now imports local `frozen_frontier.planner`, copied from the original Frontier planner, rather than the sibling peel planner. The live engine is 0.13.0 and is not this baseline. Tests, benchmark/result artifacts, provenance helper, and unrelated standalone catalog CLI entry points are excluded.
+- `frozen_frontier`: original Frontier planner, ALNS, sequencing, blocks/columns/master/sight/blocked helpers, E9 search-mask adapter, and transitive strategy helpers. The compact helper retains its callable planning/finishing library, excluding unrelated LLM/batch CLI code.
+- `frozen_securing`: unmodified algorithm bodies/settings from `c5/c5-securing/{method,stow,gap,rows,chainlab}.py`, plus the transitive c4 layout/page/repair/ballast/physics helpers. The method's ballast artifacts go under this local package's `ballast/`, with its original instance/label filenames. Use separate worker processes and unique map identifiers.
+- `frozen_reporting`: exact c5 leader completion aggregator and `tiers.toml`; exact c5-peel tier classifier apart from local table/root paths. No `score_ladder.py` or its referenced inputs are copied/imported.
+
+Only namespace/bootstrap, checker observation, and standalone CLI isolation changes are made; source and destination hashes expose every change. The engine proof-source hash guard uses a byte-exact local copy of the old scout source. The mask binder's string comparison recognizes `frozen_frontier.alns`, retaining its original alias-binding behavior. Existing E9 adapters retain their original temporary search-mask clearance lookup and restoration behavior; the native full-check implementation is not changed.
+
+`frozen_env` adds only repository `src/` to `sys.path`, sets native numerical/thread worker limits to one, disables bytecode writes, and defaults the vessel cache beneath this experiment. No live experimental directory is added to `sys.path`. Shared native stowage/params remain in place and are hashed; this is isolation of experimental dependencies, not a vendored native distribution.
+
+## Interfaces
+
+Put this experiment directory on the worker import path, then import `frozen_env` before numerical libraries.
+
+- Baseline: `from frozen_engine12.planner import plan_and_check`; API `plan_and_check(instance, *, budget_s=None, finalize_s=600., seed=0, config=Config())` returns `(PlannerResult | None, record)`. Existing small-instance search/finish floors remain, so an outer uniform wall cap is a runner responsibility. `frozen_engine12.lab_method.propose/finish` provide the usual score adapter.
+- Securing: `from frozen_securing import method`; the original `propose(instance, *, seed, budget_s, context)` and `finish(instance, plan, *, seed, finalize_s, label, context)` are retained. Graph intervention may replace the local `method.Assignment` symbol in its own worker; baseline runs in separate workers. `frozen_securing.gap` exports `Assignment` and `Settings`; `frozen_frontier.alns` exports the original `Problem`/`Sequencer` helpers.
+- Tier classification: `from frozen_reporting.tiers import analyze_report, rank_analysis, load_table`. `analyze_report(report, instance=instance)` returns the inherited fixed-policy eligibility/level, each hard violation occurrence and its breach/units, unknown counts, ashore count/TEU/mass, and lifts. Missing counts, failed checker parts, unknown hard rules, and inconsistent verdicts fail closed. Breach totals retain the original mixed-unit sum. Partial cargo retention must be reported as partial; the completion aggregator itself trusts input rows and does not enforce the caller's all-aboard gate.
+- Observation: `frozen_checks.set_observer(callback)` registers `(instance, plan, native_report)` after each copied solver's full-check call. Clear with `set_observer(None)` in the worker's `finally`. The delegate calls the unchanged native check and returns its same report object; callback errors propagate out of the delegate. All copied module-level and function-local imports of the full `check` route through this delegate. Existing solver exception handling remains unchanged; the observer should be robust and checkpoint immediately. Native finalizer internals are not patched and their private checks are not observed; a returned concrete plan must still receive the runner's fresh unchanged full check on the original instance and all-aboard gate.
+
+## Verification and limits
+
+Standard-library AST parsing and absolute/relative import closure checks pass for the copied tree. Five dynamic import sites were inspected: native checker/model modules, frozen engine package suffixes, and the finishing worker's own `__name__`; none resolves a live experimental module. No copied module retains a `sys.path` mutation or direct full-check import that bypasses the delegate. A mocked delegate test verifies native-before-observer order, exact report identity, callback clearing, and error propagation. Original bytes were hash-verified when frozen. Continuing verification strictly checks copied/generated bytes and the manifest digest; original source hashes remain well-formed provenance attestations, with no dependency on the live originals remaining unchanged or available.
+
+No numerical modules, native checker, copied solver, cohort generation, or solve were imported/run by this snapshot subtask. Runtime import/smoke verification and measurements remain the parent runner's responsibility under the shared CPU limit.

@@ -1,0 +1,193 @@
+{
+  "schema": "stowlm.sandbox-drag-cache-index/1",
+  "synthetic": true,
+  "mode": "recorded",
+  "label": "Recorded answer",
+  "created_utc": "2026-11-02T03:15:07.241552+00:00",
+  "cache_file": "drag-cache.json",
+  "cache_sha256": "b50f82ec5f5d9b693256f8f05fdf649f51589d197fcd34da93796586cfbdeca4",
+  "entries_count": 25,
+  "instance_sha256": "4cd3542494223506887f2325a6dd70589dfadd2b66d47ae02385811895a88860",
+  "plan_sha256": "f4bebf86bd947df87b9a859611c5b57e6a4d4b246696ebf2616f7b109addf1c7",
+  "source_fingerprint": "696673151401fc500b8a16d325a0da7941fbf8f819cba75339d2e3fcf9db8ea8",
+  "manifest_sha256": "fb14008b3cc4dd74c1a065d54f9b071de17c8a152e9a60aed4da2f9373af7857",
+  "audit_results_sha256": "36aa6e784a27261567d4380bc428125ba624128344d2e9500119f2375514d4a7",
+  "requests": [
+    {
+      "request_index": 0,
+      "box_id": "QZXU0001010",
+      "target_slot": "0100288",
+      "checked_utc": "2026-11-02T03:02:12.251720+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 1,
+      "box_id": "QZXU0000246",
+      "target_slot": "0100582",
+      "checked_utc": "2026-11-02T03:02:11.539206+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 2,
+      "box_id": "QZXU0000708",
+      "target_slot": "0020484",
+      "checked_utc": "2026-11-02T03:02:11.894751+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 3,
+      "box_id": "QZXU0000539",
+      "target_slot": "0210482",
+      "checked_utc": "2026-11-02T03:02:11.890503+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 4,
+      "box_id": "QZXU0000138",
+      "target_slot": "0100102",
+      "checked_utc": "2026-11-02T03:02:51.000168+00:00",
+      "checker_input_kind": "candidate_plan"
+    },
+    {
+      "request_index": 5,
+      "box_id": "QZXU0001089",
+      "target_slot": "0100206",
+      "checked_utc": "2026-11-02T03:02:51.203874+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 6,
+      "box_id": "QZXU0000122",
+      "target_slot": "0020490",
+      "checked_utc": "2026-11-02T03:02:51.678787+00:00",
+      "checker_input_kind": "candidate_plan"
+    },
+    {
+      "request_index": 7,
+      "box_id": "QZXU0001031",
+      "target_slot": "0100688",
+      "checked_utc": "2026-11-02T03:02:53.982930+00:00",
+      "checker_input_kind": "candidate_plan"
+    },
+    {
+      "request_index": 8,
+      "box_id": "QZXU0000610",
+      "target_slot": "0110404",
+      "checked_utc": "2026-11-02T03:05:13.163591+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 9,
+      "box_id": "QZXU0000478",
+      "target_slot": "0020682",
+      "checked_utc": "2026-11-02T03:05:16.529406+00:00",
+      "checker_input_kind": "candidate_plan"
+    },
+    {
+      "request_index": 10,
+      "box_id": "QZXU0000903",
+      "target_slot": "0220402",
+      "checked_utc": "2026-11-02T03:05:14.260947+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 11,
+      "box_id": "QZXU0000858",
+      "target_slot": "0220382",
+      "checked_utc": "2026-11-02T03:05:14.257817+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 12,
+      "box_id": "QZXU0000014",
+      "target_slot": "0020202",
+      "checked_utc": "2026-11-02T03:05:38.973366+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 13,
+      "box_id": "QZXU0000077",
+      "target_slot": "0090602",
+      "checked_utc": "2026-11-02T03:05:39.472151+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 14,
+      "box_id": "QZXU0001134",
+      "target_slot": "0100182",
+      "checked_utc": "2026-11-02T03:05:39.353365+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 15,
+      "box_id": "QZXU0000884",
+      "target_slot": "0010682",
+      "checked_utc": "2026-11-02T03:05:41.037437+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 16,
+      "box_id": "QZXU0001140",
+      "target_slot": "0020282",
+      "checked_utc": "2026-11-02T03:06:07.084627+00:00",
+      "checker_input_kind": "candidate_plan"
+    },
+    {
+      "request_index": 17,
+      "box_id": "QZXU0000272",
+      "target_slot": "0020282",
+      "checked_utc": "2026-11-02T03:06:08.231065+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 18,
+      "box_id": "QZXU0000082",
+      "target_slot": "0020682",
+      "checked_utc": "2026-11-02T03:06:08.872055+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 19,
+      "box_id": "QZXU0000884",
+      "target_slot": "0030102",
+      "checked_utc": "2026-11-02T03:06:13.084092+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 20,
+      "box_id": "QZXU0001113",
+      "target_slot": "0100582",
+      "checked_utc": "2026-11-02T03:13:18.706085+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 21,
+      "box_id": "QZXU0000349",
+      "target_slot": "0230182",
+      "checked_utc": "2026-11-02T03:13:17.699332+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 22,
+      "box_id": "QZXU0000441",
+      "target_slot": "0220382",
+      "checked_utc": "2026-11-02T03:13:18.531517+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 23,
+      "box_id": "QZXU0000420",
+      "target_slot": "0210184",
+      "checked_utc": "2026-11-02T03:13:18.730106+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    },
+    {
+      "request_index": 24,
+      "box_id": "QZXU0000863",
+      "target_slot": "0220386",
+      "checked_utc": "2026-11-02T03:13:51.931053+00:00",
+      "checker_input_kind": "diagnostic_requested_stow_snapshot"
+    }
+  ],
+  "provenance": "Fixed25 of the frozen30 audit. No new checks claimed for cache reuse. Four prepared showcases are separately in demo.json."
+}

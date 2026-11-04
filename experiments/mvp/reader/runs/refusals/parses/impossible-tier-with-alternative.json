@@ -1,0 +1,29 @@
+{
+  "case_id": "impossible-tier-with-alternative",
+  "sentence": "Across the vessel, use at most zero occupied tiers per deck stack.",
+  "parsed": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "max_tiers",
+      "bay": null,
+      "zone": "deck",
+      "max_tiers": 0
+    }
+  },
+  "parser": {
+    "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"deck\",\"max_tiers\":0}}",
+    "request_id": "1f3a451b-9a92-4a87-b843-09844935c131",
+    "cost_usd": "0.00158325",
+    "usage": {
+      "input_tokens": 539,
+      "output_tokens": 214,
+      "cached_tokens": 0
+    },
+    "parser": "SparkParser",
+    "model": "muse-spark-1.3",
+    "adapter_sha256": null,
+    "purpose": "reader-d222-followup",
+    "prompt_sha256": "fd78363a46a1505de3b86412454a6d822356148b72cdd4b04f70fdcb03dd3815",
+    "reservation_context_bound_tokens": 32768
+  }
+}

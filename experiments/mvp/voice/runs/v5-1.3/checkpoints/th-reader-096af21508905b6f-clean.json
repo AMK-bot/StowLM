@@ -1,0 +1,47 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 13,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 3840,
+    "audio_seconds": 3.792,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00015",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "193cc91ab5ff4cd78f0cbe95ddac8eaa",
+    "session_id": "voyager/transcribe/F5D1B5B0C4C6402FB90F58B348048EE7"
+  },
+  "asr_latency_s": 1.1955818330170587,
+  "audio_sha256": "99dc4ea06a0078ce9e4f0baf44cc695ac1e3fa4f796b2b311cbfbdb68bbb352a",
+  "canonical": {
+    "constraint": {
+      "bay": 13,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "clean",
+  "end_to_end_s": 2.352144167001825,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00111145",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "4ccd56dc5706ad22c616ff1c78100235c1929f6a71b3edee7fcb38fb6232fee2",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "edcac22f-b003-40cb-8a8d-b0c864d769dc"
+  },
+  "parser_latency_s": 1.0609344160184264,
+  "script": "ห้ามบรรทุกตู้สินค้าในเบย์สิบสาม",
+  "source_id": "reader-096af21508905b6f",
+  "started_utc": "2026-11-01T01:35:40.267442+00:00",
+  "status": "complete",
+  "transcript": "ห้ามบรรทุกตู้สินค้าในเบย์สิบสาม"
+}

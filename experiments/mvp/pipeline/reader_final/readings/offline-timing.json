@@ -1,0 +1,23 @@
+{
+  "sentences": 12,
+  "model_load_s": 1.7655535000376403,
+  "first_sentence_s": 4.924463583040051,
+  "cold_start_s": 6.6900170830776915,
+  "warm_median_s": 4.085331290960312,
+  "warm_p90_s": 4.291040250041988,
+  "warm_mean_s": 4.131542605998799,
+  "reader_seconds": 4.085331290960312,
+  "total_runtime_s": 53.588192750001326,
+  "startup_to_first_answer_s": 6.6900170830776915,
+  "metal_peak_gb": 15.693397274240851,
+  "process_peak_rss_gb": 15.380035400390625,
+  "reader_peak_gb": 15.693397274240851,
+  "network": "denied to this process by sandbox-exec; the machine stayed online",
+  "labels": [
+    "StowLM Reader \u00b7 fine-tuned Muse Glimmer 30B \u00b7 on this laptop"
+  ],
+  "machine_load1": 25.23193359375,
+  "sentences_read": 12,
+  "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+  "timing_note": "total_runtime_s covers start-up and all 12 reads; startup_to_first_answer_s is model load plus the first sentence, from stored per-sentence times. Rewritten 2 Nov without rerunning."
+}

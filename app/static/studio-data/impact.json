@@ -1,0 +1,1331 @@
+{
+  "schema_version": "stowlm.studio.impact/1",
+  "label": "Projection",
+  "scope": "Synthetic ships and cargo, simulated port",
+  "model": {
+    "path": "experiments/impact-estimate/impact_v6.py",
+    "function": "_per_call",
+    "annual_function": "calculate",
+    "source_resolution": "docs/impact.md links impact_v6.py and fixtures/impact-v6.json. impact.py is archival v5 small-map sensitivity; its measured lift estimates are not inputs to this projection."
+  },
+  "pilot": {
+    "low": {
+      "inputs": {
+        "primary_moves_per_call": {
+          "value": 100,
+          "n": null,
+          "interval": null,
+          "label": "primary moves per call",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/primary_moves_per_call/value"
+          },
+          "unit": "physical lifts/call",
+          "status": "assumption",
+          "note": "Hypothetical primary productive load lifts, one container per lift; no transfer of old section-level results."
+        },
+        "extra_rehandles_per_primary_move": {
+          "value": 0.02,
+          "n": null,
+          "interval": null,
+          "label": "extra rehandles per primary move",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/extra_rehandles_per_primary_move/value"
+          },
+          "unit": "extra crane lifts/primary lift",
+          "status": "assumption",
+          "note": "Assumed attributable extra lifts, not a measured local rate or share of all moves."
+        },
+        "rehandle_reduction": {
+          "value": 0.1,
+          "n": null,
+          "interval": null,
+          "label": "rehandle reduction",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/rehandle_reduction/value"
+          },
+          "unit": "fraction of attributable extra lifts",
+          "status": "assumption",
+          "note": "Hypothetical effect, independent of legacy selected-lift results; may fail to transfer."
+        },
+        "move_charge_usd": {
+          "value": 20.86,
+          "n": null,
+          "interval": null,
+          "label": "move charge usd",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/move_charge_usd/value"
+          },
+          "unit": "USD/extra crane lift",
+          "status": "computed",
+          "note": "41.72 USD for a 20-foot via-quay restow / two lifts; historical 2025 Indian retail proxy, not marginal resource cost or a local quote."
+        },
+        "planner_usd_per_hour": {
+          "value": 20,
+          "n": null,
+          "interval": null,
+          "label": "planner usd per hour",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/planner_usd_per_hour/value"
+          },
+          "unit": "USD/planner hour",
+          "status": "assumption",
+          "note": "Assumed carrier-side loaded hourly labor opportunity value, outside terminal tariff labor; not a sourced local wage."
+        },
+        "initial_baseline_hours": {
+          "value": 2,
+          "n": null,
+          "interval": null,
+          "label": "initial baseline hours",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/initial_baseline_hours/value"
+          },
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "note": "Assumed initial document-to-checked-plan work, excluding later changes and exceptional rework."
+        },
+        "initial_assisted_hours": {
+          "value": 1,
+          "n": null,
+          "interval": null,
+          "label": "initial assisted hours",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/initial_assisted_hours/value"
+          },
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "note": "Assumed assisted initial work including reading, checking, confirmation and review."
+        },
+        "instruction_events_per_call": {
+          "value": 1,
+          "n": null,
+          "interval": null,
+          "label": "instruction events per call",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/instruction_events_per_call/value"
+          },
+          "unit": "subsequent instruction changes/call",
+          "status": "assumption",
+          "note": "Assumed changes after initial plan; excluded from initial and rework time."
+        },
+        "instruction_baseline_minutes": {
+          "value": 30,
+          "n": null,
+          "interval": null,
+          "label": "instruction baseline minutes",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/instruction_baseline_minutes/value"
+          },
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "note": "Assumed baseline attention for a subsequent instruction change."
+        },
+        "instruction_assisted_minutes": {
+          "value": 10,
+          "n": null,
+          "interval": null,
+          "label": "instruction assisted minutes",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/instruction_assisted_minutes/value"
+          },
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "note": "Assumed assisted attention including confirmation and review; not measured machine latency."
+        },
+        "rework_events_avoided_per_call": {
+          "value": 0.1,
+          "n": null,
+          "interval": null,
+          "label": "rework events avoided per call",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/rework_events_avoided_per_call/value"
+          },
+          "unit": "exceptional rework events/call",
+          "status": "assumption",
+          "note": "Assumed net events avoided, excluded from both initial planning and instruction changes."
+        },
+        "rework_minutes_per_event": {
+          "value": 30,
+          "n": null,
+          "interval": null,
+          "label": "rework minutes per event",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/rework_minutes_per_event/value"
+          },
+          "unit": "planner minutes/rework event",
+          "status": "assumption",
+          "note": "Assumed additional correction work; no safety-loss or accident value."
+        },
+        "annual_calls": {
+          "value": 52,
+          "n": null,
+          "interval": null,
+          "label": "annual calls",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/low/annual_calls/value"
+          },
+          "unit": "eligible adopting calls/year",
+          "status": "assumption",
+          "note": "Assumed deployment portfolio; not an estimate of feeder calls or Laem Chabang adoption."
+        }
+      },
+      "outputs": {
+        "per_call": {
+          "baseline_extra_rehandles": {
+            "value": 2.0,
+            "n": null,
+            "interval": null,
+            "label": "baseline extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/per_call/baseline_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "avoided_extra_rehandles": {
+            "value": 0.2,
+            "n": null,
+            "interval": null,
+            "label": "avoided extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/per_call/avoided_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "initial_planner_hours_saved": {
+            "value": 1,
+            "n": null,
+            "interval": null,
+            "label": "initial planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/per_call/initial_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "instruction_planner_hours_saved": {
+            "value": 0.3333333333333333,
+            "n": null,
+            "interval": null,
+            "label": "instruction planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/per_call/instruction_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "rework_planner_hours_saved": {
+            "value": 0.05,
+            "n": null,
+            "interval": null,
+            "label": "rework planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/per_call/rework_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "total_planner_hours_saved": {
+            "value": 1.3833333333333333,
+            "n": null,
+            "interval": null,
+            "label": "total planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/per_call/total_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "handling_charge_equivalent_usd": {
+            "value": 4.172,
+            "n": null,
+            "interval": null,
+            "label": "handling charge equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/per_call/handling_charge_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "planner_labor_equivalent_usd": {
+            "value": 27.666666666666664,
+            "n": null,
+            "interval": null,
+            "label": "planner labor equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/per_call/planner_labor_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "total_equivalent_usd": {
+            "value": 31.838666666666665,
+            "n": null,
+            "interval": null,
+            "label": "total equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/per_call/total_equivalent_usd"
+            },
+            "unit": "USD"
+          }
+        },
+        "annual": {
+          "baseline_extra_rehandles": {
+            "value": 104.0,
+            "n": null,
+            "interval": null,
+            "label": "baseline extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/annual/baseline_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "avoided_extra_rehandles": {
+            "value": 10.4,
+            "n": null,
+            "interval": null,
+            "label": "avoided extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/annual/avoided_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "initial_planner_hours_saved": {
+            "value": 52,
+            "n": null,
+            "interval": null,
+            "label": "initial planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/annual/initial_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "instruction_planner_hours_saved": {
+            "value": 17.333333333333332,
+            "n": null,
+            "interval": null,
+            "label": "instruction planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/annual/instruction_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "rework_planner_hours_saved": {
+            "value": 2.6,
+            "n": null,
+            "interval": null,
+            "label": "rework planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/annual/rework_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "total_planner_hours_saved": {
+            "value": 71.93333333333334,
+            "n": null,
+            "interval": null,
+            "label": "total planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/annual/total_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "handling_charge_equivalent_usd": {
+            "value": 216.944,
+            "n": null,
+            "interval": null,
+            "label": "handling charge equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/annual/handling_charge_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "planner_labor_equivalent_usd": {
+            "value": 1438.6666666666665,
+            "n": null,
+            "interval": null,
+            "label": "planner labor equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/annual/planner_labor_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "total_equivalent_usd": {
+            "value": 1655.6106666666665,
+            "n": null,
+            "interval": null,
+            "label": "total equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/low/annual/total_equivalent_usd"
+            },
+            "unit": "USD"
+          }
+        }
+      }
+    },
+    "mid": {
+      "inputs": {
+        "primary_moves_per_call": {
+          "value": 150,
+          "n": null,
+          "interval": null,
+          "label": "primary moves per call",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/primary_moves_per_call/value"
+          },
+          "unit": "physical lifts/call",
+          "status": "assumption",
+          "note": "Hypothetical primary productive load lifts, one container per lift; no transfer of old section-level results."
+        },
+        "extra_rehandles_per_primary_move": {
+          "value": 0.05,
+          "n": null,
+          "interval": null,
+          "label": "extra rehandles per primary move",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/extra_rehandles_per_primary_move/value"
+          },
+          "unit": "extra crane lifts/primary lift",
+          "status": "assumption",
+          "note": "Assumed attributable extra lifts, not a measured local rate or share of all moves."
+        },
+        "rehandle_reduction": {
+          "value": 0.2,
+          "n": null,
+          "interval": null,
+          "label": "rehandle reduction",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/rehandle_reduction/value"
+          },
+          "unit": "fraction of attributable extra lifts",
+          "status": "assumption",
+          "note": "Hypothetical effect, independent of legacy selected-lift results; may fail to transfer."
+        },
+        "move_charge_usd": {
+          "value": 20.86,
+          "n": null,
+          "interval": null,
+          "label": "move charge usd",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/move_charge_usd/value"
+          },
+          "unit": "USD/extra crane lift",
+          "status": "computed",
+          "note": "41.72 USD for a 20-foot via-quay restow / two lifts; historical 2025 Indian retail proxy, not marginal resource cost or a local quote."
+        },
+        "planner_usd_per_hour": {
+          "value": 30,
+          "n": null,
+          "interval": null,
+          "label": "planner usd per hour",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/planner_usd_per_hour/value"
+          },
+          "unit": "USD/planner hour",
+          "status": "assumption",
+          "note": "Assumed carrier-side loaded hourly labor opportunity value, outside terminal tariff labor; not a sourced local wage."
+        },
+        "initial_baseline_hours": {
+          "value": 2.5,
+          "n": null,
+          "interval": null,
+          "label": "initial baseline hours",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/initial_baseline_hours/value"
+          },
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "note": "Assumed initial document-to-checked-plan work, excluding later changes and exceptional rework."
+        },
+        "initial_assisted_hours": {
+          "value": 0.75,
+          "n": null,
+          "interval": null,
+          "label": "initial assisted hours",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/initial_assisted_hours/value"
+          },
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "note": "Assumed assisted initial work including reading, checking, confirmation and review."
+        },
+        "instruction_events_per_call": {
+          "value": 2,
+          "n": null,
+          "interval": null,
+          "label": "instruction events per call",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/instruction_events_per_call/value"
+          },
+          "unit": "subsequent instruction changes/call",
+          "status": "assumption",
+          "note": "Assumed changes after initial plan; excluded from initial and rework time."
+        },
+        "instruction_baseline_minutes": {
+          "value": 45,
+          "n": null,
+          "interval": null,
+          "label": "instruction baseline minutes",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/instruction_baseline_minutes/value"
+          },
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "note": "Assumed baseline attention for a subsequent instruction change."
+        },
+        "instruction_assisted_minutes": {
+          "value": 5,
+          "n": null,
+          "interval": null,
+          "label": "instruction assisted minutes",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/instruction_assisted_minutes/value"
+          },
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "note": "Assumed assisted attention including confirmation and review; not measured machine latency."
+        },
+        "rework_events_avoided_per_call": {
+          "value": 0.25,
+          "n": null,
+          "interval": null,
+          "label": "rework events avoided per call",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/rework_events_avoided_per_call/value"
+          },
+          "unit": "exceptional rework events/call",
+          "status": "assumption",
+          "note": "Assumed net events avoided, excluded from both initial planning and instruction changes."
+        },
+        "rework_minutes_per_event": {
+          "value": 60,
+          "n": null,
+          "interval": null,
+          "label": "rework minutes per event",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/rework_minutes_per_event/value"
+          },
+          "unit": "planner minutes/rework event",
+          "status": "assumption",
+          "note": "Assumed additional correction work; no safety-loss or accident value."
+        },
+        "annual_calls": {
+          "value": 260,
+          "n": null,
+          "interval": null,
+          "label": "annual calls",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/mid/annual_calls/value"
+          },
+          "unit": "eligible adopting calls/year",
+          "status": "assumption",
+          "note": "Assumed deployment portfolio; not an estimate of feeder calls or Laem Chabang adoption."
+        }
+      },
+      "outputs": {
+        "per_call": {
+          "baseline_extra_rehandles": {
+            "value": 7.5,
+            "n": null,
+            "interval": null,
+            "label": "baseline extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/per_call/baseline_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "avoided_extra_rehandles": {
+            "value": 1.5,
+            "n": null,
+            "interval": null,
+            "label": "avoided extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/per_call/avoided_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "initial_planner_hours_saved": {
+            "value": 1.75,
+            "n": null,
+            "interval": null,
+            "label": "initial planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/per_call/initial_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "instruction_planner_hours_saved": {
+            "value": 1.3333333333333333,
+            "n": null,
+            "interval": null,
+            "label": "instruction planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/per_call/instruction_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "rework_planner_hours_saved": {
+            "value": 0.25,
+            "n": null,
+            "interval": null,
+            "label": "rework planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/per_call/rework_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "total_planner_hours_saved": {
+            "value": 3.333333333333333,
+            "n": null,
+            "interval": null,
+            "label": "total planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/per_call/total_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "handling_charge_equivalent_usd": {
+            "value": 31.29,
+            "n": null,
+            "interval": null,
+            "label": "handling charge equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/per_call/handling_charge_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "planner_labor_equivalent_usd": {
+            "value": 99.99999999999999,
+            "n": null,
+            "interval": null,
+            "label": "planner labor equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/per_call/planner_labor_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "total_equivalent_usd": {
+            "value": 131.29,
+            "n": null,
+            "interval": null,
+            "label": "total equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/per_call/total_equivalent_usd"
+            },
+            "unit": "USD"
+          }
+        },
+        "annual": {
+          "baseline_extra_rehandles": {
+            "value": 1950.0,
+            "n": null,
+            "interval": null,
+            "label": "baseline extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/annual/baseline_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "avoided_extra_rehandles": {
+            "value": 390.0,
+            "n": null,
+            "interval": null,
+            "label": "avoided extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/annual/avoided_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "initial_planner_hours_saved": {
+            "value": 455.0,
+            "n": null,
+            "interval": null,
+            "label": "initial planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/annual/initial_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "instruction_planner_hours_saved": {
+            "value": 346.66666666666663,
+            "n": null,
+            "interval": null,
+            "label": "instruction planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/annual/instruction_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "rework_planner_hours_saved": {
+            "value": 65.0,
+            "n": null,
+            "interval": null,
+            "label": "rework planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/annual/rework_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "total_planner_hours_saved": {
+            "value": 866.6666666666666,
+            "n": null,
+            "interval": null,
+            "label": "total planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/annual/total_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "handling_charge_equivalent_usd": {
+            "value": 8135.4,
+            "n": null,
+            "interval": null,
+            "label": "handling charge equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/annual/handling_charge_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "planner_labor_equivalent_usd": {
+            "value": 25999.999999999996,
+            "n": null,
+            "interval": null,
+            "label": "planner labor equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/annual/planner_labor_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "total_equivalent_usd": {
+            "value": 34135.4,
+            "n": null,
+            "interval": null,
+            "label": "total equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/mid/annual/total_equivalent_usd"
+            },
+            "unit": "USD"
+          }
+        }
+      }
+    },
+    "high": {
+      "inputs": {
+        "primary_moves_per_call": {
+          "value": 195,
+          "n": null,
+          "interval": null,
+          "label": "primary moves per call",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/primary_moves_per_call/value"
+          },
+          "unit": "physical lifts/call",
+          "status": "assumption",
+          "note": "Hypothetical primary productive load lifts, one container per lift; no transfer of old section-level results."
+        },
+        "extra_rehandles_per_primary_move": {
+          "value": 0.1,
+          "n": null,
+          "interval": null,
+          "label": "extra rehandles per primary move",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/extra_rehandles_per_primary_move/value"
+          },
+          "unit": "extra crane lifts/primary lift",
+          "status": "assumption",
+          "note": "Assumed attributable extra lifts, not a measured local rate or share of all moves."
+        },
+        "rehandle_reduction": {
+          "value": 0.3,
+          "n": null,
+          "interval": null,
+          "label": "rehandle reduction",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/rehandle_reduction/value"
+          },
+          "unit": "fraction of attributable extra lifts",
+          "status": "assumption",
+          "note": "Hypothetical effect, independent of legacy selected-lift results; may fail to transfer."
+        },
+        "move_charge_usd": {
+          "value": 20.86,
+          "n": null,
+          "interval": null,
+          "label": "move charge usd",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/move_charge_usd/value"
+          },
+          "unit": "USD/extra crane lift",
+          "status": "computed",
+          "note": "41.72 USD for a 20-foot via-quay restow / two lifts; historical 2025 Indian retail proxy, not marginal resource cost or a local quote."
+        },
+        "planner_usd_per_hour": {
+          "value": 40,
+          "n": null,
+          "interval": null,
+          "label": "planner usd per hour",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/planner_usd_per_hour/value"
+          },
+          "unit": "USD/planner hour",
+          "status": "assumption",
+          "note": "Assumed carrier-side loaded hourly labor opportunity value, outside terminal tariff labor; not a sourced local wage."
+        },
+        "initial_baseline_hours": {
+          "value": 3,
+          "n": null,
+          "interval": null,
+          "label": "initial baseline hours",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/initial_baseline_hours/value"
+          },
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "note": "Assumed initial document-to-checked-plan work, excluding later changes and exceptional rework."
+        },
+        "initial_assisted_hours": {
+          "value": 0.5,
+          "n": null,
+          "interval": null,
+          "label": "initial assisted hours",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/initial_assisted_hours/value"
+          },
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "note": "Assumed assisted initial work including reading, checking, confirmation and review."
+        },
+        "instruction_events_per_call": {
+          "value": 3,
+          "n": null,
+          "interval": null,
+          "label": "instruction events per call",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/instruction_events_per_call/value"
+          },
+          "unit": "subsequent instruction changes/call",
+          "status": "assumption",
+          "note": "Assumed changes after initial plan; excluded from initial and rework time."
+        },
+        "instruction_baseline_minutes": {
+          "value": 60,
+          "n": null,
+          "interval": null,
+          "label": "instruction baseline minutes",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/instruction_baseline_minutes/value"
+          },
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "note": "Assumed baseline attention for a subsequent instruction change."
+        },
+        "instruction_assisted_minutes": {
+          "value": 3,
+          "n": null,
+          "interval": null,
+          "label": "instruction assisted minutes",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/instruction_assisted_minutes/value"
+          },
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "note": "Assumed assisted attention including confirmation and review; not measured machine latency."
+        },
+        "rework_events_avoided_per_call": {
+          "value": 0.5,
+          "n": null,
+          "interval": null,
+          "label": "rework events avoided per call",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/rework_events_avoided_per_call/value"
+          },
+          "unit": "exceptional rework events/call",
+          "status": "assumption",
+          "note": "Assumed net events avoided, excluded from both initial planning and instruction changes."
+        },
+        "rework_minutes_per_event": {
+          "value": 90,
+          "n": null,
+          "interval": null,
+          "label": "rework minutes per event",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/rework_minutes_per_event/value"
+          },
+          "unit": "planner minutes/rework event",
+          "status": "assumption",
+          "note": "Assumed additional correction work; no safety-loss or accident value."
+        },
+        "annual_calls": {
+          "value": 1040,
+          "n": null,
+          "interval": null,
+          "label": "annual calls",
+          "source": {
+            "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+            "field": "/inputs/pilot/high/annual_calls/value"
+          },
+          "unit": "eligible adopting calls/year",
+          "status": "assumption",
+          "note": "Assumed deployment portfolio; not an estimate of feeder calls or Laem Chabang adoption."
+        }
+      },
+      "outputs": {
+        "per_call": {
+          "baseline_extra_rehandles": {
+            "value": 19.5,
+            "n": null,
+            "interval": null,
+            "label": "baseline extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/per_call/baseline_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "avoided_extra_rehandles": {
+            "value": 5.85,
+            "n": null,
+            "interval": null,
+            "label": "avoided extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/per_call/avoided_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "initial_planner_hours_saved": {
+            "value": 2.5,
+            "n": null,
+            "interval": null,
+            "label": "initial planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/per_call/initial_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "instruction_planner_hours_saved": {
+            "value": 2.85,
+            "n": null,
+            "interval": null,
+            "label": "instruction planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/per_call/instruction_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "rework_planner_hours_saved": {
+            "value": 0.75,
+            "n": null,
+            "interval": null,
+            "label": "rework planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/per_call/rework_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "total_planner_hours_saved": {
+            "value": 6.1,
+            "n": null,
+            "interval": null,
+            "label": "total planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/per_call/total_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "handling_charge_equivalent_usd": {
+            "value": 122.03099999999999,
+            "n": null,
+            "interval": null,
+            "label": "handling charge equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/per_call/handling_charge_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "planner_labor_equivalent_usd": {
+            "value": 244.0,
+            "n": null,
+            "interval": null,
+            "label": "planner labor equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/per_call/planner_labor_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "total_equivalent_usd": {
+            "value": 366.031,
+            "n": null,
+            "interval": null,
+            "label": "total equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/per_call/total_equivalent_usd"
+            },
+            "unit": "USD"
+          }
+        },
+        "annual": {
+          "baseline_extra_rehandles": {
+            "value": 20280.0,
+            "n": null,
+            "interval": null,
+            "label": "baseline extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/annual/baseline_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "avoided_extra_rehandles": {
+            "value": 6084.0,
+            "n": null,
+            "interval": null,
+            "label": "avoided extra rehandles",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/annual/avoided_extra_rehandles"
+            },
+            "unit": "lifts"
+          },
+          "initial_planner_hours_saved": {
+            "value": 2600.0,
+            "n": null,
+            "interval": null,
+            "label": "initial planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/annual/initial_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "instruction_planner_hours_saved": {
+            "value": 2964.0,
+            "n": null,
+            "interval": null,
+            "label": "instruction planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/annual/instruction_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "rework_planner_hours_saved": {
+            "value": 780.0,
+            "n": null,
+            "interval": null,
+            "label": "rework planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/annual/rework_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "total_planner_hours_saved": {
+            "value": 6344.0,
+            "n": null,
+            "interval": null,
+            "label": "total planner hours saved",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/annual/total_planner_hours_saved"
+            },
+            "unit": "hours"
+          },
+          "handling_charge_equivalent_usd": {
+            "value": 126912.23999999999,
+            "n": null,
+            "interval": null,
+            "label": "handling charge equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/annual/handling_charge_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "planner_labor_equivalent_usd": {
+            "value": 253760.0,
+            "n": null,
+            "interval": null,
+            "label": "planner labor equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/annual/planner_labor_equivalent_usd"
+            },
+            "unit": "USD"
+          },
+          "total_equivalent_usd": {
+            "value": 380672.24,
+            "n": null,
+            "interval": null,
+            "label": "total equivalent usd",
+            "source": {
+              "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+              "field": "/pilot/high/annual/total_equivalent_usd"
+            },
+            "unit": "USD"
+          }
+        }
+      }
+    }
+  },
+  "context": {
+    "pilot_min_capacity_teu": {
+      "value": 500,
+      "n": null,
+      "interval": null,
+      "label": "pilot min capacity teu",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/inputs/context/pilot_min_capacity_teu/value"
+      },
+      "unit": "TEU",
+      "status": "design",
+      "note": "v6 design envelope, not a measured result."
+    },
+    "pilot_max_capacity_teu": {
+      "value": 800,
+      "n": null,
+      "interval": null,
+      "label": "pilot max capacity teu",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/inputs/context/pilot_max_capacity_teu/value"
+      },
+      "unit": "TEU",
+      "status": "design",
+      "note": "v6 design envelope, not a measured result."
+    },
+    "pilot_max_boxes": {
+      "value": 195,
+      "n": null,
+      "interval": null,
+      "label": "pilot max boxes",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/inputs/context/pilot_max_boxes/value"
+      },
+      "unit": "physical boxes",
+      "status": "design",
+      "note": "v6 design envelope, not TEU capacity."
+    },
+    "pilot_max_fill": {
+      "value": 0.7,
+      "n": null,
+      "interval": null,
+      "label": "pilot max fill",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/inputs/context/pilot_max_fill/value"
+      },
+      "unit": "fraction",
+      "status": "design",
+      "note": "v6 design envelope; empty arrival, one loading call."
+    },
+    "terminal_revenue_low_usd": {
+      "value": 62670000000,
+      "n": null,
+      "interval": null,
+      "label": "terminal revenue low usd",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/inputs/context/terminal_revenue_low_usd/value"
+      },
+      "unit": "USD/year",
+      "status": "commercial_estimate",
+      "note": "360iResearch 2024 container-terminal-operator market estimate, verified on GII's full reseller listing dated28Aug2025; not stated on the current publisher page. Commercial estimate, not audited global receipts."
+    },
+    "terminal_revenue_mid_usd": {
+      "value": 75500000000,
+      "n": null,
+      "interval": null,
+      "label": "terminal revenue mid usd",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/inputs/context/terminal_revenue_mid_usd/value"
+      },
+      "unit": "USD/year",
+      "status": "commercial_estimate",
+      "note": "TechSci 2024 container-terminal operations estimate, directly verified on its June2025 release. Scope includes storage/intermodal services and cargo categories broader than containers; not audited global receipts or an interpolated midpoint."
+    },
+    "terminal_revenue_high_usd": {
+      "value": 75500000000,
+      "n": null,
+      "interval": null,
+      "label": "terminal revenue high usd",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/inputs/context/terminal_revenue_high_usd/value"
+      },
+      "unit": "USD/year",
+      "status": "commercial_estimate",
+      "note": "Upper verified benchmark repeats TechSci2024 estimate. Unverified IBISWorld figure excluded, not carried as an assumed upper bound. This is a commercial-estimate comparison range, not three independent market measurements."
+    }
+  },
+  "global": {
+    "exposure": {
+      "value": 90,
+      "n": null,
+      "interval": null,
+      "label": "Port-call cost exposure · projection",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/exposure/headline_billion_usd"
+      },
+      "unit": "USD billions/year"
+    },
+    "prize_mid": {
+      "value": 7002036279.125,
+      "n": null,
+      "interval": null,
+      "label": "Mid-case global pool · projection",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/prize/mid/total_gross_prize_usd"
+      },
+      "unit": "USD/year"
+    },
+    "prize_low": {
+      "value": 1220305668.9594662,
+      "n": null,
+      "interval": null,
+      "label": "Low-case global pool · projection",
+      "source": {
+        "path": "experiments/impact-estimate/fixtures/impact-v6.json",
+        "field": "/prize/low/total_gross_prize_usd"
+      },
+      "unit": "USD/year"
+    },
+    "terminal_revenue_check": "$63–76 billion a year",
+    "input_summary": "inputs: 920M TEU, 520k calls, assumed 10 % restows at $75 a lift, 5 % less berth time"
+  },
+  "what_must_be_true": [
+    "Full-ship, multi-port planning works; these rates hold worldwide; the extra work is avoidable; operational use needs terms that permit it: today's Muse Glimmer usage policy prohibits use related to operating transportation technologies where harm is possible; a deployment would need Meta's permission or a base model whose terms allow it, plus class approval; none of it has been measured.",
+    "Earlier departure must free usable vessel time.",
+    "Box mix, one container per lift, fleet-weighted time, rates, wages and adoption need validation.",
+    "Costs of compute, integration and support must be deducted in a business case; the engine is not competitive at large scale yet."
+  ],
+  "who_for": "Potential leads: feeder operators and planning teams at Laem Chabang and Bangkok; no partnership or outreach implied.",
+  "limits": "This is a gross opportunity scenario, not an audited global loss, net savings, software revenue or a result achieved. No operational saving is measured.",
+  "text_sources": {
+    "what_must_be_true": {
+      "path": "docs/impact.md",
+      "field": "regex:## What must be true\\s*\\*\\*([^*]+)\\*\\*",
+      "clean": true
+    },
+    "who_for": {
+      "path": "docs/impact.md",
+      "field": "regex:(Potential leads: feeder operators and planning teams at Laem Chabang and Bangkok; no partnership or outreach implied\\.)",
+      "clean": true
+    },
+    "terminal_revenue_check": {
+      "path": "docs/impact.md",
+      "field": "regex:The verified terminal-revenue range is \\*\\*([^*]+)\\*\\*",
+      "clean": true
+    },
+    "input_summary": {
+      "path": "experiments/mvp/video/script-v6.md",
+      "field": "regex:fine print, at least 22 px, not monospace: \"(inputs: .*?) · what would have to be true:",
+      "clean": true
+    },
+    "extra_conditions": [
+      {
+        "path": "docs/impact.md",
+        "field": "regex:(Earlier departure must free usable vessel time\\.)",
+        "clean": true
+      },
+      {
+        "path": "docs/impact.md",
+        "field": "regex:(Box mix, one container per lift, fleet-weighted time, rates, wages and adoption need validation\\.)",
+        "clean": true
+      },
+      {
+        "path": "docs/impact.md",
+        "field": "regex:(Costs of compute, integration and support must be deducted in a business case; the engine is not competitive at large scale yet\\.)",
+        "clean": true
+      }
+    ],
+    "limits": {
+      "path": "docs/impact.md",
+      "field": "regex:(This is a gross opportunity scenario, not an audited global loss, net savings, software revenue or a result achieved\\.)",
+      "clean": true
+    },
+    "unmeasured": {
+      "path": "docs/impact.md",
+      "field": "regex:Today's eligible feeder-call count is unknown, (no operational saving is measured),",
+      "clean": true
+    }
+  }
+}

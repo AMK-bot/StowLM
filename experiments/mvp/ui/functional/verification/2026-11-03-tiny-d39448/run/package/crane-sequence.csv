@@ -1,0 +1,8 @@
+# Half-ship section: 3 boxes planned in 2 of 12 bays. Other bays hold 284 fixed synthetic background boxes (4,737 t). Stability and strength include them. No ship can sail on this plan alone. Synthetic ships and cargo, simulated port. Full checker passed; local demo receipt. Pipeline: not frozen yet. Checker coverage: 54 active, 8 inactive. | ESTIMATE ONLY: list_deg_est = degrees(atan(transverse_moment_kgm / (instantaneous_displacement_kg * departure_gm_m))); positive = port. Departure GM is held constant; arrival tank fills use native tank-table centres. Includes lightship, fixed synthetic background, cargo and cover movements. No cargo-work hydrostatic or free-surface calculation; no heel-ballast mitigation applied.
+lift_order,source_move_index,box,from,to,kind,crane,mass_t,pod,list_deg_est,list_over_1_deg,instruction
+2,2,HC-002-P,HC-002-P,quay,hatch_cover_off,QC-1,23.437500,,-0.274777274,NO,
+3,3,QZXU0000035,B012-005-01-01,0030202,load,QC-1,20.899768,SGSIN,-0.192668801,NO,
+4,4,QZXU0000009,B012-013-01-01,0030204,load,QC-1,2.350000,SGSIN,-0.183459433,NO,
+5,5,HC-002-P,quay,HC-002-P,hatch_cover_on,QC-1,23.437500,,0.090404372,NO,
+6,6,QZXU0000020,B012-009-01-01,0030282,load,QC-1,18.165203,SGSIN,0.160724461,NO,
+,,,,,ballast_condition,CHIEF-OFFICER,949.544881,,,,Ballast unchanged from arrival: 950 t (rounded; exact tank inventory in ballast-plan.csv).

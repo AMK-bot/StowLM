@@ -1,0 +1,24 @@
+{
+  "schema_version": "stowlm.copilot-hero-scenarios-freeze/1",
+  "created_utc": "2026-11-02T06:10:14.875221+00:00",
+  "scenarios_file": "experiments/mvp/pipeline/copilot/fixtures/hero-postfix-scenarios.json",
+  "scenarios_sha256": "17ea160fa7a070d7db4584b5ef06aa2cba9e7a9e6e85b939839e8a3c1a5160cb",
+  "scenario_count": 8,
+  "label": "Frozen before any model run on these newly authored development variants. Separate post-infrastructure-fix cohort; not a blinded new-domain benchmark or a retry of original fresh cases.",
+  "construction_baseline_file": "experiments/mvp/pipeline/copilot/fixtures/hero-scenarios.json",
+  "construction_baseline_sha256": "35c994769bd7d7cc67c8292276c2eb809f88f0c218f89c3cdab4f72d774ace14",
+  "scorer_file": "experiments/mvp/pipeline/copilot/hero_goal_scores.py",
+  "scorer_sha256": "8407057580cb9f3b94e37276f3b0c3d0e1f794d3fb021cb662b260b730d265c5",
+  "goal_definitions_sha256": "bb058eb30e7749a253c877d6b8b8a8b9fd06134743200576aa07c1b04e77446e",
+  "source_files": {
+    "experiments/mvp/pipeline/lattice/hero.json": "ff3ffdbb08ddf88595b7be53294bd1c2c41a9140ddfea2207b6116dacde9d6d4",
+    "experiments/mvp/strategy/fillsweep/maps/train/medium/feeder_500/f60-low/seed-192200002.json": "2d89a0b873027fa161267de22d3d397e00e2f773af5b574b25dfb88ce2cbd619",
+    "experiments/mvp/pipeline/lattice/fixtures/hero-base.json": "0fd3cf66a5454f3d50935cc79ee9769f1ef16ba0579e4e596747bfb1b48c5233",
+    "experiments/mvp/pipeline/lattice/store/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json": "f1f20eedac604f28c7db46f05201cfa2497e3d4e06c2f76d13acb35f68c570c4",
+    "experiments/mvp/pipeline/lattice/screening/current-v3/cabff3d68d56e64b.repaired.json": "9685e405c2dff6e29ea7d4d1cb3eb359ef8da875b1a072a900310ae0a012e48b",
+    "experiments/mvp/pipeline/lattice/fixtures/hero-instruction.json": "e806a0df3b2ff41aba81e1b587c13f1ff77a2b2f4a4f38e2ff7c4113e9515c1b"
+  },
+  "source_scope": "Only the unsealed primary lattice hero and known original input definitions were used. No hero-verified outputs or fresh-results/per-case outputs were read for this authoring task.",
+  "execution_policy": "Run once only after a separate runtime/import-source and infrastructure freeze. Preserve all original failed/partial attempts and their costs. Report this cohort separately; an unavailable native prerequisite remains unavailable, never a success.",
+  "scorer_status": "Existing hero_goal_scores.py and semantic success criteria unchanged. This manifest freezes new inputs, not a new model policy."
+}

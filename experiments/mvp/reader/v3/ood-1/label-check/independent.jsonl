@@ -1,0 +1,100 @@
+{"id": "ood1-001", "answer": {"type": "close_bay", "bay": 9}, "confidence": "high", "note": ""}
+{"id": "ood1-002", "answer": {"type": "close_bay", "bay": 13}, "confidence": "high", "note": ""}
+{"id": "ood1-003", "answer": {"type": "close_bay", "bay": 9}, "confidence": "high", "note": ""}
+{"id": "ood1-004", "answer": {"type": "close_bay", "bay": 9}, "confidence": "high", "note": ""}
+{"id": "ood1-005", "answer": {"type": "close_bay", "bay": 31}, "confidence": "high", "note": ""}
+{"id": "ood1-006", "answer": {"type": "close_bay", "bay": 17}, "confidence": "high", "note": ""}
+{"id": "ood1-007", "answer": {"type": "close_bay", "bay": 21}, "confidence": "high", "note": ""}
+{"id": "ood1-008", "answer": {"type": "close_bay", "bay": 5}, "confidence": "high", "note": ""}
+{"id": "ood1-009", "answer": {"type": "close_bay", "bay": 11}, "confidence": "high", "note": ""}
+{"id": "ood1-010", "answer": {"type": "close_bay", "bay": 22}, "confidence": "high", "note": ""}
+{"id": "ood1-011", "answer": {"type": "close_bay", "bay": 15}, "confidence": "high", "note": ""}
+{"id": "ood1-012", "answer": {"type": "close_bay", "bay": 27}, "confidence": "high", "note": ""}
+{"id": "ood1-013", "answer": {"type": "close_bay", "bay": 13}, "confidence": "high", "note": ""}
+{"id": "ood1-014", "answer": {"type": "close_bay", "bay": 3}, "confidence": "high", "note": ""}
+{"id": "ood1-015", "answer": {"type": "close_bay", "bay": 6}, "confidence": "high", "note": ""}
+{"id": "ood1-016", "answer": {"type": "close_bay", "bay": 1}, "confidence": "high", "note": ""}
+{"id": "ood1-017", "answer": {"type": "close_bay", "bay": 26}, "confidence": "high", "note": ""}
+{"id": "ood1-018", "answer": {"type": "close_bay", "bay": 35}, "confidence": "high", "note": ""}
+{"id": "ood1-019", "answer": {"type": "close_bay", "bay": 10}, "confidence": "high", "note": ""}
+{"id": "ood1-020", "answer": {"type": "max_tiers", "bay": 9, "zone": "deck", "max_tiers": 2}, "confidence": "high", "note": ""}
+{"id": "ood1-021", "answer": {"type": "max_tiers", "bay": 13, "zone": "hold", "max_tiers": 1}, "confidence": "high", "note": ""}
+{"id": "ood1-022", "answer": {"type": "max_tiers", "bay": 5, "zone": "deck", "max_tiers": 3}, "confidence": "high", "note": ""}
+{"id": "ood1-023", "answer": {"type": "max_tiers", "bay": null, "zone": "hold", "max_tiers": 3}, "confidence": "high", "note": ""}
+{"id": "ood1-024", "answer": {"type": "max_tiers", "bay": null, "zone": "deck", "max_tiers": 4}, "confidence": "high", "note": ""}
+{"id": "ood1-025", "answer": {"type": "max_tiers", "bay": 21, "zone": "hold", "max_tiers": 1}, "confidence": "high", "note": ""}
+{"id": "ood1-026", "answer": {"type": "max_tiers", "bay": 17, "zone": "deck", "max_tiers": 2}, "confidence": "high", "note": ""}
+{"id": "ood1-027", "answer": {"type": "max_tiers", "bay": 10, "zone": "deck", "max_tiers": 0}, "confidence": "high", "note": ""}
+{"id": "ood1-028", "answer": {"type": "max_tiers", "bay": 9, "zone": "hold", "max_tiers": 0}, "confidence": "low", "note": "'nothing below deck' in bay 9: read as hold cap 0 (deck still usable), not close_bay"}
+{"id": "ood1-029", "answer": {"type": "max_tiers", "bay": 25, "zone": "hold", "max_tiers": 2}, "confidence": "high", "note": ""}
+{"id": "ood1-030", "answer": {"type": "max_tiers", "bay": 29, "zone": "deck", "max_tiers": 3}, "confidence": "high", "note": ""}
+{"id": "ood1-031", "answer": {"type": "max_tiers", "bay": 11, "zone": "deck", "max_tiers": 4}, "confidence": "high", "note": ""}
+{"id": "ood1-032", "answer": {"type": "max_tiers", "bay": null, "zone": "deck", "max_tiers": 3}, "confidence": "high", "note": ""}
+{"id": "ood1-033", "answer": {"type": "max_tiers", "bay": 15, "zone": "deck", "max_tiers": 2}, "confidence": "high", "note": ""}
+{"id": "ood1-034", "answer": {"type": "max_tiers", "bay": null, "zone": "hold", "max_tiers": 2}, "confidence": "high", "note": ""}
+{"id": "ood1-035", "answer": {"type": "max_tiers", "bay": 7, "zone": "deck", "max_tiers": 1}, "confidence": "high", "note": ""}
+{"id": "ood1-036", "answer": {"type": "max_tiers", "bay": 33, "zone": "hold", "max_tiers": 2}, "confidence": "high", "note": ""}
+{"id": "ood1-037", "answer": {"type": "max_tiers", "bay": 14, "zone": "deck", "max_tiers": 3}, "confidence": "high", "note": ""}
+{"id": "ood1-038", "answer": {"type": "max_tiers", "bay": 1, "zone": "hold", "max_tiers": 2}, "confidence": "high", "note": ""}
+{"id": "ood1-039", "answer": {"type": "dg_keep_away", "imdg_class": "3", "min_bays": 2, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-040", "answer": {"type": "dg_keep_away", "imdg_class": "8", "min_bays": 3, "away_from": {"kind": "bay", "bay": 9}}, "confidence": "high", "note": ""}
+{"id": "ood1-041", "answer": {"type": "dg_keep_away", "imdg_class": "3", "min_bays": 1, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-042", "answer": {"type": "dg_keep_away", "imdg_class": "6.1", "min_bays": 2, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-043", "answer": {"type": "dg_keep_away", "imdg_class": "8", "min_bays": 1, "away_from": {"kind": "bay", "bay": 11}}, "confidence": "high", "note": ""}
+{"id": "ood1-044", "answer": {"type": "dg_keep_away", "imdg_class": "2.1", "min_bays": 4, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-045", "answer": {"type": "dg_keep_away", "imdg_class": "1", "min_bays": 5, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-046", "answer": {"type": "dg_keep_away", "imdg_class": "5.1", "min_bays": 2, "away_from": {"kind": "bay", "bay": 15}}, "confidence": "high", "note": ""}
+{"id": "ood1-047", "answer": {"type": "dg_keep_away", "imdg_class": "6.1", "min_bays": 3, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-048", "answer": {"type": "dg_keep_away", "imdg_class": "2.1", "min_bays": 2, "away_from": {"kind": "bay", "bay": 21}}, "confidence": "high", "note": ""}
+{"id": "ood1-049", "answer": {"type": "dg_keep_away", "imdg_class": "2.3", "min_bays": 1, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-050", "answer": {"type": "dg_keep_away", "imdg_class": "5.1", "min_bays": 2, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-051", "answer": {"type": "dg_keep_away", "imdg_class": "7", "min_bays": 3, "away_from": {"kind": "bay", "bay": 9}}, "confidence": "high", "note": ""}
+{"id": "ood1-052", "answer": {"type": "dg_keep_away", "imdg_class": "4.1", "min_bays": 1, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-053", "answer": {"type": "dg_keep_away", "imdg_class": "3", "min_bays": 2, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-054", "answer": {"type": "dg_keep_away", "imdg_class": "5.2", "min_bays": 2, "away_from": {"kind": "bay", "bay": 13}}, "confidence": "high", "note": ""}
+{"id": "ood1-055", "answer": {"type": "dg_keep_away", "imdg_class": "2.2", "min_bays": 1, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-056", "answer": {"type": "dg_keep_away", "imdg_class": "8", "min_bays": 2, "away_from": {"kind": "accommodation"}}, "confidence": "high", "note": ""}
+{"id": "ood1-057", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-058", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-059", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-060", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-061", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-062", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-063", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-064", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-065", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-066", "answer": {"type": "one_port_per_hatch"}, "confidence": "high", "note": ""}
+{"id": "ood1-067", "answer": "ambiguous", "confidence": "high", "note": ""}
+{"id": "ood1-068", "answer": "ambiguous", "confidence": "high", "note": "hedged ('probably best') plus bare 'flammables' and no distance"}
+{"id": "ood1-069", "answer": "ambiguous", "confidence": "high", "note": "no zone given -> ambiguous per contract"}
+{"id": "ood1-070", "answer": "ambiguous", "confidence": "high", "note": ""}
+{"id": "ood1-071", "answer": "ambiguous", "confidence": "high", "note": ""}
+{"id": "ood1-072", "answer": "ambiguous", "confidence": "high", "note": "bare 'toxic' -> ambiguous"}
+{"id": "ood1-073", "answer": "ambiguous", "confidence": "high", "note": ""}
+{"id": "ood1-074", "answer": "ambiguous", "confidence": "high", "note": "'well away' gives no bay count"}
+{"id": "ood1-075", "answer": "unsupported", "confidence": "high", "note": "bay 25 not on feeder_500"}
+{"id": "ood1-076", "answer": "unsupported", "confidence": "high", "note": ""}
+{"id": "ood1-077", "answer": "unsupported", "confidence": "high", "note": ""}
+{"id": "ood1-078", "answer": "unsupported", "confidence": "high", "note": "hold cap for bay 9 on feeder_500 is 3; 4 out of range"}
+{"id": "ood1-079", "answer": "unsupported", "confidence": "high", "note": ""}
+{"id": "ood1-080", "answer": "unsupported", "confidence": "high", "note": "deck-side only = half-cover scope"}
+{"id": "ood1-081", "answer": "unsupported", "confidence": "high", "note": ""}
+{"id": "ood1-082", "answer": "unsupported", "confidence": "high", "note": ""}
+{"id": "ood1-083", "answer": "unsupported", "confidence": "high", "note": "K=30 exceeds 1..20"}
+{"id": "ood1-084", "answer": "unsupported", "confidence": "high", "note": ""}
+{"id": "ood1-085", "answer": "unsupported", "confidence": "high", "note": ""}
+{"id": "ood1-086", "answer": "unsupported", "confidence": "high", "note": ""}
+{"id": "ood1-087", "answer": "loosening", "confidence": "high", "note": ""}
+{"id": "ood1-088", "answer": "loosening", "confidence": "high", "note": ""}
+{"id": "ood1-089", "answer": "loosening", "confidence": "high", "note": ""}
+{"id": "ood1-090", "answer": "loosening", "confidence": "high", "note": ""}
+{"id": "ood1-091", "answer": "loosening", "confidence": "high", "note": ""}
+{"id": "ood1-092", "answer": "loosening", "confidence": "high", "note": "close + loosening mixed -> loosening"}
+{"id": "ood1-093", "answer": "loosening", "confidence": "high", "note": ""}
+{"id": "ood1-094", "answer": "loosening", "confidence": "high", "note": "Thai: 'cancel the closure of bay 9' -> loosening"}
+{"id": "ood1-095", "answer": "not_an_instruction", "confidence": "high", "note": ""}
+{"id": "ood1-096", "answer": "not_an_instruction", "confidence": "high", "note": ""}
+{"id": "ood1-097", "answer": "not_an_instruction", "confidence": "high", "note": ""}
+{"id": "ood1-098", "answer": "not_an_instruction", "confidence": "high", "note": "informational question"}
+{"id": "ood1-099", "answer": "not_an_instruction", "confidence": "high", "note": ""}
+{"id": "ood1-100", "answer": "not_an_instruction", "confidence": "high", "note": ""}

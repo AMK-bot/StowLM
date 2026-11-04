@@ -1,0 +1,14 @@
+{
+  "eligible": true,
+  "errors": [],
+  "runner_source_sha256": "bdd6ba8f6da17b36b8321a333f40291968c5bd455546f34f977adf1f1c04b52b",
+  "trusted_runner_receipt_sha256": "690b3b367d21e248b7b74b35f8adfe05e2badcf2c99433849a7a23aa645c36b2",
+  "confirmation": {
+    "schema_version": "stowlm.binding-confirmation/1",
+    "source": "user-authorised batch regeneration, no planner present (demo fixture)",
+    "receipt_sha256": "21f10259708173ffe0b251c247d4921a18113dd4038e02cd3b8e9ca24bca6c0e",
+    "confirmation_sha256": "c113d407453cb564e4ef47a10a6f2ec307f745c299971f84fa1a4efd6b39e752"
+  },
+  "engine_version_required": "0.13.0",
+  "scope": "Application attestation of recorded run_packet stages; not independent human identity."
+}

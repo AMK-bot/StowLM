@@ -1,0 +1,591 @@
+{
+  "cases": [
+    {
+      "arms": {
+        "d72_off": {
+          "admission": {
+            "calls_not_started": 1,
+            "calls_started": 1,
+            "discharged_imports": 4,
+            "external_queue": 0,
+            "gate_admitted_exports": 16,
+            "missed_cutoffs": 0,
+            "queued_gate_events": 0,
+            "requested_exports": 16,
+            "requested_imports": 8,
+            "retained_import_exits": 0,
+            "unserved_discharges": 0,
+            "unserved_loads": 0
+          },
+          "congestion_mixing": {
+            "achieved_share": 0.0,
+            "achieved_share_definition": "mixed_boxes / eligible_boxes (zero when no eligible boxes); counters are distinct from repeated placement attempts",
+            "configured_share": 0.0,
+            "congestion_mix_share": 0.0,
+            "eligible_boxes": 12,
+            "eligible_placements": 12,
+            "mixed_boxes": 0,
+            "mixed_placements": 0,
+            "mixing_attempts": 0,
+            "mixing_selected_boxes": 0,
+            "noise_level": 0.5,
+            "noise_zero_capacity_policy": "idealized separated yard: queue arrivals or report unserved retrievals rather than mix under capacity pressure",
+            "placement_attempts": 20,
+            "policy": "synthetic-independent-v2",
+            "share_definition": "selection probability per unique box at its first eligible placement attempt; eligible means a compatible destination above pending exports exists; actual engine legality may prevent mixing",
+            "synthetic": true
+          },
+          "noise": 0.5,
+          "requested_congestion_mix_share": 0.0,
+          "rule_freeze_v1": true,
+          "simulator_version": "5.0.0",
+          "snapshots": [
+            {
+              "call_id": "synthetic-d72-laem_chabang_like-0",
+              "direct_delivery_exports": 0,
+              "exports_absent": 0,
+              "exports_present": 8,
+              "foreign_blocked_export_share": 0.0,
+              "foreign_blocked_exports": 0,
+              "foreign_blocked_present_export_share": 0.0,
+              "foreign_boxes_present": 12,
+              "instance_id": "synthetic-d72-laem_chabang_like-0",
+              "port_archetype": "laem_chabang_like",
+              "production_yard_layout": true,
+              "requested_exports": 8,
+              "stack_count_nonempty": 12,
+              "stack_height_histogram": {
+                "1": 6,
+                "2": 4,
+                "3": 2
+              },
+              "stack_height_max": 3,
+              "stack_height_mean_nonempty": 1.6666666666666667,
+              "time_s": 1000,
+              "yard_boxes": 20,
+              "yard_geometry": [
+                {
+                  "bays": 24,
+                  "block_id": "B001",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B002",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B003",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B004",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B005",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B006",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B007",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B008",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B009",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B010",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B011",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B012",
+                  "effective_limit": 5,
+                  "rows": 6
+                }
+              ],
+              "yard_id": "laem_chabang_like.berth_group",
+              "yard_rehandle_bound": 0
+            }
+          ]
+        },
+        "d72_on": {
+          "admission": {
+            "calls_not_started": 1,
+            "calls_started": 1,
+            "discharged_imports": 4,
+            "external_queue": 0,
+            "gate_admitted_exports": 16,
+            "missed_cutoffs": 0,
+            "queued_gate_events": 0,
+            "requested_exports": 16,
+            "requested_imports": 8,
+            "retained_import_exits": 0,
+            "unserved_discharges": 0,
+            "unserved_loads": 0
+          },
+          "congestion_mixing": {
+            "achieved_share": 0.16666666666666666,
+            "achieved_share_definition": "mixed_boxes / eligible_boxes (zero when no eligible boxes); counters are distinct from repeated placement attempts",
+            "configured_share": 0.25,
+            "congestion_mix_share": 0.25,
+            "eligible_boxes": 12,
+            "eligible_placements": 12,
+            "mixed_boxes": 2,
+            "mixed_placements": 2,
+            "mixing_attempts": 2,
+            "mixing_selected_boxes": 2,
+            "noise_level": 0.5,
+            "noise_zero_capacity_policy": "idealized separated yard: queue arrivals or report unserved retrievals rather than mix under capacity pressure",
+            "placement_attempts": 20,
+            "policy": "synthetic-independent-v2",
+            "share_definition": "selection probability per unique box at its first eligible placement attempt; eligible means a compatible destination above pending exports exists; actual engine legality may prevent mixing",
+            "synthetic": true
+          },
+          "noise": 0.5,
+          "requested_congestion_mix_share": 0.25,
+          "rule_freeze_v1": true,
+          "simulator_version": "5.0.0",
+          "snapshots": [
+            {
+              "call_id": "synthetic-d72-laem_chabang_like-0",
+              "direct_delivery_exports": 0,
+              "exports_absent": 0,
+              "exports_present": 8,
+              "foreign_blocked_export_share": 0.25,
+              "foreign_blocked_exports": 2,
+              "foreign_blocked_present_export_share": 0.25,
+              "foreign_boxes_present": 12,
+              "instance_id": "synthetic-d72-laem_chabang_like-0",
+              "port_archetype": "laem_chabang_like",
+              "production_yard_layout": true,
+              "requested_exports": 8,
+              "stack_count_nonempty": 11,
+              "stack_height_histogram": {
+                "1": 4,
+                "2": 5,
+                "3": 2
+              },
+              "stack_height_max": 3,
+              "stack_height_mean_nonempty": 1.8181818181818181,
+              "time_s": 1000,
+              "yard_boxes": 20,
+              "yard_geometry": [
+                {
+                  "bays": 24,
+                  "block_id": "B001",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B002",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B003",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B004",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B005",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B006",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B007",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B008",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B009",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B010",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B011",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B012",
+                  "effective_limit": 5,
+                  "rows": 6
+                }
+              ],
+              "yard_id": "laem_chabang_like.berth_group",
+              "yard_rehandle_bound": 2
+            }
+          ]
+        }
+      },
+      "call_input_sha256": "2cf0c0cefbf7446d905cc303ba6321254e411eb69e72793b0b4bc87d05c36bac",
+      "control_definition": "D72 off = mix share zero; rule freeze/A8/D25 stay enabled in both arms",
+      "noise": 0.5,
+      "qualification": "synthetic admission probe; not qualified production yield",
+      "seed": 3,
+      "share_definition": "foreign_blocked_export_share divides by all declared call exports; present-only share also reported",
+      "until_s": 1000
+    },
+    {
+      "arms": {
+        "d72_off": {
+          "admission": {
+            "calls_not_started": 1,
+            "calls_started": 1,
+            "discharged_imports": 4,
+            "external_queue": 0,
+            "gate_admitted_exports": 16,
+            "missed_cutoffs": 0,
+            "queued_gate_events": 0,
+            "requested_exports": 16,
+            "requested_imports": 8,
+            "retained_import_exits": 0,
+            "unserved_discharges": 0,
+            "unserved_loads": 0
+          },
+          "congestion_mixing": {
+            "achieved_share": 0.0,
+            "achieved_share_definition": "mixed_boxes / eligible_boxes (zero when no eligible boxes); counters are distinct from repeated placement attempts",
+            "configured_share": 0.0,
+            "congestion_mix_share": 0.0,
+            "eligible_boxes": 12,
+            "eligible_placements": 12,
+            "mixed_boxes": 0,
+            "mixed_placements": 0,
+            "mixing_attempts": 0,
+            "mixing_selected_boxes": 0,
+            "noise_level": 0.5,
+            "noise_zero_capacity_policy": "idealized separated yard: queue arrivals or report unserved retrievals rather than mix under capacity pressure",
+            "placement_attempts": 20,
+            "policy": "synthetic-independent-v2",
+            "share_definition": "selection probability per unique box at its first eligible placement attempt; eligible means a compatible destination above pending exports exists; actual engine legality may prevent mixing",
+            "synthetic": true
+          },
+          "noise": 0.5,
+          "requested_congestion_mix_share": 0.0,
+          "rule_freeze_v1": true,
+          "simulator_version": "5.0.0",
+          "snapshots": [
+            {
+              "call_id": "synthetic-d72-laem_chabang_like-0",
+              "direct_delivery_exports": 0,
+              "exports_absent": 0,
+              "exports_present": 8,
+              "foreign_blocked_export_share": 0.0,
+              "foreign_blocked_exports": 0,
+              "foreign_blocked_present_export_share": 0.0,
+              "foreign_boxes_present": 12,
+              "instance_id": "synthetic-d72-laem_chabang_like-0",
+              "port_archetype": "laem_chabang_like",
+              "production_yard_layout": true,
+              "requested_exports": 8,
+              "stack_count_nonempty": 10,
+              "stack_height_histogram": {
+                "1": 4,
+                "2": 3,
+                "3": 2,
+                "4": 1
+              },
+              "stack_height_max": 4,
+              "stack_height_mean_nonempty": 2.0,
+              "time_s": 1000,
+              "yard_boxes": 20,
+              "yard_geometry": [
+                {
+                  "bays": 24,
+                  "block_id": "B001",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B002",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B003",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B004",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B005",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B006",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B007",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B008",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B009",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B010",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B011",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B012",
+                  "effective_limit": 5,
+                  "rows": 6
+                }
+              ],
+              "yard_id": "laem_chabang_like.berth_group",
+              "yard_rehandle_bound": 0
+            }
+          ]
+        },
+        "d72_on": {
+          "admission": {
+            "calls_not_started": 1,
+            "calls_started": 1,
+            "discharged_imports": 4,
+            "external_queue": 0,
+            "gate_admitted_exports": 16,
+            "missed_cutoffs": 0,
+            "queued_gate_events": 0,
+            "requested_exports": 16,
+            "requested_imports": 8,
+            "retained_import_exits": 0,
+            "unserved_discharges": 0,
+            "unserved_loads": 0
+          },
+          "congestion_mixing": {
+            "achieved_share": 0.25,
+            "achieved_share_definition": "mixed_boxes / eligible_boxes (zero when no eligible boxes); counters are distinct from repeated placement attempts",
+            "configured_share": 0.25,
+            "congestion_mix_share": 0.25,
+            "eligible_boxes": 12,
+            "eligible_placements": 12,
+            "mixed_boxes": 3,
+            "mixed_placements": 3,
+            "mixing_attempts": 3,
+            "mixing_selected_boxes": 3,
+            "noise_level": 0.5,
+            "noise_zero_capacity_policy": "idealized separated yard: queue arrivals or report unserved retrievals rather than mix under capacity pressure",
+            "placement_attempts": 20,
+            "policy": "synthetic-independent-v2",
+            "share_definition": "selection probability per unique box at its first eligible placement attempt; eligible means a compatible destination above pending exports exists; actual engine legality may prevent mixing",
+            "synthetic": true
+          },
+          "noise": 0.5,
+          "requested_congestion_mix_share": 0.25,
+          "rule_freeze_v1": true,
+          "simulator_version": "5.0.0",
+          "snapshots": [
+            {
+              "call_id": "synthetic-d72-laem_chabang_like-0",
+              "direct_delivery_exports": 0,
+              "exports_absent": 0,
+              "exports_present": 8,
+              "foreign_blocked_export_share": 0.5,
+              "foreign_blocked_exports": 4,
+              "foreign_blocked_present_export_share": 0.5,
+              "foreign_boxes_present": 12,
+              "instance_id": "synthetic-d72-laem_chabang_like-0",
+              "port_archetype": "laem_chabang_like",
+              "production_yard_layout": true,
+              "requested_exports": 8,
+              "stack_count_nonempty": 8,
+              "stack_height_histogram": {
+                "1": 1,
+                "2": 4,
+                "3": 1,
+                "4": 2
+              },
+              "stack_height_max": 4,
+              "stack_height_mean_nonempty": 2.5,
+              "time_s": 1000,
+              "yard_boxes": 20,
+              "yard_geometry": [
+                {
+                  "bays": 24,
+                  "block_id": "B001",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B002",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B003",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B004",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B005",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B006",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B007",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B008",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B009",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B010",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B011",
+                  "effective_limit": 5,
+                  "rows": 6
+                },
+                {
+                  "bays": 24,
+                  "block_id": "B012",
+                  "effective_limit": 5,
+                  "rows": 6
+                }
+              ],
+              "yard_id": "laem_chabang_like.berth_group",
+              "yard_rehandle_bound": 2
+            }
+          ]
+        }
+      },
+      "call_input_sha256": "2cf0c0cefbf7446d905cc303ba6321254e411eb69e72793b0b4bc87d05c36bac",
+      "control_definition": "D72 off = mix share zero; rule freeze/A8/D25 stay enabled in both arms",
+      "noise": 0.5,
+      "qualification": "synthetic admission probe; not qualified production yield",
+      "seed": 7,
+      "share_definition": "foreign_blocked_export_share divides by all declared call exports; present-only share also reported",
+      "until_s": 1000
+    }
+  ],
+  "input_mode": "synthetic small demand on unmodified production yard layouts",
+  "qualification": "synthetic admission probe; not qualified production yield",
+  "schema_version": 1
+}

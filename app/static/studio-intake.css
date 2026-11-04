@@ -1,0 +1,64 @@
+/* Layout only. Studio supplies surfaces, typography and semantic states. */
+.st-intake-panel { display: grid; gap: 16px; width: 100%; min-width: 0; max-width: 100%; }
+.st-intake-panel > * { min-width: 0; max-width: 100%; box-sizing: border-box; }
+.st-intake-panel > p { margin: 0; }
+.st-intake-provenance { display: flex; flex-wrap: wrap; gap: 6px; }
+.st-intake-provenance .st-chip { height: auto; white-space: normal; }
+/* Actor colour belongs only to the shared Muse Spark dot. */
+.st-intake-provenance .st-chip.cloud::before { background: var(--st-c-spark); }
+.st-intake-stack { display: block; position: relative; width: 100%; min-height: 184px; padding: 0; text-align: left; }
+.st-intake-stack[hidden], .st-intake-panel [hidden], .st-intake-desk [hidden] { display: none; }
+.st-intake-preview { position: absolute; top: 8px; left: calc(8px + var(--st-intake-index) * 68px); width: 180px; height: 128px; overflow: hidden; transform: rotate(calc((var(--st-intake-index) - 1) * 3deg)); }
+.st-intake-preview.st-card { margin: 0; }
+.st-intake-preview b { display: block; margin-bottom: 6px; }
+.st-intake-preview > span { display: block; white-space: pre-wrap; }
+.st-intake-preview-photo { padding: 0; }
+.st-intake-preview img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.st-intake-stack-label { position: absolute; bottom: 4px; left: 8px; right: 8px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.st-intake-load-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.st-intake-list-scroll { min-width: 0; max-width: 100%; overflow: auto; }
+.st-intake-list { width: 100%; max-width: 100%; table-layout: fixed; white-space: nowrap; }
+.st-intake-list th, .st-intake-list td { box-sizing: border-box; padding: 7px 3px; overflow: hidden; text-overflow: ellipsis; }
+.st-intake-list th:nth-child(1) { width: 26%; }
+.st-intake-list th:nth-child(2) { width: 10%; }
+.st-intake-list th:nth-child(3) { width: 12%; }
+.st-intake-list th:nth-child(4) { width: 14%; }
+.st-intake-list th:nth-child(5) { width: 14%; }
+.st-intake-list th:nth-child(6) { width: 16%; }
+.st-intake-list th:nth-child(7) { width: 8%; }
+.st-intake-row-status .st-callout { display: inline-flex; align-items: center; gap: 3px; margin: 0; }
+.st-intake-question { display: grid; gap: 12px; }
+.st-intake-question header { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.st-intake-question header > span:last-child { flex: none; }
+.st-intake-question p { margin: 0; }
+.st-intake-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.st-intake-options .st-btn { min-height: 32px; }
+.st-intake-options .st-meta { display: block; margin-top: 3px; }
+.st-intake-ready { display: grid; gap: 6px; }
+.st-intake-ready p { margin: 0; }
+.st-intake-measured { display: grid; gap: 10px; margin-top: 12px; overflow: auto; }
+.st-intake-measured p { margin: 0; }
+.st-intake-measured table { width: 100%; }
+.st-intake-desk { height: 100%; overflow: auto; padding: 20px; }
+.st-intake-desk-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+.st-intake-source-status { min-height: 36px; max-width: 600px; margin: 0; }
+.st-intake-desk-head > button { flex: none; }
+.st-intake-documents { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 16px; align-items: start; }
+.st-intake-paper { min-width: 0; overflow: hidden; padding: 0; }
+.st-intake-paper.st-card { margin: 0; }
+.st-intake-paper > header { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; padding: 12px; }
+.st-intake-photo { position: relative; }
+.st-intake-photo img { width: 100%; display: block; }
+.st-intake-photo i { position: absolute; left: 3%; width: 94%; margin: 0; }
+.st-intake-caution { display: block; padding: 10px 12px; }
+.st-intake-mail { margin: 0; max-height: 400px; overflow: auto; padding: 12px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.st-intake-mail [data-source] { display: inline; margin: 0; }
+.st-intake-paper-sheet { grid-column: 1 / -1; }
+.st-intake-sheet-scroll { overflow: auto; max-height: 250px; }
+.st-intake-sheet { white-space: nowrap; }
+.st-intake-sheet td, .st-intake-sheet th { max-width: 220px; overflow: hidden; text-overflow: ellipsis; }
+.st-intake-sheet td.st-callout { display: table-cell; }
+.st-intake-evidence { margin-top: 16px; padding: 12px; }
+.st-intake-evidence blockquote { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.st-intake-evidence blockquote + blockquote { margin-top: 12px; }
+@media (max-width: 1100px) { .st-intake-desk { padding: 12px; } .st-intake-documents { grid-template-columns: minmax(0, 1fr); gap: 12px; } }

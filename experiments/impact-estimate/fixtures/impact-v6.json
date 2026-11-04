@@ -1,0 +1,2030 @@
+{
+  "schema_version": "stowlm.impact-v6/1",
+  "label": "projection",
+  "measured_pipeline_results": null,
+  "inputs": {
+    "context": {
+      "world_container_throughput_teu": {
+        "value": 920300805,
+        "unit": "TEU/year",
+        "status": "sourced",
+        "source": "https://unctadstat.unctad.org/insights/theme/245",
+        "note": "World port container throughput in 2024; UNCTAD page updated 2026-04-15. Port throughput counts handling, not unique cargo voyages."
+      },
+      "teu_per_primary_move": {
+        "value": 1.5,
+        "unit": "TEU/primary physical lift",
+        "status": "assumption",
+        "source": null,
+        "note": "Assumed mix of container lengths; throughput conversion, not a physical constant."
+      },
+      "electric_quay_total_kwh_per_move": {
+        "value": 6,
+        "unit": "kWh/electric quay-crane move",
+        "status": "sourced",
+        "source": "https://pema.org/wp-content/uploads/2022/09/PEMA-IP2-Energy-and-Environmental-Efficiency-in-Ports-and-Terminals.pdf",
+        "note": "Dated example at 30 moves/hour, including auxiliary load; not a universal cycle measurement."
+      },
+      "electric_quay_auxiliary_kwh_per_move": {
+        "value": 2,
+        "unit": "kWh/electric quay-crane move",
+        "status": "sourced",
+        "source": "https://pema.org/wp-content/uploads/2022/09/PEMA-IP2-Energy-and-Environmental-Efficiency-in-Ports-and-Terminals.pdf",
+        "note": "Auxiliary energy allocated per move in the same dated example; not all of it disappears with one avoided lift."
+      },
+      "thai_grid_kgco2e_per_kwh": {
+        "value": 0.5562,
+        "unit": "kgCO2e/kWh",
+        "status": "sourced",
+        "source": "https://thaicarbonlabel.tgo.or.th/index.php?lang=EN&mod=Y0hKdlpIVmpkSE5mWlcxcGMzTnBiMjQ9",
+        "note": "TGO April 2026 grid factor; apply only to a comparable Thai electric-quay cycle, not mixed/global rehandles."
+      },
+      "pilot_min_capacity_teu": {
+        "value": 500,
+        "unit": "TEU",
+        "status": "design",
+        "source": "docs/headline.md",
+        "note": "v6 design envelope, not a measured result."
+      },
+      "pilot_max_capacity_teu": {
+        "value": 800,
+        "unit": "TEU",
+        "status": "design",
+        "source": "docs/headline.md",
+        "note": "v6 design envelope, not a measured result."
+      },
+      "pilot_max_boxes": {
+        "value": 195,
+        "unit": "physical boxes",
+        "status": "design",
+        "source": "docs/headline.md",
+        "note": "v6 design envelope, not TEU capacity."
+      },
+      "pilot_max_fill": {
+        "value": 0.7,
+        "unit": "fraction",
+        "status": "design",
+        "source": "docs/headline.md",
+        "note": "v6 design envelope; empty arrival, one loading call."
+      },
+      "laem_chabang_container_calls_per_year": {
+        "value": 9325,
+        "unit": "container-vessel calls/year",
+        "status": "sourced",
+        "source": "https://thaibsaa.com/images/documents/Annual24-25_Final.pdf",
+        "note": "BSAA 2024 activity: all container-vessel sizes, not eligible feeder or pilot calls."
+      },
+      "terminal_revenue_low_usd": {
+        "value": 62670000000,
+        "unit": "USD/year",
+        "status": "commercial_estimate",
+        "source": "https://www.giiresearch.com/report/ires1803580-container-terminal-operator-market-by-container.html",
+        "note": "360iResearch 2024 container-terminal-operator market estimate, verified on GII's full reseller listing dated28Aug2025; not stated on the current publisher page. Commercial estimate, not audited global receipts."
+      },
+      "terminal_revenue_mid_usd": {
+        "value": 75500000000,
+        "unit": "USD/year",
+        "status": "commercial_estimate",
+        "source": "https://www.techsciresearch.com/news/24170-container-terminal-operations-market.html",
+        "note": "TechSci 2024 container-terminal operations estimate, directly verified on its June2025 release. Scope includes storage/intermodal services and cargo categories broader than containers; not audited global receipts or an interpolated midpoint."
+      },
+      "terminal_revenue_high_usd": {
+        "value": 75500000000,
+        "unit": "USD/year",
+        "status": "commercial_estimate",
+        "source": "https://www.techsciresearch.com/news/24170-container-terminal-operations-market.html",
+        "note": "Upper verified benchmark repeats TechSci2024 estimate. Unverified IBISWorld figure excluded, not carried as an assumed upper bound. This is a commercial-estimate comparison range, not three independent market measurements."
+      }
+    },
+    "pilot": {
+      "low": {
+        "primary_moves_per_call": {
+          "value": 100,
+          "unit": "physical lifts/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical primary productive load lifts, one container per lift; no transfer of old section-level results."
+        },
+        "extra_rehandles_per_primary_move": {
+          "value": 0.02,
+          "unit": "extra crane lifts/primary lift",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed attributable extra lifts, not a measured local rate or share of all moves."
+        },
+        "rehandle_reduction": {
+          "value": 0.1,
+          "unit": "fraction of attributable extra lifts",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical effect, independent of legacy selected-lift results; may fail to transfer."
+        },
+        "move_charge_usd": {
+          "value": 20.86,
+          "unit": "USD/extra crane lift",
+          "status": "computed",
+          "source": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+          "note": "41.72 USD for a 20-foot via-quay restow / two lifts; historical 2025 Indian retail proxy, not marginal resource cost or a local quote."
+        },
+        "planner_usd_per_hour": {
+          "value": 20,
+          "unit": "USD/planner hour",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed carrier-side loaded hourly labor opportunity value, outside terminal tariff labor; not a sourced local wage."
+        },
+        "initial_baseline_hours": {
+          "value": 2,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed initial document-to-checked-plan work, excluding later changes and exceptional rework."
+        },
+        "initial_assisted_hours": {
+          "value": 1,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted initial work including reading, checking, confirmation and review."
+        },
+        "instruction_events_per_call": {
+          "value": 1,
+          "unit": "subsequent instruction changes/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed changes after initial plan; excluded from initial and rework time."
+        },
+        "instruction_baseline_minutes": {
+          "value": 30,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed baseline attention for a subsequent instruction change."
+        },
+        "instruction_assisted_minutes": {
+          "value": 10,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted attention including confirmation and review; not measured machine latency."
+        },
+        "rework_events_avoided_per_call": {
+          "value": 0.1,
+          "unit": "exceptional rework events/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed net events avoided, excluded from both initial planning and instruction changes."
+        },
+        "rework_minutes_per_event": {
+          "value": 30,
+          "unit": "planner minutes/rework event",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed additional correction work; no safety-loss or accident value."
+        },
+        "annual_calls": {
+          "value": 52,
+          "unit": "eligible adopting calls/year",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed deployment portfolio; not an estimate of feeder calls or Laem Chabang adoption."
+        }
+      },
+      "mid": {
+        "primary_moves_per_call": {
+          "value": 150,
+          "unit": "physical lifts/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical primary productive load lifts, one container per lift; no transfer of old section-level results."
+        },
+        "extra_rehandles_per_primary_move": {
+          "value": 0.05,
+          "unit": "extra crane lifts/primary lift",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed attributable extra lifts, not a measured local rate or share of all moves."
+        },
+        "rehandle_reduction": {
+          "value": 0.2,
+          "unit": "fraction of attributable extra lifts",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical effect, independent of legacy selected-lift results; may fail to transfer."
+        },
+        "move_charge_usd": {
+          "value": 20.86,
+          "unit": "USD/extra crane lift",
+          "status": "computed",
+          "source": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+          "note": "41.72 USD for a 20-foot via-quay restow / two lifts; historical 2025 Indian retail proxy, not marginal resource cost or a local quote."
+        },
+        "planner_usd_per_hour": {
+          "value": 30,
+          "unit": "USD/planner hour",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed carrier-side loaded hourly labor opportunity value, outside terminal tariff labor; not a sourced local wage."
+        },
+        "initial_baseline_hours": {
+          "value": 2.5,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed initial document-to-checked-plan work, excluding later changes and exceptional rework."
+        },
+        "initial_assisted_hours": {
+          "value": 0.75,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted initial work including reading, checking, confirmation and review."
+        },
+        "instruction_events_per_call": {
+          "value": 2,
+          "unit": "subsequent instruction changes/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed changes after initial plan; excluded from initial and rework time."
+        },
+        "instruction_baseline_minutes": {
+          "value": 45,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed baseline attention for a subsequent instruction change."
+        },
+        "instruction_assisted_minutes": {
+          "value": 5,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted attention including confirmation and review; not measured machine latency."
+        },
+        "rework_events_avoided_per_call": {
+          "value": 0.25,
+          "unit": "exceptional rework events/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed net events avoided, excluded from both initial planning and instruction changes."
+        },
+        "rework_minutes_per_event": {
+          "value": 60,
+          "unit": "planner minutes/rework event",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed additional correction work; no safety-loss or accident value."
+        },
+        "annual_calls": {
+          "value": 260,
+          "unit": "eligible adopting calls/year",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed deployment portfolio; not an estimate of feeder calls or Laem Chabang adoption."
+        }
+      },
+      "high": {
+        "primary_moves_per_call": {
+          "value": 195,
+          "unit": "physical lifts/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical primary productive load lifts, one container per lift; no transfer of old section-level results."
+        },
+        "extra_rehandles_per_primary_move": {
+          "value": 0.1,
+          "unit": "extra crane lifts/primary lift",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed attributable extra lifts, not a measured local rate or share of all moves."
+        },
+        "rehandle_reduction": {
+          "value": 0.3,
+          "unit": "fraction of attributable extra lifts",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical effect, independent of legacy selected-lift results; may fail to transfer."
+        },
+        "move_charge_usd": {
+          "value": 20.86,
+          "unit": "USD/extra crane lift",
+          "status": "computed",
+          "source": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+          "note": "41.72 USD for a 20-foot via-quay restow / two lifts; historical 2025 Indian retail proxy, not marginal resource cost or a local quote."
+        },
+        "planner_usd_per_hour": {
+          "value": 40,
+          "unit": "USD/planner hour",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed carrier-side loaded hourly labor opportunity value, outside terminal tariff labor; not a sourced local wage."
+        },
+        "initial_baseline_hours": {
+          "value": 3,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed initial document-to-checked-plan work, excluding later changes and exceptional rework."
+        },
+        "initial_assisted_hours": {
+          "value": 0.5,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted initial work including reading, checking, confirmation and review."
+        },
+        "instruction_events_per_call": {
+          "value": 3,
+          "unit": "subsequent instruction changes/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed changes after initial plan; excluded from initial and rework time."
+        },
+        "instruction_baseline_minutes": {
+          "value": 60,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed baseline attention for a subsequent instruction change."
+        },
+        "instruction_assisted_minutes": {
+          "value": 3,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted attention including confirmation and review; not measured machine latency."
+        },
+        "rework_events_avoided_per_call": {
+          "value": 0.5,
+          "unit": "exceptional rework events/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed net events avoided, excluded from both initial planning and instruction changes."
+        },
+        "rework_minutes_per_event": {
+          "value": 90,
+          "unit": "planner minutes/rework event",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed additional correction work; no safety-loss or accident value."
+        },
+        "annual_calls": {
+          "value": 1040,
+          "unit": "eligible adopting calls/year",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed deployment portfolio; not an estimate of feeder calls or Laem Chabang adoption."
+        }
+      }
+    },
+    "scale": {
+      "low": {
+        "primary_moves_per_call": {
+          "value": 500,
+          "unit": "physical lifts/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical total productive load AND discharge lifts/call, one container per lift; workflow assumptions cover the complete call, not one labor allocation per direction."
+        },
+        "extra_rehandles_per_primary_move": {
+          "value": 0.02,
+          "unit": "extra crane lifts/primary lift",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed attributable extra lifts, not a measured local rate or share of all moves."
+        },
+        "rehandle_reduction": {
+          "value": 0.1,
+          "unit": "fraction of attributable extra lifts",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical effect, independent of legacy selected-lift results; may fail to transfer."
+        },
+        "move_charge_usd": {
+          "value": 20.86,
+          "unit": "USD/extra crane lift",
+          "status": "computed",
+          "source": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+          "note": "41.72 USD for a 20-foot via-quay restow / two lifts; historical 2025 Indian retail proxy, not marginal resource cost or a local quote."
+        },
+        "planner_usd_per_hour": {
+          "value": 20,
+          "unit": "USD/planner hour",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed carrier-side loaded hourly labor opportunity value, outside terminal tariff labor; not a sourced local wage."
+        },
+        "initial_baseline_hours": {
+          "value": 2,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed initial document-to-checked-plan work, excluding later changes and exceptional rework."
+        },
+        "initial_assisted_hours": {
+          "value": 1,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted initial work including reading, checking, confirmation and review."
+        },
+        "instruction_events_per_call": {
+          "value": 1,
+          "unit": "subsequent instruction changes/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed changes after initial plan; excluded from initial and rework time."
+        },
+        "instruction_baseline_minutes": {
+          "value": 30,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed baseline attention for a subsequent instruction change."
+        },
+        "instruction_assisted_minutes": {
+          "value": 10,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted attention including confirmation and review; not measured machine latency."
+        },
+        "rework_events_avoided_per_call": {
+          "value": 0.1,
+          "unit": "exceptional rework events/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed net events avoided, excluded from both initial planning and instruction changes."
+        },
+        "rework_minutes_per_event": {
+          "value": 30,
+          "unit": "planner minutes/rework event",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed additional correction work; no safety-loss or accident value."
+        },
+        "adopted_throughput_share": {
+          "value": 0.01,
+          "unit": "fraction of world container throughput",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed eligible AND adopting throughput including loading and discharge; alternative populations, never summed."
+        },
+        "ship_capacity_teu": {
+          "value": 1700,
+          "unit": "TEU vessel capacity",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical future target: more compute for the search, a larger model for reading; capability still needs validation."
+        }
+      },
+      "mid": {
+        "primary_moves_per_call": {
+          "value": 1500,
+          "unit": "physical lifts/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical total productive load AND discharge lifts/call, one container per lift; workflow assumptions cover the complete call, not one labor allocation per direction."
+        },
+        "extra_rehandles_per_primary_move": {
+          "value": 0.05,
+          "unit": "extra crane lifts/primary lift",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed attributable extra lifts, not a measured local rate or share of all moves."
+        },
+        "rehandle_reduction": {
+          "value": 0.2,
+          "unit": "fraction of attributable extra lifts",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical effect, independent of legacy selected-lift results; may fail to transfer."
+        },
+        "move_charge_usd": {
+          "value": 20.86,
+          "unit": "USD/extra crane lift",
+          "status": "computed",
+          "source": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+          "note": "41.72 USD for a 20-foot via-quay restow / two lifts; historical 2025 Indian retail proxy, not marginal resource cost or a local quote."
+        },
+        "planner_usd_per_hour": {
+          "value": 30,
+          "unit": "USD/planner hour",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed carrier-side loaded hourly labor opportunity value, outside terminal tariff labor; not a sourced local wage."
+        },
+        "initial_baseline_hours": {
+          "value": 2.5,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed initial document-to-checked-plan work, excluding later changes and exceptional rework."
+        },
+        "initial_assisted_hours": {
+          "value": 0.75,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted initial work including reading, checking, confirmation and review."
+        },
+        "instruction_events_per_call": {
+          "value": 2,
+          "unit": "subsequent instruction changes/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed changes after initial plan; excluded from initial and rework time."
+        },
+        "instruction_baseline_minutes": {
+          "value": 45,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed baseline attention for a subsequent instruction change."
+        },
+        "instruction_assisted_minutes": {
+          "value": 5,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted attention including confirmation and review; not measured machine latency."
+        },
+        "rework_events_avoided_per_call": {
+          "value": 0.25,
+          "unit": "exceptional rework events/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed net events avoided, excluded from both initial planning and instruction changes."
+        },
+        "rework_minutes_per_event": {
+          "value": 60,
+          "unit": "planner minutes/rework event",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed additional correction work; no safety-loss or accident value."
+        },
+        "adopted_throughput_share": {
+          "value": 0.05,
+          "unit": "fraction of world container throughput",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed eligible AND adopting throughput including loading and discharge; alternative populations, never summed."
+        },
+        "ship_capacity_teu": {
+          "value": 8000,
+          "unit": "TEU vessel capacity",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical future target: more compute for the search, a larger model for reading; capability still needs validation."
+        }
+      },
+      "high": {
+        "primary_moves_per_call": {
+          "value": 3000,
+          "unit": "physical lifts/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical total productive load AND discharge lifts/call, one container per lift; workflow assumptions cover the complete call, not one labor allocation per direction."
+        },
+        "extra_rehandles_per_primary_move": {
+          "value": 0.1,
+          "unit": "extra crane lifts/primary lift",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed attributable extra lifts, not a measured local rate or share of all moves."
+        },
+        "rehandle_reduction": {
+          "value": 0.3,
+          "unit": "fraction of attributable extra lifts",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical effect, independent of legacy selected-lift results; may fail to transfer."
+        },
+        "move_charge_usd": {
+          "value": 20.86,
+          "unit": "USD/extra crane lift",
+          "status": "computed",
+          "source": "https://www.dpworld.com/india/-/media/project/dpwg/dpwg-tenant/apac/india/media-files/ports-and-terminals/chennai/tariff/cctl-sor---wef-1st-may-2025.pdf?rev=ceba2186d9df4e2e928898993b4792ec",
+          "note": "41.72 USD for a 20-foot via-quay restow / two lifts; historical 2025 Indian retail proxy, not marginal resource cost or a local quote."
+        },
+        "planner_usd_per_hour": {
+          "value": 40,
+          "unit": "USD/planner hour",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed carrier-side loaded hourly labor opportunity value, outside terminal tariff labor; not a sourced local wage."
+        },
+        "initial_baseline_hours": {
+          "value": 3,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed initial document-to-checked-plan work, excluding later changes and exceptional rework."
+        },
+        "initial_assisted_hours": {
+          "value": 0.5,
+          "unit": "planner hours/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted initial work including reading, checking, confirmation and review."
+        },
+        "instruction_events_per_call": {
+          "value": 3,
+          "unit": "subsequent instruction changes/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed changes after initial plan; excluded from initial and rework time."
+        },
+        "instruction_baseline_minutes": {
+          "value": 60,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed baseline attention for a subsequent instruction change."
+        },
+        "instruction_assisted_minutes": {
+          "value": 3,
+          "unit": "planner minutes/change",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed assisted attention including confirmation and review; not measured machine latency."
+        },
+        "rework_events_avoided_per_call": {
+          "value": 0.5,
+          "unit": "exceptional rework events/call",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed net events avoided, excluded from both initial planning and instruction changes."
+        },
+        "rework_minutes_per_event": {
+          "value": 90,
+          "unit": "planner minutes/rework event",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed additional correction work; no safety-loss or accident value."
+        },
+        "adopted_throughput_share": {
+          "value": 0.2,
+          "unit": "fraction of world container throughput",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed eligible AND adopting throughput including loading and discharge; alternative populations, never summed."
+        },
+        "ship_capacity_teu": {
+          "value": 20000,
+          "unit": "TEU vessel capacity",
+          "status": "assumption",
+          "source": null,
+          "note": "Hypothetical future target: more compute for the search, a larger model for reading; capability still needs validation."
+        }
+      }
+    },
+    "prize": {
+      "low": {
+        "ship_extra_restow_fraction_of_total_moves": {
+          "value": 0.05,
+          "unit": "extra ship lifts/all ship lifts",
+          "status": "assumption",
+          "source": null,
+          "note": "Global restow-incidence ASSUMPTION, without an observed world rate or calibration dataset. Some restows are required; this share does not establish avoidable planning waste."
+        },
+        "yard_extra_rehandles_per_relevant_primary_move": {
+          "value": 0.037393364928909954,
+          "unit": "extra yard lifts/relevant primary retrieval",
+          "status": "assumption",
+          "source": "https://informs-sim.org/wsc13papers/includes/files/305.pdf",
+          "note": "Worldwide transfer ASSUMPTION: Legato/Mazza WSC2013 Table 2 simulated reshuffles for real loading plans; ratios 23.67/633, 33.24/360, 18/84. Selected case sensitivity, not a global observed distribution."
+        },
+        "yard_eligible_throughput_fraction": {
+          "value": 0.5,
+          "unit": "fraction of primary throughput",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed loaded-export/retrieval-relevant throughput; avoids applying the yard ratio to all port throughput."
+        },
+        "ship_extra_lift_charge_usd": {
+          "value": 30,
+          "unit": "USD/extra ship lift",
+          "status": "assumption",
+          "source": "anchor-sources-v6.md#broader-extra-lift-prices-revised-source-survey",
+          "note": "Assumed price sensitivity discounted from regional list-tariff context: SAGT USD46.50-80/lift; Yusen LA USD205.93 cell shift; Liverpool GBP192.92/lift. Not a weighted world price or marginal operating cost."
+        },
+        "yard_extra_lift_charge_usd": {
+          "value": 10,
+          "unit": "USD/extra yard lift",
+          "status": "assumption",
+          "source": "anchor-sources-v6.md#broader-extra-lift-prices-revised-source-survey",
+          "note": "Assumed sensitivity using Ries USD10/rehandle cost context and regional charge context: SAGT sorting USD25-47/container, Yusen mounting/grounding USD99.41, Liverpool GBP57.03/additional yard lift. Different service bundles; not a measured global marginal cost."
+        },
+        "global_container_calls_per_year": {
+          "value": 520000,
+          "unit": "container-vessel calls/year",
+          "status": "computed",
+          "source": "https://unctad.org/system/files/official-document/rmt2025ch4_en.pdf",
+          "note": "Rounded computed 2 x approximately260000 calls/half-year. UNCTAD RMT2025 ch4 says 2024 halves stayed near H2 2023; AIS/IMO >=1000GT coverage, not exact all-vessel census."
+        },
+        "berth_hours_per_call": {
+          "value": 15.0,
+          "unit": "berth hours/call",
+          "status": "assumption",
+          "source": "https://ppp.worldbank.org/sites/default/files/2026-01/The%20Container%20Port%20Performance%20Index%202020%20to%202024%20-%20Trends%20and%20Lessons%20Learned.pdf",
+          "note": "Assumed global port hours20/35/60 x CPPI75% berth share. CPPI Table5.1 call-size means are context, not a fleet mean; excludes anchorage in the resulting berth hours."
+        },
+        "charter_usd_per_day": {
+          "value": 17855,
+          "unit": "USD/vessel day",
+          "status": "assumption",
+          "source": "https://www.vhbs.de/index.php?id=28&L=1",
+          "note": "Assumed world fleet proxies selected from VHBS29Oct2026 twelve-month assessments for1100/2500/6500TEU. Sourced assessments, unmeasured world mix. Charter opportunity value excludes separate fuel dollars."
+        },
+        "reducible_berth_share": {
+          "value": 0.02,
+          "unit": "fraction of berth hours",
+          "status": "assumption",
+          "source": null,
+          "note": "Assume removing modeled extra work shortens berth stay2/5/10%; critical-path and parallel-crane effect, not a measured elasticity. Ship-time opportunity only, with no separate fuel charge."
+        },
+        "carrier_planner_hours_per_call": {
+          "value": 2,
+          "unit": "carrier planner hours/call",
+          "status": "assumption",
+          "source": "https://www.jstage.jst.go.jp/article/pjsai/JSAI2019/0/JSAI2019_2C5E502/_pdf/-char/ja",
+          "note": "Assumed global transfer of published2-3h whole-port allocation effort; midpoint2.5h. Full workflow-effort pool before capture, not all waste or time already saved."
+        },
+        "carrier_planner_usd_per_hour": {
+          "value": 20,
+          "unit": "USD/carrier planner hour",
+          "status": "assumption",
+          "source": "https://www.bls.gov/ooh/business-and-financial/logisticians.htm",
+          "note": "Assumed global opportunity-cost spread; BLS May2025 US logisticians medianUSD82320/year /2080h =39.58 rounded is context, not a global port-planner wage. Carrier planning excludes terminal tariff labor."
+        },
+        "capture_fraction": {
+          "value": 0.01,
+          "unit": "fraction of total gross prize",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed combined adoption, eligibility and realized improvement applied once to the gross opportunity; not the scale scenarios' throughput adoption."
+        },
+        "marginal_electric_quay_kwh_per_extra_lift": {
+          "value": 4,
+          "unit": "kWh/extra electric quay lift",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed worldwide transfer of dated PEMA total-minus-auxiliary example; not applicable to every crane or every restow."
+        },
+        "marginal_yard_kwh_per_extra_lift": {
+          "value": 0,
+          "unit": "kWh/extra yard lift credited",
+          "status": "assumption",
+          "source": null,
+          "note": "Unquantified: no comparable global marginal yard-energy evidence selected; zero emissions credit, not a claim yard lifts use zero energy."
+        },
+        "electricity_kgco2_per_kwh": {
+          "value": 0.445,
+          "unit": "kgCO2/kWh",
+          "status": "assumption",
+          "source": "https://www.iea.org/reports/electricity-2025/emissions",
+          "note": "IEA Electricity2025 reports2024 world generation intensity445gCO2/kWh. Transfer to port electricity and marginal avoided generation is an assumption; operational CO2, not lifecycle CO2e."
+        },
+        "container_ship_auxiliary_kw_at_berth": {
+          "value": 340,
+          "unit": "kW/container ship at berth",
+          "status": "assumption",
+          "source": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1014J1S.TXT",
+          "note": "Assumed fleet mix using EPA2022 hotelling auxiliary-load defaults across container size categories; operating load already included. Excludes boiler, main engines and shore power."
+        },
+        "berth_auxiliary_kgco2_per_kwh": {
+          "value": 0.695702,
+          "unit": "kgCO2/kWh of berth auxiliary energy",
+          "status": "computed",
+          "source": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1014J1S.TXT",
+          "note": "EPA2022 MGO auxiliary217g fuel/kWh x3.206gCO2/gfuel. Assumed all relevant hotelling load burns this fuel; operational CO2 excludes lifecycle/nonCO2 effects."
+        }
+      },
+      "mid": {
+        "ship_extra_restow_fraction_of_total_moves": {
+          "value": 0.1,
+          "unit": "extra ship lifts/all ship lifts",
+          "status": "assumption",
+          "source": null,
+          "note": "Global restow-incidence ASSUMPTION, without an observed world rate or calibration dataset. Some restows are required; this share does not establish avoidable planning waste."
+        },
+        "yard_extra_rehandles_per_relevant_primary_move": {
+          "value": 0.09233333333333334,
+          "unit": "extra yard lifts/relevant primary retrieval",
+          "status": "assumption",
+          "source": "https://informs-sim.org/wsc13papers/includes/files/305.pdf",
+          "note": "Worldwide transfer ASSUMPTION: Legato/Mazza WSC2013 Table 2 simulated reshuffles for real loading plans; ratios 23.67/633, 33.24/360, 18/84. Selected case sensitivity, not a global observed distribution."
+        },
+        "yard_eligible_throughput_fraction": {
+          "value": 0.5,
+          "unit": "fraction of primary throughput",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed loaded-export/retrieval-relevant throughput; avoids applying the yard ratio to all port throughput."
+        },
+        "ship_extra_lift_charge_usd": {
+          "value": 75,
+          "unit": "USD/extra ship lift",
+          "status": "assumption",
+          "source": "anchor-sources-v6.md#broader-extra-lift-prices-revised-source-survey",
+          "note": "Assumed price sensitivity discounted from regional list-tariff context: SAGT USD46.50-80/lift; Yusen LA USD205.93 cell shift; Liverpool GBP192.92/lift. Not a weighted world price or marginal operating cost."
+        },
+        "yard_extra_lift_charge_usd": {
+          "value": 25,
+          "unit": "USD/extra yard lift",
+          "status": "assumption",
+          "source": "anchor-sources-v6.md#broader-extra-lift-prices-revised-source-survey",
+          "note": "Assumed sensitivity using Ries USD10/rehandle cost context and regional charge context: SAGT sorting USD25-47/container, Yusen mounting/grounding USD99.41, Liverpool GBP57.03/additional yard lift. Different service bundles; not a measured global marginal cost."
+        },
+        "global_container_calls_per_year": {
+          "value": 520000,
+          "unit": "container-vessel calls/year",
+          "status": "computed",
+          "source": "https://unctad.org/system/files/official-document/rmt2025ch4_en.pdf",
+          "note": "Rounded computed 2 x approximately260000 calls/half-year. UNCTAD RMT2025 ch4 says 2024 halves stayed near H2 2023; AIS/IMO >=1000GT coverage, not exact all-vessel census."
+        },
+        "berth_hours_per_call": {
+          "value": 26.25,
+          "unit": "berth hours/call",
+          "status": "assumption",
+          "source": "https://ppp.worldbank.org/sites/default/files/2026-01/The%20Container%20Port%20Performance%20Index%202020%20to%202024%20-%20Trends%20and%20Lessons%20Learned.pdf",
+          "note": "Assumed global port hours20/35/60 x CPPI75% berth share. CPPI Table5.1 call-size means are context, not a fleet mean; excludes anchorage in the resulting berth hours."
+        },
+        "charter_usd_per_day": {
+          "value": 39725,
+          "unit": "USD/vessel day",
+          "status": "assumption",
+          "source": "https://www.vhbs.de/index.php?id=28&L=1",
+          "note": "Assumed world fleet proxies selected from VHBS29Oct2026 twelve-month assessments for1100/2500/6500TEU. Sourced assessments, unmeasured world mix. Charter opportunity value excludes separate fuel dollars."
+        },
+        "reducible_berth_share": {
+          "value": 0.05,
+          "unit": "fraction of berth hours",
+          "status": "assumption",
+          "source": null,
+          "note": "Assume removing modeled extra work shortens berth stay2/5/10%; critical-path and parallel-crane effect, not a measured elasticity. Ship-time opportunity only, with no separate fuel charge."
+        },
+        "carrier_planner_hours_per_call": {
+          "value": 2.5,
+          "unit": "carrier planner hours/call",
+          "status": "assumption",
+          "source": "https://www.jstage.jst.go.jp/article/pjsai/JSAI2019/0/JSAI2019_2C5E502/_pdf/-char/ja",
+          "note": "Assumed global transfer of published2-3h whole-port allocation effort; midpoint2.5h. Full workflow-effort pool before capture, not all waste or time already saved."
+        },
+        "carrier_planner_usd_per_hour": {
+          "value": 39.58,
+          "unit": "USD/carrier planner hour",
+          "status": "assumption",
+          "source": "https://www.bls.gov/ooh/business-and-financial/logisticians.htm",
+          "note": "Assumed global opportunity-cost spread; BLS May2025 US logisticians medianUSD82320/year /2080h =39.58 rounded is context, not a global port-planner wage. Carrier planning excludes terminal tariff labor."
+        },
+        "capture_fraction": {
+          "value": 0.05,
+          "unit": "fraction of total gross prize",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed combined adoption, eligibility and realized improvement applied once to the gross opportunity; not the scale scenarios' throughput adoption."
+        },
+        "marginal_electric_quay_kwh_per_extra_lift": {
+          "value": 4,
+          "unit": "kWh/extra electric quay lift",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed worldwide transfer of dated PEMA total-minus-auxiliary example; not applicable to every crane or every restow."
+        },
+        "marginal_yard_kwh_per_extra_lift": {
+          "value": 0,
+          "unit": "kWh/extra yard lift credited",
+          "status": "assumption",
+          "source": null,
+          "note": "Unquantified: no comparable global marginal yard-energy evidence selected; zero emissions credit, not a claim yard lifts use zero energy."
+        },
+        "electricity_kgco2_per_kwh": {
+          "value": 0.445,
+          "unit": "kgCO2/kWh",
+          "status": "assumption",
+          "source": "https://www.iea.org/reports/electricity-2025/emissions",
+          "note": "IEA Electricity2025 reports2024 world generation intensity445gCO2/kWh. Transfer to port electricity and marginal avoided generation is an assumption; operational CO2, not lifecycle CO2e."
+        },
+        "container_ship_auxiliary_kw_at_berth": {
+          "value": 700,
+          "unit": "kW/container ship at berth",
+          "status": "assumption",
+          "source": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1014J1S.TXT",
+          "note": "Assumed fleet mix using EPA2022 hotelling auxiliary-load defaults across container size categories; operating load already included. Excludes boiler, main engines and shore power."
+        },
+        "berth_auxiliary_kgco2_per_kwh": {
+          "value": 0.695702,
+          "unit": "kgCO2/kWh of berth auxiliary energy",
+          "status": "computed",
+          "source": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1014J1S.TXT",
+          "note": "EPA2022 MGO auxiliary217g fuel/kWh x3.206gCO2/gfuel. Assumed all relevant hotelling load burns this fuel; operational CO2 excludes lifecycle/nonCO2 effects."
+        }
+      },
+      "high": {
+        "ship_extra_restow_fraction_of_total_moves": {
+          "value": 0.15,
+          "unit": "extra ship lifts/all ship lifts",
+          "status": "assumption",
+          "source": null,
+          "note": "Global restow-incidence ASSUMPTION, without an observed world rate or calibration dataset. Some restows are required; this share does not establish avoidable planning waste."
+        },
+        "yard_extra_rehandles_per_relevant_primary_move": {
+          "value": 0.21428571428571427,
+          "unit": "extra yard lifts/relevant primary retrieval",
+          "status": "assumption",
+          "source": "https://informs-sim.org/wsc13papers/includes/files/305.pdf",
+          "note": "Worldwide transfer ASSUMPTION: Legato/Mazza WSC2013 Table 2 simulated reshuffles for real loading plans; ratios 23.67/633, 33.24/360, 18/84. Selected case sensitivity, not a global observed distribution."
+        },
+        "yard_eligible_throughput_fraction": {
+          "value": 0.5,
+          "unit": "fraction of primary throughput",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed loaded-export/retrieval-relevant throughput; avoids applying the yard ratio to all port throughput."
+        },
+        "ship_extra_lift_charge_usd": {
+          "value": 150,
+          "unit": "USD/extra ship lift",
+          "status": "assumption",
+          "source": "anchor-sources-v6.md#broader-extra-lift-prices-revised-source-survey",
+          "note": "Assumed price sensitivity discounted from regional list-tariff context: SAGT USD46.50-80/lift; Yusen LA USD205.93 cell shift; Liverpool GBP192.92/lift. Not a weighted world price or marginal operating cost."
+        },
+        "yard_extra_lift_charge_usd": {
+          "value": 50,
+          "unit": "USD/extra yard lift",
+          "status": "assumption",
+          "source": "anchor-sources-v6.md#broader-extra-lift-prices-revised-source-survey",
+          "note": "Assumed sensitivity using Ries USD10/rehandle cost context and regional charge context: SAGT sorting USD25-47/container, Yusen mounting/grounding USD99.41, Liverpool GBP57.03/additional yard lift. Different service bundles; not a measured global marginal cost."
+        },
+        "global_container_calls_per_year": {
+          "value": 520000,
+          "unit": "container-vessel calls/year",
+          "status": "computed",
+          "source": "https://unctad.org/system/files/official-document/rmt2025ch4_en.pdf",
+          "note": "Rounded computed 2 x approximately260000 calls/half-year. UNCTAD RMT2025 ch4 says 2024 halves stayed near H2 2023; AIS/IMO >=1000GT coverage, not exact all-vessel census."
+        },
+        "berth_hours_per_call": {
+          "value": 45.0,
+          "unit": "berth hours/call",
+          "status": "assumption",
+          "source": "https://ppp.worldbank.org/sites/default/files/2026-01/The%20Container%20Port%20Performance%20Index%202020%20to%202024%20-%20Trends%20and%20Lessons%20Learned.pdf",
+          "note": "Assumed global port hours20/35/60 x CPPI75% berth share. CPPI Table5.1 call-size means are context, not a fleet mean; excludes anchorage in the resulting berth hours."
+        },
+        "charter_usd_per_day": {
+          "value": 72722,
+          "unit": "USD/vessel day",
+          "status": "assumption",
+          "source": "https://www.vhbs.de/index.php?id=28&L=1",
+          "note": "Assumed world fleet proxies selected from VHBS29Oct2026 twelve-month assessments for1100/2500/6500TEU. Sourced assessments, unmeasured world mix. Charter opportunity value excludes separate fuel dollars."
+        },
+        "reducible_berth_share": {
+          "value": 0.1,
+          "unit": "fraction of berth hours",
+          "status": "assumption",
+          "source": null,
+          "note": "Assume removing modeled extra work shortens berth stay2/5/10%; critical-path and parallel-crane effect, not a measured elasticity. Ship-time opportunity only, with no separate fuel charge."
+        },
+        "carrier_planner_hours_per_call": {
+          "value": 3,
+          "unit": "carrier planner hours/call",
+          "status": "assumption",
+          "source": "https://www.jstage.jst.go.jp/article/pjsai/JSAI2019/0/JSAI2019_2C5E502/_pdf/-char/ja",
+          "note": "Assumed global transfer of published2-3h whole-port allocation effort; midpoint2.5h. Full workflow-effort pool before capture, not all waste or time already saved."
+        },
+        "carrier_planner_usd_per_hour": {
+          "value": 60,
+          "unit": "USD/carrier planner hour",
+          "status": "assumption",
+          "source": "https://www.bls.gov/ooh/business-and-financial/logisticians.htm",
+          "note": "Assumed global opportunity-cost spread; BLS May2025 US logisticians medianUSD82320/year /2080h =39.58 rounded is context, not a global port-planner wage. Carrier planning excludes terminal tariff labor."
+        },
+        "capture_fraction": {
+          "value": 0.2,
+          "unit": "fraction of total gross prize",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed combined adoption, eligibility and realized improvement applied once to the gross opportunity; not the scale scenarios' throughput adoption."
+        },
+        "marginal_electric_quay_kwh_per_extra_lift": {
+          "value": 4,
+          "unit": "kWh/extra electric quay lift",
+          "status": "assumption",
+          "source": null,
+          "note": "Assumed worldwide transfer of dated PEMA total-minus-auxiliary example; not applicable to every crane or every restow."
+        },
+        "marginal_yard_kwh_per_extra_lift": {
+          "value": 0,
+          "unit": "kWh/extra yard lift credited",
+          "status": "assumption",
+          "source": null,
+          "note": "Unquantified: no comparable global marginal yard-energy evidence selected; zero emissions credit, not a claim yard lifts use zero energy."
+        },
+        "electricity_kgco2_per_kwh": {
+          "value": 0.445,
+          "unit": "kgCO2/kWh",
+          "status": "assumption",
+          "source": "https://www.iea.org/reports/electricity-2025/emissions",
+          "note": "IEA Electricity2025 reports2024 world generation intensity445gCO2/kWh. Transfer to port electricity and marginal avoided generation is an assumption; operational CO2, not lifecycle CO2e."
+        },
+        "container_ship_auxiliary_kw_at_berth": {
+          "value": 1320,
+          "unit": "kW/container ship at berth",
+          "status": "assumption",
+          "source": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1014J1S.TXT",
+          "note": "Assumed fleet mix using EPA2022 hotelling auxiliary-load defaults across container size categories; operating load already included. Excludes boiler, main engines and shore power."
+        },
+        "berth_auxiliary_kgco2_per_kwh": {
+          "value": 0.695702,
+          "unit": "kgCO2/kWh of berth auxiliary energy",
+          "status": "computed",
+          "source": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1014J1S.TXT",
+          "note": "EPA2022 MGO auxiliary217g fuel/kWh x3.206gCO2/gfuel. Assumed all relevant hotelling load burns this fuel; operational CO2 excludes lifecycle/nonCO2 effects."
+        }
+      }
+    }
+  },
+  "pilot": {
+    "low": {
+      "label": "projection",
+      "annual_calls": 52,
+      "annual_primary_moves": 5200,
+      "annual_throughput_teu": 7800.0,
+      "per_call": {
+        "baseline_extra_rehandles": 2.0,
+        "avoided_extra_rehandles": 0.2,
+        "initial_planner_hours_saved": 1,
+        "instruction_planner_hours_saved": 0.3333333333333333,
+        "rework_planner_hours_saved": 0.05,
+        "total_planner_hours_saved": 1.3833333333333333,
+        "handling_charge_equivalent_usd": 4.172,
+        "planner_labor_equivalent_usd": 27.666666666666664,
+        "total_equivalent_usd": 31.838666666666665
+      },
+      "annual": {
+        "baseline_extra_rehandles": 104.0,
+        "avoided_extra_rehandles": 10.4,
+        "initial_planner_hours_saved": 52,
+        "instruction_planner_hours_saved": 17.333333333333332,
+        "rework_planner_hours_saved": 2.6,
+        "total_planner_hours_saved": 71.93333333333334,
+        "handling_charge_equivalent_usd": 216.944,
+        "planner_labor_equivalent_usd": 1438.6666666666665,
+        "total_equivalent_usd": 1655.6106666666665
+      }
+    },
+    "mid": {
+      "label": "projection",
+      "annual_calls": 260,
+      "annual_primary_moves": 39000,
+      "annual_throughput_teu": 58500.0,
+      "per_call": {
+        "baseline_extra_rehandles": 7.5,
+        "avoided_extra_rehandles": 1.5,
+        "initial_planner_hours_saved": 1.75,
+        "instruction_planner_hours_saved": 1.3333333333333333,
+        "rework_planner_hours_saved": 0.25,
+        "total_planner_hours_saved": 3.333333333333333,
+        "handling_charge_equivalent_usd": 31.29,
+        "planner_labor_equivalent_usd": 99.99999999999999,
+        "total_equivalent_usd": 131.29
+      },
+      "annual": {
+        "baseline_extra_rehandles": 1950.0,
+        "avoided_extra_rehandles": 390.0,
+        "initial_planner_hours_saved": 455.0,
+        "instruction_planner_hours_saved": 346.66666666666663,
+        "rework_planner_hours_saved": 65.0,
+        "total_planner_hours_saved": 866.6666666666666,
+        "handling_charge_equivalent_usd": 8135.4,
+        "planner_labor_equivalent_usd": 25999.999999999996,
+        "total_equivalent_usd": 34135.4
+      }
+    },
+    "high": {
+      "label": "projection",
+      "annual_calls": 1040,
+      "annual_primary_moves": 202800,
+      "annual_throughput_teu": 304200.0,
+      "per_call": {
+        "baseline_extra_rehandles": 19.5,
+        "avoided_extra_rehandles": 5.85,
+        "initial_planner_hours_saved": 2.5,
+        "instruction_planner_hours_saved": 2.85,
+        "rework_planner_hours_saved": 0.75,
+        "total_planner_hours_saved": 6.1,
+        "handling_charge_equivalent_usd": 122.03099999999999,
+        "planner_labor_equivalent_usd": 244.0,
+        "total_equivalent_usd": 366.031
+      },
+      "annual": {
+        "baseline_extra_rehandles": 20280.0,
+        "avoided_extra_rehandles": 6084.0,
+        "initial_planner_hours_saved": 2600.0,
+        "instruction_planner_hours_saved": 2964.0,
+        "rework_planner_hours_saved": 780.0,
+        "total_planner_hours_saved": 6344.0,
+        "handling_charge_equivalent_usd": 126912.23999999999,
+        "planner_labor_equivalent_usd": 253760.0,
+        "total_equivalent_usd": 380672.24
+      }
+    }
+  },
+  "scale": {
+    "low": {
+      "label": "projection",
+      "annual_calls": 12270.6774,
+      "annual_primary_moves": 6135338.7,
+      "annual_throughput_teu": 9203008.05,
+      "per_call": {
+        "baseline_extra_rehandles": 10.0,
+        "avoided_extra_rehandles": 1.0,
+        "initial_planner_hours_saved": 1,
+        "instruction_planner_hours_saved": 0.3333333333333333,
+        "rework_planner_hours_saved": 0.05,
+        "total_planner_hours_saved": 1.3833333333333333,
+        "handling_charge_equivalent_usd": 20.86,
+        "planner_labor_equivalent_usd": 27.666666666666664,
+        "total_equivalent_usd": 48.526666666666664
+      },
+      "annual": {
+        "baseline_extra_rehandles": 122706.774,
+        "avoided_extra_rehandles": 12270.6774,
+        "initial_planner_hours_saved": 12270.6774,
+        "instruction_planner_hours_saved": 4090.2258,
+        "rework_planner_hours_saved": 613.5338700000001,
+        "total_planner_hours_saved": 16974.43707,
+        "handling_charge_equivalent_usd": 255966.330564,
+        "planner_labor_equivalent_usd": 339488.7414,
+        "total_equivalent_usd": 595455.071964
+      }
+    },
+    "mid": {
+      "label": "projection",
+      "annual_calls": 20451.129,
+      "annual_primary_moves": 30676693.5,
+      "annual_throughput_teu": 46015040.25,
+      "per_call": {
+        "baseline_extra_rehandles": 75.0,
+        "avoided_extra_rehandles": 15.0,
+        "initial_planner_hours_saved": 1.75,
+        "instruction_planner_hours_saved": 1.3333333333333333,
+        "rework_planner_hours_saved": 0.25,
+        "total_planner_hours_saved": 3.333333333333333,
+        "handling_charge_equivalent_usd": 312.9,
+        "planner_labor_equivalent_usd": 99.99999999999999,
+        "total_equivalent_usd": 412.9
+      },
+      "annual": {
+        "baseline_extra_rehandles": 1533834.675,
+        "avoided_extra_rehandles": 306766.935,
+        "initial_planner_hours_saved": 35789.47575,
+        "instruction_planner_hours_saved": 27268.172,
+        "rework_planner_hours_saved": 5112.78225,
+        "total_planner_hours_saved": 68170.43,
+        "handling_charge_equivalent_usd": 6399158.264099999,
+        "planner_labor_equivalent_usd": 2045112.9,
+        "total_equivalent_usd": 8444271.1641
+      }
+    },
+    "high": {
+      "label": "projection",
+      "annual_calls": 40902.258,
+      "annual_primary_moves": 122706774.0,
+      "annual_throughput_teu": 184060161.0,
+      "per_call": {
+        "baseline_extra_rehandles": 300.0,
+        "avoided_extra_rehandles": 90.0,
+        "initial_planner_hours_saved": 2.5,
+        "instruction_planner_hours_saved": 2.85,
+        "rework_planner_hours_saved": 0.75,
+        "total_planner_hours_saved": 6.1,
+        "handling_charge_equivalent_usd": 1877.3999999999999,
+        "planner_labor_equivalent_usd": 244.0,
+        "total_equivalent_usd": 2121.3999999999996
+      },
+      "annual": {
+        "baseline_extra_rehandles": 12270677.4,
+        "avoided_extra_rehandles": 3681203.22,
+        "initial_planner_hours_saved": 102255.645,
+        "instruction_planner_hours_saved": 116571.43530000001,
+        "rework_planner_hours_saved": 30676.6935,
+        "total_planner_hours_saved": 249503.7738,
+        "handling_charge_equivalent_usd": 76789899.1692,
+        "planner_labor_equivalent_usd": 9980150.952,
+        "total_equivalent_usd": 86770050.1212
+      }
+    }
+  },
+  "prize": {
+    "low": {
+      "label": "projection",
+      "interpretation": "Global annual gross opportunity pool before capture, not a result, revenue forecast or all avoidable cost. Alternative cases; do not add to pilot or scale outputs. Handling charges, ship-time and carrier labor are distinct opportunity-equivalent categories, not one party's profit. No fuel dollars are added.",
+      "annual_primary_ship_moves": 613533870.0,
+      "annual_extra_ship_lifts": 32291256.315789476,
+      "annual_extra_yard_lifts": 11471047.9485782,
+      "annual_baseline_berth_hours": 7800000.0,
+      "avoided_berth_hours": 156000.0,
+      "ship_handling_equivalent_usd": 968737689.4736843,
+      "yard_handling_equivalent_usd": 114710479.485782,
+      "handling_equivalent_usd": 1083448168.9594662,
+      "ship_time_equivalent_usd": 116057500.0,
+      "carrier_planner_hours": 1040000,
+      "planner_labor_equivalent_usd": 20800000,
+      "total_gross_prize_usd": 1220305668.9594662,
+      "capture_fraction": 0.01,
+      "captured_opportunity_usd": 12203056.689594662,
+      "emissions": {
+        "label": "projection",
+        "interpretation": "Separate nonmonetized operational CO2 potential: extra ship lifts assumed electric and removable, plus assumed reducible berth hours. Yard energy unquantified by default. Not an inventory, lifecycle CO2e or achieved reduction; no emissions are monetized.",
+        "ship_extra_lift_kwh": 129165025.2631579,
+        "yard_extra_lift_kwh": 0.0,
+        "berth_auxiliary_kwh": 53040000.0,
+        "ship_extra_lift_kgco2": 57478436.24210527,
+        "yard_extra_lift_kgco2": 0.0,
+        "berth_auxiliary_kgco2": 36900034.080000006,
+        "total_gross_kgco2": 94378470.32210527,
+        "total_gross_million_tonnes_co2": 0.09437847032210528,
+        "captured_kgco2": 943784.7032210528,
+        "captured_million_tonnes_co2": 0.0009437847032210528
+      },
+      "ship_handling_equivalent_million_usd": 968.7376894736843,
+      "ship_handling_equivalent_billion_usd": 0.9687376894736843,
+      "yard_handling_equivalent_million_usd": 114.710479485782,
+      "yard_handling_equivalent_billion_usd": 0.114710479485782,
+      "handling_equivalent_million_usd": 1083.4481689594663,
+      "handling_equivalent_billion_usd": 1.0834481689594662,
+      "ship_time_equivalent_million_usd": 116.0575,
+      "ship_time_equivalent_billion_usd": 0.1160575,
+      "planner_labor_equivalent_million_usd": 20.8,
+      "planner_labor_equivalent_billion_usd": 0.0208,
+      "total_gross_prize_million_usd": 1220.3056689594662,
+      "total_gross_prize_billion_usd": 1.2203056689594662,
+      "captured_opportunity_million_usd": 12.203056689594662,
+      "captured_opportunity_billion_usd": 0.012203056689594661,
+      "annual_extra_ship_million_lifts": 32.291256315789475,
+      "annual_extra_yard_million_lifts": 11.4710479485782,
+      "annual_primary_ship_million_moves": 613.53387,
+      "world_throughput_million_teu": 920.300805,
+      "annual_container_thousand_calls": 520.0,
+      "electric_quay_kgco2_per_extra_lift": 1.78,
+      "avoided_berth_million_hours": 0.156,
+      "carrier_planner_million_hours": 1.04
+    },
+    "mid": {
+      "label": "projection",
+      "interpretation": "Global annual gross opportunity pool before capture, not a result, revenue forecast or all avoidable cost. Alternative cases; do not add to pilot or scale outputs. Handling charges, ship-time and carrier labor are distinct opportunity-equivalent categories, not one party's profit. No fuel dollars are added.",
+      "annual_primary_ship_moves": 613533870.0,
+      "annual_extra_ship_lifts": 68170430.0,
+      "annual_extra_yard_lifts": 28324813.665000003,
+      "annual_baseline_berth_hours": 13650000.0,
+      "avoided_berth_hours": 682500.0,
+      "ship_handling_equivalent_usd": 5112782250.0,
+      "yard_handling_equivalent_usd": 708120341.6250001,
+      "handling_equivalent_usd": 5820902591.625,
+      "ship_time_equivalent_usd": 1129679687.5,
+      "carrier_planner_hours": 1300000.0,
+      "planner_labor_equivalent_usd": 51454000.0,
+      "total_gross_prize_usd": 7002036279.125,
+      "capture_fraction": 0.05,
+      "captured_opportunity_usd": 350101813.95625,
+      "emissions": {
+        "label": "projection",
+        "interpretation": "Separate nonmonetized operational CO2 potential: extra ship lifts assumed electric and removable, plus assumed reducible berth hours. Yard energy unquantified by default. Not an inventory, lifecycle CO2e or achieved reduction; no emissions are monetized.",
+        "ship_extra_lift_kwh": 272681720.0,
+        "yard_extra_lift_kwh": 0.0,
+        "berth_auxiliary_kwh": 477750000.0,
+        "ship_extra_lift_kgco2": 121343365.4,
+        "yard_extra_lift_kgco2": 0.0,
+        "berth_auxiliary_kgco2": 332371630.5,
+        "total_gross_kgco2": 453714995.9,
+        "total_gross_million_tonnes_co2": 0.4537149959,
+        "captured_kgco2": 22685749.795,
+        "captured_million_tonnes_co2": 0.022685749795
+      },
+      "ship_handling_equivalent_million_usd": 5112.78225,
+      "ship_handling_equivalent_billion_usd": 5.11278225,
+      "yard_handling_equivalent_million_usd": 708.1203416250002,
+      "yard_handling_equivalent_billion_usd": 0.7081203416250001,
+      "handling_equivalent_million_usd": 5820.902591625,
+      "handling_equivalent_billion_usd": 5.820902591625,
+      "ship_time_equivalent_million_usd": 1129.6796875,
+      "ship_time_equivalent_billion_usd": 1.1296796875,
+      "planner_labor_equivalent_million_usd": 51.454,
+      "planner_labor_equivalent_billion_usd": 0.051454,
+      "total_gross_prize_million_usd": 7002.036279125,
+      "total_gross_prize_billion_usd": 7.002036279125,
+      "captured_opportunity_million_usd": 350.10181395625,
+      "captured_opportunity_billion_usd": 0.35010181395625,
+      "annual_extra_ship_million_lifts": 68.17043,
+      "annual_extra_yard_million_lifts": 28.324813665000004,
+      "annual_primary_ship_million_moves": 613.53387,
+      "world_throughput_million_teu": 920.300805,
+      "annual_container_thousand_calls": 520.0,
+      "electric_quay_kgco2_per_extra_lift": 1.78,
+      "avoided_berth_million_hours": 0.6825,
+      "carrier_planner_million_hours": 1.3
+    },
+    "high": {
+      "label": "projection",
+      "interpretation": "Global annual gross opportunity pool before capture, not a result, revenue forecast or all avoidable cost. Alternative cases; do not add to pilot or scale outputs. Handling charges, ship-time and carrier labor are distinct opportunity-equivalent categories, not one party's profit. No fuel dollars are added.",
+      "annual_primary_ship_moves": 613533870.0,
+      "annual_extra_ship_lifts": 108270682.94117647,
+      "annual_extra_yard_lifts": 65735771.78571428,
+      "annual_baseline_berth_hours": 23400000.0,
+      "avoided_berth_hours": 2340000.0,
+      "ship_handling_equivalent_usd": 16240602441.176472,
+      "yard_handling_equivalent_usd": 3286788589.285714,
+      "handling_equivalent_usd": 19527391030.462185,
+      "ship_time_equivalent_usd": 7090395000.0,
+      "carrier_planner_hours": 1560000,
+      "planner_labor_equivalent_usd": 93600000,
+      "total_gross_prize_usd": 26711386030.462185,
+      "capture_fraction": 0.2,
+      "captured_opportunity_usd": 5342277206.092438,
+      "emissions": {
+        "label": "projection",
+        "interpretation": "Separate nonmonetized operational CO2 potential: extra ship lifts assumed electric and removable, plus assumed reducible berth hours. Yard energy unquantified by default. Not an inventory, lifecycle CO2e or achieved reduction; no emissions are monetized.",
+        "ship_extra_lift_kwh": 433082731.7647059,
+        "yard_extra_lift_kwh": 0.0,
+        "berth_auxiliary_kwh": 3088800000.0,
+        "ship_extra_lift_kgco2": 192721815.63529414,
+        "yard_extra_lift_kgco2": 0.0,
+        "berth_auxiliary_kgco2": 2148884337.6,
+        "total_gross_kgco2": 2341606153.235294,
+        "total_gross_million_tonnes_co2": 2.341606153235294,
+        "captured_kgco2": 468321230.6470588,
+        "captured_million_tonnes_co2": 0.4683212306470588
+      },
+      "ship_handling_equivalent_million_usd": 16240.602441176472,
+      "ship_handling_equivalent_billion_usd": 16.24060244117647,
+      "yard_handling_equivalent_million_usd": 3286.7885892857144,
+      "yard_handling_equivalent_billion_usd": 3.286788589285714,
+      "handling_equivalent_million_usd": 19527.391030462186,
+      "handling_equivalent_billion_usd": 19.527391030462184,
+      "ship_time_equivalent_million_usd": 7090.395,
+      "ship_time_equivalent_billion_usd": 7.090395,
+      "planner_labor_equivalent_million_usd": 93.6,
+      "planner_labor_equivalent_billion_usd": 0.0936,
+      "total_gross_prize_million_usd": 26711.386030462185,
+      "total_gross_prize_billion_usd": 26.711386030462187,
+      "captured_opportunity_million_usd": 5342.277206092438,
+      "captured_opportunity_billion_usd": 5.3422772060924375,
+      "annual_extra_ship_million_lifts": 108.27068294117647,
+      "annual_extra_yard_million_lifts": 65.73577178571428,
+      "annual_primary_ship_million_moves": 613.53387,
+      "world_throughput_million_teu": 920.300805,
+      "annual_container_thousand_calls": 520.0,
+      "electric_quay_kgco2_per_extra_lift": 1.78,
+      "avoided_berth_million_hours": 2.34,
+      "carrier_planner_million_hours": 1.56
+    }
+  },
+  "conditional_emissions": {
+    "label": "projection",
+    "assumption": "Subtract allocated auxiliary energy to proxy marginal lift work. No berth-time or annual emissions estimate; do not apply to mixed/global rehandles.",
+    "marginal_kwh_per_comparable_electric_quay_move": 4,
+    "kgco2e_per_comparable_avoided_electric_quay_move": 2.2248
+  },
+  "exposure": {
+    "label": "projection",
+    "interpretation": "Commercial terminal-revenue benchmarks plus full annual vessel time at berth, valued only with mid-case call, berth-hour and charter inputs. Exposure is a cost-context frame, not waste, savings, or an amount added to the prize. Terminal charges already include extra handling. No planner or fuel dollars are added.",
+    "berth_time_usd": 22593593750.0,
+    "berth_time_billion_usd": 22.59359375,
+    "low": {
+      "terminal_revenue_usd": 62670000000,
+      "terminal_revenue_billion_usd": 62.67,
+      "revenue_per_primary_lift_usd": 102.14594998642862,
+      "total_usd": 85263593750.0,
+      "total_billion_usd": 85.26359375
+    },
+    "mid": {
+      "terminal_revenue_usd": 75500000000,
+      "terminal_revenue_billion_usd": 75.5,
+      "revenue_per_primary_lift_usd": 123.05759093625915,
+      "total_usd": 98093593750.0,
+      "total_billion_usd": 98.09359375
+    },
+    "high": {
+      "terminal_revenue_usd": 75500000000,
+      "terminal_revenue_billion_usd": 75.5,
+      "revenue_per_primary_lift_usd": 123.05759093625915,
+      "total_usd": 98093593750.0,
+      "total_billion_usd": 98.09359375
+    },
+    "headline_billion_usd": 90,
+    "headline_one_percent_billion_usd": 0.9,
+    "headline_rounding_rule": "Round the lower-end exposure total to the nearest ten billion USD. This is a rounded lower-end frame, not the middle benchmark, a saving, or a precisely measured total. One percent uses that rounded frame."
+  },
+  "revenue_crosscheck": {
+    "low": {
+      "low": {
+        "ship_handling_share": 0.015457757930009324,
+        "handling_share": 0.017288146943664692,
+        "total_prize_share": 0.019471927061743517
+      },
+      "mid": {
+        "ship_handling_share": 0.012830962774485885,
+        "handling_share": 0.014350306873635314,
+        "total_prize_share": 0.01616298899284061
+      },
+      "high": {
+        "ship_handling_share": 0.012830962774485885,
+        "handling_share": 0.014350306873635314,
+        "total_prize_share": 0.01616298899284061
+      }
+    },
+    "mid": {
+      "low": {
+        "ship_handling_share": 0.08158261129727142,
+        "handling_share": 0.09288180296194351,
+        "total_prize_share": 0.1117286784605872
+      },
+      "mid": {
+        "ship_handling_share": 0.0677189701986755,
+        "handling_share": 0.07709804757119205,
+        "total_prize_share": 0.09274220237251656
+      },
+      "high": {
+        "ship_handling_share": 0.0677189701986755,
+        "handling_share": 0.07709804757119205,
+        "total_prize_share": 0.09274220237251656
+      }
+    },
+    "high": {
+      "low": {
+        "ship_handling_share": 0.25914476529721514,
+        "handling_share": 0.3115907297026039,
+        "total_prize_share": 0.42622285033448515
+      },
+      "mid": {
+        "ship_handling_share": 0.21510731710167513,
+        "handling_share": 0.2586409408008236,
+        "total_prize_share": 0.3537931924564528
+      },
+      "high": {
+        "ship_handling_share": 0.21510731710167513,
+        "handling_share": 0.2586409408008236,
+        "total_prize_share": 0.3537931924564528
+      }
+    }
+  },
+  "local_projection": {
+    "laem_chabang": {
+      "label": "projection",
+      "annual_calls": 9325,
+      "world_calls": 520000,
+      "share_of_world_calls": 0.01793269230769231,
+      "mid_pool_usd": 125565362.12084736,
+      "mid_pool_million_usd": 125.56536212084735,
+      "headline_mid_pool_million_usd": 125,
+      "note": "Illustrative allocation from exact call share, with identical global inputs and average workload per call. Not eligible feeder demand or measured local saving; do not add to the world pool. Headline rounds to the nearest USD5M. Unavailable if world calls are zero or fewer than local calls."
+    }
+  },
+  "capture": {
+    "low": {
+      "low": {
+        "fraction": 0.01,
+        "opportunity_million_usd": 12.203056689594662,
+        "opportunity_billion_usd": 0.012203056689594661
+      },
+      "mid": {
+        "fraction": 0.05,
+        "opportunity_million_usd": 61.01528344797331,
+        "opportunity_billion_usd": 0.06101528344797331
+      },
+      "high": {
+        "fraction": 0.2,
+        "opportunity_million_usd": 244.06113379189324,
+        "opportunity_billion_usd": 0.24406113379189323
+      }
+    },
+    "mid": {
+      "low": {
+        "fraction": 0.01,
+        "opportunity_million_usd": 70.02036279125001,
+        "opportunity_billion_usd": 0.07002036279125
+      },
+      "mid": {
+        "fraction": 0.05,
+        "opportunity_million_usd": 350.10181395625,
+        "opportunity_billion_usd": 0.35010181395625
+      },
+      "high": {
+        "fraction": 0.2,
+        "opportunity_million_usd": 1400.407255825,
+        "opportunity_billion_usd": 1.400407255825
+      }
+    },
+    "high": {
+      "low": {
+        "fraction": 0.01,
+        "opportunity_million_usd": 267.1138603046218,
+        "opportunity_billion_usd": 0.26711386030462186
+      },
+      "mid": {
+        "fraction": 0.05,
+        "opportunity_million_usd": 1335.5693015231095,
+        "opportunity_billion_usd": 1.3355693015231094
+      },
+      "high": {
+        "fraction": 0.2,
+        "opportunity_million_usd": 5342.277206092438,
+        "opportunity_billion_usd": 5.3422772060924375
+      }
+    }
+  },
+  "report_numbers": {
+    "inputs.context.world_container_throughput_teu": 920300805,
+    "inputs.context.teu_per_primary_move": 1.5,
+    "inputs.context.electric_quay_total_kwh_per_move": 6,
+    "inputs.context.electric_quay_auxiliary_kwh_per_move": 2,
+    "inputs.context.thai_grid_kgco2e_per_kwh": 0.5562,
+    "inputs.context.pilot_min_capacity_teu": 500,
+    "inputs.context.pilot_max_capacity_teu": 800,
+    "inputs.context.pilot_max_boxes": 195,
+    "inputs.context.pilot_max_fill": 0.7,
+    "inputs.context.laem_chabang_container_calls_per_year": 9325,
+    "inputs.context.terminal_revenue_low_usd": 62670000000,
+    "inputs.context.terminal_revenue_mid_usd": 75500000000,
+    "inputs.context.terminal_revenue_high_usd": 75500000000,
+    "inputs.pilot.low.primary_moves_per_call": 100,
+    "inputs.pilot.low.extra_rehandles_per_primary_move": 0.02,
+    "inputs.pilot.low.rehandle_reduction": 0.1,
+    "inputs.pilot.low.move_charge_usd": 20.86,
+    "inputs.pilot.low.planner_usd_per_hour": 20,
+    "inputs.pilot.low.initial_baseline_hours": 2,
+    "inputs.pilot.low.initial_assisted_hours": 1,
+    "inputs.pilot.low.instruction_events_per_call": 1,
+    "inputs.pilot.low.instruction_baseline_minutes": 30,
+    "inputs.pilot.low.instruction_assisted_minutes": 10,
+    "inputs.pilot.low.rework_events_avoided_per_call": 0.1,
+    "inputs.pilot.low.rework_minutes_per_event": 30,
+    "inputs.pilot.low.annual_calls": 52,
+    "inputs.pilot.mid.primary_moves_per_call": 150,
+    "inputs.pilot.mid.extra_rehandles_per_primary_move": 0.05,
+    "inputs.pilot.mid.rehandle_reduction": 0.2,
+    "inputs.pilot.mid.move_charge_usd": 20.86,
+    "inputs.pilot.mid.planner_usd_per_hour": 30,
+    "inputs.pilot.mid.initial_baseline_hours": 2.5,
+    "inputs.pilot.mid.initial_assisted_hours": 0.75,
+    "inputs.pilot.mid.instruction_events_per_call": 2,
+    "inputs.pilot.mid.instruction_baseline_minutes": 45,
+    "inputs.pilot.mid.instruction_assisted_minutes": 5,
+    "inputs.pilot.mid.rework_events_avoided_per_call": 0.25,
+    "inputs.pilot.mid.rework_minutes_per_event": 60,
+    "inputs.pilot.mid.annual_calls": 260,
+    "inputs.pilot.high.primary_moves_per_call": 195,
+    "inputs.pilot.high.extra_rehandles_per_primary_move": 0.1,
+    "inputs.pilot.high.rehandle_reduction": 0.3,
+    "inputs.pilot.high.move_charge_usd": 20.86,
+    "inputs.pilot.high.planner_usd_per_hour": 40,
+    "inputs.pilot.high.initial_baseline_hours": 3,
+    "inputs.pilot.high.initial_assisted_hours": 0.5,
+    "inputs.pilot.high.instruction_events_per_call": 3,
+    "inputs.pilot.high.instruction_baseline_minutes": 60,
+    "inputs.pilot.high.instruction_assisted_minutes": 3,
+    "inputs.pilot.high.rework_events_avoided_per_call": 0.5,
+    "inputs.pilot.high.rework_minutes_per_event": 90,
+    "inputs.pilot.high.annual_calls": 1040,
+    "inputs.scale.low.primary_moves_per_call": 500,
+    "inputs.scale.low.extra_rehandles_per_primary_move": 0.02,
+    "inputs.scale.low.rehandle_reduction": 0.1,
+    "inputs.scale.low.move_charge_usd": 20.86,
+    "inputs.scale.low.planner_usd_per_hour": 20,
+    "inputs.scale.low.initial_baseline_hours": 2,
+    "inputs.scale.low.initial_assisted_hours": 1,
+    "inputs.scale.low.instruction_events_per_call": 1,
+    "inputs.scale.low.instruction_baseline_minutes": 30,
+    "inputs.scale.low.instruction_assisted_minutes": 10,
+    "inputs.scale.low.rework_events_avoided_per_call": 0.1,
+    "inputs.scale.low.rework_minutes_per_event": 30,
+    "inputs.scale.low.adopted_throughput_share": 0.01,
+    "inputs.scale.low.ship_capacity_teu": 1700,
+    "inputs.scale.mid.primary_moves_per_call": 1500,
+    "inputs.scale.mid.extra_rehandles_per_primary_move": 0.05,
+    "inputs.scale.mid.rehandle_reduction": 0.2,
+    "inputs.scale.mid.move_charge_usd": 20.86,
+    "inputs.scale.mid.planner_usd_per_hour": 30,
+    "inputs.scale.mid.initial_baseline_hours": 2.5,
+    "inputs.scale.mid.initial_assisted_hours": 0.75,
+    "inputs.scale.mid.instruction_events_per_call": 2,
+    "inputs.scale.mid.instruction_baseline_minutes": 45,
+    "inputs.scale.mid.instruction_assisted_minutes": 5,
+    "inputs.scale.mid.rework_events_avoided_per_call": 0.25,
+    "inputs.scale.mid.rework_minutes_per_event": 60,
+    "inputs.scale.mid.adopted_throughput_share": 0.05,
+    "inputs.scale.mid.ship_capacity_teu": 8000,
+    "inputs.scale.high.primary_moves_per_call": 3000,
+    "inputs.scale.high.extra_rehandles_per_primary_move": 0.1,
+    "inputs.scale.high.rehandle_reduction": 0.3,
+    "inputs.scale.high.move_charge_usd": 20.86,
+    "inputs.scale.high.planner_usd_per_hour": 40,
+    "inputs.scale.high.initial_baseline_hours": 3,
+    "inputs.scale.high.initial_assisted_hours": 0.5,
+    "inputs.scale.high.instruction_events_per_call": 3,
+    "inputs.scale.high.instruction_baseline_minutes": 60,
+    "inputs.scale.high.instruction_assisted_minutes": 3,
+    "inputs.scale.high.rework_events_avoided_per_call": 0.5,
+    "inputs.scale.high.rework_minutes_per_event": 90,
+    "inputs.scale.high.adopted_throughput_share": 0.2,
+    "inputs.scale.high.ship_capacity_teu": 20000,
+    "inputs.prize.low.ship_extra_restow_fraction_of_total_moves": 0.05,
+    "inputs.prize.low.yard_extra_rehandles_per_relevant_primary_move": 0.037393364928909954,
+    "inputs.prize.low.yard_eligible_throughput_fraction": 0.5,
+    "inputs.prize.low.ship_extra_lift_charge_usd": 30,
+    "inputs.prize.low.yard_extra_lift_charge_usd": 10,
+    "inputs.prize.low.global_container_calls_per_year": 520000,
+    "inputs.prize.low.berth_hours_per_call": 15.0,
+    "inputs.prize.low.charter_usd_per_day": 17855,
+    "inputs.prize.low.reducible_berth_share": 0.02,
+    "inputs.prize.low.carrier_planner_hours_per_call": 2,
+    "inputs.prize.low.carrier_planner_usd_per_hour": 20,
+    "inputs.prize.low.capture_fraction": 0.01,
+    "inputs.prize.low.marginal_electric_quay_kwh_per_extra_lift": 4,
+    "inputs.prize.low.marginal_yard_kwh_per_extra_lift": 0,
+    "inputs.prize.low.electricity_kgco2_per_kwh": 0.445,
+    "inputs.prize.low.container_ship_auxiliary_kw_at_berth": 340,
+    "inputs.prize.low.berth_auxiliary_kgco2_per_kwh": 0.695702,
+    "inputs.prize.mid.ship_extra_restow_fraction_of_total_moves": 0.1,
+    "inputs.prize.mid.yard_extra_rehandles_per_relevant_primary_move": 0.09233333333333334,
+    "inputs.prize.mid.yard_eligible_throughput_fraction": 0.5,
+    "inputs.prize.mid.ship_extra_lift_charge_usd": 75,
+    "inputs.prize.mid.yard_extra_lift_charge_usd": 25,
+    "inputs.prize.mid.global_container_calls_per_year": 520000,
+    "inputs.prize.mid.berth_hours_per_call": 26.25,
+    "inputs.prize.mid.charter_usd_per_day": 39725,
+    "inputs.prize.mid.reducible_berth_share": 0.05,
+    "inputs.prize.mid.carrier_planner_hours_per_call": 2.5,
+    "inputs.prize.mid.carrier_planner_usd_per_hour": 39.58,
+    "inputs.prize.mid.capture_fraction": 0.05,
+    "inputs.prize.mid.marginal_electric_quay_kwh_per_extra_lift": 4,
+    "inputs.prize.mid.marginal_yard_kwh_per_extra_lift": 0,
+    "inputs.prize.mid.electricity_kgco2_per_kwh": 0.445,
+    "inputs.prize.mid.container_ship_auxiliary_kw_at_berth": 700,
+    "inputs.prize.mid.berth_auxiliary_kgco2_per_kwh": 0.695702,
+    "inputs.prize.high.ship_extra_restow_fraction_of_total_moves": 0.15,
+    "inputs.prize.high.yard_extra_rehandles_per_relevant_primary_move": 0.21428571428571427,
+    "inputs.prize.high.yard_eligible_throughput_fraction": 0.5,
+    "inputs.prize.high.ship_extra_lift_charge_usd": 150,
+    "inputs.prize.high.yard_extra_lift_charge_usd": 50,
+    "inputs.prize.high.global_container_calls_per_year": 520000,
+    "inputs.prize.high.berth_hours_per_call": 45.0,
+    "inputs.prize.high.charter_usd_per_day": 72722,
+    "inputs.prize.high.reducible_berth_share": 0.1,
+    "inputs.prize.high.carrier_planner_hours_per_call": 3,
+    "inputs.prize.high.carrier_planner_usd_per_hour": 60,
+    "inputs.prize.high.capture_fraction": 0.2,
+    "inputs.prize.high.marginal_electric_quay_kwh_per_extra_lift": 4,
+    "inputs.prize.high.marginal_yard_kwh_per_extra_lift": 0,
+    "inputs.prize.high.electricity_kgco2_per_kwh": 0.445,
+    "inputs.prize.high.container_ship_auxiliary_kw_at_berth": 1320,
+    "inputs.prize.high.berth_auxiliary_kgco2_per_kwh": 0.695702,
+    "pilot.low.annual_calls": 52,
+    "pilot.low.annual_primary_moves": 5200,
+    "pilot.low.annual_throughput_teu": 7800.0,
+    "pilot.low.per_call.baseline_extra_rehandles": 2.0,
+    "pilot.low.per_call.avoided_extra_rehandles": 0.2,
+    "pilot.low.per_call.initial_planner_hours_saved": 1,
+    "pilot.low.per_call.instruction_planner_hours_saved": 0.3333333333333333,
+    "pilot.low.per_call.rework_planner_hours_saved": 0.05,
+    "pilot.low.per_call.total_planner_hours_saved": 1.3833333333333333,
+    "pilot.low.per_call.handling_charge_equivalent_usd": 4.172,
+    "pilot.low.per_call.planner_labor_equivalent_usd": 27.666666666666664,
+    "pilot.low.per_call.total_equivalent_usd": 31.838666666666665,
+    "pilot.low.annual.baseline_extra_rehandles": 104.0,
+    "pilot.low.annual.avoided_extra_rehandles": 10.4,
+    "pilot.low.annual.initial_planner_hours_saved": 52,
+    "pilot.low.annual.instruction_planner_hours_saved": 17.333333333333332,
+    "pilot.low.annual.rework_planner_hours_saved": 2.6,
+    "pilot.low.annual.total_planner_hours_saved": 71.93333333333334,
+    "pilot.low.annual.handling_charge_equivalent_usd": 216.944,
+    "pilot.low.annual.planner_labor_equivalent_usd": 1438.6666666666665,
+    "pilot.low.annual.total_equivalent_usd": 1655.6106666666665,
+    "pilot.mid.annual_calls": 260,
+    "pilot.mid.annual_primary_moves": 39000,
+    "pilot.mid.annual_throughput_teu": 58500.0,
+    "pilot.mid.per_call.baseline_extra_rehandles": 7.5,
+    "pilot.mid.per_call.avoided_extra_rehandles": 1.5,
+    "pilot.mid.per_call.initial_planner_hours_saved": 1.75,
+    "pilot.mid.per_call.instruction_planner_hours_saved": 1.3333333333333333,
+    "pilot.mid.per_call.rework_planner_hours_saved": 0.25,
+    "pilot.mid.per_call.total_planner_hours_saved": 3.333333333333333,
+    "pilot.mid.per_call.handling_charge_equivalent_usd": 31.29,
+    "pilot.mid.per_call.planner_labor_equivalent_usd": 99.99999999999999,
+    "pilot.mid.per_call.total_equivalent_usd": 131.29,
+    "pilot.mid.annual.baseline_extra_rehandles": 1950.0,
+    "pilot.mid.annual.avoided_extra_rehandles": 390.0,
+    "pilot.mid.annual.initial_planner_hours_saved": 455.0,
+    "pilot.mid.annual.instruction_planner_hours_saved": 346.66666666666663,
+    "pilot.mid.annual.rework_planner_hours_saved": 65.0,
+    "pilot.mid.annual.total_planner_hours_saved": 866.6666666666666,
+    "pilot.mid.annual.handling_charge_equivalent_usd": 8135.4,
+    "pilot.mid.annual.planner_labor_equivalent_usd": 25999.999999999996,
+    "pilot.mid.annual.total_equivalent_usd": 34135.4,
+    "pilot.high.annual_calls": 1040,
+    "pilot.high.annual_primary_moves": 202800,
+    "pilot.high.annual_throughput_teu": 304200.0,
+    "pilot.high.per_call.baseline_extra_rehandles": 19.5,
+    "pilot.high.per_call.avoided_extra_rehandles": 5.85,
+    "pilot.high.per_call.initial_planner_hours_saved": 2.5,
+    "pilot.high.per_call.instruction_planner_hours_saved": 2.85,
+    "pilot.high.per_call.rework_planner_hours_saved": 0.75,
+    "pilot.high.per_call.total_planner_hours_saved": 6.1,
+    "pilot.high.per_call.handling_charge_equivalent_usd": 122.03099999999999,
+    "pilot.high.per_call.planner_labor_equivalent_usd": 244.0,
+    "pilot.high.per_call.total_equivalent_usd": 366.031,
+    "pilot.high.annual.baseline_extra_rehandles": 20280.0,
+    "pilot.high.annual.avoided_extra_rehandles": 6084.0,
+    "pilot.high.annual.initial_planner_hours_saved": 2600.0,
+    "pilot.high.annual.instruction_planner_hours_saved": 2964.0,
+    "pilot.high.annual.rework_planner_hours_saved": 780.0,
+    "pilot.high.annual.total_planner_hours_saved": 6344.0,
+    "pilot.high.annual.handling_charge_equivalent_usd": 126912.23999999999,
+    "pilot.high.annual.planner_labor_equivalent_usd": 253760.0,
+    "pilot.high.annual.total_equivalent_usd": 380672.24,
+    "scale.low.annual_calls": 12270.6774,
+    "scale.low.annual_primary_moves": 6135338.7,
+    "scale.low.annual_throughput_teu": 9203008.05,
+    "scale.low.per_call.baseline_extra_rehandles": 10.0,
+    "scale.low.per_call.avoided_extra_rehandles": 1.0,
+    "scale.low.per_call.initial_planner_hours_saved": 1,
+    "scale.low.per_call.instruction_planner_hours_saved": 0.3333333333333333,
+    "scale.low.per_call.rework_planner_hours_saved": 0.05,
+    "scale.low.per_call.total_planner_hours_saved": 1.3833333333333333,
+    "scale.low.per_call.handling_charge_equivalent_usd": 20.86,
+    "scale.low.per_call.planner_labor_equivalent_usd": 27.666666666666664,
+    "scale.low.per_call.total_equivalent_usd": 48.526666666666664,
+    "scale.low.annual.baseline_extra_rehandles": 122706.774,
+    "scale.low.annual.avoided_extra_rehandles": 12270.6774,
+    "scale.low.annual.initial_planner_hours_saved": 12270.6774,
+    "scale.low.annual.instruction_planner_hours_saved": 4090.2258,
+    "scale.low.annual.rework_planner_hours_saved": 613.5338700000001,
+    "scale.low.annual.total_planner_hours_saved": 16974.43707,
+    "scale.low.annual.handling_charge_equivalent_usd": 255966.330564,
+    "scale.low.annual.planner_labor_equivalent_usd": 339488.7414,
+    "scale.low.annual.total_equivalent_usd": 595455.071964,
+    "scale.mid.annual_calls": 20451.129,
+    "scale.mid.annual_primary_moves": 30676693.5,
+    "scale.mid.annual_throughput_teu": 46015040.25,
+    "scale.mid.per_call.baseline_extra_rehandles": 75.0,
+    "scale.mid.per_call.avoided_extra_rehandles": 15.0,
+    "scale.mid.per_call.initial_planner_hours_saved": 1.75,
+    "scale.mid.per_call.instruction_planner_hours_saved": 1.3333333333333333,
+    "scale.mid.per_call.rework_planner_hours_saved": 0.25,
+    "scale.mid.per_call.total_planner_hours_saved": 3.333333333333333,
+    "scale.mid.per_call.handling_charge_equivalent_usd": 312.9,
+    "scale.mid.per_call.planner_labor_equivalent_usd": 99.99999999999999,
+    "scale.mid.per_call.total_equivalent_usd": 412.9,
+    "scale.mid.annual.baseline_extra_rehandles": 1533834.675,
+    "scale.mid.annual.avoided_extra_rehandles": 306766.935,
+    "scale.mid.annual.initial_planner_hours_saved": 35789.47575,
+    "scale.mid.annual.instruction_planner_hours_saved": 27268.172,
+    "scale.mid.annual.rework_planner_hours_saved": 5112.78225,
+    "scale.mid.annual.total_planner_hours_saved": 68170.43,
+    "scale.mid.annual.handling_charge_equivalent_usd": 6399158.264099999,
+    "scale.mid.annual.planner_labor_equivalent_usd": 2045112.9,
+    "scale.mid.annual.total_equivalent_usd": 8444271.1641,
+    "scale.high.annual_calls": 40902.258,
+    "scale.high.annual_primary_moves": 122706774.0,
+    "scale.high.annual_throughput_teu": 184060161.0,
+    "scale.high.per_call.baseline_extra_rehandles": 300.0,
+    "scale.high.per_call.avoided_extra_rehandles": 90.0,
+    "scale.high.per_call.initial_planner_hours_saved": 2.5,
+    "scale.high.per_call.instruction_planner_hours_saved": 2.85,
+    "scale.high.per_call.rework_planner_hours_saved": 0.75,
+    "scale.high.per_call.total_planner_hours_saved": 6.1,
+    "scale.high.per_call.handling_charge_equivalent_usd": 1877.3999999999999,
+    "scale.high.per_call.planner_labor_equivalent_usd": 244.0,
+    "scale.high.per_call.total_equivalent_usd": 2121.3999999999996,
+    "scale.high.annual.baseline_extra_rehandles": 12270677.4,
+    "scale.high.annual.avoided_extra_rehandles": 3681203.22,
+    "scale.high.annual.initial_planner_hours_saved": 102255.645,
+    "scale.high.annual.instruction_planner_hours_saved": 116571.43530000001,
+    "scale.high.annual.rework_planner_hours_saved": 30676.6935,
+    "scale.high.annual.total_planner_hours_saved": 249503.7738,
+    "scale.high.annual.handling_charge_equivalent_usd": 76789899.1692,
+    "scale.high.annual.planner_labor_equivalent_usd": 9980150.952,
+    "scale.high.annual.total_equivalent_usd": 86770050.1212,
+    "prize.low.annual_primary_ship_moves": 613533870.0,
+    "prize.low.annual_extra_ship_lifts": 32291256.315789476,
+    "prize.low.annual_extra_yard_lifts": 11471047.9485782,
+    "prize.low.annual_baseline_berth_hours": 7800000.0,
+    "prize.low.avoided_berth_hours": 156000.0,
+    "prize.low.ship_handling_equivalent_usd": 968737689.4736843,
+    "prize.low.yard_handling_equivalent_usd": 114710479.485782,
+    "prize.low.handling_equivalent_usd": 1083448168.9594662,
+    "prize.low.ship_time_equivalent_usd": 116057500.0,
+    "prize.low.carrier_planner_hours": 1040000,
+    "prize.low.planner_labor_equivalent_usd": 20800000,
+    "prize.low.total_gross_prize_usd": 1220305668.9594662,
+    "prize.low.capture_fraction": 0.01,
+    "prize.low.captured_opportunity_usd": 12203056.689594662,
+    "prize.low.emissions.ship_extra_lift_kwh": 129165025.2631579,
+    "prize.low.emissions.yard_extra_lift_kwh": 0.0,
+    "prize.low.emissions.berth_auxiliary_kwh": 53040000.0,
+    "prize.low.emissions.ship_extra_lift_kgco2": 57478436.24210527,
+    "prize.low.emissions.yard_extra_lift_kgco2": 0.0,
+    "prize.low.emissions.berth_auxiliary_kgco2": 36900034.080000006,
+    "prize.low.emissions.total_gross_kgco2": 94378470.32210527,
+    "prize.low.emissions.total_gross_million_tonnes_co2": 0.09437847032210528,
+    "prize.low.emissions.captured_kgco2": 943784.7032210528,
+    "prize.low.emissions.captured_million_tonnes_co2": 0.0009437847032210528,
+    "prize.low.ship_handling_equivalent_million_usd": 968.7376894736843,
+    "prize.low.ship_handling_equivalent_billion_usd": 0.9687376894736843,
+    "prize.low.yard_handling_equivalent_million_usd": 114.710479485782,
+    "prize.low.yard_handling_equivalent_billion_usd": 0.114710479485782,
+    "prize.low.handling_equivalent_million_usd": 1083.4481689594663,
+    "prize.low.handling_equivalent_billion_usd": 1.0834481689594662,
+    "prize.low.ship_time_equivalent_million_usd": 116.0575,
+    "prize.low.ship_time_equivalent_billion_usd": 0.1160575,
+    "prize.low.planner_labor_equivalent_million_usd": 20.8,
+    "prize.low.planner_labor_equivalent_billion_usd": 0.0208,
+    "prize.low.total_gross_prize_million_usd": 1220.3056689594662,
+    "prize.low.total_gross_prize_billion_usd": 1.2203056689594662,
+    "prize.low.captured_opportunity_million_usd": 12.203056689594662,
+    "prize.low.captured_opportunity_billion_usd": 0.012203056689594661,
+    "prize.low.annual_extra_ship_million_lifts": 32.291256315789475,
+    "prize.low.annual_extra_yard_million_lifts": 11.4710479485782,
+    "prize.low.annual_primary_ship_million_moves": 613.53387,
+    "prize.low.world_throughput_million_teu": 920.300805,
+    "prize.low.annual_container_thousand_calls": 520.0,
+    "prize.low.electric_quay_kgco2_per_extra_lift": 1.78,
+    "prize.low.avoided_berth_million_hours": 0.156,
+    "prize.low.carrier_planner_million_hours": 1.04,
+    "prize.mid.annual_primary_ship_moves": 613533870.0,
+    "prize.mid.annual_extra_ship_lifts": 68170430.0,
+    "prize.mid.annual_extra_yard_lifts": 28324813.665000003,
+    "prize.mid.annual_baseline_berth_hours": 13650000.0,
+    "prize.mid.avoided_berth_hours": 682500.0,
+    "prize.mid.ship_handling_equivalent_usd": 5112782250.0,
+    "prize.mid.yard_handling_equivalent_usd": 708120341.6250001,
+    "prize.mid.handling_equivalent_usd": 5820902591.625,
+    "prize.mid.ship_time_equivalent_usd": 1129679687.5,
+    "prize.mid.carrier_planner_hours": 1300000.0,
+    "prize.mid.planner_labor_equivalent_usd": 51454000.0,
+    "prize.mid.total_gross_prize_usd": 7002036279.125,
+    "prize.mid.capture_fraction": 0.05,
+    "prize.mid.captured_opportunity_usd": 350101813.95625,
+    "prize.mid.emissions.ship_extra_lift_kwh": 272681720.0,
+    "prize.mid.emissions.yard_extra_lift_kwh": 0.0,
+    "prize.mid.emissions.berth_auxiliary_kwh": 477750000.0,
+    "prize.mid.emissions.ship_extra_lift_kgco2": 121343365.4,
+    "prize.mid.emissions.yard_extra_lift_kgco2": 0.0,
+    "prize.mid.emissions.berth_auxiliary_kgco2": 332371630.5,
+    "prize.mid.emissions.total_gross_kgco2": 453714995.9,
+    "prize.mid.emissions.total_gross_million_tonnes_co2": 0.4537149959,
+    "prize.mid.emissions.captured_kgco2": 22685749.795,
+    "prize.mid.emissions.captured_million_tonnes_co2": 0.022685749795,
+    "prize.mid.ship_handling_equivalent_million_usd": 5112.78225,
+    "prize.mid.ship_handling_equivalent_billion_usd": 5.11278225,
+    "prize.mid.yard_handling_equivalent_million_usd": 708.1203416250002,
+    "prize.mid.yard_handling_equivalent_billion_usd": 0.7081203416250001,
+    "prize.mid.handling_equivalent_million_usd": 5820.902591625,
+    "prize.mid.handling_equivalent_billion_usd": 5.820902591625,
+    "prize.mid.ship_time_equivalent_million_usd": 1129.6796875,
+    "prize.mid.ship_time_equivalent_billion_usd": 1.1296796875,
+    "prize.mid.planner_labor_equivalent_million_usd": 51.454,
+    "prize.mid.planner_labor_equivalent_billion_usd": 0.051454,
+    "prize.mid.total_gross_prize_million_usd": 7002.036279125,
+    "prize.mid.total_gross_prize_billion_usd": 7.002036279125,
+    "prize.mid.captured_opportunity_million_usd": 350.10181395625,
+    "prize.mid.captured_opportunity_billion_usd": 0.35010181395625,
+    "prize.mid.annual_extra_ship_million_lifts": 68.17043,
+    "prize.mid.annual_extra_yard_million_lifts": 28.324813665000004,
+    "prize.mid.annual_primary_ship_million_moves": 613.53387,
+    "prize.mid.world_throughput_million_teu": 920.300805,
+    "prize.mid.annual_container_thousand_calls": 520.0,
+    "prize.mid.electric_quay_kgco2_per_extra_lift": 1.78,
+    "prize.mid.avoided_berth_million_hours": 0.6825,
+    "prize.mid.carrier_planner_million_hours": 1.3,
+    "prize.high.annual_primary_ship_moves": 613533870.0,
+    "prize.high.annual_extra_ship_lifts": 108270682.94117647,
+    "prize.high.annual_extra_yard_lifts": 65735771.78571428,
+    "prize.high.annual_baseline_berth_hours": 23400000.0,
+    "prize.high.avoided_berth_hours": 2340000.0,
+    "prize.high.ship_handling_equivalent_usd": 16240602441.176472,
+    "prize.high.yard_handling_equivalent_usd": 3286788589.285714,
+    "prize.high.handling_equivalent_usd": 19527391030.462185,
+    "prize.high.ship_time_equivalent_usd": 7090395000.0,
+    "prize.high.carrier_planner_hours": 1560000,
+    "prize.high.planner_labor_equivalent_usd": 93600000,
+    "prize.high.total_gross_prize_usd": 26711386030.462185,
+    "prize.high.capture_fraction": 0.2,
+    "prize.high.captured_opportunity_usd": 5342277206.092438,
+    "prize.high.emissions.ship_extra_lift_kwh": 433082731.7647059,
+    "prize.high.emissions.yard_extra_lift_kwh": 0.0,
+    "prize.high.emissions.berth_auxiliary_kwh": 3088800000.0,
+    "prize.high.emissions.ship_extra_lift_kgco2": 192721815.63529414,
+    "prize.high.emissions.yard_extra_lift_kgco2": 0.0,
+    "prize.high.emissions.berth_auxiliary_kgco2": 2148884337.6,
+    "prize.high.emissions.total_gross_kgco2": 2341606153.235294,
+    "prize.high.emissions.total_gross_million_tonnes_co2": 2.341606153235294,
+    "prize.high.emissions.captured_kgco2": 468321230.6470588,
+    "prize.high.emissions.captured_million_tonnes_co2": 0.4683212306470588,
+    "prize.high.ship_handling_equivalent_million_usd": 16240.602441176472,
+    "prize.high.ship_handling_equivalent_billion_usd": 16.24060244117647,
+    "prize.high.yard_handling_equivalent_million_usd": 3286.7885892857144,
+    "prize.high.yard_handling_equivalent_billion_usd": 3.286788589285714,
+    "prize.high.handling_equivalent_million_usd": 19527.391030462186,
+    "prize.high.handling_equivalent_billion_usd": 19.527391030462184,
+    "prize.high.ship_time_equivalent_million_usd": 7090.395,
+    "prize.high.ship_time_equivalent_billion_usd": 7.090395,
+    "prize.high.planner_labor_equivalent_million_usd": 93.6,
+    "prize.high.planner_labor_equivalent_billion_usd": 0.0936,
+    "prize.high.total_gross_prize_million_usd": 26711.386030462185,
+    "prize.high.total_gross_prize_billion_usd": 26.711386030462187,
+    "prize.high.captured_opportunity_million_usd": 5342.277206092438,
+    "prize.high.captured_opportunity_billion_usd": 5.3422772060924375,
+    "prize.high.annual_extra_ship_million_lifts": 108.27068294117647,
+    "prize.high.annual_extra_yard_million_lifts": 65.73577178571428,
+    "prize.high.annual_primary_ship_million_moves": 613.53387,
+    "prize.high.world_throughput_million_teu": 920.300805,
+    "prize.high.annual_container_thousand_calls": 520.0,
+    "prize.high.electric_quay_kgco2_per_extra_lift": 1.78,
+    "prize.high.avoided_berth_million_hours": 2.34,
+    "prize.high.carrier_planner_million_hours": 1.56,
+    "conditional_emissions.marginal_kwh_per_comparable_electric_quay_move": 4,
+    "conditional_emissions.kgco2e_per_comparable_avoided_electric_quay_move": 2.2248,
+    "exposure.berth_time_usd": 22593593750.0,
+    "exposure.berth_time_billion_usd": 22.59359375,
+    "exposure.low.terminal_revenue_usd": 62670000000,
+    "exposure.low.terminal_revenue_billion_usd": 62.67,
+    "exposure.low.revenue_per_primary_lift_usd": 102.14594998642862,
+    "exposure.low.total_usd": 85263593750.0,
+    "exposure.low.total_billion_usd": 85.26359375,
+    "exposure.mid.terminal_revenue_usd": 75500000000,
+    "exposure.mid.terminal_revenue_billion_usd": 75.5,
+    "exposure.mid.revenue_per_primary_lift_usd": 123.05759093625915,
+    "exposure.mid.total_usd": 98093593750.0,
+    "exposure.mid.total_billion_usd": 98.09359375,
+    "exposure.high.terminal_revenue_usd": 75500000000,
+    "exposure.high.terminal_revenue_billion_usd": 75.5,
+    "exposure.high.revenue_per_primary_lift_usd": 123.05759093625915,
+    "exposure.high.total_usd": 98093593750.0,
+    "exposure.high.total_billion_usd": 98.09359375,
+    "exposure.headline_billion_usd": 90,
+    "exposure.headline_one_percent_billion_usd": 0.9,
+    "revenue_crosscheck.low.low.ship_handling_share": 0.015457757930009324,
+    "revenue_crosscheck.low.low.handling_share": 0.017288146943664692,
+    "revenue_crosscheck.low.low.total_prize_share": 0.019471927061743517,
+    "revenue_crosscheck.low.mid.ship_handling_share": 0.012830962774485885,
+    "revenue_crosscheck.low.mid.handling_share": 0.014350306873635314,
+    "revenue_crosscheck.low.mid.total_prize_share": 0.01616298899284061,
+    "revenue_crosscheck.low.high.ship_handling_share": 0.012830962774485885,
+    "revenue_crosscheck.low.high.handling_share": 0.014350306873635314,
+    "revenue_crosscheck.low.high.total_prize_share": 0.01616298899284061,
+    "revenue_crosscheck.mid.low.ship_handling_share": 0.08158261129727142,
+    "revenue_crosscheck.mid.low.handling_share": 0.09288180296194351,
+    "revenue_crosscheck.mid.low.total_prize_share": 0.1117286784605872,
+    "revenue_crosscheck.mid.mid.ship_handling_share": 0.0677189701986755,
+    "revenue_crosscheck.mid.mid.handling_share": 0.07709804757119205,
+    "revenue_crosscheck.mid.mid.total_prize_share": 0.09274220237251656,
+    "revenue_crosscheck.mid.high.ship_handling_share": 0.0677189701986755,
+    "revenue_crosscheck.mid.high.handling_share": 0.07709804757119205,
+    "revenue_crosscheck.mid.high.total_prize_share": 0.09274220237251656,
+    "revenue_crosscheck.high.low.ship_handling_share": 0.25914476529721514,
+    "revenue_crosscheck.high.low.handling_share": 0.3115907297026039,
+    "revenue_crosscheck.high.low.total_prize_share": 0.42622285033448515,
+    "revenue_crosscheck.high.mid.ship_handling_share": 0.21510731710167513,
+    "revenue_crosscheck.high.mid.handling_share": 0.2586409408008236,
+    "revenue_crosscheck.high.mid.total_prize_share": 0.3537931924564528,
+    "revenue_crosscheck.high.high.ship_handling_share": 0.21510731710167513,
+    "revenue_crosscheck.high.high.handling_share": 0.2586409408008236,
+    "revenue_crosscheck.high.high.total_prize_share": 0.3537931924564528,
+    "local_projection.laem_chabang.annual_calls": 9325,
+    "local_projection.laem_chabang.world_calls": 520000,
+    "local_projection.laem_chabang.share_of_world_calls": 0.01793269230769231,
+    "local_projection.laem_chabang.mid_pool_usd": 125565362.12084736,
+    "local_projection.laem_chabang.mid_pool_million_usd": 125.56536212084735,
+    "local_projection.laem_chabang.headline_mid_pool_million_usd": 125,
+    "capture.low.low.fraction": 0.01,
+    "capture.low.low.opportunity_million_usd": 12.203056689594662,
+    "capture.low.low.opportunity_billion_usd": 0.012203056689594661,
+    "capture.low.mid.fraction": 0.05,
+    "capture.low.mid.opportunity_million_usd": 61.01528344797331,
+    "capture.low.mid.opportunity_billion_usd": 0.06101528344797331,
+    "capture.low.high.fraction": 0.2,
+    "capture.low.high.opportunity_million_usd": 244.06113379189324,
+    "capture.low.high.opportunity_billion_usd": 0.24406113379189323,
+    "capture.mid.low.fraction": 0.01,
+    "capture.mid.low.opportunity_million_usd": 70.02036279125001,
+    "capture.mid.low.opportunity_billion_usd": 0.07002036279125,
+    "capture.mid.mid.fraction": 0.05,
+    "capture.mid.mid.opportunity_million_usd": 350.10181395625,
+    "capture.mid.mid.opportunity_billion_usd": 0.35010181395625,
+    "capture.mid.high.fraction": 0.2,
+    "capture.mid.high.opportunity_million_usd": 1400.407255825,
+    "capture.mid.high.opportunity_billion_usd": 1.400407255825,
+    "capture.high.low.fraction": 0.01,
+    "capture.high.low.opportunity_million_usd": 267.1138603046218,
+    "capture.high.low.opportunity_billion_usd": 0.26711386030462186,
+    "capture.high.mid.fraction": 0.05,
+    "capture.high.mid.opportunity_million_usd": 1335.5693015231095,
+    "capture.high.mid.opportunity_billion_usd": 1.3355693015231094,
+    "capture.high.high.fraction": 0.2,
+    "capture.high.high.opportunity_million_usd": 5342.277206092438,
+    "capture.high.high.opportunity_billion_usd": 5.3422772060924375
+  }
+}

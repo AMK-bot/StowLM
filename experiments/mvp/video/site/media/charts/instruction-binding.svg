@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1400" viewBox="0 0 1320 1400" role="img" aria-labelledby="title desc">
+<title id="title">Instruction binding: original and fresh extension</title>
+<desc id="desc">held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim. fresh held-out extension, run after the freeze; not the pre-registered sealed claim. Two earlier attempts on the same maps stopped early when our own frozen-code guard tripped. In the first, a test rewrote a pinned fixture; in the second, the engine wrote scratch files inside its pinned folder. No planning code changed. They completed 36 and 91 rows; both are published as they are and not pooled with the final run. Where the same rows ran again in the final run, attempt 1 matched the final run on 36 of the 38 rows it opened (status and lifts; 37 of 38 on verdict alone) and attempt 2 on 91 of 91, reported separately.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif} line,rect,circle,path{vector-effect:non-scaling-stroke}</style>
+<rect width="1320" height="1400" fill="#ffffff"/>
+<text x="40" y="46" font-size="29" fill="#17212b" text-anchor="start" font-weight="bold">Instruction binding: changed a plan that broke the rule</text>
+<text x="40" y="78" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim</text>
+<text x="40" y="103" font-size="16" fill="#17212b" text-anchor="start" font-weight="normal">Synthetic ships and cargo, simulated port · planning step from a clean load list</text>
+<text x="40" y="128" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">3.1 on frozen v3 (a11b4202…); ext-1 on v4 (acf2f275…), planning code byte-identical</text>
+<text x="40" y="158" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">fresh held-out extension, run after the freeze; not the pre-registered sealed claim</text>
+<text x="40" y="197" font-size="16" fill="#17212b" text-anchor="start" font-weight="bold">Population / result</text>
+<text x="960" y="197" font-size="15" fill="#17212b" text-anchor="start" font-weight="bold">Passes / maps · n · exact 95% interval</text>
+<line x1="450.0" y1="210" x2="450.0" y2="714" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="450.0" y="739" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">0</text>
+<line x1="544.0" y1="210" x2="544.0" y2="714" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="544.0" y="739" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">20</text>
+<line x1="638.0" y1="210" x2="638.0" y2="714" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="638.0" y="739" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">40</text>
+<line x1="732.0" y1="210" x2="732.0" y2="714" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="732.0" y="739" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">60</text>
+<line x1="826.0" y1="210" x2="826.0" y2="714" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="826.0" y="739" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">80</text>
+<line x1="920.0" y1="210" x2="920.0" y2="714" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="920.0" y="739" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">100</text>
+<line x1="450" y1="714" x2="920" y2="714" stroke="#657487" stroke-width="1"/>
+<text x="685.0" y="769" font-size="17" fill="#17212b" text-anchor="middle" font-weight="normal">Checked, instruction-obedient plans (%)</text>
+<g id="binding-original">
+<text x="40" y="239" font-size="20" fill="#17212b" text-anchor="start" font-weight="bold">Binding subset</text>
+<text x="40" y="265" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">3.1 · first plan broke the rule</text>
+<text x="40" y="289" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">New checked plan obeyed it</text>
+<line x1="668.6430761759635" y1="258" x2="874.433870112987" y2="258" stroke="#0072b2" stroke-width="3"/>
+<line x1="668.6430761759635" y1="252" x2="668.6430761759635" y2="264" stroke="#0072b2" stroke-width="2"/>
+<line x1="874.433870112987" y1="252" x2="874.433870112987" y2="264" stroke="#0072b2" stroke-width="2"/>
+<circle cx="789.4444444444445" cy="258" r="6" fill="#0072b2"/>
+<text x="960" y="264" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">13/18 · n = 18 · 46.5–90.3%</text>
+</g><g id="binding-ext1">
+<text x="40" y="349" font-size="20" fill="#17212b" text-anchor="start" font-weight="bold">Ext-1 binding</text>
+<text x="40" y="375" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">Fresh maps · first plan broke the rule</text>
+<text x="40" y="399" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">New checked plan obeyed it</text>
+<line x1="730.6624819534004" y1="368" x2="895.6223693231547" y2="368" stroke="#0072b2" stroke-width="3"/>
+<line x1="730.6624819534004" y1="362" x2="730.6624819534004" y2="374" stroke="#0072b2" stroke-width="2"/>
+<line x1="895.6223693231547" y1="362" x2="895.6223693231547" y2="374" stroke="#0072b2" stroke-width="2"/>
+<circle cx="834.5454545454545" cy="368" r="6" fill="#0072b2"/>
+<text x="960" y="374" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">18/22 · n = 22 · 59.7–94.8%</text>
+</g><g id="binding-broad-original">
+<text x="40" y="459" font-size="20" fill="#17212b" text-anchor="start" font-weight="bold">Broader count</text>
+<text x="40" y="485" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">3.1 · all instructed envelope voyages</text>
+<text x="40" y="509" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Includes first plans already obeying</text>
+<line x1="700.4569828613454" y1="478" x2="874.0667075469695" y2="478" stroke="#b54700" stroke-width="3"/>
+<line x1="700.4569828613454" y1="472" x2="700.4569828613454" y2="484" stroke="#b54700" stroke-width="2"/>
+<line x1="874.0667075469695" y1="472" x2="874.0667075469695" y2="484" stroke="#b54700" stroke-width="2"/>
+<rect x="797.5" y="473" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="484" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">18/24 · n = 24 · 53.3–90.2%</text>
+</g>
+<line x1="40" y1="548" x2="1280" y2="548" stroke="#cbd5e1" stroke-width="1"/>
+<text x="40" y="575" font-size="14" fill="#465568" text-anchor="start" font-weight="normal">SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim</text>
+<g id="binding-secondary">
+<text x="40" y="629" font-size="20" fill="#17212b" text-anchor="start" font-weight="bold">SECONDARY pooled binding</text>
+<text x="40" y="655" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">3.1 + ext-1 · descriptive arithmetic</text>
+<text x="40" y="679" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">First plans that broke the rule only</text>
+<line x1="739.2795116673913" y1="648" x2="869.0535796774861" y2="648" stroke="#465568" stroke-width="3"/>
+<line x1="739.2795116673913" y1="642" x2="739.2795116673913" y2="654" stroke="#465568" stroke-width="2"/>
+<line x1="869.0535796774861" y1="642" x2="869.0535796774861" y2="654" stroke="#465568" stroke-width="2"/>
+<circle cx="814.25" cy="648" r="6" fill="#465568"/>
+<text x="960" y="654" font-size="16" fill="#465568" text-anchor="start" font-weight="normal">31/40 · n = 40 · 61.5–89.2%</text>
+</g>
+<text x="40" y="810" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Exact two-sided Clopper–Pearson 95% intervals. Binding requires a same-map no-rule baseline that is a complete, fresh-audited L0 pass and fails</text>
+<text x="40" y="832" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">the intended-rule recheck; the rule and hash must match the instruction allocation.</text>
+<text x="40" y="862" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">The numerator requires a complete, obedient, fresh-audited instructed L0 pass. Already-obeyed and unavailable counterfactuals remain separate</text>
+<text x="40" y="884" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">(code15 binding-definition erratum).</text>
+<text x="40" y="914" font-size="16" fill="#465568" text-anchor="start" font-weight="normal">In 3.1, on the other 6 of 24 voyages, the first plan already obeyed the rule, which proves nothing about instruction binding.</text>
+<text x="40" y="945" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Confirmation here is exact expected-rule match against an answer key, not a human planner confirmation; these were templated sentences.</text>
+<text x="40" y="975" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">The 3.1 broader count, 18/24, is a different denominator; it is not the binding result. Passes require a full checker pass and completion.</text>
+<text x="40" y="1005" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">3.1 uses frozen v3 (a11b4202…); ext-1 uses frozen v4 (acf2f275…), with byte-identical planning code.</text>
+<text x="40" y="1049" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Envelope: up to 195 boxes in a half-ship section of 500–800 TEU feeder ships, at most 70% of that section; empty section on arrival, one loading</text>
+<text x="40" y="1071" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">call. Other bays hold fixed synthetic cargo.</text>
+<text x="40" y="1102" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Confirmation is exact expected-rule match, not a human planner confirmation. These are templated sentences.</text>
+<text x="40" y="1133" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">SECONDARY pooling combines completed 3.1 and ext-1 envelope maps only; it is not one experiment. No tiny/small maps or interrupted attempts enter</text>
+<text x="40" y="1155" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">the sum.</text>
+<text x="40" y="1186" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Same synthetic generator family, not new voyage types, independent replication, or recovery of a sealed claim.</text>
+<text x="40" y="1221" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Two earlier attempts on the same maps stopped early when our own frozen-code guard tripped. In the first, a test rewrote a pinned fixture; in the</text>
+<text x="40" y="1243" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">second, the engine wrote scratch files inside its pinned folder. No planning code changed. They completed 36 and 91 rows; both are published as</text>
+<text x="40" y="1265" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">they are and not pooled with the final run. Where the same rows ran again in the final run, attempt 1 matched the final run on 36 of the 38 rows</text>
+<text x="40" y="1287" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">it opened (status and lifts; 37 of 38 on verdict alone) and attempt 2 on 91 of 91, reported separately.</text>
+<text x="40" y="1322" font-size="14" fill="#465568" text-anchor="start" font-weight="normal">Source: measurements/ext-1/FIGURES.json · recorded results only; no planning or checker rerun</text>
+<metadata id="chart-data">{&quot;chart&quot;: &quot;instruction-binding&quot;, &quot;facts&quot;: {&quot;already_obeyed&quot;: 6, &quot;binding&quot;: {&quot;exact95&quot;: [0.46519803441694374, 0.9030507874744407], &quot;n&quot;: 18, &quot;passes&quot;: 13, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/envelope24/instruction_binding&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, &quot;broad&quot;: {&quot;exact95&quot;: [0.5328871975773306, 0.902269590525467], &quot;n&quot;: 24, &quot;passes&quot;: 18, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/envelope24/arms/instruction&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, &quot;extension_binding&quot;: {&quot;exact95&quot;: [0.5971542169221287, 0.9481327006875631], &quot;n&quot;: 22, &quot;passes&quot;: 18, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/primary/binding&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;}}, &quot;extension_label&quot;: &quot;fresh held-out extension, run after the freeze; not the pre-registered sealed claim&quot;, &quot;label&quot;: &quot;held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim&quot;, &quot;secondary_binding&quot;: {&quot;exact95&quot;: [0.6154883226965773, 0.891603361015928], &quot;n&quot;: 40, &quot;passes&quot;: 31, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/secondary_pooled/binding&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;}}, &quot;secondary_label&quot;: &quot;SECONDARY pooled descriptive figure: completed 3.1 envelope24 plus ext-1 envelope24; not the pre-registered sealed claim&quot;}, &quot;sources&quot;: [{&quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;, &quot;sha256&quot;: &quot;282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c&quot;}, {&quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json&quot;, &quot;sha256&quot;: &quot;87c3e49689d4ef15258ec01867c717615690d1b21c85eae904704c34b6f3b029&quot;}, {&quot;path&quot;: &quot;docs/headline.md&quot;, &quot;sha256&quot;: &quot;48f8315729481c665f15807dc468911ac313ad7f71a07bad5e505573348f3d06&quot;}, {&quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json&quot;, &quot;sha256&quot;: &quot;3d47d1f602dc2b25cc5e69aa7d154c1a9989038aec4479897ca2ac5d58ee6627&quot;}]}</metadata>
+</svg>

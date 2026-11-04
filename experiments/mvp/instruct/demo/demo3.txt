@@ -1,0 +1,5 @@
+$ uv run python -m llm.instructions.demo --instance experiments/mvp/corpus/test/tiny/feeder_500/random_yard/seed-008000000.json "The port says we can stack 4 high on deck in bay 3 today, go ahead." --save experiments/mvp/instruct/demo/demo3.json
+Planner: "The port says we can stack 4 high on deck in bay 3 today, go ahead."
+Parser: Muse Spark (muse-spark-1.3), measured cost $0.0049145
+Refused (loosening): Grants permission to stack higher; that is not a tighter limit.
+Nothing applied; the current plan stands.

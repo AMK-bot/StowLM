@@ -1,0 +1,1766 @@
+{
+  "observations": [
+    {
+      "row_id": "QZXU0000009",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "booking_email",
+      "quote": "QZXU0000009 // POL SGSIN > POD HKHKG // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "booking_email",
+      "quote": "QZXU0000014 // POL SGSIN > POD HKHKG // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "booking_email",
+      "quote": "QZXU0000020 // POL SGSIN > POD HKHKG // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "booking_email",
+      "quote": "QZXU0000035 // POL SGSIN > POD HKHKG // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "pod",
+      "value": "USLAX",
+      "document": "booking_email",
+      "quote": "QZXU0000040 // POL SGSIN > POD USLAX // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "booking_email",
+      "quote": "QZXU0000056 // POL SGSIN > POD VNSGN // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "booking_email",
+      "quote": "QZXU0000098 // POL SGSIN > POD VNSGN // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "booking_email",
+      "quote": "QZXU0000101 // POL SGSIN > POD VNSGN // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "booking_email",
+      "quote": "QZXU0000117 // POL SGSIN > POD HKHKG // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "booking_email",
+      "quote": "QZXU0000122 // POL SGSIN > POD VNSGN // ETD 02-Nov-26"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "id",
+      "value": "QZXU0000009",
+      "document": "gate_csv",
+      "quote": "QZXU0000009"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "iso_type",
+      "value": "22G1",
+      "document": "gate_csv",
+      "quote": "22G1"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "gate_csv",
+      "quote": "HKHKG"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "gross_mass_kg",
+      "value": 5745.635943759908,
+      "document": "gate_csv",
+      "quote": "5745.635943759908"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "length_ft",
+      "value": 20,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "height_m",
+      "value": 2.591,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "tare_kg",
+      "value": 2350.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "max_gross_mass_kg",
+      "value": 30480.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "weight_class",
+      "value": "L",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "category",
+      "value": "HKHKG:22G1:L:loaded",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "id",
+      "value": "QZXU0000014",
+      "document": "gate_csv",
+      "quote": "QZXU0000014"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "iso_type",
+      "value": "45G1",
+      "document": "gate_csv",
+      "quote": "45G1"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "gate_csv",
+      "quote": "HKHKG"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "length_ft",
+      "value": 40,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "height_m",
+      "value": 2.896,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "tare_kg",
+      "value": 3900.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "max_gross_mass_kg",
+      "value": 32500.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "weight_class",
+      "value": "L",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "empty",
+      "value": true,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000014",
+      "field": "category",
+      "value": "HKHKG:45G1:L:empty",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "id",
+      "value": "QZXU0000020",
+      "document": "gate_csv",
+      "quote": "QZXU0000020"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "iso_type",
+      "value": "42G1",
+      "document": "gate_csv",
+      "quote": "42G1"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "gate_csv",
+      "quote": "HKHKG"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "gross_mass_kg",
+      "value": 23226.267270424112,
+      "document": "gate_csv",
+      "quote": "23226.267270424112"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "length_ft",
+      "value": 40,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "height_m",
+      "value": 2.591,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "tare_kg",
+      "value": 3750.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "max_gross_mass_kg",
+      "value": 32500.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "weight_class",
+      "value": "H",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "dg",
+      "value": {
+        "un_number": "9999",
+        "imdg_class": "3",
+        "subsidiary_risks": [],
+        "packing_group": "I",
+        "stowage_category": "E",
+        "stowage_codes": [],
+        "segregation_codes": [],
+        "handling_codes": [],
+        "marine_pollutant": false,
+        "limited_quantity": false,
+        "flashpoint_c": null,
+        "additional": [],
+        "packing_form": "packaged_goods_in_closed_freight_containers",
+        "ctu_closed": true,
+        "protected_from_heat": null,
+        "clear_living_quarters": null,
+        "ventilation_compliant": null,
+        "shaded": null,
+        "air_circulation": null,
+        "dry": null,
+        "handling_compliant": null,
+        "subsidiary_hazards_verified": null,
+        "special_provisions": null,
+        "short_international_voyage": null,
+        "bulk_container_type": null,
+        "verified_provisions": null,
+        "verified_segregation_codes": null,
+        "shipment_provenance": {
+          "versions": {
+            "cargo_generator": "7.0.0",
+            "dg_shipment_policy": "1.0.0"
+          },
+          "stubs": {},
+          "seed": 48576991525925094503484628133888140626715044342591583127739279875462472623441,
+          "created_by": "generate.cargo.synthetic_shipper",
+          "created_at": null,
+          "git_commit": null,
+          "parents": [
+            "imdg-42-24:UN1263-I",
+            "synthetic-dg-shipment-policy-v1"
+          ],
+          "input_versions": {}
+        }
+      },
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000020",
+      "field": "category",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.591,\"\"tare_kg\"\":3750.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":{\"\"un_number\"\":\"\"9999\"\",\"\"imdg_class\"\":\"\"3\"\",\"\"subsidiary_risks\"\":[],\"\"packing_group\"\":\"\"I\"\",\"\"stowage_category\"\":\"\"E\"\",\"\"stowage_codes\"\":[],\"\"segregation_codes\"\":[],\"\"handling_codes\"\":[],\"\"marine_pollutant\"\":false,\"\"limited_quantity\"\":false,\"\"flashpoint_c\"\":null,\"\"additional\"\":[],\"\"packing_form\"\":\"\"packaged_goods_in_closed_freight_containers\"\",\"\"ctu_closed\"\":true,\"\"protected_from_heat\"\":null,\"\"clear_living_quarters\"\":null,\"\"ventilation_compliant\"\":null,\"\"shaded\"\":null,\"\"air_circulation\"\":null,\"\"dry\"\":null,\"\"handling_compliant\"\":null,\"\"subsidiary_hazards_verified\"\":null,\"\"special_provisions\"\":null,\"\"short_international_voyage\"\":null,\"\"bulk_container_type\"\":null,\"\"verified_provisions\"\":null,\"\"verified_segregation_codes\"\":null,\"\"shipment_provenance\"\":{\"\"versions\"\":{\"\"cargo_generator\"\":\"\"7.0.0\"\",\"\"dg_shipment_policy\"\":\"\"1.0.0\"\"},\"\"stubs\"\":{},\"\"seed\"\":48576991525925094503484628133888140626715044342591583127739279875462472623441,\"\"created_by\"\":\"\"generate.cargo.synthetic_shipper\"\",\"\"created_at\"\":null,\"\"git_commit\"\":null,\"\"parents\"\":[\"\"imdg-42-24:UN1263-I\"\",\"\"synthetic-dg-shipment-policy-v1\"\"],\"\"input_versions\"\":{}}},\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "id",
+      "value": "QZXU0000035",
+      "document": "gate_csv",
+      "quote": "QZXU0000035"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "iso_type",
+      "value": "45G1",
+      "document": "gate_csv",
+      "quote": "45G1"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "gate_csv",
+      "quote": "HKHKG"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "gross_mass_kg",
+      "value": 999999.0,
+      "document": "gate_csv",
+      "quote": "999999.0"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "length_ft",
+      "value": 40,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "height_m",
+      "value": 2.896,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "tare_kg",
+      "value": 3900.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "max_gross_mass_kg",
+      "value": 32500.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "weight_class",
+      "value": "M",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000035",
+      "field": "category",
+      "value": "HKHKG:45G1:M:loaded",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:45G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "id",
+      "value": "QZXU0000040",
+      "document": "gate_csv",
+      "quote": "QZXU0000040"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "iso_type",
+      "value": "22G1",
+      "document": "gate_csv",
+      "quote": "22G1"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "pod",
+      "value": "USLAX",
+      "document": "gate_csv",
+      "quote": "USLAX"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "gross_mass_kg",
+      "value": 17386.68821008809,
+      "document": "gate_csv",
+      "quote": "17386.68821008809"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "length_ft",
+      "value": 20,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "height_m",
+      "value": 2.591,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "tare_kg",
+      "value": 2350.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "max_gross_mass_kg",
+      "value": 30480.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "weight_class",
+      "value": "M",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000040",
+      "field": "category",
+      "value": "HKHKG:22G1:M:loaded",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "id",
+      "value": "QZXU0000056",
+      "document": "gate_csv",
+      "quote": "QZXU0000056"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "iso_type",
+      "value": "45G1",
+      "document": "gate_csv",
+      "quote": "45G1"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "gate_csv",
+      "quote": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "gross_mass_kg",
+      "value": 20243.59418623019,
+      "document": "gate_csv",
+      "quote": "20243.59418623019"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "length_ft",
+      "value": 40,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "height_m",
+      "value": 2.896,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "tare_kg",
+      "value": 3900.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "max_gross_mass_kg",
+      "value": 32500.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "weight_class",
+      "value": "H",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "category",
+      "value": "VNSGN:45G1:H:loaded",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:H:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "id",
+      "value": "QZXU0000061",
+      "document": "gate_csv",
+      "quote": "QZXU0000061"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "iso_type",
+      "value": "22G1",
+      "document": "gate_csv",
+      "quote": "22G1"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "gross_mass_kg",
+      "value": 6935.183121983585,
+      "document": "gate_csv",
+      "quote": "6935.183121983585"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "length_ft",
+      "value": 20,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "height_m",
+      "value": 2.591,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "tare_kg",
+      "value": 2350.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "max_gross_mass_kg",
+      "value": 30480.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "weight_class",
+      "value": "L",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "category",
+      "value": "VNSGN:22G1:L:loaded",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "id",
+      "value": "QZXU0000077",
+      "document": "gate_csv",
+      "quote": "QZXU0000077"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "iso_type",
+      "value": "22G1",
+      "document": "gate_csv",
+      "quote": "22G1"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "gross_mass_kg",
+      "value": 9462.46315003164,
+      "document": "gate_csv",
+      "quote": "9462.46315003164"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "length_ft",
+      "value": 20,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "height_m",
+      "value": 2.591,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "tare_kg",
+      "value": 2350.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "max_gross_mass_kg",
+      "value": 30480.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "weight_class",
+      "value": "L",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "category",
+      "value": "HKHKG:22G1:L:loaded",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "id",
+      "value": "QZXU0000082",
+      "document": "gate_csv",
+      "quote": "QZXU0000082"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "iso_type",
+      "value": "22G1",
+      "document": "gate_csv",
+      "quote": "22G1"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "gross_mass_kg",
+      "value": 11732.522965261667,
+      "document": "gate_csv",
+      "quote": "11732.522965261667"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "length_ft",
+      "value": 20,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "height_m",
+      "value": 2.591,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "tare_kg",
+      "value": 2350.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "max_gross_mass_kg",
+      "value": 30480.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "weight_class",
+      "value": "M",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "category",
+      "value": "HKHKG:22G1:M:loaded",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "id",
+      "value": "QZXU0000098",
+      "document": "gate_csv",
+      "quote": "QZXU0000098"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "iso_type",
+      "value": "45R1",
+      "document": "gate_csv",
+      "quote": "45R1"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "gate_csv",
+      "quote": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "gross_mass_kg",
+      "value": 20876.640550500375,
+      "document": "gate_csv",
+      "quote": "20876.640550500375"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "length_ft",
+      "value": 40,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "height_m",
+      "value": 2.896,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "tare_kg",
+      "value": 4420.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "max_gross_mass_kg",
+      "value": 34000.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "weight_class",
+      "value": "H",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "reefer",
+      "value": true,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000098",
+      "field": "category",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":4420.0,\"\"max_gross_mass_kg\"\":34000.0,\"\"weight_class\"\":\"\"H\"\",\"\"empty\"\":false,\"\"reefer\"\":true,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":null}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "id",
+      "value": "QZXU0000101",
+      "document": "gate_csv",
+      "quote": "QZXU0000101"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "iso_type",
+      "value": "45G1",
+      "document": "gate_csv",
+      "quote": "45G1"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "gate_csv",
+      "quote": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "gross_mass_kg",
+      "value": 3900.0,
+      "document": "gate_csv",
+      "quote": "3900.0"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "length_ft",
+      "value": 40,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "height_m",
+      "value": 2.896,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "tare_kg",
+      "value": 3900.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "max_gross_mass_kg",
+      "value": 32500.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "weight_class",
+      "value": "L",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "empty",
+      "value": true,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000101",
+      "field": "category",
+      "value": "VNSGN:45G1:L:empty",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":40,\"\"height_m\"\":2.896,\"\"tare_kg\"\":3900.0,\"\"max_gross_mass_kg\"\":32500.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:45G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "id",
+      "value": "QZXU0000117",
+      "document": "gate_csv",
+      "quote": "QZXU0000117"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "iso_type",
+      "value": "22G1",
+      "document": "gate_csv",
+      "quote": "22G1"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "gate_csv",
+      "quote": "HKHKG"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "gross_mass_kg",
+      "value": 2350.0,
+      "document": "gate_csv",
+      "quote": "2350.0"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "length_ft",
+      "value": 20,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "height_m",
+      "value": 2.591,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "tare_kg",
+      "value": 2350.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "max_gross_mass_kg",
+      "value": 30480.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "weight_class",
+      "value": "L",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "empty",
+      "value": true,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000117",
+      "field": "category",
+      "value": "HKHKG:22G1:L:empty",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"L\"\",\"\"empty\"\":true,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"HKHKG:22G1:L:empty\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "id",
+      "value": "QZXU0000122",
+      "document": "gate_csv",
+      "quote": "QZXU0000122"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "iso_type",
+      "value": "22G1",
+      "document": "gate_csv",
+      "quote": "22G1"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "pol",
+      "value": "SGSIN",
+      "document": "gate_csv",
+      "quote": "SGSIN"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "gate_csv",
+      "quote": "VNSGN"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "gross_mass_kg",
+      "value": 13372.501544997649,
+      "document": "gate_csv",
+      "quote": "13372.501544997649"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "length_ft",
+      "value": 20,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "height_m",
+      "value": 2.591,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "tare_kg",
+      "value": 2350.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "max_gross_mass_kg",
+      "value": 30480.0,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "weight_class",
+      "value": "M",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "empty",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "reefer",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "reefer_setpoint_c",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "dg",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "direct_delivery",
+      "value": false,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "special_stowage",
+      "value": [],
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "oog",
+      "value": null,
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000122",
+      "field": "category",
+      "value": "VNSGN:22G1:M:loaded",
+      "document": "gate_csv",
+      "quote": "{\"\"length_ft\"\":20,\"\"height_m\"\":2.591,\"\"tare_kg\"\":2350.0,\"\"max_gross_mass_kg\"\":30480.0,\"\"weight_class\"\":\"\"M\"\",\"\"empty\"\":false,\"\"reefer\"\":false,\"\"reefer_setpoint_c\"\":null,\"\"dg\"\":null,\"\"direct_delivery\"\":false,\"\"special_stowage\"\":[],\"\"oog\"\":null,\"\"category\"\":\"\"VNSGN:22G1:M:loaded\"\"}"
+    },
+    {
+      "row_id": "QZXU0000009",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "quay_photo",
+      "quote": "QZXU0000009    VNSGN"
+    },
+    {
+      "row_id": "QZXU0000061",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "quay_photo",
+      "quote": "QZXU0000061    VNSGN"
+    },
+    {
+      "row_id": "QZXU0000077",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "quay_photo",
+      "quote": "QZXU0000077    HKHKG"
+    },
+    {
+      "row_id": "QZXU0000082",
+      "field": "pod",
+      "value": "HKHKG",
+      "document": "quay_photo",
+      "quote": "QZXU0000082    HKHKG"
+    },
+    {
+      "row_id": "QZXU0000056",
+      "field": "pod",
+      "value": "VNSGN",
+      "document": "quay_photo",
+      "quote": "QZXU0000056    VNSGN"
+    }
+  ],
+  "duplicates": [
+    {
+      "row_id": "QZXU0000056",
+      "document": "gate_csv",
+      "quote": "DUPLICATE GATE EVENT, not another container"
+    }
+  ],
+  "notes": [
+    "SYNTHETIC ORACLE: handwritten by fixture generator; not Spark output."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": "stowlm.copilot-behavior-freeze/1",
+  "created_utc": "2026-11-02T01:42:35.094681+00:00",
+  "cohort_file": "fresh-v4-behavior-scenarios.json",
+  "sha256": "f7f654105ec181d521b8ee18dcb12ded3578f24ed5d85356d7d0bc51e877dec5",
+  "scenario_count": 15,
+  "state": "frozen_before_any_new_behavior_model_run",
+  "synthetic": true,
+  "note": "Do not tune on this cohort; failures remain failures. No model calls were made to construct it."
+}

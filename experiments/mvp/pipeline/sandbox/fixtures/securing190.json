@@ -1,0 +1,906 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "number_label": "measured",
+  "label": "Measured standalone departure securing checks",
+  "created_utc": "2026-11-02T01:50:01.356620+00:00",
+  "source_fixture": "envelope190.json",
+  "source_sha256": "7a97cf9971219baf3e94647f52620cca2274fc9da6888f7058b04fa8d9b36279",
+  "requests_source": "clear190.json",
+  "requests_source_sha256": "47a22d76e7b8da060851c32547e4bdabeff0999fe893ef37795b88aac6cd526c",
+  "initial_admission": {
+    "mask": 4095,
+    "load1": 42.44,
+    "t": 1793584196,
+    "age_s": 5.340780019760132
+  },
+  "source_hashes": {
+    "securing.py": "ec7595905438662bd77f490eb985a669df2d33bfaf9021d375a7637db8ad0992",
+    "measure_securing.py": "af97a62c96fcffb1d94be01b5bbe5b522bf3e60c33b6e61c294d5df53d7787bd"
+  },
+  "method": "Three requests, serial fresh spawned processes, native thread caps 1; cold = first securing call after typed source validation and move preparation, warm = second identical call in the same process. Every call waits for fresh fleet admission. Preparation, JSON parsing/model validation and process startup are excluded from call latency. No full checker rerun.",
+  "cases": [
+    {
+      "box_id": "QZXU0000605",
+      "target_slot": "0100688",
+      "kind": "known_fitting_failure",
+      "stored_full_legal": false,
+      "pid": 85970,
+      "initial_admission": {
+        "mask": 4095,
+        "load1": 42.44,
+        "t": 1793584196,
+        "age_s": 6.394658088684082
+      },
+      "prepare_s": 0.15007916698232293,
+      "replay_legal": true,
+      "calls": [
+        {
+          "temperature": "cold",
+          "admission": {
+            "mask": 4095,
+            "load1": 42.44,
+            "t": 1793584196,
+            "age_s": 8.81234097480774
+          },
+          "end_load": {
+            "mask": 4095,
+            "load1": 42.44,
+            "t": 1793584196
+          },
+          "wall_s": 7.602037208969705,
+          "broken": [
+            {
+              "rule_id": "iacs.member_irs.container_securing",
+              "severity": "hard",
+              "call_index": 0,
+              "move_index": null,
+              "containers": [
+                "QZXU0000605",
+                "QZXU0000945",
+                "QZXU0001411",
+                "QZXU0002090"
+              ],
+              "slots": [
+                "0100682",
+                "0100684",
+                "0100686",
+                "0100688"
+              ],
+              "yard_addresses": [],
+              "measured": 1.011700917545739,
+              "limit": 1.0,
+              "unit": "ratio",
+              "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+              "inherited": false,
+              "boxes": [
+                "QZXU0000605",
+                "QZXU0000945",
+                "QZXU0001411",
+                "QZXU0002090"
+              ],
+              "source": "departure_securing"
+            },
+            {
+              "rule_id": "iacs.member_irs.container_securing",
+              "severity": "hard",
+              "call_index": 0,
+              "move_index": null,
+              "containers": [
+                "QZXU0000605",
+                "QZXU0000945",
+                "QZXU0001411",
+                "QZXU0002090"
+              ],
+              "slots": [
+                "0100682",
+                "0100684",
+                "0100686",
+                "0100688"
+              ],
+              "yard_addresses": [],
+              "measured": 1.011700917545739,
+              "limit": 1.0,
+              "unit": "ratio",
+              "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+              "inherited": false,
+              "boxes": [
+                "QZXU0000605",
+                "QZXU0000945",
+                "QZXU0001411",
+                "QZXU0002090"
+              ],
+              "source": "departure_securing"
+            }
+          ],
+          "screen": {
+            "phase": "departure",
+            "source": "stowage.checker.lashing.check_lashing",
+            "label": "Departure securing screen; full check running",
+            "note": "Departure securing screened with the checker's actual loading condition and synthetic securing arrangement. Mid-voyage, arrival and all other full-checker parts remain pending.",
+            "ran": true,
+            "passed": false,
+            "error": null,
+            "max_fitting_ratio": 1.011700917545739,
+            "metrics": {
+              "max_racking_ratio": 0.7367856112735628,
+              "max_longitudinal_racking_ratio": 0.40523895140528937,
+              "max_corner_post_ratio": 0.5291373701297987,
+              "max_corner_tension_ratio": 0.8599457799138782,
+              "max_lashing_ratio": 0.7955580914258402,
+              "max_fitting_ratio": 1.011700917545739,
+              "max_cell_guide_ratio": 0.2804337485222299,
+              "gm_m": 2.6087830828243503,
+              "roll_period_s": 11.247986403788625,
+              "roll_angle_rad": 0.5961848245570981,
+              "block_coefficient_scantling": 0.6494357798565297,
+              "synthetic_arrangement": 1.0,
+              "physical_box_count": 458.0,
+              "guide_design_gm_m": 3.9584570964621637,
+              "max_gm_lashing_m": 3.9584570964621637,
+              "guide_design_gm_upper_bound_m": 3.9584570964621637,
+              "guide_design_section_modulus_m3": 0.001006,
+              "guide_design_area_m2": 0.01207,
+              "guide_design_rated_ratio": 0.908909447708978,
+              "guide_design_contact_n": 307468.09261891525,
+              "guide_design_maximum_tiers": 3.0,
+              "guide_design_governing_bay": 1.0,
+              "guide_design_governing_row": 1.0
+            },
+            "report": {
+              "name": "lashing",
+              "violations": [
+                {
+                  "rule_id": "iacs.member_irs.container_securing",
+                  "severity": "hard",
+                  "call_index": 0,
+                  "move_index": null,
+                  "containers": [
+                    "QZXU0000605",
+                    "QZXU0000945",
+                    "QZXU0001411",
+                    "QZXU0002090"
+                  ],
+                  "slots": [
+                    "0100682",
+                    "0100684",
+                    "0100686",
+                    "0100688"
+                  ],
+                  "yard_addresses": [],
+                  "measured": 1.011700917545739,
+                  "limit": 1.0,
+                  "unit": "ratio",
+                  "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+                  "inherited": false
+                },
+                {
+                  "rule_id": "iacs.member_irs.container_securing",
+                  "severity": "hard",
+                  "call_index": 0,
+                  "move_index": null,
+                  "containers": [
+                    "QZXU0000605",
+                    "QZXU0000945",
+                    "QZXU0001411",
+                    "QZXU0002090"
+                  ],
+                  "slots": [
+                    "0100682",
+                    "0100684",
+                    "0100686",
+                    "0100688"
+                  ],
+                  "yard_addresses": [],
+                  "measured": 1.011700917545739,
+                  "limit": 1.0,
+                  "unit": "ratio",
+                  "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+                  "inherited": false
+                }
+              ],
+              "metrics": {
+                "max_racking_ratio": 0.7367856112735628,
+                "max_longitudinal_racking_ratio": 0.40523895140528937,
+                "max_corner_post_ratio": 0.5291373701297987,
+                "max_corner_tension_ratio": 0.8599457799138782,
+                "max_lashing_ratio": 0.7955580914258402,
+                "max_fitting_ratio": 1.011700917545739,
+                "max_cell_guide_ratio": 0.2804337485222299,
+                "gm_m": 2.6087830828243503,
+                "roll_period_s": 11.247986403788625,
+                "roll_angle_rad": 0.5961848245570981,
+                "block_coefficient_scantling": 0.6494357798565297,
+                "synthetic_arrangement": 1.0,
+                "physical_box_count": 458.0,
+                "guide_design_gm_m": 3.9584570964621637,
+                "max_gm_lashing_m": 3.9584570964621637,
+                "guide_design_gm_upper_bound_m": 3.9584570964621637,
+                "guide_design_section_modulus_m3": 0.001006,
+                "guide_design_area_m2": 0.01207,
+                "guide_design_rated_ratio": 0.908909447708978,
+                "guide_design_contact_n": 307468.09261891525,
+                "guide_design_maximum_tiers": 3.0,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0
+              },
+              "margins": {
+                "max_racking_ratio": 0.2632143887264372,
+                "max_longitudinal_racking_ratio": 0.5947610485947106,
+                "max_corner_post_ratio": 0.47086262987020133,
+                "max_corner_tension_ratio": 0.14005422008612178,
+                "max_lashing_ratio": 0.20444190857415978,
+                "max_fitting_ratio": -0.011700917545738987,
+                "max_cell_guide_ratio": 0.7195662514777701
+              },
+              "ran": true,
+              "error": null,
+              "notes": [
+                "APPROXIMATION: D54/D56 synthetic rated-vessel guide design; governing stack 00101H, declared lashing design GM 3.9584571 m, maximum tiers 3, contact bound 307468.093 N, W=0.001006 m3, A=0.01207 m2, rated IRS ratio 0.908909448 (10% margin, rounded upward; no actual cargo used)."
+              ]
+            },
+            "full_check_pending": true,
+            "wall_s": 7.602037208969705
+          }
+        },
+        {
+          "temperature": "warm",
+          "admission": {
+            "mask": 4095,
+            "load1": 42.44,
+            "t": 1793584196,
+            "age_s": 16.414751052856445
+          },
+          "end_load": {
+            "mask": 4095,
+            "load1": 42.44,
+            "t": 1793584196
+          },
+          "wall_s": 0.789586583035998,
+          "broken": [
+            {
+              "rule_id": "iacs.member_irs.container_securing",
+              "severity": "hard",
+              "call_index": 0,
+              "move_index": null,
+              "containers": [
+                "QZXU0000605",
+                "QZXU0000945",
+                "QZXU0001411",
+                "QZXU0002090"
+              ],
+              "slots": [
+                "0100682",
+                "0100684",
+                "0100686",
+                "0100688"
+              ],
+              "yard_addresses": [],
+              "measured": 1.011700917545739,
+              "limit": 1.0,
+              "unit": "ratio",
+              "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+              "inherited": false,
+              "boxes": [
+                "QZXU0000605",
+                "QZXU0000945",
+                "QZXU0001411",
+                "QZXU0002090"
+              ],
+              "source": "departure_securing"
+            },
+            {
+              "rule_id": "iacs.member_irs.container_securing",
+              "severity": "hard",
+              "call_index": 0,
+              "move_index": null,
+              "containers": [
+                "QZXU0000605",
+                "QZXU0000945",
+                "QZXU0001411",
+                "QZXU0002090"
+              ],
+              "slots": [
+                "0100682",
+                "0100684",
+                "0100686",
+                "0100688"
+              ],
+              "yard_addresses": [],
+              "measured": 1.011700917545739,
+              "limit": 1.0,
+              "unit": "ratio",
+              "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+              "inherited": false,
+              "boxes": [
+                "QZXU0000605",
+                "QZXU0000945",
+                "QZXU0001411",
+                "QZXU0002090"
+              ],
+              "source": "departure_securing"
+            }
+          ],
+          "screen": {
+            "phase": "departure",
+            "source": "stowage.checker.lashing.check_lashing",
+            "label": "Departure securing screen; full check running",
+            "note": "Departure securing screened with the checker's actual loading condition and synthetic securing arrangement. Mid-voyage, arrival and all other full-checker parts remain pending.",
+            "ran": true,
+            "passed": false,
+            "error": null,
+            "max_fitting_ratio": 1.011700917545739,
+            "metrics": {
+              "max_racking_ratio": 0.7367856112735628,
+              "max_longitudinal_racking_ratio": 0.40523895140528937,
+              "max_corner_post_ratio": 0.5291373701297987,
+              "max_corner_tension_ratio": 0.8599457799138782,
+              "max_lashing_ratio": 0.7955580914258402,
+              "max_fitting_ratio": 1.011700917545739,
+              "max_cell_guide_ratio": 0.2804337485222299,
+              "gm_m": 2.6087830828243503,
+              "roll_period_s": 11.247986403788625,
+              "roll_angle_rad": 0.5961848245570981,
+              "block_coefficient_scantling": 0.6494357798565297,
+              "synthetic_arrangement": 1.0,
+              "physical_box_count": 458.0,
+              "guide_design_gm_m": 3.9584570964621637,
+              "max_gm_lashing_m": 3.9584570964621637,
+              "guide_design_gm_upper_bound_m": 3.9584570964621637,
+              "guide_design_section_modulus_m3": 0.001006,
+              "guide_design_area_m2": 0.01207,
+              "guide_design_rated_ratio": 0.908909447708978,
+              "guide_design_contact_n": 307468.09261891525,
+              "guide_design_maximum_tiers": 3.0,
+              "guide_design_governing_bay": 1.0,
+              "guide_design_governing_row": 1.0
+            },
+            "report": {
+              "name": "lashing",
+              "violations": [
+                {
+                  "rule_id": "iacs.member_irs.container_securing",
+                  "severity": "hard",
+                  "call_index": 0,
+                  "move_index": null,
+                  "containers": [
+                    "QZXU0000605",
+                    "QZXU0000945",
+                    "QZXU0001411",
+                    "QZXU0002090"
+                  ],
+                  "slots": [
+                    "0100682",
+                    "0100684",
+                    "0100686",
+                    "0100688"
+                  ],
+                  "yard_addresses": [],
+                  "measured": 1.011700917545739,
+                  "limit": 1.0,
+                  "unit": "ratio",
+                  "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+                  "inherited": false
+                },
+                {
+                  "rule_id": "iacs.member_irs.container_securing",
+                  "severity": "hard",
+                  "call_index": 0,
+                  "move_index": null,
+                  "containers": [
+                    "QZXU0000605",
+                    "QZXU0000945",
+                    "QZXU0001411",
+                    "QZXU0002090"
+                  ],
+                  "slots": [
+                    "0100682",
+                    "0100684",
+                    "0100686",
+                    "0100688"
+                  ],
+                  "yard_addresses": [],
+                  "measured": 1.011700917545739,
+                  "limit": 1.0,
+                  "unit": "ratio",
+                  "message": "max_fitting_ratio exceeds the declared synthetic securing limit.",
+                  "inherited": false
+                }
+              ],
+              "metrics": {
+                "max_racking_ratio": 0.7367856112735628,
+                "max_longitudinal_racking_ratio": 0.40523895140528937,
+                "max_corner_post_ratio": 0.5291373701297987,
+                "max_corner_tension_ratio": 0.8599457799138782,
+                "max_lashing_ratio": 0.7955580914258402,
+                "max_fitting_ratio": 1.011700917545739,
+                "max_cell_guide_ratio": 0.2804337485222299,
+                "gm_m": 2.6087830828243503,
+                "roll_period_s": 11.247986403788625,
+                "roll_angle_rad": 0.5961848245570981,
+                "block_coefficient_scantling": 0.6494357798565297,
+                "synthetic_arrangement": 1.0,
+                "physical_box_count": 458.0,
+                "guide_design_gm_m": 3.9584570964621637,
+                "max_gm_lashing_m": 3.9584570964621637,
+                "guide_design_gm_upper_bound_m": 3.9584570964621637,
+                "guide_design_section_modulus_m3": 0.001006,
+                "guide_design_area_m2": 0.01207,
+                "guide_design_rated_ratio": 0.908909447708978,
+                "guide_design_contact_n": 307468.09261891525,
+                "guide_design_maximum_tiers": 3.0,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0
+              },
+              "margins": {
+                "max_racking_ratio": 0.2632143887264372,
+                "max_longitudinal_racking_ratio": 0.5947610485947106,
+                "max_corner_post_ratio": 0.47086262987020133,
+                "max_corner_tension_ratio": 0.14005422008612178,
+                "max_lashing_ratio": 0.20444190857415978,
+                "max_fitting_ratio": -0.011700917545738987,
+                "max_cell_guide_ratio": 0.7195662514777701
+              },
+              "ran": true,
+              "error": null,
+              "notes": [
+                "APPROXIMATION: D54/D56 synthetic rated-vessel guide design; governing stack 00101H, declared lashing design GM 3.9584571 m, maximum tiers 3, contact bound 307468.093 N, W=0.001006 m3, A=0.01207 m2, rated IRS ratio 0.908909448 (10% margin, rounded upward; no actual cargo used)."
+              ]
+            },
+            "full_check_pending": true,
+            "wall_s": 0.789586583035998
+          }
+        }
+      ],
+      "expected_result_confirmed": true,
+      "note": "Stored full verdict labels the request; it was not rerun by this recorder."
+    },
+    {
+      "box_id": "QZXU0000375",
+      "target_slot": "0090502",
+      "kind": "stored_legal",
+      "stored_full_legal": true,
+      "pid": 86046,
+      "initial_admission": {
+        "mask": 4095,
+        "load1": 42.44,
+        "t": 1793584196,
+        "age_s": 18.42568302154541
+      },
+      "prepare_s": 0.17836829100269824,
+      "replay_legal": true,
+      "calls": [
+        {
+          "temperature": "cold",
+          "admission": {
+            "mask": 4095,
+            "load1": 42.02,
+            "t": 1793584217,
+            "age_s": 0.16003108024597168
+          },
+          "end_load": {
+            "mask": 4095,
+            "load1": 42.02,
+            "t": 1793584217
+          },
+          "wall_s": 7.453379416954704,
+          "broken": [],
+          "screen": {
+            "phase": "departure",
+            "source": "stowage.checker.lashing.check_lashing",
+            "label": "Departure securing screen; full check running",
+            "note": "Departure securing screened with the checker's actual loading condition and synthetic securing arrangement. Mid-voyage, arrival and all other full-checker parts remain pending.",
+            "ran": true,
+            "passed": true,
+            "error": null,
+            "max_fitting_ratio": 0.8012946106520221,
+            "metrics": {
+              "max_racking_ratio": 0.6769862924260892,
+              "max_longitudinal_racking_ratio": 0.397658174763616,
+              "max_corner_post_ratio": 0.484798060816543,
+              "max_corner_tension_ratio": 0.6811004190542188,
+              "max_lashing_ratio": 0.7896355904014141,
+              "max_fitting_ratio": 0.8012946106520221,
+              "max_cell_guide_ratio": 0.28045143397048217,
+              "gm_m": 2.6097573386884885,
+              "roll_period_s": 11.245886699062927,
+              "roll_angle_rad": 0.5962171277067242,
+              "block_coefficient_scantling": 0.6494357798565297,
+              "synthetic_arrangement": 1.0,
+              "physical_box_count": 458.0,
+              "guide_design_gm_m": 3.9584570964621637,
+              "max_gm_lashing_m": 3.9584570964621637,
+              "guide_design_gm_upper_bound_m": 3.9584570964621637,
+              "guide_design_section_modulus_m3": 0.001006,
+              "guide_design_area_m2": 0.01207,
+              "guide_design_rated_ratio": 0.908909447708978,
+              "guide_design_contact_n": 307468.09261891525,
+              "guide_design_maximum_tiers": 3.0,
+              "guide_design_governing_bay": 1.0,
+              "guide_design_governing_row": 1.0
+            },
+            "report": {
+              "name": "lashing",
+              "violations": [],
+              "metrics": {
+                "max_racking_ratio": 0.6769862924260892,
+                "max_longitudinal_racking_ratio": 0.397658174763616,
+                "max_corner_post_ratio": 0.484798060816543,
+                "max_corner_tension_ratio": 0.6811004190542188,
+                "max_lashing_ratio": 0.7896355904014141,
+                "max_fitting_ratio": 0.8012946106520221,
+                "max_cell_guide_ratio": 0.28045143397048217,
+                "gm_m": 2.6097573386884885,
+                "roll_period_s": 11.245886699062927,
+                "roll_angle_rad": 0.5962171277067242,
+                "block_coefficient_scantling": 0.6494357798565297,
+                "synthetic_arrangement": 1.0,
+                "physical_box_count": 458.0,
+                "guide_design_gm_m": 3.9584570964621637,
+                "max_gm_lashing_m": 3.9584570964621637,
+                "guide_design_gm_upper_bound_m": 3.9584570964621637,
+                "guide_design_section_modulus_m3": 0.001006,
+                "guide_design_area_m2": 0.01207,
+                "guide_design_rated_ratio": 0.908909447708978,
+                "guide_design_contact_n": 307468.09261891525,
+                "guide_design_maximum_tiers": 3.0,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0
+              },
+              "margins": {
+                "max_racking_ratio": 0.3230137075739108,
+                "max_longitudinal_racking_ratio": 0.602341825236384,
+                "max_corner_post_ratio": 0.515201939183457,
+                "max_corner_tension_ratio": 0.3188995809457812,
+                "max_lashing_ratio": 0.21036440959858593,
+                "max_fitting_ratio": 0.19870538934797788,
+                "max_cell_guide_ratio": 0.7195485660295178
+              },
+              "ran": true,
+              "error": null,
+              "notes": [
+                "APPROXIMATION: D54/D56 synthetic rated-vessel guide design; governing stack 00101H, declared lashing design GM 3.9584571 m, maximum tiers 3, contact bound 307468.093 N, W=0.001006 m3, A=0.01207 m2, rated IRS ratio 0.908909448 (10% margin, rounded upward; no actual cargo used)."
+              ]
+            },
+            "full_check_pending": true,
+            "wall_s": 7.453379416954704
+          }
+        },
+        {
+          "temperature": "warm",
+          "admission": {
+            "mask": 4095,
+            "load1": 42.02,
+            "t": 1793584217,
+            "age_s": 7.613814115524292
+          },
+          "end_load": {
+            "mask": 4095,
+            "load1": 42.02,
+            "t": 1793584217
+          },
+          "wall_s": 0.684991208021529,
+          "broken": [],
+          "screen": {
+            "phase": "departure",
+            "source": "stowage.checker.lashing.check_lashing",
+            "label": "Departure securing screen; full check running",
+            "note": "Departure securing screened with the checker's actual loading condition and synthetic securing arrangement. Mid-voyage, arrival and all other full-checker parts remain pending.",
+            "ran": true,
+            "passed": true,
+            "error": null,
+            "max_fitting_ratio": 0.8012946106520221,
+            "metrics": {
+              "max_racking_ratio": 0.6769862924260892,
+              "max_longitudinal_racking_ratio": 0.397658174763616,
+              "max_corner_post_ratio": 0.484798060816543,
+              "max_corner_tension_ratio": 0.6811004190542188,
+              "max_lashing_ratio": 0.7896355904014141,
+              "max_fitting_ratio": 0.8012946106520221,
+              "max_cell_guide_ratio": 0.28045143397048217,
+              "gm_m": 2.6097573386884885,
+              "roll_period_s": 11.245886699062927,
+              "roll_angle_rad": 0.5962171277067242,
+              "block_coefficient_scantling": 0.6494357798565297,
+              "synthetic_arrangement": 1.0,
+              "physical_box_count": 458.0,
+              "guide_design_gm_m": 3.9584570964621637,
+              "max_gm_lashing_m": 3.9584570964621637,
+              "guide_design_gm_upper_bound_m": 3.9584570964621637,
+              "guide_design_section_modulus_m3": 0.001006,
+              "guide_design_area_m2": 0.01207,
+              "guide_design_rated_ratio": 0.908909447708978,
+              "guide_design_contact_n": 307468.09261891525,
+              "guide_design_maximum_tiers": 3.0,
+              "guide_design_governing_bay": 1.0,
+              "guide_design_governing_row": 1.0
+            },
+            "report": {
+              "name": "lashing",
+              "violations": [],
+              "metrics": {
+                "max_racking_ratio": 0.6769862924260892,
+                "max_longitudinal_racking_ratio": 0.397658174763616,
+                "max_corner_post_ratio": 0.484798060816543,
+                "max_corner_tension_ratio": 0.6811004190542188,
+                "max_lashing_ratio": 0.7896355904014141,
+                "max_fitting_ratio": 0.8012946106520221,
+                "max_cell_guide_ratio": 0.28045143397048217,
+                "gm_m": 2.6097573386884885,
+                "roll_period_s": 11.245886699062927,
+                "roll_angle_rad": 0.5962171277067242,
+                "block_coefficient_scantling": 0.6494357798565297,
+                "synthetic_arrangement": 1.0,
+                "physical_box_count": 458.0,
+                "guide_design_gm_m": 3.9584570964621637,
+                "max_gm_lashing_m": 3.9584570964621637,
+                "guide_design_gm_upper_bound_m": 3.9584570964621637,
+                "guide_design_section_modulus_m3": 0.001006,
+                "guide_design_area_m2": 0.01207,
+                "guide_design_rated_ratio": 0.908909447708978,
+                "guide_design_contact_n": 307468.09261891525,
+                "guide_design_maximum_tiers": 3.0,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0
+              },
+              "margins": {
+                "max_racking_ratio": 0.3230137075739108,
+                "max_longitudinal_racking_ratio": 0.602341825236384,
+                "max_corner_post_ratio": 0.515201939183457,
+                "max_corner_tension_ratio": 0.3188995809457812,
+                "max_lashing_ratio": 0.21036440959858593,
+                "max_fitting_ratio": 0.19870538934797788,
+                "max_cell_guide_ratio": 0.7195485660295178
+              },
+              "ran": true,
+              "error": null,
+              "notes": [
+                "APPROXIMATION: D54/D56 synthetic rated-vessel guide design; governing stack 00101H, declared lashing design GM 3.9584571 m, maximum tiers 3, contact bound 307468.093 N, W=0.001006 m3, A=0.01207 m2, rated IRS ratio 0.908909448 (10% margin, rounded upward; no actual cargo used)."
+              ]
+            },
+            "full_check_pending": true,
+            "wall_s": 0.684991208021529
+          }
+        }
+      ],
+      "expected_result_confirmed": true,
+      "note": "Stored full verdict labels the request; it was not rerun by this recorder."
+    },
+    {
+      "box_id": "QZXU0000591",
+      "target_slot": "0180502",
+      "kind": "stored_legal",
+      "stored_full_legal": true,
+      "pid": 86180,
+      "initial_admission": {
+        "mask": 4095,
+        "load1": 42.02,
+        "t": 1793584217,
+        "age_s": 9.176809072494507
+      },
+      "prepare_s": 0.09670145798008889,
+      "replay_legal": true,
+      "calls": [
+        {
+          "temperature": "cold",
+          "admission": {
+            "mask": 4095,
+            "load1": 42.02,
+            "t": 1793584217,
+            "age_s": 11.37423586845398
+          },
+          "end_load": {
+            "mask": 4095,
+            "load1": 42.02,
+            "t": 1793584217
+          },
+          "wall_s": 7.437565707950853,
+          "broken": [],
+          "screen": {
+            "phase": "departure",
+            "source": "stowage.checker.lashing.check_lashing",
+            "label": "Departure securing screen; full check running",
+            "note": "Departure securing screened with the checker's actual loading condition and synthetic securing arrangement. Mid-voyage, arrival and all other full-checker parts remain pending.",
+            "ran": true,
+            "passed": true,
+            "error": null,
+            "max_fitting_ratio": 0.8012137541878303,
+            "metrics": {
+              "max_racking_ratio": 0.6769355705664408,
+              "max_longitudinal_racking_ratio": 0.39765907289775954,
+              "max_corner_post_ratio": 0.4847716708164239,
+              "max_corner_tension_ratio": 0.6810316910596558,
+              "max_lashing_ratio": 0.7895772822948912,
+              "max_fitting_ratio": 0.8012137541878303,
+              "max_cell_guide_ratio": 0.280435932595475,
+              "gm_m": 2.608902733865266,
+              "roll_period_s": 11.247728469927168,
+              "roll_angle_rad": 0.5961887927703512,
+              "block_coefficient_scantling": 0.6494357798565297,
+              "synthetic_arrangement": 1.0,
+              "physical_box_count": 458.0,
+              "guide_design_gm_m": 3.9584570964621637,
+              "max_gm_lashing_m": 3.9584570964621637,
+              "guide_design_gm_upper_bound_m": 3.9584570964621637,
+              "guide_design_section_modulus_m3": 0.001006,
+              "guide_design_area_m2": 0.01207,
+              "guide_design_rated_ratio": 0.908909447708978,
+              "guide_design_contact_n": 307468.09261891525,
+              "guide_design_maximum_tiers": 3.0,
+              "guide_design_governing_bay": 1.0,
+              "guide_design_governing_row": 1.0
+            },
+            "report": {
+              "name": "lashing",
+              "violations": [],
+              "metrics": {
+                "max_racking_ratio": 0.6769355705664408,
+                "max_longitudinal_racking_ratio": 0.39765907289775954,
+                "max_corner_post_ratio": 0.4847716708164239,
+                "max_corner_tension_ratio": 0.6810316910596558,
+                "max_lashing_ratio": 0.7895772822948912,
+                "max_fitting_ratio": 0.8012137541878303,
+                "max_cell_guide_ratio": 0.280435932595475,
+                "gm_m": 2.608902733865266,
+                "roll_period_s": 11.247728469927168,
+                "roll_angle_rad": 0.5961887927703512,
+                "block_coefficient_scantling": 0.6494357798565297,
+                "synthetic_arrangement": 1.0,
+                "physical_box_count": 458.0,
+                "guide_design_gm_m": 3.9584570964621637,
+                "max_gm_lashing_m": 3.9584570964621637,
+                "guide_design_gm_upper_bound_m": 3.9584570964621637,
+                "guide_design_section_modulus_m3": 0.001006,
+                "guide_design_area_m2": 0.01207,
+                "guide_design_rated_ratio": 0.908909447708978,
+                "guide_design_contact_n": 307468.09261891525,
+                "guide_design_maximum_tiers": 3.0,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0
+              },
+              "margins": {
+                "max_racking_ratio": 0.3230644294335592,
+                "max_longitudinal_racking_ratio": 0.6023409271022404,
+                "max_corner_post_ratio": 0.5152283291835761,
+                "max_corner_tension_ratio": 0.3189683089403442,
+                "max_lashing_ratio": 0.21042271770510879,
+                "max_fitting_ratio": 0.19878624581216975,
+                "max_cell_guide_ratio": 0.7195640674045249
+              },
+              "ran": true,
+              "error": null,
+              "notes": [
+                "APPROXIMATION: D54/D56 synthetic rated-vessel guide design; governing stack 00101H, declared lashing design GM 3.9584571 m, maximum tiers 3, contact bound 307468.093 N, W=0.001006 m3, A=0.01207 m2, rated IRS ratio 0.908909448 (10% margin, rounded upward; no actual cargo used)."
+              ]
+            },
+            "full_check_pending": true,
+            "wall_s": 7.437565707950853
+          }
+        },
+        {
+          "temperature": "warm",
+          "admission": {
+            "mask": 4095,
+            "load1": 42.02,
+            "t": 1793584217,
+            "age_s": 18.812126874923706
+          },
+          "end_load": {
+            "mask": 4095,
+            "load1": 42.02,
+            "t": 1793584217
+          },
+          "wall_s": 0.4063240420073271,
+          "broken": [],
+          "screen": {
+            "phase": "departure",
+            "source": "stowage.checker.lashing.check_lashing",
+            "label": "Departure securing screen; full check running",
+            "note": "Departure securing screened with the checker's actual loading condition and synthetic securing arrangement. Mid-voyage, arrival and all other full-checker parts remain pending.",
+            "ran": true,
+            "passed": true,
+            "error": null,
+            "max_fitting_ratio": 0.8012137541878303,
+            "metrics": {
+              "max_racking_ratio": 0.6769355705664408,
+              "max_longitudinal_racking_ratio": 0.39765907289775954,
+              "max_corner_post_ratio": 0.4847716708164239,
+              "max_corner_tension_ratio": 0.6810316910596558,
+              "max_lashing_ratio": 0.7895772822948912,
+              "max_fitting_ratio": 0.8012137541878303,
+              "max_cell_guide_ratio": 0.280435932595475,
+              "gm_m": 2.608902733865266,
+              "roll_period_s": 11.247728469927168,
+              "roll_angle_rad": 0.5961887927703512,
+              "block_coefficient_scantling": 0.6494357798565297,
+              "synthetic_arrangement": 1.0,
+              "physical_box_count": 458.0,
+              "guide_design_gm_m": 3.9584570964621637,
+              "max_gm_lashing_m": 3.9584570964621637,
+              "guide_design_gm_upper_bound_m": 3.9584570964621637,
+              "guide_design_section_modulus_m3": 0.001006,
+              "guide_design_area_m2": 0.01207,
+              "guide_design_rated_ratio": 0.908909447708978,
+              "guide_design_contact_n": 307468.09261891525,
+              "guide_design_maximum_tiers": 3.0,
+              "guide_design_governing_bay": 1.0,
+              "guide_design_governing_row": 1.0
+            },
+            "report": {
+              "name": "lashing",
+              "violations": [],
+              "metrics": {
+                "max_racking_ratio": 0.6769355705664408,
+                "max_longitudinal_racking_ratio": 0.39765907289775954,
+                "max_corner_post_ratio": 0.4847716708164239,
+                "max_corner_tension_ratio": 0.6810316910596558,
+                "max_lashing_ratio": 0.7895772822948912,
+                "max_fitting_ratio": 0.8012137541878303,
+                "max_cell_guide_ratio": 0.280435932595475,
+                "gm_m": 2.608902733865266,
+                "roll_period_s": 11.247728469927168,
+                "roll_angle_rad": 0.5961887927703512,
+                "block_coefficient_scantling": 0.6494357798565297,
+                "synthetic_arrangement": 1.0,
+                "physical_box_count": 458.0,
+                "guide_design_gm_m": 3.9584570964621637,
+                "max_gm_lashing_m": 3.9584570964621637,
+                "guide_design_gm_upper_bound_m": 3.9584570964621637,
+                "guide_design_section_modulus_m3": 0.001006,
+                "guide_design_area_m2": 0.01207,
+                "guide_design_rated_ratio": 0.908909447708978,
+                "guide_design_contact_n": 307468.09261891525,
+                "guide_design_maximum_tiers": 3.0,
+                "guide_design_governing_bay": 1.0,
+                "guide_design_governing_row": 1.0
+              },
+              "margins": {
+                "max_racking_ratio": 0.3230644294335592,
+                "max_longitudinal_racking_ratio": 0.6023409271022404,
+                "max_corner_post_ratio": 0.5152283291835761,
+                "max_corner_tension_ratio": 0.3189683089403442,
+                "max_lashing_ratio": 0.21042271770510879,
+                "max_fitting_ratio": 0.19878624581216975,
+                "max_cell_guide_ratio": 0.7195640674045249
+              },
+              "ran": true,
+              "error": null,
+              "notes": [
+                "APPROXIMATION: D54/D56 synthetic rated-vessel guide design; governing stack 00101H, declared lashing design GM 3.9584571 m, maximum tiers 3, contact bound 307468.093 N, W=0.001006 m3, A=0.01207 m2, rated IRS ratio 0.908909448 (10% margin, rounded upward; no actual cargo used)."
+              ]
+            },
+            "full_check_pending": true,
+            "wall_s": 0.4063240420073271
+          }
+        }
+      ],
+      "expected_result_confirmed": true,
+      "note": "Stored full verdict labels the request; it was not rerun by this recorder."
+    }
+  ],
+  "complete": true,
+  "summary": {
+    "cold": {
+      "calls": 3,
+      "seconds": [
+        7.602037208969705,
+        7.453379416954704,
+        7.437565707950853
+      ],
+      "median_s": 7.453379416954704,
+      "min_s": 7.437565707950853,
+      "max_s": 7.602037208969705
+    },
+    "warm": {
+      "calls": 3,
+      "seconds": [
+        0.789586583035998,
+        0.684991208021529,
+        0.4063240420073271
+      ],
+      "median_s": 0.684991208021529,
+      "min_s": 0.4063240420073271,
+      "max_s": 0.789586583035998
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-02T02:35:02.349419+00:00",
+  "label": "Offline repairs after immutable model cohorts; not a hero freeze or new model score.",
+  "files": {
+    "agent.py": "da342f764dec675139a799011efc040c158439206f8ca49dd0a17a4630e6df52",
+    "safety.py": "4d6c3d2f7551260b17ba2d784d74713993a92d3e0d53789f6facad5acc382b11",
+    "tools.py": "63bd0f04a5d1ea6e83677a255ffcb18c7299b81812207d328ada69c3b146146d",
+    "behavior_scores.py": "12047246747a455ec40eb2d88e5d0bf4f28b0e0af990d17fc8e921db1ef51411",
+    "spending.py": "83f298f734bfc2f3a2d46fca048b0bfcb2b23791bf722a0b17011a3fa726c19e",
+    "spending-policy.json": "11ce67d882328f8b1348a2d5a88dd395d2cace1ddbb09405d50b556825ed6de7",
+    "live.py": "45ba80b5fdbf8d0f251f380f7db7618c9c2cbc99a372434f0f0c0ab87f329897",
+    "agency_evaluate.py": "dce7d51e16c549bab469793f822746355105839712496c5b3691758326813895",
+    "real_demo.py": "6df8f0c81eb9769c03c32fc4b3a00f880271fb1a7646a50c509c2992bced616a"
+  },
+  "tests": {
+    "passed": 663,
+    "failed": 0,
+    "skipped": 0,
+    "source": "review-tests.xml"
+  },
+  "added_measured_spend_usd": "0",
+  "measured_task_spend_usd": "5.48637435",
+  "held_usd": "1.319936",
+  "cap_usd": "12",
+  "paid_state": "awaiting_leader_hero",
+  "pending": "Leader announces checked lattice hero; then authorize/freeze final hero negotiation and shot 10 before any paid call."
+}

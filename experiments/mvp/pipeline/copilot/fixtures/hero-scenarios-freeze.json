@@ -1,0 +1,18 @@
+{
+  "schema_version": "stowlm.copilot-hero-scenarios-freeze/1",
+  "created_utc": "2026-11-02T04:58:17.806277+00:00",
+  "scenarios_file": "experiments/mvp/pipeline/copilot/fixtures/hero-scenarios.json",
+  "scenarios_sha256": "35c994769bd7d7cc67c8292276c2eb809f88f0c218f89c3cdab4f72d774ace14",
+  "scenario_count": 8,
+  "label": "Frozen fresh hero inputs and semantic goal definitions before any new hero model calls; historical measurements unchanged.",
+  "source_files": {
+    "experiments/mvp/pipeline/lattice/hero.json": "ff3ffdbb08ddf88595b7be53294bd1c2c41a9140ddfea2207b6116dacde9d6d4",
+    "experiments/mvp/strategy/fillsweep/maps/train/medium/feeder_500/f60-low/seed-192200002.json": "2d89a0b873027fa161267de22d3d397e00e2f773af5b574b25dfb88ce2cbd619",
+    "experiments/mvp/pipeline/lattice/fixtures/hero-base.json": "0fd3cf66a5454f3d50935cc79ee9769f1ef16ba0579e4e596747bfb1b48c5233",
+    "experiments/mvp/pipeline/lattice/store/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json": "f1f20eedac604f28c7db46f05201cfa2497e3d4e06c2f76d13acb35f68c570c4",
+    "experiments/mvp/pipeline/lattice/screening/current-v3/cabff3d68d56e64b.repaired.json": "9685e405c2dff6e29ea7d4d1cb3eb359ef8da875b1a072a900310ae0a012e48b",
+    "experiments/mvp/pipeline/lattice/fixtures/hero-instruction.json": "e806a0df3b2ff41aba81e1b587c13f1ff77a2b2f4a4f38e2ff7c4113e9515c1b"
+  },
+  "source_scope": "Only unsealed primary hero selected by lattice/hero.json; no model outputs read to author this cohort.",
+  "scorer_status": "Implementation and offline tests in progress; runner must separately freeze scorer/runtime before paid execution."
+}

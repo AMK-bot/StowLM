@@ -1,0 +1,38 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 23,
+      "max_tiers": 1,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "bay": 23,
+      "max_tiers": 1,
+      "type": "max_tiers",
+      "zone": "hold"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.3472014580038376,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00172525",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "8c5b9265235c927d022d63a16809ab7f6c6122efb8672c0023e33a1da362eb6d",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "37cc6c90-591c-4d88-a057-df5a0b74542f"
+  },
+  "parser_latency_s": 1.3471844579908065,
+  "script": "ในระวางใต้ดาดฟ้าของเบย์ยี่สิบสาม ให้ซ้อนตู้สินค้าได้ไม่เกินหนึ่งชั้น",
+  "source_id": "reader-01880853724ecef1",
+  "started_utc": "2026-11-01T01:35:13.003006+00:00",
+  "status": "complete"
+}

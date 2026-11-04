@@ -1,0 +1,103 @@
+{
+  "manifest_sha256": "acf2f275efa73f45c43709f4a52807dd480390e1497f085cab11d3604265bbec",
+  "tree_digest": "9685cd1f2f6bf8eb492d933f1a456c14a7642aed60fdd233b5c65400ff19dcb8",
+  "all_excluded": true,
+  "files": [
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map_test.py.txt",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map_resolve_metadata.py.txt",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map_metadata_extra.py.txt",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map_metadata_complete.py.txt",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map_seed_audit.py.txt",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map_generate.py.txt",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps-manifest.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-digest-proof.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-seeds.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-cells.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-seed-proof.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-prior-identities.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-generation/requests.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-generation/runtime-snapshot.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-generation/PREREG.md",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-generation/cache/stability/sample.npz",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-generation/cache/vessels/sample.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/map-generation/status/306320000.json",
+      "excluded": true,
+      "already_pinned": false
+    },
+    {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/maps/feeder_500-random_yard-f60-r0.json",
+      "excluded": true,
+      "already_pinned": false
+    }
+  ],
+  "rule": "All new tools retain .py.txt suffix, mode0644; no generated executable/source file is copied or written."
+}

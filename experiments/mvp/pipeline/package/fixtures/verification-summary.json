@@ -1,0 +1,148 @@
+{
+  "label": "Measured on the shared development machine; synthetic data; no network or GPU in tests",
+  "initial_suite": {
+    "passed": 44,
+    "wall_s": 188.72
+  },
+  "initial_verify_190_boxes": {
+    "passed": true,
+    "wall_s": 62.82028458302375,
+    "checker_wall_s": 62.77752037503524
+  },
+  "final_package_write_wall_s": 65.35676875000354,
+  "final_suite": {
+    "status": "passed",
+    "tests": 127,
+    "failures": 0,
+    "errors": 0,
+    "wall_s": 138.86313449998852,
+    "network": false,
+    "gpu": false,
+    "real_checker_reruns": 5
+  },
+  "spark": {
+    "original_recording_cost_usd": "0.00336025",
+    "ordinary_replay_cost_usd": 0,
+    "current_menu": "Deterministic offline template; previous paid selection retired.",
+    "additional_spend_usd": 0
+  },
+  "tamper_cases": [
+    "plan.json move edit: named SHA and full checker rejection",
+    "receipt.json row edit: named file SHA, hash-chain row and signature mismatch",
+    "package.json hash edit: named file SHA and signed-manifest mismatch"
+  ],
+  "browser_print": {
+    "status": "revised layout awaits external print; earlier revision user-reported 8-page pass retained by its hash",
+    "static_html_passed": true,
+    "bay_sections": 8,
+    "physical_cell_labels": 316,
+    "current_html_sha256": "c1f821b0221fbf53353b23880e680f313fe8165b68746af0aacef8c11c2a50a5",
+    "external_print": {
+      "source": "User message: printed bay-plan.html outside the sandbox; 8 pages, no errors, looks good",
+      "pages": 8,
+      "errors": 0,
+      "printed_html_sha256": "575f4ce7b1957a68ec2284f748624131e8cb583b1a80af30c15ab8cf504f630c"
+    }
+  },
+  "exchange_format": {
+    "status": "cut",
+    "decision": "BAPLIE.md"
+  },
+  "fixture_source": "Historical c6 synthetic development TRAIN plan; not frozen Engine 0.13.0",
+  "verify_190_boxes": {
+    "passed": true,
+    "test_elapsed_s": 56.833,
+    "timing_scope": "Full offline verification regression, including setup/fixture copy and admission; not an isolated API wall measurement."
+  },
+  "observed_verify_wall_s": [
+    62.82028458302375,
+    48.40989733400056,
+    59.017665083985776,
+    52.0359197499929
+  ],
+  "fixture_refresh_wall_s": 65.35676875000354,
+  "rule_counts": {
+    "checker_active": 54,
+    "inactive": 8,
+    "flag_disabled": 6,
+    "solver_only": 2,
+    "rule_freeze_v1": false,
+    "catalogue_sha256": "a34a24ed0a1a8ca1a4797153d6c6452fe56fc436d33f0bc427fbd6b87eb51cae"
+  },
+  "published_public_key_sha256": "ff1f8812a588638931ebfa2352ea243c2f757ad409feb5f01b922f8577d793c0",
+  "before_chief_officer_review": {
+    "final_suite": {
+      "status": "passed",
+      "tests": 89,
+      "failures": 0,
+      "errors": 0,
+      "wall_s": 173.48,
+      "network": false,
+      "gpu": false,
+      "real_checker_reruns": 4
+    },
+    "verify_190_boxes": {
+      "passed": true,
+      "wall_s": 42.18285195803037,
+      "checker_wall_s": 42.13916745799361,
+      "timing_scope": "API elapsed after fleet CPU admission; shared development machine"
+    },
+    "fixture_refresh_wall_s": 49.26359000004595,
+    "browser_print": {
+      "status": "passed outside sandbox (user-reported)",
+      "pages": 8,
+      "errors": 0,
+      "static_html_passed": true,
+      "bay_sections": 8,
+      "physical_cell_labels": 316
+    }
+  },
+  "chief_officer_review": {
+    "planned_boxes": 190,
+    "planned_bays": 8,
+    "all_bays": 14,
+    "fixed_background_boxes": 268,
+    "fixed_background_mass_t": 3856.1933499181528,
+    "displacement_t": 13564.284492015391,
+    "weight_residual_kg": 0.0,
+    "max_abs_list_deg_est": 2.8296789868617624,
+    "flagged_quay_lifts": 137,
+    "cargo_work_stability_checked": false,
+    "operational_status": "HOLD \u2014 chief officer heeling-tank programme required",
+    "hero": "Pending real run_packet outcome and independently published runner receipt anchor",
+    "ems": "Not in native synthetic source; declaration gap explicit in manifest",
+    "print": "Revised layout needs external recheck; no GUI launched"
+  },
+  "before_actual_hero_suite": {
+    "status": "passed",
+    "tests": 116,
+    "failures": 0,
+    "errors": 0,
+    "wall_s": 470.62923991598655,
+    "junit_wall_s": 468.738,
+    "network": false,
+    "gpu": false,
+    "real_checker_reruns": 4,
+    "timing_scope": "Shared machine, includes per-test fleet CPU admission waits."
+  },
+  "actual_hero": {
+    "instance_id": "D192.medium-feeder_500-f60-low-s192200002",
+    "boxes": 87,
+    "native_frames": 146,
+    "engine_version": "0.13.0",
+    "plan_sha256": "359e8fd8273c1b493b84d0ad424d4c235607c86962db69a95a7218055d2ef0ee",
+    "runner_receipt_sha256": "08f968dd122b618c48cccefb0151d56d69a90596c6e1dacce126d062c4672786",
+    "regeneration_wall_s": 346.22210929199355,
+    "verification_inside_regeneration_s": 3.686358790961094,
+    "standalone_verification": {
+      "verify_api_wall_s": 21.195897791010793,
+      "checker_wall_s": 21.17414508399088
+    },
+    "package_dir": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/package/fixtures/hero-run/package",
+    "reader": "Genuine recorded Muse Spark reading; adopted-reader replacement configurable",
+    "confirmation_source": "user_authorized_batch:package_regeneration",
+    "additional_spark_cost_usd": "0.00335175",
+    "task_total_spark_cost_usd": "0.00671200",
+    "print": "6 bay pages and 143 labels pass static check; leader will print outside sandbox"
+  }
+}

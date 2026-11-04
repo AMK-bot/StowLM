@@ -1,0 +1,82 @@
+{
+  "type": "close_bay",
+  "input": "experiments/mvp/corpus/val/tiny/feeder_1700/random_yard/seed-020000038.json",
+  "baseline_file": "experiments/mvp/frontier/runs/tiny48-0.9/random.tiny.20000038.0.2.json",
+  "instance_id": "random.tiny.20000038.0.2",
+  "sentence": "Bay 01 is closed to all loading until further notice.",
+  "sealed_id": "sealed-002",
+  "expected": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "close_bay",
+      "bay": 1
+    }
+  },
+  "context": {
+    "id": "random.tiny.20000038.0.2",
+    "bays": [
+      1,
+      2,
+      3
+    ],
+    "max_tiers": {
+      "hold": 2,
+      "deck": 1
+    },
+    "max_tiers_by_bay": {
+      "1": {
+        "hold": 2,
+        "deck": 1
+      },
+      "2": {
+        "hold": 2,
+        "deck": 1
+      },
+      "3": {
+        "hold": 2,
+        "deck": 1
+      }
+    },
+    "has_accommodation": true,
+    "hatch_covers": [
+      "HC-002-P"
+    ],
+    "ports": [
+      "SGSIN",
+      "MYPKG",
+      "THLCH"
+    ]
+  },
+  "baseline_weighted": 7.0,
+  "baseline_violations": [
+    "load QZXU0000009 -> 0010202: instruction: slot 0010202 is closed"
+  ],
+  "baseline_violation_count": 1,
+  "capacity_screen": "necessary open-cell and surviving 40ft-pair screens passed; not a feasibility certificate",
+  "n_load": 3,
+  "input_sha256": "997049a03d961426fbc5d2bb3156e2b5a2ecc16c13a9c093807f56e8184eaee3",
+  "case_id": "close_bay-04",
+  "selection_rationale": "Openly baseline-screened, binding-enriched validation cohort: prefer violating stored best plans, then smaller load lists, then larger baseline weighted move count; one literal sealed sentence per distinct map. necessary open-cell and surviving 40ft-pair screens passed; not a feasibility certificate",
+  "baseline_sha256": "3dd690da29b3268e459fd1f0ca626191afe8094879f456ed4d41af85da7d577c",
+  "parsed": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "close_bay",
+      "bay": 1
+    }
+  },
+  "parser": {
+    "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":1}}",
+    "request_id": "f7997ffb-4927-48c5-8ec0-97be4ba680d5",
+    "cost_usd": "0.0012065",
+    "usage": {
+      "input_tokens": 533,
+      "output_tokens": 219,
+      "cached_tokens": 355
+    },
+    "prompt_sha256": "acddaf99e20b0b23e17b7c3203bcc510788be5b45aabe7186a5fcc4debd6566f",
+    "reservation_context_bound_tokens": 32768
+  },
+  "parse_exact": true,
+  "parse_wall_s": 1.2096889580134302
+}

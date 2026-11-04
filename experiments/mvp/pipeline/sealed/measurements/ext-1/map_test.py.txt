@@ -1,0 +1,69 @@
+"""Offline extension metadata/generation-routing tests; no maps generated."""
+import importlib.machinery,importlib.util,json,unittest,subprocess,sys,os
+from pathlib import Path
+from unittest.mock import patch
+import tempfile
+HERE=Path(__file__).resolve().parent
+
+def load(name,file):
+ loader=importlib.machinery.SourceFileLoader(name,str(HERE/file));spec=importlib.util.spec_from_loader(name,loader)
+ module=importlib.util.module_from_spec(spec);loader.exec_module(module);return module
+audit=load('map_audit','map_seed_audit.py.txt');generate=load('map_generate','map_generate.py.txt');complete=load('map_complete','map_metadata_complete.py.txt')
+class MapTests(unittest.TestCase):
+ def test_exact_original_cell_mix_and_nonshared_roots(self):
+  rows=generate.specs();self.assertEqual(len(rows),24);self.assertEqual(len({r['seed'] for r in rows}),24)
+  self.assertEqual([r['seed'] for r in rows],audit.SEEDS)
+  for cell in range(8):self.assertEqual([r['rep'] for r in rows if r['cell_index']==cell],[0,1,2])
+ def test_payloads_rejected_and_public_identity_metadata_allowed(self):
+  for name in ('experiments/mvp/pipeline/maps/sealed/MANIFEST.json','experiments/mvp/testv3/manifest.json','experiments/mvp/pipeline/sealed/runs/final-3/jobs/0001/row.json','experiments/mvp/pipeline/sealed/runs/final-3/rows.json','experiments/mvp/corpus/val/tiny/seed-020000001.json'):
+   self.assertFalse(audit.candidate(name),name)
+  for name in ('experiments/mvp/pipeline/maps/cohort.json','experiments/mvp/corpus/test-v3/manifest.json','experiments/mvp/pipeline/sealed/runs/final-3/opened-maps.jsonl'):
+   self.assertTrue(audit.candidate(name),name)
+ def test_seed_detection_covers_underscores_and_avoids_fractional_digits(self):
+  self.assertEqual(audit.proposed_hits('root seed=306_320_001; seed-306320700.json'),[306320001,306320700])
+  self.assertEqual(audit.proposed_hits('0.306320001'),[])
+ def test_generator_reuses_frozen_function_code_and_only_redirects_paths(self):
+  module=generate.original_module()
+  self.assertEqual(Path(module._make_one.__code__.co_filename),generate.ORIGINAL/'generate.py')
+  self.assertEqual(module.HERE,generate.WORK);self.assertEqual(module.RUNTIME,generate.RUNTIME)
+ def test_canonical_variants_are_stable_and_cover_unicode(self):
+  value={'ship':'เรือ','b':2,'a':1}
+  self.assertEqual(generate.canonical(value),generate.canonical(dict(reversed(list(value.items())))))
+  self.assertNotEqual(generate.canonical(value),generate.canonical(value,ensure_ascii=True))
+ def test_structural_arrays_and_intervals_catch_unlisted_reserved_seed(self):
+  value=json.loads('{"seeds":{"train":[306100000,306100001]},"seed_ranges":{"tiny":[306319999,306320005],"small":{"start":100,"stop":103}}}',object_pairs_hook=complete.Pairs)
+  seeds,ranges=complete.seed_records(value)
+  self.assertEqual(seeds,{306100000,306100001})
+  self.assertTrue(any(r['start']<=306320001<=r['end_inclusive'] for r in ranges))
+  self.assertTrue(any(r['start']==100 and r['end_inclusive']==102 for r in ranges))
+ def test_duplicate_seed_keys_do_not_erase_earlier_registered_roots(self):
+  seeds,_=complete.seed_records(json.loads('{"seed":306320001,"seed":2}',object_pairs_hook=complete.Pairs))
+  self.assertEqual(seeds,{306320001,2})
+ def test_guard_resolves_fd_relative_cleanup_and_still_blocks_real_escape(self):
+  program="""
+import importlib.machinery,importlib.util,os,sys,tempfile
+from pathlib import Path
+loader=importlib.machinery.SourceFileLoader('guardtest',sys.argv[1]);spec=importlib.util.spec_from_loader(loader.name,loader);m=importlib.util.module_from_spec(spec);loader.exec_module(m)
+with tempfile.TemporaryDirectory() as tmp:
+ root=Path(tmp).resolve();home=root/'ext';work=home/'generation';work.mkdir(parents=True);(work/'worker.json').write_text('private');pinned=root/'pinned.txt';pinned.write_text('original')
+ m.ROOT=root;m.HOME=home;m.WORK=work;os.chdir(root);fd=os.open(work,os.O_RDONLY)
+ m.guard_repository_writes(dict(seed=1))
+ os.remove('worker.json',dir_fd=fd)
+ assert not (work/'worker.json').exists()
+ try:pinned.write_text('bad')
+ except RuntimeError:pass
+ else:raise AssertionError('real fence escape was allowed')
+ assert pinned.read_text()=='original'
+ os.close(fd);m.ROOT=root/'nonmatching';os.chdir('/private/tmp')
+"""
+  result=subprocess.run([sys.executable,'-c',program,str(HERE/'map_generate.py.txt')],capture_output=True,text=True,env={**os.environ,'PYTHONDONTWRITEBYTECODE':'1'})
+  self.assertEqual(result.returncode,0,result.stderr)
+ def test_prepare_refuses_failed_seed_audit_before_generator_call(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);home=root/'home';home.mkdir();(home/'PREREG.md').write_text('registered')
+   (home/'map-seed-proof.json').write_text(json.dumps(dict(no_seed_collision=False,errors=[])))
+   original=root/'experiments/mvp/pipeline/maps';manifest=root/'experiments/mvp/pipeline/freeze/manifest-pipeline.json';manifest.parent.mkdir(parents=True)
+   manifest.write_text(json.dumps(dict(files={str((original/name).relative_to(root)):'fixed' for name in ('generate.py','requests.json','runtime-snapshot.json')})))
+   with patch.object(generate,'HOME',home),patch.object(generate,'ROOT',root),patch.object(generate,'ORIGINAL',original),patch.object(generate,'sha',return_value='fixed'),patch.object(generate,'PREREG_SHA','fixed'),patch.object(generate,'MANIFEST_SHA','fixed'):
+    with self.assertRaisesRegex(RuntimeError,'Seed audit'):generate.prepare()
+if __name__=='__main__':unittest.main()

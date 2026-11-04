@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Break It Replay</title>
+<style>
+:root { --bg: #070e1b; --panel: #0d1a2e; --line: #1c304f; --ink: #dfe8f6; --dim: #8ba0c0; --amber: #ffa53a; --green: #47f5a0; --red: #ff5a5a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 980px; margin: 0 auto; padding: 28px 16px 48px; }
+h1 { font-size: 26px; margin: 0 0 6px; } h1 b { color: var(--amber); }
+.lede { color: var(--dim); margin: 0 0 14px; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 20px; }
+.pills span { border: 1px dashed var(--amber); color: #ffc670; border-radius: 999px; padding: 3px 10px; font-size: 12.5px; }
+.drag { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; margin: 0 0 8px; }
+summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; padding: 11px 14px; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary b { color: var(--dim); font-variant-numeric: tabular-nums; } summary em { color: var(--dim); font-style: normal; font-size: 13px; }
+summary::after { content: "Drop it"; margin-left: auto; color: var(--amber); font-size: 13px; }
+details[open] summary::after { content: ""; }
+code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; }
+.v { padding: 0 14px 12px; border-top: 1px solid var(--line); }
+.v p { margin: 10px 0 0; } .v small { display: block; color: var(--dim); font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; }
+.ok .full strong { color: var(--green); } .no .full strong { color: var(--red); }
+.lifts, .tag { color: var(--dim); font-size: 13px; }
+.why { color: #ffc670; font-size: 13.5px; border-left: 2px solid var(--amber); padding-left: 8px; }
+footer { color: var(--dim); font-size: 12.5px; margin-top: 22px; overflow-wrap: anywhere; }
+</style></head>
+<body><main>
+<h1>Break it: <b>25</b> pinned drags</h1>
+<p class="lede">Pick a box and a slot. Each drop shows what the fast screen said, then what the full checker ruled. Software decides. One box, no replan. Every drag edits the stored plan from before any instruction, so no instruction rule applies here.</p>
+<div class="pills"><span>Recorded verdict</span><span>Stored plan, computed on 2026-11-02</span><span>Demo cargo declaration changed for this challenge; no vessel or rule limit tightened</span><span>Synthetic ships and cargo, simulated port</span></div>
+<details class="drag no"><summary><b>01</b><span>Drag <code>QZXU0001010</code> to <code>0100288</code></span><em>bay 10, row 02, tier 88</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>02</b><span>Drag <code>QZXU0000246</code> to <code>0100582</code></span><em>bay 10, row 05, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>03</b><span>Drag <code>QZXU0000708</code> to <code>0020484</code></span><em>bay 2, row 04, tier 84</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>04</b><span>Drag <code>QZXU0000539</code> to <code>0210482</code></span><em>bay 21, row 04, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag ok"><summary><b>05</b><span>Drag <code>QZXU0000138</code> to <code>0100102</code></span><em>bay 10, row 01, tier 02</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>Nothing flagged yet</p>
+<p class="full"><small>Full checker</small><strong>Passes as edited</strong> Every rule the full checker runs passed on the edited plan. </p>
+<p class="lifts">Extra lifts this call: +0. Projected later-port lifts: +28 (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>06</b><span>Drag <code>QZXU0001089</code> to <code>0100206</code></span><em>bay 10, row 02, tier 06</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>Stack height</p>
+<p class="full"><small>Full checker</small><strong>The existing crane order can&#x27;t reach it</strong> The diagnostic snapshot of the requested stow also breaks a rule: Stack height. It&#x27;s a diagnostic, not the deciding cause. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>07</b><span>Drag <code>QZXU0000122</code> to <code>0020490</code></span><em>bay 2, row 04, tier 90</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>Lashing (our approximation, synthetic gear)</p>
+<p class="full"><small>Full checker</small><strong>Stow breaks rule: Lashing (our approximation, synthetic gear)</strong> The lashing would carry more load than its declared limit. <code>iacs.member_irs.container_securing</code></p>
+<p class="lifts">Extra lifts this call: +0. Projected later-port lifts: +2 (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>08</b><span>Drag <code>QZXU0001031</code> to <code>0100688</code></span><em>bay 10, row 06, tier 88</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>Lashing (our approximation, synthetic gear)</p>
+<p class="full"><small>Full checker</small><strong>Stow breaks rule: Lashing (our approximation, synthetic gear)</strong> The lashing would carry more load than its declared limit. <code>iacs.member_irs.container_securing</code></p>
+<p class="lifts">Extra lifts this call: +0. Projected later-port lifts: +2 (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>09</b><span>Drag <code>QZXU0000610</code> to <code>0110404</code></span><em>bay 11, row 04, tier 04</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag ok"><summary><b>10</b><span>Drag <code>QZXU0000478</code> to <code>0020682</code></span><em>bay 2, row 06, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>Nothing flagged yet</p>
+<p class="full"><small>Full checker</small><strong>Passes as edited</strong> Every rule the full checker runs passed on the edited plan. </p>
+<p class="lifts">Extra lifts this call: +0. Projected later-port lifts: +2 (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>11</b><span>Drag <code>QZXU0000903</code> to <code>0220402</code></span><em>bay 22, row 04, tier 02</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>12</b><span>Drag <code>QZXU0000858</code> to <code>0220382</code></span><em>bay 22, row 03, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>13</b><span>Drag <code>QZXU0000014</code> to <code>0020202</code></span><em>bay 2, row 02, tier 02</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>14</b><span>Drag <code>QZXU0000077</code> to <code>0090602</code></span><em>bay 9, row 06, tier 02</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="why">Why bay 9 isn&#x27;t refused here: these drags edit the plan from before the instruction to close bay 9, and that plan carries no close-bay rule, so the checker has no rule against bay 9. Its verdict covers the rules that plan carries.</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>15</b><span>Drag <code>QZXU0001134</code> to <code>0100182</code></span><em>bay 10, row 01, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.bottom_up</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>16</b><span>Drag <code>QZXU0000884</code> to <code>0010682</code></span><em>bay 1, row 06, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag ok"><summary><b>17</b><span>Drag <code>QZXU0001140</code> to <code>0020282</code></span><em>bay 2, row 02, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>Nothing flagged yet</p>
+<p class="full"><small>Full checker</small><strong>Passes as edited</strong> Every rule the full checker runs passed on the edited plan. </p>
+<p class="lifts">Extra lifts this call: +0. Projected later-port lifts: +2 (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>18</b><span>Drag <code>QZXU0000272</code> to <code>0020282</code></span><em>bay 2, row 02, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>19</b><span>Drag <code>QZXU0000082</code> to <code>0020682</code></span><em>bay 2, row 06, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>20</b><span>Drag <code>QZXU0000884</code> to <code>0030102</code></span><em>bay 3, row 01, tier 02</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>21</b><span>Drag <code>QZXU0001113</code> to <code>0100582</code></span><em>bay 10, row 05, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>22</b><span>Drag <code>QZXU0000349</code> to <code>0230182</code></span><em>bay 23, row 01, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>23</b><span>Drag <code>QZXU0000441</code> to <code>0220382</code></span><em>bay 22, row 03, tier 82</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>24</b><span>Drag <code>QZXU0000420</code> to <code>0210184</code></span><em>bay 21, row 01, tier 84</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>Stow is fine, but the existing crane order can&#x27;t reach it</strong> A diagnostic check of the requested stow broke no rule. A replan might. <code>expert.moves.hatch_clear</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details><details class="drag no"><summary><b>25</b><span>Drag <code>QZXU0000863</code> to <code>0220386</code></span><em>bay 22, row 03, tier 86</em></summary>
+<div class="v"><p class="fast"><small>Fast screen</small>The crane order can&#x27;t reach it</p>
+<p class="full"><small>Full checker</small><strong>The existing crane order can&#x27;t reach it</strong> The diagnostic snapshot of the requested stow also breaks a rule: Lashing (our approximation, synthetic gear). It&#x27;s a diagnostic, not the deciding cause. <code>expert.moves.bottom_up</code></p>
+<p class="lifts">Extra lifts this call: unavailable; the crane order failed. Projected later-port lifts: unavailable (projection).</p><p class="tag">Recorded verdict · Checked on 2026-11-02</p></div></details>
+<footer><p>Cargo declaration changed as listed; no vessel, trim, stack, securing, DG or other limit was tightened.</p>
+<p>QZXU0000014: synthetic UN1263 paint, class 3, packing group III becomes UN1689 sodium cyanide, class 6.1, packing group I.</p>
+<p>3 of 25 pinned drops pass as edited. These are drops we chose to show each kind of answer, not a rate.</p>
+<p>Each verdict is a recording from the pinned cache (sha256 b50f82ec5f5d9b69…), replayed with no checker running. Static page, built on the development tree from the pinned drag cache; frozen pipeline v4 (acf2f275efa7) pins the same cache byte for byte.</p></footer>
+</main></body></html>

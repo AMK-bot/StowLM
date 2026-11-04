@@ -1,0 +1,16 @@
+{
+  "schema_version": "stowlm.hero-wordings/1",
+  "written_by": "leader, 2026-11-02 02:45 EST (D268)",
+  "hero_instance_sha256": "cabff3d68d56e64ba9956761bcd0ca2abfa5077d41296db35b630efc11b04678",
+  "order": "File order is preference: reader_final.hero_candidates keeps the first that binds exactly.",
+  "provenance": "Hand-written planner wordings of the stored hero rule. Normalised exact-match check: none appear in experiments/mvp/reader/v3/data-domain train.jsonl or valid.jsonl. Not sealed sentences; never trained on.",
+  "candidates": [
+    {"sentence": "Keep bay 09 empty: that space is held for the next port.", "rule": {"schema_version": "stowlm.reader/2", "constraint": {"type": "close_bay", "bay": 9}}},
+    {"sentence": "Bay 09 has damaged cell guides, so load nothing there.", "rule": {"schema_version": "stowlm.reader/2", "constraint": {"type": "close_bay", "bay": 9}}},
+    {"sentence": "Nothing goes into bay nine on this call.", "rule": {"schema_version": "stowlm.reader/2", "constraint": {"type": "close_bay", "bay": 9}}},
+    {"sentence": "Keep bay 09 empty this call, hold and deck.", "rule": {"schema_version": "stowlm.reader/2", "constraint": {"type": "close_bay", "bay": 9}}},
+    {"sentence": "Planner, bay 09 is closed today.", "rule": {"schema_version": "stowlm.reader/2", "constraint": {"type": "close_bay", "bay": 9}}},
+    {"sentence": "Leave bay 9 completely empty.", "rule": {"schema_version": "stowlm.reader/2", "constraint": {"type": "close_bay", "bay": 9}}},
+    {"sentence": "Skip bay 09 entirely.", "rule": {"schema_version": "stowlm.reader/2", "constraint": {"type": "close_bay", "bay": 9}}}
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "ambiguous",
+      "reason": "Missing min_bays distance for DG keep-away",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 5840,
+    "audio_seconds": 5.832,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00025",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "e16a802792bd42d18cf3b345b975c0aa",
+    "session_id": "voyager/transcribe/3A8058FFFBFA48E8B70D2074CFA88670"
+  },
+  "asr_latency_s": 1.3500978340161964,
+  "audio_sha256": "7c3b0c38251dfecb09426eeee9e6e8b738c43bb80292944a212f9117a1daec05",
+  "canonical": {
+    "refusal": {
+      "code": "ambiguous",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 2.7560959580005147,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00112475",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "efa869cf1c444fee5f17b047d1a949fd34c8172c6d467a5aff74a10a63a4fb45",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "97adaf3a-d8f7-4ab7-a9f7-8d152166bf68"
+  },
+  "parser_latency_s": 1.309163250029087,
+  "script": "A 8-bay minimum buffer from accommodation applies to class 5.1.",
+  "source_id": "reader-0e9acc2e458cee46",
+  "started_utc": "2026-11-01T01:34:22.515070+00:00",
+  "status": "complete",
+  "transcript": "A minimum buffer from accommodation applies to class 5.1."
+}

@@ -1,0 +1,61 @@
+{
+  "cells": [
+    {
+      "cell_index": 0,
+      "ship": "feeder_500",
+      "fill_target": 60,
+      "generator": "random_yard",
+      "replicates": 3
+    },
+    {
+      "cell_index": 1,
+      "ship": "feeder_500",
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "replicates": 3
+    },
+    {
+      "cell_index": 2,
+      "ship": "feeder_500",
+      "fill_target": 70,
+      "generator": "random_yard",
+      "replicates": 3
+    },
+    {
+      "cell_index": 3,
+      "ship": "feeder_500",
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "replicates": 3
+    },
+    {
+      "cell_index": 4,
+      "ship": "feeder_800",
+      "fill_target": 60,
+      "generator": "random_yard",
+      "replicates": 3
+    },
+    {
+      "cell_index": 5,
+      "ship": "feeder_800",
+      "fill_target": 60,
+      "generator": "simulated_yard",
+      "replicates": 3
+    },
+    {
+      "cell_index": 6,
+      "ship": "feeder_800",
+      "fill_target": 70,
+      "generator": "random_yard",
+      "replicates": 3
+    },
+    {
+      "cell_index": 7,
+      "ship": "feeder_800",
+      "fill_target": 70,
+      "generator": "simulated_yard",
+      "replicates": 3
+    }
+  ],
+  "total_maps": 24
+}

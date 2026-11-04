@@ -1,0 +1,28 @@
+{
+  "schema_version": "stowlm.ext1.digest-proof/1",
+  "metadata_only_prior_comparison": true,
+  "prior_digest_count": 92237,
+  "prior_identity_inventory_sha256": "1053c5e8a5d63fc6d35a6886359622a6ff1b7e5a785e2de3e30ef9391afb3fc4",
+  "maps_manifest_sha256": "41ffddc689abb2c11c2c62cd61165b81b0fa13dccfcba23c6f577175dba5116f",
+  "compared_fields": [
+    "saved bytes SHA256",
+    "canonical full Instance.model_dump(mode=json), UTF-8 and legacy ensure_ascii serializers SHA256"
+  ],
+  "canonical_serialization": "JSON sorted keys; compact separators; ensure_ascii=False primary (contract), ensure_ascii=True compatibility; allow_nan=False",
+  "prior_digests_conservative_superset": true,
+  "collisions": [],
+  "unique_generated_digests": 48,
+  "accepted": 24,
+  "failed": 0,
+  "ready": true,
+  "coverage_limits": [
+    "A closed-world statement about recorded external identity metadata, not unknown unrecorded payload contents.",
+    "Forbidden raw trees are not entered. Their public corpus/envelope manifests and requested lists are explicitly covered.",
+    "Plan/job/row payloads and symlinks are not opened. Identity values recorded only there are outside directly auditable metadata coverage.",
+    "Synthetic test workspaces and tool environments are excluded; their fake seeds are not experimental cohorts.",
+    "All hexadecimal metadata values are retained conservatively; an unknown recorded canonical identity outside selected metadata cannot be certified."
+  ],
+  "planners_run": 0,
+  "old_map_payloads_opened": 0,
+  "seeds_redrawn": 0
+}

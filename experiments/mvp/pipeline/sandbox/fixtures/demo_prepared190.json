@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "label": "Prepared drags; not full verdicts",
+  "source_fixture": "experiments/mvp/pipeline/sandbox/fixtures/demo_source190.final.json",
+  "source_sha256": "7a7c2f380a03fe8cafa6543cacb9ae571f3b0049ff4370d1ea045615e1b20849",
+  "cases": {
+    "legal": {
+      "box_id": "QZXU0000919",
+      "target_slot": "0020482"
+    },
+    "stability": {
+      "box_id": "QZXU0002125",
+      "target_slot": "0260682"
+    },
+    "segregation": {
+      "box_id": "QZXU0000077",
+      "target_slot": "0180482"
+    },
+    "stack_weight": {
+      "box_id": "QZXU0001258",
+      "target_slot": "0100486"
+    }
+  },
+  "missing": []
+}

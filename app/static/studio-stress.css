@@ -1,0 +1,16 @@
+/* Shared Studio classes own typography, surfaces, borders and semantic colour. */
+.st-stress-panel { display: grid; gap: 12px; min-width: 0; }
+.st-stress-cases { display: grid; gap: 8px; }
+.st-stress-case { width: 100%; white-space: normal; text-align: left; }
+.st-stress-cases[hidden], .st-stress-case[hidden], .st-stress-verdict[hidden], .st-stress-rules[hidden] { display: none; }
+.st-stress-verdict { display: grid; gap: 10px; min-width: 0; }
+.st-stress-verdict > p, .st-stress-verdict > h3 { margin: 0; }
+.st-stress-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+/* Actor identity lives in the shared callout dot; status remains in its words. */
+.st-stress-checker::before { background: var(--st-c-checker); }
+.st-stress-move { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.st-stress-undo { margin-left: auto; }
+.st-stress-rule-list { display: grid; gap: 12px; }
+.st-stress-rule { min-width: 0; overflow-wrap: anywhere; }
+.st-stress-overlay { position: fixed; z-index: 10; display: block; touch-action: none; }
+.st-stress-overlay.st-stress-grabbing { cursor: grabbing !important; }

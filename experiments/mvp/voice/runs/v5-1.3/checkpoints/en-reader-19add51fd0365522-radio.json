@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "not_an_instruction",
+      "reason": "No restriction requested, informational only",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 2640,
+    "audio_seconds": 2.568,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00010",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "2f48f139762b475faaeb7a6ef4a4ebb4",
+    "session_id": "voyager/transcribe/AF771F2D6AA04383B58275F9DD4DCE75"
+  },
+  "asr_latency_s": 0.8414224580046721,
+  "audio_sha256": "0091c3f010784ba3945cd19f99fcc92f9144e4f47dbc1e5dc384bc37c73613df",
+  "canonical": {
+    "refusal": {
+      "code": "not_an_instruction",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 1.9833063749829307,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00090475",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "f2c3abe199a70ce169ffa4636de53274b54519faa347526363a71fdccf3ab5f3",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "eacb7e06-fe6a-4b3e-bbc3-52470f5c9b79"
+  },
+  "parser_latency_s": 1.043307125044521,
+  "script": "Keep bay 25 sealed shut.",
+  "source_id": "reader-19add51fd0365522",
+  "started_utc": "2026-11-01T01:33:26.911986+00:00",
+  "status": "complete",
+  "transcript": "Heat day 25 sealed shut."
+}

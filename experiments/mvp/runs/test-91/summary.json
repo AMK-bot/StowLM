@@ -1,0 +1,314 @@
+{
+ "rows": {
+  "StowLM own plan (pass@1, greedy)": {
+   "tiny": {
+    "n": 15,
+    "own_pass": 15,
+    "outcomes": {
+     "own pass": 15
+    },
+    "own_mean_lifts": 7.333333333333333,
+    "paired_vs_twostep": {
+     "n": 15,
+     "stowlm_mean": 7.333333333333333,
+     "twostep_mean": 6.466666666666667,
+     "mean_diff": 0.8666666666666667,
+     "better": 2,
+     "equal": 6,
+     "worse": 7
+    },
+    "s_mean": 13.318
+   },
+   "small": {
+    "n": 15,
+    "own_pass": 14,
+    "outcomes": {
+     "dead end": 1,
+     "own pass": 14
+    },
+    "own_mean_lifts": 34.357142857142854,
+    "paired_vs_twostep": {
+     "n": 14,
+     "stowlm_mean": 34.357142857142854,
+     "twostep_mean": 22.857142857142858,
+     "mean_diff": 11.5,
+     "better": 2,
+     "equal": 1,
+     "worse": 11
+    },
+    "s_mean": 28.451999999999998
+   },
+   "null": {
+    "n": 30,
+    "own_pass": 29,
+    "outcomes": {
+     "dead end": 1,
+     "own pass": 29
+    },
+    "own_mean_lifts": 20.379310344827587,
+    "paired_vs_twostep": {
+     "n": 29,
+     "stowlm_mean": 20.379310344827587,
+     "twostep_mean": 14.379310344827585,
+     "mean_diff": 6.0,
+     "better": 4,
+     "equal": 7,
+     "worse": 18
+    },
+    "s_mean": 20.884999999999998
+   }
+  },
+  "two-step (same pipeline, same finisher budget)": {
+   "tiny": {
+    "n": 15,
+    "own_pass": 15,
+    "outcomes": {
+     "own pass": 15
+    },
+    "own_mean_lifts": 6.466666666666667,
+    "paired_vs_twostep": {
+     "n": 15,
+     "stowlm_mean": 6.466666666666667,
+     "twostep_mean": 6.466666666666667,
+     "mean_diff": 0.0,
+     "better": 0,
+     "equal": 15,
+     "worse": 0
+    },
+    "s_mean": 21.260666666666665
+   },
+   "small": {
+    "n": 15,
+    "own_pass": 14,
+    "outcomes": {
+     "dead end": 1,
+     "own pass": 14
+    },
+    "own_mean_lifts": 22.857142857142858,
+    "paired_vs_twostep": {
+     "n": 14,
+     "stowlm_mean": 22.857142857142858,
+     "twostep_mean": 22.857142857142858,
+     "mean_diff": 0.0,
+     "better": 0,
+     "equal": 14,
+     "worse": 0
+    },
+    "s_mean": 35.308
+   },
+   "null": {
+    "n": 30,
+    "own_pass": 29,
+    "outcomes": {
+     "dead end": 1,
+     "own pass": 29
+    },
+    "own_mean_lifts": 14.379310344827585,
+    "paired_vs_twostep": {
+     "n": 29,
+     "stowlm_mean": 14.379310344827585,
+     "twostep_mean": 14.379310344827585,
+     "mean_diff": 0.0,
+     "better": 0,
+     "equal": 29,
+     "worse": 0
+    },
+    "s_mean": 28.284333333333333
+   }
+  },
+  "StowLM + 15 s solver polish (hybrid)": {
+   "tiny": {
+    "n": 15,
+    "own_pass": 15,
+    "outcomes": {
+     "own pass": 15
+    },
+    "own_mean_lifts": 7.133333333333334,
+    "paired_vs_twostep": {
+     "n": 15,
+     "stowlm_mean": 7.133333333333334,
+     "twostep_mean": 6.466666666666667,
+     "mean_diff": 0.6666666666666666,
+     "better": 3,
+     "equal": 7,
+     "worse": 5
+    },
+    "s_mean": 16.06533333333333
+   },
+   "small": {
+    "n": 15,
+    "own_pass": 14,
+    "outcomes": {
+     "dead end": 1,
+     "own pass": 14
+    },
+    "own_mean_lifts": 33.92857142857143,
+    "paired_vs_twostep": {
+     "n": 14,
+     "stowlm_mean": 33.92857142857143,
+     "twostep_mean": 22.857142857142858,
+     "mean_diff": 11.071428571428571,
+     "better": 3,
+     "equal": 0,
+     "worse": 11
+    },
+    "s_mean": 31.191333333333333
+   },
+   "null": {
+    "n": 30,
+    "own_pass": 29,
+    "outcomes": {
+     "dead end": 1,
+     "own pass": 29
+    },
+    "own_mean_lifts": 20.06896551724138,
+    "paired_vs_twostep": {
+     "n": 29,
+     "stowlm_mean": 20.06896551724138,
+     "twostep_mean": 14.379310344827585,
+     "mean_diff": 5.689655172413793,
+     "better": 6,
+     "equal": 7,
+     "worse": 16
+    },
+    "s_mean": 23.628333333333334
+   }
+  },
+  "two-step + 15 s solver polish (hybrid)": {
+   "tiny": {
+    "n": 15,
+    "own_pass": 15,
+    "outcomes": {
+     "own pass": 15
+    },
+    "own_mean_lifts": 6.466666666666667,
+    "paired_vs_twostep": {
+     "n": 15,
+     "stowlm_mean": 6.466666666666667,
+     "twostep_mean": 6.466666666666667,
+     "mean_diff": 0.0,
+     "better": 0,
+     "equal": 15,
+     "worse": 0
+    },
+    "s_mean": 24.839606316734727
+   },
+   "small": {
+    "n": 15,
+    "own_pass": 14,
+    "outcomes": {
+     "dead end": 1,
+     "own pass": 14
+    },
+    "own_mean_lifts": 22.214285714285715,
+    "paired_vs_twostep": {
+     "n": 14,
+     "stowlm_mean": 22.214285714285715,
+     "twostep_mean": 22.857142857142858,
+     "mean_diff": -0.6428571428571429,
+     "better": 4,
+     "equal": 10,
+     "worse": 0
+    },
+    "s_mean": 40.05830430553404
+   },
+   "null": {
+    "n": 30,
+    "own_pass": 29,
+    "outcomes": {
+     "dead end": 1,
+     "own pass": 29
+    },
+    "own_mean_lifts": 14.068965517241379,
+    "paired_vs_twostep": {
+     "n": 29,
+     "stowlm_mean": 14.068965517241379,
+     "twostep_mean": 14.379310344827585,
+     "mean_diff": -0.3103448275862069,
+     "better": 4,
+     "equal": 25,
+     "worse": 0
+    },
+    "s_mean": 32.448955311134384
+   }
+  }
+ },
+ "chosen": {
+  "sim.tiny.8000009": "experiments/mvp/runs/test-91/stowlm/instances/sim.tiny.8000009/result.json",
+  "sim.small.28100004": "experiments/mvp/runs/test-91/stowlm/instances/sim.small.28100004/result.json",
+  "random.tiny.8000010.0.5": "experiments/mvp/runs/test-91/stowlm/instances/random.tiny.8000010.0.5/result.json",
+  "random.tiny.8000004.0.2": "experiments/mvp/runs/test-91/stowlm/instances/random.tiny.8000004.0.2/result.json",
+  "sim.small.28100007": "experiments/mvp/runs/test-91/stowlm/instances/sim.small.28100007/result.json",
+  "random.small.28100001.0.2": "experiments/mvp/runs/test-91/stowlm/instances/random.small.28100001.0.2/result.json",
+  "random.tiny.8000002.0.2": "experiments/mvp/runs/test-91/stowlm/instances/random.tiny.8000002.0.2/result.json",
+  "sim.tiny.8000013": "experiments/mvp/runs/test-91/stowlm/instances/sim.tiny.8000013/result.json",
+  "random.tiny.8000000.0.2": "experiments/mvp/runs/test-91/stowlm/instances/random.tiny.8000000.0.2/result.json",
+  "random.small.28100006.0.5": "experiments/mvp/runs/test-91/stowlm/instances/random.small.28100006.0.5/result.json",
+  "random.tiny.8000006.0.5": "experiments/mvp/runs/test-91/stowlm/instances/random.tiny.8000006.0.5/result.json",
+  "random.tiny.8000008.0.5": "experiments/mvp/runs/test-91/stowlm/instances/random.tiny.8000008.0.5/result.json",
+  "random.small.28100009.0.8": "experiments/mvp/runs/test-91/stowlm/instances/random.small.28100009.0.8/result.json",
+  "random.small.28100005.0.5": "experiments/mvp/runs/test-91/stowlm/instances/random.small.28100005.0.5/result.json",
+  "sim.small.28100013": "experiments/mvp/runs/test-91/stowlm/instances/sim.small.28100013/result.json",
+  "sim.small.28100000": "experiments/mvp/runs/test-91/stowlm/instances/sim.small.28100000/result.json",
+  "random.small.28100002.0.2": "experiments/mvp/runs/test-91/stowlm/instances/random.small.28100002.0.2/result.json",
+  "random.tiny.8000012.0.8": "experiments/mvp/runs/test-91/stowlm/instances/random.tiny.8000012.0.8/result.json",
+  "random.small.28100010.0.2": "experiments/mvp/runs/test-91/stowlm/instances/random.small.28100010.0.2/result.json",
+  "sim.small.28100003": "experiments/mvp/runs/test-91/stowlm/instances/sim.small.28100003/result.json",
+  "random.tiny.8000014.0.8": "experiments/mvp/runs/test-91/stowlm/instances/random.tiny.8000014.0.8/result.json",
+  "sim.small.28100008": "experiments/mvp/runs/test-91/stowlm/instances/sim.small.28100008/result.json",
+  "random.small.28100012.0.5": "experiments/mvp/runs/test-91/stowlm/instances/random.small.28100012.0.5/result.json",
+  "sim.tiny.8000007": "experiments/mvp/runs/test-91/stowlm/instances/sim.tiny.8000007/result.json",
+  "sim.tiny.8000003": "experiments/mvp/runs/test-91/stowlm/instances/sim.tiny.8000003/result.json",
+  "random.small.28100014.0.8": "experiments/mvp/runs/test-91/stowlm/instances/random.small.28100014.0.8/result.json",
+  "sim.tiny.8000005": "experiments/mvp/runs/test-91/stowlm/instances/sim.tiny.8000005/result.json",
+  "sim.tiny.8000011": "experiments/mvp/runs/test-91/stowlm/instances/sim.tiny.8000011/result.json",
+  "sim.tiny.8000001": "experiments/mvp/runs/test-91/stowlm/instances/sim.tiny.8000001/result.json"
+ },
+ "labels": {
+  "own": "cargo sequence decoded by the model under the mask; ballast by the deterministic V4 finisher; full checker passed; no repair, no solver edits to moves",
+  "hybrid": "15 s requested CPU solver polish; fixed stow assignments; separately labelled; never used in chosen own-plan selection"
+ },
+ "hybrid_paired": {
+  "tiny": {
+   "n": 15,
+   "stowlm_mean": 7.133333333333334,
+   "twostep_mean": 6.466666666666667,
+   "fewer": 3,
+   "equal": 7,
+   "more": 5,
+   "sign_test_p": 0.7265625,
+   "sign_test_exact": "93/128",
+   "sign_test_discordant": 8
+  },
+  "small": {
+   "n": 14,
+   "stowlm_mean": 33.92857142857143,
+   "twostep_mean": 22.214285714285715,
+   "fewer": 2,
+   "equal": 0,
+   "more": 12,
+   "sign_test_p": 0.012939453125,
+   "sign_test_exact": "53/4096",
+   "sign_test_discordant": 14
+  },
+  "null": {
+   "n": 29,
+   "stowlm_mean": 20.06896551724138,
+   "twostep_mean": 14.068965517241379,
+   "fewer": 5,
+   "equal": 7,
+   "more": 17,
+   "sign_test_p": 0.01690053939819336,
+   "sign_test_exact": "35443/2097152",
+   "sign_test_discordant": 22
+  }
+ },
+ "hybrid_status": {
+  "StowLM + 15 s solver polish (hybrid)": {
+   "status": "complete"
+  },
+  "two-step + 15 s solver polish (hybrid)": {
+   "status": "complete"
+  }
+ }
+}

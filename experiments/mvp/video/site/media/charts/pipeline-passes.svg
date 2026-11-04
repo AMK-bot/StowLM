@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1280" viewBox="0 0 1320 1280" role="img" aria-labelledby="title desc">
+<title id="title">Full-checker passes by cohort and ship size</title>
+<desc id="desc">held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim. Two earlier attempts on the same maps stopped early when our own frozen-code guard tripped. In the first, a test rewrote a pinned fixture; in the second, the engine wrote scratch files inside its pinned folder. No planning code changed. They completed 36 and 91 rows; both are published as they are and not pooled with the final run. Where the same rows ran again in the final run, attempt 1 matched the final run on 36 of the 38 rows it opened (status and lifts; 37 of 38 on verdict alone) and attempt 2 on 91 of 91, reported separately.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif} line,rect,circle,path{vector-effect:non-scaling-stroke}</style>
+<rect width="1320" height="1280" fill="#ffffff"/>
+<text x="40" y="46" font-size="29" fill="#17212b" text-anchor="start" font-weight="bold">Full-checker passes by cohort and ship size</text>
+<text x="40" y="78" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim</text>
+<text x="40" y="103" font-size="16" fill="#17212b" text-anchor="start" font-weight="normal">Synthetic ships and cargo, simulated port · planning step from a clean load list</text>
+<text x="40" y="128" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Templated sentences · frozen standard profile · frozen pipeline v3 (a11b4202…)</text>
+<circle cx="48" cy="161" r="6" fill="#0072b2"/>
+<text x="64" y="167" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">Pipeline (no voyage instruction)</text>
+<rect x="380" y="156" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="399" y="167" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">Simple two-step planner</text>
+<text x="40" y="197" font-size="16" fill="#17212b" text-anchor="start" font-weight="bold">Cohort and ship size</text>
+<text x="960" y="197" font-size="15" fill="#17212b" text-anchor="start" font-weight="bold">Passes / maps · n · exact 95% interval</text>
+<text x="40" y="218" font-size="14" fill="#465568" text-anchor="start" font-weight="normal">1,700 TEU: outside envelope wording</text>
+<line x1="390.0" y1="236" x2="390.0" y2="826" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="390.0" y="851" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">0</text>
+<line x1="496.0" y1="236" x2="496.0" y2="826" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="496.0" y="851" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">20</text>
+<line x1="602.0" y1="236" x2="602.0" y2="826" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="602.0" y="851" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">40</text>
+<line x1="708.0" y1="236" x2="708.0" y2="826" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="708.0" y="851" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">60</text>
+<line x1="814.0" y1="236" x2="814.0" y2="826" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="814.0" y="851" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">80</text>
+<line x1="920.0" y1="236" x2="920.0" y2="826" stroke="#dde3ea" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="920.0" y="851" font-size="15" fill="#17212b" text-anchor="middle" font-weight="normal">100</text>
+<line x1="390" y1="826" x2="920" y2="826" stroke="#657487" stroke-width="1"/>
+<text x="655.0" y="881" font-size="17" fill="#17212b" text-anchor="middle" font-weight="normal">Full-checker pass rate (%)</text>
+<text x="40" y="267" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">Tiny · 500–800 TEU</text>
+<line x1="756.4965328560568" y1="253" x2="920.0" y2="253" stroke="#0072b2" stroke-width="3"/>
+<line x1="756.4965328560568" y1="247" x2="756.4965328560568" y2="259" stroke="#0072b2" stroke-width="2"/>
+<line x1="920.0" y1="247" x2="920.0" y2="259" stroke="#0072b2" stroke-width="2"/>
+<circle cx="920.0" cy="253" r="6" fill="#0072b2"/>
+<text x="960" y="258" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">10/10 · n = 10 · 69.2–100.0%</text>
+<line x1="390.0" y1="279" x2="553.5034671439432" y2="279" stroke="#b54700" stroke-width="3"/>
+<line x1="390.0" y1="273" x2="390.0" y2="285" stroke="#b54700" stroke-width="2"/>
+<line x1="553.5034671439432" y1="273" x2="553.5034671439432" y2="285" stroke="#b54700" stroke-width="2"/>
+<rect x="385.0" y="274" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="284" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">0/10 · n = 10 · 0.0–30.8%</text>
+<text x="40" y="349" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">Tiny · 1,700 TEU</text>
+<line x1="643.4334124443599" y1="335" x2="920.0" y2="335" stroke="#0072b2" stroke-width="3"/>
+<line x1="643.4334124443599" y1="329" x2="643.4334124443599" y2="341" stroke="#0072b2" stroke-width="2"/>
+<line x1="920.0" y1="329" x2="920.0" y2="341" stroke="#0072b2" stroke-width="2"/>
+<circle cx="920.0" cy="335" r="6" fill="#0072b2"/>
+<text x="960" y="340" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">5/5 · n = 5 · 47.8–100.0%</text>
+<line x1="390.0" y1="361" x2="666.5665875556402" y2="361" stroke="#b54700" stroke-width="3"/>
+<line x1="390.0" y1="355" x2="390.0" y2="367" stroke="#b54700" stroke-width="2"/>
+<line x1="666.5665875556402" y1="355" x2="666.5665875556402" y2="367" stroke="#b54700" stroke-width="2"/>
+<rect x="385.0" y="356" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="366" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">0/5 · n = 5 · 0.0–52.2%</text>
+<line x1="40" y1="395" x2="1280" y2="395" stroke="#cbd5e1" stroke-width="1"/>
+<text x="40" y="431" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">Small · 500–800 TEU</text>
+<line x1="830.7302603789649" y1="417" x2="920.0" y2="417" stroke="#0072b2" stroke-width="3"/>
+<line x1="830.7302603789649" y1="411" x2="830.7302603789649" y2="423" stroke="#0072b2" stroke-width="2"/>
+<line x1="920.0" y1="411" x2="920.0" y2="423" stroke="#0072b2" stroke-width="2"/>
+<circle cx="920.0" cy="417" r="6" fill="#0072b2"/>
+<text x="960" y="422" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">20/20 · n = 20 · 83.2–100.0%</text>
+<line x1="390.0" y1="443" x2="479.2697396210352" y2="443" stroke="#b54700" stroke-width="3"/>
+<line x1="390.0" y1="437" x2="390.0" y2="449" stroke="#b54700" stroke-width="2"/>
+<line x1="479.2697396210352" y1="437" x2="479.2697396210352" y2="449" stroke="#b54700" stroke-width="2"/>
+<rect x="385.0" y="438" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="448" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">0/20 · n = 20 · 0.0–16.8%</text>
+<text x="40" y="513" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">Small · 1,700 TEU</text>
+<line x1="684.1414579750565" y1="499" x2="918.6598533714352" y2="499" stroke="#0072b2" stroke-width="3"/>
+<line x1="684.1414579750565" y1="493" x2="684.1414579750565" y2="505" stroke="#0072b2" stroke-width="2"/>
+<line x1="918.6598533714352" y1="493" x2="918.6598533714352" y2="505" stroke="#0072b2" stroke-width="2"/>
+<circle cx="867.0" cy="499" r="6" fill="#0072b2"/>
+<text x="960" y="504" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">9/10 · n = 10 · 55.5–99.7%</text>
+<line x1="390.0" y1="525" x2="553.5034671439432" y2="525" stroke="#b54700" stroke-width="3"/>
+<line x1="390.0" y1="519" x2="390.0" y2="531" stroke="#b54700" stroke-width="2"/>
+<line x1="553.5034671439432" y1="519" x2="553.5034671439432" y2="531" stroke="#b54700" stroke-width="2"/>
+<rect x="385.0" y="520" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="530" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">0/10 · n = 10 · 0.0–30.8%</text>
+<line x1="40" y1="559" x2="1280" y2="559" stroke="#cbd5e1" stroke-width="1"/>
+<text x="40" y="595" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">Envelope · 500 TEU</text>
+<line x1="779.7363112195628" y1="581" x2="920.0" y2="581" stroke="#0072b2" stroke-width="3"/>
+<line x1="779.7363112195628" y1="575" x2="779.7363112195628" y2="587" stroke="#0072b2" stroke-width="2"/>
+<line x1="920.0" y1="575" x2="920.0" y2="587" stroke="#0072b2" stroke-width="2"/>
+<circle cx="920.0" cy="581" r="6" fill="#0072b2"/>
+<text x="960" y="586" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">12/12 · n = 12 · 73.5–100.0%</text>
+<line x1="390.0" y1="607" x2="530.2636887804372" y2="607" stroke="#b54700" stroke-width="3"/>
+<line x1="390.0" y1="601" x2="390.0" y2="613" stroke="#b54700" stroke-width="2"/>
+<line x1="530.2636887804372" y1="601" x2="530.2636887804372" y2="613" stroke="#b54700" stroke-width="2"/>
+<rect x="385.0" y="602" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="612" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">0/12 · n = 12 · 0.0–26.5%</text>
+<text x="40" y="677" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">Envelope · 800 TEU</text>
+<line x1="779.7363112195628" y1="663" x2="920.0" y2="663" stroke="#0072b2" stroke-width="3"/>
+<line x1="779.7363112195628" y1="657" x2="779.7363112195628" y2="669" stroke="#0072b2" stroke-width="2"/>
+<line x1="920.0" y1="657" x2="920.0" y2="669" stroke="#0072b2" stroke-width="2"/>
+<circle cx="920.0" cy="663" r="6" fill="#0072b2"/>
+<text x="960" y="668" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">12/12 · n = 12 · 73.5–100.0%</text>
+<line x1="390.0" y1="689" x2="530.2636887804372" y2="689" stroke="#b54700" stroke-width="3"/>
+<line x1="390.0" y1="683" x2="390.0" y2="695" stroke="#b54700" stroke-width="2"/>
+<line x1="530.2636887804372" y1="683" x2="530.2636887804372" y2="695" stroke="#b54700" stroke-width="2"/>
+<rect x="385.0" y="684" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="694" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">0/12 · n = 12 · 0.0–26.5%</text>
+<line x1="40" y1="723" x2="1280" y2="723" stroke="#cbd5e1" stroke-width="1"/>
+<text x="40" y="759" font-size="18" fill="#17212b" text-anchor="start" font-weight="bold">Envelope · total (same maps)</text>
+<text x="40" y="780" font-size="14" fill="#465568" text-anchor="start" font-weight="normal">Summary of the two envelope rows above</text>
+<line x1="844.4889932070614" y1="745" x2="920.0" y2="745" stroke="#0072b2" stroke-width="3"/>
+<line x1="844.4889932070614" y1="739" x2="844.4889932070614" y2="751" stroke="#0072b2" stroke-width="2"/>
+<line x1="920.0" y1="739" x2="920.0" y2="751" stroke="#0072b2" stroke-width="2"/>
+<circle cx="920.0" cy="745" r="6" fill="#0072b2"/>
+<text x="960" y="750" font-size="16" fill="#0072b2" text-anchor="start" font-weight="normal">24/24 · n = 24 · 85.8–100.0%</text>
+<line x1="390.0" y1="771" x2="465.51100679293864" y2="771" stroke="#b54700" stroke-width="3"/>
+<line x1="390.0" y1="765" x2="390.0" y2="777" stroke="#b54700" stroke-width="2"/>
+<line x1="465.51100679293864" y1="765" x2="465.51100679293864" y2="777" stroke="#b54700" stroke-width="2"/>
+<rect x="385.0" y="766" width="10" height="10" rx="0" fill="#b54700" stroke="none"/>
+<text x="960" y="776" font-size="16" fill="#b54700" text-anchor="start" font-weight="normal">0/24 · n = 24 · 0.0–14.2%</text>
+<text x="40" y="913" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Dots / squares show observed rates; bars show exact two-sided Clopper–Pearson 95% intervals from the report.</text>
+<text x="40" y="938" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Pass means L0: full checker, completion, every confirmed instruction obeyed. Relaxed plans are not passes.</text>
+<text x="40" y="963" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Two-step: a simple two-step planner, modelled from one field expert&#x27;s description. No like-for-like lift comparison is available.</text>
+<text x="40" y="1005" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Envelope: up to 195 boxes in a half-ship section of 500–800 TEU feeder ships, at most 70% of that section; empty section on arrival, one loading</text>
+<text x="40" y="1027" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">call. Other bays hold fixed synthetic cargo.</text>
+<text x="40" y="1058" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">1,700 TEU test maps are outside this envelope wording. Cohorts are separate; no tiny/small maps are pooled with the envelope.</text>
+<text x="40" y="1093" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">Two earlier attempts on the same maps stopped early when our own frozen-code guard tripped. In the first, a test rewrote a pinned fixture; in the</text>
+<text x="40" y="1115" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">second, the engine wrote scratch files inside its pinned folder. No planning code changed. They completed 36 and 91 rows; both are published as</text>
+<text x="40" y="1137" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">they are and not pooled with the final run. Where the same rows ran again in the final run, attempt 1 matched the final run on 36 of the 38 rows</text>
+<text x="40" y="1159" font-size="15" fill="#465568" text-anchor="start" font-weight="normal">it opened (status and lifts; 37 of 38 on verdict alone) and attempt 2 on 91 of 91, reported separately.</text>
+<text x="40" y="1194" font-size="14" fill="#465568" text-anchor="start" font-weight="normal">Source: final-3/report.json and story-figures.json · recorded results only; no planning rerun</text>
+<metadata id="chart-data">{&quot;chart&quot;: &quot;pipeline-passes&quot;, &quot;facts&quot;: {&quot;label&quot;: &quot;held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim&quot;, &quot;rows&quot;: [{&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;tiny15&quot;, &quot;exact95&quot;: [0.6915028921812392, 1.0], &quot;n&quot;: 10, &quot;passes&quot;: 10, &quot;ship&quot;: &quot;500-800_TEU&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/tiny15/ship_groups/500-800_TEU/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;tiny15&quot;, &quot;exact95&quot;: [0.0, 0.3084971078187607], &quot;n&quot;: 10, &quot;passes&quot;: 0, &quot;ship&quot;: &quot;500-800_TEU&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/tiny15/ship_groups/500-800_TEU/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;tiny15&quot;, &quot;exact95&quot;: [0.4781762498950185, 1.0], &quot;n&quot;: 5, &quot;passes&quot;: 5, &quot;ship&quot;: &quot;1700_TEU&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/tiny15/ship_groups/1700_TEU/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;tiny15&quot;, &quot;exact95&quot;: [0.0, 0.5218237501049816], &quot;n&quot;: 5, &quot;passes&quot;: 0, &quot;ship&quot;: &quot;1700_TEU&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/tiny15/ship_groups/1700_TEU/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;small30&quot;, &quot;exact95&quot;: [0.8315665290169147, 1.0], &quot;n&quot;: 20, &quot;passes&quot;: 20, &quot;ship&quot;: &quot;500-800_TEU&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/small30/ship_groups/500-800_TEU/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;small30&quot;, &quot;exact95&quot;: [0.0, 0.1684334709830853], &quot;n&quot;: 20, &quot;passes&quot;: 0, &quot;ship&quot;: &quot;500-800_TEU&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/small30/ship_groups/500-800_TEU/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;small30&quot;, &quot;exact95&quot;: [0.5549838829718046, 0.9974714214555382], &quot;n&quot;: 10, &quot;passes&quot;: 9, &quot;ship&quot;: &quot;1700_TEU&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/small30/ship_groups/1700_TEU/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;small30&quot;, &quot;exact95&quot;: [0.0, 0.3084971078187607], &quot;n&quot;: 10, &quot;passes&quot;: 0, &quot;ship&quot;: &quot;1700_TEU&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/small30/ship_groups/1700_TEU/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;envelope24&quot;, &quot;exact95&quot;: [0.7353515306029488, 1.0], &quot;n&quot;: 12, &quot;passes&quot;: 12, &quot;ship&quot;: &quot;feeder_500&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/envelope24/by_ship/feeder_500/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;envelope24&quot;, &quot;exact95&quot;: [0.0, 0.26464846939705133], &quot;n&quot;: 12, &quot;passes&quot;: 0, &quot;ship&quot;: &quot;feeder_500&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/envelope24/by_ship/feeder_500/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;envelope24&quot;, &quot;exact95&quot;: [0.7353515306029488, 1.0], &quot;n&quot;: 12, &quot;passes&quot;: 12, &quot;ship&quot;: &quot;feeder_800&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/envelope24/by_ship/feeder_800/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;envelope24&quot;, &quot;exact95&quot;: [0.0, 0.26464846939705133], &quot;n&quot;: 12, &quot;passes&quot;: 0, &quot;ship&quot;: &quot;feeder_800&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/envelope24/by_ship/feeder_800/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;pipeline&quot;, &quot;cohort&quot;: &quot;envelope24&quot;, &quot;exact95&quot;: [0.8575264022774742, 1.0], &quot;n&quot;: 24, &quot;passes&quot;: 24, &quot;ship&quot;: &quot;all&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/envelope24/arms/pipeline&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}, {&quot;arm&quot;: &quot;twostep&quot;, &quot;cohort&quot;: &quot;envelope24&quot;, &quot;exact95&quot;: [0.0, 0.1424735977225257], &quot;n&quot;: 24, &quot;passes&quot;: 0, &quot;ship&quot;: &quot;all&quot;, &quot;source&quot;: {&quot;json_pointer&quot;: &quot;/cohorts/envelope24/arms/twostep&quot;, &quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;}}]}, &quot;sources&quot;: [{&quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/report.json&quot;, &quot;sha256&quot;: &quot;282765330f4d3592d88f04768a1c7abf8ad3c092b2c76448c4dfc47fc43b765c&quot;}, {&quot;path&quot;: &quot;experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json&quot;, &quot;sha256&quot;: &quot;87c3e49689d4ef15258ec01867c717615690d1b21c85eae904704c34b6f3b029&quot;}, {&quot;path&quot;: &quot;docs/headline.md&quot;, &quot;sha256&quot;: &quot;8f107aebfc4988c1411714c0a0a9967e7877d3e692f3d3ae7c28c4363af43c83&quot;}]}</metadata>
+</svg>

@@ -1,0 +1,42 @@
+{
+  "answer": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "1.4",
+      "min_bays": 2,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "1.4",
+      "min_bays": 2,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.005654833978042,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.001492",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "8c4d31cb21966717bcfee174ac30ed15158a906f9ad2d711b1596198caa1fac8",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "e24117a6-f78d-4200-89da-1a600495f602"
+  },
+  "parser_latency_s": 1.0056366249918938,
+  "script": "ให้สินค้าอันตรายประเภทหนึ่งจุดสี่ อยู่ห่างจากที่พักลูกเรืออย่างน้อยสองเบย์",
+  "source_id": "reader-08a56c0c1c6e7963",
+  "started_utc": "2026-11-01T01:35:25.648056+00:00",
+  "status": "complete"
+}

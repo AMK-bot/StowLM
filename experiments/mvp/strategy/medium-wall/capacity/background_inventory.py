@@ -1,0 +1,12 @@
+"""Inventory modeled equivalent background containers; no source/instance mutation."""
+from pathlib import Path
+import json,collections,hashlib
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[4]
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+m=json.loads((ROOT/'experiments/mvp/strategy/blockrule/cohort-medium.json').read_text());out=[]
+for j in m['maps']:
+ assert j['split']=='train' and '/maps/train/medium/' in j['input'];assert sha(ROOT/j['input'])==j['sha256'];assert sha(ROOT/j['audit'])==j['audit_sha256'];d=json.loads((ROOT/j['input']).read_text());a=json.loads((ROOT/j['audit']).read_text());fs=d['vessel']['fixed_loads'];bs=[b for f in fs for b in f.get('cargo_boxes',[])];cids=[c for b in bs for c in b['cell_ids']];region={c['id'] for c in d['vessel']['cells']};outside={c['id'] for c in d['vessel']['fixed_load_cells']}
+ assert len(cids)==len(set(cids));assert not region&outside;assert set(cids)<=outside;assert len(region|outside)==a['booking_reference']['full_capacity_teu'];massbox=sum(b['gross_mass_kg'] for b in bs);massfixed=sum(f['mass_kg'] for f in fs);assert abs(massbox-massfixed)<1e-6
+ cargo=[b for b in d['containers'] if b['id'] in d['load_list']];nominal=sum(b['length_ft']/20 for b in cargo);physical=sum(1 if b['length_ft']==20 else 2 for b in cargo);bteu=sum(b['length_ft']/20 for b in bs);full=a['booking_reference']['full_capacity_teu'];r={'map_id':j['map_id'],'background_box_count':len(bs),'background_nominal_teu':bteu,'background_occupied_physical_cells':len(cids),'background_geometric_cell_capacity':len(outside),'background_physical_cell_utilisation':len(cids)/len(outside),'full_geometric_cell_capacity':full,'full_modeled_box_count':len(bs)+len(cargo),'full_modeled_nominal_teu':bteu+nominal,'full_modeled_nominal_teu_utilisation':(bteu+nominal)/full,'full_modeled_physical_cells':len(cids)+physical,'full_modeled_physical_cell_utilisation':(len(cids)+physical)/full,'fixed_cargo_mass_reconciled':True,'unique_disjoint_background_geometry':True,'background_lengths':dict(collections.Counter(b['length_ft'] for b in bs)),'background_equivalent_boxes_not_real_manifest':True};out.append(r)
+(HERE/'background-inventory.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+(HERE/'background-binding.json').write_text(json.dumps({'script_sha256':sha(__file__),'maps':len(out),'all_unique_disjoint_and_mass_reconciled':True},indent=2)+'\n')

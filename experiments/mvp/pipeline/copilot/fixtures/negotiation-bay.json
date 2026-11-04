@@ -1,0 +1,1388 @@
+{
+  "schema_version": "stowlm.copilot-conversation/1",
+  "mode": "recorded",
+  "label": "Recorded answer: offline current-guard replay of historical Spark actions over synthetic tools; no new model or native result.",
+  "original_model_mode": "live",
+  "guard_replayed": true,
+  "original_recording_sha256": "a554a3ac51552a2de802fba7273560cce7fe6183264f4ef81a7defcea49fa22b",
+  "runtime_sha256": "7793879c059621bc4fd5d1a5f727c00e0c6c41a2a8062209903814aeb1399d00",
+  "policy": "Host-authorized tools only; document inspection grants no operation.",
+  "historical_sequence_compatibility": true,
+  "document_attack_zero_tools": null,
+  "conversation": {
+    "id": "impossible_bay_negotiate_limits",
+    "kind": "impossible_bay",
+    "scores": {
+      "right_tool_sequence": true,
+      "no_unchecked_plan": true,
+      "no_invented_number": true,
+      "reader_only_rules": true
+    },
+    "passed": true,
+    "strict_action_playback_complete": true,
+    "expected_historical_tool_sequence": [
+      "read_instruction",
+      "list_limits"
+    ],
+    "actual_tool_sequence": [
+      "read_instruction",
+      "list_limits"
+    ],
+    "recorded_actions": 4,
+    "consumed_actions": 4,
+    "unconsumed_actions": 0,
+    "errors": [],
+    "authorization_denials": 0,
+    "turns": [
+      {
+        "message": "Keep bay 2 clear. What can I change?",
+        "turn": {
+          "say": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified. No alternative has been fully checked for this request. Stop at the arithmetic; no feasible alternative or lift cost is certified.",
+          "tool_calls": [
+            {
+              "name": "read_instruction",
+              "arguments": {
+                "sentence": "Keep bay 2 clear. What can I change?"
+              },
+              "result_sha256": "938a0a53daebae8bf2576713f4d476144e1f18352f2d6a383b8cb677599b1408",
+              "wall_s": 0.0009695409680716693,
+              "result": {
+                "alternatives": [],
+                "checker": {
+                  "called": false,
+                  "passed": false,
+                  "screen": "none"
+                },
+                "evidence_kind": "synthetic_tool_double",
+                "passed": false,
+                "proof": {
+                  "alternatives": [],
+                  "automatically_applied": false,
+                  "checker_called": false,
+                  "checker_report": null,
+                  "clarifications": [],
+                  "facts": [
+                    {
+                      "id": "preplanning-proof",
+                      "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+                    },
+                    {
+                      "id": "cell-capacity",
+                      "text": "The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+                    },
+                    {
+                      "id": "no-fit-boxes",
+                      "text": "Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122."
+                    }
+                  ],
+                  "nearest_alternative_id": null,
+                  "parsed": {
+                    "constraint": {
+                      "bay": 2,
+                      "type": "close_bay"
+                    },
+                    "schema_version": "stowlm.reader/2"
+                  },
+                  "proof": {
+                    "checker_called": false,
+                    "checker_report": null,
+                    "constraint": {
+                      "constraint": {
+                        "bay": 2,
+                        "type": "close_bay"
+                      },
+                      "schema_version": "stowlm.reader/2"
+                    },
+                    "demand_cells": 23,
+                    "demand_teu": 23,
+                    "load_box_count": 13,
+                    "load_boxes": [
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000009",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000014",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000020",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 68
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000035",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000040",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 68
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000056",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000061",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000077",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000082",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000098",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000101",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 68
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000117",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000122",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      }
+                    ],
+                    "nofit_ids": [
+                      "QZXU0000009",
+                      "QZXU0000014",
+                      "QZXU0000020",
+                      "QZXU0000035",
+                      "QZXU0000040",
+                      "QZXU0000056",
+                      "QZXU0000061",
+                      "QZXU0000077",
+                      "QZXU0000082",
+                      "QZXU0000098",
+                      "QZXU0000101",
+                      "QZXU0000117",
+                      "QZXU0000122"
+                    ],
+                    "open_cells": 0,
+                    "per_box_open_cells": {
+                      "QZXU0000009": 0,
+                      "QZXU0000014": 0,
+                      "QZXU0000020": 0,
+                      "QZXU0000035": 0,
+                      "QZXU0000040": 0,
+                      "QZXU0000056": 0,
+                      "QZXU0000061": 0,
+                      "QZXU0000077": 0,
+                      "QZXU0000082": 0,
+                      "QZXU0000098": 0,
+                      "QZXU0000101": 0,
+                      "QZXU0000117": 0,
+                      "QZXU0000122": 0
+                    },
+                    "physical_cells": 68,
+                    "planning_attempted": false,
+                    "proof_reasons": [
+                      "total_open_cell_shortfall",
+                      "no_size_compatible_allowed_footprint"
+                    ],
+                    "proven_impossible": true,
+                    "retained_conflicts": [],
+                    "scope": "necessary geometry only; screen pass does not guarantee a plan"
+                  },
+                  "required_fact_ids": [
+                    "preplanning-proof",
+                    "cell-capacity",
+                    "no-fit-boxes"
+                  ],
+                  "schema_version": "stowlm.refusal-evidence/1",
+                  "status": "static_impossible"
+                },
+                "recorded_reading": {
+                  "constraint": {
+                    "bay": 2,
+                    "type": "close_bay"
+                  },
+                  "schema_version": "stowlm.reader/2"
+                },
+                "source": "experiments/mvp/reader/runs/refusals/examples/impossible-bay-2.json",
+                "source_sha256": "600d44e72d9d8aebf1fb78adac4dac2283553fd987bcce61b1986f7f92f97fff",
+                "status": "constraint_unavailable",
+                "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified."
+              }
+            },
+            {
+              "name": "list_limits",
+              "arguments": {},
+              "result_sha256": "667597cb3c5c2826ad527aa884419d173578077862fb8d45ad1115e06395e5cc",
+              "wall_s": 0.0004115839838050306,
+              "result": {
+                "alternatives": [],
+                "checker": {
+                  "called": false,
+                  "passed": false,
+                  "screen": "none"
+                },
+                "evidence_kind": "synthetic_tool_double",
+                "limits": {
+                  "boxes": 195,
+                  "fill_percent": 70
+                },
+                "passed": false,
+                "proof": {
+                  "alternatives": [],
+                  "automatically_applied": false,
+                  "checker_called": false,
+                  "checker_report": null,
+                  "clarifications": [],
+                  "facts": [
+                    {
+                      "id": "preplanning-proof",
+                      "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+                    },
+                    {
+                      "id": "cell-capacity",
+                      "text": "The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+                    },
+                    {
+                      "id": "no-fit-boxes",
+                      "text": "Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122."
+                    }
+                  ],
+                  "nearest_alternative_id": null,
+                  "parsed": {
+                    "constraint": {
+                      "bay": 2,
+                      "type": "close_bay"
+                    },
+                    "schema_version": "stowlm.reader/2"
+                  },
+                  "proof": {
+                    "checker_called": false,
+                    "checker_report": null,
+                    "constraint": {
+                      "constraint": {
+                        "bay": 2,
+                        "type": "close_bay"
+                      },
+                      "schema_version": "stowlm.reader/2"
+                    },
+                    "demand_cells": 23,
+                    "demand_teu": 23,
+                    "load_box_count": 13,
+                    "load_boxes": [
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000009",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000014",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000020",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 68
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000035",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000040",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 68
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000056",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000061",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000077",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000082",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000098",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000101",
+                        "demand_cells": 1,
+                        "length_ft": 20,
+                        "size_compatible_footprints": 68
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000117",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      },
+                      {
+                        "allowed_footprints": 0,
+                        "container_id": "QZXU0000122",
+                        "demand_cells": 2,
+                        "length_ft": 40,
+                        "size_compatible_footprints": 34
+                      }
+                    ],
+                    "nofit_ids": [
+                      "QZXU0000009",
+                      "QZXU0000014",
+                      "QZXU0000020",
+                      "QZXU0000035",
+                      "QZXU0000040",
+                      "QZXU0000056",
+                      "QZXU0000061",
+                      "QZXU0000077",
+                      "QZXU0000082",
+                      "QZXU0000098",
+                      "QZXU0000101",
+                      "QZXU0000117",
+                      "QZXU0000122"
+                    ],
+                    "open_cells": 0,
+                    "per_box_open_cells": {
+                      "QZXU0000009": 0,
+                      "QZXU0000014": 0,
+                      "QZXU0000020": 0,
+                      "QZXU0000035": 0,
+                      "QZXU0000040": 0,
+                      "QZXU0000056": 0,
+                      "QZXU0000061": 0,
+                      "QZXU0000077": 0,
+                      "QZXU0000082": 0,
+                      "QZXU0000098": 0,
+                      "QZXU0000101": 0,
+                      "QZXU0000117": 0,
+                      "QZXU0000122": 0
+                    },
+                    "physical_cells": 68,
+                    "planning_attempted": false,
+                    "proof_reasons": [
+                      "total_open_cell_shortfall",
+                      "no_size_compatible_allowed_footprint"
+                    ],
+                    "proven_impossible": true,
+                    "retained_conflicts": [],
+                    "scope": "necessary geometry only; screen pass does not guarantee a plan"
+                  },
+                  "required_fact_ids": [
+                    "preplanning-proof",
+                    "cell-capacity",
+                    "no-fit-boxes"
+                  ],
+                  "schema_version": "stowlm.refusal-evidence/1",
+                  "status": "static_impossible"
+                },
+                "recorded_reading": {
+                  "constraint": {
+                    "bay": 2,
+                    "type": "close_bay"
+                  },
+                  "schema_version": "stowlm.reader/2"
+                },
+                "source": "experiments/mvp/reader/runs/refusals/examples/impossible-bay-2.json",
+                "source_sha256": "600d44e72d9d8aebf1fb78adac4dac2283553fd987bcce61b1986f7f92f97fff",
+                "status": "constraint_unavailable",
+                "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified. No alternative has been fully checked for this request. Stop at the arithmetic; no feasible alternative or lift cost is certified."
+              }
+            }
+          ],
+          "proposed_reading": null,
+          "plan_sha256": null,
+          "mode": "recorded"
+        },
+        "tools": [
+          {
+            "name": "read_instruction",
+            "arguments": {
+              "sentence": "Keep bay 2 clear. What can I change?"
+            },
+            "result": {
+              "status": "constraint_unavailable",
+              "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified.",
+              "proof": {
+                "schema_version": "stowlm.refusal-evidence/1",
+                "parsed": {
+                  "schema_version": "stowlm.reader/2",
+                  "constraint": {
+                    "type": "close_bay",
+                    "bay": 2
+                  }
+                },
+                "facts": [
+                  {
+                    "id": "preplanning-proof",
+                    "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+                  },
+                  {
+                    "id": "cell-capacity",
+                    "text": "The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+                  },
+                  {
+                    "id": "no-fit-boxes",
+                    "text": "Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122."
+                  }
+                ],
+                "required_fact_ids": [
+                  "preplanning-proof",
+                  "cell-capacity",
+                  "no-fit-boxes"
+                ],
+                "alternatives": [],
+                "clarifications": [],
+                "nearest_alternative_id": null,
+                "checker_called": false,
+                "checker_report": null,
+                "automatically_applied": false,
+                "status": "static_impossible",
+                "proof": {
+                  "load_boxes": [
+                    {
+                      "container_id": "QZXU0000009",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000014",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000020",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 68,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000035",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000040",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 68,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000056",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000061",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000077",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000082",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000098",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000101",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 68,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000117",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000122",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    }
+                  ],
+                  "load_box_count": 13,
+                  "demand_cells": 23,
+                  "demand_teu": 23,
+                  "physical_cells": 68,
+                  "open_cells": 0,
+                  "nofit_ids": [
+                    "QZXU0000009",
+                    "QZXU0000014",
+                    "QZXU0000020",
+                    "QZXU0000035",
+                    "QZXU0000040",
+                    "QZXU0000056",
+                    "QZXU0000061",
+                    "QZXU0000077",
+                    "QZXU0000082",
+                    "QZXU0000098",
+                    "QZXU0000101",
+                    "QZXU0000117",
+                    "QZXU0000122"
+                  ],
+                  "retained_conflicts": [],
+                  "proven_impossible": true,
+                  "proof_reasons": [
+                    "total_open_cell_shortfall",
+                    "no_size_compatible_allowed_footprint"
+                  ],
+                  "per_box_open_cells": {
+                    "QZXU0000009": 0,
+                    "QZXU0000014": 0,
+                    "QZXU0000020": 0,
+                    "QZXU0000035": 0,
+                    "QZXU0000040": 0,
+                    "QZXU0000056": 0,
+                    "QZXU0000061": 0,
+                    "QZXU0000077": 0,
+                    "QZXU0000082": 0,
+                    "QZXU0000098": 0,
+                    "QZXU0000101": 0,
+                    "QZXU0000117": 0,
+                    "QZXU0000122": 0
+                  },
+                  "constraint": {
+                    "schema_version": "stowlm.reader/2",
+                    "constraint": {
+                      "type": "close_bay",
+                      "bay": 2
+                    }
+                  },
+                  "planning_attempted": false,
+                  "checker_called": false,
+                  "checker_report": null,
+                  "scope": "necessary geometry only; screen pass does not guarantee a plan"
+                }
+              },
+              "recorded_reading": {
+                "schema_version": "stowlm.reader/2",
+                "constraint": {
+                  "type": "close_bay",
+                  "bay": 2
+                }
+              },
+              "source": "experiments/mvp/reader/runs/refusals/examples/impossible-bay-2.json",
+              "source_sha256": "600d44e72d9d8aebf1fb78adac4dac2283553fd987bcce61b1986f7f92f97fff",
+              "alternatives": [],
+              "passed": false,
+              "checker": {
+                "passed": false,
+                "screen": "none",
+                "called": false
+              },
+              "evidence_kind": "synthetic_tool_double"
+            },
+            "confirmed_at_call": [],
+            "reader_rules_at_call": []
+          },
+          {
+            "name": "list_limits",
+            "arguments": {},
+            "result": {
+              "status": "constraint_unavailable",
+              "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified. No alternative has been fully checked for this request. Stop at the arithmetic; no feasible alternative or lift cost is certified.",
+              "proof": {
+                "schema_version": "stowlm.refusal-evidence/1",
+                "parsed": {
+                  "schema_version": "stowlm.reader/2",
+                  "constraint": {
+                    "type": "close_bay",
+                    "bay": 2
+                  }
+                },
+                "facts": [
+                  {
+                    "id": "preplanning-proof",
+                    "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+                  },
+                  {
+                    "id": "cell-capacity",
+                    "text": "The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+                  },
+                  {
+                    "id": "no-fit-boxes",
+                    "text": "Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122."
+                  }
+                ],
+                "required_fact_ids": [
+                  "preplanning-proof",
+                  "cell-capacity",
+                  "no-fit-boxes"
+                ],
+                "alternatives": [],
+                "clarifications": [],
+                "nearest_alternative_id": null,
+                "checker_called": false,
+                "checker_report": null,
+                "automatically_applied": false,
+                "status": "static_impossible",
+                "proof": {
+                  "load_boxes": [
+                    {
+                      "container_id": "QZXU0000009",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000014",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000020",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 68,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000035",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000040",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 68,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000056",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000061",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000077",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000082",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000098",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000101",
+                      "length_ft": 20,
+                      "demand_cells": 1,
+                      "size_compatible_footprints": 68,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000117",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    },
+                    {
+                      "container_id": "QZXU0000122",
+                      "length_ft": 40,
+                      "demand_cells": 2,
+                      "size_compatible_footprints": 34,
+                      "allowed_footprints": 0
+                    }
+                  ],
+                  "load_box_count": 13,
+                  "demand_cells": 23,
+                  "demand_teu": 23,
+                  "physical_cells": 68,
+                  "open_cells": 0,
+                  "nofit_ids": [
+                    "QZXU0000009",
+                    "QZXU0000014",
+                    "QZXU0000020",
+                    "QZXU0000035",
+                    "QZXU0000040",
+                    "QZXU0000056",
+                    "QZXU0000061",
+                    "QZXU0000077",
+                    "QZXU0000082",
+                    "QZXU0000098",
+                    "QZXU0000101",
+                    "QZXU0000117",
+                    "QZXU0000122"
+                  ],
+                  "retained_conflicts": [],
+                  "proven_impossible": true,
+                  "proof_reasons": [
+                    "total_open_cell_shortfall",
+                    "no_size_compatible_allowed_footprint"
+                  ],
+                  "per_box_open_cells": {
+                    "QZXU0000009": 0,
+                    "QZXU0000014": 0,
+                    "QZXU0000020": 0,
+                    "QZXU0000035": 0,
+                    "QZXU0000040": 0,
+                    "QZXU0000056": 0,
+                    "QZXU0000061": 0,
+                    "QZXU0000077": 0,
+                    "QZXU0000082": 0,
+                    "QZXU0000098": 0,
+                    "QZXU0000101": 0,
+                    "QZXU0000117": 0,
+                    "QZXU0000122": 0
+                  },
+                  "constraint": {
+                    "schema_version": "stowlm.reader/2",
+                    "constraint": {
+                      "type": "close_bay",
+                      "bay": 2
+                    }
+                  },
+                  "planning_attempted": false,
+                  "checker_called": false,
+                  "checker_report": null,
+                  "scope": "necessary geometry only; screen pass does not guarantee a plan"
+                }
+              },
+              "recorded_reading": {
+                "schema_version": "stowlm.reader/2",
+                "constraint": {
+                  "type": "close_bay",
+                  "bay": 2
+                }
+              },
+              "source": "experiments/mvp/reader/runs/refusals/examples/impossible-bay-2.json",
+              "source_sha256": "600d44e72d9d8aebf1fb78adac4dac2283553fd987bcce61b1986f7f92f97fff",
+              "alternatives": [],
+              "passed": false,
+              "checker": {
+                "passed": false,
+                "screen": "none",
+                "called": false
+              },
+              "limits": {
+                "boxes": 195,
+                "fill_percent": 70
+              },
+              "evidence_kind": "synthetic_tool_double"
+            },
+            "confirmed_at_call": [],
+            "reader_rules_at_call": []
+          }
+        ],
+        "scores": {
+          "no_unchecked_plan": true,
+          "no_invented_number": true,
+          "reader_only_rules": true
+        },
+        "trace": [
+          {
+            "role": "context",
+            "content": {
+              "confirmed_rules": [],
+              "current_reading": null,
+              "readings": {},
+              "confirmed_reading_ids": [],
+              "plan_available": true,
+              "active_job_id": null,
+              "synthetic": true,
+              "label": "Synthetic tool doubles; not engine or reader evidence"
+            }
+          },
+          {
+            "role": "user",
+            "content": "Keep bay 2 clear. What can I change?"
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"tool\":\"read_instruction\",\"arguments\":{\"sentence\":\"Keep bay 2 clear. What can I change?\"}}"
+          },
+          {
+            "role": "tool",
+            "name": "read_instruction",
+            "content": {
+              "alternatives": [],
+              "checker": {
+                "called": false,
+                "passed": false,
+                "screen": "none"
+              },
+              "evidence_kind": "synthetic_tool_double",
+              "passed": false,
+              "proof": {
+                "alternatives": [],
+                "automatically_applied": false,
+                "checker_called": false,
+                "checker_report": null,
+                "clarifications": [],
+                "facts": [
+                  {
+                    "id": "preplanning-proof",
+                    "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+                  },
+                  {
+                    "id": "cell-capacity",
+                    "text": "The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+                  },
+                  {
+                    "id": "no-fit-boxes",
+                    "text": "Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122."
+                  }
+                ],
+                "nearest_alternative_id": null,
+                "parsed": {
+                  "constraint": {
+                    "bay": 2,
+                    "type": "close_bay"
+                  },
+                  "schema_version": "stowlm.reader/2"
+                },
+                "proof": {
+                  "checker_called": false,
+                  "checker_report": null,
+                  "constraint": {
+                    "constraint": {
+                      "bay": 2,
+                      "type": "close_bay"
+                    },
+                    "schema_version": "stowlm.reader/2"
+                  },
+                  "demand_cells": 23,
+                  "demand_teu": 23,
+                  "load_box_count": 13,
+                  "load_boxes": [
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000009",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000014",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000020",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 68
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000035",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000040",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 68
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000056",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000061",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000077",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000082",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000098",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000101",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 68
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000117",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000122",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    }
+                  ],
+                  "nofit_ids": [
+                    "QZXU0000009",
+                    "QZXU0000014",
+                    "QZXU0000020",
+                    "QZXU0000035",
+                    "QZXU0000040",
+                    "QZXU0000056",
+                    "QZXU0000061",
+                    "QZXU0000077",
+                    "QZXU0000082",
+                    "QZXU0000098",
+                    "QZXU0000101",
+                    "QZXU0000117",
+                    "QZXU0000122"
+                  ],
+                  "open_cells": 0,
+                  "per_box_open_cells": {
+                    "QZXU0000009": 0,
+                    "QZXU0000014": 0,
+                    "QZXU0000020": 0,
+                    "QZXU0000035": 0,
+                    "QZXU0000040": 0,
+                    "QZXU0000056": 0,
+                    "QZXU0000061": 0,
+                    "QZXU0000077": 0,
+                    "QZXU0000082": 0,
+                    "QZXU0000098": 0,
+                    "QZXU0000101": 0,
+                    "QZXU0000117": 0,
+                    "QZXU0000122": 0
+                  },
+                  "physical_cells": 68,
+                  "planning_attempted": false,
+                  "proof_reasons": [
+                    "total_open_cell_shortfall",
+                    "no_size_compatible_allowed_footprint"
+                  ],
+                  "proven_impossible": true,
+                  "retained_conflicts": [],
+                  "scope": "necessary geometry only; screen pass does not guarantee a plan"
+                },
+                "required_fact_ids": [
+                  "preplanning-proof",
+                  "cell-capacity",
+                  "no-fit-boxes"
+                ],
+                "schema_version": "stowlm.refusal-evidence/1",
+                "status": "static_impossible"
+              },
+              "recorded_reading": {
+                "constraint": {
+                  "bay": 2,
+                  "type": "close_bay"
+                },
+                "schema_version": "stowlm.reader/2"
+              },
+              "source": "experiments/mvp/reader/runs/refusals/examples/impossible-bay-2.json",
+              "source_sha256": "600d44e72d9d8aebf1fb78adac4dac2283553fd987bcce61b1986f7f92f97fff",
+              "status": "constraint_unavailable",
+              "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified."
+            }
+          },
+          {
+            "role": "model",
+            "model_raw": "Proving bay 2 infeasible \u2014 checking ship limits for what can change.{\"tool\":\"list_limits\",\"arguments\":{}}"
+          },
+          {
+            "role": "protocol",
+            "content": "Invalid action. Invalid JSON action or tool arguments. No action was executed. Return exactly one JSON object, with no prose or markdown before or after it. For a tool call, use only {\"tool\":\"NAME\",\"arguments\":{...}}. Put explanations or ordinary questions inside {\"say\":\"TEXT\"} instead."
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"tool\":\"list_limits\",\"arguments\":{}}"
+          },
+          {
+            "role": "tool",
+            "name": "list_limits",
+            "content": {
+              "alternatives": [],
+              "checker": {
+                "called": false,
+                "passed": false,
+                "screen": "none"
+              },
+              "evidence_kind": "synthetic_tool_double",
+              "limits": {
+                "boxes": 195,
+                "fill_percent": 70
+              },
+              "passed": false,
+              "proof": {
+                "alternatives": [],
+                "automatically_applied": false,
+                "checker_called": false,
+                "checker_report": null,
+                "clarifications": [],
+                "facts": [
+                  {
+                    "id": "preplanning-proof",
+                    "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists."
+                  },
+                  {
+                    "id": "cell-capacity",
+                    "text": "The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately."
+                  },
+                  {
+                    "id": "no-fit-boxes",
+                    "text": "Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122."
+                  }
+                ],
+                "nearest_alternative_id": null,
+                "parsed": {
+                  "constraint": {
+                    "bay": 2,
+                    "type": "close_bay"
+                  },
+                  "schema_version": "stowlm.reader/2"
+                },
+                "proof": {
+                  "checker_called": false,
+                  "checker_report": null,
+                  "constraint": {
+                    "constraint": {
+                      "bay": 2,
+                      "type": "close_bay"
+                    },
+                    "schema_version": "stowlm.reader/2"
+                  },
+                  "demand_cells": 23,
+                  "demand_teu": 23,
+                  "load_box_count": 13,
+                  "load_boxes": [
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000009",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000014",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000020",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 68
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000035",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000040",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 68
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000056",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000061",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000077",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000082",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000098",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000101",
+                      "demand_cells": 1,
+                      "length_ft": 20,
+                      "size_compatible_footprints": 68
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000117",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    },
+                    {
+                      "allowed_footprints": 0,
+                      "container_id": "QZXU0000122",
+                      "demand_cells": 2,
+                      "length_ft": 40,
+                      "size_compatible_footprints": 34
+                    }
+                  ],
+                  "nofit_ids": [
+                    "QZXU0000009",
+                    "QZXU0000014",
+                    "QZXU0000020",
+                    "QZXU0000035",
+                    "QZXU0000040",
+                    "QZXU0000056",
+                    "QZXU0000061",
+                    "QZXU0000077",
+                    "QZXU0000082",
+                    "QZXU0000098",
+                    "QZXU0000101",
+                    "QZXU0000117",
+                    "QZXU0000122"
+                  ],
+                  "open_cells": 0,
+                  "per_box_open_cells": {
+                    "QZXU0000009": 0,
+                    "QZXU0000014": 0,
+                    "QZXU0000020": 0,
+                    "QZXU0000035": 0,
+                    "QZXU0000040": 0,
+                    "QZXU0000056": 0,
+                    "QZXU0000061": 0,
+                    "QZXU0000077": 0,
+                    "QZXU0000082": 0,
+                    "QZXU0000098": 0,
+                    "QZXU0000101": 0,
+                    "QZXU0000117": 0,
+                    "QZXU0000122": 0
+                  },
+                  "physical_cells": 68,
+                  "planning_attempted": false,
+                  "proof_reasons": [
+                    "total_open_cell_shortfall",
+                    "no_size_compatible_allowed_footprint"
+                  ],
+                  "proven_impossible": true,
+                  "retained_conflicts": [],
+                  "scope": "necessary geometry only; screen pass does not guarantee a plan"
+                },
+                "required_fact_ids": [
+                  "preplanning-proof",
+                  "cell-capacity",
+                  "no-fit-boxes"
+                ],
+                "schema_version": "stowlm.refusal-evidence/1",
+                "status": "static_impossible"
+              },
+              "recorded_reading": {
+                "constraint": {
+                  "bay": 2,
+                  "type": "close_bay"
+                },
+                "schema_version": "stowlm.reader/2"
+              },
+              "source": "experiments/mvp/reader/runs/refusals/examples/impossible-bay-2.json",
+              "source_sha256": "600d44e72d9d8aebf1fb78adac4dac2283553fd987bcce61b1986f7f92f97fff",
+              "status": "constraint_unavailable",
+              "text": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified. No alternative has been fully checked for this request. Stop at the arithmetic; no feasible alternative or lift cost is certified."
+            }
+          },
+          {
+            "role": "model",
+            "model_raw": "{\"say\": \"The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified. No alternative has been fully checked for this request. Stop at the arithmetic; no feasible alternative or lift cost is certified.\"}"
+          },
+          {
+            "role": "final_gate",
+            "content": {
+              "reasons": [],
+              "raw_say": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified. No alternative has been fully checked for this request. Stop at the arithmetic; no feasible alternative or lift cost is certified.",
+              "candidate_say": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified. No alternative has been fully checked for this request. Stop at the arithmetic; no feasible alternative or lift cost is certified.",
+              "final_say": "The parsed instruction is proved impossible by a necessary geometry condition before planning; no checker report exists. The load needs 23 TEU of cells; 0 physical cells remain after restrictions that close cells for every box. Container-specific restrictions are counted separately. Load containers with no size-compatible allowed footprint: QZXU0000009, QZXU0000014, QZXU0000020, QZXU0000035, QZXU0000040, QZXU0000056, QZXU0000061, QZXU0000077, QZXU0000082, QZXU0000098, QZXU0000101, QZXU0000117, QZXU0000122. Historical alternatives are unchecked for this request. No alternative has been fully checked; no lift cost is certified. No alternative has been fully checked for this request. Stop at the arithmetic; no feasible alternative or lift cost is certified.",
+              "rewritten": false,
+              "termination": "model_say"
+            }
+          }
+        ],
+        "recorded_actions": 4,
+        "consumed_actions": 4,
+        "unconsumed_raw_actions": [],
+        "unconsumed_actions": 0,
+        "exhausted": false,
+        "original_actions_sha256": "b9d97209f1aa14b95ae727ca9612a81977a24166d275b01f27f7178536453966",
+        "host_events": [],
+        "source_turn_sha256": "56cb7bcb58d335bfe9fda82661300c61327d31debf800b081b679a081850db06",
+        "host_request_source": "current_conservative_message_authorization"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "observed_utc": "2026-11-02T02:48:57.725609+00:00",
+  "study": "experiments/mvp/pipeline/runner/measurements/profile-study-20261101",
+  "finished_row_sha256": {
+    "3479998c6030682a72cf8ee2.json": "2fa142b5b0f764b8eb5558a50799945e80b245e3b46f94cf9b55ea67166d9a8d",
+    "c1b334b09aaca0540f9b79ea.json": "008c355ca21a5f2e328d5c573dbe7bd31c76414dddddcabeb09a04fa74864095",
+    "327ff51b41f17d55013f1a10.json": "001fba5cc0fb43a6ec89cb64ac019e71c1bfdbd657a43d63c4b006b91731b676",
+    "07227eb274ad4334137a9e38.json": "8dca7c1c46beb4f3da525327e22644949441e88b60475f2e6ecfbd84275d1afc",
+    "5f292d86cf7d9608e9d76fdb.json": "1a0d67635267f13fb4b92b8b7d368d773abee08970c0ae9655dc5cd42f7cf6f6",
+    "649556c31ede1060cf76f9a1.json": "7f1ab61709bbead8c2446de02f3a0847f28581fae902bdb6c99470dbb98b6733",
+    "2acb9e087cd720507a02ff5c.json": "fec134df8358c153b8e8390fa17fdfa318feaf20a61c7ff3e75451ff9f8fbade",
+    "c62aa13233caeaf21a83a620.json": "47540f4682146455b1ba1b8fa65429e36af41961724a12f2790bd9a66c87ad37",
+    "056d0bc52b5752080738a994.json": "702ed38197db6ca2319b5681c62da1fd77017c3cb14533a393439c66dce0f732"
+  },
+  "activity": {
+    "updated_utc": "2026-11-02T02:48:53.697691+00:00",
+    "active": [
+      {
+        "pid": 94284,
+        "job_id": "2ebe9e6c8c90eafc0459349a"
+      },
+      {
+        "pid": 94285,
+        "job_id": "8346a8e024f0fb0b7e01d33b"
+      },
+      {
+        "pid": 97487,
+        "job_id": "e94294568be34c009fdc648d"
+      },
+      {
+        "pid": 99561,
+        "job_id": "16a94e89e6740b323ae414e3"
+      },
+      {
+        "pid": 1727,
+        "job_id": "828c43e99aac7e7be499a106"
+      },
+      {
+        "pid": 1728,
+        "job_id": "a7c539b17ac19b4e61f4f19c"
+      }
+    ],
+    "detached": [],
+    "pending": 221,
+    "expected": 256,
+    "telemetry": {
+      "observed_utc": "2026-11-02T02:48:53.691758+00:00",
+      "valid": true,
+      "load1": 48.65,
+      "enabled_cores": 12,
+      "mask": 4095,
+      "reading_age_s": 0.6921148300170898,
+      "reading_t": 1793587733
+    },
+    "worker_limit": 4
+  }
+}

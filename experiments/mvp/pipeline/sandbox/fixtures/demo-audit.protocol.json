@@ -1,0 +1,29 @@
+{
+  "schema": "stowlm.sandbox-demo-audit-protocol/1",
+  "synthetic": true,
+  "created_utc": "2026-11-02T02:56:49.236195+00:00",
+  "created_unix": 1793588209.2365818,
+  "seed": 170730,
+  "source_path": "experiments/mvp/pipeline/sandbox/fixtures/demo_source_hero.json",
+  "source_file_sha256": "00760ad9e2d56e9b313a0223041ceb150708aaf7b744be3cad211e3ba7abb791",
+  "instance_sha256": "4cd3542494223506887f2325a6dd70589dfadd2b66d47ae02385811895a88860",
+  "plan_sha256": "f4bebf86bd947df87b9a859611c5b57e6a4d4b246696ebf2616f7b109addf1c7",
+  "n_boxes": 87,
+  "target_requests": 30,
+  "assigned_strata": {
+    "far": 10,
+    "heavy": 10,
+    "cross_hatch": 10
+  },
+  "kinds_per_stratum": {
+    "swap": 5,
+    "empty": 5
+  },
+  "minimum_distinct_boxes": 20,
+  "maximum_requests_per_box": 2,
+  "selection": "Seeded geometry/cargo-only candidates. No candidate replay, fast screen or full outcome selects requests.",
+  "cache_selection": "Fixed request indices 0..24 before any candidate full outcomes; no outcome filtering.",
+  "post_outcome_policy": "No gate tuning, request replacement, or outcome-dependent cache selection.",
+  "candidate_full_checks_started": 0,
+  "pid": 16335
+}

@@ -1,0 +1,42 @@
+{
+  "answer": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "5.1",
+      "min_bays": 8,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "5.1",
+      "min_bays": 8,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.040016499988269,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.001856",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "649b8dd7d06497922cc756507db06ef3dfa63cd2677ad4937329d454fa091fee",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "93b2d33e-b571-46c3-8ac7-6f527709b5d3"
+  },
+  "parser_latency_s": 1.0399936670437455,
+  "script": "A 8-bay minimum buffer from accommodation applies to class 5.1.",
+  "source_id": "reader-0e9acc2e458cee46",
+  "started_utc": "2026-11-01T01:31:08.331825+00:00",
+  "status": "complete"
+}

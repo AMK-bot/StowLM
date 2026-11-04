@@ -1,0 +1,105 @@
+[
+  {
+    "id": "demo-booking_confirmation",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/booking_confirmation.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT / invented cargo and companies / no customer data\nBOOKING CONFIRMATION\nBooking reference: SYN-LCH-260103\nVessel: SYNTHETIC LANTA\nVoyage: 2612S\nPort of loading: THLCH / LAEM CHABANG\nETD: 03 DEC 2026 02:00 ICT\nComplete container list for booking SYN-LCH-260103; 12 units. Scope is this booking only.\n\nQZXU0000009; POD VNSGN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000014; POD SGSIN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000020; POD VNSGN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000040; POD SGSIN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000035; POD VNSGN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000061; POD SGSIN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000143; POD VNSGN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000077; POD SGSIN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000159; POD VNSGN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000082; POD SGSIN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000170; POD VNSGN; Vessel SYNTHETIC LANTA; Status CONFIRMED\nQZXU0000098; POD SGSIN; Vessel SYNTHETIC LANTA; Status CONFIRMED\n",
+    "synthetic": true,
+    "role": "booking",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8,
+    "complete_booking_list": true
+  },
+  {
+    "id": "demo-shipping_instructions",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/shipping_instructions.csv",
+    "mime_type": "text/csv",
+    "text": "SYNTHETIC DOCUMENT / invented cargo and companies / no customer data,,,,,,,,,,\nSHIPPING INSTRUCTIONS,,,,,,,,,,\nBooking SYN-LCH-260103; issued 02/12/2569,,,,,,,,,,\nContainer,ISO,POL,Empty,Booking reference,Commodity,Setpoint,Gross mass,Tare kg,Marine pollutant,Limited quantity\nQZXU0000009,22G1,THLCH,LADEN,SYN-LCH-260103,PACKAGED PAINT,,13060 kg,2200 kg,,\nQZXU0000014,45G1,THLCH,LADEN,SYN-LCH-260103,ENVIRONMENTALLY HAZARDOUS LIQUID IN PACKAGES,,13800 kg,3900 kg,,\nQZXU0000020,45R1,THLCH,LADEN,SYN-LCH-260103,FROZEN FRUIT,-18 C,14540 kg,4500 kg,,\nQZXU0000040,22R1,THLCH,LADEN,SYN-LCH-260103,CHILLED FRUIT,4 C,15280 kg,3000 kg,,\nQZXU0000035,45G1,THLCH,LADEN,SYN-LCH-260103,CARTONS OF MACHINE PARTS,,16020 kg,3900 kg,,\nQZXU0000061,45G1,THLCH,LADEN,SYN-LCH-260103,CARTONS OF MACHINE PARTS,,16760 kg,,,\nQZXU0000143,22G1,THLCH,LADEN,SYN-LCH-260103,CARTONS OF MACHINE PARTS,,17500 kg,2200 kg,,\nQZXU0000077,45G1,THLCH,LADEN,SYN-LCH-260103,CARTONS OF MACHINE PARTS,,18240 kg,3900 kg,,\nQZXU0000159,22G1,THLCH,EMPTY,SYN-LCH-260103,EMPTY CONTAINER,,2200 kg,2200 kg,,\nQZXU0000082,45G1,THLCH,LADEN,SYN-LCH-260103,CARTONS OF MACHINE PARTS,,19720 kg,3900 kg,,\nQZXU0000170,22G1,THLCH,LADEN,SYN-LCH-260103,CARTONS OF MACHINE PARTS,,18260 kg,2200 kg,,\nQZXU0000098,45G1,THLCH,LADEN,SYN-LCH-260103,CARTONS OF MACHINE PARTS,,21200 kg,3900 kg,,\n",
+    "synthetic": true,
+    "role": "shipping_instructions",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8
+  },
+  {
+    "id": "demo-vgm_declaration",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/vgm_declaration.csv",
+    "mime_type": "text/csv",
+    "text": "SYNTHETIC DOCUMENT / invented cargo and companies / no customer data,,,,\nVERIFIED GROSS MASS DECLARATION,,,,\nBooking SYN-LCH-260103; gross mass includes tare; shipper authorised signature below,,,,\nContainer Number,VGM,Method,Signed by,Date\nQZXU0000009,13060 kg,1,N. Chai,02/12/2569\nQZXU0000014,13.800 MT,1,N. Chai,02/12/2569\nQZXU0000020,14540 kg,1,N. Chai,02/12/2569\nQZXU0000040,15280 kg,1,N. Chai,02/12/2569\nQZXU0000035,16020 kg,1,N. Chai,02/12/2569\nQZXU0000061,16.760 MT,1,N. Chai,02/12/2569\nQZXU0000143,17500 kg,1,N. Chai,02/12/2569\nQZXU0000077,18240 kg,1,N. Chai,02/12/2569\nQZXU0000159,2200 kg,1,N. Chai,02/12/2569\nQZXU0000082,19.720 MT,1,N. Chai,02/12/2569\nQZXU0000170,20460 kg,1,N. Chai,02/12/2569\nQZXU0000098,21200 kg,1,N. Chai,02/12/2569\n",
+    "synthetic": true,
+    "role": "vgm",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8
+  },
+  {
+    "id": "demo-dg_declaration",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/dg_declaration.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT / invented cargo and companies / no customer data\nMULTIMODAL DANGEROUS GOODS DECLARATION\nBooking reference: SYN-LCH-260103\nVessel SYNTHETIC LANTA / Voyage 2612S\nCOMPLETE DANGEROUS GOODS LIST FOR BOOKING SYN-LCH-260103.\nOnly the containers listed below carry dangerous goods. All other containers on this booking are non-DG.\nShipper: Synthetic Eastern Pack Ltd; signed N. Chai; 02 DEC 2026\n\nQZXU0000009; Item 1; UN 1263; Class 3; PG III; Marine pollutant NO; Limited quantity NO; 24 fibreboard boxes\nQZXU0000009; Item 2; UN 3082; Class 9; PG III; Marine pollutant YES; Limited quantity NO; 24 fibreboard boxes\nQZXU0000014; Item 1; UN 3082; Class 9; PG III; Marine pollutant YES; Limited quantity YES; 24 fibreboard boxes\n",
+    "synthetic": true,
+    "role": "dg_declaration",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8,
+    "complete_booking_list": true
+  },
+  {
+    "id": "demo-reefer_list",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/reefer_list.csv",
+    "mime_type": "text/csv",
+    "text": "SYNTHETIC DOCUMENT / invented cargo and companies / no customer data,,\nOPERATING REEFER LIST,,\nCOMPLETE OPERATING REEFER LIST FOR BOOKING SYN-LCH-260103. Only listed containers require power; all other booked containers are non-operating.,,\nPowered equipment no.,Reefer connection required,Thermostat requested\nQZXU0000020,YES,-18 C\nQZXU0000040,YES,4 C\n",
+    "synthetic": true,
+    "role": "reefer_list",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8,
+    "complete_booking_list": true
+  },
+  {
+    "id": "demo-oog_list",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/oog_list.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT / invented cargo and companies / no customer data\nOUT OF GAUGE DECLARATION\nBooking reference: SYN-LCH-260103\nCOMPLETE OOG LIST FOR BOOKING SYN-LCH-260103.\nThere are no OOG containers on this booking. All booked containers are in gauge.\nSigned N. Chai; 02 DEC 2026\n",
+    "synthetic": true,
+    "role": "oog_list",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8,
+    "complete_booking_list": true
+  },
+  {
+    "id": "demo-eir_gate_slips",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/eir_gate_slips.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT / invented cargo and companies / no customer data\nEQUIPMENT INTERCHANGE RECEIPTS / LAEM CHABANG\nBooking reference: SYN-LCH-260103\nGate-in 02/12/2569 19:40 ICT\n\nQZXU0000009; Seal SYN1030000; Gate IN; interchange accepted; driver D-001\nQZXU0000014; Seal SYN1030001; Gate IN; interchange accepted; driver D-002\nQZXU0000020; Seal SYN1030002; Gate IN; interchange accepted; driver D-003\nQZXU0000040; Seal SYN1030003; Gate IN; interchange accepted; driver D-004\nQZXU0000035; Seal SYN1030004; Gate IN; interchange accepted; driver D-005\nQZXU0000061; Seal SYN1030005; Gate IN; interchange accepted; driver D-006\nQZXU0000143; Seal SYN1030006; Gate IN; interchange accepted; driver D-007\nQZXU0000077; Seal SYN1030007; Gate IN; interchange accepted; driver D-008\nQZXU0000159; Seal SYN1030008; Gate IN; interchange accepted; driver D-009\nQZXU0000082; Seal SYN1030009; Gate IN; interchange accepted; driver D-010\nQZXU0000170; Seal SYN1030010; Gate IN; interchange accepted; driver D-011\nQZXU0000098; Seal SYN1030011; Gate IN; interchange accepted; driver D-012\n",
+    "synthetic": true,
+    "role": "gate_slip",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8
+  },
+  {
+    "id": "demo-forwarding_email",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/forwarding_email.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT / invented cargo and companies / no customer data\nFrom: Mali <export@example.invalid>\nTo: Load desk <plan@example.invalid>\nSubject: FW: SYN-LCH-260103 / SYNTHETIC LANTA 2612S\nวันที่ 2 ธันวาคม 2569 เวลา 20.10 น.\n\nพี่คะ ส่งใบจอง ใบชั่ง และบัญชีตู้เย็นชุดล่าสุดให้แล้วค่ะ บัญชีสินค้าอันตรายครอบคลุมใบจองนี้ทั้งชุด ส่วนใบรับตู้เข้าท่าอยู่ท้ายอีเมล คนขับฝากรูปใบนับตู้กะค่ำมาด้วย รบกวนจัดชุดเอกสารให้ทันเรือออกพรุ่งนี้นะคะ\n\nมาลี\n\n----- Forwarded message -----\nFrom: Somsak <gate@example.invalid>\nSent: 2/12/2569 19.55\nเรื่อง: ใบรับตู้\nตรวจหมายเลขตู้กับซีลครบแล้วครับ รถคันสุดท้ายออกประตูสามตอนทุ่มครึ่ง\n",
+    "synthetic": true,
+    "role": "email",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8
+  },
+  {
+    "id": "demo-amendment_1",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/amendment_1.txt",
+    "mime_type": "text/plain",
+    "text": "SYNTHETIC DOCUMENT / invented cargo and companies / no customer data\nFrom: Mali <export@example.invalid>\nSubject: RE: SYN-LCH-260103 / QZXU0000098\nวันที่ 2 ธันวาคม 2569 เวลา 18.42 น.\nเรียนฝ่ายเรือ\nตู้ QZXU0000098 เปลี่ยนปลายทางเป็น VNSGN ตามใบแก้ไขเลขที่ AMD-103 กรุณาใช้ปลายทางใหม่สำหรับเที่ยว 2612S ค่ะ\nมาลี\n",
+    "synthetic": true,
+    "role": "amendment",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8
+  },
+  {
+    "id": "demo-tally_sheet",
+    "path": "experiments/mvp/pipeline/intake/fixtures/authority_v8/demo/tally_sheet.png",
+    "mime_type": "image/png",
+    "synthetic": true,
+    "role": "tally",
+    "booking_ref": "SYN-LCH-260103",
+    "intake_policy": 8
+  }
+]

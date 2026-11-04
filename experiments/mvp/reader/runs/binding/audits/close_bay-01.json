@@ -1,0 +1,33 @@
+{
+  "case_id": "close_bay-01",
+  "fresh_process": true,
+  "audit_pid": 17557,
+  "passed": true,
+  "binding": true,
+  "repaired": false,
+  "plan_record_sha256": "046cb6d8612cfa5188da625e8aab7f8de726f81e0eaff35350a2cc6b79d300f6",
+  "unconstrained_passed": true,
+  "unconstrained_moves": 8.0,
+  "unconstrained_violations": [
+    "load QZXU0000014 -> 0010202: instruction: slot 0010202 is closed"
+  ],
+  "checker_passed": true,
+  "replay_legal": true,
+  "mask_legal": true,
+  "mask_complete": true,
+  "all_loaded": true,
+  "instruction_violations": [],
+  "allocation_violations": [],
+  "constrained_moves": 8.0,
+  "stored_moves_match": true,
+  "changed_final_placements": 1,
+  "plan_changed": true,
+  "mask_actions_checked": 3,
+  "checker_violations": [],
+  "restows_now": 0,
+  "relocations": 2,
+  "hatches_now": 2,
+  "restows_later": 2,
+  "hatches_later": 2,
+  "wall_s": 72.40289437503088
+}

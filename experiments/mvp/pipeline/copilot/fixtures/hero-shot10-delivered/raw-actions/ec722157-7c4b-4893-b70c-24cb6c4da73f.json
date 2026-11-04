@@ -1,0 +1,5 @@
+{
+  "purpose": "pipeline-t1.6-copilot/shot10/verified/final-conversation",
+  "request_id": "ec722157-7c4b-4893-b70c-24cb6c4da73f",
+  "raw": "{\"say\": \"Reading for 'Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.' needs your separate host confirmation before it can apply \u2014 I cannot confirm it myself.\\n\\nEvery row in reading 038d62253eb5f4aa894d45247cb6ab8eed8d04094a7dd1ff1ca927b8786e656f:\\n1. standing role \u2014 status refused \u2014 sentence empty \u2014 binds false \u2014 refusal code not_an_instruction: The reader did not identify an instruction. No constraint was applied.\\n2. voyage role \u2014 status accepted \u2014 sentence 'Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.' \u2014 binds true \u2014 constraint type dg_keep_away, imdg_class 2.2, min_bays 3, away_from accommodation.\\n\\nThe static screen did not prove this impossible (143 TEU demand vs 240 physical cells), but a plan and full checker are still required. Please confirm this reading through the planner if you want to proceed to replan.\"}"
+}

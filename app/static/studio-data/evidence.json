@@ -1,0 +1,613 @@
+{
+  "schema_version": "stowlm.studio.evidence/1",
+  "scope": "Synthetic ships and cargo, simulated port",
+  "envelope": "Envelope: up to 195 boxes in a half-ship section of 500–800 TEU feeder ships, at most 70% of that section; empty section on arrival, one loading call. Other bays hold fixed synthetic cargo.",
+  "labels": {
+    "original": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim",
+    "extension": "fresh held-out extension, run after the freeze; not the pre-registered sealed claim",
+    "baseline": "a simple two-step planner, modelled from one field expert's description",
+    "partial_run": "Two earlier attempts on the same maps stopped early when our own frozen-code guard tripped. In the first, a test rewrote a pinned fixture; in the second, the engine wrote scratch files inside its pinned folder. No planning code changed. They completed 36 and 91 rows; both are published as they are and not pooled with the final run. Where the same rows ran again in the final run, attempt 1 matched the final run on 36 of the 38 rows it opened (status and lifts; 37 of 38 on verdict alone) and attempt 2 on 91 of 91, reported separately.",
+    "partial_run_short": "third attempt; two earlier runs stopped on our own guard, both published"
+  },
+  "cards": [
+    {
+      "id": "voyages",
+      "title": "Held-out test voyages",
+      "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim",
+      "show": "The planning step, from a clean load list. Full checker passes inside the design envelope.",
+      "does_not": "No like-for-like lift comparison is available. Navis and human performance aren't public.",
+      "series": [
+        {
+          "value": 24,
+          "n": 24,
+          "interval": [
+            0.8575264022774742,
+            1.0
+          ],
+          "label": "Pipeline",
+          "source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/arms/pipeline/numerator/value"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/arms/pipeline/denominator/value"
+          },
+          "interval_source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/arms/pipeline/exact95/value"
+          }
+        },
+        {
+          "value": 0,
+          "n": 24,
+          "interval": [
+            0.0,
+            0.1424735977225257
+          ],
+          "label": "Two-step",
+          "source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/arms/twostep/numerator/value"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/arms/twostep/denominator/value"
+          },
+          "interval_source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/arms/twostep/exact95/value"
+          }
+        }
+      ],
+      "variants": {
+        "original": [
+          {
+            "value": 24,
+            "n": 24,
+            "interval": [
+              0.8575264022774742,
+              1.0
+            ],
+            "label": "Pipeline",
+            "source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/separate_original_3_1/arms/pipeline/numerator/value"
+            },
+            "unit": "count",
+            "n_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/separate_original_3_1/arms/pipeline/denominator/value"
+            },
+            "interval_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/separate_original_3_1/arms/pipeline/exact95/value"
+            }
+          },
+          {
+            "value": 0,
+            "n": 24,
+            "interval": [
+              0.0,
+              0.1424735977225257
+            ],
+            "label": "Two-step",
+            "source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/separate_original_3_1/arms/twostep/numerator/value"
+            },
+            "unit": "count",
+            "n_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/separate_original_3_1/arms/twostep/denominator/value"
+            },
+            "interval_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/separate_original_3_1/arms/twostep/exact95/value"
+            }
+          }
+        ],
+        "extension": [
+          {
+            "value": 24,
+            "n": 24,
+            "interval": [
+              0.8575264022774742,
+              1.0
+            ],
+            "label": "Pipeline",
+            "source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/primary/arms/pipeline/numerator/value"
+            },
+            "unit": "count",
+            "n_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/primary/arms/pipeline/denominator/value"
+            },
+            "interval_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/primary/arms/pipeline/exact95/value"
+            }
+          },
+          {
+            "value": 1,
+            "n": 24,
+            "interval": [
+              0.0010543524454697459,
+              0.21120168345697315
+            ],
+            "label": "Two-step",
+            "source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/primary/arms/twostep/numerator/value"
+            },
+            "unit": "count",
+            "n_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/primary/arms/twostep/denominator/value"
+            },
+            "interval_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/primary/arms/twostep/exact95/value"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "reader",
+      "title": "Reader on a locked test",
+      "label": "Sealed v3 · locked before tuning; scored once",
+      "show": "Same model, same laptop, with and without our fine-tune; same mask. v3, adopted, 118 of 128 (92.19 %), 1 of 48 loosening accepted; v2 120 of 128, 2 of 48.",
+      "does_not": "It passed the 90 % gate and missed two stricter ones (one loosening accepted, none allowed; 6 points below Spark, 3 allowed). Fixed original Spark reference; not rerun under the updated decoder.",
+      "series": [
+        {
+          "value": 118,
+          "n": 128,
+          "interval": null,
+          "label": "Adopted v3 Reader",
+          "source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/swa-last-5/exact_match_count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/swa-last-5/count"
+          }
+        },
+        {
+          "value": 60,
+          "n": 128,
+          "interval": null,
+          "label": "Without fine-tune",
+          "source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/untrained/exact_match_count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/untrained/count"
+          }
+        },
+        {
+          "value": 120,
+          "n": 128,
+          "interval": null,
+          "label": "Earlier adapter v2",
+          "source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/adapter-v2/exact_match_count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/adapter-v2/count"
+          }
+        },
+        {
+          "value": 126,
+          "n": 128,
+          "interval": null,
+          "label": "Muse Spark reference",
+          "source": {
+            "path": "experiments/mvp/reader/v3/sealed/spark-summary.json",
+            "field": "/exact_match_count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/sealed/spark-summary.json",
+            "field": "/count"
+          }
+        },
+        {
+          "value": 90,
+          "n": 128,
+          "interval": null,
+          "label": "No-model parser",
+          "source": {
+            "path": "experiments/mvp/reader/v3/parser/sealed-v3-report.json",
+            "field": "/exact_match_count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/parser/sealed-v3-report.json",
+            "field": "/count"
+          }
+        }
+      ],
+      "supplemental": [
+        {
+          "value": 1,
+          "n": 48,
+          "interval": null,
+          "label": "v3 loosening accepted",
+          "source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/swa-last-5/false_acceptance_count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/swa-last-5/loosening_count"
+          }
+        },
+        {
+          "value": 2,
+          "n": 48,
+          "interval": null,
+          "label": "v2 loosening accepted",
+          "source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/adapter-v2/false_acceptance_count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/results-final/final-adoption-d266.json",
+            "field": "/sealed_128/adapter-v2/loosening_count"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mask",
+      "title": "Decode-mask overrides",
+      "label": "Development · validation sentences",
+      "show": "almost all were the output format, not ship facts; none was an illegal bay or tier; both of the 2 were sentences it should have refused; what's left is legal and still wrong, which is why a person confirms.",
+      "does_not": "both of the 2 were sentences it should have refused; what's left is legal and still wrong, which is why a person confirms.",
+      "series": [
+        {
+          "value": 182,
+          "n": 200,
+          "interval": null,
+          "label": "Before fine-tuning",
+          "source": {
+            "path": "experiments/mvp/reader/v3/results-final/mask-study/report-base.json",
+            "field": "/untrained/sentences_top_changed"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/results-final/mask-study/report-base.json",
+            "field": "/untrained/sentences"
+          }
+        },
+        {
+          "value": 2,
+          "n": 200,
+          "interval": null,
+          "label": "After fine-tuning",
+          "source": {
+            "path": "experiments/mvp/reader/v3/results-final/mask-study/report-base.json",
+            "field": "/fine_tuned/sentences_top_changed"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/results-final/mask-study/report-base.json",
+            "field": "/fine_tuned/sentences"
+          }
+        }
+      ]
+    },
+    {
+      "id": "binding",
+      "title": "Instruction binding",
+      "label": "held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim",
+      "show": "Of the 18 voyages whose first plan broke the rule, 13 got a checked plan that obeys it (46.5–90.3 % exact 95 % interval); on the other 6 the first plan already obeyed it, which proves nothing.",
+      "variant_shows": {
+        "original": "Of the 18 voyages whose first plan broke the rule, 13 got a checked plan that obeys it (46.5–90.3 % exact 95 % interval); on the other 6 the first plan already obeyed it, which proves nothing.",
+        "extension": "With one instruction, 18 of 22 voyages whose first plan broke the rule got a checked plan that obeys it (59.7-94.8 %)."
+      },
+      "does_not": "Confirmation in this run is exact expected-rule match, not a human planner. These are templated sentences.",
+      "series": [
+        {
+          "value": 13,
+          "n": 18,
+          "interval": [
+            0.46519803441694374,
+            0.9030507874744407
+          ],
+          "label": "Checked plan obeyed the rule",
+          "source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/binding/numerator/value"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/binding/denominator/value"
+          },
+          "interval_source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/binding/exact95/value"
+          }
+        }
+      ],
+      "variants": {
+        "original": [
+          {
+            "value": 13,
+            "n": 18,
+            "interval": [
+              0.46519803441694374,
+              0.9030507874744407
+            ],
+            "label": "Checked plan obeyed the rule",
+            "source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/separate_original_3_1/binding/numerator/value"
+            },
+            "unit": "count",
+            "n_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/separate_original_3_1/binding/denominator/value"
+            },
+            "interval_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/separate_original_3_1/binding/exact95/value"
+            }
+          }
+        ],
+        "extension": [
+          {
+            "value": 18,
+            "n": 22,
+            "interval": [
+              0.5971542169221287,
+              0.9481327006875631
+            ],
+            "label": "Checked plan obeyed the rule",
+            "source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/primary/binding/numerator/value"
+            },
+            "unit": "count",
+            "n_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/primary/binding/denominator/value"
+            },
+            "interval_source": {
+              "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+              "field": "/primary/binding/exact95/value"
+            }
+          }
+        ]
+      },
+      "supplemental": [
+        {
+          "value": 6,
+          "n": 24,
+          "interval": null,
+          "label": "First plan already obeyed it",
+          "source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/already_obeyed/value"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/separate_original_3_1/arms/instruction/denominator/value"
+          }
+        },
+        {
+          "value": 2,
+          "n": 24,
+          "interval": null,
+          "label": "Extension: first plan already obeyed it",
+          "source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/primary/already_obeyed/value"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+            "field": "/primary/arms/instruction/denominator/value"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ood",
+      "title": "Reader on new wording",
+      "label": "written by a different model after the freeze; synthetic; not real planner text.",
+      "show": "On new wording from one other model, on the same ships and four kinds of rule, the fine-tune read 61 of 66 rules exactly, against 18 untrained and 44 for the parser.",
+      "does_not": "it made a rule from 6 of 34 must-refuse sentences, more than the untrained model (2) or the parser (1). The intervals overlap, so the ordering isn't established, but 6 is the number to quote. One author model; not real planner text. The blind second labeller was another Claude model, not a domain expert.",
+      "series": [
+        {
+          "value": 86,
+          "n": 100,
+          "interval": [
+            0.7762720186294323,
+            0.9212945950730342
+          ],
+          "label": "Adopted Reader",
+          "source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/glimmer-adopted/exact/count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/glimmer-adopted/exact/of"
+          },
+          "interval_source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/glimmer-adopted/exact/ci95"
+          }
+        },
+        {
+          "value": 45,
+          "n": 100,
+          "interval": [
+            0.3503202292396721,
+            0.5527198112260641
+          ],
+          "label": "Without fine-tune",
+          "source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/glimmer-untrained/exact/count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/glimmer-untrained/exact/of"
+          },
+          "interval_source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/glimmer-untrained/exact/ci95"
+          }
+        },
+        {
+          "value": 68,
+          "n": 100,
+          "interval": [
+            0.5792331383683773,
+            0.769780083238423
+          ],
+          "label": "Fair hand-written parser",
+          "source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/fair/exact/count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/fair/exact/of"
+          },
+          "interval_source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/fair/exact/ci95"
+          }
+        }
+      ],
+      "supplemental": [
+        {
+          "value": 6,
+          "n": 34,
+          "interval": [
+            0.06764065268275712,
+            0.34531513106813405
+          ],
+          "label": "Rules made from must-refuse wording",
+          "source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/glimmer-adopted/wrong_rule_from_must_refuse/count"
+          },
+          "unit": "count",
+          "n_source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/glimmer-adopted/wrong_rule_from_must_refuse/of"
+          },
+          "interval_source": {
+            "path": "experiments/mvp/reader/v3/ood-1/results/scores.json",
+            "field": "/arms/glimmer-adopted/wrong_rule_from_must_refuse/ci95"
+          }
+        }
+      ]
+    }
+  ],
+  "text_sources": {
+    "original": {
+      "path": "experiments/mvp/pipeline/sealed/runs/final-3/report.json",
+      "field": "/label"
+    },
+    "extension": {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+      "field": "/primary/label/value"
+    },
+    "partial_run": {
+      "path": "experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json",
+      "field": "/original_partial_run_disclosure/value"
+    },
+    "partial_run_short": {
+      "path": "docs/headline.md",
+      "field": "regex:Film-card short form: \"([^\"]+)\"",
+      "clean": true
+    },
+    "baseline": {
+      "path": "docs/headline.md",
+      "field": "regex:\\*\\*Two-step:\\*\\* \"([^\"]+)\"",
+      "clean": true
+    },
+    "envelope": {
+      "path": "experiments/mvp/charts/pipeline_charts.py",
+      "field": "regex:ENVELOPE = \\(\\s*\"(.*?)\"\\s*\\)",
+      "clean": true
+    },
+    "reader_gate": {
+      "path": "docs/headline.md",
+      "field": "regex:(It passed the 90 % gate and missed two stricter ones \\(.*?\\)): say so",
+      "clean": true
+    },
+    "reader_context": {
+      "path": "docs/headline.md",
+      "field": "regex:Reader figures \\(D266\\): (v3, adopted, .*?); untrained",
+      "clean": true
+    },
+    "mask_show": {
+      "path": "docs/headline.md",
+      "field": "regex:Always beside it: \"(almost all were the output format[^\"]+)\"",
+      "clean": true
+    },
+    "mask_limit": {
+      "path": "docs/headline.md",
+      "field": "regex:and \"(both of the 2 were sentences[^\"]+)\"",
+      "clean": true
+    },
+    "instruction_show": {
+      "path": "docs/headline.md",
+      "field": "regex:Instruction claim \\(D258, D291\\): \"([^\"]+)\"",
+      "clean": true
+    },
+    "instruction_extension": {
+      "path": "docs/headline.md",
+      "field": "regex:(With one instruction, 18 of 22 voyages[^\"\\n]+)\"",
+      "clean": true
+    },
+    "ood_label": {
+      "path": "experiments/mvp/reader/v3/ood-1/REPORT.md",
+      "field": "regex:\\*\\*Label: ([^*]+)\\*\\*",
+      "clean": true
+    },
+    "ood_limits": {
+      "path": "experiments/mvp/reader/v3/ood-1/REPORT.md",
+      "field": "regex:\\*\\*Its weak side is\\s*refusing:\\*\\* (.*?quote\\.)",
+      "clean": true
+    },
+    "ood_show": {
+      "path": "experiments/mvp/reader/v3/ood-1/REPORT.md",
+      "field": "regex:(On new wording from one other model,.*?exactly, against 18 untrained and 44 for the parser),",
+      "clean": true
+    }
+  },
+  "chart_sources": [
+    "experiments/mvp/charts/pipeline-passes.svg",
+    "experiments/mvp/charts/reader-exact-match.svg",
+    "experiments/mvp/charts/decode-mask-overrides.svg",
+    "experiments/mvp/charts/instruction-binding.svg",
+    "experiments/mvp/charts/ext1-passes.svg"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "created_utc": "2026-11-02T05:00:47.342683+00:00",
+  "hero": {
+    "path": "experiments/mvp/strategy/fillsweep/maps/train/medium/feeder_500/f60-low/seed-192200002.json",
+    "instance_id": "D192.medium-feeder_500-f60-low-s192200002",
+    "instance_sha256": "cabff3d68d56e64ba9956761bcd0ca2abfa5077d41296db35b630efc11b04678",
+    "file_sha256": "2d89a0b873027fa161267de22d3d397e00e2f773af5b574b25dfb88ce2cbd619",
+    "boxes": 87,
+    "reefers": 2,
+    "dg": [
+      {
+        "id": "QZXU0000014",
+        "imdg_class": "3"
+      },
+      {
+        "id": "QZXU0000288",
+        "imdg_class": "2.2"
+      },
+      {
+        "id": "QZXU0000328",
+        "imdg_class": "3"
+      },
+      {
+        "id": "QZXU0000349",
+        "imdg_class": "8"
+      }
+    ],
+    "pods": [
+      "MYPKG",
+      "SGSIN"
+    ],
+    "envelope": {
+      "in_envelope": true,
+      "size_class": "medium",
+      "reasons": [],
+      "numbers": {
+        "boxes_to_load": 87,
+        "box_limit": 195,
+        "physical_cell_demand": 143,
+        "physical_cell_capacity": 240,
+        "physical_cell_fill": 0.5958333333333333,
+        "fill_limit": 0.7,
+        "onboard_boxes": 0,
+        "loading_calls": 1,
+        "discharge_boxes": 0,
+        "ship": "feeder_500",
+        "stage": "A",
+        "planned_region": "half-ship section",
+        "fill_scope": "physical cells in the planned region",
+        "section_of": "feeder_500"
+      }
+    },
+    "context": {
+      "id": "D192.medium-feeder_500-f60-low-s192200002",
+      "bays": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        21,
+        22,
+        23
+      ],
+      "max_tiers": {
+        "hold": 3,
+        "deck": 5
+      },
+      "max_tiers_by_bay": {
+        "1": {
+          "hold": 2,
+          "deck": 5
+        },
+        "2": {
+          "hold": 2,
+          "deck": 5
+        },
+        "3": {
+          "hold": 2,
+          "deck": 5
+        },
+        "9": {
+          "hold": 3,
+          "deck": 5
+        },
+        "10": {
+          "hold": 3,
+          "deck": 5
+        },
+        "11": {
+          "hold": 3,
+          "deck": 5
+        },
+        "21": {
+          "hold": 2,
+          "deck": 5
+        },
+        "22": {
+          "hold": 2,
+          "deck": 5
+        },
+        "23": {
+          "hold": 2,
+          "deck": 5
+        }
+      },
+      "has_accommodation": true,
+      "hatch_covers": [
+        "HC-002-P",
+        "HC-002-S",
+        "HC-010-P",
+        "HC-010-S",
+        "HC-022-P",
+        "HC-022-S"
+      ],
+      "ports": [
+        "SGSIN",
+        "MYPKG",
+        "THLCH"
+      ]
+    },
+    "screening_result": "experiments/mvp/pipeline/lattice/screening/current-v3/cabff3d68d56e64b.repaired.json",
+    "base_plan": "experiments/mvp/pipeline/lattice/fixtures/hero-base.json",
+    "base_entry": "experiments/mvp/pipeline/lattice/store/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json",
+    "lifts": 66.0,
+    "total_lifts_now": 143,
+    "plan_producer": "lattice.sequence",
+    "producer_label": "Deterministic crane-sequence repair after Frontier Engine 0.13.0",
+    "frames_checked": 144,
+    "computed_utc": "2026-11-02T02:50:09.142520+00:00",
+    "why": "Screened in-envelope development candidate with a full original-instance checker pass and every crane frame inside limits; synthetic DG cargo, reefers and 2 discharge ports, with 40.42% of section capacity open."
+  },
+  "source_hero_sha256": "ff3ffdbb08ddf88595b7be53294bd1c2c41a9140ddfea2207b6116dacde9d6d4",
+  "source_catalogue_sha256": "80c52e483487686260903ef686f919547db1aaaaf0adc668eaa63c76b04c1c3d",
+  "catalogue_sha256": "6d66050f7ac50c49c61dee6a492e72546bcf91cefa87f96d627d027b04eec9d9",
+  "catalogue_projection": "Primary hero baseline, proved refusal, DG clearance and bay closure only.",
+  "scenarios_sha256": "35c994769bd7d7cc67c8292276c2eb809f88f0c218f89c3cdab4f72d774ace14"
+}

@@ -1,0 +1,45 @@
+{
+  "answer": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 9200,
+    "audio_seconds": 9.168,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00045",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "70c5ae6eb50d47d18dc8fcf887ca9f29",
+    "session_id": "voyager/transcribe/897671A638424ED8B3FBBE8A90710561"
+  },
+  "asr_latency_s": 1.9207034170394763,
+  "audio_sha256": "7b6cf6ce7303940979a144a9354364118d5992486540356229d3ebdc080a1004",
+  "canonical": {
+    "constraint": {
+      "type": "one_port_per_hatch"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "clean",
+  "end_to_end_s": 3.672272666997742,
+  "language": "th",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00146545",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "612597a87558315004858da55288a3420bf142b8d428feab62844e4e9f03ed4b",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "0ad0ef3c-e867-4fa0-bf52-0313ce3ae7bd"
+  },
+  "parser_latency_s": 1.6478081669774838,
+  "script": "ตลอดการบรรทุก ตู้สินค้าบนฝาระวางและในระวางใต้ฝา ต้องส่งที่ท่าเรือปลายทางเดียวกัน",
+  "source_id": "reader-0a700ee13d8c6e1c",
+  "started_utc": "2026-11-01T01:36:27.111187+00:00",
+  "status": "complete",
+  "transcript": "ตลอดการการบรรทุกตู้สินค้าบนฝาระวางและในระหว่างใต้ฝาต้องส่งที่ท่าเรือปลายทางเดียวกัน"
+}

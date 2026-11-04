@@ -1,0 +1,67 @@
+{
+  "kind": "selected profile verification",
+  "selection_sha256": "7014d3672c1b1a887f60f3ffb18983fc56428d3861d1ae6f89dbd6b6a278748c",
+  "profiles": {
+    "live": {
+      "budget_s": 120.0,
+      "finalize_s": 40.0,
+      "engine_timeout_s": 720.0
+    },
+    "standard": {
+      "budget_s": 300.0,
+      "finalize_s": 100.0,
+      "engine_timeout_s": 1800.0
+    }
+  },
+  "targeted_tests": {
+    "xml": "experiments/mvp/pipeline/runner/fixtures/profile-selection-pytest.xml",
+    "results": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "68",
+        "time": "14.284",
+        "timestamp": "2026-11-02T01:48:32.016888-05:00",
+        "hostname": "Andamans-MacBook-Pro.local"
+      }
+    ]
+  },
+  "measured_completed_rows": 68,
+  "planned_jobs": 256,
+  "complete_grid": false,
+  "authority": "explicit leader selection from stopped partial development study",
+  "source_sha256": {
+    "profiles.py": "afe2e40306ff0dca8938731d272dc1b99172b00224b811c45714d9640e548d07",
+    "test_cli_profiles.py": "0a8f5ba890d5141cb8ca460a8e4d3374050933977d15ab4e23705e056c96b4e7",
+    "test_ladder_work.py": "0d4a3219f8cfa54c8ae30f07c14f9d343ef9be57a4aee7ac0cc646d86d2a18c1",
+    "test_logic_review.py": "26c921017f951a2d0dd6dbbd42028e13e3619c026f1512b7560f5c3cb10d10a3",
+    "README.md": "838167ffabc2ccd40e64409645ced67563daa3e972d810640809a29c68d84aac",
+    "fixtures/anytime-handover.json": "e80bad6d30a9ab7019776eee011c3ff7935a101a1b3fb83be5bead6603522c2f"
+  },
+  "initial_full_suite": {
+    "xml": "experiments/mvp/pipeline/runner/fixtures/selected-profiles-initial-pytest.xml",
+    "corrections": [
+      "Test reads expected_jobs under completeness, matching the fixture schema.",
+      "Admission recovery test expects timeout wording and distinguishes an engine-reported timeout from the runner timer."
+    ]
+  },
+  "full_suite": {
+    "xml": "experiments/mvp/pipeline/runner/fixtures/selected-profiles-full-pytest.xml",
+    "results": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "308",
+        "time": "149.207",
+        "timestamp": "2026-11-02T01:50:55.370796-05:00",
+        "hostname": "Andamans-MacBook-Pro.local"
+      }
+    ]
+  },
+  "finished_rows_preserved": 68,
+  "source_summary_unchanged": true
+}

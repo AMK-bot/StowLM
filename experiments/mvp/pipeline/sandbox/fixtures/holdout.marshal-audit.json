@@ -1,0 +1,527 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "label": "Independent Python3.12 marshal noncanonical fingerprint proof; no gate modification",
+  "created_utc": "2026-11-02T02:38:41.508503+00:00",
+  "python": "3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]",
+  "same_function_and_code": true,
+  "same_constant_object": true,
+  "before_sha256": "9fa999ef00d174001936761c75991085a624cb29187084e9ca0249e1b7406859",
+  "after_sha256": "898a910cd2cd06fac58221c63ac73deebf46f29b211f0590fa2845d579655d75",
+  "marshal_changed": true,
+  "co_code_hex": "97007901",
+  "function_result": "proof string with spaces 93817791",
+  "different_byte_offsets": [
+    33,
+    71,
+    94,
+    113
+  ],
+  "state_sha256": "e7a5914e5663069ce0f77a55e6aae41e8087058cb92fafd7158b0ad3bd25d5fd",
+  "preserved_requests": 40,
+  "preserved_requests_sha256": "9d2b994ca2d0d8a072864c0b696ab3d78ff98d6c5952912dee3538ee9981c1b2",
+  "candidate_full_checks_started": 0,
+  "source_comparisons": {
+    "experiments/mvp/frontier/engine/__init__.py": {
+      "recorded": "02519a252169a367146db02485a182bf1dcbb57bb3d7f79991c7e419f6f0a4eb",
+      "archive": "02519a252169a367146db02485a182bf1dcbb57bb3d7f79991c7e419f6f0a4eb",
+      "current": "02519a252169a367146db02485a182bf1dcbb57bb3d7f79991c7e419f6f0a4eb"
+    },
+    "experiments/mvp/frontier/engine/completion.py": {
+      "recorded": "52df18a8d842f776308112408aa34dd60ffb44434bafd59eb43d552014374cf0",
+      "archive": "52df18a8d842f776308112408aa34dd60ffb44434bafd59eb43d552014374cf0",
+      "current": "52df18a8d842f776308112408aa34dd60ffb44434bafd59eb43d552014374cf0"
+    },
+    "experiments/mvp/frontier/engine/config.py": {
+      "recorded": "80a77480e35ec85334406bfbe360981fc1c26e8b969322d0fc330e9d37d21e0d",
+      "archive": "80a77480e35ec85334406bfbe360981fc1c26e8b969322d0fc330e9d37d21e0d",
+      "current": "80a77480e35ec85334406bfbe360981fc1c26e8b969322d0fc330e9d37d21e0d"
+    },
+    "experiments/mvp/frontier/engine/conftest.py": {
+      "recorded": "09c825d762ce0b03ebfa1b6fff86f959ca1d6945be0691789dbd03b33276dc9e",
+      "archive": "09c825d762ce0b03ebfa1b6fff86f959ca1d6945be0691789dbd03b33276dc9e",
+      "current": "09c825d762ce0b03ebfa1b6fff86f959ca1d6945be0691789dbd03b33276dc9e"
+    },
+    "experiments/mvp/frontier/engine/e9fix.py": {
+      "recorded": "8694ab2d523d28c6e83f95b4d7408c91dc1f17adabc142528702b915f40b4b57",
+      "archive": "8694ab2d523d28c6e83f95b4d7408c91dc1f17adabc142528702b915f40b4b57",
+      "current": "8694ab2d523d28c6e83f95b4d7408c91dc1f17adabc142528702b915f40b4b57"
+    },
+    "experiments/mvp/frontier/engine/frozen.py": {
+      "recorded": "d7710c7ee9d9316c404acdeffca2a8023033de622054a4beedae2e0bba4262a2",
+      "archive": "d7710c7ee9d9316c404acdeffca2a8023033de622054a4beedae2e0bba4262a2",
+      "current": "d7710c7ee9d9316c404acdeffca2a8023033de622054a4beedae2e0bba4262a2"
+    },
+    "experiments/mvp/frontier/engine/lab_method.py": {
+      "recorded": "e97345b44f7e49c62abaae7c4b7e85a8a841d0c03ed1eb370d75c4022261bfc6",
+      "archive": "e97345b44f7e49c62abaae7c4b7e85a8a841d0c03ed1eb370d75c4022261bfc6",
+      "current": "e97345b44f7e49c62abaae7c4b7e85a8a841d0c03ed1eb370d75c4022261bfc6"
+    },
+    "experiments/mvp/frontier/engine/measured-source-manifest-0.11.0.json": {
+      "recorded": "907b5db3d1eda80d3c89c654b74c78ac0ef24d76fc0aadb6491d9ca2e87d8da6",
+      "archive": "907b5db3d1eda80d3c89c654b74c78ac0ef24d76fc0aadb6491d9ca2e87d8da6",
+      "current": "907b5db3d1eda80d3c89c654b74c78ac0ef24d76fc0aadb6491d9ca2e87d8da6"
+    },
+    "experiments/mvp/frontier/engine/measured-source-manifest-0.12.0.json": {
+      "recorded": "311c5c6501b420a3c6e0a35c36b6a876da7e8c26ebfbaa71f58d2bf6c448870d",
+      "archive": "311c5c6501b420a3c6e0a35c36b6a876da7e8c26ebfbaa71f58d2bf6c448870d",
+      "current": "311c5c6501b420a3c6e0a35c36b6a876da7e8c26ebfbaa71f58d2bf6c448870d"
+    },
+    "experiments/mvp/frontier/engine/measured-source-manifest-0.13.0.json": {
+      "recorded": "2aec32134e5c24713d7985f40044fc6b126b04333ee875e0e37f49b7300218cd",
+      "archive": "2aec32134e5c24713d7985f40044fc6b126b04333ee875e0e37f49b7300218cd",
+      "current": "2aec32134e5c24713d7985f40044fc6b126b04333ee875e0e37f49b7300218cd"
+    },
+    "experiments/mvp/frontier/engine/measured-source-manifest.json": {
+      "recorded": "bb0c40081f433d9284d8b08ed179cf6125711b5728d81a4630f2a67dd87ff0ab",
+      "archive": "bb0c40081f433d9284d8b08ed179cf6125711b5728d81a4630f2a67dd87ff0ab",
+      "current": "bb0c40081f433d9284d8b08ed179cf6125711b5728d81a4630f2a67dd87ff0ab"
+    },
+    "experiments/mvp/frontier/engine/native-source-manifest.json": {
+      "recorded": "55a2de7304500675dbfc1aaca14ec25e7ffe6e6ed2a04d0e88e58afc2eba6071",
+      "archive": "55a2de7304500675dbfc1aaca14ec25e7ffe6e6ed2a04d0e88e58afc2eba6071",
+      "current": "55a2de7304500675dbfc1aaca14ec25e7ffe6e6ed2a04d0e88e58afc2eba6071"
+    },
+    "experiments/mvp/frontier/engine/peel.py": {
+      "recorded": "511df52947b1ca3c8f7ffa19538c907f5689377f30334ad7d2d73a071fb0bb90",
+      "archive": "511df52947b1ca3c8f7ffa19538c907f5689377f30334ad7d2d73a071fb0bb90",
+      "current": "511df52947b1ca3c8f7ffa19538c907f5689377f30334ad7d2d73a071fb0bb90"
+    },
+    "experiments/mvp/frontier/engine/planner.py": {
+      "recorded": "306c59ff0d0f6d7ca80a7eaf92515fbe599fa08e4adf166bd30c1df59b47f507",
+      "archive": "306c59ff0d0f6d7ca80a7eaf92515fbe599fa08e4adf166bd30c1df59b47f507",
+      "current": "306c59ff0d0f6d7ca80a7eaf92515fbe599fa08e4adf166bd30c1df59b47f507"
+    },
+    "experiments/mvp/frontier/engine/portfolio.py": {
+      "recorded": "f1fdbeb0ba3ff2750b06703a8926a05df016758dac71fdf575e341284591caf1",
+      "archive": "f1fdbeb0ba3ff2750b06703a8926a05df016758dac71fdf575e341284591caf1",
+      "current": "f1fdbeb0ba3ff2750b06703a8926a05df016758dac71fdf575e341284591caf1"
+    },
+    "experiments/mvp/frontier/engine/provenance.py": {
+      "recorded": "c231ad32acea6a81dd6c3589fe813d2fc803123dc7e555e854cb910efedd91c4",
+      "archive": "c231ad32acea6a81dd6c3589fe813d2fc803123dc7e555e854cb910efedd91c4",
+      "current": "c231ad32acea6a81dd6c3589fe813d2fc803123dc7e555e854cb910efedd91c4"
+    },
+    "experiments/mvp/frontier/engine/safe_catalog.py": {
+      "recorded": "be7555d90a87bbce057f7e2c2deb82ba7f81d704c9fc53cb781eb258fe1b46f5",
+      "archive": "be7555d90a87bbce057f7e2c2deb82ba7f81d704c9fc53cb781eb258fe1b46f5",
+      "current": "be7555d90a87bbce057f7e2c2deb82ba7f81d704c9fc53cb781eb258fe1b46f5"
+    },
+    "experiments/mvp/frontier/engine/source-manifest-0.13.0-final.json": {
+      "recorded": "e34b7b9f4bd8df04952dfd81dbf84220351822f6ae3d03033788354a2f64f550",
+      "archive": "e34b7b9f4bd8df04952dfd81dbf84220351822f6ae3d03033788354a2f64f550",
+      "current": "e34b7b9f4bd8df04952dfd81dbf84220351822f6ae3d03033788354a2f64f550"
+    },
+    "experiments/mvp/frontier/engine/source-manifest-0.13.0-review-fixes.json": {
+      "recorded": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+      "archive": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+      "current": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b"
+    },
+    "experiments/mvp/frontier/engine/source-manifest.json": {
+      "recorded": "37a60ee186a2c098abcdf47e47f9ac0669a564168dc29b6709d87b2f1385c4c8",
+      "archive": "37a60ee186a2c098abcdf47e47f9ac0669a564168dc29b6709d87b2f1385c4c8",
+      "current": "37a60ee186a2c098abcdf47e47f9ac0669a564168dc29b6709d87b2f1385c4c8"
+    },
+    "experiments/mvp/frontier/engine/unary.py": {
+      "recorded": "d9ea3449bc87a2e7d21ffa62457990bd7738799a882fb9904d7ed9bd60ba62a3",
+      "archive": "d9ea3449bc87a2e7d21ffa62457990bd7738799a882fb9904d7ed9bd60ba62a3",
+      "current": "d9ea3449bc87a2e7d21ffa62457990bd7738799a882fb9904d7ed9bd60ba62a3"
+    },
+    "experiments/mvp/pipeline/sandbox/clear_benchmark.py": {
+      "recorded": "12eb7cab985a12caae76fbc48dcd362df4f76ff7294a3a9bb36e6472ad77f0fc",
+      "archive": "12eb7cab985a12caae76fbc48dcd362df4f76ff7294a3a9bb36e6472ad77f0fc",
+      "current": "12eb7cab985a12caae76fbc48dcd362df4f76ff7294a3a9bb36e6472ad77f0fc"
+    },
+    "experiments/mvp/pipeline/sandbox/fast_perf.py": {
+      "recorded": "096d4e15dd9aa7f9c5f3074abfd8cf0e6e7687c1605288112a553053ebdfebce",
+      "archive": "096d4e15dd9aa7f9c5f3074abfd8cf0e6e7687c1605288112a553053ebdfebce",
+      "current": "096d4e15dd9aa7f9c5f3074abfd8cf0e6e7687c1605288112a553053ebdfebce"
+    },
+    "experiments/mvp/pipeline/sandbox/holdout.py": {
+      "recorded": "83a5f0247d7da2ff3fbaf1183a7f32ca5fbb3c861b02179b5c274ea899eaff14",
+      "archive": "83a5f0247d7da2ff3fbaf1183a7f32ca5fbb3c861b02179b5c274ea899eaff14",
+      "current": "83a5f0247d7da2ff3fbaf1183a7f32ca5fbb3c861b02179b5c274ea899eaff14"
+    },
+    "experiments/mvp/pipeline/sandbox/moves.py": {
+      "recorded": "25d67b4f9f89861f0159ffe6e99923db275101facab82a1604e6517682dfca5e",
+      "archive": "25d67b4f9f89861f0159ffe6e99923db275101facab82a1604e6517682dfca5e",
+      "current": "25d67b4f9f89861f0159ffe6e99923db275101facab82a1604e6517682dfca5e"
+    },
+    "experiments/mvp/pipeline/sandbox/physics.py": {
+      "recorded": "6a16b23b489c6d838a05316e8f43d2dd7298ec691e74d96169ef324b18ac91a8",
+      "archive": "6a16b23b489c6d838a05316e8f43d2dd7298ec691e74d96169ef324b18ac91a8",
+      "current": "6a16b23b489c6d838a05316e8f43d2dd7298ec691e74d96169ef324b18ac91a8"
+    },
+    "experiments/mvp/pipeline/sandbox/securing.py": {
+      "recorded": "ec7595905438662bd77f490eb985a669df2d33bfaf9021d375a7637db8ad0992",
+      "archive": "ec7595905438662bd77f490eb985a669df2d33bfaf9021d375a7637db8ad0992",
+      "current": "ec7595905438662bd77f490eb985a669df2d33bfaf9021d375a7637db8ad0992"
+    },
+    "experiments/mvp/pipeline/sandbox/visibility.py": {
+      "recorded": "dd6e42d2229b7200eada83c62989b6f08585755790f4daa62d908129a222f35a",
+      "archive": "dd6e42d2229b7200eada83c62989b6f08585755790f4daa62d908129a222f35a",
+      "current": "dd6e42d2229b7200eada83c62989b6f08585755790f4daa62d908129a222f35a"
+    },
+    "src/stowage/checker/__init__.py": {
+      "recorded": "1f3ed8edf44d6568d7929703937f419cefe2fcbdeb4ff43866f247e23950ee84",
+      "archive": "1f3ed8edf44d6568d7929703937f419cefe2fcbdeb4ff43866f247e23950ee84",
+      "current": "1f3ed8edf44d6568d7929703937f419cefe2fcbdeb4ff43866f247e23950ee84"
+    },
+    "src/stowage/checker/full.py": {
+      "recorded": "ff3e593771ef30c29e1e6cecd434090961ed099e2e51b66c37b268113eee7fa1",
+      "archive": "ff3e593771ef30c29e1e6cecd434090961ed099e2e51b66c37b268113eee7fa1",
+      "current": "ff3e593771ef30c29e1e6cecd434090961ed099e2e51b66c37b268113eee7fa1"
+    },
+    "src/stowage/checker/in_port.py": {
+      "recorded": "8a7bcaaf14bb7aeab91ae47ae95c3d66d3be160999778f2419e244423d987504",
+      "archive": "8a7bcaaf14bb7aeab91ae47ae95c3d66d3be160999778f2419e244423d987504",
+      "current": "8a7bcaaf14bb7aeab91ae47ae95c3d66d3be160999778f2419e244423d987504"
+    },
+    "src/stowage/checker/in_port_consistency.py": {
+      "recorded": "47c47d1e924f773909adb01e8ccfcd479215d1ef992375e54c36d6ec53f0abe5",
+      "archive": "47c47d1e924f773909adb01e8ccfcd479215d1ef992375e54c36d6ec53f0abe5",
+      "current": "47c47d1e924f773909adb01e8ccfcd479215d1ef992375e54c36d6ec53f0abe5"
+    },
+    "src/stowage/checker/in_port_evaluator.py": {
+      "recorded": "5975800690004cca14903e2ebd8ed1d6e156304011d4feb9ea99570ec31ca892",
+      "archive": "5975800690004cca14903e2ebd8ed1d6e156304011d4feb9ea99570ec31ca892",
+      "current": "5975800690004cca14903e2ebd8ed1d6e156304011d4feb9ea99570ec31ca892"
+    },
+    "src/stowage/checker/in_port_heel.py": {
+      "recorded": "55bb6470acbf2a8d9857c9324426a4cb223da2e826359fde4d4e7eeed33af39a",
+      "archive": "55bb6470acbf2a8d9857c9324426a4cb223da2e826359fde4d4e7eeed33af39a",
+      "current": "55bb6470acbf2a8d9857c9324426a4cb223da2e826359fde4d4e7eeed33af39a"
+    },
+    "src/stowage/checker/in_port_lazy.py": {
+      "recorded": "717cc159637e1f0a36533585f854bcb976bb6c8e07770771a4a65f8a441faace",
+      "archive": "717cc159637e1f0a36533585f854bcb976bb6c8e07770771a4a65f8a441faace",
+      "current": "717cc159637e1f0a36533585f854bcb976bb6c8e07770771a4a65f8a441faace"
+    },
+    "src/stowage/checker/in_port_liquids.py": {
+      "recorded": "fec617c8791e2443311243f983702e49ae338a023504eee0923f90c37e4f7bb4",
+      "archive": "fec617c8791e2443311243f983702e49ae338a023504eee0923f90c37e4f7bb4",
+      "current": "fec617c8791e2443311243f983702e49ae338a023504eee0923f90c37e4f7bb4"
+    },
+    "src/stowage/checker/in_port_prepass.py": {
+      "recorded": "9137abbe43674e48caf50e5336990e4cc0b73254628c137fe66ea31ef813e558",
+      "archive": "9137abbe43674e48caf50e5336990e4cc0b73254628c137fe66ea31ef813e558",
+      "current": "9137abbe43674e48caf50e5336990e4cc0b73254628c137fe66ea31ef813e558"
+    },
+    "src/stowage/checker/in_port_programme.py": {
+      "recorded": "74404b1c820e10474e07a003bee0db7e72f8aec59abf3ed68387577f6d6e9895",
+      "archive": "74404b1c820e10474e07a003bee0db7e72f8aec59abf3ed68387577f6d6e9895",
+      "current": "74404b1c820e10474e07a003bee0db7e72f8aec59abf3ed68387577f6d6e9895"
+    },
+    "src/stowage/checker/in_port_rates.py": {
+      "recorded": "ede068c615201f98eb685d3aa971d1d9fdf42e57d81360b9be020a103c970615",
+      "archive": "ede068c615201f98eb685d3aa971d1d9fdf42e57d81360b9be020a103c970615",
+      "current": "ede068c615201f98eb685d3aa971d1d9fdf42e57d81360b9be020a103c970615"
+    },
+    "src/stowage/checker/in_port_report.py": {
+      "recorded": "f4dacd4c48da56ef3503eca0d3b47ae441475ba4315ff4113e3773dbb930b5f9",
+      "archive": "f4dacd4c48da56ef3503eca0d3b47ae441475ba4315ff4113e3773dbb930b5f9",
+      "current": "f4dacd4c48da56ef3503eca0d3b47ae441475ba4315ff4113e3773dbb930b5f9"
+    },
+    "src/stowage/checker/lashing.py": {
+      "recorded": "6bf6a1ba92cf17687716fbb6eb8ac7bf528971356614134b84d5bb89f1ecfdb8",
+      "archive": "6bf6a1ba92cf17687716fbb6eb8ac7bf528971356614134b84d5bb89f1ecfdb8",
+      "current": "6bf6a1ba92cf17687716fbb6eb8ac7bf528971356614134b84d5bb89f1ecfdb8"
+    },
+    "src/stowage/checker/perf.py": {
+      "recorded": "ae2e47121f016563388abd8bc54518536640ac8cb98c2a7686a9f21d89eca673",
+      "archive": "ae2e47121f016563388abd8bc54518536640ac8cb98c2a7686a9f21d89eca673",
+      "current": "ae2e47121f016563388abd8bc54518536640ac8cb98c2a7686a9f21d89eca673"
+    },
+    "src/stowage/checker/rules.py": {
+      "recorded": "1710f043a7117cf41587e8a2fe7174fe9082671596836a5acbccd9b79b257fe4",
+      "archive": "1710f043a7117cf41587e8a2fe7174fe9082671596836a5acbccd9b79b257fe4",
+      "current": "1710f043a7117cf41587e8a2fe7174fe9082671596836a5acbccd9b79b257fe4"
+    },
+    "src/stowage/checker/rules_background.py": {
+      "recorded": "1717ce8089aa9fae368c5f6acb5aebd4f8bc175e131ae94b376ed5310a40837a",
+      "archive": "1717ce8089aa9fae368c5f6acb5aebd4f8bc175e131ae94b376ed5310a40837a",
+      "current": "1717ce8089aa9fae368c5f6acb5aebd4f8bc175e131ae94b376ed5310a40837a"
+    },
+    "src/stowage/checker/rules_evidence.py": {
+      "recorded": "456b084c49ae5bb9c2fbaaa3fe8272b43ddec11b7751777b0173dcb257b3e54a",
+      "archive": "456b084c49ae5bb9c2fbaaa3fe8272b43ddec11b7751777b0173dcb257b3e54a",
+      "current": "456b084c49ae5bb9c2fbaaa3fe8272b43ddec11b7751777b0173dcb257b3e54a"
+    },
+    "src/stowage/checker/rules_imdg.py": {
+      "recorded": "cca3552c7484f8dba20368f7abee28ec9684ba8bc203e7fa37dc17c4dcb862e0",
+      "archive": "cca3552c7484f8dba20368f7abee28ec9684ba8bc203e7fa37dc17c4dcb862e0",
+      "current": "cca3552c7484f8dba20368f7abee28ec9684ba8bc203e7fa37dc17c4dcb862e0"
+    },
+    "src/stowage/checker/rules_special.py": {
+      "recorded": "bad52b0135ed37682e5b8c33d68dd7e9ff0266814e5a39a8f84e2882c307cef3",
+      "archive": "bad52b0135ed37682e5b8c33d68dd7e9ff0266814e5a39a8f84e2882c307cef3",
+      "current": "bad52b0135ed37682e5b8c33d68dd7e9ff0266814e5a39a8f84e2882c307cef3"
+    },
+    "src/stowage/checker/rules_weight.py": {
+      "recorded": "26faccd20fe4c75cb528017aca456391f42c06a3f6edbc05e67b5d527b5c1743",
+      "archive": "26faccd20fe4c75cb528017aca456391f42c06a3f6edbc05e67b5d527b5c1743",
+      "current": "26faccd20fe4c75cb528017aca456391f42c06a3f6edbc05e67b5d527b5c1743"
+    },
+    "src/stowage/checker/slots.py": {
+      "recorded": "13fb86356d4b9257b1deca99cbb6d939486542cdc9432654c56b05a70e2fa9f1",
+      "archive": "13fb86356d4b9257b1deca99cbb6d939486542cdc9432654c56b05a70e2fa9f1",
+      "current": "13fb86356d4b9257b1deca99cbb6d939486542cdc9432654c56b05a70e2fa9f1"
+    },
+    "src/stowage/checker/stability.py": {
+      "recorded": "64c0a06761da330b5ab78efb2776c8cea12d37225f8059f581893dddfa5410e5",
+      "archive": "64c0a06761da330b5ab78efb2776c8cea12d37225f8059f581893dddfa5410e5",
+      "current": "64c0a06761da330b5ab78efb2776c8cea12d37225f8059f581893dddfa5410e5"
+    },
+    "src/stowage/checker/stability_batch.py": {
+      "recorded": "59113e03daaa27520f33e5b5b97ce21fdbf76e248a17e575aecd796496a88c21",
+      "archive": "59113e03daaa27520f33e5b5b97ce21fdbf76e248a17e575aecd796496a88c21",
+      "current": "59113e03daaa27520f33e5b5b97ce21fdbf76e248a17e575aecd796496a88c21"
+    },
+    "src/stowage/checker/stability_budget.py": {
+      "recorded": "51d5c7746240ede29c9d6483e043d4f24896504536adee0017f00ccc37189468",
+      "archive": "51d5c7746240ede29c9d6483e043d4f24896504536adee0017f00ccc37189468",
+      "current": "51d5c7746240ede29c9d6483e043d4f24896504536adee0017f00ccc37189468"
+    },
+    "src/stowage/checker/stability_criteria.py": {
+      "recorded": "ed293b8d45b8840ee4ffbcd7ea525b2950ddebe9099b036b19125f1643f48e09",
+      "archive": "ed293b8d45b8840ee4ffbcd7ea525b2950ddebe9099b036b19125f1643f48e09",
+      "current": "ed293b8d45b8840ee4ffbcd7ea525b2950ddebe9099b036b19125f1643f48e09"
+    },
+    "src/stowage/checker/stability_curve.py": {
+      "recorded": "54a1c3406f25495775f61ba398a22fdbec17d19a867004ba53a32f2950ed1690",
+      "archive": "54a1c3406f25495775f61ba398a22fdbec17d19a867004ba53a32f2950ed1690",
+      "current": "54a1c3406f25495775f61ba398a22fdbec17d19a867004ba53a32f2950ed1690"
+    },
+    "src/stowage/checker/stability_direct_liquid_batch.py": {
+      "recorded": "324a3c41867fa66a609d7299c5f69c1c4b961b35e4c855f3f9af97be47254cb0",
+      "archive": "324a3c41867fa66a609d7299c5f69c1c4b961b35e4c855f3f9af97be47254cb0",
+      "current": "324a3c41867fa66a609d7299c5f69c1c4b961b35e4c855f3f9af97be47254cb0"
+    },
+    "src/stowage/checker/stability_equilibrium.py": {
+      "recorded": "f1cfa79bdf7777cb025c4aec75f8172f1b2c78143bb36cd60e7bfc92750d35fc",
+      "archive": "f1cfa79bdf7777cb025c4aec75f8172f1b2c78143bb36cd60e7bfc92750d35fc",
+      "current": "f1cfa79bdf7777cb025c4aec75f8172f1b2c78143bb36cd60e7bfc92750d35fc"
+    },
+    "src/stowage/checker/stability_geometry.py": {
+      "recorded": "ea74d535099d5cbc4aee2d7b2276c6943c021fcbf6777e639366384da80694f0",
+      "archive": "ea74d535099d5cbc4aee2d7b2276c6943c021fcbf6777e639366384da80694f0",
+      "current": "ea74d535099d5cbc4aee2d7b2276c6943c021fcbf6777e639366384da80694f0"
+    },
+    "src/stowage/checker/stability_liquid.py": {
+      "recorded": "7fa6108715121c197706b6ae09b868e735f238cd0336c7bca592e697226d7f8b",
+      "archive": "7fa6108715121c197706b6ae09b868e735f238cd0336c7bca592e697226d7f8b",
+      "current": "7fa6108715121c197706b6ae09b868e735f238cd0336c7bca592e697226d7f8b"
+    },
+    "src/stowage/checker/stability_liquid_batch.py": {
+      "recorded": "16a04a93bda8d6c9aef6fdaf77a92809ee45f3195ee306d2033c5fe14d33dab5",
+      "archive": "16a04a93bda8d6c9aef6fdaf77a92809ee45f3195ee306d2033c5fe14d33dab5",
+      "current": "16a04a93bda8d6c9aef6fdaf77a92809ee45f3195ee306d2033c5fe14d33dab5"
+    },
+    "src/stowage/checker/stability_liquid_tables.py": {
+      "recorded": "7f8861b78b2d0e30a60100e0814b8532fbb0c9a314915249f6a17e6f04fdd867",
+      "archive": "7f8861b78b2d0e30a60100e0814b8532fbb0c9a314915249f6a17e6f04fdd867",
+      "current": "7f8861b78b2d0e30a60100e0814b8532fbb0c9a314915249f6a17e6f04fdd867"
+    },
+    "src/stowage/checker/stability_loading.py": {
+      "recorded": "c449d9d3df5ecf5e18f0bf899e6eba1f6677570cdfffc5fdb8d3acae26bc2533",
+      "archive": "c449d9d3df5ecf5e18f0bf899e6eba1f6677570cdfffc5fdb8d3acae26bc2533",
+      "current": "c449d9d3df5ecf5e18f0bf899e6eba1f6677570cdfffc5fdb8d3acae26bc2533"
+    },
+    "src/stowage/checker/stability_policy.py": {
+      "recorded": "6fc935edc314cbe9632aa928bca57495be3584cc55b6cb1789e5f32ef9cc96c1",
+      "archive": "6fc935edc314cbe9632aa928bca57495be3584cc55b6cb1789e5f32ef9cc96c1",
+      "current": "6fc935edc314cbe9632aa928bca57495be3584cc55b6cb1789e5f32ef9cc96c1"
+    },
+    "src/stowage/checker/stability_reuse.py": {
+      "recorded": "569647e279d9c4fd953699de3ddf3dd153704057e46100ab4f2351b4632f0c9d",
+      "archive": "569647e279d9c4fd953699de3ddf3dd153704057e46100ab4f2351b4632f0c9d",
+      "current": "569647e279d9c4fd953699de3ddf3dd153704057e46100ab4f2351b4632f0c9d"
+    },
+    "src/stowage/checker/stability_sounding.py": {
+      "recorded": "6a1808f77339f7d5e1c9ffcddddfa48a344bf56d777205e381a2a3bb85c0926c",
+      "archive": "6a1808f77339f7d5e1c9ffcddddfa48a344bf56d777205e381a2a3bb85c0926c",
+      "current": "6a1808f77339f7d5e1c9ffcddddfa48a344bf56d777205e381a2a3bb85c0926c"
+    },
+    "src/stowage/checker/stability_states.py": {
+      "recorded": "26768580eafb9ca72145cc844dcf2b886bf50dc4f11a07d305f5e10e5cd6e71a",
+      "archive": "26768580eafb9ca72145cc844dcf2b886bf50dc4f11a07d305f5e10e5cd6e71a",
+      "current": "26768580eafb9ca72145cc844dcf2b886bf50dc4f11a07d305f5e10e5cd6e71a"
+    },
+    "src/stowage/checker/stability_tables.py": {
+      "recorded": "b3ab7684f65554c788e46dddbbf02aa0fcf00f9a100bf4902c117ccd9fcdc6c9",
+      "archive": "b3ab7684f65554c788e46dddbbf02aa0fcf00f9a100bf4902c117ccd9fcdc6c9",
+      "current": "b3ab7684f65554c788e46dddbbf02aa0fcf00f9a100bf4902c117ccd9fcdc6c9"
+    },
+    "src/stowage/checker/stability_tank_envelope.py": {
+      "recorded": "2979fc3f78c55fb0958cde12cecc519e0f5bb2d169db93e6f529205e3498cd93",
+      "archive": "2979fc3f78c55fb0958cde12cecc519e0f5bb2d169db93e6f529205e3498cd93",
+      "current": "2979fc3f78c55fb0958cde12cecc519e0f5bb2d169db93e6f529205e3498cd93"
+    },
+    "src/stowage/checker/stability_tank_transfer.py": {
+      "recorded": "10849e2d588e68d7339d4c3b33d5bf83d1513aafaf38097dd3e62b07aaefe6b7",
+      "archive": "10849e2d588e68d7339d4c3b33d5bf83d1513aafaf38097dd3e62b07aaefe6b7",
+      "current": "10849e2d588e68d7339d4c3b33d5bf83d1513aafaf38097dd3e62b07aaefe6b7"
+    },
+    "src/stowage/checker/strength.py": {
+      "recorded": "f7d1dbdd49ec29f461800113cad05a9bb79ad1b1f3d6eeea3cef6880a21e1b81",
+      "archive": "f7d1dbdd49ec29f461800113cad05a9bb79ad1b1f3d6eeea3cef6880a21e1b81",
+      "current": "f7d1dbdd49ec29f461800113cad05a9bb79ad1b1f3d6eeea3cef6880a21e1b81"
+    },
+    "src/stowage/checker/strength_assessment.py": {
+      "recorded": "a76faa59d5d73c4f75436ccb163b9b4c388eb9e2767d0fd9c89de7e5139d2afa",
+      "archive": "a76faa59d5d73c4f75436ccb163b9b4c388eb9e2767d0fd9c89de7e5139d2afa",
+      "current": "a76faa59d5d73c4f75436ccb163b9b4c388eb9e2767d0fd9c89de7e5139d2afa"
+    },
+    "src/stowage/checker/strength_limits.py": {
+      "recorded": "0c3390781315ce00cdd9d5cb2a0baf992f450d6144bafdeac559868fd55d221e",
+      "archive": "0c3390781315ce00cdd9d5cb2a0baf992f450d6144bafdeac559868fd55d221e",
+      "current": "0c3390781315ce00cdd9d5cb2a0baf992f450d6144bafdeac559868fd55d221e"
+    },
+    "src/stowage/checker/visibility.py": {
+      "recorded": "0f66102540b9038b2c8115b454b4671263540b32a0d131e8a92fed1da48cb560",
+      "archive": "0f66102540b9038b2c8115b454b4671263540b32a0d131e8a92fed1da48cb560",
+      "current": "0f66102540b9038b2c8115b454b4671263540b32a0d131e8a92fed1da48cb560"
+    },
+    "src/stowage/checker/visibility_range.py": {
+      "recorded": "b74a2d98c6080713d50d21bf66346e552e2fff9997d764f636ad58c881af6731",
+      "archive": "b74a2d98c6080713d50d21bf66346e552e2fff9997d764f636ad58c881af6731",
+      "current": "b74a2d98c6080713d50d21bf66346e552e2fff9997d764f636ad58c881af6731"
+    },
+    "src/stowage/conventions.py": {
+      "recorded": "7fb62ae74491f69970eb49ec1599be576c65353f010eded8104ae01168a3d9d7",
+      "archive": "7fb62ae74491f69970eb49ec1599be576c65353f010eded8104ae01168a3d9d7",
+      "current": "7fb62ae74491f69970eb49ec1599be576c65353f010eded8104ae01168a3d9d7"
+    },
+    "src/stowage/model/__init__.py": {
+      "recorded": "79746511f621daf7f8ec46eaf491fbcf2a820605da32368a395e06913e538b3f",
+      "archive": "79746511f621daf7f8ec46eaf491fbcf2a820605da32368a395e06913e538b3f",
+      "current": "79746511f621daf7f8ec46eaf491fbcf2a820605da32368a395e06913e538b3f"
+    },
+    "src/stowage/model/base.py": {
+      "recorded": "6e213068ca6cf54300304b2c282911a26718b8c08e8be325ce60ba21090d56c6",
+      "archive": "6e213068ca6cf54300304b2c282911a26718b8c08e8be325ce60ba21090d56c6",
+      "current": "6e213068ca6cf54300304b2c282911a26718b8c08e8be325ce60ba21090d56c6"
+    },
+    "src/stowage/model/cargo.py": {
+      "recorded": "19598248636720831c748c005ec46d446ba5fe94525d0c3d65e60b9f69cfc714",
+      "archive": "19598248636720831c748c005ec46d446ba5fe94525d0c3d65e60b9f69cfc714",
+      "current": "19598248636720831c748c005ec46d446ba5fe94525d0c3d65e60b9f69cfc714"
+    },
+    "src/stowage/model/fixtures.py": {
+      "recorded": "c19d7eeb21ded98981e22deeac4137c6ce92dfd6169f2b84dd33bc7166e1b77c",
+      "archive": "c19d7eeb21ded98981e22deeac4137c6ce92dfd6169f2b84dd33bc7166e1b77c",
+      "current": "c19d7eeb21ded98981e22deeac4137c6ce92dfd6169f2b84dd33bc7166e1b77c"
+    },
+    "src/stowage/model/instance.py": {
+      "recorded": "09966eb7245b0423c22368fa8e1dbd868a6ad4b4d3346500b9f40f26dfff4746",
+      "archive": "09966eb7245b0423c22368fa8e1dbd868a6ad4b4d3346500b9f40f26dfff4746",
+      "current": "09966eb7245b0423c22368fa8e1dbd868a6ad4b4d3346500b9f40f26dfff4746"
+    },
+    "src/stowage/model/moves.py": {
+      "recorded": "85a853f86d0c9f3ca87bc516b170ce2f0aa4170ac9ae1b19bc77ea782fda622f",
+      "archive": "85a853f86d0c9f3ca87bc516b170ce2f0aa4170ac9ae1b19bc77ea782fda622f",
+      "current": "85a853f86d0c9f3ca87bc516b170ce2f0aa4170ac9ae1b19bc77ea782fda622f"
+    },
+    "src/stowage/model/plan.py": {
+      "recorded": "0e7348a5f5eef0beaaa2644f8aa3559810115b86d32e44453ed6eaac355672b9",
+      "archive": "0e7348a5f5eef0beaaa2644f8aa3559810115b86d32e44453ed6eaac355672b9",
+      "current": "0e7348a5f5eef0beaaa2644f8aa3559810115b86d32e44453ed6eaac355672b9"
+    },
+    "src/stowage/model/port.py": {
+      "recorded": "b76845a2eb30feeee632079ad832849aeb9fe76f160d064eb16aeac921d5b6ca",
+      "archive": "b76845a2eb30feeee632079ad832849aeb9fe76f160d064eb16aeac921d5b6ca",
+      "current": "b76845a2eb30feeee632079ad832849aeb9fe76f160d064eb16aeac921d5b6ca"
+    },
+    "src/stowage/model/provenance.py": {
+      "recorded": "2d0ed4b854f78564e604b197be433d3e58ee74f030256b8bd4121f580dcecfd5",
+      "archive": "2d0ed4b854f78564e604b197be433d3e58ee74f030256b8bd4121f580dcecfd5",
+      "current": "2d0ed4b854f78564e604b197be433d3e58ee74f030256b8bd4121f580dcecfd5"
+    },
+    "src/stowage/model/results.py": {
+      "recorded": "269000ff50f131b32ea8f43d6ead6d22c0ac1e3fa2da3fbda9de66db9262cf99",
+      "archive": "269000ff50f131b32ea8f43d6ead6d22c0ac1e3fa2da3fbda9de66db9262cf99",
+      "current": "269000ff50f131b32ea8f43d6ead6d22c0ac1e3fa2da3fbda9de66db9262cf99"
+    },
+    "src/stowage/model/ship.py": {
+      "recorded": "dec418343d7b7442df4ef8be69ea436243f139a16aae32bcfbf6715ede8e6fd3",
+      "archive": "dec418343d7b7442df4ef8be69ea436243f139a16aae32bcfbf6715ede8e6fd3",
+      "current": "dec418343d7b7442df4ef8be69ea436243f139a16aae32bcfbf6715ede8e6fd3"
+    },
+    "src/stowage/model/vessel.py": {
+      "recorded": "93c362b83645db64e109e81bb6913db3f50dc440878300de3556884bea19c798",
+      "archive": "93c362b83645db64e109e81bb6913db3f50dc440878300de3556884bea19c798",
+      "current": "93c362b83645db64e109e81bb6913db3f50dc440878300de3556884bea19c798"
+    },
+    "src/stowage/model/violation.py": {
+      "recorded": "818ff9cf701c95152d46962180f70e3be25af34a0bdc9cec7f7a35b9f7e25bf3",
+      "archive": "818ff9cf701c95152d46962180f70e3be25af34a0bdc9cec7f7a35b9f7e25bf3",
+      "current": "818ff9cf701c95152d46962180f70e3be25af34a0bdc9cec7f7a35b9f7e25bf3"
+    },
+    "src/stowage/model/voyage.py": {
+      "recorded": "8ce6ef660a888b9d4d2b769ecb5017be4a81b4d1f21fbd410809b15ec91df38a",
+      "archive": "8ce6ef660a888b9d4d2b769ecb5017be4a81b4d1f21fbd410809b15ec91df38a",
+      "current": "8ce6ef660a888b9d4d2b769ecb5017be4a81b4d1f21fbd410809b15ec91df38a"
+    },
+    "src/stowage/model/yard.py": {
+      "recorded": "6061456fb4e040a7c98f14542dc8ee39c475770a7bf02254cfe0da5ba678fe24",
+      "archive": "6061456fb4e040a7c98f14542dc8ee39c475770a7bf02254cfe0da5ba678fe24",
+      "current": "6061456fb4e040a7c98f14542dc8ee39c475770a7bf02254cfe0da5ba678fe24"
+    },
+    "src/stowage/moves/__init__.py": {
+      "recorded": "9edcd5e66920ce84379b797df089d980222906aaad8217383d9200f73b5b00ba",
+      "archive": "9edcd5e66920ce84379b797df089d980222906aaad8217383d9200f73b5b00ba",
+      "current": "9edcd5e66920ce84379b797df089d980222906aaad8217383d9200f73b5b00ba"
+    },
+    "src/stowage/moves/_observations.py": {
+      "recorded": "a8e85801903f8e24b3484176377e93399d4f20e23d747180e0915d42a1ba479e",
+      "archive": "a8e85801903f8e24b3484176377e93399d4f20e23d747180e0915d42a1ba479e",
+      "current": "a8e85801903f8e24b3484176377e93399d4f20e23d747180e0915d42a1ba479e"
+    },
+    "src/stowage/moves/_paths.py": {
+      "recorded": "00eeeaa54e2ba03f615a49312edab96ba7343bb1ebb51ccb6916c81e2fb4741b",
+      "archive": "00eeeaa54e2ba03f615a49312edab96ba7343bb1ebb51ccb6916c81e2fb4741b",
+      "current": "00eeeaa54e2ba03f615a49312edab96ba7343bb1ebb51ccb6916c81e2fb4741b"
+    },
+    "src/stowage/moves/_physical.py": {
+      "recorded": "bef1d467bf3bf83af81890b1609123b309a63f703250763a2cb37b24edec7007",
+      "archive": "bef1d467bf3bf83af81890b1609123b309a63f703250763a2cb37b24edec7007",
+      "current": "bef1d467bf3bf83af81890b1609123b309a63f703250763a2cb37b24edec7007"
+    },
+    "src/stowage/moves/_port_rules.py": {
+      "recorded": "016893ca3d026009e267934e30ac71f980b3ead4608238d8c220b3254cb0aac4",
+      "archive": "016893ca3d026009e267934e30ac71f980b3ead4608238d8c220b3254cb0aac4",
+      "current": "016893ca3d026009e267934e30ac71f980b3ead4608238d8c220b3254cb0aac4"
+    },
+    "src/stowage/moves/_projection.py": {
+      "recorded": "9a0c8f6b1998f3b1f862d0e3bda0bc4aa85da59d849218cee45411ca6bde019c",
+      "archive": "9a0c8f6b1998f3b1f862d0e3bda0bc4aa85da59d849218cee45411ca6bde019c",
+      "current": "9a0c8f6b1998f3b1f862d0e3bda0bc4aa85da59d849218cee45411ca6bde019c"
+    },
+    "src/stowage/moves/_sequencing.py": {
+      "recorded": "e51c54210b1cd1eca7afc506c2fefcc2a7082ab1dea558f539bd72c8fbcc8540",
+      "archive": "e51c54210b1cd1eca7afc506c2fefcc2a7082ab1dea558f539bd72c8fbcc8540",
+      "current": "e51c54210b1cd1eca7afc506c2fefcc2a7082ab1dea558f539bd72c8fbcc8540"
+    },
+    "src/stowage/moves/engine.py": {
+      "recorded": "5a30bd95aa20e51968878161095659914b173a3e5e5a658774e013d8570b7dda",
+      "archive": "5a30bd95aa20e51968878161095659914b173a3e5e5a658774e013d8570b7dda",
+      "current": "5a30bd95aa20e51968878161095659914b173a3e5e5a658774e013d8570b7dda"
+    },
+    "src/stowage/versions.py": {
+      "recorded": "8ab08080f4f4a138a2d93cc64523c36c51dcc2c4077287253bc95cb234b5d749",
+      "archive": "8ab08080f4f4a138a2d93cc64523c36c51dcc2c4077287253bc95cb234b5d749",
+      "current": "8ab08080f4f4a138a2d93cc64523c36c51dcc2c4077287253bc95cb234b5d749"
+    }
+  },
+  "all_archives_match_recorded": true,
+  "all_current_match_recorded": true,
+  "runtime_code_equality_verified_utc": "2026-11-02T02:39:26.609584+00:00",
+  "actual_gate_code_equals_archived_recompile": {
+    "experiments.mvp.pipeline.sandbox.moves.prepare_move": true,
+    "experiments.mvp.pipeline.sandbox.moves._screen": true,
+    "experiments.mvp.pipeline.sandbox.moves.try_move": true,
+    "experiments.mvp.pipeline.sandbox.physics.fast_check": true,
+    "experiments.mvp.pipeline.sandbox.securing.screen_securing": true,
+    "experiments.mvp.pipeline.sandbox.visibility.screen_visibility": true
+  }
+}

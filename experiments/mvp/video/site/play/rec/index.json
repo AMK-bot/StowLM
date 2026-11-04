@@ -1,0 +1,1928 @@
+{
+"version": 2,
+"built_utc": "2026-11-04T03:51:22+00:00",
+"recorded_utc": "2026-11-04T03:45:30+00:00",
+"call_id": "c20261104-030907-b8bb31",
+"t0": 1793761744123.5,
+"track": {
+"form": {
+"ship": "feeder_500",
+"size_class": "medium",
+"fill_pct": 12,
+"generator": "random_yard",
+"port": "laem_chabang_like",
+"seed": 1014265040
+},
+"spoken": "Keep bay three empty on this call.",
+"audio_name": "radio-instruction.wav",
+"profile": "standard",
+"intake_story": "Muse Spark read the call's synthetic cargo papers, 3 bookings at once ($0.24 in all), with no open questions: the 17 boxes planned are Muse Spark's load list.",
+"instruction_story": "The spoken instruction \"Keep bay three empty on this call.\" (a macOS text-to-speech clip, labelled generated voice) went to Muse Voice Transcribe, which heard \"Keep bay three empty empty on this call..\". The StowLM Reader refused that sentence (it is built to refuse what it can't read as one of its four rules), so the planner corrected the transcript to \"Keep bay three empty on this call.\". The StowLM Reader (fine-tuned Muse Glimmer 30B) read the planner's corrected sentence as \"Nothing loads into bay 03.\", and the planner confirmed it.",
+"dry": false,
+"on_questions": null
+},
+"anchors": [
+{
+"key": "POST /api/functional/calls {\"fill_pct\":12,\"generator\":\"random_yard\",\"port\":\"laem_chabang_like\",\"seed\":1014265040,\"ship\":\"feeder_500\",\"size_class\":\"medium\"}",
+"t": 3182,
+"post": [
+0,
+202,
+"application/json; charset=utf-8",
+"b/32c5b7fab505852e6037.jsonz"
+],
+"what": "create",
+"body": {
+"fill_pct": 12,
+"generator": "random_yard",
+"port": "laem_chabang_like",
+"seed": 1014265040,
+"ship": "feeder_500",
+"size_class": "medium"
+},
+"via": "page",
+"busy_s": 13.4,
+"speed": 1.0
+},
+{
+"key": "POST /api/functional/calls/c20261104-030907-b8bb31/papers {\"use_generated_papers\":true}",
+"t": 19145,
+"post": [
+0,
+202,
+"application/json; charset=utf-8",
+"b/9290c7dbaac5ffb76f77.jsonz"
+],
+"what": "papers",
+"body": {
+"use_generated_papers": true
+},
+"via": "page",
+"busy_s": 134.2,
+"speed": 4.47
+},
+{
+"key": "POST /api/functional/calls/c20261104-030907-b8bb31/audio {\"generated_voice\":true,\"media_type\":\"audio/wav\",\"name\":\"radio-instruction.wav\",\"origin\":\"upload\"}",
+"t": 155505,
+"post": [
+0,
+202,
+"application/json; charset=utf-8",
+"b/65a3778509153e6143c7.jsonz"
+],
+"what": "audio",
+"body": {
+"generated_voice": true,
+"media_type": "audio/wav",
+"name": "radio-instruction.wav",
+"origin": "upload"
+},
+"via": "page",
+"busy_s": 1.0,
+"speed": 1.0
+},
+{
+"key": "POST /api/functional/calls/c20261104-030907-b8bb31/read {\"origin\":\"voice\",\"sentence\":\"Keep bay three empty empty on this call..\"}",
+"t": 158060,
+"post": [
+0,
+202,
+"application/json; charset=utf-8",
+"b/b919a69c43b5fbaf1b47.jsonz"
+],
+"what": "read",
+"body": {
+"origin": "voice",
+"sentence": "Keep bay three empty empty on this call.."
+},
+"via": "page",
+"busy_s": 5.1,
+"speed": 1.0
+},
+{
+"key": "POST /api/functional/calls/c20261104-030907-b8bb31/read {\"origin\":\"planner_edit\",\"sentence\":\"Keep bay three empty on this call.\"}",
+"t": 344005,
+"post": [
+0,
+202,
+"application/json; charset=utf-8",
+"b/c8849ad5dc466b78fa35.jsonz"
+],
+"what": "read",
+"body": {
+"origin": "planner_edit",
+"sentence": "Keep bay three empty on this call."
+},
+"via": "page",
+"busy_s": 2.0,
+"speed": 1.0
+},
+{
+"key": "POST /api/functional/calls/c20261104-030907-b8bb31/confirm {\"reading\":\"r7db626529c3d\",\"rule_sha256\":\"5894db02ba8ea419aa3375ec85812424431256874ce25018c1b0321d0ee2a1e6\",\"sentence_sha256\":\"7938f54d1241cb78f880546ce3fccd30113e50e1656113e5ef698cbc581ff9db\"}",
+"t": 347542,
+"post": [
+0,
+200,
+"application/json; charset=utf-8",
+"b/45c2fa68b6df93d1aad6.jsonz"
+],
+"what": "confirm",
+"body": {
+"reading": "r7db626529c3d",
+"rule_sha256": "5894db02ba8ea419aa3375ec85812424431256874ce25018c1b0321d0ee2a1e6",
+"sentence_sha256": "7938f54d1241cb78f880546ce3fccd30113e50e1656113e5ef698cbc581ff9db"
+},
+"via": "page",
+"busy_s": 0.0,
+"speed": 1.0
+},
+{
+"key": "POST /api/functional/calls/c20261104-030907-b8bb31/plan {\"instruction\":\"confirmed\",\"profile\":\"standard\"}",
+"t": 349770,
+"post": [
+0,
+202,
+"application/json; charset=utf-8",
+"b/47eefaef3d162ca93ea3.jsonz"
+],
+"what": "plan",
+"body": {
+"instruction": "confirmed",
+"profile": "standard"
+},
+"via": "page",
+"busy_s": 1803.8,
+"speed": 60.13
+}
+],
+"entries": {
+"GET /api/functional/calls/c20261104-030907-b8bb31": [
+[
+4187,
+200,
+"application/json; charset=utf-8",
+"b/7da7ee942e3e87b8d91a.jsonz"
+],
+[
+7274,
+200,
+"application/json; charset=utf-8",
+"b/7da7ee942e3e87b8d91a.jsonz"
+],
+[
+10359,
+200,
+"application/json; charset=utf-8",
+"b/7da7ee942e3e87b8d91a.jsonz"
+],
+[
+13446,
+200,
+"application/json; charset=utf-8",
+"b/7da7ee942e3e87b8d91a.jsonz"
+],
+[
+16533,
+200,
+"application/json; charset=utf-8",
+"b/a8bfe10679c136a3fb09.jsonz"
+],
+[
+20152,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+23349,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+26532,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+29732,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+32935,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+36130,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+39327,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+42531,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+45732,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+48921,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+52116,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+55319,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+58518,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+61720,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+64927,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+68113,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+71317,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+74525,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+77714,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+80916,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+84119,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+87318,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+90521,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+93722,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+96909,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+100108,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+103316,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+106517,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+109716,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+112922,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+116128,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+119295,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+122496,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+125699,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+128898,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+132100,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+135293,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+138478,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+141669,
+200,
+"application/json; charset=utf-8",
+"b/dcf98f74f23ee3325286.jsonz"
+],
+[
+142733,
+200,
+"application/json; charset=utf-8",
+"b/46643bd9aaae6d32e4cb.jsonz"
+],
+[
+145910,
+200,
+"application/json; charset=utf-8",
+"b/46643bd9aaae6d32e4cb.jsonz"
+],
+[
+149102,
+200,
+"application/json; charset=utf-8",
+"b/46643bd9aaae6d32e4cb.jsonz"
+],
+[
+152304,
+200,
+"application/json; charset=utf-8",
+"b/09364b59f6ffa1d3933a.jsonz"
+],
+[
+153341,
+200,
+"application/json; charset=utf-8",
+"b/3a84bb364ed757e45c2b.jsonz"
+],
+[
+156512,
+200,
+"application/json; charset=utf-8",
+"b/d53e736b8a79e32f038b.jsonz"
+],
+[
+159065,
+200,
+"application/json; charset=utf-8",
+"b/36bf963629942543ab52.jsonz"
+],
+[
+162155,
+200,
+"application/json; charset=utf-8",
+"b/36bf963629942543ab52.jsonz"
+],
+[
+163197,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+168264,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+173322,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+178383,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+183442,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+188501,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+193560,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+198620,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+203680,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+208737,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+213796,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+218854,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+223912,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+228972,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+234032,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+239081,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+340920,
+200,
+"application/json; charset=utf-8",
+"b/33b415c76a753446e226.jsonz"
+],
+[
+345011,
+200,
+"application/json; charset=utf-8",
+"b/c8849ad5dc466b78fa35.jsonz"
+],
+[
+346051,
+200,
+"application/json; charset=utf-8",
+"b/480e47b2a4d7e4b36563.jsonz"
+],
+[
+350775,
+200,
+"application/json; charset=utf-8",
+"b/10caa123c35b16ba701c.jsonz"
+],
+[
+381842,
+200,
+"application/json; charset=utf-8",
+"b/841a88b773b147019a25.jsonz"
+],
+[
+412916,
+200,
+"application/json; charset=utf-8",
+"b/c6132a6070219557a7f4.jsonz"
+],
+[
+443989,
+200,
+"application/json; charset=utf-8",
+"b/6cc9c8543d8d26c21a2b.jsonz"
+],
+[
+475055,
+200,
+"application/json; charset=utf-8",
+"b/bf523e70e65a1d2bdc00.jsonz"
+],
+[
+506126,
+200,
+"application/json; charset=utf-8",
+"b/21c3f946f678acf7d524.jsonz"
+],
+[
+537203,
+200,
+"application/json; charset=utf-8",
+"b/e6e722d1a1e23c892596.jsonz"
+],
+[
+568285,
+200,
+"application/json; charset=utf-8",
+"b/b770c78a657192d22cdf.jsonz"
+],
+[
+599349,
+200,
+"application/json; charset=utf-8",
+"b/708a1f911eaa6c35c281.jsonz"
+],
+[
+630416,
+200,
+"application/json; charset=utf-8",
+"b/9630c5a96fcfec12818b.jsonz"
+],
+[
+661484,
+200,
+"application/json; charset=utf-8",
+"b/e2827bd00656ac85109e.jsonz"
+],
+[
+692553,
+200,
+"application/json; charset=utf-8",
+"b/c0c9438d740095974925.jsonz"
+],
+[
+723629,
+200,
+"application/json; charset=utf-8",
+"b/b9a43b86e89208dbcaf1.jsonz"
+],
+[
+732954,
+200,
+"application/json; charset=utf-8",
+"b/20fce81777bfd4bacf6a.jsonz"
+],
+[
+764046,
+200,
+"application/json; charset=utf-8",
+"b/865dacb6b3916f404bb8.jsonz"
+],
+[
+795140,
+200,
+"application/json; charset=utf-8",
+"b/bd807a411c79f3814847.jsonz"
+],
+[
+826235,
+200,
+"application/json; charset=utf-8",
+"b/50170061e33d4e212ef3.jsonz"
+],
+[
+854222,
+200,
+"application/json; charset=utf-8",
+"b/d008840a9dc0fc700c65.jsonz"
+],
+[
+885326,
+200,
+"application/json; charset=utf-8",
+"b/3cecd3e748409b7cba7b.jsonz"
+],
+[
+916438,
+200,
+"application/json; charset=utf-8",
+"b/550780a12a460601c79c.jsonz"
+],
+[
+947549,
+200,
+"application/json; charset=utf-8",
+"b/836a4abe820d4c25a6cd.jsonz"
+],
+[
+978649,
+200,
+"application/json; charset=utf-8",
+"b/b738f72764b470cd9885.jsonz"
+],
+[
+1009751,
+200,
+"application/json; charset=utf-8",
+"b/1da23de911b062a063a0.jsonz"
+],
+[
+1040866,
+200,
+"application/json; charset=utf-8",
+"b/59f15360eb763441319b.jsonz"
+],
+[
+1071971,
+200,
+"application/json; charset=utf-8",
+"b/4e75f43a3c08e6e5316c.jsonz"
+],
+[
+1103079,
+200,
+"application/json; charset=utf-8",
+"b/89d3ae4c64876b2251fd.jsonz"
+],
+[
+1134196,
+200,
+"application/json; charset=utf-8",
+"b/3d5ea3dc0544b59c1337.jsonz"
+],
+[
+1165313,
+200,
+"application/json; charset=utf-8",
+"b/4057bf4d92bdd0c8f106.jsonz"
+],
+[
+1196427,
+200,
+"application/json; charset=utf-8",
+"b/c297af8ab06501b5bade.jsonz"
+],
+[
+1227542,
+200,
+"application/json; charset=utf-8",
+"b/763696caa12fa00bbf81.jsonz"
+],
+[
+1258654,
+200,
+"application/json; charset=utf-8",
+"b/56921d4146d6a287f33e.jsonz"
+],
+[
+1289766,
+200,
+"application/json; charset=utf-8",
+"b/fc911ed183b8de6bb8f7.jsonz"
+],
+[
+1320895,
+200,
+"application/json; charset=utf-8",
+"b/fdf9d92798573dfc773a.jsonz"
+],
+[
+1352008,
+200,
+"application/json; charset=utf-8",
+"b/bf7ec919932fe181c8b8.jsonz"
+],
+[
+1383116,
+200,
+"application/json; charset=utf-8",
+"b/93824ca9ba6af3e3c760.jsonz"
+],
+[
+1414234,
+200,
+"application/json; charset=utf-8",
+"b/0fe310908acb9a15ba3d.jsonz"
+],
+[
+1445343,
+200,
+"application/json; charset=utf-8",
+"b/514dcc6e3ad5a93bade1.jsonz"
+],
+[
+1476456,
+200,
+"application/json; charset=utf-8",
+"b/3deebc296413ce5dcfd3.jsonz"
+],
+[
+1507562,
+200,
+"application/json; charset=utf-8",
+"b/fff5687ad27ab8c6dff6.jsonz"
+],
+[
+1538666,
+200,
+"application/json; charset=utf-8",
+"b/4c4502c3bec2ae732370.jsonz"
+],
+[
+1569772,
+200,
+"application/json; charset=utf-8",
+"b/fdf3a6806ad3a1a1c722.jsonz"
+],
+[
+1600885,
+200,
+"application/json; charset=utf-8",
+"b/9cc2d4c6f8351f09b038.jsonz"
+],
+[
+1632014,
+200,
+"application/json; charset=utf-8",
+"b/31e9666012f9d8476da3.jsonz"
+],
+[
+1663124,
+200,
+"application/json; charset=utf-8",
+"b/10117e6784869c3bb6c1.jsonz"
+],
+[
+1694238,
+200,
+"application/json; charset=utf-8",
+"b/de17e5053de99049ca13.jsonz"
+],
+[
+1725346,
+200,
+"application/json; charset=utf-8",
+"b/cbd214206e872e8d3077.jsonz"
+],
+[
+1756460,
+200,
+"application/json; charset=utf-8",
+"b/f22d54d362c6f47f84ac.jsonz"
+],
+[
+1787578,
+200,
+"application/json; charset=utf-8",
+"b/eab164873e5dd35a1ecf.jsonz"
+],
+[
+1818683,
+200,
+"application/json; charset=utf-8",
+"b/5859895372ce9045f6e3.jsonz"
+],
+[
+1849788,
+200,
+"application/json; charset=utf-8",
+"b/dc2fc9d9af436da6e41b.jsonz"
+],
+[
+1880895,
+200,
+"application/json; charset=utf-8",
+"b/b2d7b077001a067f9e8e.jsonz"
+],
+[
+1912010,
+200,
+"application/json; charset=utf-8",
+"b/379010f0882614564722.jsonz"
+],
+[
+1943124,
+200,
+"application/json; charset=utf-8",
+"b/34523ffb1fc1d8e85d1e.jsonz"
+],
+[
+1974246,
+200,
+"application/json; charset=utf-8",
+"b/b93d1cf299edef83f4ff.jsonz"
+],
+[
+2006040,
+200,
+"application/json; charset=utf-8",
+"b/9296a02a1e7c496f42dc.jsonz"
+],
+[
+2037263,
+200,
+"application/json; charset=utf-8",
+"b/b06f882c62f6cdc1b95a.jsonz"
+],
+[
+2068476,
+200,
+"application/json; charset=utf-8",
+"b/d1c20ed2456e2108c4ef.jsonz"
+],
+[
+2099610,
+200,
+"application/json; charset=utf-8",
+"b/5b20027349c467343d5a.jsonz"
+],
+[
+2130744,
+200,
+"application/json; charset=utf-8",
+"b/b26e09a419ea03ed548b.jsonz"
+],
+[
+2153587,
+200,
+"application/json; charset=utf-8",
+"b/16cb18cbf0d7944f5a34.jsonz"
+],
+[
+2185257,
+200,
+"application/json; charset=utf-8",
+"b/16cb18cbf0d7944f5a34.jsonz"
+]
+],
+"GET /api/functional/calls/c20261104-030907-b8bb31/planner/boxes": [
+[
+16588,
+200,
+"application/json; charset=utf-8",
+"b/7c3900eb56b3a51bc769.jsonz"
+],
+[
+153388,
+200,
+"application/json; charset=utf-8",
+"b/4d8372747a80c5cf4688.jsonz"
+],
+[
+340965,
+200,
+"application/json; charset=utf-8",
+"b/4d8372747a80c5cf4688.jsonz"
+]
+],
+"GET /api/functional/calls/c20261104-030907-b8bb31/planner/checks": [
+[
+2153858,
+200,
+"application/json; charset=utf-8",
+"b/a03ebd77d17e8977e793.jsonz"
+]
+],
+"GET /api/functional/calls/c20261104-030907-b8bb31/planner/meters": [
+[
+2153858,
+200,
+"application/json; charset=utf-8",
+"b/9d757ce29786537996d1.jsonz"
+]
+],
+"GET /api/functional/calls/c20261104-030907-b8bb31/planner/moves": [
+[
+2153858,
+200,
+"application/json; charset=utf-8",
+"b/07feaa8e05a139b60588.jsonz"
+]
+],
+"GET /api/functional/calls/c20261104-030907-b8bb31/planner/package": [
+[
+2161540,
+200,
+"application/json; charset=utf-8",
+"b/954ac732c89e24679044.jsonz"
+],
+[
+2180563,
+200,
+"application/json; charset=utf-8",
+"b/954ac732c89e24679044.jsonz"
+]
+],
+"GET /api/functional/calls/c20261104-030907-b8bb31/planner/plan-after": [
+[
+2153857,
+200,
+"application/json; charset=utf-8",
+"b/9bf898fd4a1409402ded.jsonz"
+]
+],
+"GET /api/functional/calls/c20261104-030907-b8bb31/planner/plan-before": [
+[
+16588,
+200,
+"application/json; charset=utf-8",
+"b/6d91d4e14ce73c82862e.jsonz"
+],
+[
+153388,
+200,
+"application/json; charset=utf-8",
+"b/2c6eb53f1a52513ea9a4.jsonz"
+],
+[
+340966,
+200,
+"application/json; charset=utf-8",
+"b/2c6eb53f1a52513ea9a4.jsonz"
+]
+],
+"GET /api/functional/calls/c20261104-030907-b8bb31/planner/ship": [
+[
+16588,
+200,
+"application/json; charset=utf-8",
+"b/ab7d5dd0128deea8666e.jsonz"
+],
+[
+153388,
+200,
+"application/json; charset=utf-8",
+"b/456fd3a694b5efd3a45d.jsonz"
+],
+[
+340965,
+200,
+"application/json; charset=utf-8",
+"b/456fd3a694b5efd3a45d.jsonz"
+]
+],
+"GET /api/functional/options": [
+[
+74,
+200,
+"application/json; charset=utf-8",
+"b/63df70c4059cb6000979.jsonz"
+],
+[
+340920,
+200,
+"application/json; charset=utf-8",
+"b/61e00752081c7078006d.jsonz"
+]
+],
+"GET /api/functional/status": [
+[
+38,
+200,
+"application/json; charset=utf-8",
+"b/57a32a8b86c39e8d652c.jsonz"
+],
+[
+15531,
+200,
+"application/json; charset=utf-8",
+"b/57a32a8b86c39e8d652c.jsonz"
+],
+[
+30864,
+200,
+"application/json; charset=utf-8",
+"b/57a32a8b86c39e8d652c.jsonz"
+],
+[
+46862,
+200,
+"application/json; charset=utf-8",
+"b/57a32a8b86c39e8d652c.jsonz"
+],
+[
+62854,
+200,
+"application/json; charset=utf-8",
+"b/57a32a8b86c39e8d652c.jsonz"
+],
+[
+78845,
+200,
+"application/json; charset=utf-8",
+"b/57a32a8b86c39e8d652c.jsonz"
+],
+[
+94855,
+200,
+"application/json; charset=utf-8",
+"b/57a32a8b86c39e8d652c.jsonz"
+],
+[
+110849,
+200,
+"application/json; charset=utf-8",
+"b/57a32a8b86c39e8d652c.jsonz"
+],
+[
+126823,
+200,
+"application/json; charset=utf-8",
+"b/57a32a8b86c39e8d652c.jsonz"
+],
+[
+142772,
+200,
+"application/json; charset=utf-8",
+"b/fd211a19e6a7584bc91c.jsonz"
+],
+[
+152337,
+200,
+"application/json; charset=utf-8",
+"b/5f8c9d76fada2a4ccb77.jsonz"
+],
+[
+160114,
+200,
+"application/json; charset=utf-8",
+"b/6bad7f249770c77ac4e0.jsonz"
+],
+[
+178437,
+200,
+"application/json; charset=utf-8",
+"b/6bad7f249770c77ac4e0.jsonz"
+],
+[
+193617,
+200,
+"application/json; charset=utf-8",
+"b/6bad7f249770c77ac4e0.jsonz"
+],
+[
+208793,
+200,
+"application/json; charset=utf-8",
+"b/6bad7f249770c77ac4e0.jsonz"
+],
+[
+223968,
+200,
+"application/json; charset=utf-8",
+"b/6bad7f249770c77ac4e0.jsonz"
+],
+[
+239137,
+200,
+"application/json; charset=utf-8",
+"b/6bad7f249770c77ac4e0.jsonz"
+],
+[
+340884,
+200,
+"application/json; charset=utf-8",
+"b/6bad7f249770c77ac4e0.jsonz"
+],
+[
+350808,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+366342,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+381876,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+397411,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+412950,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+428484,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+444023,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+459556,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+475088,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+490627,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+506160,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+521701,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+537237,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+552784,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+568319,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+583851,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+599383,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+614915,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+630449,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+645982,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+661517,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+677049,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+692586,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+708121,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+723663,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+739205,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+754755,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+770300,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+785846,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+801392,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+816941,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+832485,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+848036,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+863588,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+879142,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+894694,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+910252,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+925807,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+941361,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+956914,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+972465,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+988017,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1003566,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1019117,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1034684,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1050231,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1065784,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1081336,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1096892,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1112448,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1128005,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1143566,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1159124,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1174682,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1190240,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1205795,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1221354,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1236910,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1252466,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1268024,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1283580,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1299134,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1314705,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1330262,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1345819,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1361375,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1376930,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1392483,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1408046,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1423601,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1439155,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1454713,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1470270,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1485824,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1501378,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1516928,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1532476,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1548029,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1563582,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1579142,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1594698,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1610251,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1625807,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1641380,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1656936,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1672496,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1688050,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1703604,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1719159,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1734714,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1750274,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1765830,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1781387,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1796948,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1812499,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1828050,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1843602,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1859156,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1874708,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1890265,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1905824,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1921374,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1936937,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1952505,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1968061,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1983619,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+1998784,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2014408,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2030028,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2045620,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2061230,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2076814,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2092378,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2107951,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2123517,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2139072,
+200,
+"application/json; charset=utf-8",
+"b/3965715ac8951bc71525.jsonz"
+],
+[
+2159125,
+200,
+"application/json; charset=utf-8",
+"b/6bad7f249770c77ac4e0.jsonz"
+],
+[
+2174972,
+200,
+"application/json; charset=utf-8",
+"b/6bad7f249770c77ac4e0.jsonz"
+]
+]
+},
+"files": [
+"/api/functional/calls/c20261104-030907-b8bb31/file/case.json",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-booking-note.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-dg-declaration.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-gate-slip.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-oog-list.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-reefer-list.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-shipping-instructions.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B1-vgm.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-booking-note.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-dg-declaration.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-gate-slip.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-oog-list.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-reefer-list.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-shipping-instructions.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B2-vgm.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-booking-note.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-dg-declaration.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-gate-slip.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-oog-list.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-reefer-list.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-shipping-instructions.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/B3-vgm.txt",
+"/api/functional/calls/c20261104-030907-b8bb31/file/papers/generated/load-list.csv",
+"/api/functional/calls/c20261104-030907-b8bb31/file/runs/1/outcome.json",
+"/api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/bay-plan.html",
+"/api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/crane-sequence.csv",
+"/api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/note-to-master.md",
+"/api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/package.json",
+"/api/functional/calls/c20261104-030907-b8bb31/file/runs/1/package/receipt.json"
+],
+"messages": {
+"recorded": "This is a recorded run: its inputs are fixed",
+"audio": "Audio not included in this copy"
+},
+"target_s": 30.0
+}

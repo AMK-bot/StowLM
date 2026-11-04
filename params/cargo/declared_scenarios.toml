@@ -1,0 +1,88 @@
+profile_id = "synthetic_shipment_entry_scenarios"
+policy = "APPROXIMATION: entry-scoped synthetic shipper declarations, not observations, inspections, protection outcomes, a complete SP assessment, or placement permission. Generator activation and instance-scope provenance binding are required separately."
+
+[templates.h1]
+id = "cargo.synthetic.h1.closed_weathertight_dry.v1"
+synthetic = true
+scope = "shipment_entry"
+assumption = "Synthetic G/R closed packaged equipment is weathertight, with goods and packing/securing materials declared dry at consignment. No handling or voyage-success outcome is asserted; under-deck suitability remains a checker placement decision using actual hatch geometry."
+[templates.h1.provenance]
+document = "Synthetic container/vehicle packing certificate and dangerous-goods transport declaration: params/cargo/declared_scenarios.toml"
+clause = "templates.h1: IMDG 5.4.2 container/vehicle packing certificate (dry, fit CTU) and 5.4.1 dangerous-goods transport declaration; closed weathertight CTU and dry consignment packing"
+scenario_id = "cargo.synthetic.h1.closed_weathertight_dry.v1"
+[templates.h1.source]
+document = "IMO MSC.556(108), IMDG Amendment 42-24"
+locator = "7.1.6 handling code H1 (PDF page485); 7.3.3.3 CTU, goods, securing and packing materials kept dry (PDF page497); 5.4.2.1.1 container/vehicle packing certificate for a clean, dry, apparently fit CTU and 5.4.2.1.9 consignment transport document, with 5.4.1.6 declaration (PDF page303); 5.4.1 transport information (PDF page297). These clauses motivate synthetic declarations, not real certificates or proof of observed facts."
+url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+read_date = "2026-10-28"
+[templates.h1.declarations]
+ctu_closed = true
+packing_form = "packaged_goods_in_closed_freight_containers"
+ctu_weathertight = true
+packing_condition = "dry"
+
+[templates.sw19]
+id = "cargo.synthetic.sw19.intact_normal.v1"
+synthetic = true
+scope = "shipment_entry"
+assumption = "Synthetic UN3480/UN3481 batteries are intact and transported for normal use. The shipment uses neither the damaged/defective SP376 route nor the optional disposal/recycling SP377 route. Other DGL special provisions remain unknown; no inspection, conformity outcome, voyage classification or exemption is asserted."
+[templates.sw19.provenance]
+document = "Synthetic shipment declaration: params/cargo/declared_scenarios.toml"
+clause = "templates.sw19: intact normal-use batteries, neither SP376 nor SP377 route"
+scenario_id = "cargo.synthetic.sw19.intact_normal.v1"
+[templates.sw19.source]
+document = "IMO MSC.556(108), IMDG Amendment 42-24"
+locator = "7.1.5 SW19 (PDF page485); 3.3 SP376 and SP377 (both PDF page773, with following provisions on page774). SP376 covers damaged/defective or undiagnosable batteries. SP377 optionally permits disposal/recycling packing and redirects damaged/defective batteries to SP376."
+url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+read_date = "2026-10-28"
+[templates.sw19.declarations]
+ctu_closed = true
+packing_form = "packaged_goods_in_closed_freight_containers"
+battery_condition = "intact"
+transport_purpose = "normal"
+[templates.sw19.declarations.special_provision_applicability]
+"376" = false
+"377" = false
+
+# Explicit DG-stress selection only. The main 'sw19' template above remains
+# normal/intact with neither SP376 nor SP377 and no voyage declaration.
+[templates.sw19_recycling]
+id = "cargo.synthetic.sw19.intact_recycling_sp377.v1"
+synthetic = true
+scope = "shipment_entry"
+assumption = "APPROXIMATION: synthetic intact UN3480/UN3481 batteries are shipped for recycling using SP377/P909, required recycling marking and the SP377 transport-document statement. transport_in_accordance is this synthetic shipper declaration, not an inspection, observed execution, or general SP clearance. Other battery packing/document obligations remain independently required and are not stowage assessments."
+[templates.sw19_recycling.provenance]
+document = "Synthetic SP377 recycling shipper declaration: params/cargo/declared_scenarios.toml"
+clause = "templates.sw19_recycling: intact recycling batteries under SP377, P909 packing, required recycling marking and SP377 transport statement; 5.4.1 transport documentation"
+scenario_id = "cargo.synthetic.sw19.intact_recycling_sp377.v1"
+[templates.sw19_recycling.source]
+document = "IMO MSC.556(108), IMDG Amendment 42-24"
+locator = "3.3 SP377 (PDF page773): optional P909 route for disposal/recycling, required recycling/disposal package marking and SP377 transport-document statement; damaged/defective batteries instead follow SP376. 7.1.5 SW19 (PDF page485) applies category C to SP376/377 transport except on a short international voyage. Other SP/packing/document duties are not thereby assessed."
+url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+read_date = "2026-10-29"
+[templates.sw19_recycling.declarations]
+ctu_closed = true
+packing_form = "packaged_goods_in_closed_freight_containers"
+battery_condition = "intact"
+transport_purpose = "recycling"
+transport_in_accordance = true
+[templates.sw19_recycling.declarations.special_provision_applicability]
+"376" = false
+"377" = true
+
+[templates.sw19_recycling.voyage]
+id = "cargo.synthetic.sw19.recycling_non_short_voyage.v1"
+synthetic = true
+scope = "shipment_entry"
+assumption = "APPROXIMATION: this separate synthetic scenario explicitly declares that its voyage is not a short international voyage under IMDG. No route-distance threshold or classification is inferred from rotation geography. Instance assembly binds this declaration to the actual declared voyage and call."
+[templates.sw19_recycling.voyage.provenance]
+document = "Synthetic non-short voyage declaration: params/cargo/declared_scenarios.toml"
+clause = "templates.sw19_recycling.voyage: explicitly declared non-short international voyage for SW19; no geography-based inference"
+scenario_id = "cargo.synthetic.sw19.recycling_non_short_voyage.v1"
+[templates.sw19_recycling.voyage.source]
+document = "IMO MSC.556(108), IMDG Amendment 42-24"
+locator = "7.1.5 SW19 (PDF page485), category C for SP376/377 unless transported on a short international voyage. This scenario declares the non-short case rather than assessing a real voyage."
+url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+read_date = "2026-10-29"
+[templates.sw19_recycling.voyage.declarations]
+short_international_voyage = false

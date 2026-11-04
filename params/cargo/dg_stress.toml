@@ -1,0 +1,270 @@
+# APPROXIMATION: synthetic public-context-informed feeder cargo, not measured bookings.
+schema_version = { value = 1, unit = "dimensionless", assumption = "Initial schema revision." }
+profile_id = "synthetic_dg_stress_d70"
+requires_rule_freeze_v1 = true
+panel_policy = "D70 synthetic DG-stress panel only; separate split/release/results, never pooled with main v2. Raw draw counts are not checker-admitted or binding-pair coverage."
+rating_policy = "Selected equipment example ratings, not universal ISO length maxima. Actual CSC plate, vessel, stack, lashing and port limits remain binding."
+[sampling]
+order = "Select rotation per call; per box select equipment, empty/full and POD; then OOG, DG and E8; weight last."
+weight_dependence = "Draw equipment triangular gross g. Loaded gross = tare + (g - tare) * POD payload_weight_multiplier. Clip to [loaded min, min(loaded max, max_gross_kg)]. Clipping creates boundary atoms. Reefer dependence comes from equipment-specific weights. Empty mass is tare, ignoring POD."
+independence = "POD independent of equipment and empty state. Event draws independent conditional on eligibility; no other calibrated correlations."
+empty_policy = "APPROXIMATION: no empties in this DG-stress panel; main profile unchanged."
+dg_policy = "APPROXIMATION: D70 balanced supported-class coverage, 100% loaded dry 20ft boxes with DG; deliberately unlike measured traffic. Select the mixed profile or an explicit segregation pair cohort. Not placement permission."
+e8_policy = "One extra request per selected loaded NON-OOG box. Requests add to mandatory DG/reefer rules. Reject and record infeasible combinations, never relax constraints."
+oog_policy = "Only loaded flat rack eligible. Envelope = equipment exterior plus overhangs. Width applies both sides, length both ends. Checker decides slot blocking, securing and permitted stowage."
+feasibility_policy = "Record intended and realised distributions plus conditioning/rejections for 45-foot support, plugs, DG, OOG, vessel and port limits; never silently convert special cargo to dry."
+onboard_policy = "Stage B input includes rotation ID and current zero-based call index. Eligible destination occurrences have call index strictly greater than current index. Retain only rotation PODs with such occurrences; choose first subsequent occurrence for each POD, renormalise retained box shares, and record conditioning. Empty eligible set is an explicit error. This is a synthetic initial onboard model, not fitted survival or cargo-age data. Never alter inherited cargo."
+[vgm]
+authority = "SOLAS VI/2 requires packed-container VGM before loading. Whole weighing or summed contents including dunnage plus tare. MSC.1/Circ.1475 section 10.1 bars gross over CSC plate maximum. No universal numeric minimum or tolerance is supplied by SOLAS."
+url = "https://wwwcdn.imo.org/localresources/en/OurWork/Safety/Documents/MSC.1%20Circ.1475.pdf"
+locator = "sections 5, 9, 10.1"
+read_date = "2026-10-27"
+synthetic_policy = "Synthetic drawn gross is treated as exact verified input; no metrology or misdeclaration model."
+
+[[equipment]]
+id = "dry_20"
+iso_size_type = "22G1"
+reefer = false
+oog_compatible = false
+share = { value = 1.0, unit = "fraction_of_boxes", assumption = "APPROXIMATION: D70 coverage panel uses dry 20ft boxes to isolate DG placement demands; main equipment distribution unchanged." }
+length_m = { value = 6.058, unit = "m", assumption = "Selected nominal exterior envelope; flat rack ends erected. Confirm actual drawing; not internal cargo space." }
+width_m = { value = 2.438, unit = "m", assumption = "Selected nominal exterior envelope; flat rack ends erected. Confirm actual drawing; not internal cargo space." }
+height_m = { value = 2.591, unit = "m", assumption = "Selected nominal exterior envelope; flat rack ends erected. Confirm actual drawing; not internal cargo space." }
+max_gross_kg = { value = 30480, unit = "kg", source = { document = "Hapag-Lloyd 20-standard fleet example", locator = "Weight table / Kilograms / Max Gross", url = "https://www.hapag-lloyd.com/en/services-information/cargo-fleet/container/20-standard.html", read_date = "2026-10-27" } }
+tare_kg = { value = 2350, unit = "kg", source = { document = "Hapag-Lloyd 20-standard fleet example", locator = "Weight table / Kilograms / Tare", url = "https://www.hapag-lloyd.com/en/services-information/cargo-fleet/container/20-standard.html", read_date = "2026-10-27" } }
+empty_share = { value = 0.0, unit = "fraction_conditional_on_equipment", assumption = "APPROXIMATION: all stress boxes loaded; no traffic inference." }
+[equipment.empty_weight_kg]
+family = "point_mass"
+value = { value = 2350, unit = "kg", assumption = "Empty gross equals selected tare; no individual tare variation." }
+[equipment.loaded_weight_kg]
+family = "triangular"
+min = { value = 5000, unit = "kg", assumption = "Synthetic loaded gross triangular support/mode; no fit or SOLAS numerical bound. Expert Q2/Q8/Q11." }
+mode = { value = 22000, unit = "kg", assumption = "Synthetic loaded gross triangular support/mode; no fit or SOLAS numerical bound. Expert Q2/Q8/Q11." }
+max = { value = 30480, unit = "kg", assumption = "Synthetic loaded gross triangular support/mode; no fit or SOLAS numerical bound. Expert Q2/Q8/Q11." }
+
+[dg]
+eligible_equipment_ids = ["dry_20"]
+share_of_eligible_loaded_boxes = { value = 1.0, unit = "fraction", assumption = "APPROXIMATION: deliberately DG-dense D70 panel, not observed traffic." }
+implied_share_of_all_boxes = { value = 1.0, unit = "fraction", assumption = "Derived: all equipment is loaded eligible dry 20ft and DG draw probability is one." }
+battery_recycling_share = { value = 0.15, unit = "fraction_of_SW19_battery_bookings", assumption = "APPROXIMATION: labelled minority SP377 intact recycling shipments; 15% is synthetic difficulty coverage, no traffic data. Main profile remains normal-use only." }
+
+[[dg.classes]]
+id = "2.1"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal supported-class coverage for the separate D70 panel, not traffic frequency." }
+[[dg.classes.un_numbers]]
+un_number = "1978"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 1978; PDF page 652; classification, subsidiary hazards, packing group and special provisions must be resolved together"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-27"
+variant_policy = "Select a complete applicable IMDG entry including packing group and special provisions; unresolved or unsupported entry is an explicit generator error, not silent removal."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "One representative UN per represented class/division. Not a complete DGL or observed within-class frequency." }
+
+[[dg.classes]]
+id = "2.2"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal supported-class coverage for the separate D70 panel, not traffic frequency." }
+[[dg.classes.un_numbers]]
+un_number = "1006"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 1006; PDF page 598; classification, subsidiary hazards, packing group and special provisions must be resolved together"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-27"
+variant_policy = "Select a complete applicable IMDG entry including packing group and special provisions; unresolved or unsupported entry is an explicit generator error, not silent removal."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "One representative UN per represented class/division. Not a complete DGL or observed within-class frequency." }
+
+[[dg.classes]]
+id = "2.3"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal supported-class coverage for the separate D70 panel, not traffic frequency." }
+[[dg.classes.un_numbers]]
+un_number = "1017"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 1017; PDF page 598; classification, subsidiary hazards, packing group and special provisions must be resolved together"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-27"
+variant_policy = "Select a complete applicable IMDG entry including packing group and special provisions; unresolved or unsupported entry is an explicit generator error, not silent removal."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "One representative UN per represented class/division. Not a complete DGL or observed within-class frequency." }
+
+[[dg.classes]]
+id = "3"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal supported-class coverage for the separate D70 panel, not traffic frequency." }
+[[dg.classes.un_numbers]]
+un_number = "1263"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 1263; PDF page 610; classification, subsidiary hazards, packing group and special provisions must be resolved together"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-27"
+variant_policy = "Select a complete applicable IMDG entry including packing group and special provisions; unresolved or unsupported entry is an explicit generator error, not silent removal."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "One representative UN per represented class/division. Not a complete DGL or observed within-class frequency." }
+
+[[dg.classes]]
+id = "4.1"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal supported-class coverage for the separate D70 panel, not traffic frequency." }
+[[dg.classes.un_numbers]]
+un_number = "1333"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 1333; PDF page 614; classification, subsidiary hazards, packing group and special provisions must be resolved together"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-27"
+variant_policy = "Select a complete applicable IMDG entry including packing group and special provisions; unresolved or unsupported entry is an explicit generator error, not silent removal."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "One representative UN per represented class/division. Not a complete DGL or observed within-class frequency." }
+
+[[dg.classes]]
+id = "4.3"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal supported-class coverage for the separate D70 panel, not traffic frequency." }
+[[dg.classes.un_numbers]]
+un_number = "1402"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 1402; PDF page 619; classification, subsidiary hazards, packing group and special provisions must be resolved together"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-27"
+variant_policy = "Select a complete applicable IMDG entry including packing group and special provisions; unresolved or unsupported entry is an explicit generator error, not silent removal."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "One representative UN per represented class/division. Not a complete DGL or observed within-class frequency." }
+
+[[dg.classes]]
+id = "6.1"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal supported-class coverage for the separate D70 panel, not traffic frequency." }
+[[dg.classes.un_numbers]]
+un_number = "2810"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 2810; PDF page 694; classification, subsidiary hazards, packing group and special provisions must be resolved together"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-27"
+variant_policy = "Select a complete applicable IMDG entry including packing group and special provisions; unresolved or unsupported entry is an explicit generator error, not silent removal."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "One representative UN per represented class/division. Not a complete DGL or observed within-class frequency." }
+
+[[dg.classes]]
+id = "8"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal supported-class coverage for the separate D70 panel, not traffic frequency." }
+[[dg.classes.un_numbers]]
+un_number = "1789"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 1789 (HYDROCHLORIC ACID); PDF page 642; classification, subsidiary hazards, packing group and special provisions must be resolved together"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-27"
+variant_policy = "Select a complete applicable IMDG entry including packing group and special provisions; unresolved or unsupported entry is an explicit generator error, not silent removal."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "One representative UN per represented class/division. Not a complete DGL or observed within-class frequency." }
+
+[[dg.classes]]
+id = "9"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal supported-class coverage for the separate D70 panel, not traffic frequency." }
+[[dg.classes.un_numbers]]
+un_number = "3480"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 3480; PDF page 746; classification, subsidiary hazards, packing group and special provisions must be resolved together"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-27"
+variant_policy = "Select a complete applicable IMDG entry including packing group and special provisions; unresolved or unsupported entry is an explicit generator error, not silent removal."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "One representative UN per represented class/division. Not a complete DGL or observed within-class frequency." }
+
+[[dg.classes]]
+id = "1.4S"
+share = { value = 0.1, unit = "fraction_of_dg_boxes", assumption = "APPROXIMATION: equal D70 class coverage, not observed traffic." }
+[[dg.classes.un_numbers]]
+un_number = "0012"
+classification_source_document = "IMO MSC.556(108), IMDG Amendment 42-24, Dangerous Goods List"
+classification_source_locator = "DGL entry UN 0012, CARTRIDGES FOR WEAPONS, INERT PROJECTILE or CARTRIDGES, SMALL ARMS; PDF page 581; local curated entry UN0012-none, division1.4 compatibility groupS, category01, SW1, SP364"
+classification_source_url = "https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.556(108).pdf"
+classification_source_read_date = "2026-10-28"
+variant_policy = "Select complete curated entry UN0012-none with 1.4S, retaining SW1 and unknown SP364 applicability; no shipment assessment, exemptions or placement acceptance are inferred."
+share = { value = 1.0, unit = "fraction_conditional_on_class", assumption = "Synthetic supported 1.4S representative UN0012; SP364 remains unknown and checker decides placement." }
+
+[special_stowage]
+share_of_loaded_boxes = { value = 0.0, unit = "fraction_of_loaded_non_oog_boxes", assumption = "Synthetic extra E8 request probability on loaded NON-OOG cargo. Expert Q12." }
+implied_share_of_all_boxes = { value = 0.0, unit = "fraction", assumption = "Derived (loaded share minus OOG marginal) times E8 request probability, before conditioning." }
+[[special_stowage.requests]]
+id = "under_deck"
+share = { value = 0.35, unit = "fraction_of_e8_requests", assumption = "Synthetic mutually exclusive extra request; binding semantics await expert Q12. Does not replace IMDG stowage." }
+[[special_stowage.requests]]
+id = "on_deck"
+share = { value = 0.25, unit = "fraction_of_e8_requests", assumption = "Synthetic mutually exclusive extra request; binding semantics await expert Q12. Does not replace IMDG stowage." }
+[[special_stowage.requests]]
+id = "away_from_heat"
+share = { value = 0.25, unit = "fraction_of_e8_requests", assumption = "Synthetic mutually exclusive extra request; binding semantics await expert Q12. Does not replace IMDG stowage." }
+[[special_stowage.requests]]
+id = "top_stowage"
+share = { value = 0.15, unit = "fraction_of_e8_requests", assumption = "Synthetic mutually exclusive extra request; binding semantics await expert Q12. Does not replace IMDG stowage." }
+
+[oog]
+eligible_equipment_ids = []
+share_of_loaded_compatible_boxes = { value = 0.0, unit = "fraction", assumption = "APPROXIMATION: DG stress isolates packaged DG; no flat racks or OOG are drawn." }
+implied_share_of_all_boxes = { value = 0.0, unit = "fraction", assumption = "Derived flat rack equipment share times loaded probability times conditional OOG probability." }
+[[oog.profiles]]
+id = "over_height"
+share = { value = 0.55, unit = "fraction_of_oog_boxes", assumption = "Synthetic geometry coverage mix; expert Q13." }
+over_height_m = { value = 0.5, unit = "m", assumption = "Synthetic overhang beyond equipment exterior; zero means no extension. Actual securing and slot rules await expert Q13." }
+over_width_each_side_m = { value = 0.0, unit = "m", assumption = "Synthetic overhang beyond equipment exterior; zero means no extension. Actual securing and slot rules await expert Q13." }
+over_length_each_end_m = { value = 0.0, unit = "m", assumption = "Synthetic overhang beyond equipment exterior; zero means no extension. Actual securing and slot rules await expert Q13." }
+[[oog.profiles]]
+id = "over_width"
+share = { value = 0.3, unit = "fraction_of_oog_boxes", assumption = "Synthetic geometry coverage mix; expert Q13." }
+over_height_m = { value = 0.0, unit = "m", assumption = "Synthetic overhang beyond equipment exterior; zero means no extension. Actual securing and slot rules await expert Q13." }
+over_width_each_side_m = { value = 0.25, unit = "m", assumption = "Synthetic overhang beyond equipment exterior; zero means no extension. Actual securing and slot rules await expert Q13." }
+over_length_each_end_m = { value = 0.0, unit = "m", assumption = "Synthetic overhang beyond equipment exterior; zero means no extension. Actual securing and slot rules await expert Q13." }
+[[oog.profiles]]
+id = "over_height_and_width"
+share = { value = 0.1, unit = "fraction_of_oog_boxes", assumption = "Synthetic geometry coverage mix; expert Q13." }
+over_height_m = { value = 0.5, unit = "m", assumption = "Synthetic overhang beyond equipment exterior; zero means no extension. Actual securing and slot rules await expert Q13." }
+over_width_each_side_m = { value = 0.25, unit = "m", assumption = "Synthetic overhang beyond equipment exterior; zero means no extension. Actual securing and slot rules await expert Q13." }
+over_length_each_end_m = { value = 0.0, unit = "m", assumption = "Synthetic overhang beyond equipment exterior; zero means no extension. Actual securing and slot rules await expert Q13." }
+
+[[oog.profiles]]
+id = "over_length"
+share = { value = 0.05, unit = "fraction_of_oog_boxes", assumption = "Synthetic overlength geometry coverage; expert Q13." }
+over_height_m = { value = 0.0, unit = "m", assumption = "No overheight in synthetic overlength profile." }
+over_width_each_side_m = { value = 0.0, unit = "m", assumption = "No overwidth in synthetic overlength profile." }
+over_length_each_end_m = { value = 0.3, unit = "m", assumption = "Synthetic extension at each end; securing and slot feasibility require expert Q13." }
+
+[[rotations]]
+id = "straits"
+port_calls = ["THLCH", "SGSIN", "MYPKG", "THLCH"]
+share = { value = 0.5, unit = "fraction_of_calls", assumption = "Synthetic scenario weight, not a service market share; choose one rotation per call." }
+assumption = "Synthetic closed regional route informed by public Thai context, not a named service. POD is discharge port including onward transshipment, never origin THLCH."
+[[rotations.pods]]
+port = "SGSIN"
+share = { value = 0.65, unit = "fraction_of_boxes_on_rotation", assumption = "Synthetic BOX-level POD mix; public port totals do not identify bilateral bookings. Expert Q8." }
+payload_weight_multiplier = { value = 0.95, unit = "dimensionless", assumption = "Synthetic POD PAYLOAD dependence before clipping: lighter hub mix, heavier Vietnam/Klang. No trade-data fit; expert Q2/Q8." }
+[[rotations.pods]]
+port = "MYPKG"
+share = { value = 0.35, unit = "fraction_of_boxes_on_rotation", assumption = "Synthetic BOX-level POD mix; public port totals do not identify bilateral bookings. Expert Q8." }
+payload_weight_multiplier = { value = 1.05, unit = "dimensionless", assumption = "Synthetic POD PAYLOAD dependence before clipping: lighter hub mix, heavier Vietnam/Klang. No trade-data fit; expert Q2/Q8." }
+
+[[rotations]]
+id = "vietnam_straits"
+port_calls = ["THLCH", "VNSGN", "SGSIN", "THLCH"]
+share = { value = 0.3, unit = "fraction_of_calls", assumption = "Synthetic scenario weight, not a service market share; choose one rotation per call." }
+assumption = "Synthetic closed regional route informed by public Thai context, not a named service. POD is discharge port including onward transshipment, never origin THLCH."
+[[rotations.pods]]
+port = "VNSGN"
+share = { value = 0.55, unit = "fraction_of_boxes_on_rotation", assumption = "Synthetic BOX-level POD mix; public port totals do not identify bilateral bookings. Expert Q8." }
+payload_weight_multiplier = { value = 1.05, unit = "dimensionless", assumption = "Synthetic POD PAYLOAD dependence before clipping: lighter hub mix, heavier Vietnam/Klang. No trade-data fit; expert Q2/Q8." }
+[[rotations.pods]]
+port = "SGSIN"
+share = { value = 0.45, unit = "fraction_of_boxes_on_rotation", assumption = "Synthetic BOX-level POD mix; public port totals do not identify bilateral bookings. Expert Q8." }
+payload_weight_multiplier = { value = 0.95, unit = "dimensionless", assumption = "Synthetic POD PAYLOAD dependence before clipping: lighter hub mix, heavier Vietnam/Klang. No trade-data fit; expert Q2/Q8." }
+
+[[rotations]]
+id = "south_china_vietnam"
+port_calls = ["THLCH", "HKHKG", "VNSGN", "THLCH"]
+share = { value = 0.2, unit = "fraction_of_calls", assumption = "Synthetic scenario weight, not a service market share; choose one rotation per call." }
+assumption = "Synthetic closed regional route informed by public Thai context, not a named service. POD is discharge port including onward transshipment, never origin THLCH."
+[[rotations.pods]]
+port = "HKHKG"
+share = { value = 0.6, unit = "fraction_of_boxes_on_rotation", assumption = "Synthetic BOX-level POD mix; public port totals do not identify bilateral bookings. Expert Q8." }
+payload_weight_multiplier = { value = 0.9, unit = "dimensionless", assumption = "Synthetic POD PAYLOAD dependence before clipping: lighter hub mix, heavier Vietnam/Klang. No trade-data fit; expert Q2/Q8." }
+[[rotations.pods]]
+port = "VNSGN"
+share = { value = 0.4, unit = "fraction_of_boxes_on_rotation", assumption = "Synthetic BOX-level POD mix; public port totals do not identify bilateral bookings. Expert Q8." }
+payload_weight_multiplier = { value = 1.05, unit = "dimensionless", assumption = "Synthetic POD PAYLOAD dependence before clipping: lighter hub mix, heavier Vietnam/Klang. No trade-data fit; expert Q2/Q8." }
+
+
+[[dg.segregation_pair_panels]]
+id = "flammable_water_reactive"
+classes = ["3", "4.3"]
+assumption = "APPROXIMATION: explicit 50:50 pair cohort for concentrated candidate presence. UN1263 paint and UN1402 calcium carbide require general segregation level2; actual DGL strengthening, final feasibility and whether separation binds are checker decisions."
+source = "IMO MSC.556(108), IMDG 7.2.4 table, PDF page487; DGL UN1263 and UN1402."
+
+[[dg.segregation_pair_panels]]
+id = "water_reactive_acid"
+classes = ["4.3", "8"]
+assumption = "APPROXIMATION: explicit 50:50 pair cohort. UN1402 calcium carbide and UN1789 hydrochloric acid require general segregation level1, strengthened to level2 by SG35 versus acid SGG1. Count final binding only from checker-admitted plans."
+source = "IMO MSC.556(108), IMDG 7.2.4 table, PDF page487; DGL UN1402 (SG35), UN1789 (SGG1); SG35 PDF page493 and SGG1 PDF page488."

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="910" viewBox="0 0 1200 910" role="img" aria-labelledby="title desc">
+<title id="title">Reader exact match on sealed v3</title>
+<desc id="desc">Recorded sealed-v3 reader counts and gate outcomes. The adopted reader passed R1 and missed R2 and R3.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif} line,rect,circle,path{vector-effect:non-scaling-stroke}</style>
+<rect width="1200" height="910" fill="#ffffff"/>
+<metadata id="chart-data">{&quot;facts&quot;: {&quot;adopted&quot;: {&quot;count&quot;: 128, &quot;exact_match_count&quot;: 118, &quot;exact_match_pct&quot;: 92.1875, &quot;false_acceptance_count&quot;: 1, &quot;loosening_count&quot;: 48}, &quot;gates&quot;: {&quot;R1&quot;: true, &quot;R2&quot;: false, &quot;R3&quot;: false, &quot;all_pass&quot;: false, &quot;criteria&quot;: {&quot;R1_min_exact_pct&quot;: 90, &quot;R2_max_false_acceptances&quot;: 0, &quot;R3_max_shortfall_from_spark_pp&quot;: 3, &quot;min_count&quot;: 120, &quot;min_loosening_count&quot;: 40}, &quot;difference_from_spark_pp&quot;: -6.25, &quot;gain_over_untrained_pp&quot;: 45.3125, &quot;spark_comparison&quot;: &quot;Fixed original sealed-v3 Spark reference; not rerun under the updated decoder.&quot;}, &quot;parser&quot;: {&quot;count&quot;: 128, &quot;exact_match_count&quot;: 90, &quot;exact_match_pct&quot;: 70.3125}, &quot;spark&quot;: {&quot;count&quot;: 128, &quot;exact_match_count&quot;: 126, &quot;exact_match_pct&quot;: 98.4375}, &quot;untrained&quot;: {&quot;count&quot;: 128, &quot;exact_match_count&quot;: 60, &quot;exact_match_pct&quot;: 46.875, &quot;false_acceptance_count&quot;: 0, &quot;loosening_count&quot;: 48}, &quot;v2&quot;: {&quot;count&quot;: 128, &quot;exact_match_count&quot;: 120, &quot;exact_match_pct&quot;: 93.75, &quot;false_acceptance_count&quot;: 2, &quot;loosening_count&quot;: 48}}, &quot;sources&quot;: [{&quot;path&quot;: &quot;experiments/mvp/reader/v3/results-final/final-adoption-d266.json&quot;, &quot;sha256&quot;: &quot;58f47abb91e7d36c905faa17262c130cd42429ecc4cbbeada86f7818944f3b78&quot;}, {&quot;path&quot;: &quot;experiments/mvp/reader/v3/results-final/sealed-summary.json&quot;, &quot;sha256&quot;: &quot;af418c22b95e575ae6b1d7335f0379dc69c0297ec2d6a9d2f0c9e74c3900287c&quot;}, {&quot;path&quot;: &quot;experiments/mvp/reader/v3/parser/sealed-v3-report.json&quot;, &quot;sha256&quot;: &quot;1b89bf29791e100b2c462a93c26e1c5b0975c22d39851097c2b770d6414cc44d&quot;}, {&quot;path&quot;: &quot;experiments/mvp/reader/v3/sealed/spark-summary.json&quot;, &quot;sha256&quot;: &quot;04db7db2bc4552967cc9dfb9f6d8aaa19a20c098045cf9969c6fc3c008dc7f09&quot;}, {&quot;path&quot;: &quot;docs/headline.md&quot;, &quot;sha256&quot;: &quot;48f8315729481c665f15807dc468911ac313ad7f71a07bad5e505573348f3d06&quot;}]}</metadata>
+<text x="36" y="47" font-size="29" fill="#17212b" text-anchor="start" font-weight="bold">Reader exact match on sealed v3</text>
+<text x="36" y="80" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">Locked before tuning; scored once. Recorded results. Synthetic ships and cargo, simulated port.</text>
+<text x="36" y="109" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">Glimmer: same model, same laptop, with and without fine-tuning, under the same mask.</text>
+<text x="36" y="140" font-size="17" fill="#70409A" text-anchor="start" font-weight="bold">Muse Spark reference: 126/128 (98.44%)</text>
+<text x="36" y="168" font-size="16" fill="#17212b" text-anchor="start" font-weight="normal">Fixed original Spark reference; not rerun under the updated decoder.</text>
+<line x1="285.0" y1="207" x2="285.0" y2="464" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="435.0" y1="207" x2="435.0" y2="464" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="585.0" y1="207" x2="585.0" y2="464" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="735.0" y1="207" x2="735.0" y2="464" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="885.0" y1="207" x2="885.0" y2="464" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="1035.0" y1="207" x2="1035.0" y2="464" stroke="#e1e6eb" stroke-width="1"/>
+<line x1="960.0" y1="204" x2="960.0" y2="464" stroke="#0072B2" stroke-width="2" stroke-dasharray="4 5"/>
+<line x1="1000.78125" y1="204" x2="1000.78125" y2="464" stroke="#B94B00" stroke-width="2" stroke-dasharray="2 5"/>
+<line x1="1023.28125" y1="204" x2="1023.28125" y2="464" stroke="#70409A" stroke-width="2.5" stroke-dasharray="9 5"/>
+<text x="36" y="256" font-size="20" fill="#17212b" text-anchor="start" font-weight="bold">Adopted v3 Reader</text>
+<rect x="285" y="233" width="691.40625" height="34" rx="3" fill="#0072B2" stroke="none"/>
+<text x="1156" y="256" font-size="20" fill="#17212b" text-anchor="end" font-weight="bold">118/128</text>
+<text x="1156" y="280" font-size="16" fill="#17212b" text-anchor="end" font-weight="normal">92.19%</text>
+<text x="36" y="341" font-size="20" fill="#17212b" text-anchor="start" font-weight="bold">Untrained Glimmer</text>
+<rect x="285" y="318" width="351.5625" height="34" rx="3" fill="#536574" stroke="none"/>
+<text x="1156" y="341" font-size="20" fill="#17212b" text-anchor="end" font-weight="bold">60/128</text>
+<text x="1156" y="365" font-size="16" fill="#17212b" text-anchor="end" font-weight="normal">46.88%</text>
+<text x="36" y="426" font-size="20" fill="#17212b" text-anchor="start" font-weight="bold">No-model parser</text>
+<rect x="285" y="403" width="527.34375" height="34" rx="3" fill="#B94B00" stroke="none"/>
+<text x="1156" y="426" font-size="20" fill="#17212b" text-anchor="end" font-weight="bold">90/128</text>
+<text x="1156" y="450" font-size="16" fill="#17212b" text-anchor="end" font-weight="normal">70.31%</text>
+<text x="36" y="199" font-size="16" fill="#17212b" text-anchor="start" font-weight="normal">Reader / comparator</text>
+<text x="1156" y="199" font-size="16" fill="#17212b" text-anchor="end" font-weight="normal">Exact / sentences</text>
+<line x1="285" y1="464" x2="1035" y2="464" stroke="#536574" stroke-width="1.5"/>
+<line x1="285.0" y1="464" x2="285.0" y2="470" stroke="#536574" stroke-width="1"/>
+<text x="285.0" y="492" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">0</text>
+<line x1="435.0" y1="464" x2="435.0" y2="470" stroke="#536574" stroke-width="1"/>
+<text x="435.0" y="492" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">20</text>
+<line x1="585.0" y1="464" x2="585.0" y2="470" stroke="#536574" stroke-width="1"/>
+<text x="585.0" y="492" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">40</text>
+<line x1="735.0" y1="464" x2="735.0" y2="470" stroke="#536574" stroke-width="1"/>
+<text x="735.0" y="492" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">60</text>
+<line x1="885.0" y1="464" x2="885.0" y2="470" stroke="#536574" stroke-width="1"/>
+<text x="885.0" y="492" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">80</text>
+<line x1="1035.0" y1="464" x2="1035.0" y2="470" stroke="#536574" stroke-width="1"/>
+<text x="1035.0" y="492" font-size="16" fill="#17212b" text-anchor="middle" font-weight="normal">100</text>
+<text x="660.0" y="525" font-size="18" fill="#17212b" text-anchor="middle" font-weight="normal">Exact-match sentences (%)</text>
+<rect x="36" y="550" width="1128" height="175" rx="8" fill="#f2f5f7" stroke="none"/>
+<text x="55" y="579" font-size="21" fill="#17212b" text-anchor="start" font-weight="bold">Adopted v3: passed the 90% gate; missed both stricter gates.</text>
+<line x1="58" y1="607" x2="93" y2="607" stroke="#0072B2" stroke-width="2" stroke-dasharray="4 5"/>
+<text x="109" y="613" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">R1 PASS: 92.19% exact; minimum 90% (blue dashed line).</text>
+<text x="58" y="650" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">R2 FAIL: 1/48 loosening sentences accepted; maximum 0 allowed.</text>
+<line x1="58" y1="680" x2="93" y2="680" stroke="#B94B00" stroke-width="2" stroke-dasharray="2 5"/>
+<text x="109" y="687" font-size="18" fill="#17212b" text-anchor="start" font-weight="normal">R3 FAIL: 6.25 points below Spark; maximum 3 allowed.</text>
+<text x="109" y="712" font-size="16" fill="#17212b" text-anchor="start" font-weight="normal">R3 minimum 95.44% exact (orange dotted line); Spark is purple, long dashed.</text>
+<text x="36" y="768" font-size="19" fill="#17212b" text-anchor="start" font-weight="bold">Adoption context (D266): v3 118/128, 1/48 loosening accepted; v2 120/128, 2/48 loosening accepted.</text>
+<text x="36" y="799" font-size="17" fill="#17212b" text-anchor="start" font-weight="normal">v3 was adopted for better refusal of unsupported sentences, with two fewer exact matches.</text>
+<text x="36" y="844" font-size="15" fill="#17212b" text-anchor="start" font-weight="normal">Sources: final-adoption-d266.json; sealed-summary.json; parser/sealed-v3-report.json; sealed/spark-summary.json.</text>
+<text x="36" y="871" font-size="15" fill="#17212b" text-anchor="start" font-weight="normal">Source paths and SHA-256 hashes are embedded and listed in the chart README.</text>
+</svg>

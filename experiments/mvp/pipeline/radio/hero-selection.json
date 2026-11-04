@@ -1,0 +1,125 @@
+{
+  "schema_version": "stowlm.hero-selection/1",
+  "decided": "2026-11-02 03:30 EST",
+  "rule": "D268 amended: first wording in hero-wordings.json order read exactly typed and from its radio transcript; template fallback",
+  "hero_sentence": "Nothing goes into bay nine on this call.",
+  "canonical_rule": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "close_bay",
+      "bay": 9
+    }
+  },
+  "clips": {
+    "clean": {
+      "wav_path": "audio/03-nothing-goes-into-bay-nine-on-this-call-f599610d-clean.wav",
+      "wav_sha256": "a86595baa4e19e0cf316ff159a5b243d1782ffba355208a1c703ba64a88f9a5d",
+      "duration_s": 2.952,
+      "transcript": "Nothing goes into Bay 9 on this call."
+    },
+    "radio": {
+      "wav_path": "audio/03-nothing-goes-into-bay-nine-on-this-call-f599610d-radio.wav",
+      "wav_sha256": "4b3608080c04e5db9ac6f0244682c9e07122b5eb57f6abbe4599456f7e264c93",
+      "duration_s": 2.952,
+      "transcript": "Nothing goes into Bay 9 on this call."
+    }
+  },
+  "reader": {
+    "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+    "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+    "name": "swa-last-5",
+    "adapter_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+    "decoding_policy": "reader-v3-schema-mask/2-d224"
+  },
+  "counts": {
+    "wordings": 8,
+    "typed_exact": 5,
+    "clean_transcript_exact": 5,
+    "radio_transcript_exact": 3,
+    "radio_transcripts_garbling_bay_9": 6,
+    "wrong_rules": 0,
+    "readings_total": 24,
+    "note": "Every reading that was not exact was a refusal; none produced a different rule. Counts of 8 hand-written wordings, chosen after reading: never a rate."
+  },
+  "per_wording": [
+    {
+      "sentence": "Keep bay 09 empty: that space is held for the next port.",
+      "typed_exact": false,
+      "clean_transcript": "Keep Bay Bayonine empty, that space is held for the next port.",
+      "clean_exact": false,
+      "radio_transcript": "Hiteo nine empty. That space is held for the next port.",
+      "radio_exact": false
+    },
+    {
+      "sentence": "Bay 09 has damaged cell guides, so load nothing there.",
+      "typed_exact": true,
+      "clean_transcript": "BO9 has damaged cell guides, so soloed nothing there.",
+      "clean_exact": false,
+      "radio_transcript": "ray 09 has 09 has damaged cell guides, so load nothing there.",
+      "radio_exact": false
+    },
+    {
+      "sentence": "Nothing goes into bay nine on this call.",
+      "typed_exact": true,
+      "clean_transcript": "Nothing goes into Bay 9 on this call.",
+      "clean_exact": true,
+      "radio_transcript": "Nothing goes into Bay 9 on this call.",
+      "radio_exact": true
+    },
+    {
+      "sentence": "Keep bay 09 empty this call, hold and deck.",
+      "typed_exact": false,
+      "clean_transcript": "Keep Bay nine empty this call hold and deck",
+      "clean_exact": true,
+      "radio_transcript": "keep bayo nine empty this call hold and debt",
+      "radio_exact": false
+    },
+    {
+      "sentence": "Planner, bay 09 is closed today.",
+      "typed_exact": true,
+      "clean_transcript": "Planner, Bayo Bayo Nine is closed today.",
+      "clean_exact": true,
+      "radio_transcript": "Planner 509 is closed today.",
+      "radio_exact": false
+    },
+    {
+      "sentence": "Leave bay 9 completely empty.",
+      "typed_exact": true,
+      "clean_transcript": "Leave Bay nine completely empty.",
+      "clean_exact": true,
+      "radio_transcript": "Leave they day nine completely empty.",
+      "radio_exact": false
+    },
+    {
+      "sentence": "Skip bay 09 entirely.",
+      "typed_exact": false,
+      "clean_transcript": "Skip Bayless entirely.",
+      "clean_exact": false,
+      "radio_transcript": "Skip Bayless nine entirely.",
+      "radio_exact": true
+    },
+    {
+      "sentence": "Do not load any containers in bay 09.",
+      "typed_exact": true,
+      "clean_transcript": "Do not load any containers in Bay 9.",
+      "clean_exact": true,
+      "radio_transcript": "Do not load any containers in Bay 09.",
+      "radio_exact": true
+    }
+  ],
+  "captions": {
+    "shot4": "Rule fixed before reading · 1 of 8 wordings (7 written + the template) · on this simulated line, 6 of 8 transcripts garbled \"bay 9\"",
+    "shot5": "Read on the laptop: 5 of 8 typed and 3 of 8 radio transcripts exact; every other one refused",
+    "audio_label": "Stock text-to-speech voice · simulated radio: band-limited, 12 dB noise",
+    "writeup_note": "The reader read only 3 of 6 typed wordings that used the zero-padded \"bay 09\", the usual written form (logic6). Counts of 8 hand-written wordings: never a rate."
+  },
+  "sources": {
+    "experiments/mvp/pipeline/radio/readings.json": "3c91845c37e89488d45f233eb51e9f056d99ab326bf3105871eea1682e144d43",
+    "experiments/mvp/pipeline/radio/manifest.json": "473adacf60316a87aa9e5ee125ea2d87afc30b5dd0f4a0883bbd3dc7f49a824a",
+    "experiments/mvp/pipeline/reader_final/readings/hero-candidates.json": "9fc8f99baf54a6da6630e9fa97ae5350688e0cc956d12b0efa9a03e403c184f8",
+    "experiments/mvp/pipeline/reader_final/readings/hero-readings.json": "be1447440049bd81c533bfcb0f4278362c1ee6771c0ebde20fa769923a3e9821",
+    "experiments/mvp/pipeline/lattice/hero-wordings.json": "624579896f6769cb96939503b7fa438a3a148501ffa38259a4ad4dcc194ccef3"
+  },
+  "revised": "2026-11-02 03:50 EST per experiments/review/v6/logic6.md"
+}

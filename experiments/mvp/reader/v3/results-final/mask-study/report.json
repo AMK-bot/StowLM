@@ -1,0 +1,53 @@
+{
+  "rule_sha256": "7c5da6ea27503946e28a8a8cb9f62c951068cfd0ea60290b89975a48c445c48a",
+  "sample_sha256": "f1bb4d3fbd0d87a7904babb680ea637276b47ce876937f1ec5d007b2705c0d64",
+  "adapter": {
+    "name": "swa-last-5",
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57"
+  },
+  "adapter_arm": {
+    "sentences": 200,
+    "recorded": 200,
+    "errors": 0,
+    "tokens": 6980,
+    "tokens_top_changed": 2,
+    "end_token_swaps_excluded": 200,
+    "sentences_top_changed": 2,
+    "sentences_real_block": 2,
+    "by_reason": {
+      "bay_not_on_ship": 0,
+      "tier_over_cap": 0,
+      "not_in_grammar": 2
+    },
+    "exact_match_count": 183,
+    "accepted_loosening": 0,
+    "loosening_rows": 18
+  },
+  "x4_absent_bay": {
+    "rows": 28,
+    "outcomes": {
+      "refused": 28
+    },
+    "mask_real_bay_examples": []
+  },
+  "x4_unsupported": {
+    "rows": 84,
+    "outcomes": {
+      "refused": 80,
+      "model_real_bay": 1,
+      "other_rule": 3
+    },
+    "mask_real_bay_examples": []
+  },
+  "wording": "Say illegal bays, never wrong bays: the mask knows the ship, not what was meant.",
+  "outcome": "adapter has real blocks",
+  "trace": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/xray/fixtures/real-block-trace.json",
+  "block_shown": {
+    "step": 27,
+    "token": "2",
+    "reason": "not_in_grammar",
+    "probability": 0.8884992820339425,
+    "chosen": "1"
+  }
+}

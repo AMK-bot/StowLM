@@ -1,0 +1,463 @@
+{
+  "adopted": {
+    "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+    "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+    "name": "swa-last-5",
+    "adapter_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+    "decoding_policy": "reader-v3-schema-mask/2-d224"
+  },
+  "timing": {
+    "sentences": 200,
+    "model_load_s": 2.543505208042916,
+    "first_sentence_s": 4.253033375018276,
+    "cold_start_s": 6.796538583061192,
+    "warm_median_s": 3.4370462500373833,
+    "warm_p90_s": 4.639892207982484,
+    "warm_mean_s": 3.6219045732140507
+  },
+  "d211_reading": {
+    "sentences": 12,
+    "scored": 12,
+    "correct": 8,
+    "unread": 0,
+    "no_expected_answer": 0
+  },
+  "demo_reading": {
+    "sentences": 89,
+    "scored": 83,
+    "correct": 82,
+    "unread": 0,
+    "no_expected_answer": 6
+  },
+  "voice_all_clips": {
+    "sentences": 100,
+    "scored": 100,
+    "correct": 66,
+    "unread": 0,
+    "no_expected_answer": 0
+  },
+  "wrong": [
+    {
+      "group": "d211",
+      "case": "max_tiers-05",
+      "sentence": "No containers on deck in bay 2.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 2,
+          "zone": "deck",
+          "max_tiers": 0
+        }
+      },
+      "demo": false,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 2
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":2}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "cb166c2430294ec67b3aab225caffafd7e147b7544dad6895f7cce90e2a9f7d7",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.3941014999873005
+      }
+    },
+    {
+      "group": "d211",
+      "case": "dg_keep_away-01",
+      "sentence": "Class 3 — sorry, class 8 — one bay from bay 1 at minimum.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 1
+          }
+        }
+      },
+      "demo": false,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "ambiguous",
+          "reason": "The instruction is uncertain or ambiguous."
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "880ac14f15522af9456b326953381caef98109f02f554de68839718e4365c1bd",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.171123790962156
+      }
+    },
+    {
+      "group": "d211",
+      "case": "dg_keep_away-02",
+      "sentence": "Class 3 — sorry, class 8 — one bay from bay 1 at minimum.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 1
+          }
+        }
+      },
+      "demo": false,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "ambiguous",
+          "reason": "The instruction is uncertain or ambiguous."
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "4a31ce4406a5779fdd6a880740fcce41f2ba7a0a04a3306257045813fda806a2",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.083462208043784
+      }
+    },
+    {
+      "group": "d211",
+      "case": "dg_keep_away-04",
+      "sentence": "Class 3 — sorry, class 8 — one bay from bay 1 at minimum.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 1
+          }
+        }
+      },
+      "demo": false,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "ambiguous",
+          "reason": "The instruction is uncertain or ambiguous."
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "57f1d6d31b99153c61a3e6fd60831b11ce84d387805d75b8935d73794e0531f0",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.1703837079694495
+      }
+    },
+    {
+      "group": "voice-clean",
+      "case": "th-reader-031e722e98863ad8-clean",
+      "sentence": "บอลดาดฟ้าของเบสิบให้ซ้อนตู้สินค้าได้ไม่เกินสามสามชั้น",
+      "expected": {
+        "constraint": {
+          "bay": 10,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "unsupported",
+          "reason": "The instruction is outside the supported vessel or vocabulary."
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "b6e4238a80bcc420bfc5b6a37bb8362956d0b4661b46cd911dce6d1aa48f5e0a",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.1239802920026705
+      }
+    }
+  ],
+  "plans": [
+    {
+      "case": "close_bay-01",
+      "status": "checked_plan",
+      "passed": true,
+      "lifts": 8.0,
+      "level": 0,
+      "wall_s": 55.612902875000145,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 8.0,
+      "d211_passed": true,
+      "message": "Plan passed the full checker and every confirmed instruction recheck. First legal plan: 29.4 s; total wall time: 55.6 s.",
+      "fresh_checker": true,
+      "fresh_rule_violations": 0,
+      "base_fresh_checker": true,
+      "base_broke_rule": true,
+      "plan_changed": true,
+      "binding": true,
+      "sentence": "Bay 01 is closed to all loading until further notice.",
+      "reading_correct": true
+    },
+    {
+      "case": "close_bay-03",
+      "status": "checked_plan",
+      "passed": true,
+      "lifts": 8.0,
+      "level": 0,
+      "wall_s": 56.53921662498033,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 8.0,
+      "d211_passed": true,
+      "message": "Plan passed the full checker and every confirmed instruction recheck. First legal plan: 30.7 s; total wall time: 56.5 s.",
+      "fresh_checker": true,
+      "fresh_rule_violations": 0,
+      "base_fresh_checker": true,
+      "base_broke_rule": true,
+      "plan_changed": true,
+      "binding": true,
+      "sentence": "Bay 01 is closed to all loading until further notice.",
+      "reading_correct": true
+    },
+    {
+      "case": "close_bay-05",
+      "status": "checked_plan",
+      "passed": true,
+      "lifts": 6.0,
+      "level": 0,
+      "wall_s": 56.78559599997243,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 6.0,
+      "d211_passed": true,
+      "message": "Plan passed the full checker and every confirmed instruction recheck. First legal plan: 30.6 s; total wall time: 56.8 s.",
+      "fresh_checker": true,
+      "fresh_rule_violations": 0,
+      "base_fresh_checker": true,
+      "base_broke_rule": true,
+      "plan_changed": true,
+      "binding": true,
+      "sentence": "Bay 01 is closed to all loading until further notice.",
+      "reading_correct": true
+    },
+    {
+      "case": "max_tiers-01",
+      "status": "checked_plan",
+      "passed": true,
+      "lifts": 8.0,
+      "level": 0,
+      "wall_s": 57.762601541006006,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 8.0,
+      "d211_passed": true,
+      "message": "Plan passed the full checker and every confirmed instruction recheck. First legal plan: 31.7 s; total wall time: 57.8 s.",
+      "fresh_checker": true,
+      "fresh_rule_violations": 0,
+      "base_fresh_checker": true,
+      "base_broke_rule": true,
+      "plan_changed": true,
+      "binding": true,
+      "sentence": "Zero tiers in the hold of bay 3 — nothing below the hatch there.",
+      "reading_correct": true
+    },
+    {
+      "case": "max_tiers-03",
+      "status": "checked_plan",
+      "passed": true,
+      "lifts": 8.0,
+      "level": 0,
+      "wall_s": 81.00458320899634,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 8.0,
+      "d211_passed": true,
+      "message": "Plan passed the full checker and every confirmed instruction recheck. First legal plan: 54.5 s; total wall time: 81.0 s.",
+      "fresh_checker": true,
+      "fresh_rule_violations": 0,
+      "base_fresh_checker": true,
+      "base_broke_rule": true,
+      "plan_changed": true,
+      "binding": true,
+      "sentence": "Zero tiers in the hold of bay 3 — nothing below the hatch there.",
+      "reading_correct": true
+    },
+    {
+      "case": "max_tiers-05",
+      "status": "needs_confirmation",
+      "passed": false,
+      "lifts": null,
+      "level": null,
+      "wall_s": 4.287947250006255,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 6.0,
+      "d211_passed": true,
+      "message": "Confirm each reading, or correct or remove unresolved voyage sentences, then rerun. First legal plan: not found; total wall time: 4.3 s.",
+      "sentence": "No containers on deck in bay 2.",
+      "reading_correct": false
+    },
+    {
+      "case": "dg_keep_away-01",
+      "status": "needs_confirmation",
+      "passed": false,
+      "lifts": null,
+      "level": null,
+      "wall_s": 4.177212624985259,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 4.0,
+      "d211_passed": true,
+      "message": "Confirm each reading, or correct or remove unresolved voyage sentences, then rerun. First legal plan: not found; total wall time: 4.2 s.",
+      "sentence": "Class 3 — sorry, class 8 — one bay from bay 1 at minimum.",
+      "reading_correct": false
+    },
+    {
+      "case": "dg_keep_away-02",
+      "status": "needs_confirmation",
+      "passed": false,
+      "lifts": null,
+      "level": null,
+      "wall_s": 2.8341260839952156,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 7.0,
+      "d211_passed": false,
+      "message": "Confirm each reading, or correct or remove unresolved voyage sentences, then rerun. First legal plan: not found; total wall time: 2.8 s.",
+      "sentence": "Class 3 — sorry, class 8 — one bay from bay 1 at minimum.",
+      "reading_correct": false
+    },
+    {
+      "case": "dg_keep_away-04",
+      "status": "needs_confirmation",
+      "passed": false,
+      "lifts": null,
+      "level": null,
+      "wall_s": 3.394802625000011,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 12.0,
+      "d211_passed": true,
+      "message": "Confirm each reading, or correct or remove unresolved voyage sentences, then rerun. First legal plan: not found; total wall time: 3.4 s.",
+      "sentence": "Class 3 — sorry, class 8 — one bay from bay 1 at minimum.",
+      "reading_correct": false
+    },
+    {
+      "case": "one_port_per_hatch-01",
+      "status": "checked_plan",
+      "passed": true,
+      "lifts": 10.0,
+      "level": 0,
+      "wall_s": 539.3971378750284,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 9.0,
+      "d211_passed": true,
+      "message": "Plan passed the full checker and every confirmed instruction recheck. First legal plan: 198.8 s; total wall time: 539.4 s.",
+      "fresh_checker": true,
+      "fresh_rule_violations": 0,
+      "base_fresh_checker": true,
+      "base_broke_rule": true,
+      "plan_changed": true,
+      "binding": true,
+      "sentence": "One port per hatch.",
+      "reading_correct": true
+    },
+    {
+      "case": "one_port_per_hatch-04",
+      "status": "checked_plan",
+      "passed": true,
+      "lifts": 15.0,
+      "level": 0,
+      "wall_s": 314.79017166700214,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 15.0,
+      "d211_passed": false,
+      "message": "Plan passed the full checker and every confirmed instruction recheck. First legal plan: 303.9 s; total wall time: 314.8 s.",
+      "fresh_checker": true,
+      "fresh_rule_violations": 0,
+      "base_fresh_checker": true,
+      "base_broke_rule": true,
+      "plan_changed": true,
+      "binding": true,
+      "sentence": "One port per hatch.",
+      "reading_correct": true
+    },
+    {
+      "case": "one_port_per_hatch-05",
+      "status": "checked_plan",
+      "passed": true,
+      "lifts": 9.0,
+      "level": 0,
+      "wall_s": 547.9247678329702,
+      "base_status": "stored_frontier_0.9",
+      "base_lifts": 10.0,
+      "d211_passed": true,
+      "message": "Plan passed the full checker and every confirmed instruction recheck. First legal plan: 212.5 s; total wall time: 547.9 s.",
+      "fresh_checker": true,
+      "fresh_rule_violations": 0,
+      "base_fresh_checker": true,
+      "base_broke_rule": true,
+      "plan_changed": true,
+      "binding": true,
+      "sentence": "One port per hatch.",
+      "reading_correct": true
+    }
+  ]
+}

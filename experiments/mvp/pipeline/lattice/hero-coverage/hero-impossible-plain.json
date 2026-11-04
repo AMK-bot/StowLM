@@ -1,0 +1,2280 @@
+{
+  "arithmetic_proof": {
+    "all_requested_rules": {
+      "capacity_shortfall": true,
+      "cells_allowed": 96,
+      "cells_needed": 143,
+      "equation": "143 needed > 96 allowed",
+      "public_proof": {
+        "checker_called": false,
+        "checker_report": null,
+        "constraint": {
+          "constraint": {
+            "bay": null,
+            "max_tiers": 1,
+            "type": "max_tiers",
+            "zone": "deck"
+          },
+          "schema_version": "stowlm.reader/2"
+        },
+        "demand_cells": 143,
+        "demand_teu": 143,
+        "load_box_count": 87,
+        "load_boxes": [
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000009",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000014",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000020",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000035",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000040",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000061",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000077",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000082",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000098",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000122",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000138",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000143",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000159",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000185",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000204",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000210",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000225",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000230",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000246",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000251",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000267",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000272",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000288",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000307",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000312",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000328",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000349",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000354",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000360",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000375",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000380",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000396",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000400",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000415",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000420",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000436",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000441",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 18,
+            "container_id": "QZXU0000462",
+            "demand_cells": 2,
+            "length_ft": 45,
+            "size_compatible_footprints": 90
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000478",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000499",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000502",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000518",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000539",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000550",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000565",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000586",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000591",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000610",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000631",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000647",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000673",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000689",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000708",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000713",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000734",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000740",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000760",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000776",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000797",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000800",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000821",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000842",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000858",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000863",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000884",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000890",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000903",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000930",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000950",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000966",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000971",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000987",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000992",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0001005",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001010",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001031",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001047",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001052",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001089",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001094",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001113",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001129",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001134",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001140",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001155",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001176",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001200",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          }
+        ],
+        "nofit_ids": [],
+        "open_cells": 96,
+        "per_box_open_cells": {
+          "QZXU0000009": 96,
+          "QZXU0000014": 96,
+          "QZXU0000020": 96,
+          "QZXU0000035": 96,
+          "QZXU0000040": 96,
+          "QZXU0000061": 96,
+          "QZXU0000077": 96,
+          "QZXU0000082": 96,
+          "QZXU0000098": 96,
+          "QZXU0000122": 96,
+          "QZXU0000138": 96,
+          "QZXU0000143": 96,
+          "QZXU0000159": 96,
+          "QZXU0000185": 96,
+          "QZXU0000204": 96,
+          "QZXU0000210": 96,
+          "QZXU0000225": 96,
+          "QZXU0000230": 96,
+          "QZXU0000246": 96,
+          "QZXU0000251": 96,
+          "QZXU0000267": 96,
+          "QZXU0000272": 96,
+          "QZXU0000288": 96,
+          "QZXU0000307": 96,
+          "QZXU0000312": 96,
+          "QZXU0000328": 96,
+          "QZXU0000349": 96,
+          "QZXU0000354": 96,
+          "QZXU0000360": 96,
+          "QZXU0000375": 96,
+          "QZXU0000380": 96,
+          "QZXU0000396": 96,
+          "QZXU0000400": 96,
+          "QZXU0000415": 96,
+          "QZXU0000420": 96,
+          "QZXU0000436": 96,
+          "QZXU0000441": 96,
+          "QZXU0000462": 96,
+          "QZXU0000478": 96,
+          "QZXU0000499": 96,
+          "QZXU0000502": 96,
+          "QZXU0000518": 96,
+          "QZXU0000539": 96,
+          "QZXU0000550": 96,
+          "QZXU0000565": 96,
+          "QZXU0000586": 96,
+          "QZXU0000591": 96,
+          "QZXU0000610": 96,
+          "QZXU0000631": 96,
+          "QZXU0000647": 96,
+          "QZXU0000673": 96,
+          "QZXU0000689": 96,
+          "QZXU0000708": 96,
+          "QZXU0000713": 96,
+          "QZXU0000734": 96,
+          "QZXU0000740": 96,
+          "QZXU0000760": 96,
+          "QZXU0000776": 96,
+          "QZXU0000797": 96,
+          "QZXU0000800": 96,
+          "QZXU0000821": 96,
+          "QZXU0000842": 96,
+          "QZXU0000858": 96,
+          "QZXU0000863": 96,
+          "QZXU0000884": 96,
+          "QZXU0000890": 96,
+          "QZXU0000903": 96,
+          "QZXU0000930": 96,
+          "QZXU0000950": 96,
+          "QZXU0000966": 96,
+          "QZXU0000971": 96,
+          "QZXU0000987": 96,
+          "QZXU0000992": 96,
+          "QZXU0001005": 96,
+          "QZXU0001010": 96,
+          "QZXU0001031": 96,
+          "QZXU0001047": 96,
+          "QZXU0001052": 96,
+          "QZXU0001089": 96,
+          "QZXU0001094": 96,
+          "QZXU0001113": 96,
+          "QZXU0001129": 96,
+          "QZXU0001134": 96,
+          "QZXU0001140": 96,
+          "QZXU0001155": 96,
+          "QZXU0001176": 96,
+          "QZXU0001200": 96
+        },
+        "physical_cells": 240,
+        "planning_attempted": false,
+        "proof_reasons": [
+          "total_open_cell_shortfall"
+        ],
+        "proven_impossible": true,
+        "retained_conflicts": [],
+        "scope": "necessary geometry only; screen pass does not guarantee a plan"
+      },
+      "shortfall_cells": 47
+    },
+    "arithmetic_rechecked": true,
+    "recorded_arithmetic": {
+      "checker_called": false,
+      "checker_report": null,
+      "constraint": {
+        "constraint": {
+          "bay": null,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demand_cells": 143,
+      "demand_teu": 143,
+      "load_box_count": 87,
+      "load_boxes": [
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000009",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000014",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000020",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000035",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000040",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000061",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000077",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000082",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000098",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000122",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000138",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000143",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000159",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000185",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000204",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000210",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000225",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000230",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000246",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000251",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000267",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000272",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000288",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000307",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000312",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000328",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000349",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000354",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000360",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000375",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000380",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000396",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000400",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000415",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000420",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000436",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000441",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 18,
+          "container_id": "QZXU0000462",
+          "demand_cells": 2,
+          "length_ft": 45,
+          "size_compatible_footprints": 90
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000478",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000499",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000502",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000518",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000539",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000550",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000565",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000586",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000591",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000610",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000631",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000647",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000673",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000689",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000708",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000713",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000734",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000740",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000760",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000776",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000797",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000800",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000821",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000842",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000858",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000863",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000884",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000890",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000903",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000930",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000950",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0000966",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000971",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000987",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0000992",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 96,
+          "container_id": "QZXU0001005",
+          "demand_cells": 1,
+          "length_ft": 20,
+          "size_compatible_footprints": 240
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001010",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001031",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001047",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001052",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001089",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001094",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001113",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001129",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001134",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001140",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001155",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001176",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        },
+        {
+          "allowed_footprints": 48,
+          "container_id": "QZXU0001200",
+          "demand_cells": 2,
+          "length_ft": 40,
+          "size_compatible_footprints": 120
+        }
+      ],
+      "nofit_ids": [],
+      "open_cells": 96,
+      "per_box_open_cells": {
+        "QZXU0000009": 96,
+        "QZXU0000014": 96,
+        "QZXU0000020": 96,
+        "QZXU0000035": 96,
+        "QZXU0000040": 96,
+        "QZXU0000061": 96,
+        "QZXU0000077": 96,
+        "QZXU0000082": 96,
+        "QZXU0000098": 96,
+        "QZXU0000122": 96,
+        "QZXU0000138": 96,
+        "QZXU0000143": 96,
+        "QZXU0000159": 96,
+        "QZXU0000185": 96,
+        "QZXU0000204": 96,
+        "QZXU0000210": 96,
+        "QZXU0000225": 96,
+        "QZXU0000230": 96,
+        "QZXU0000246": 96,
+        "QZXU0000251": 96,
+        "QZXU0000267": 96,
+        "QZXU0000272": 96,
+        "QZXU0000288": 96,
+        "QZXU0000307": 96,
+        "QZXU0000312": 96,
+        "QZXU0000328": 96,
+        "QZXU0000349": 96,
+        "QZXU0000354": 96,
+        "QZXU0000360": 96,
+        "QZXU0000375": 96,
+        "QZXU0000380": 96,
+        "QZXU0000396": 96,
+        "QZXU0000400": 96,
+        "QZXU0000415": 96,
+        "QZXU0000420": 96,
+        "QZXU0000436": 96,
+        "QZXU0000441": 96,
+        "QZXU0000462": 96,
+        "QZXU0000478": 96,
+        "QZXU0000499": 96,
+        "QZXU0000502": 96,
+        "QZXU0000518": 96,
+        "QZXU0000539": 96,
+        "QZXU0000550": 96,
+        "QZXU0000565": 96,
+        "QZXU0000586": 96,
+        "QZXU0000591": 96,
+        "QZXU0000610": 96,
+        "QZXU0000631": 96,
+        "QZXU0000647": 96,
+        "QZXU0000673": 96,
+        "QZXU0000689": 96,
+        "QZXU0000708": 96,
+        "QZXU0000713": 96,
+        "QZXU0000734": 96,
+        "QZXU0000740": 96,
+        "QZXU0000760": 96,
+        "QZXU0000776": 96,
+        "QZXU0000797": 96,
+        "QZXU0000800": 96,
+        "QZXU0000821": 96,
+        "QZXU0000842": 96,
+        "QZXU0000858": 96,
+        "QZXU0000863": 96,
+        "QZXU0000884": 96,
+        "QZXU0000890": 96,
+        "QZXU0000903": 96,
+        "QZXU0000930": 96,
+        "QZXU0000950": 96,
+        "QZXU0000966": 96,
+        "QZXU0000971": 96,
+        "QZXU0000987": 96,
+        "QZXU0000992": 96,
+        "QZXU0001005": 96,
+        "QZXU0001010": 96,
+        "QZXU0001031": 96,
+        "QZXU0001047": 96,
+        "QZXU0001052": 96,
+        "QZXU0001089": 96,
+        "QZXU0001094": 96,
+        "QZXU0001113": 96,
+        "QZXU0001129": 96,
+        "QZXU0001134": 96,
+        "QZXU0001140": 96,
+        "QZXU0001155": 96,
+        "QZXU0001176": 96,
+        "QZXU0001200": 96
+      },
+      "physical_cells": 240,
+      "planning_attempted": false,
+      "proof_reasons": [
+        "total_open_cell_shortfall"
+      ],
+      "proven_impossible": true,
+      "retained_conflicts": [],
+      "scope": "necessary geometry only; screen pass does not guarantee a plan"
+    },
+    "scope": "Recorded numbers apply to the sufficient subset, not necessarily every requested rule combined. An impossible subset also proves the full request impossible.",
+    "sufficient_rule_subset": {
+      "canonical_rules": [
+        {
+          "constraint": {
+            "bay": null,
+            "max_tiers": 1,
+            "type": "max_tiers",
+            "zone": "deck"
+          },
+          "schema_version": "stowlm.reader/2"
+        }
+      ],
+      "capacity_shortfall": true,
+      "cells_allowed": 96,
+      "cells_needed": 143,
+      "equation": "143 needed > 96 allowed",
+      "public_proof": {
+        "checker_called": false,
+        "checker_report": null,
+        "constraint": {
+          "constraint": {
+            "bay": null,
+            "max_tiers": 1,
+            "type": "max_tiers",
+            "zone": "deck"
+          },
+          "schema_version": "stowlm.reader/2"
+        },
+        "demand_cells": 143,
+        "demand_teu": 143,
+        "load_box_count": 87,
+        "load_boxes": [
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000009",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000014",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000020",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000035",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000040",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000061",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000077",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000082",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000098",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000122",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000138",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000143",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000159",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000185",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000204",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000210",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000225",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000230",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000246",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000251",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000267",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000272",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000288",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000307",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000312",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000328",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000349",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000354",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000360",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000375",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000380",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000396",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000400",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000415",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000420",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000436",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000441",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 18,
+            "container_id": "QZXU0000462",
+            "demand_cells": 2,
+            "length_ft": 45,
+            "size_compatible_footprints": 90
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000478",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000499",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000502",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000518",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000539",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000550",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000565",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000586",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000591",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000610",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000631",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000647",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000673",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000689",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000708",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000713",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000734",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000740",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000760",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000776",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000797",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000800",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000821",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000842",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000858",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000863",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000884",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000890",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000903",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000930",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000950",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0000966",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000971",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000987",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0000992",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 96,
+            "container_id": "QZXU0001005",
+            "demand_cells": 1,
+            "length_ft": 20,
+            "size_compatible_footprints": 240
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001010",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001031",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001047",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001052",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001089",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001094",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001113",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001129",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001134",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001140",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001155",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001176",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          },
+          {
+            "allowed_footprints": 48,
+            "container_id": "QZXU0001200",
+            "demand_cells": 2,
+            "length_ft": 40,
+            "size_compatible_footprints": 120
+          }
+        ],
+        "nofit_ids": [],
+        "open_cells": 96,
+        "per_box_open_cells": {
+          "QZXU0000009": 96,
+          "QZXU0000014": 96,
+          "QZXU0000020": 96,
+          "QZXU0000035": 96,
+          "QZXU0000040": 96,
+          "QZXU0000061": 96,
+          "QZXU0000077": 96,
+          "QZXU0000082": 96,
+          "QZXU0000098": 96,
+          "QZXU0000122": 96,
+          "QZXU0000138": 96,
+          "QZXU0000143": 96,
+          "QZXU0000159": 96,
+          "QZXU0000185": 96,
+          "QZXU0000204": 96,
+          "QZXU0000210": 96,
+          "QZXU0000225": 96,
+          "QZXU0000230": 96,
+          "QZXU0000246": 96,
+          "QZXU0000251": 96,
+          "QZXU0000267": 96,
+          "QZXU0000272": 96,
+          "QZXU0000288": 96,
+          "QZXU0000307": 96,
+          "QZXU0000312": 96,
+          "QZXU0000328": 96,
+          "QZXU0000349": 96,
+          "QZXU0000354": 96,
+          "QZXU0000360": 96,
+          "QZXU0000375": 96,
+          "QZXU0000380": 96,
+          "QZXU0000396": 96,
+          "QZXU0000400": 96,
+          "QZXU0000415": 96,
+          "QZXU0000420": 96,
+          "QZXU0000436": 96,
+          "QZXU0000441": 96,
+          "QZXU0000462": 96,
+          "QZXU0000478": 96,
+          "QZXU0000499": 96,
+          "QZXU0000502": 96,
+          "QZXU0000518": 96,
+          "QZXU0000539": 96,
+          "QZXU0000550": 96,
+          "QZXU0000565": 96,
+          "QZXU0000586": 96,
+          "QZXU0000591": 96,
+          "QZXU0000610": 96,
+          "QZXU0000631": 96,
+          "QZXU0000647": 96,
+          "QZXU0000673": 96,
+          "QZXU0000689": 96,
+          "QZXU0000708": 96,
+          "QZXU0000713": 96,
+          "QZXU0000734": 96,
+          "QZXU0000740": 96,
+          "QZXU0000760": 96,
+          "QZXU0000776": 96,
+          "QZXU0000797": 96,
+          "QZXU0000800": 96,
+          "QZXU0000821": 96,
+          "QZXU0000842": 96,
+          "QZXU0000858": 96,
+          "QZXU0000863": 96,
+          "QZXU0000884": 96,
+          "QZXU0000890": 96,
+          "QZXU0000903": 96,
+          "QZXU0000930": 96,
+          "QZXU0000950": 96,
+          "QZXU0000966": 96,
+          "QZXU0000971": 96,
+          "QZXU0000987": 96,
+          "QZXU0000992": 96,
+          "QZXU0001005": 96,
+          "QZXU0001010": 96,
+          "QZXU0001031": 96,
+          "QZXU0001047": 96,
+          "QZXU0001052": 96,
+          "QZXU0001089": 96,
+          "QZXU0001094": 96,
+          "QZXU0001113": 96,
+          "QZXU0001129": 96,
+          "QZXU0001134": 96,
+          "QZXU0001140": 96,
+          "QZXU0001155": 96,
+          "QZXU0001176": 96,
+          "QZXU0001200": 96
+        },
+        "physical_cells": 240,
+        "planning_attempted": false,
+        "proof_reasons": [
+          "total_open_cell_shortfall"
+        ],
+        "proven_impossible": true,
+        "retained_conflicts": [],
+        "scope": "necessary geometry only; screen pass does not guarantee a plan"
+      },
+      "shortfall_cells": 47
+    }
+  },
+  "available": true,
+  "canonical_rules": [
+    {
+      "constraint": {
+        "bay": null,
+        "max_tiers": 1,
+        "type": "max_tiers",
+        "zone": "deck"
+      },
+      "schema_version": "stowlm.reader/2"
+    }
+  ],
+  "checker_called": false,
+  "coverage_manifest_source": {
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/lattice/hero-coverage/manifest.json",
+    "raw_sha256": "3f9e51fd8dbf8cbd3626f088bf32d1eba7b224975dc69641b7c529e9154a9b50"
+  },
+  "eligible_stored_refusals": 3,
+  "fresh_native_verification": false,
+  "hatch_allocator_called": false,
+  "hero_source": {
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/lattice/hero.json",
+    "raw_sha256": "ff3ffdbb08ddf88595b7be53294bd1c2c41a9140ddfea2207b6116dacde9d6d4"
+  },
+  "id": "hero-coverage-deck-4313cb975de6",
+  "implementation_sha256": "d9168bd7ac34c2c307b762e0290327d997aa89499134934a2e5cc5ef9db6e470",
+  "instance_sha256": "cabff3d68d56e64ba9956761bcd0ca2abfa5077d41296db35b630efc11b04678",
+  "key": "4313cb975de66daed1c87a94a412765be21e636bc9c87e6e188ed1d1c035c9e5",
+  "mode": "stored",
+  "number_source_fields": {
+    "cells_allowed": "/proof/arithmetic/open_cells",
+    "cells_needed": "/proof/arithmetic/demand_cells",
+    "refusal_kind": "/binding_evidence/refusal_kind",
+    "sentence": "/sentences"
+  },
+  "numbers": {
+    "cells_allowed": 96,
+    "cells_needed": 143,
+    "shortfall_cells": 47,
+    "units": "physical footprint cells (20-foot equivalents)"
+  },
+  "planner_called": false,
+  "queued_capacity_refusals": [],
+  "refreshed_utc": "2026-11-02T18:59:15.222977+00:00",
+  "refusal_kind": "proved_full_load",
+  "rejected": [],
+  "schema_version": "stowlm.hero-impossible/1",
+  "sentence": "In every bay, use at most 1 occupied tiers per deck stack.",
+  "sentences": [
+    "In every bay, use at most 1 occupied tiers per deck stack."
+  ],
+  "source": {
+    "binding_source_after_sha256": "9fbd6d4bb006bdb8e4f9e04c25b0eb2990324cd431dc2f60088826dcc0743fec",
+    "binding_source_sha256": "9fbd6d4bb006bdb8e4f9e04c25b0eb2990324cd431dc2f60088826dcc0743fec",
+    "catalogue_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/lattice/store/catalogue.json",
+    "catalogue_sha256": "963ddcf6d3fa2efa6e812814aed3d1b36a90f2a499f6654d28f68342beee1343",
+    "computed_utc": "2026-11-02T09:28:10.868353+00:00",
+    "engine_manifest_sha256": "d4febd15222fd783584ddbffb8003d5e281baa7f7de95cb4aa5be7d536f0705b",
+    "engine_version": "0.13.0",
+    "instance_sha256": "cabff3d68d56e64ba9956761bcd0ca2abfa5077d41296db35b630efc11b04678",
+    "key": "4313cb975de66daed1c87a94a412765be21e636bc9c87e6e188ed1d1c035c9e5",
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/lattice/store/4313cb975de66daed1c87a94a412765be21e636bc9c87e6e188ed1d1c035c9e5.json",
+    "raw_sha256": "f76bbe422ae1701d42298696a62aafc7f6fbab443d8516383231c6a82104c226",
+    "reason": {
+      "binding_evidence_reason": "the load list needs 143 TEU of cells but only 96 remain open (144 closed by the instruction)",
+      "proof_reason": "the load list needs 143 TEU of cells but only 96 remain open (144 closed by the instruction)"
+    },
+    "status": "proved_refusal"
+  },
+  "status": "stored_proved_refusal",
+  "stored_refusal_kind": "proved_full_load"
+}

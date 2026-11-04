@@ -1,0 +1,83 @@
+"""Complete D320A identity inventory with explicit recorded seed arrays/ranges."""
+from __future__ import annotations
+import hashlib,json,os
+from pathlib import Path
+HOME=Path(__file__).resolve().parent;ROOT=HOME.parents[5]
+class Pairs(list):pass
+
+def seed_records(value):
+ seeds=set();ranges=[]
+ def integer(value):return type(value) is int and value>=0
+ def fields(node):return dict(node) if isinstance(node,Pairs) else {}
+ def interval(node,trail):
+  found=fields(node)
+  if found:
+   lows=[value for key,value in node if key in ('start','first','min','lower','seed_start','start_seed') and integer(value)]
+   low=min(lows) if lows else None
+   highs=[value for key,value in node if key in ('end','last','max','upper','seed_end','end_seed') and integer(value)]
+   high=max(highs) if highs else None
+   stop=next((found[k] for k in ('stop','end_exclusive') if k in found and integer(found[k])),None)
+   if high is None and stop is not None:high=stop-1
+   if high is None and low is not None and integer(found.get('count')):
+    step=found.get('step',found.get('stride',1))
+    if integer(step):high=low+max(0,found['count']-1)*step
+   if low is not None and high is not None and low<=high:
+    ranges.append(dict(start=low,end_inclusive=high,json_path=trail,interpretation='conservative inclusive recorded bound; no expansion'));return True
+  elif isinstance(node,list) and len(node)==2 and all(integer(x) for x in node):
+   low,high=node
+   if low<=high:ranges.append(dict(start=low,end_inclusive=high,json_path=trail,interpretation='two-element declared range treated inclusive conservatively'));return True
+  return False
+ def walk(node,trail='',seed_context=False,range_context=False):
+  if range_context and interval(node,trail):return
+  if isinstance(node,Pairs):
+   for key,child in node:
+    normalized=str(key).lower().replace('-','_')
+    range_key='seed' in normalized and any(term in normalized for term in ('range','interval'))
+    seed_key=(normalized in ('seed','root_seed','parent_seed','seeds','root_seeds','parent_seeds') or normalized.endswith('_seeds'))
+    if seed_key and integer(child):seeds.add(child)
+    walk(child,trail+'/'+str(key),seed_context or seed_key,range_context or range_key)
+  elif isinstance(node,list):
+   for index,child in enumerate(node):
+    if seed_context and integer(child):seeds.add(child)
+    else:walk(child,trail+'/'+str(index),seed_context,range_context)
+  elif seed_context and integer(node):seeds.add(node)
+ walk(value)
+ return seeds,ranges
+
+def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def atomic(path,value):
+ tmp=path.with_name(path.name+'.structural.tmp');tmp.write_text(json.dumps(value,indent=2)+'\n');os.replace(tmp,path)
+def main():
+ proof_path=HOME/'map-seed-proof.json';inventory_path=HOME/'map-prior-identities.json'
+ proof=json.loads(proof_path.read_text());inventory=json.loads(inventory_path.read_text());ranges=[];collisions=[];errors=[];json_files=0
+ seeds={int(seed):set(paths) for seed,paths in inventory['seeds'].items()}
+ for entry in proof['files']:
+  if Path(entry['path']).suffix.lower()!='.json':continue
+  path=ROOT/entry['path']
+  if sha(path)!=entry['sha256']:
+   errors.append(dict(path=entry['path'],error='metadata_changed_since_census'));continue
+  try:value=json.loads(path.read_text(),object_pairs_hook=Pairs)
+  except (ValueError,UnicodeError,RecursionError):
+   # Seed-free malformed parser fixtures cannot hide a numeric seed interval.
+   text=path.read_text()
+   if 'seed' in text.lower() and any(term in text.lower() for term in ('range','interval')):
+    errors.append(dict(path=entry['path'],error='malformed_seed_range_metadata'))
+   continue
+  found,intervals=seed_records(value);json_files+=1
+  for seed in found:seeds.setdefault(seed,set()).add(entry['path'])
+  for row in intervals:
+   row['path']=entry['path'];ranges.append(row)
+   hits=[seed for seed in proof['proposed_seeds'] if row['start']<=seed<=row['end_inclusive']]
+   if hits:collisions.append(dict(path=entry['path'],source='declared_seed_interval',seeds=hits,interval=row))
+ for seed in proof['proposed_seeds']:
+  if seed in seeds:collisions.append(dict(path='<structural seed inventory>',source='recorded_seed_array_or_field',seeds=[seed],sources=sorted(seeds[seed])))
+ inventory['seeds']={str(seed):sorted(paths) for seed,paths in sorted(seeds.items())};inventory['seed_ranges']=ranges
+ inventory['structural_seed_coverage']=dict(json_files=json_files,duplicate_keys_preserved=True,range_semantics='Conservative inclusive bounds; finite intervals never expanded')
+ atomic(inventory_path,inventory)
+ proof['collisions'].extend(collisions);proof['errors'].extend(errors)
+ proof.update(structural_seed_coverage_complete=not errors,structural_json_files=json_files,recorded_seed_ranges=ranges,
+  prior_seed_count=len(seeds),no_seed_collision=not proof['collisions'] and not proof['errors'],prior_identities_sha256=sha(inventory_path))
+ atomic(proof_path,proof)
+ print(json.dumps(dict(structural_complete=not errors,no_seed_collision=proof['no_seed_collision'],json_files=json_files,prior_seeds=len(seeds),ranges=len(ranges),collisions=collisions,errors=errors)))
+ return 0 if proof['no_seed_collision'] else 2
+if __name__=='__main__':raise SystemExit(main())

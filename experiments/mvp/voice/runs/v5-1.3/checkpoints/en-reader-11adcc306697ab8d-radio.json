@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "refusal": {
+      "code": "ambiguous",
+      "reason": "unclear tier limit 'one map'",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 4240,
+    "audio_seconds": 4.176,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00020",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "5c75119094a3496aa98ef294d7e646f2",
+    "session_id": "voyager/transcribe/5F024846A2794B23A87A83D630C0CC28"
+  },
+  "asr_latency_s": 1.032073832990136,
+  "audio_sha256": "4594df79b4ad9589e0b5ea850aaacc2379583526fbad1b1e1772ecbd73a5519c",
+  "canonical": {
+    "refusal": {
+      "code": "ambiguous",
+      "refused": true
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 2.6765045420033857,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0012952",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "b63bd1c98842697b768b9c150fd93856aaa65a2470025217a042256b26e05ad4",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "887f795b-ffc1-4000-99b5-2ed201cc1431"
+  },
+  "parser_latency_s": 1.5487693750183098,
+  "script": "Planner: restrict bay 35 hold to 1 max.",
+  "source_id": "reader-11adcc306697ab8d",
+  "started_utc": "2026-11-01T01:33:54.496933+00:00",
+  "status": "complete",
+  "transcript": "restrict bay 35 hold to one map"
+}

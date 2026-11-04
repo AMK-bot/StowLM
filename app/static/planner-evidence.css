@@ -1,0 +1,51 @@
+.pl-evidence-report, .pl-evidence-drawer {
+  --pl-evidence-bg: var(--pl-bg, var(--st-bg, #fff));
+  --pl-evidence-text: var(--pl-text, var(--st-text, #111418));
+  --pl-evidence-muted: var(--pl-muted, var(--st-text-2, #4a5059));
+  --pl-evidence-line: var(--pl-line, var(--st-line, #e5e7eb));
+  --pl-evidence-brand: var(--pl-brand, var(--st-brand, #1665d8));
+  box-sizing: border-box; color: var(--pl-evidence-text); background: var(--pl-evidence-bg);
+  font-family: var(--pl-font, var(--st-font, -apple-system, BlinkMacSystemFont, system-ui, sans-serif));
+  font-size: 13px; line-height: 1.5; font-variant-numeric: tabular-nums;
+}
+.pl-evidence-report *, .pl-evidence-drawer * { box-sizing: border-box; }
+.pl-evidence-report { width: 100%; max-width: 1360px; margin: 0 auto; padding: 24px; }
+.pl-evidence-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 16px; }
+.pl-evidence-toolbar h1 { margin: 0 0 4px; font-size: 20px; line-height: 1.3; font-weight: 600; }
+.pl-evidence-toolbar p, .pl-evidence-kicker { margin: 0; color: var(--pl-evidence-muted); }
+.pl-evidence-toggle { display: flex; gap: 8px; flex-wrap: wrap; }
+.pl-evidence-button { min-height: 32px; padding: 6px 12px; border: 1px solid var(--pl-evidence-line); border-radius: 6px; background: var(--pl-evidence-bg); color: var(--pl-evidence-text); font: inherit; cursor: pointer; }
+.pl-evidence-toggle .pl-evidence-button[aria-pressed="true"] { border-color: var(--pl-evidence-brand); color: var(--pl-evidence-brand); background: color-mix(in srgb, var(--pl-evidence-brand) 6%, var(--pl-evidence-bg)); }
+.pl-evidence-button:focus-visible, .pl-evidence-details-button:focus-visible { outline: 2px solid var(--pl-evidence-brand); outline-offset: 2px; }
+.pl-evidence-envelope { margin: 0 0 16px; color: var(--pl-evidence-muted); max-width: 1100px; }
+.pl-evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.pl-evidence-card { min-width: 0; padding: 16px; border: 1px solid var(--pl-evidence-line); border-radius: 8px; transition: border-color 250ms; }
+.pl-evidence-card:hover, .pl-evidence-card.pl-evidence-hover { border-color: var(--pl-evidence-brand); }
+.pl-evidence-card-voyages { grid-column: 1 / -1; }
+.pl-evidence-card-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 8px; }
+.pl-evidence-card-heading h2 { margin: 0; font-size: 15px; font-weight: 600; }
+.pl-evidence-details-button { min-height: 32px; padding: 4px 8px; border: 0; background: transparent; color: var(--pl-evidence-brand); font: inherit; cursor: pointer; }
+.pl-evidence-groups { display: grid; gap: 16px; }
+.pl-evidence-card-voyages .pl-evidence-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.pl-evidence-group { min-width: 0; }
+.pl-evidence-run-title { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--pl-evidence-muted); margin: 0 0 4px; font-size: 12px; }
+.pl-evidence-inspecting { color: var(--pl-evidence-brand); font-size: 11px; }
+.pl-evidence-label { margin: 4px 0 8px; color: var(--pl-evidence-muted); font-size: 12px; }
+.pl-evidence-row { display: grid; grid-template-columns: minmax(120px, 1.2fr) minmax(70px, 1fr) 72px; align-items: center; gap: 16px; min-height: 26px; font-size: 12px; }
+.pl-evidence-plot { display: block; width: 100%; height: 24px; overflow: visible; }
+.pl-evidence-count { text-align: right; white-space: nowrap; font-weight: 600; }
+.pl-evidence-count span { color: var(--pl-evidence-muted); font-weight: 400; }
+.pl-evidence-reading-note { margin: 8px 0 0; color: var(--pl-evidence-muted); font-size: 12px; }
+.pl-evidence-run-history { margin: 6px 0 0; color: var(--pl-evidence-muted); font-size: 12px; }
+.pl-evidence-footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 16px; color: var(--pl-evidence-muted); font-size: 12px; }
+.pl-evidence-footer span:last-child { text-align: right; }
+.pl-evidence-drawer { width: 100%; max-width: 900px; padding: 24px; margin: 0 auto; }
+.pl-evidence-drawer-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.pl-evidence-drawer h2 { margin: 4px 0 0; font-size: 20px; font-weight: 600; }
+.pl-evidence-drawer h3 { margin: 16px 0 8px; font-size: 14px; font-weight: 600; }
+.pl-evidence-reading p { margin: 0 0 16px; }
+.pl-evidence-source { padding: 8px 0; border-bottom: 1px solid var(--pl-evidence-line); }
+.pl-evidence-source p { margin: 0 0 4px; font-weight: 500; }
+.pl-evidence-source pre { margin: 0; font-size: 12px; color: var(--pl-evidence-muted); line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+.pl-evidence-scope { margin-top: 24px; color: var(--pl-evidence-muted); }
+@media (max-width: 900px) { .pl-evidence-toolbar { align-items: flex-start; flex-direction: column; gap: 16px; } .pl-evidence-grid { grid-template-columns: 1fr; } .pl-evidence-card-voyages { grid-column: auto; } .pl-evidence-card-voyages .pl-evidence-groups { grid-template-columns: 1fr; gap: 16px; } .pl-evidence-report, .pl-evidence-drawer { padding: 16px; } }

@@ -1,0 +1,44 @@
+"""Add explicitly named public identity indexes and producer audit sidecars."""
+import hashlib,importlib.machinery,importlib.util,json,os,re
+from pathlib import Path
+HOME=Path(__file__).resolve().parent;ROOT=HOME.parents[5]
+loader=importlib.machinery.SourceFileLoader('ext1_identity_audit',str(HOME/'map_seed_audit.py.txt'));spec=importlib.util.spec_from_loader(loader.name,loader);audit=importlib.util.module_from_spec(spec);loader.exec_module(audit)
+def atomic(path,value):
+ tmp=path.with_name(path.name+'.extra.tmp');tmp.write_text(json.dumps(value,indent=2)+'\n');os.replace(tmp,path)
+def main():
+ proof_path=HOME/'map-seed-proof.json';inventory_path=HOME/'map-prior-identities.json'
+ proof=json.loads(proof_path.read_text());inventory=json.loads(inventory_path.read_text())
+ known={row['path'] for row in proof['files']};added=[];skipped=[]
+ for name in (HOME/'map-metadata-extra-paths.txt').read_text().splitlines():
+  parts=Path(name).parts;path=ROOT/name
+  closed=(any(part.lower() in ('sealed','holdout','testv3','valsplit','test-v3','test') for part in parts) and not name.startswith('experiments/mvp/pipeline/sealed/measurements/'))
+  if name in known:continue
+  if audit.forbidden(name) or closed or any(part in ('jobs','plans','rows','runs','run','parents') for part in parts) or path.is_symlink():
+   skipped.append(name);continue
+  # A generation audit sidecar is external metadata, never its seed-named map.
+  if audit.RAW.search(path.name) and not path.name.endswith('.audit.json'):
+   skipped.append(name);continue
+  try:raw=path.read_bytes();text=raw.decode('utf-8')
+  except (OSError,UnicodeError) as error:
+   proof['errors'].append(dict(path=name,error=type(error).__name__));continue
+  hits=audit.proposed_hits(text)
+  if hits:proof['collisions'].append(dict(path=name,source='supplemental_identity_metadata',seeds=hits))
+  for match in audit.FIELD_SEED.finditer(text):
+   seed=str(int(match.group(1).replace('_','')));inventory['seeds'].setdefault(seed,[])
+   if name not in inventory['seeds'][seed]:inventory['seeds'][seed].append(name)
+  for match in audit.PATH_SEED.finditer(text):
+   seed=str(int(match.group(1)));inventory['seeds'].setdefault(seed,[])
+   if name not in inventory['seeds'][seed]:inventory['seeds'][seed].append(name)
+  for match in audit.HEX.finditer(text):
+   digest=match.group().lower();inventory['digests'].setdefault(digest,[])
+   if name not in inventory['digests'][digest]:inventory['digests'][digest].append(name)
+  entry=dict(path=name,sha256=hashlib.sha256(raw).hexdigest(),bytes=len(raw));proof['files'].append(entry);added.append(entry)
+ proof['files'].sort(key=lambda row:row['path']);proof['metadata_files_checked']=len(proof['files'])
+ proof['prior_seed_count']=len(inventory['seeds']);proof['prior_digest_count']=len(inventory['digests'])
+ proof['metadata_inventory_sha256']=hashlib.sha256(json.dumps(proof['files'],sort_keys=True,separators=(',',':')).encode()).hexdigest()
+ proof['supplemental_metadata']=dict(added=len(added),skipped_closed_or_payload_paths=skipped,
+  policy='Explicit identity/inventory/verification/frozen metadata and external producer .audit.json sidecars; no raw map/plan opened')
+ atomic(inventory_path,inventory);proof['prior_identities_sha256']=hashlib.sha256(inventory_path.read_bytes()).hexdigest()
+ proof['no_seed_collision']=not proof['collisions'] and not proof['errors'];atomic(proof_path,proof)
+ print(json.dumps(dict(added=len(added),skipped=len(skipped),prior_digests=proof['prior_digest_count'],collisions=proof['collisions'],errors=proof['errors'])))
+if __name__=='__main__':main()

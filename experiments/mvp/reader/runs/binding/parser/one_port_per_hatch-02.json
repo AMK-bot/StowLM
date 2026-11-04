@@ -1,0 +1,82 @@
+{
+  "type": "one_port_per_hatch",
+  "input": "experiments/mvp/corpus/val/small/feeder_500/simulated_yard/seed-040100030.json",
+  "baseline_file": "experiments/mvp/frontier/runs/val-0.9/sim.small.40100030.json",
+  "instance_id": "sim.small.40100030",
+  "sentence": "One port per hatch.",
+  "sealed_id": "sealed-056",
+  "expected": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "one_port_per_hatch"
+    }
+  },
+  "context": {
+    "id": "sim.small.40100030",
+    "bays": [
+      1,
+      2,
+      3
+    ],
+    "max_tiers": {
+      "hold": 2,
+      "deck": 5
+    },
+    "max_tiers_by_bay": {
+      "1": {
+        "hold": 2,
+        "deck": 5
+      },
+      "2": {
+        "hold": 2,
+        "deck": 5
+      },
+      "3": {
+        "hold": 2,
+        "deck": 5
+      }
+    },
+    "has_accommodation": true,
+    "hatch_covers": [
+      "HC-002-P",
+      "HC-002-S"
+    ],
+    "ports": [
+      "VNSGN",
+      "SGSIN",
+      "THLCH"
+    ]
+  },
+  "baseline_weighted": 4.0,
+  "baseline_violations": [
+    "mixed discharge ports at HC-002-P: ['SGSIN', 'VNSGN']",
+    "mixed discharge ports at HC-002-S: ['SGSIN', 'VNSGN']"
+  ],
+  "baseline_violation_count": 2,
+  "capacity_screen": "necessary cover/port TEU partition passed; does not certify geometric/checker feasibility",
+  "n_load": 12,
+  "input_sha256": "322acdf4757cfff12ca94350a5f02cc14ab5bdf411c044f5a25acc1d85322526",
+  "case_id": "one_port_per_hatch-02",
+  "selection_rationale": "Openly baseline-screened, binding-enriched validation cohort: prefer violating stored best plans, then smaller load lists, then larger baseline weighted move count; one literal sealed sentence per distinct map. necessary cover/port TEU partition passed; does not certify geometric/checker feasibility",
+  "baseline_sha256": "209d5880fe43971d32eea62f22d2e21e6a13242605885081f40870747cc39cdf",
+  "parsed": {
+    "schema_version": "stowlm.reader/2",
+    "constraint": {
+      "type": "one_port_per_hatch"
+    }
+  },
+  "parser": {
+    "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}",
+    "request_id": "17566a75-3ef2-4f46-8810-d95929f973db",
+    "cost_usd": "0.00155",
+    "usage": {
+      "input_tokens": 526,
+      "output_tokens": 210,
+      "cached_tokens": 0
+    },
+    "prompt_sha256": "d094dac5dfc6b34bda30aa8da303df2c0e7aec72d69426eca1a63aec5b3b00cc",
+    "reservation_context_bound_tokens": 32768
+  },
+  "parse_exact": true,
+  "parse_wall_s": 1.1727712499559857
+}

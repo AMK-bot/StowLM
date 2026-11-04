@@ -1,0 +1,850 @@
+"""D320A fresh held-out extension; separate, resumable single-use authorization.
+
+No canonical sealed claim is read, replaced, or waived. The frozen worker uses
+its sealed transport solely to reach its exact-instance runner seam; this
+process-local authorization accepts only the separately registered fresh maps.
+"""
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from contextlib import contextmanager
+import csv
+import fcntl
+import importlib
+import json
+import math
+import os
+from pathlib import Path
+import runpy
+import shutil
+import signal
+import sys
+import threading
+import time
+from unittest.mock import patch
+
+from experiments.mvp.pipeline.sealed.common import (
+    HERE, ROOT, HarnessError, atomic_json, exclusive_json, object_hash,
+    read_json, resolve, sha256)
+
+HOME = HERE/'measurements/ext-1'
+LABEL = 'fresh held-out extension, run after the freeze; not the pre-registered sealed claim'
+ARMS = ('pipeline', 'instruction', 'twostep')
+DECISION = 'D320A'
+_WRITE_GUARD_INSTALLED = False
+
+
+class Paused(HarnessError):
+    pass
+
+
+def require(condition, message):
+    if not condition:
+        raise HarnessError('D320A: '+message)
+
+
+def output_path(path):
+    path = resolve(path)
+    require(path.is_relative_to(HOME.resolve()) or path.is_relative_to((HERE/'runs/ext-1').resolve()),
+            'output escapes ext-1: '+str(path))
+    require(not any(parent.is_symlink() for parent in (path, *path.parents)
+                    if parent.is_relative_to(HOME)), 'symlink output is forbidden')
+    return path
+
+
+def load_config(path):
+    """Metadata only: no map bytes, model, native engine or sealed result read."""
+    path = output_path(path)
+    config = read_json(path)
+    require(config.get('decision') == DECISION, 'configuration decision differs')
+    pilot = config.get('development_pilot') is True
+    require(config.get('profile') == 'standard', 'only frozen standard profile is registered')
+    require(type(config.get('workers')) is int and 1 <= config['workers'] <= 4,
+            'one to four workers required')
+    require(pilot or config['workers'] == 4, 'held-out extension requires four map workers')
+    require(config.get('reader_mode') == ('recorded' if pilot else 'live'),
+            'live adopted reader required; recordings are development-pilot only')
+    require((config.get('twostep_s') == 15 and config.get('twostep_finalize_s') == 15) or
+            pilot and all(type(config.get(k)) in (int, float) and 0 < config[k] <= 15
+                          for k in ('twostep_s', 'twostep_finalize_s')),
+            'two-step must retain the original 15/15-second recipe')
+    for name, expected in (('child_timeout_s', 1200), ('audit_timeout_s', 300), ('prepass_timeout_s', 1800)):
+        value = config.get(name)
+        require(type(value) in (int, float) and math.isfinite(value) and value > 0 and
+                (pilot or value == expected), 'invalid registered wall deadline: '+name)
+    prereg = output_path(config['preregistration_path'])
+    require(prereg == HOME/'PREREG.md', 'pre-registration must be the extension metadata file')
+    require(sha256(prereg) == config['preregistration_sha256'], 'pre-registration changed')
+    declared = output_path(config['maps_manifest_path'])
+    require(declared == HOME/('pilot-maps-manifest.json' if pilot else 'maps-manifest.json'),
+            'map manifest must be the registered metadata file, never a map payload')
+    require(sha256(declared) == config['maps_manifest_sha256'], 'map manifest metadata changed')
+    metadata = read_json(declared)
+    maps = metadata['maps'] if isinstance(metadata, dict) else metadata
+    require(isinstance(maps, list) and (1 <= len(maps) <= 24 if pilot else len(maps) == 24),
+            'registered population must contain exactly 24 maps (pilot: 1–24 development maps)')
+    from experiments.mvp.pipeline.sealed import driver
+    identities = []
+    for item in maps:
+        target = resolve(item['path'])
+        require(not driver.is_sealed(target), 'original sealed cohorts are never extension inputs')
+        allowed = ROOT/'experiments/mvp/pipeline/maps/dev' if pilot else HOME/'maps'
+        require(target.is_relative_to(allowed.resolve()), 'map lies outside the registered fresh/development folder')
+        require(not Path(item['path']).is_symlink(), 'map symlinks are forbidden')
+        require(item.get('cohort') == 'envelope24' and isinstance(item.get('sha256'), str) and
+                len(item['sha256']) == 64, 'map identity is incomplete')
+        identities.append((item['map_id'], str(target)))
+    require(len({i for i, _ in identities}) == len(maps) and
+            len({p for _, p in identities}) == len(maps), 'duplicate map identity/path')
+    expected_run = HOME/'pilot' if pilot else HERE/'runs/ext-1'
+    run_dir = output_path(config.get('run_dir', expected_run))
+    require(run_dir == expected_run, 'unexpected extension/pilot run directory')
+    deadlines = config.get('arm_deadlines_s', {})
+    require(set(deadlines) == set(ARMS) and all(type(v) in (int, float) and math.isfinite(v) and v > 0
+            for v in deadlines.values()) and (pilot or deadlines == dict(pipeline=1200,instruction=1200,twostep=180)),
+            'registered per-arm outer deadlines differ')
+    artifacts = config.get('artifacts', {})
+    if not pilot:
+        for own in (Path(__file__).resolve(), HOME/'ext_report.py.txt', HOME/'launch_ext.sh.txt'):
+            require(artifacts.get(own.relative_to(ROOT).as_posix()) == sha256(own),
+                    'extension runner/report/launcher must be hash-pinned before launch')
+        registered = read_json(HERE/'launch-config.json')
+        require(config.get('reader_factory') == registered.get('reader_factory') and
+                config.get('parser_options') == registered.get('parser_options') and
+                config.get('standing') == '' and config.get('confirmation_source') == 'sealed_expected_match'
+                and len(config.get('arms', [])) == 3 and set(config['arms']) == set(ARMS) and config.get('label') == LABEL
+                and config.get('sealed_claim_eligible') is False,
+                'extension reading/confirmation/arms differ from registered 3.1 recipe')
+    for name, digest in artifacts.items():
+        artifact = output_path(name)
+        require(not artifact.is_relative_to(HOME/'maps'), 'map payload cannot serve as an orchestration artifact')
+        require(sha256(artifact) == digest, 'registered extension artifact changed: '+name)
+    if not pilot:
+        precommit = output_path(config.get('precommit_path', HOME/'PRECOMMIT.json'))
+        require(precommit.with_suffix('.sha256').read_text().split()[0] == sha256(precommit),
+                'extension authorization precommit hash differs')
+        authorization = read_json(precommit)
+        require(authorization.get('decision') == DECISION and authorization.get('config_sha256') == sha256(path)
+                and all(authorization.get(key) == config[key] for key in
+                        ('manifest_sha256', 'maps_manifest_sha256', 'preregistration_sha256'))
+                and authorization.get('artifacts') == artifacts,
+                'extension authorization does not bind this exact configuration/artifacts')
+    return dict(config, maps=maps, run_dir=str(run_dir), extension_config_path=str(path))
+
+
+def frozen(config):
+    """Full v4 verification before dispatch and before every actual map open."""
+    verify = importlib.import_module('experiments.mvp.pipeline.freeze.verify')
+    identity = verify.require_frozen(resolve(config['manifest_path']), full_weights=True)
+    require(identity['manifest_sha256'] == config['manifest_sha256'], 'v4 manifest identity differs')
+    return identity
+
+
+def admission(config, *, now=None):
+    try:
+        row = read_json(resolve(config.get('admission_path', 'experiments/fleet/core-state.json')))
+        mask, load = row['mask'], float(row['load1'])
+        age = (time.time() if now is None else now)-float(row['t'])
+        cores = mask.bit_count() if type(mask) is int and mask >= 0 else 0
+        if cores >= 8 and config['workers'] <= cores-2 and math.isfinite(load) and 0 <= load <= 45 and 0 <= age < 120:
+            return dict(row, enabled_cores=cores, age_s=age, concurrent_work_allowed=True)
+    except (OSError, ValueError, KeyError, TypeError, OverflowError):
+        pass
+    return None
+
+
+def wait_admission(config, stop, *, sleep=time.sleep):
+    while True:
+        if stop.is_set() or (HOME/'STOP').exists():
+            raise Paused('controller stopped before another trial; resume retains all spent attempts')
+        snapshot = admission(config)
+        if snapshot is not None:
+            return snapshot
+        print('Waiting: fresh >=8 enabled cores, load1 <=45; other fleet work is allowed', flush=True)
+        sleep(5)
+
+
+def wait_gpu(config, stop, *, sleep=time.sleep):
+    if config.get('development_pilot'):
+        return
+    path = output_path(config.get('gpu_ready_path', HOME/'GPU-READY.json'))
+    while True:
+        if stop.is_set() or (HOME/'STOP').exists():
+            raise Paused('waiting for the adopted-reader GPU window')
+        try:
+            row = read_json(path)
+            if row.get('decision') == DECISION and row.get('ready') is True and row.get('config_sha256') == object_hash(config):
+                return
+        except (OSError, ValueError, TypeError):
+            pass
+        print('Waiting: leader GPU-READY attestation for the serial adopted-reader prepass', flush=True)
+        sleep(5)
+
+
+def _identity(config):
+    return dict(decision=DECISION, run_id=object_hash(dict(config=config)),
+                config_sha256=object_hash(config), manifest_sha256=config['manifest_sha256'])
+
+
+def authorize_open(config, job, path, *, phase):
+    """Own capabilities, exact fresh-map whitelist; never touches GLOBAL_CLAIM."""
+    from experiments.mvp.pipeline.sealed import authorization, driver
+    run = output_path(config['run_dir'])
+    path = resolve(path)
+    require(not driver.is_sealed(path), 'original sealed input forbidden')
+    require(job.get('extension_scope') == DECISION and job.get('mode') == 'sealed' and
+            resolve(job['run_dir']) == run, 'wrong extension authorization scope')
+    started = read_json(run/'STARTED.json')
+    require(started == _identity(config), 'extension identity/configuration changed')
+    require(job.get('extension_config_sha256') == object_hash(config), 'job configuration binding differs')
+    require(resolve(job['open_log']) == run/'opened-maps.jsonl', 'extension log differs')
+    matches = [m for m in config['maps'] if m['map_id'] == job['map_id'] and
+               m['sha256'] == job['sha256'] and m['cohort'] == job['cohort'] and resolve(m['path']) == path]
+    require(len(matches) == 1 and job['arm'] in ARMS, 'map/arm is not an exact extension member')
+    frozen(config)
+    authorization.consume(job, phase=phase)
+
+
+def configure_runtime():
+    """Only numerical-cache, signing-key and scratch path configuration changes."""
+    cache = HOME/'runtime-cache'
+    os.environ['STOWAGE_EXT1_RUNTIME_SCOPE'] = str(HOME)
+    os.environ['STOWAGE_VESSEL_CACHE_DIR'] = str(cache/'vessels')
+    os.environ['UV_CACHE_DIR'] = str(HOME/'uv-cache')
+    for key in ('TMPDIR', 'XDG_CACHE_HOME', 'MLX_CACHE_DIR'):
+        directory = HOME/'runtime-cache'/key.lower()
+        directory.mkdir(parents=True, exist_ok=True)
+        os.environ[key] = str(directory)
+    from experiments.mvp.pipeline.sealed import native_runtime
+    native_runtime.HERE, native_runtime.CACHE = HOME, cache
+    native_runtime.configure()
+    native_runtime.seed(HOME/'runtime-seeding')
+    for source in (cache/'stability').glob('*'):
+        if source.is_file():
+            target = HOME/'cache/stability'/source.name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            if not target.exists() or sha256(target) != sha256(source):
+                temporary = target.with_name(target.name+'.'+str(os.getpid())+'.tmp')
+                shutil.copy2(source, temporary)
+                temporary.replace(target)
+    import engine.peel_ladder.loader as loader
+    original = loader.isolated
+
+    @contextmanager
+    def isolated():
+        with original() as method:
+            previous = method.HERE
+            method.HERE = HOME/'engine-scratch'
+            try:
+                yield method
+            finally:
+                method.HERE = previous
+    loader.isolated = isolated
+
+
+def audit_target(value, dir_fd=-1):
+    path = Path(os.fsdecode(value))
+    if not path.is_absolute() and isinstance(dir_fd, int) and dir_fd >= 0:
+        if sys.platform == 'darwin':
+            base = fcntl.fcntl(dir_fd, getattr(fcntl, 'F_GETPATH', 50), b'\0'*1024).split(b'\0', 1)[0]
+            path = Path(os.fsdecode(base))/path
+        else:
+            path = Path(os.readlink(f'/proc/self/fd/{dir_fd}'))/path
+    return path.resolve()
+
+
+def repository_write_hook(event, args):
+    """Reject repository writes outside the two extension output directories."""
+    if event == 'open':
+        path, mode, flags = args
+        if not ((isinstance(mode, str) and any(c in mode for c in 'wax+')) or
+                isinstance(flags, int) and flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT | os.O_TRUNC | os.O_APPEND)):
+            return
+        paths = ((path,-1),)
+    elif event in ('os.rename', 'os.link'):
+        paths = ((args[0],args[2]),(args[1],args[3]))
+    elif event == 'os.symlink':
+        paths = ((args[1],args[2]),)
+    elif event in ('os.remove','os.rmdir'):
+        paths = ((args[0],args[1]),)
+    elif event in ('os.mkdir','os.chmod'):
+        paths = ((args[0],args[2]),)
+    elif event == 'os.utime':
+        paths = ((args[0],args[3]),)
+    elif event == 'os.truncate':
+        paths = ((args[0],-1),)
+    else:
+        return
+    for name, dir_fd in paths:
+        if not isinstance(name, (str, bytes, os.PathLike)):
+            continue
+        path = audit_target(name,dir_fd)
+        require(not path.is_relative_to(ROOT.resolve()) or path.is_relative_to(HOME.resolve()) or
+                path.is_relative_to((HERE/'runs/ext-1').resolve()),
+                'runtime attempted a repository write outside extension outputs: '+str(path))
+
+
+def guard_repository_writes():
+    global _WRITE_GUARD_INSTALLED
+    if not _WRITE_GUARD_INSTALLED:
+        sys.addaudithook(repository_write_hook)
+        _WRITE_GUARD_INSTALLED = True
+
+
+def spawn_runtime_init():
+    """mp.spawn re-executes this main file before unpickling frozen targets."""
+    if os.environ.get('STOWAGE_EXT1_RUNTIME_SCOPE') == str(HOME):
+        guard_repository_writes()
+        configure_runtime()
+
+
+def child(config_path, phase, request_path, output):
+    config = load_config(config_path)
+    frozen(config)
+    output = output_path(output)
+    expected_request = output.parent/('audit-job.json' if phase == 'audit' else 'job.json')
+    require(output_path(request_path) == expected_request,
+            'child request path must be its phase metadata file, never a map payload')
+    request = read_json(expected_request)
+    require(not output.exists(), 'child output already exists; refusing retry')
+    validate_child_request(config, phase, request, output)
+    guard_repository_writes()
+    configure_runtime()
+    from experiments.mvp.pipeline.sealed import worker
+    hook = lambda job, path, phase='plan': authorize_open(config, job, path, phase=phase)
+    with patch.object(worker, '_authorize_open', hook):
+        if phase == 'prepass':
+            result = worker.prepare_instructions(request['maps'], output.parent,
+                str(Path(config['run_dir'])/'opened-maps.jsonl'),
+                reader_factory=config['reader_factory'], parser_options=config.get('parser_options', {}),
+                fixture_surrogate=False, mode='dry-run' if config.get('development_pilot') else 'sealed')
+        elif phase == 'plan':
+            result = worker.run_job(request, output.parent)
+        elif phase == 'audit':
+            result = worker.audit_job(request)
+        else:
+            raise HarnessError('Unknown extension child phase')
+    atomic_json(output, result)
+
+
+def validate_child_request(config, phase, request, output):
+    """Fence target reads before audit_job reads its target or a model is loaded."""
+    run = Path(config['run_dir'])
+    if phase == 'prepass':
+        require(output == run/'prepass/row.json' and isinstance(request.get('maps'), list),
+                'prepass child output/request differs')
+        jobs = request['maps']
+        require(len(jobs) == len(config['maps']) and
+                {job.get('map_id') for job in jobs} == {item['map_id'] for item in config['maps']},
+                'prepass request changes the registered population')
+    else:
+        jobs = [request]
+    for job in jobs:
+        require(job.get('extension_scope') == DECISION and job.get('mode') == 'sealed' and
+                resolve(job['run_dir']) == run and job.get('extension_config_sha256') == object_hash(config),
+                'child request extension/configuration binding differs')
+        require(job['arm'] in ARMS and sum(item['map_id'] == job['map_id'] and
+                item['sha256'] == job['sha256'] and item['cohort'] == job['cohort'] and
+                resolve(item['path']) == resolve(job['path']) for item in config['maps']) == 1,
+                'child request is not an exact extension map/arm')
+        binding = job.get('authorization') or {}
+        require(binding.get('phase') == phase and binding.get('run_id') == _identity(config)['run_id'],
+                'child request capability phase/run differs')
+        expected = dict(binding,payload_sha256=object_hash({k:v for k,v in job.items() if k != 'authorization'}))
+        key = object_hash({k:binding.get(k) for k in ('run_id','map_id','arm','phase')})
+        require(binding.get('authorization_id') == key and
+                read_json(run/'authorizations'/f'{key}.json') == expected,
+                'child request capability payload differs')
+        if phase != 'prepass':
+            target = run/'jobs'/object_hash(dict(map_id=job['map_id'],arm=job['arm']))[:24]
+            require(output == target/('audit-row.json' if phase == 'audit' else 'row.json'),
+                    'child output does not belong to its exact map/arm')
+            if phase == 'audit':
+                expected_target = target/('deadline-row.json' if job.get('deadline_recovery') else 'row.json')
+                require(resolve(job['target']) == expected_target,
+                        'audit target is not its exact extension planning publication')
+
+
+def _execute(config, phase, request, target):
+    from experiments.mvp.pipeline.sealed import driver
+    request_path = target/('audit-job.json' if phase == 'audit' else 'job.json')
+    output = target/('audit-row.json' if phase == 'audit' else 'row.json')
+    atomic_json(request_path, request)
+    timeout = (config['prepass_timeout_s'] if phase == 'prepass' else
+               config['audit_timeout_s'] if phase == 'audit' else config['arm_deadlines_s'][request['arm']])
+    command = [sys.executable, str(Path(__file__).resolve()), '--child', phase,
+               '--config', config['extension_config_path'], '--request', str(request_path), '--output', str(output)]
+    observed, cursor = {}, {}
+    def observe(elapsed, started, pid):
+        previous = len(observed)
+        driver._observe_incumbents(request, target, elapsed, timeout, observed,
+                                  parent_started=started, child_pid=pid, cursor=cursor)
+        if len(observed) != previous:
+            atomic_json(target/'observed-incumbents.json', dict(
+                extension_config_sha256=request['extension_config_sha256'],
+                map_id=request['map_id'], arm=request['arm'], sha256=request['sha256'],
+                child_pid=pid, hard_wall_s=timeout, observed=observed))
+    observer = observe if phase == 'plan' else None
+    try:
+        metrics = driver._owned_process(command, target, timeout_s=timeout,
+                                        audit=phase == 'audit', observe=observer)
+    except driver.ChildProcessFailure as error:
+        if phase == 'plan' and error.metrics.get('child_timed_out') and not error.metrics.get('child_cleanup_failed'):
+            return driver._deadline_result(request, target, error.metrics, observed)
+        raise
+    require(output.is_file(), 'child did not publish its output')
+    value = read_json(output)
+    if phase == 'audit':
+        require(value.get('audit_pid') == metrics.get('audit_pid'),
+                'audit attestation PID differs from independently observed process')
+    return value if phase == 'prepass' else dict(value, **metrics)
+
+
+def _base_job(config, item, arm):
+    return dict(item, arm=arm, mode='sealed', extension_scope=DECISION,
+        extension_config_path=config['extension_config_path'], extension_config_sha256=object_hash(config),
+        run_dir=config['run_dir'], open_log=str(Path(config['run_dir'])/'opened-maps.jsonl'),
+        profile='standard', standing='', twostep_s=config['twostep_s'], twostep_finalize_s=config['twostep_finalize_s'],
+        confirmation_source='sealed_expected_match', fixture_surrogate=False)
+
+
+def _issue(config, job, phase, job_id):
+    from experiments.mvp.pipeline.sealed.authorization import issue
+    return issue(job, phase=phase, run_id=_identity(config)['run_id'], job_id=job_id)
+
+
+def prepare(config, stop):
+    """One serial live prepass; an interrupted attempt is never read again."""
+    run = Path(config['run_dir'])
+    target = run/'prepass'
+    target.mkdir(exist_ok=True)
+    allocation = run/'instruction-allocation.json'
+    if allocation.exists():
+        return commit_prepass(config)
+    if (target/'DISPATCHED.json').exists():
+        _settle_old_child(target)
+        if (target/'row.json').is_file():
+            require(process_receipt(target, 'prepass', config),
+                    'prepass publication lacks a successful within-deadline process receipt; no retry')
+            prepared = read_json(target/'row.json')
+        else:
+            atomic_json(target/'ERROR.json', dict(reason='Prepass interrupted after dispatch; spent readings are never repeated'))
+            return None
+    else:
+        wait_gpu(config, stop)
+        snapshot = wait_admission(config, stop)
+        frozen(config)
+        exclusive_json(target/'DISPATCHED.json', dict(admission=snapshot, t=time.time()))
+        maps = [_issue(config, _base_job(config, item, 'instruction'), 'prepass', 'prepass-'+str(i))
+                for i, item in enumerate(config['maps'])]
+        try:
+            prepared = _execute(config, 'prepass', dict(maps=maps), target)
+        except Exception as error:
+            try:
+                frozen(config)
+            except Exception:
+                stop.set()
+                raise
+            atomic_json(target/'ERROR.json', dict(reason=f'{type(error).__name__}: {error}'))
+            return None
+    require(isinstance(prepared, list) and len(prepared) == len(config['maps']) and
+            {m['map_id'] for m in prepared} == {m['map_id'] for m in config['maps']},
+            'prepass population differs from registration')
+    for value in prepared:
+        original = next(m for m in config['maps'] if m['map_id'] == value['map_id'])
+        require(all(value.get(k) == original.get(k) for k in ('path', 'sha256', 'cohort')),
+                'prepass altered map identity')
+    exclusive_json(allocation, prepared)
+    return commit_prepass(config)
+
+
+def commit_prepass(config):
+    """Bind terminal allocation/readings to their original successful prepass."""
+    run = Path(config['run_dir'])
+    target = run/'prepass'
+    allocation = run/'instruction-allocation.json'
+    require(process_receipt(target, 'prepass', config),
+            'instruction allocation lacks a successful within-deadline prepass receipt')
+    require(sha256(allocation) == sha256(target/'row.json'),
+            'instruction allocation differs from the committed prepass publication')
+    prepared = read_json(allocation)
+    require(isinstance(prepared, list) and len(prepared) == len(config['maps']) and
+            {m['map_id'] for m in prepared} == {m['map_id'] for m in config['maps']},
+            'committed allocation population differs')
+    for item in prepared:
+        reading = item.get('recorded_reading') or {}
+        require(object_hash(reading) == item.get('reading_sha256') and
+                reading.get('status') in {'accepted','refused','error','unavailable'} and
+                reading.get('map_id') == item['map_id'] and reading.get('map_sha256') == item['sha256'] and
+                reading.get('allocation_sha256') == item.get('reading_allocation_sha256') and
+                bool(item.get('reading_allocation_sha256')),
+                'prepass readings are not terminal and hash-bound')
+    value = dict(decision=DECISION, config_sha256=object_hash(config),
+        allocation_sha256=sha256(allocation), prepass_row_sha256=sha256(target/'row.json'),
+        process_receipt_sha256=sha256(target/'process.json'), job_sha256=sha256(target/'job.json'),
+        draw_sha256=sha256(target/'instruction-draw.json'))
+    path = run/'PREPASS-COMMIT.json'
+    if path.exists():
+        require(read_json(path) == value, 'instruction prepass commitment changed before resume')
+    else:
+        require(not any((run/'jobs').glob('*/DISPATCHED.json')),
+                'cannot recover an uncommitted allocation after planning began')
+        exclusive_json(path, value)
+    return prepared
+
+
+def _failure(job, reason, *, status='error', **fields):
+    return dict(map_id=job['map_id'], map_sha256=job['sha256'], cohort=job['cohort'], arm=job['arm'],
+                ship_id=job.get('ship_id'), status=status, reason=reason, passed=False,
+                full_checker_pass=False, audit_verified=False, audit_fresh_process=False,
+                instruction_type=job.get('instruction_type'), **fields)
+
+
+def _settle_old_child(target):
+    """Never signal an old PID whose process identity cannot be re-established."""
+    for name in ('pid.json', 'audit.pid.json'):
+        path = target/name
+        if not path.is_file():
+            continue
+        row = read_json(path)
+        require(row.get('start_new_session') is True and row['pid'] == row['pgid'],
+                'cannot establish ownership of interrupted child group')
+        try:
+            os.killpg(row['pgid'], 0)
+        except ProcessLookupError:
+            continue
+        except PermissionError as error:
+            raise Paused('Cannot prove old child group stopped; no signals sent (PermissionError)') from error
+        raise Paused('Old child group may still be running or its PID reused; no signals sent; resume after it drains')
+
+
+def process_receipt(target, phase, config):
+    audit = phase == 'audit'
+    prefix = 'audit' if audit else 'child'
+    try:
+        metrics = read_json(target/('audit.process.json' if audit else 'process.json'))
+        pid = read_json(target/('audit.pid.json' if audit else 'pid.json'))
+        request = read_json(target/('audit-job.json' if audit else 'job.json'))
+        deadline = (config['prepass_timeout_s'] if phase == 'prepass' else
+                    config['audit_timeout_s'] if audit else config['arm_deadlines_s'][request['arm']])
+        elapsed = metrics[prefix+'_elapsed_s']
+        return (type(elapsed) in (int, float) and math.isfinite(elapsed) and 0 <= elapsed <= deadline and
+                metrics.get(prefix+'_returncode') == 0 and metrics.get(prefix+'_timed_out') is False and
+                metrics.get(prefix+'_cleanup_failed') is False and metrics.get(prefix+'_pid') == pid['pid'] and
+                pid.get('start_new_session') is True and pid['pid'] == pid['pgid'] and pid['timeout_s'] == deadline)
+    except (OSError, ValueError, KeyError, TypeError):
+        return False
+
+
+def clean_deadline_receipt(target, row, config):
+    """Authenticate an existing deadline publication without changing its bytes."""
+    try:
+        request = read_json(target/'job.json')
+        validate_child_request(config,'plan',request,target/'row.json')
+        metrics, pid = read_json(target/'process.json'), read_json(target/'pid.json')
+        deadline = config['arm_deadlines_s'][request['arm']]
+        elapsed = metrics['child_elapsed_s']
+        return (metrics.get('child_timed_out') is True and metrics.get('child_cleanup_failed') is False and
+                type(elapsed) in (int,float) and math.isfinite(elapsed) and elapsed >= deadline and
+                metrics.get('child_pid') == pid['pid'] == pid['pgid'] and pid.get('start_new_session') is True and
+                pid['timeout_s'] == deadline and row.get('status') == 'deadline_exceeded' and
+                row.get('deadline_exceeded') is True and row.get('hard_wall_s') == deadline and
+                row.get('planning_pid') == pid['pid'] and
+                all(row.get(k) == value for k,value in metrics.items()) and
+                all(row.get(k) == request.get(j) for k,j in
+                    (('map_id','map_id'),('map_sha256','sha256'),('arm','arm'),('cohort','cohort'),('expected_rule','expected_rule'))))
+    except (OSError,ValueError,KeyError,TypeError,RuntimeError):
+        return False
+
+
+def recovered_incumbent(config, job, target):
+    """Only the old controller's within-wall observations can survive a lost supervisor."""
+    from experiments.mvp.pipeline.sealed import driver
+    try:
+        record = read_json(target/'observed-incumbents.json')
+        pid = read_json(target/'pid.json')
+        require(record['extension_config_sha256'] == job['extension_config_sha256'] and
+                all(record[k] == job[k] for k in ('map_id', 'arm', 'sha256')) and
+                record['child_pid'] == pid['pid'] and record['hard_wall_s'] == config['arm_deadlines_s'][job['arm']],
+                'interrupted incumbent provenance differs')
+        return driver._deadline_result(job, target, dict(child_timed_out=True,
+            child_cleanup_failed=False, child_timeout_s=config['arm_deadlines_s'][job['arm']],
+            child_pid=pid['pid'], child_elapsed_s=config['arm_deadlines_s'][job['arm']]), record['observed'])
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+
+
+def trial(config, item, arm, stop):
+    from experiments.mvp.pipeline.sealed import driver
+    job = _base_job(config, item, arm)
+    run = Path(config['run_dir'])
+    if (run/'instruction-allocation.json').exists():
+        job['instruction_allocation_sha256'] = sha256(run/'instruction-allocation.json')
+    target = run/'jobs'/object_hash(dict(map_id=item['map_id'], arm=arm))[:24]
+    target.mkdir(parents=True, exist_ok=True)
+    result = target/'result.json'
+    if result.exists():
+        return read_json(result)
+    dispatched = target/'DISPATCHED.json'
+    if dispatched.exists():
+        try:
+            _settle_old_child(target)
+            raw_path = target/'deadline-row.json' if (target/'deadline-row.json').exists() else target/'row.json'
+            raw = read_json(raw_path) if raw_path.exists() else None
+            authenticated_deadline = (raw is not None and raw_path.name == 'deadline-row.json' and
+                                      clean_deadline_receipt(target,raw,config))
+            if not authenticated_deadline and (raw is None or not process_receipt(target, 'plan', config)):
+                raw = recovered_incumbent(config, job, target)
+            if raw is None:
+                row = _failure(job, 'Interrupted after dispatch; attempt retained and never searched again', dispatched=True)
+                atomic_json(result, row)
+                return row
+        except Paused:
+            stop.set()
+            raise
+        except Exception as error:
+            row = _failure(job, f'Resume cleanup failed: {error}', dispatched=True, child_cleanup_failed=True)
+            atomic_json(result, row)
+            return row
+    else:
+        snapshot = wait_admission(config, stop)
+        frozen(config)
+        exclusive_json(dispatched, dict(t=time.time(), admission=snapshot, job_sha256=object_hash(job)))
+        if arm == 'instruction' and not (run/'instruction-allocation.json').exists():
+            row = _failure(job, 'Serial prepass failed; readings cannot be retried', reader_failure=True, dispatched=False)
+            atomic_json(result, row)
+            return row
+        try:
+            request = _issue(config, job, 'plan', target.name+'-plan')
+            raw = _execute(config, 'plan', request, target)
+        except Exception as error:
+            try:
+                frozen(config)
+            except Exception:
+                stop.set()
+                raise
+            row = _failure(job, f'Planning failed: {type(error).__name__}: {error}', dispatched=True)
+            atomic_json(result, row)
+            return row
+    # A planner result is never a pass until the fresh independent audit finishes.
+    audit_marker = target/'AUDIT-DISPATCHED.json'
+    if audit_marker.exists():
+        if (target/'audit-row.json').is_file() and process_receipt(target, 'audit', config):
+            try:
+                row = read_json(target/'audit-row.json')
+                metrics = read_json(target/'audit.process.json')
+                require(row.get('audit_pid') == metrics.get('audit_pid') and
+                        row.get('audit_verified') is True and row.get('audit_fresh_process') is True and
+                        row.get('audit_pid') != raw.get('planning_pid') and
+                        row.get('audited_target_sha256') == sha256(target/('deadline-row.json' if raw.get('deadline_exceeded') else 'row.json')),
+                        'resumed audit publication attestation differs')
+            except Exception as error:
+                row = _failure(job, f'Resumed independent audit failed: {error}', dispatched=True, audit_error=str(error))
+        else:
+            row = _failure(job, 'Independent audit interrupted; spent audit is never repeated', dispatched=True, audit_error='interrupted')
+    else:
+        try:
+            wait_admission(config, stop)
+            frozen(config)
+            target_path = target/('deadline-row.json' if raw.get('deadline_exceeded') else 'row.json')
+            request = dict(job, target=str(target_path), target_sha256=sha256(target_path))
+            if raw.get('deadline_exceeded'):
+                request['deadline_recovery'] = True
+            exclusive_json(audit_marker, dict(t=time.time(), target_sha256=request['target_sha256']))
+            request = _issue(config, request, 'audit', target.name+'-audit')
+            row = _execute(config, 'audit', request, target)
+            metrics = read_json(target/'audit.process.json')
+            require(row.get('audit_verified') is True and row.get('audit_fresh_process') is True and
+                    row.get('audited_target_sha256') == sha256(target_path) and
+                    row.get('audit_pid') == metrics.get('audit_pid') and row.get('audit_pid') != raw.get('planning_pid'),
+                    'independent audit attestation differs')
+        except Paused:
+            raise
+        except Exception as error:
+            try:
+                frozen(config)
+            except Exception:
+                stop.set()
+                raise
+            row = _failure(job, f'Independent audit failed: {type(error).__name__}: {error}', dispatched=True, audit_error=str(error))
+    row = dict(row, decision=DECISION,
+               label=config.get('label',LABEL) if config.get('development_pilot') else LABEL,
+               sealed_claim_eligible=False,
+               manifest_sha256=config['manifest_sha256'], extension_attempt_retained=True,
+               development_pilot=config.get('development_pilot', False), wall_times_quotable=False)
+    atomic_json(result, row)
+    return row
+
+
+def write_reports(config, *, reason=None):
+    """Counts only; raw native artifacts retain unquotable operational timing."""
+    helper = HOME/'ext_report.py.txt'
+    if helper.is_file():
+        return runpy.run_path(str(helper))['write_reports'](config, reason=reason)
+    from experiments.mvp.pipeline.sealed.report import binomial95, passed
+    run = Path(config['run_dir'])
+    rows = []
+    for item in config['maps']:
+        for arm in ARMS:
+            target = run/'jobs'/object_hash(dict(map_id=item['map_id'], arm=arm))[:24]
+            row = read_json(target/'result.json') if (target/'result.json').exists() else _failure(
+                dict(item, arm=arm), 'Pending resume; no outcome manufactured', status='not_run', dispatched=(target/'DISPATCHED.json').exists())
+            rows.append(dict(row, label=LABEL, sealed_claim_eligible=False, wall_times_quotable=False,
+                             manifest_sha256=config['manifest_sha256']))
+    n = len(config['maps'])
+    cells = {arm: {r['map_id']: r for r in rows if r['arm'] == arm} for arm in ARMS}
+    arms = {arm: dict(maps=n, passes_L0=sum(passed(r) for r in values.values()),
+                      statuses=dict(Counter(r['status'] for r in values.values()))) for arm, values in cells.items()}
+    for cell in arms.values():
+        cell['passes_L0_exact95'] = binomial95(cell['passes_L0'], n)
+    baseline, instructed = cells['pipeline'], cells['instruction']
+    broken = [i for i, r in baseline.items() if r.get('audit_verified') is True and
+              r.get('audit_fresh_process') is True and r.get('counterfactual_instruction_recheck') is False]
+    obeyed = [i for i, r in baseline.items() if r.get('audit_verified') is True and
+              r.get('audit_fresh_process') is True and r.get('counterfactual_instruction_recheck') is True]
+    bound = [i for i in broken if passed(instructed[i])]
+    def binding(ids):
+        denominator = [i for i in broken if i in ids]
+        k = sum(i in bound for i in denominator)
+        return dict(binding_obedient_passes=k, baseline_rule_broken=len(denominator),
+                    binding_obedient_exact95=binomial95(k, len(denominator)),
+                    already_obeyed=sum(i in obeyed for i in ids),
+                    reader_failures=sum(instructed[i].get('reader_failure') is True for i in ids),
+                    engine_failures=sum(instructed[i].get('engine_failure') is True for i in ids))
+    types = {str(r.get('instruction_type')) for r in instructed.values()}
+    summary = dict(decision=DECISION, label=LABEL, sealed_claim_eligible=False,
+        development_pilot=config.get('development_pilot', False), manifest_sha256=config['manifest_sha256'],
+        complete=all(r['status'] != 'not_run' for r in rows), provisional=True, rows=len(rows), expected_rows=3*n,
+        wall_times_quotable=False, concurrent_other_work_allowed=True, reason=reason, arms=arms,
+        instruction=binding(set(baseline)), instruction_by_type={kind:binding(
+            {i for i, r in instructed.items() if str(r.get('instruction_type')) == kind}) for kind in sorted(types)})
+    atomic_json(run/'rows.json', rows)
+    atomic_json(run/'report.json', summary)
+    fields = ('map_id', 'cohort', 'arm', 'status', 'instruction_type', 'map_sha256', 'passed',
+              'audit_verified', 'audit_fresh_process', 'reader_failure', 'engine_failure',
+              'counterfactual_instruction_recheck', 'instruction_recheck', 'reason', 'label',
+              'sealed_claim_eligible', 'manifest_sha256', 'wall_times_quotable')
+    with (run/'per-map.csv').open('w', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({k: passed(row) if k == 'passed' else row.get(k) for k in fields})
+    lines = ['# Fresh held-out extension', '', LABEL, '',
+             'Pass/fail counts only. Other work may run beside this extension; wall times are not quoted.', '',
+             '| Arm | Full L0 passes | Exact 95% interval | Statuses |', '|---|---:|---|---|']
+    for arm, cell in arms.items():
+        lines.append(f"| {arm} | {cell['passes_L0']}/{n} | {cell['passes_L0_exact95']} | {cell['statuses']} |")
+    lines += ['', 'Binding obedient passes / fresh-audited no-rule plans breaking the rule: '+str(summary['instruction']),
+              '', 'Per type: '+json.dumps(summary['instruction_by_type'], sort_keys=True),
+              '', 'Planning step from a clean load list, templated sentences. No pre-registered sealed claim.']
+    (run/'REPORT.md').write_text('\n'.join(lines)+'\n')
+    return summary
+
+
+def extension_environment():
+    from experiments.mvp.pipeline.sealed.common import cpu_environment
+    return dict(cpu_environment(), UV_CACHE_DIR=str(HOME/'uv-cache'),
+                STOWAGE_VESSEL_CACHE_DIR=str(HOME/'runtime-cache/vessels'),
+                TMPDIR=str(HOME/'runtime-cache/tmpdir'))
+
+
+def run(config_path):
+    from experiments.mvp.pipeline.sealed import driver
+    with patch.object(driver, 'cpu_environment', extension_environment):
+        return _run(config_path)
+
+
+def _run(config_path):
+    config = load_config(config_path)
+    frozen(config)  # Before first extension map or capability is opened/spent.
+    directory = output_path(config['run_dir'])
+    directory.mkdir(parents=True, exist_ok=True)
+    stop, render_lock = threading.Event(), threading.Lock()
+    with (directory/'controller.lock').open('a+b') as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as error:
+            raise HarnessError('Another extension controller is active') from error
+        identity = _identity(config)
+        if (directory/'STARTED.json').exists():
+            require(read_json(directory/'STARTED.json') == identity, 'resume configuration differs')
+        else:
+            exclusive_json(directory/'STARTED.json', identity)
+            exclusive_json(directory/'config.json', config)
+        if (directory/'COMPLETE.json').exists():
+            return read_json(directory/'report.json')
+        previous = None
+        if threading.current_thread() is threading.main_thread():
+            previous = signal.signal(signal.SIGTERM, lambda *_: stop.set())
+        reason = None
+        try:
+            prepared = prepare(config, stop)
+            require(prepared is not None,
+                    'fatal serial prepass; no planning without committed terminal allocation/readings')
+            items = prepared
+            def one_map(item):
+                for arm in ARMS:
+                    if stop.is_set():
+                        return
+                    trial(config, item, arm, stop)
+                    with render_lock:
+                        write_reports(config)
+            with ThreadPoolExecutor(max_workers=config['workers']) as pool:
+                futures = [pool.submit(one_map, item) for item in items]
+                for future in as_completed(futures):
+                    try:
+                        future.result()
+                    except Exception as error:
+                        stop.set()
+                        reason = f'{type(error).__name__}: {error}'
+                        print('Extension paused: '+reason, flush=True)
+        except Exception as error:
+            reason = f'{type(error).__name__}: {error}'
+            print('Extension paused: '+reason, flush=True)
+        finally:
+            summary = write_reports(config, reason=reason)
+            if summary['complete']:
+                exclusive_json(directory/'COMPLETE.json', dict(t=time.time(), **identity, sealed_claim_eligible=False))
+            else:
+                atomic_json(directory/'PAUSED.json', dict(t=time.time(), reason=reason or 'controller stop'))
+            if previous is not None:
+                signal.signal(signal.SIGTERM, previous)
+        return summary
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--config', default=str(HOME/'config.json'))
+    action = parser.add_mutually_exclusive_group(required=True)
+    action.add_argument('--run', action='store_true')
+    action.add_argument('--check', action='store_true')
+    action.add_argument('--gpu-ready', action='store_true')
+    action.add_argument('--child', choices=('prepass', 'plan', 'audit'))
+    parser.add_argument('--request')
+    parser.add_argument('--output')
+    args = parser.parse_args()
+    try:
+        if args.child:
+            child(args.config, args.child, args.request, args.output)
+        elif args.run:
+            run(args.config)
+        else:
+            config = load_config(args.config)
+            frozen(config)
+            if args.gpu_ready:
+                atomic_json(output_path(config.get('gpu_ready_path', HOME/'GPU-READY.json')),
+                    dict(decision=DECISION, ready=True, config_sha256=object_hash(config), t=time.time(),
+                         source='leader --gpu-ready; adopted-reader GPU window'))
+                print('GPU-READY recorded; no inference or planning launched', flush=True)
+            else:
+                print('READY (GPU window/admission may still wait; no map or reader opened)', flush=True)
+    except (OSError, ValueError, KeyError, TypeError, RuntimeError) as error:
+        parser.exit(2, 'Extension blocked: '+str(error)+'\n')
+
+
+if __name__ == '__main__':
+    main()
+elif __name__ == '__mp_main__':
+    spawn_runtime_init()

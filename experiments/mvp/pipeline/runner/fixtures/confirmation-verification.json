@@ -1,0 +1,111 @@
+{
+  "verified_utc": "2026-11-02T02:03:43.958454+00:00",
+  "outcome": "Authenticated confirmation migration complete; affected study arms retry automatically after admission.",
+  "tests": {
+    "full_runner": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "241",
+      "time": "211.528",
+      "timestamp": "2026-11-01T20:55:39.438702-05:00",
+      "hostname": "Andamans-MacBook-Pro.local"
+    },
+    "command": "pytest experiments/mvp/pipeline/runner -q -m 'not slow' --junitxml=experiments/mvp/pipeline/runner/fixtures/confirmation-pytest.xml",
+    "additional_targeted_study_finalizer_passes": 39,
+    "additional_authenticated_source_cases": 3,
+    "reported_offline_replay": "Passed with sockets, Glimmer initialization and live search blocked"
+  },
+  "source_sha256": {
+    "core.py": "96742102901b13b9b216aae356f57ddcccbd3e8d287d7a2b4167fbe009f6872c",
+    "__main__.py": "b53fd1c4c0bb3f7bce484ae6e169061029d948257d300d36fed9caf176b01d4e",
+    "benchmark.py": "04f979587540493a96234406b6bd983215e646a5d9d8968f94fec481b059e144",
+    "profile_study.py": "deaa05415f96cb84af33b0e2e1597aee22428234d9fd5a5a46696bcfec0aeab1",
+    "profile_finalize.py": "e8fc88a381001040d2f31d8d5de3c128e511a3c0ea3f3b18c229f4676589abad",
+    "README.md": "d3d9ccfe470c412154e57b6f29b1b6154b88225efee676472bfe7873a5c02a44"
+  },
+  "study": {
+    "directory": "experiments/mvp/pipeline/runner/measurements/profile-study-20261101",
+    "preserved_completed_row_sha256": {
+      "3479998c6030682a72cf8ee2.json": "2fa142b5b0f764b8eb5558a50799945e80b245e3b46f94cf9b55ea67166d9a8d",
+      "327ff51b41f17d55013f1a10.json": "001fba5cc0fb43a6ec89cb64ac019e71c1bfdbd657a43d63c4b006b91731b676",
+      "2acb9e087cd720507a02ff5c.json": "fec134df8358c153b8e8390fa17fdfa318feaf20a61c7ff3e75451ff9f8fbade",
+      "c1b334b09aaca0540f9b79ea.json": "008c355ca21a5f2e328d5c573dbe7bd31c76414dddddcabeb09a04fa74864095"
+    },
+    "pending_obsolete_authentication_failures": [
+      "056d0bc52b5752080738a994",
+      "07227eb274ad4334137a9e38",
+      "14a211d0d9271156060a6621",
+      "1a7b602dbef618df299b4aa3",
+      "1c6ea4fa3a2879ffdefa85f6",
+      "1e2cf6ba1fff78b22b6c570d",
+      "1f5718ba131eecca80256a1c",
+      "38d3949d27ef1e4ae8a01095",
+      "3c209dbb9bdccb60dbd041ee",
+      "45fc437e4e9b253b3bc19814",
+      "4aef3ae10ee962ebfd460a98",
+      "5dd3591863ac2298bbac0a6b",
+      "87f2339673ec1328710ecafd",
+      "8f2331137764017b73e3c94f",
+      "a496cb2164dbe41d29d23ac7",
+      "a522a8e8fe7e70433baf8d09",
+      "a61aa2ef852cb7bf82ac51e6",
+      "b168649533b61c9783d9b819",
+      "caa69deefc3e310a8e558a1f",
+      "d5138eee5c065a2f48803b80",
+      "f3f08f5c36c98c58927c8e0d",
+      "f8b963e0d74550903b34972b"
+    ],
+    "repair_tail_pid": 92176,
+    "repair_tail_alive": true,
+    "activity": {
+      "updated_utc": "2026-11-02T02:03:43.489294+00:00",
+      "active": [
+        {
+          "pid": 88638,
+          "job_id": "649556c31ede1060cf76f9a1"
+        },
+        {
+          "pid": 88639,
+          "job_id": "5f292d86cf7d9608e9d76fdb"
+        },
+        {
+          "pid": 88640,
+          "job_id": "c62aa13233caeaf21a83a620"
+        }
+      ],
+      "detached": [],
+      "pending": 227,
+      "expected": 256,
+      "telemetry": {
+        "observed_utc": "2026-11-02T02:03:43.483318+00:00",
+        "valid": true,
+        "load1": 62.34,
+        "enabled_cores": 12,
+        "mask": 4095,
+        "reading_age_s": 3.4835891723632812,
+        "reading_t": 1793585020
+      },
+      "worker_limit": 4
+    },
+    "migration_registered": true,
+    "source_epochs": {
+      "source_epochs": [
+        "1ba6711e69f9905f7a2ba0818c9812642742472220ebb6eeddf460ac549b827b",
+        "b44a90105290e54d6b749885aadc419d7d06073b1651ecf3a9d571b23b8e5c9a"
+      ],
+      "source_epoch_caveat": "Mixed source epochs: earlier rows precede explicit batch confirmation and the hatch instruction correction that leaves missing-load completion to the full checker. The reviewed migration also adds stronger frozen provenance checks, owned ballast-pool cleanup, and durable measurement-attempt evidence. Finished rows are preserved; each new row records its actual execution source. Comparisons across source epochs may be confounded. Every passing row still requires the full checker and every instruction recheck."
+    },
+    "calibration": "Publication stays pending while any obsolete authentication failure remains."
+  },
+  "assumptions": [
+    "Named host sources are application attestations; sealed_expected_match passes unchanged.",
+    "Earlier valid full-pass and relaxed measurements retain their original source identity.",
+    "Admission waits without error; current high machine load prevents new starts."
+  ],
+  "quiet_rerun": "experiments/mvp/pipeline/runner/run_profile_study.sh",
+  "network_calls": 0,
+  "gpu_calls": 0,
+  "spend_usd": 0
+}

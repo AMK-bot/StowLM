@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StowLM Reader x-ray · FAKE fixture</title>
+  <link rel="stylesheet" href="player.css">
+  <style>html,body,#xray{width:100%;height:100%;margin:0;background:#040914;overflow:hidden}</style>
+</head>
+<body>
+  <main id="xray"></main>
+  <script src="fixtures/fake-illegal-bay.js"></script>
+  <script src="player.js"></script>
+  <script>
+    const illegalBay = window.XRAY_FIXTURE.steps.findIndex(step =>
+      step.top_k.length && step.top_k[0].reason === 'bay_not_on_ship');
+    window.xrayPlayer = StowLMXray.mount(document.getElementById('xray'), window.XRAY_FIXTURE,
+      {initialStep: illegalBay < 0 ? 1 : illegalBay + 1});
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "hero_source": "experiments/mvp/pipeline/lattice/hero.json",
+  "hero_slot": "hero",
+  "catalogue_sha256": "1fa62d5b3caf404a837c91467bdce26bc79a6a40ff777b26df936a7ff6a2ab85",
+  "instructions": {
+    "hero": "hero_wording",
+    "backup": "experiments/mvp/pipeline/lattice/fixtures/backup-instruction.json"
+  },
+  "readings": {},
+  "reader_recordings": null,
+  "showcase_readings": {
+    "path": "experiments/mvp/showcase/reader/recordings.json",
+    "sha256": "540d074effc12ab281b3ee3e690ced3aad89732a91917ed1b8a91670f93a9ef1"
+  },
+  "reader_adopted": "swa-last-5 (adapter eff712e1…), D266; adapter-v2 was reversed. reader_recordings names its reading of this sentence once read_all.py has written it; the x-ray trace above is the same adapter.",
+  "live_reading": "en-reader-031e722e98863ad8",
+  "package_dir": "experiments/mvp/pipeline/package/fixtures/hero-run/package",
+  "xray_trace": "experiments/mvp/pipeline/xray/fixtures/real-block-trace.json",
+  "change_facts": "experiments/mvp/pipeline/lattice/hero-facts-close-bay-9.json",
+  "impossible_facts": "experiments/mvp/pipeline/lattice/hero-coverage/hero-impossible-plain.json",
+  "sandbox_source": "experiments/mvp/pipeline/sandbox/fixtures/demo_source_hero.json",
+  "drag_cache_sha256": "b50f82ec5f5d9b693256f8f05fdf649f51589d197fcd34da93796586cfbdeca4",
+  "clip": {
+    "id": "en-reader-0449f2adc144ea36",
+    "fixes": {
+      "Flanner": "Planner",
+      "map": "max"
+    }
+  },
+  "radio": {
+    "readings": "experiments/mvp/pipeline/radio/readings.json",
+    "clips": "experiments/mvp/pipeline/radio/manifest.json",
+    "typed": [
+      "experiments/mvp/pipeline/reader_final/hero-candidates.json",
+      "experiments/mvp/pipeline/reader_final/readings/hero-candidates.json",
+      "experiments/mvp/pipeline/reader_final/readings/hero-readings.json"
+    ],
+    "fallback_sentence": "Do not load any containers in bay 09.",
+    "audio": null,
+    "audio_label": null
+  },
+  "stand_ins": {
+    "radio": "A separate clip with another rule, from another ship: how a noisy line is handled. This voyage's rule is typed by the planner.",
+    "radio_wording": "This wording's rule is not yet the rule this voyage replans under: a separate clip until it is."
+  },
+  "reader_note_recorded": "This recorded reading stands in. The adopted StowLM Reader takes over once it has read this sentence.",
+  "reader_note": "This rule stands in for a reading: no model has read this sentence yet. The adopted StowLM Reader takes over once it has read it (task 3.2)."
+}

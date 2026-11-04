@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-11-02T06:44:50.348965+00:00",
+  "entries": {
+    "original-candidate-gate": {
+      "path": "fixtures/hero-shot10-delivered/native/original-candidate-gate.json",
+      "sha256": "62c00706de2c42f7711a53a990e90bb7cb1d755119d86b2ab78faa730a80096f",
+      "original_file": "fixtures/hero-final/native/original-candidate-gate.json",
+      "original_sha256": "62c00706de2c42f7711a53a990e90bb7cb1d755119d86b2ab78faa730a80096f"
+    },
+    "e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f": {
+      "path": "fixtures/hero-shot10-delivered/native/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json",
+      "sha256": "ef751e0c50f6c926956322cc4425b6940fd3ecc9c1e3538d6348f7da74b6eede",
+      "original_file": "fixtures/hero-final/native/e47b847abf288cf9ef1d74ee92cb80ad31a6f7c58e903565c8b1aa8a808cc77f.json",
+      "original_sha256": "ef751e0c50f6c926956322cc4425b6940fd3ecc9c1e3538d6348f7da74b6eede"
+    },
+    "33989003a2ad03aed9b67976cac4422b0c9fa22edaa2d4e321c54999736db02a": {
+      "path": "fixtures/hero-shot10-delivered/native/33989003a2ad03aed9b67976cac4422b0c9fa22edaa2d4e321c54999736db02a.json",
+      "sha256": "6bf8ffe70259d87ae2043ce92036fb5f0336ff3429c9bc80bd1ebab0c1789536",
+      "original_file": "fixtures/hero-final/native/33989003a2ad03aed9b67976cac4422b0c9fa22edaa2d4e321c54999736db02a.json",
+      "original_sha256": "6bf8ffe70259d87ae2043ce92036fb5f0336ff3429c9bc80bd1ebab0c1789536"
+    },
+    "9381a5a54b03ee22ba61bb73d2b68d07ffebdc604968672bcbd349dcdf84018a": {
+      "path": "fixtures/hero-shot10-delivered/native/9381a5a54b03ee22ba61bb73d2b68d07ffebdc604968672bcbd349dcdf84018a.json",
+      "sha256": "1d43178ad9822576b0d72c8aa6f0bceb9364b9b3be0f5298851dd2b91a27ce7b",
+      "original_file": "fixtures/hero-final/native/9381a5a54b03ee22ba61bb73d2b68d07ffebdc604968672bcbd349dcdf84018a.json",
+      "original_sha256": "1d43178ad9822576b0d72c8aa6f0bceb9364b9b3be0f5298851dd2b91a27ce7b"
+    },
+    "72ccfc883f3db82da140879280c499b280fa1edd179c31f5e69f06056ea32530": {
+      "path": "fixtures/hero-shot10-delivered/native/72ccfc883f3db82da140879280c499b280fa1edd179c31f5e69f06056ea32530.json",
+      "sha256": "a351c008fb5a9746fdbd3c762db34f74c35f670d8ac1e5bd0a56bfd44ee2dec9",
+      "original_file": "fixtures/hero-final/native/72ccfc883f3db82da140879280c499b280fa1edd179c31f5e69f06056ea32530.json",
+      "original_sha256": "a351c008fb5a9746fdbd3c762db34f74c35f670d8ac1e5bd0a56bfd44ee2dec9"
+    }
+  },
+  "catalogue_sha256": "6d66050f7ac50c49c61dee6a492e72546bcf91cefa87f96d627d027b04eec9d9",
+  "freshness_scope": "Actual native gates computed during this campaign preparation; prior-process immutable receipts, not new numerical checks.",
+  "interrupted_attempt": "fixtures/hero-final",
+  "excluded_first_provider_case": null,
+  "continuation": "Take only after explicit capability ceiling and checked-card prose scope repairs. Earlier takes and frozen8 scores retained. No benchmark rerun."
+}

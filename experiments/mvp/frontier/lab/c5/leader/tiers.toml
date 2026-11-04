@@ -1,0 +1,65 @@
+# Rule enforcement tiers (user order, 1 Nov 2026; leader's sorting, D241, open for veto).
+# Sorted by what a breach costs in the real world, fixed before measuring which rules
+# block our maps. Do not move a rule to improve a pass rate.
+# Peel order when no plan is found: T5, then T4, T3, T2, T1. T0 is never peeled.
+# A rule ID missing from this file counts as T0 (fail closed).
+
+schema_version = 1
+
+[levels]
+# Level = which tiers may be broken. L0 is an ordinary full-checker pass.
+L0 = []
+L1 = ["T5"]
+L2 = ["T5", "T4"]
+L3 = ["T5", "T4", "T3"]
+L4 = ["T5", "T4", "T3", "T2"]
+L5 = ["T5", "T4", "T3", "T2", "T1"]
+
+[tiers.T0]
+meaning = "Not a rule to relax: breaking it means the plan can't be carried out, or the check never ran."
+rules = [
+  "expert.physical.slot_occupancy", "expert.physical.size_fit", "expert.physical.no_20_on_40",
+  "expert.physical.tier_height", "expert.moves.top_access", "expert.moves.hatch_clear",
+  "expert.moves.bottom_up", "expert.rotation.no_overstow", "expert.rotation.hatch_overstow",
+  "expert.e9.over_height", "expert.e9.over_width_length", "port.e3.yard_height",
+  "port.e3.quay_height", "port.e3.quay_crossing", "port.e3.yard_crossing",
+  "checker.internal_error", "checker.missing_vessel_data", "checker.invalid_ballast",
+  "port.call.profile_resolution", "iacs.s1.loading_instrument", "iacs.rec48.validation",
+  "iacs.l5.validation",
+]
+
+[tiers.T1]
+meaning = "Must follow: a breach can capsize, break or ground the ship, start a fire or explosion, or is a flat legal bar on sailing."
+rules = [
+  "iscode.loading.displacement", "iscode.loading.draft", "iscode.loading.gm",
+  "iscode.b3_1.free_surface", "iscode.a2_2.gz_area_0_30", "iscode.a2_2.gz_area_0_40",
+  "iscode.a2_2.gz_area_30_40", "iscode.a2_2.gz_at_30", "iscode.a2_2.max_gz_angle",
+  "iscode.a2_2.initial_gm", "iscode.a2_3.weather", "iacs.s11a.longitudinal_strength",
+  "expert.physical.stack_weight", "imdg.segregation.7_2_4", "imdg.segregation.7_4_3",
+  "imdg.stowage.3_2", "port.dg.refused_class", "solas.vi2.verified_gross_mass",
+  "stability.open_hatch_immersion", "port.stability.cargo_operations", "port.call.draft",
+  "port.call.length",
+]
+
+[tiers.T2]
+meaning = "Should follow: a real safety or statutory limit, but a recognised relief exists, such as extra lashing, a weather window, ballast at sea or port permission."
+rules = [
+  "iacs.member_irs.container_securing", "iscode.b2_3.containership_second_check",
+  "solas.v22.visibility", "iscode.loading.trim", "iscode.loading.list",
+  "port.ballast.transfer_rate", "port.dg.direct_delivery",
+]
+
+[tiers.T3]
+meaning = "Promises to customers and cargo care: a breach costs money or cargo, not safety. Includes leaving a box ashore."
+rules = [
+  "objective.all_loaded", "expert.e8.under_deck", "expert.e8.on_deck",
+  "expert.e8.away_from_heat", "expert.e8.top_stowage", "expert.physical.reefer_plug",
+]
+
+[tiers.T4]
+meaning = "The field expert's stowage practice: good seamanship, with stack and strength limits still checked separately."
+rules = ["expert.e1.heavy_bottom", "expert.e2.weight_order"]
+
+[tiers.T5]
+meaning = "Extras: preferences and tie-breaks."
+rules = ["expert.e6.heavy_under_deck", "iscode.stability.margin", "iacs.strength.margin"]

@@ -1,0 +1,28 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "created_utc": "2026-11-02T01:26:39.954896+00:00",
+  "source_fixture": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sandbox/fixtures/envelope190.json",
+  "source_fixture_sha256": "7a97cf9971219baf3e94647f52620cca2274fc9da6888f7058b04fa8d9b36279",
+  "instance_sha256": "4f4cf93fbb1ac9aade754ce3942988357cfcd54ec93c8a66ee81f4901a1fc016",
+  "plan_sha256": "8d47fff76cbf4edfdd931e842ec5b1731d63889e5354579f3628508b089e8efd",
+  "n_boxes": 190,
+  "pid": 72196,
+  "workers": 1,
+  "native_thread_caps": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "max_admission_load1": 20.0,
+  "method": "canonical stowage.checker.check; no skipped parts; cProfile after adjacent unprofiled observation; same process and immutable source inputs; two-second fleet reading sampler; fixture/model parsing and candidate preparation excluded",
+  "source_sha256": {
+    "profile_full.py": "399987877219692d1294ab6b7e5f180c65b1e90b530b3f5901ec919dbcdbdd84",
+    "full.py": "ff3e593771ef30c29e1e6cecd434090961ed099e2e51b66c37b268113eee7fa1"
+  },
+  "complete": false,
+  "runs": [],
+  "status": "terminated_without_result",
+  "process_alive": false,
+  "process_verification_utc": "2026-11-02T02:30:23.573379+00:00"
+}

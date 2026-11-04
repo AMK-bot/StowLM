@@ -1,0 +1,46 @@
+{
+  "schema": "stowlm.sandbox-demo-audit-timing/1",
+  "created_utc": "2026-11-02T03:15:07.251104+00:00",
+  "manifest_sha256": "fb14008b3cc4dd74c1a065d54f9b071de17c8a152e9a60aed4da2f9373af7857",
+  "audit_results_sha256": "36aa6e784a27261567d4380bc428125ba624128344d2e9500119f2375514d4a7",
+  "workers": 4,
+  "native_thread_caps": 1,
+  "load_label": "Loaded; not a low-load measurement",
+  "cleared_fast_response": {
+    "count": 5,
+    "median_s": 5.615445666015148,
+    "p95_s": 6.973962042015046,
+    "max_s": 6.973962042015046
+  },
+  "rejected_fast_response": {
+    "count": 25,
+    "median_s": 0.4600932499743067,
+    "p95_s": 5.26882433303399,
+    "max_s": 6.00544625002658
+  },
+  "admission_load1_range": [
+    35.31,
+    43.17
+  ],
+  "end_load1_range": [
+    35.31,
+    66.98
+  ],
+  "fast_end_load1_range": [
+    35.31,
+    43.17
+  ],
+  "first_full_started_unix": 1793588481.17052,
+  "frozen_unix": 1793588211.857862,
+  "ready_unix": 1793588341.7784262,
+  "fresh_checks": 30,
+  "distinct_resulting_states": 30,
+  "owned_pid_closure": {
+    "17291": "exited",
+    "17299": "exited",
+    "17301": "exited",
+    "17300": "exited",
+    "17302": "exited"
+  },
+  "cache_sha256": "b50f82ec5f5d9b693256f8f05fdf649f51589d197fcd34da93796586cfbdeca4"
+}

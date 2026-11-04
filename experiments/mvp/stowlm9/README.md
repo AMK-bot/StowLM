@@ -1,0 +1,33 @@
+# StowLM 8.5 / 8.6 labels (D199)
+
+CPU only. Source planners, checker and model code remain unchanged. See LABELS.md for live counts/ETA and prompt_audit.md for prompt evidence.
+
+Launch/resume from repository root:
+
+```sh
+UV_CACHE_DIR=$PWD/.uv-cache uv run --offline --no-sync python experiments/mvp/stowlm9/run.py prepare
+UV_CACHE_DIR=$PWD/.uv-cache uv run --offline --no-sync python experiments/mvp/stowlm9/run.py supervise rule
+UV_CACHE_DIR=$PWD/.uv-cache uv run --offline --no-sync python experiments/mvp/stowlm9/run.py supervise frontier
+```
+
+The recorded detached launch uses these same commands with one controller per stream, its own log and start_new_session=True. File locks reject duplicate controllers. The manifest freezes all map/input/baseline bytes, planner/wrapper sources, budgets, and checker outcome epoch. A fresh process handles each map. Reuse requires complete status and matching manifest/epoch/candidate bindings; failed maps retry on relaunch. A source/epoch change requires a separately reviewed new run rather than silently mixing labels.
+
+D209: Rule processes the entire fixed 2,621-entry eligible train order, retaining the original first-1,700 prefix (1,400 small and 300 tiny), at 3 workers overnight. Planning remains 300 s and V4 finishing 900 s. At Oct 31 19:45 EDT the supervisor exports the available labels while continuing map work, updates data-85, pins data-85-0000, and writes rule/EXPORT.DONE after successful publication. It then exports and pins data-85-0001, 0002, ... every 200 additional admitted labels, relative to the initial snapshot count. Receipts and pending reservations under rule/snapshots make failed or interrupted exports resumable. The original success marker remains the initial snapshot receipt. Every generation has the exact separated val80. No post-19:45 completion is excluded. Frontier remains paused at zero workers until an explicit leader instruction; ARM.DONE cannot increase either stream. Rule worker increases also require leader instruction. The full-queue continuation is an assumption extending the original prefix target in the unchanged order.
+
+data-85 and data-86 are atomic symlinks into immutable generation directories under .exports/. Each generation has train.jsonl, exact preserved val.jsonl (80 rows), stats.json, build_report.json, admitted_manifest.json and only its admitted records. Export explicitly checks current epoch/input/candidate provenance and replays every serialized label with the existing SFT builder primitives, without historical row caches. Old generations remain evidence and cannot be rediscovered as new winners.
+
+For later training, load `prompt_v9.install_training()` before the existing `llm.stowlm.train` entry point. It keeps the new train prompt and admits the exact 80 byte-pinned legacy validation rows; the ordinary unwrapped trainer rejects mixed prompt versions. No GPU training is launched by this job.
+
+Runtime native-thread variables are fixed to 1; no nice or network is used. Only Popen children recorded by these controllers are waited on. There are no pattern-based process kills. `frontier` source is unedited at version 0.9.0. Because its internal master explicitly requests two CP-SAT workers, the pinned runtime resource wrapper clamps only that setting to one at solve entry.
+
+Assumptions: rule planning/finisher budgets are 300/900 seconds respectively; seed 0 is shared. The claimed 5,324 files include audit sidecars: actual map count is recorded from parsed instance JSON. All validation/test/showcase exclusion and train identity guards remain active. Prompt 9.0 is an explicit additional hatch view because current source already contains the original exact hatch grouping.
+
+Leader update (15:20 EDT): rule is fixed at 3 workers, planning300s and V4 finisher900s; timed-out cases retry, structural failures remain counted. Frontier is fully paused after legacy workers drained, with no automatic ARM-based resume. The pause marker must be removed and control.json explicitly changed only after leader instruction. New parent-owned dedicated worker sessions support cooperative pause through control.json. Parent signal probe passed; cross-execution signals to legacy sessions were denied, so the legacy controllers were fenced at their own report-write boundary and workers drained. History retains the old manifest, producer source and every attempt. Passing same-outcome-epoch labels were explicitly adopted with original producer references; no unpassed label was admitted.
+
+First20 published-only readout: rule/FIRST20.json and FIRST20.md. Current readout: rule/READOUT.json; credible low-count warning: rule/UNDER400.json. The owned lightweight readout watcher uses exact archived producer SHA when a retry replaces a live row. It preserves the historical denominator and calculates forecasts from the new 3-worker launch only.
+
+D209 handoff: the prior supervisor cooperatively drained all three owned map jobs; its empty dispatcher exited via a maintenance control error because it predates explicit shutdown. The new supervisor supports `drain:true` (stop new dispatch) and `shutdown:true` (drain, then exit), without signaling other sessions. History preserves the prior producer sources and exact rows. All 26 passing labels and 34 terminal rows were retained under the unchanged physics epoch; no checks were weakened. `D209-HANDOFF.json` records the successor owner.
+
+Current ship/size/fill census: `rule/MIX.md` and `MIX.json`, refreshed every minute by the owned `mix_watch.py` process. Counts include unique unsuccessful maps and separate physical retry attempts, plus published versus checked labels and full eligible queue. Fill means generated cargo TEU divided by geometric decision-cell TEU capacity from hash-bound train audit sidecars, not legal or nominal capacity. The initial cohort has size/fill confounding, so it does not establish a causal fill difficulty effect.
+
+Live readout v2: `rule/READOUT.json` uses `admitted` for current bound passing rows divided by unique current terminal map rows (complete or error). `published_snapshot` reports the last exported generation separately, and `physical_attempts` reports retry-inclusive yield. The owned readout watcher reloads reporting code each tick and runs overnight. The old cached v1 writers were retired only at their process-specific report-write boundary; the supervisor continues its map loop and its report exception guard handles that old call. No map job or pinned producer source changed. The export always discovers current winners through `admitted_rows(manifest, 'rule', root)`, never from the prior data-85 generation. See `rule/EXPORT-ELIGIBILITY.json` for a direct current-export admission audit.

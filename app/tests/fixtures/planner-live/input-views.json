@@ -1,0 +1,957 @@
+{
+  "needs-papers": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "needs_papers",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": true,
+        "reason": null
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": true,
+        "reason": null
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": null
+    },
+    "load_list": null,
+    "voice": null,
+    "readings": [],
+    "stages": []
+  },
+  "reading-papers": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "reading_papers",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": true,
+        "reason": null
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": true,
+        "reason": null
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": null,
+      "progress": {
+        "bookings": [
+          {
+            "booking_ref": "SYN-A",
+            "status": "done",
+            "wall_s": 3.2
+          },
+          {
+            "booking_ref": "SYN-B",
+            "status": "running",
+            "wall_s": 3.8
+          }
+        ]
+      }
+    },
+    "load_list": null,
+    "voice": null,
+    "readings": [],
+    "stages": [
+      {
+        "stage": "intake",
+        "status": "running",
+        "started_utc": "2026-11-03T15:15:00Z",
+        "wall_s": 7
+      }
+    ]
+  },
+  "needs-answers": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "needs_answers",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": true,
+        "reason": null
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": true,
+        "reason": null
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": {
+        "mode": "live",
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is the gross mass of SYNX0000001?",
+            "field": "gross_mass_kg",
+            "box": "SYNX0000001"
+          },
+          {
+            "id": "q2",
+            "text": "Is SYNX0000002 a reefer?",
+            "field": "reefer",
+            "box": "SYNX0000002",
+            "choices": [
+              "yes",
+              "no"
+            ]
+          }
+        ],
+        "rows": [],
+        "wall_s": 7.5,
+        "cost_usd": 0.02,
+        "complete": false
+      }
+    },
+    "load_list": null,
+    "voice": null,
+    "readings": [],
+    "stages": []
+  },
+  "ready": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "ready",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": true,
+        "reason": null
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": true,
+        "reason": null
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": {
+        "mode": "live",
+        "questions": [],
+        "complete": true,
+        "rows": [
+          {
+            "id": "SYNX0000001",
+            "box_id": "SYNX0000001",
+            "size_ft": 20,
+            "weight_t": 21,
+            "gross_mass_kg": 21000,
+            "pod": "SGSIN"
+          },
+          {
+            "id": "SYNX0000002",
+            "box_id": "SYNX0000002",
+            "size_ft": 40,
+            "weight_t": 18,
+            "gross_mass_kg": 18000,
+            "pod": "VNVUT"
+          }
+        ],
+        "boxes": 2,
+        "wall_s": 8.5,
+        "cost_usd": 0.03
+      }
+    },
+    "load_list": {
+      "origin": "intake",
+      "boxes": 2,
+      "teu": 3,
+      "rows": [
+        {
+          "id": "SYNX0000001",
+          "box_id": "SYNX0000001",
+          "size_ft": 20,
+          "weight_t": 21,
+          "gross_mass_kg": 21000,
+          "pod": "SGSIN"
+        },
+        {
+          "id": "SYNX0000002",
+          "box_id": "SYNX0000002",
+          "size_ft": 40,
+          "weight_t": 18,
+          "gross_mass_kg": 18000,
+          "pod": "VNVUT"
+        }
+      ]
+    },
+    "voice": null,
+    "readings": [],
+    "stages": []
+  },
+  "ready-generated": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "ready",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": true,
+        "reason": null
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": true,
+        "reason": null
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": {
+        "skipped": true,
+        "why": "Planner chose the generated load list."
+      }
+    },
+    "load_list": {
+      "origin": "generator",
+      "boxes": 2,
+      "teu": 3,
+      "rows": [
+        {
+          "id": "SYNX0000001",
+          "box_id": "SYNX0000001",
+          "size_ft": 20,
+          "weight_t": 21,
+          "gross_mass_kg": 21000,
+          "pod": "SGSIN"
+        },
+        {
+          "id": "SYNX0000002",
+          "box_id": "SYNX0000002",
+          "size_ft": 40,
+          "weight_t": 18,
+          "gross_mass_kg": 18000,
+          "pod": "VNVUT"
+        }
+      ]
+    },
+    "voice": null,
+    "readings": [],
+    "stages": []
+  },
+  "spark-unavailable": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "needs_papers",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": false,
+        "reason": "MODEL_API_KEY isn't set in this launch"
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": true,
+        "reason": null
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": null
+    },
+    "load_list": null,
+    "voice": null,
+    "readings": [],
+    "stages": []
+  },
+  "voice-transcript": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "ready",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": true,
+        "reason": null
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": true,
+        "reason": null
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": {
+        "mode": "live",
+        "questions": [],
+        "complete": true,
+        "rows": [
+          {
+            "id": "SYNX0000001",
+            "box_id": "SYNX0000001",
+            "size_ft": 20,
+            "weight_t": 21,
+            "gross_mass_kg": 21000,
+            "pod": "SGSIN"
+          },
+          {
+            "id": "SYNX0000002",
+            "box_id": "SYNX0000002",
+            "size_ft": 40,
+            "weight_t": 18,
+            "gross_mass_kg": 18000,
+            "pod": "VNVUT"
+          }
+        ],
+        "boxes": 2,
+        "wall_s": 8.5,
+        "cost_usd": 0.03
+      }
+    },
+    "load_list": {
+      "origin": "intake",
+      "boxes": 2,
+      "teu": 3,
+      "rows": [
+        {
+          "id": "SYNX0000001",
+          "box_id": "SYNX0000001",
+          "size_ft": 20,
+          "weight_t": 21,
+          "gross_mass_kg": 21000,
+          "pod": "SGSIN"
+        },
+        {
+          "id": "SYNX0000002",
+          "box_id": "SYNX0000002",
+          "size_ft": 40,
+          "weight_t": 18,
+          "gross_mass_kg": 18000,
+          "pod": "VNVUT"
+        }
+      ]
+    },
+    "voice": {
+      "mode": "live",
+      "transcript": "Keep bay 7 clear.",
+      "origin": "browser",
+      "wall_s": 1.25,
+      "audio_seconds": 2.1
+    },
+    "readings": [],
+    "stages": []
+  },
+  "constraint-ready": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "ready",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": true,
+        "reason": null
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": true,
+        "reason": null
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": {
+        "mode": "live",
+        "questions": [],
+        "complete": true,
+        "rows": [
+          {
+            "id": "SYNX0000001",
+            "box_id": "SYNX0000001",
+            "size_ft": 20,
+            "weight_t": 21,
+            "gross_mass_kg": 21000,
+            "pod": "SGSIN"
+          },
+          {
+            "id": "SYNX0000002",
+            "box_id": "SYNX0000002",
+            "size_ft": 40,
+            "weight_t": 18,
+            "gross_mass_kg": 18000,
+            "pod": "VNVUT"
+          }
+        ],
+        "boxes": 2,
+        "wall_s": 8.5,
+        "cost_usd": 0.03
+      }
+    },
+    "load_list": {
+      "origin": "intake",
+      "boxes": 2,
+      "teu": 3,
+      "rows": [
+        {
+          "id": "SYNX0000001",
+          "box_id": "SYNX0000001",
+          "size_ft": 20,
+          "weight_t": 21,
+          "gross_mass_kg": 21000,
+          "pod": "SGSIN"
+        },
+        {
+          "id": "SYNX0000002",
+          "box_id": "SYNX0000002",
+          "size_ft": 40,
+          "weight_t": 18,
+          "gross_mass_kg": 18000,
+          "pod": "VNVUT"
+        }
+      ]
+    },
+    "voice": null,
+    "readings": [
+      {
+        "mode": "live",
+        "id": "rsynthetic1",
+        "origin": "typed",
+        "status": "constraint_ready",
+        "sentence": "Keep bay 7 clear.",
+        "rule_text": "Nothing loads into bay 07.",
+        "answer": {
+          "constraint": {
+            "type": "close_bay",
+            "bay": 7
+          }
+        },
+        "refusal": null,
+        "evidence": {
+          "adapter_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "model": "muse-glimmer-30b",
+          "decode": "schema mask"
+        },
+        "wall_s": 4.2,
+        "cold_load_s": 6.7,
+        "sentence_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "rule_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "confirmed": false
+      }
+    ],
+    "stages": []
+  },
+  "refused": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "ready",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": true,
+        "reason": null
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": true,
+        "reason": null
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": {
+        "mode": "live",
+        "questions": [],
+        "complete": true,
+        "rows": [
+          {
+            "id": "SYNX0000001",
+            "box_id": "SYNX0000001",
+            "size_ft": 20,
+            "weight_t": 21,
+            "gross_mass_kg": 21000,
+            "pod": "SGSIN"
+          },
+          {
+            "id": "SYNX0000002",
+            "box_id": "SYNX0000002",
+            "size_ft": 40,
+            "weight_t": 18,
+            "gross_mass_kg": 18000,
+            "pod": "VNVUT"
+          }
+        ],
+        "boxes": 2,
+        "wall_s": 8.5,
+        "cost_usd": 0.03
+      }
+    },
+    "load_list": {
+      "origin": "intake",
+      "boxes": 2,
+      "teu": 3,
+      "rows": [
+        {
+          "id": "SYNX0000001",
+          "box_id": "SYNX0000001",
+          "size_ft": 20,
+          "weight_t": 21,
+          "gross_mass_kg": 21000,
+          "pod": "SGSIN"
+        },
+        {
+          "id": "SYNX0000002",
+          "box_id": "SYNX0000002",
+          "size_ft": 40,
+          "weight_t": 18,
+          "gross_mass_kg": 18000,
+          "pod": "VNVUT"
+        }
+      ]
+    },
+    "voice": null,
+    "readings": [
+      {
+        "mode": "live",
+        "id": "rsynthetic1",
+        "origin": "typed",
+        "status": "refused",
+        "sentence": "Keep bay 7 clear.",
+        "rule_text": null,
+        "answer": {
+          "refusal": {
+            "code": "unsupported"
+          }
+        },
+        "refusal": {
+          "code": "unsupported",
+          "reason": "This sentence is outside the four supported instruction kinds."
+        },
+        "evidence": {
+          "adapter_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "model": "muse-glimmer-30b",
+          "decode": "schema mask"
+        },
+        "wall_s": 4.2,
+        "cold_load_s": 6.7,
+        "sentence_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "rule_sha256": null,
+        "confirmed": false
+      }
+    ],
+    "stages": []
+  },
+  "reader-unavailable": {
+    "id": "c20261103-151500-a1b2c3",
+    "app": "functional",
+    "state": "ready",
+    "message": "Choose the papers to read.",
+    "availability": {
+      "spark": {
+        "available": true,
+        "reason": null
+      },
+      "voice": {
+        "available": true,
+        "reason": null
+      },
+      "reader": {
+        "available": false,
+        "reason": "mlx_lm isn't installed in this environment"
+      }
+    },
+    "case": {
+      "papers": [
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-A/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "vgm.csv",
+          "path": "papers/generated/SYN-A/vgm.csv",
+          "media_type": "text/csv",
+          "role": "vgm",
+          "booking_ref": "SYN-A",
+          "synthetic": true,
+          "label": "Synthetic document"
+        },
+        {
+          "name": "booking.txt",
+          "path": "papers/generated/SYN-B/booking.txt",
+          "media_type": "text/plain",
+          "role": "booking",
+          "booking_ref": "SYN-B",
+          "synthetic": true,
+          "label": "Synthetic document"
+        }
+      ]
+    },
+    "papers": {
+      "documents": [],
+      "intake": {
+        "mode": "live",
+        "questions": [],
+        "complete": true,
+        "rows": [
+          {
+            "id": "SYNX0000001",
+            "box_id": "SYNX0000001",
+            "size_ft": 20,
+            "weight_t": 21,
+            "gross_mass_kg": 21000,
+            "pod": "SGSIN"
+          },
+          {
+            "id": "SYNX0000002",
+            "box_id": "SYNX0000002",
+            "size_ft": 40,
+            "weight_t": 18,
+            "gross_mass_kg": 18000,
+            "pod": "VNVUT"
+          }
+        ],
+        "boxes": 2,
+        "wall_s": 8.5,
+        "cost_usd": 0.03
+      }
+    },
+    "load_list": {
+      "origin": "intake",
+      "boxes": 2,
+      "teu": 3,
+      "rows": [
+        {
+          "id": "SYNX0000001",
+          "box_id": "SYNX0000001",
+          "size_ft": 20,
+          "weight_t": 21,
+          "gross_mass_kg": 21000,
+          "pod": "SGSIN"
+        },
+        {
+          "id": "SYNX0000002",
+          "box_id": "SYNX0000002",
+          "size_ft": 40,
+          "weight_t": 18,
+          "gross_mass_kg": 18000,
+          "pod": "VNVUT"
+        }
+      ]
+    },
+    "voice": null,
+    "readings": [],
+    "stages": []
+  }
+}

@@ -1,0 +1,32 @@
+/* Live additions; the take-4 intake component supplies the shared visual language. */
+.pl-live-intake .pl-live-booking { display: grid; gap: 8px; min-width: 0; }
+.pl-live-intake .pl-intake-file { cursor: default; }
+.pl-live-intake .pl-intake-file-info b { overflow-wrap: anywhere; }
+.pl-live-intake .pl-intake-file-state { text-decoration: none; }
+.pl-live-intake .pl-intake-file-state:hover { text-decoration: underline; }
+.pl-live-paper-inputs, .pl-live-intake-questions { display: grid; gap: 12px; min-width: 0; }
+.pl-live-intake label { display: grid; gap: 4px; min-width: 0; color: var(--pl-intake-muted); font-size: 12px; }
+.pl-live-intake input:not([type=checkbox]), .pl-live-intake textarea, .pl-live-intake select { box-sizing: border-box; width: 100%; min-width: 0; padding: 8px; border: 1px solid var(--pl-intake-line); border-radius: 8px; background: var(--pl-intake-bg); color: var(--pl-intake-text); font: inherit; }
+.pl-live-intake textarea { resize: vertical; }
+.pl-live-intake input:focus-visible, .pl-live-intake textarea:focus-visible, .pl-live-intake select:focus-visible { outline: 2px solid var(--pl-intake-brand); outline-offset: 2px; }
+.pl-live-intake .pl-live-check { display: flex; align-items: center; gap: 8px; }
+.pl-live-check input { margin: 0; flex: none; }
+.pl-live-intake-progress { display: grid; gap: 8px; padding: 12px; border: 1px solid var(--pl-intake-line); border-radius: 8px; }
+.pl-live-intake .pl-intake-button:disabled { opacity: .55; cursor: default; }
+.pl-live-intake .pl-intake-message { overflow-wrap: anywhere; }
+.pl-live-key-gate { display: grid; gap: 8px; }
+.pl-live-intake-retry { display: grid; gap: 8px; }
+.pl-live-intake [data-live-booking-progress] { overflow-wrap: anywhere; }
+.pl-live-intake [data-booking-status="failed"] { color: var(--pl-intake-warn); }
+.pl-live-intake-retry { display: grid; gap: 8px; }
+.pl-live-intake-progress [data-live-booking-progress] { overflow-wrap: anywhere; }
+.pl-live-intake-progress [data-booking-status=failed], .pl-live-intake-progress [data-booking-status=unavailable] { color: var(--pl-intake-warn); }
+.pl-live-question-booking { min-width: 0; border: 1px solid var(--pl-intake-line); border-radius: 8px; }
+.pl-live-question-booking > summary { padding: 8px; cursor: pointer; font-weight: 500; overflow-wrap: anywhere; }
+.pl-live-question-booking > summary:focus-visible { outline: 2px solid var(--pl-intake-brand); outline-offset: 2px; }
+.pl-live-question-cards { display: grid; gap: 8px; padding: 0 8px 8px; }
+.pl-live-generated-actions, .pl-live-paper-files { display: grid; gap: 8px; min-width: 0; }
+.pl-live-paper-booking { min-width: 0; border: 1px solid var(--pl-intake-line); border-radius: 8px; }
+.pl-live-paper-booking > summary { padding: 8px; cursor: pointer; font-weight: 500; overflow-wrap: anywhere; }
+.pl-live-paper-booking > summary:focus-visible { outline: 2px solid var(--pl-intake-brand); outline-offset: 2px; }
+.pl-live-paper-booking > .pl-intake-files { padding: 0 8px 8px; }

@@ -1,0 +1,59 @@
+{
+  "rule": "D263, fixed by the leader before any result: after the mask study ends, score adapter-v2 through select_adapter's exact path on the same 400-row selection sample. Retain v2 as the adopted reader, per the pre-registered result, unless v2 scores more than 3 points below swa-last-5's 93.25 % there; in that case adopt swa-last-5 for its domain coverage.",
+  "outcome": "adapter-v2",
+  "adopted": {
+    "name": "adapter-v2",
+    "path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/adapter-v2",
+    "adapter_sha256": "8bf00809718c48756f61618b479f1651f10a5c64c9c084db7801dbef5fa2ab1e"
+  },
+  "selection_400": {
+    "swa-last-5": {
+      "count": 400,
+      "exact_match_count": 373,
+      "exact_match": 0.9325,
+      "malformed_count": 0,
+      "loosening_count": 50,
+      "false_acceptance_count": 0
+    },
+    "adapter-v2": {
+      "count": 400,
+      "exact_match_count": 369,
+      "exact_match": 0.9225,
+      "malformed_count": 0,
+      "loosening_count": 50,
+      "false_acceptance_count": 0
+    }
+  },
+  "sealed_128": {
+    "swa-last-5": {
+      "count": 128,
+      "exact_match_count": 118,
+      "exact_match_pct": 92.1875,
+      "loosening_count": 48,
+      "false_acceptance_count": 1
+    },
+    "adapter-v2": {
+      "count": 128,
+      "exact_match_count": 120,
+      "exact_match_pct": 93.75,
+      "loosening_count": 48,
+      "false_acceptance_count": 2
+    },
+    "untrained": {
+      "count": 128,
+      "exact_match_count": 60,
+      "exact_match_pct": 46.875,
+      "loosening_count": 48,
+      "false_acceptance_count": 0
+    }
+  },
+  "gates_swa_last_5": {
+    "R1": true,
+    "R2": false,
+    "R3": false,
+    "all_pass": false
+  },
+  "preregistered_adoption_status": "retain_v2",
+  "sealed_note": "Sealed v3 is spent. Both sealed numbers stand whichever adapter wins.",
+  "caveat": "Validation overstates sealed: v2 read 91.25 % on validation and 80.47 % sealed. These scores choose an adapter; they are not an accuracy claim."
+}

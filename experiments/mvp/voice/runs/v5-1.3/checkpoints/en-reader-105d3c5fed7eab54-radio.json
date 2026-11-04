@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "1",
+      "min_bays": 4,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "asr_evidence": {
+    "audio_duration_ms": 4640,
+    "audio_seconds": 4.584,
+    "cost_basis": "provider whole audio seconds × $0.18/hour; invoice unverified",
+    "cost_usd": "0.00020",
+    "model": "muse-voice-transcribe-1.0",
+    "purpose": "voice-v5-1.3-asr",
+    "reservation_id": "fd002ba87c624e33a31ca86401b23a9e",
+    "session_id": "voyager/transcribe/99E2A3CA258B4A36BEA0FB15A967214C"
+  },
+  "asr_latency_s": 1.0550746669759974,
+  "audio_sha256": "92c886e035172d7d7a0cf8ca8637aa64cabcf49a5f11f5a1c826cfaff1f7ab5a",
+  "canonical": {
+    "constraint": {
+      "away_from": {
+        "kind": "accommodation"
+      },
+      "imdg_class": "1",
+      "min_bays": 4,
+      "type": "dg_keep_away"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "radio",
+  "end_to_end_s": 3.457907291012816,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.00230445",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "22a45706ccc57821b4aafd3f0247b1986f92e6db08aa6c37dfa52d4204adefcf",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "d21c3aee-efdf-45c2-aabe-83380e68cd8b"
+  },
+  "parser_latency_s": 2.2880742920096964,
+  "script": "Radio: keep class 1 4 bays away from crew house.",
+  "source_id": "reader-105d3c5fed7eab54",
+  "started_utc": "2026-11-01T01:34:27.886304+00:00",
+  "status": "complete",
+  "transcript": "Radio Keep class one four bays away from from crew house."
+}

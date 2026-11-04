@@ -1,0 +1,154 @@
+{
+  "QZXU0000014:gross_mass_kg:unsupported_source": {
+    "value": 3900.0,
+    "quote": "Synthetic planner correction: QZXU0000014 gross_mass_kg = 3900.0"
+  },
+  "QZXU0000020:dg.un_number:unsupported_source": {
+    "value": "1263",
+    "quote": "Synthetic planner correction: QZXU0000020 dg.un_number = \"1263\""
+  },
+  "QZXU0000040:pod:unsupported_source": {
+    "value": "HKHKG",
+    "quote": "Synthetic planner correction: QZXU0000040 pod = \"HKHKG\""
+  },
+  "QZXU0000098:reefer:unsupported_source": {
+    "value": true,
+    "quote": "Synthetic planner correction: QZXU0000098 reefer = true"
+  },
+  "QZXU0000098:reefer_setpoint_c:unsupported_source": {
+    "value": -18.0,
+    "quote": "Synthetic planner correction: QZXU0000098 reefer_setpoint_c = -18.0"
+  },
+  "QZXU0000009:id:unverified_transcription": {
+    "value": "QZXU0000009",
+    "quote": "Synthetic planner correction: QZXU0000009 id = \"QZXU0000009\""
+  },
+  "QZXU0000009:pod:unverified_transcription": {
+    "value": "HKHKG",
+    "quote": "Synthetic planner correction: QZXU0000009 pod = \"HKHKG\""
+  },
+  "QZXU0000061:id:unverified_transcription": {
+    "value": "QZXU0000061",
+    "quote": "Synthetic planner correction: QZXU0000061 id = \"QZXU0000061\""
+  },
+  "QZXU0000061:pod:unverified_transcription": {
+    "value": "VNSGN",
+    "quote": "Synthetic planner correction: QZXU0000061 pod = \"VNSGN\""
+  },
+  "QZXU0000077:id:unverified_transcription": {
+    "value": "QZXU0000077",
+    "quote": "Synthetic planner correction: QZXU0000077 id = \"QZXU0000077\""
+  },
+  "QZXU0000077:pod:unverified_transcription": {
+    "value": "HKHKG",
+    "quote": "Synthetic planner correction: QZXU0000077 pod = \"HKHKG\""
+  },
+  "QZXU0000082:id:unverified_transcription": {
+    "value": "QZXU0000082",
+    "quote": "Synthetic planner correction: QZXU0000082 id = \"QZXU0000082\""
+  },
+  "QZXU0000082:pod:unverified_transcription": {
+    "value": "HKHKG",
+    "quote": "Synthetic planner correction: QZXU0000082 pod = \"HKHKG\""
+  },
+  "QZXU0000056:id:unverified_transcription": {
+    "value": "QZXU0000056",
+    "quote": "Synthetic planner correction: QZXU0000056 id = \"QZXU0000056\""
+  },
+  "QZXU0000056:pod:unverified_transcription": {
+    "value": "VNSGN",
+    "quote": "Synthetic planner correction: QZXU0000056 pod = \"VNSGN\""
+  },
+  "QZXU0000020:category:missing_field": {
+    "value": null,
+    "quote": "Synthetic planner correction: QZXU0000020 category = null"
+  },
+  "QZXU0000020:dg.shipment_provenance:missing_field": {
+    "value": {
+      "versions": {
+        "cargo_generator": "7.0.0",
+        "dg_shipment_policy": "1.0.0"
+      },
+      "stubs": {},
+      "seed": 48576991525925094503484628133888140626715044342591583127739279875462472623441,
+      "created_by": "generate.cargo.synthetic_shipper",
+      "created_at": null,
+      "git_commit": null,
+      "parents": [
+        "imdg-42-24:UN1263-I",
+        "synthetic-dg-shipment-policy-v1"
+      ],
+      "input_versions": {}
+    },
+    "quote": "Synthetic planner correction: QZXU0000020 dg.shipment_provenance = {\"versions\": {\"cargo_generator\": \"7.0.0\", \"dg_shipment_policy\": \"1.0.0\"}, \"stubs\": {}, \"seed\": 48576991525925094503484628133888140626715044342591583127739279875462472623441, \"created_by\": \"generate.cargo.synthetic_shipper\", \"created_at\": null, \"git_commit\": null, \"parents\": [\"imdg-42-24:UN1263-I\", \"synthetic-dg-shipment-policy-v1\"], \"input_versions\": {}}"
+  },
+  "QZXU0000020:dg:unknown_un": {
+    "value": {
+      "un_number": "1263",
+      "imdg_class": "3",
+      "subsidiary_risks": [],
+      "packing_group": "I",
+      "stowage_category": "E",
+      "stowage_codes": [],
+      "segregation_codes": [],
+      "handling_codes": [],
+      "marine_pollutant": false,
+      "limited_quantity": false,
+      "flashpoint_c": null,
+      "additional": [],
+      "packing_form": "packaged_goods_in_closed_freight_containers",
+      "ctu_closed": true,
+      "protected_from_heat": null,
+      "clear_living_quarters": null,
+      "ventilation_compliant": null,
+      "shaded": null,
+      "air_circulation": null,
+      "dry": null,
+      "handling_compliant": null,
+      "subsidiary_hazards_verified": null,
+      "special_provisions": null,
+      "short_international_voyage": null,
+      "bulk_container_type": null,
+      "verified_provisions": null,
+      "verified_segregation_codes": null,
+      "shipment_provenance": {
+        "versions": {
+          "cargo_generator": "7.0.0",
+          "dg_shipment_policy": "1.0.0"
+        },
+        "stubs": {},
+        "seed": 48576991525925094503484628133888140626715044342591583127739279875462472623441,
+        "created_by": "generate.cargo.synthetic_shipper",
+        "created_at": null,
+        "git_commit": null,
+        "parents": [
+          "imdg-42-24:UN1263-I",
+          "synthetic-dg-shipment-policy-v1"
+        ],
+        "input_versions": {}
+      }
+    },
+    "quote": "Synthetic planner correction: QZXU0000020 dg = {\"un_number\": \"1263\", \"imdg_class\": \"3\", \"subsidiary_risks\": [], \"packing_group\": \"I\", \"stowage_category\": \"E\", \"stowage_codes\": [], \"segregation_codes\": [], \"handling_codes\": [], \"marine_pollutant\": false, \"limited_quantity\": false, \"flashpoint_c\": null, \"additional\": [], \"packing_form\": \"packaged_goods_in_closed_freight_containers\", \"ctu_closed\": true, \"protected_from_heat\": null, \"clear_living_quarters\": null, \"ventilation_compliant\": null, \"shaded\": null, \"air_circulation\": null, \"dry\": null, \"handling_compliant\": null, \"subsidiary_hazards_verified\": null, \"special_provisions\": null, \"short_international_voyage\": null, \"bulk_container_type\": null, \"verified_provisions\": null, \"verified_segregation_codes\": null, \"shipment_provenance\": {\"versions\": {\"cargo_generator\": \"7.0.0\", \"dg_shipment_policy\": \"1.0.0\"}, \"stubs\": {}, \"seed\": 48576991525925094503484628133888140626715044342591583127739279875462472623441, \"created_by\": \"generate.cargo.synthetic_shipper\", \"created_at\": null, \"git_commit\": null, \"parents\": [\"imdg-42-24:UN1263-I\", \"synthetic-dg-shipment-policy-v1\"], \"input_versions\": {}}}"
+  },
+  "QZXU0000035:gross_mass_kg:container_validation": {
+    "value": 12087.295202466761,
+    "quote": "Synthetic planner correction: QZXU0000035 gross_mass_kg = 12087.295202466761"
+  },
+  "QZXU0000035:gross_mass_kg:ship_capability": {
+    "value": 12087.295202466761,
+    "quote": "Synthetic planner correction: QZXU0000035 gross_mass_kg = 12087.295202466761"
+  },
+  "QZXU0000040:pod:pod_not_on_rotation": {
+    "value": "HKHKG",
+    "quote": "Synthetic planner correction: QZXU0000040 pod = \"HKHKG\""
+  },
+  "QZXU0000098:category:missing_field": {
+    "value": null,
+    "quote": "Synthetic planner correction: QZXU0000098 category = null"
+  },
+  "QZXU0000098:reefer_setpoint_c:missing_reefer_setpoint": {
+    "value": -18.0,
+    "quote": "Synthetic planner correction: QZXU0000098 reefer_setpoint_c = -18.0"
+  },
+  "QZXU0000056:id:duplicate_id": "keep_one"
+}

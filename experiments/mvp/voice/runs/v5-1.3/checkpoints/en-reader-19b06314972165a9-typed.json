@@ -1,0 +1,34 @@
+{
+  "answer": {
+    "constraint": {
+      "bay": 3,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "canonical": {
+    "constraint": {
+      "bay": 3,
+      "type": "close_bay"
+    },
+    "schema_version": "stowlm.reader/2"
+  },
+  "cohort_sha256": "9f7b1578aeb1868b1f27816a9a15c645fb7175780ae4cf05c56f3317a9643ce1",
+  "condition": "typed",
+  "end_to_end_s": 1.2483755419962108,
+  "language": "en",
+  "parser_evidence": {
+    "adapter_sha256": null,
+    "cost_usd": "0.0014435",
+    "model": "muse-spark-1.3",
+    "parser": "SparkParser",
+    "prompt_sha256": "b79a8cf7bf5714c327ccad76861145eeb4feec7ce139b7cdc89748afaff1da65",
+    "purpose": "voice-v5-1.3-parser",
+    "request_id": "f39867f8-3669-470a-9274-d38ee6aa0120"
+  },
+  "parser_latency_s": 1.2483583749854006,
+  "script": "Exclude bay 3 from every loading assignment.",
+  "source_id": "reader-19b06314972165a9",
+  "started_utc": "2026-11-01T01:30:45.183542+00:00",
+  "status": "complete"
+}

@@ -1,0 +1,1560 @@
+{
+  "count": 128,
+  "exact_match_count": 90,
+  "exact_match": 0.703125,
+  "exact_match_pct": 70.3125,
+  "loosening_count": 48,
+  "false_acceptance_count": 1,
+  "false_acceptance_rate": 0.020833333333333332,
+  "malformed_count": 0,
+  "missing_count": 0,
+  "by_family": {
+    "ambig_a_bit": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_around": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_depends": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_dg_vague": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_far": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "ambig_few_bays": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_hatch_hedge": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_if_possible": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_maybe": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_missing_zone": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_no_distance": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_stack_height": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_unnamed_bay": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_unsure_count": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_which_bay": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "ambig_zone_global": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_block": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_crane": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "close_bay_declarative": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_direct": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_keep_empty": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_negative": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_no_loading": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_off_limits": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "close_bay_polite": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_question": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_reason": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "close_bay_short": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "commentary": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "dg_accommodation": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "dg_division": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "dg_imdg_prefix": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "dg_large_distance": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "dg_max_distance": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "dg_min_one": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "dg_needs": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "dg_no_closer": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "dg_polite": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "dg_question": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "dg_separate": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "dg_whole_class_bay": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_allow_only": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_dedicated": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_direct": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_enforce": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_hold_deck": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_lid": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "hatch_need": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_negative": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "hatch_no_mix": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_no_two": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "hatch_pod": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_ps": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_question": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_retained": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "hatch_span": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "hatch_terse": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "info_ports": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "info_question": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_again": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_back_up": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_bypass": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_cancel": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_closer": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_cover_two": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_despite": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_drop_rule": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_enable": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_except": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_exception_dg": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_exempt_class": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_extra_tier": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_grant_waiver": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_ignore": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_increase": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_lift_closure": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_lower_sep": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_mixed_close_ports": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_mixed_close_reopen": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_mixed_ports": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_mixed_reopen_cap": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_mixed_tiers": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_mixed_waive": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_once": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_override": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_override_conditional": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_permission": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_permit_within": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_polite_lift": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_ps_mix": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_question_permit": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_raise_by": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_raise_cap": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_reduce_dg": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_relax_deck": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_relax_dg": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_remove_all": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_remove_cap": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_reopen": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_shrink_gap": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_starboard_mixed": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_stop_restricting": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_suspend": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_temp_exempt": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_temp_open": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "loosen_unblock": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "loosen_waive": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "status_question": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "thanks": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "tiers_colon": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "tiers_deck_bay": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "tiers_deck_global": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "tiers_hold_bay": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "tiers_hold_global": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "tiers_one": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "tiers_polite": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "tiers_question": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "tiers_stack_height": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "tiers_terse": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "tiers_zero_bay": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "tiers_zero_deck": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "unsup_bad_bay": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "unsup_bad_imdg": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "unsup_distance_range": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "unsup_half_cover": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "unsup_multiple": {
+      "count": 1,
+      "exact_match_count": 1
+    },
+    "unsup_vocab": {
+      "count": 1,
+      "exact_match_count": 0
+    },
+    "weather": {
+      "count": 1,
+      "exact_match_count": 1
+    }
+  },
+  "details": [
+    {
+      "id": "sealed-v3-001",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-002",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-003",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-004",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-005",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-006",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-007",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-008",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-009",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-010",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-011",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-012",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-013",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-014",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-015",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-016",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-017",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-018",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-019",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-020",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-021",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-022",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-023",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-024",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-025",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-026",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-027",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-028",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-029",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-030",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-031",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-032",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-033",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-034",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-035",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-036",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-037",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-038",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-039",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-040",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-041",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-042",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-043",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-044",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-045",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-046",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-047",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-048",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-049",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-050",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-051",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-052",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-053",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-054",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-055",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-056",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-057",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-058",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-059",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-060",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-061",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-062",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-063",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-064",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-065",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-066",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-067",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-068",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-069",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": true,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-070",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-071",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-072",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-073",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-074",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-075",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-076",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-077",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-078",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-079",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-080",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-081",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-082",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-083",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-084",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-085",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-086",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-087",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-088",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-089",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-090",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-091",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-092",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-093",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-094",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-095",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-096",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-097",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-098",
+      "exact": false,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-099",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-100",
+      "exact": true,
+      "loosening": true,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-101",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-102",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-103",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-104",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-105",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-106",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-107",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-108",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-109",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-110",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-111",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-112",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-113",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-114",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-115",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-116",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-117",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-118",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-119",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-120",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-121",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-122",
+      "exact": false,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-123",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-124",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-125",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-126",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-127",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    },
+    {
+      "id": "sealed-v3-128",
+      "exact": true,
+      "loosening": false,
+      "false_acceptance": false,
+      "malformed": false,
+      "missing": false
+    }
+  ],
+  "backend": "fair_handwritten_parser",
+  "frozen_parser_sha256": "1a2499da8c0dcd65f983d6797eccb70bc83f8ecd9e50da7f992482e0e87c163f",
+  "freeze_sha256": "292a9c489f8d04a994d1257967bc082167d73703ee3de523f75bac629a9e0bc5",
+  "data_sha256": "de6840f8726d9d6af08a1d912f6e2f7e1ffa421f11a379ba97cfab436c212568",
+  "predictions_sha256": "832e96ec79f59c73f896153db61d64ed6d3b50bee1bfefb0e20e6a94b5bc943b",
+  "spark_reference_exact_count": 126,
+  "spark_reference_count": 128,
+  "one_shot": true,
+  "completed_utc": "2026-11-01T02:34:18.756365+00:00"
+}

@@ -1,0 +1,130 @@
+"""Offline synthetic final report regressions; execute pytest from /tmp."""
+import copy
+import json
+from pathlib import Path
+import runpy
+
+import pytest
+
+api=runpy.run_path('/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/pipeline/sealed/measurements/ext-1/final_report.py.txt')
+
+
+def source(name,value):
+    return api['Source'](name,json.dumps(value,sort_keys=True).encode())
+
+
+def fixture(extension):
+    prefix='ext' if extension else 'old';broken=22 if extension else 18;bound=18 if extension else 13
+    instrpasses=20 if extension else 18;twopasses=1 if extension else 0
+    rows=[]
+    kinds=('close_bay','max_tiers','dg_keep_away','one_port_per_hatch')
+    for i in range(24):
+        for arm in api['ARMS']:
+            passed=(arm=='pipeline' or arm=='twostep' and i<twopasses or
+                    arm=='instruction' and (i<bound or i>=broken and i<broken+instrpasses-bound))
+            rows.append(dict(map_id=prefix+str(i),map_sha256=f'{i+(100 if extension else 0):064x}',
+                ship_id='feeder_500' if i<12 else 'feeder_800',cohort='envelope24',arm=arm,
+                status='checked_plan' if passed else 'relaxed_plan',passed=passed,
+                full_checker_pass=passed,level=0 if passed else 1,plan={},
+                audit_verified=True,audit_fresh_process=True,instruction_recheck=passed if arm=='instruction' else None,
+                counterfactual_instruction_recheck=i>=broken,instruction_type=kinds[i%4]))
+    def arm_counts(values):
+        k=sum(api['is_pass'](r) for r in values);n=len(values)
+        return dict(passes_L0=k,expected_maps=n,passes_L0_exact95=api['binomial95'](k,n))
+    def binding(values):
+        base={r['map_id']:r for r in values if r['arm']=='pipeline'}
+        instr={r['map_id']:r for r in values if r['arm']=='instruction'}
+        bad={i for i,r in base.items() if r['counterfactual_instruction_recheck'] is False}
+        k=sum(api['is_pass'](instr[i]) for i in bad);n=len(bad)
+        return dict(binding_obedient_passes=k,rule_broken_maps=n,binding_obedient_exact95=api['binomial95'](k,n),
+            already_obeyed=len(base)-n,counterfactual_unavailable=0)
+    b=binding(rows);b['by_type']={kind:binding([r for r in rows if r['instruction_type']==kind]) for kind in kinds}
+    cohort=dict(arms={a:arm_counts([r for r in rows if r['arm']==a]) for a in api['ARMS']},
+        instruction_binding=b,by_ship={s:dict(arms={a:arm_counts([r for r in rows if r['arm']==a and r['ship_id']==s])
+            for a in api['ARMS']}) for s in ('feeder_500','feeder_800')},
+        instruction_types={kind:arm_counts([r for r in rows if r['arm']=='instruction' and r['instruction_type']==kind]) for kind in kinds})
+    report=dict(complete=True,population_accounted=True,fresh_audits_complete=True,instruction_assignment_complete=True,
+        provisional=not extension,post_registration=not extension,protocol_deviation=None if extension else 'D284',
+        verified_complete=True,development_pilot=False,label=api['LABEL'] if extension else 'original3.1 after two interrupted attempts',
+        rows=72,expected_rows=72,manifest_sha256=('e' if extension else 'a')*64,tree_digest='b'*64,
+        cohorts={'envelope24':cohort})
+    return source(prefix+'/report.json',report),source(prefix+'/rows.json',rows)
+
+
+def evidence(ext,old):
+    return source('root-verification.json',dict(verified=True,reports={name:dict(verified=True,
+        report_sha256=r.sha256,rows_sha256=w.sha256) for name,(r,w) in (('ext1',ext),('final3',old))}))
+
+
+def test_separate_primary_and_secondary_pool_counts_exact_intervals_and_provenance():
+    ext,old=fixture(True),fixture(False)
+    figures,pool=api['build'](*ext,*old,verification=evidence(ext,old),disclosure={'value':'Original disclosure'})
+    assert figures['primary']['arms']['pipeline']['numerator']['value']==24
+    assert figures['primary']['arms']['twostep']['numerator']['value']==1
+    assert figures['primary']['arms']['instruction']['numerator']['value']==20
+    assert figures['primary']['binding']['numerator']['value']==18
+    assert figures['primary']['binding']['denominator']['value']==22
+    assert pool['available'] and pool['label'].startswith('SECONDARY')
+    assert pool['arms']['pipeline']['numerator']['value']==48
+    assert pool['arms']['twostep']['numerator']['value']==1
+    assert pool['binding']['numerator']['value']==31 and pool['binding']['denominator']['value']==40
+    assert pool['binding']['exact95']['value']==api['binomial95'](31,40)
+    assert pool['binding']['exact95']['sources']==[
+        old[0].reference('cohorts','envelope24','instruction_binding','binding_obedient_passes'),
+        ext[0].reference('cohorts','envelope24','instruction_binding','binding_obedient_passes'),
+        old[0].reference('cohorts','envelope24','instruction_binding','rule_broken_maps'),
+        ext[0].reference('cohorts','envelope24','instruction_binding','rule_broken_maps')]
+    assert figures['primary']['binding']['numerator']['source']['json_pointer']=='/cohorts/envelope24/instruction_binding/binding_obedient_passes'
+    assert pool['arms']['pipeline']['numerator']['sources'][0]['sha256']==old[0].sha256
+    assert not figures['wall_times_quotable'] and not pool['lift_saving_quotable']
+    text=api['summary_text'](figures)
+    assert not any(line.startswith(('#','- ','* ')) for line in text.splitlines())
+    assert 'Original disclosure' in text and 'SECONDARY' in text
+    assert 'Separate original 3.1 ('+old[0].get('label')+')' in text
+    assert figures['primary']['already_obeyed']['label']==ext[0].get('label')
+    assert figures['separate_original_3_1']['already_obeyed']['label']==old[0].get('label')
+    def check_fact_labels(value):
+        if isinstance(value,dict):
+            if 'value' in value:assert isinstance(value.get('label'),str) and value['label']
+            for child in value.values():check_fact_labels(child)
+        elif isinstance(value,list):
+            for child in value:check_fact_labels(child)
+    check_fact_labels(figures)
+
+
+def test_incomplete_or_unverified_report_never_enters_pool():
+    for field in ('complete','population_accounted','fresh_audits_complete','instruction_assignment_complete','verified_complete'):
+        ext,old=fixture(True),fixture(False)
+        changed=copy.deepcopy(ext[0].data);changed[field]=False
+        ext=(source(ext[0].path,changed),ext[1])
+        with pytest.raises(ValueError,match='[Ii]ncomplete|verified'):
+            api['build'](*ext,*old,verification=evidence(ext,old))
+    ext,old=fixture(True),fixture(False)
+    figures,pool=api['build'](*ext,*old)
+    assert pool['available'] is False and 'arms' not in pool
+    bad=copy.deepcopy(evidence(ext,old).data);bad['reports']['final3']['rows_sha256']='0'*64
+    _,pool=api['build'](*ext,*old,verification=source('bad-receipt',bad))
+    assert pool['available'] is False
+
+
+def test_deadline_incumbent_can_pass_but_unverified_deadline_and_relaxed_never_do():
+    r=dict(status='deadline_exceeded',deadline_with_incumbent=True,deadline_incumbent_verified=True,
+        level=0,passed=True,full_checker_pass=True,audit_verified=True,audit_fresh_process=True,arm='pipeline')
+    assert api['is_pass'](r)
+    assert not api['is_pass'](dict(r,deadline_incumbent_verified=False))
+    assert not api['is_pass'](dict(r,deadline_with_incumbent=False))
+    assert not api['is_pass'](dict(r,status='relaxed_plan',level=1))
+    assert not api['is_pass'](dict(r,audit_verified=False))
+
+
+def test_wrong_rows_counts_audits_and_provisional_reason_fail_closed():
+    ext,old=fixture(True),fixture(False)
+    for change in ('relaxed','audit','duplicate'):
+        raw=copy.deepcopy(ext[1].data)
+        if change=='relaxed':raw[0].update(status='relaxed_plan',level=1)
+        elif change=='audit':raw[0]['audit_fresh_process']=False
+        else:raw[1]=raw[0]
+        with pytest.raises(ValueError):api['build'](ext[0],source('changedrows',raw),*old)
+    changed=copy.deepcopy(old[0].data);changed['protocol_deviation']='unknown'
+    with pytest.raises(ValueError,match='D284'):
+        api['build'](*ext,source('oldchanged',changed),old[1])

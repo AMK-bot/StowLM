@@ -1,0 +1,359 @@
+[
+  {
+    "id": "expert.physical.slot_occupancy",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Each physical slot can hold only one container footprint; long boxes reserve both supporting cells.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.physical.size_fit",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Each container must fit the size and supporting-cell geometry of its assigned slot.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.physical.no_20_on_40",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Do not support a 20-foot box on a 40-foot box (conservative project rule).",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.physical.stack_weight",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep each stack within its declared mass limit, including existing cargo.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.physical.tier_height",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep stack height, including high cubes, within vessel and hatch clearances.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.physical.reefer_plug",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Place refrigerated containers only where compatible powered plugs are available.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.rotation.no_overstow",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Require legal access for current discharges; later-port restow lifts are projected counts, not an executable future plan.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.rotation.hatch_overstow",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Require legal current hatch access and count projected future blocker and hatch-cover lifts.",
+    "hardness": "hard"
+  },
+  {
+    "id": "imdg.segregation.7_2_4",
+    "family": "IMDG",
+    "source": "IMDG; IMO MSC.556(108), IMDG Code Amendment 42-24, 7.2.4",
+    "description": "Separate incompatible dangerous-goods classes using the IMDG general segregation table.",
+    "hardness": "hard"
+  },
+  {
+    "id": "imdg.segregation.7_4_3",
+    "family": "IMDG",
+    "source": "IMDG; IMO MSC.556(108), IMDG Code Amendment 42-24, 7.4.3",
+    "description": "Apply container-ship dangerous-goods separation for deck position, container type and hold geometry.",
+    "hardness": "hard"
+  },
+  {
+    "id": "imdg.stowage.3_2",
+    "family": "IMDG",
+    "source": "IMDG; IMO MSC.556(108), IMDG Code Amendment 42-24, 3.2; IMO MSC.556(108), IMDG Code Amendment 42-24, 3.2 and 7.1; IMO MSC.556(108), IMDG Code Amendment 42-24, 7.1.2",
+    "description": "Honour each supported dangerous-goods entry’s deck, heat, accommodation and special-segregation restrictions.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.loading.displacement",
+    "family": "IS Code stability",
+    "source": "IS Code; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep total ship mass within the declared vessel loading limits.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.loading.draft",
+    "family": "IS Code stability",
+    "source": "IS Code; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep the ship’s draught within its declared vessel limits.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.loading.gm",
+    "family": "IS Code stability",
+    "source": "IS Code; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep corrected initial stability above the vessel loading-manual minimum.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.b3_1.free_surface",
+    "family": "IS Code stability",
+    "source": "IS Code; IMO MSC.267(85), 2008 Intact Stability Code, B 3.1; mandatory through A 2.1.2",
+    "description": "Account for the destabilising movement of liquids in partially filled tanks.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.a2_2.gz_area_0_30",
+    "family": "IS Code stability",
+    "source": "IS Code; IMO MSC.267(85), 2008 Intact Stability Code, A 2.2.1",
+    "description": "Require enough accumulated righting ability up to 30 degrees of heel.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.a2_2.gz_area_0_40",
+    "family": "IS Code stability",
+    "source": "IS Code; IMO MSC.267(85), 2008 Intact Stability Code, A 2.2.1",
+    "description": "Require enough accumulated righting ability up to 40 degrees or the flooding limit.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.a2_2.gz_area_30_40",
+    "family": "IS Code stability",
+    "source": "IS Code; IMO MSC.267(85), 2008 Intact Stability Code, A 2.2.1",
+    "description": "Require enough additional righting ability between 30 degrees and 40 degrees or the flooding limit.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.a2_2.gz_at_30",
+    "family": "IS Code stability",
+    "source": "IS Code; IMO MSC.267(85), 2008 Intact Stability Code, A 2.2.2",
+    "description": "Require sufficient restoring leverage at or beyond 30 degrees of heel.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.a2_2.max_gz_angle",
+    "family": "IS Code stability",
+    "source": "IS Code; IMO MSC.267(85), 2008 Intact Stability Code, A 2.2.3",
+    "description": "Require peak restoring leverage to occur at 25 degrees of heel or later.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.a2_2.initial_gm",
+    "family": "IS Code stability",
+    "source": "IS Code; IMO MSC.267(85), 2008 Intact Stability Code, A 2.2.4",
+    "description": "Keep corrected initial stability above the Intact Stability Code minimum.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.a2_3.weather",
+    "family": "IS Code stability",
+    "source": "IS Code; IMO MSC.267(85), 2008 Intact Stability Code, A 2.3; IMO MSC.267(85), 2008 Intact Stability Code, A 2.3.4, table 2.3.4-3",
+    "description": "Check resistance to the Code’s prescribed severe wind and rolling scenario.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.b2_3.containership_second_check",
+    "family": "IS Code stability",
+    "source": "IS Code; IMO MSC.267(85), 2008 Intact Stability Code, B 2.3; IMO MSC.267(85), 2008 Intact Stability Code, B 2.3.2",
+    "description": "Apply the project’s additional containership righting-ability check where its declared scope applies.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.loading.trim",
+    "family": "IS Code stability",
+    "source": "IS Code; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep the difference between bow and stern draught within loading-manual limits.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iscode.loading.list",
+    "family": "IS Code stability",
+    "source": "IS Code; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep the ship’s sideways lean within loading-manual limits.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iacs.s11a.longitudinal_strength",
+    "family": "IACS strength",
+    "source": "IACS; IACS UR S11A (revision currency unconfirmed), S11A.1.1.2(i); IACS UR S11A (revision currency unconfirmed), scope",
+    "description": "Keep shear force and bending moment within station limits, including prescribed wave loads and applicable torsion.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iacs.s1.loading_instrument",
+    "family": "IACS strength",
+    "source": "IACS; IACS UR S1 rev.7 (latest to confirm), loading instrument requirement",
+    "description": "Require strength read-outs at declared loading-instrument stations; this is not class approval.",
+    "hardness": "hard"
+  },
+  {
+    "id": "solas.v22.visibility",
+    "family": "SOLAS visibility",
+    "source": "SOLAS; SOLAS V/22; MSC.99(73); MSC.1/Circ.1350/Rev.1, V/22.1",
+    "description": "Keep the bridge’s forward sea view and blind sectors within applicable SOLAS limits.",
+    "hardness": "hard"
+  },
+  {
+    "id": "solas.vi2.verified_gross_mass",
+    "family": "operational",
+    "source": "SOLAS; SOLAS VI/2; MSC.380(94); MSC.1/Circ.1475, VI/2",
+    "description": "Require valid verified container masses before stowage.",
+    "hardness": "hard"
+  },
+  {
+    "id": "iacs.member_irs.container_securing",
+    "family": "lashing",
+    "source": "IACS; Indian Register of Shipping, Guidelines on Container Securing, July 2025 (IACS member guidance), published force limits and stiffness; page verification pending",
+    "description": "Check securing and container force limits using the disclosed approximate lashing-demand model.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.e6.heavy_under_deck",
+    "family": "expert",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Put heavy-class boxes under deck unless no compatible hold cell remains empty at departure.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.e1.heavy_bottom",
+    "family": "expert",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep heavy-class boxes low; inherited Stage B ordering breaches alone may be tolerated.",
+    "hardness": "tolerated_if_inherited"
+  },
+  {
+    "id": "expert.e2.weight_order",
+    "family": "expert",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Do not place a heavier mass class above a lighter class; same-class masses may be in any order.",
+    "hardness": "tolerated_if_inherited"
+  },
+  {
+    "id": "expert.e8.under_deck",
+    "family": "expert",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Honour a container’s binding request to travel below deck.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.e8.on_deck",
+    "family": "expert",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Honour a container’s binding request to travel on deck.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.e8.away_from_heat",
+    "family": "expert",
+    "source": "expert; IMDG Code Amendment 42-24 (MSC.556(108)); data/raw/imdg-42-24/msc556-108.txt around line 42089, 7.1.2, definition: Protected from sources of heat",
+    "description": "Honour heat-separation requests using declared heat sources and the provisional clearance.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.e8.top_stowage",
+    "family": "expert",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Honour a container’s binding request for a top-of-stack position.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.e9.over_height",
+    "family": "expert",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Put over-height cargo at the top and check its declared vertical clearance.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.e9.over_width_length",
+    "family": "expert",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep occupied neighbours clear of an oversized container’s declared physical envelope.",
+    "hardness": "hard"
+  },
+  {
+    "id": "port.e3.yard_height",
+    "family": "operational",
+    "source": "expert; Expert written answers, 28 Oct 2026, Q3; docs/decisions.md, D61/D62/D64; Addendum 1 A3-A5",
+    "description": "Keep yard stacks within the effective block, port and handling-equipment height limits.",
+    "hardness": "hard"
+  },
+  {
+    "id": "port.e3.quay_height",
+    "family": "operational",
+    "source": "expert; Expert written answers, 28 Oct 2026, Q3; docs/decisions.md, D61/D62/D64; Addendum 1 A3-A5",
+    "description": "Keep on-deck tiers within the current or later call’s declared crane reach.",
+    "hardness": "hard"
+  },
+  {
+    "id": "port.call.draft",
+    "family": "operational",
+    "source": "port; docs/decisions.md, D61/D62/D64; Addendum 1 A3-A5",
+    "description": "Keep the ship’s draught within the port or berth limit for the call.",
+    "hardness": "hard"
+  },
+  {
+    "id": "port.call.length",
+    "family": "operational",
+    "source": "port; docs/decisions.md, D61/D62/D64; Addendum 1 A3-A5",
+    "description": "Require the vessel’s length to fit the port’s declared limit.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.moves.top_access",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Lift blocking top cargo before accessing a box beneath it.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.moves.hatch_clear",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Clear the hatch cover and open it before accessing the hold below.",
+    "hardness": "hard"
+  },
+  {
+    "id": "expert.moves.bottom_up",
+    "family": "operational",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Fill ship stacks from the bottom with physically supported placements.",
+    "hardness": "hard"
+  },
+  {
+    "id": "stability.open_hatch_immersion",
+    "family": "IS Code stability",
+    "source": "expert; project/synthetic assumptions recorded in src/stowage/rules/catalogue.toml",
+    "description": "Keep every open hatch coaming above the actual waterline; a wet opening cannot be certified.",
+    "hardness": "hard"
+  },
+  {
+    "id": "checker.internal_error",
+    "family": "operational",
+    "source": "user specification (D62); src/stowage/checker/full.py, src/stowage/model and docs/decisions.md, D11; D68; checker/full.py existing emitted contract",
+    "description": "Withhold certification if a required checker component fails; report a diagnostic, not physical infeasibility.",
+    "hardness": "hard"
+  },
+  {
+    "id": "checker.missing_vessel_data",
+    "family": "operational",
+    "source": "user specification (D62); src/stowage/checker/full.py, src/stowage/model and docs/decisions.md, D11; D68; checker/full.py existing emitted contract",
+    "description": "Withhold certification when required vessel evidence is missing.",
+    "hardness": "hard"
+  },
+  {
+    "id": "checker.invalid_ballast",
+    "family": "operational",
+    "source": "user specification (D62); src/stowage/checker/full.py, src/stowage/model and docs/decisions.md, D11; D68; checker/full.py existing emitted contract",
+    "description": "Reject invalid declared ballast masses or tank references without claiming no feasible ballast exists.",
+    "hardness": "hard"
+  },
+  {
+    "id": "objective.all_loaded",
+    "family": "operational",
+    "source": "user specification (D62); src/stowage/checker/full.py, src/stowage/model and docs/decisions.md, D11; D68; checker/full.py existing emitted contract",
+    "description": "Require every box on the declared load list to be aboard in the completed departure plan.",
+    "hardness": "hard"
+  }
+]

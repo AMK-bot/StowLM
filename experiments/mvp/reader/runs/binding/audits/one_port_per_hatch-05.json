@@ -1,0 +1,33 @@
+{
+  "case_id": "one_port_per_hatch-05",
+  "fresh_process": true,
+  "audit_pid": 20613,
+  "passed": true,
+  "binding": true,
+  "repaired": false,
+  "plan_record_sha256": "12991e75fdcdec910435afb2f04e13ce7554074cc6db349e49c2833e4f117274",
+  "unconstrained_passed": true,
+  "unconstrained_moves": 10.0,
+  "unconstrained_violations": [
+    "HC-002-S: mixed discharge ports ['MYPKG', 'SGSIN']"
+  ],
+  "checker_passed": true,
+  "replay_legal": true,
+  "mask_legal": true,
+  "mask_complete": true,
+  "all_loaded": true,
+  "instruction_violations": [],
+  "allocation_violations": [],
+  "constrained_moves": 9.0,
+  "stored_moves_match": true,
+  "changed_final_placements": 13,
+  "plan_changed": true,
+  "mask_actions_checked": 13,
+  "checker_violations": [],
+  "restows_now": 0,
+  "relocations": 1,
+  "hatches_now": 4,
+  "restows_later": 0,
+  "hatches_later": 4,
+  "wall_s": 85.88975416700123
+}

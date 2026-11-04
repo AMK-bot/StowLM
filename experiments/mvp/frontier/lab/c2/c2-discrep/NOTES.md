@@ -1,0 +1,232 @@
+# Cycle 2: discrepancy rounding
+
+Status: completed; clean negative on the full-checker gate. Only this folder is written;
+no sealed inputs are used. `pages.py` was copied from `c1/fx-scout/pages.py`;
+the only copied-file change exposes the current chosen-column list to residual
+physical rows. E9 uses `c1/leader/e9fix.install()` as required.
+
+A stack pattern is a hyperedge touching its boxes and physical support stacks;
+rounding selects disjoint hyperedges covering all boxes, while preserving the
+LP's mass-weighted moment and bay-load sums. Lift costs retain the page model's
+port-cover and overstow interpretation. See `c1/fx-scout/GRAPH-MODEL.md` for the
+approved measured small (18-box `random.small.40100003.0.2`) and medium
+(121-box `random.medium.185100000.0.2`) graph examples.
+
+The expanded restricted master uses soft trim, heel, displacement, vertical
+moment/GM, bay-mass and cargo bending rows. Hydrostatic limits and coefficients
+come from the checker, as detailed in `HYDRO.md`. Bay and cargo-only bending
+preservation targets are LP values, not fabricated regulatory limits. Slacks
+keep coverage feasible; every slack and target is recorded. Pricing is inherited
+and omits side-row reduced costs, so its exhaustion is **not a proof** for this
+expanded master. The root is explicitly marked unproved.
+
+`experiment.py` compares the original dive/greedy balance with floating-variable
+iterated rounding and a projected random walk followed by fixed-pool integer
+completion; both latter arms use Karmarkar–Karp on legal mirror swaps. This is a
+heuristic transfer, with no Beck–Fiala, Jain, Bansal or Lovett–Meka theorem claimed
+for hypergraph exact cover. Same seed and initial LP/pool are used in all arms.
+Dive can reprice; discrepancy completion deliberately uses the frozen pool, an
+important asymmetry. Inspect pre- and post-E9-repair drift separately when repair
+changes an assignment. Full-checker margins include all three voyage conditions.
+
+The score entry point returns all complete alternatives. `finish` holds the
+default tanks fixed so ballast cannot obscure the rounding comparison, and
+`lab/score.py` independently runs the full checker. Report replay-legal complete
+stows separately from passes. A complete stow's lift count is diagnostic only;
+there are no legal lift results without a full pass.
+
+Compute: numerical and in-port workers are one thread/process. At most two
+busy processes across the team. Commands request `nice -n 5`; this environment
+prints `setpriority: Operation not permitted` but continues the process.
+A cohort run may exceed 20 minutes because it measures all 12 D185 maps and
+three rounding arms with independent full voyage checks; this is the stated
+reason for that run. No process belonging to another session is touched.
+
+## Papers read
+
+- J. Beck and T. Fiala (1981), [“Integer-making” theorems](https://doi.org/10.1016/0166-218X(81)90022-6).
+  Transfer: keep sums fixed while floating variables can move, then release
+  sparsely supported side rows. Publisher/university abstract consulted.
+- K. Jain (2001), [A Factor 2 Approximation Algorithm for the Generalized Steiner Network Problem](https://www.cs.toronto.edu/tss/files/papers/Jain2001_Article_AFactor2ApproximationAlgorithm.pdf).
+  Transfer: solve, fix, update a residual problem; its network guarantee does
+  not apply to this page hypergraph.
+- L. C. Lau, R. Ravi and M. Singh (2011), [Iterative Methods in Combinatorial Optimization](https://www.contrib.andrew.cmu.edu/~ravi/book.pdf).
+  Transfer: iterative relaxation and constraint dropping.
+- N. Bansal (2010), [Constructive Algorithms for Discrepancy Minimization](https://arxiv.org/abs/1002.2259).
+  His algorithm uses an SDP to correlate random increments. We do not implement
+  the SDP or claim its discrepancy guarantee; projection is the tested transfer.
+- S. Lovett and R. Meka (2012), [Constructive Discrepancy Minimization by Walking on the Edges](https://arxiv.org/abs/1203.5747).
+  Transfer: random directions restricted to a subspace, freezing boundary hits.
+- N. Karmarkar and R. M. Karp (1982), *The Differencing Method of Set Partitioning*.
+  [Berkeley's archived report](https://www2.eecs.berkeley.edu/Pubs/TechRpts/1983/6353.html)
+  is catalogued as 1983, whereas the commonly cited report is 1982. Repeatedly
+  differencing the two largest residuals gives orientations of mirror swaps.
+
+## Controlled comparison protocol
+
+The first pilot (121 boxes, 150-second construction setting) showed why an
+integer witness is needed: the dive completed in 4.1 seconds, but both fixed-pool
+CP completions returned UNKNOWN after 31.5 seconds. That pilot is kept in
+`results/pilot.json` as a failed experiment, not pooled with the cohort.
+The second pilot with a shared witness completed all arms; a 229-box pilot
+exposed a setup-time case where the initial pool stayed empty. The final protocol
+therefore imports **all** columns generated by the preparatory dive, including
+columns from a failed attempt, retries once within the preparation deadline,
+and only then re-solves the common LP. This is declared pool enrichment, not
+success attributed to discrepancy rounding.
+
+Cohort protocol: seed 0 on every map, 240-second construction setting. Preparation
+uses up to 60% of that setting; each measured arm receives 13%. Independent full
+checks are also timed. All arms begin with the identical enriched pool, physical
+rows and fractional point. The inherited dive is free to reprice thereafter;
+its first LP has the same matrix and objective, while the discrepancy arms keep
+the root pool (at most 2,000 optional/support columns, mandatory support and
+witness always retained). Full feasible CP hints let completion improve the
+witness; if CP finds no incumbent, explicit `fallback_witness` means no rounding
+gain. Same initial RNG seed does not imply the algorithms consume identical
+random numbers. Karmarkar–Karp gets one additional second after completion.
+
+A diagnostic metadata caveat: `root.objective`, `root.rounds`, and `root.columns`
+come from the initial generation stage. The **reoptimized** point used for the
+comparison is `root_support`/`root_patterns`, with `lp_features`, `pool_size`,
+`root.uncovered`, and `physical_slack`; do not mistake the generation-stage
+objective for the later LP objective. Feature drift after E9 repair is under
+`variants.*.drift`; the completion's own drift is before KK/E9. No full checker
+or `rules_special` is patched by this experiment; only the approved E9 mask
+wrapper is installed.
+
+Reproduce:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
+PYTHONDONTWRITEBYTECODE=1 STOWAGE_IN_PORT_WORKERS=1 \
+PYTHONPATH=src:experiments/mvp/frontier:experiments/mvp/frontier/lab \
+nice -n 5 .venv/bin/python experiments/mvp/frontier/lab/score.py \
+ --set medium12 \
+ --method experiments/mvp/frontier/lab/c2/c2-discrep/experiment.py:propose \
+ --finish experiments/mvp/frontier/lab/c2/c2-discrep/experiment.py:finish \
+ --budget-s 240 --finalize-s 1 --tries 3 --workers 2 --seed 0 \
+ --out experiments/mvp/frontier/lab/c2/c2-discrep/results/medium12
+```
+
+`finalize-s=1` is unused by the explicit fixed-default-tank finisher, which
+returns the plan for `score.py`'s independent full check. This is not a ballast
+solver comparison. Historical C1/V6 finishing results are contextual, not paired
+measurements of this gate. `medium12` has no stored 0.9.0 certificates, so paired
+lifts against 0.9.0 are unavailable, never zero.
+
+Verification before the cohort: nine focused rounding tests passed; checker
+moment agreement passed for both 20-ft/40-ft pages on an approved small map and
+an approved medium map; typed worst-condition margin extraction passed.
+
+Supplement declared after the first six cohort rows: the four 121-box maps have
+complete pairs, but both first 229-box maps exhausted the 31.2-second measured
+dive allowance. If the cohort supplies fewer than six complete pairs, rerun the
+**first two 229-box maps** (indices 4,5; `supplement800.txt`) at a 900-second
+construction setting. This gives each measured arm 117 seconds. Keep the
+240-second cohort intact and label the supplement separately. Its purpose is
+six numerical before/after pairs, not selection for passes or improvement.
+
+Supplement budget refinement, before launching it: the timed 229-box dive fixed
+only 52–63 boxes in 32 seconds. Rather than spending more CP time unnecessarily,
+`supplement.py` copies the frozen cohort entry point and changes **only** the
+measured allowances: 180 seconds for inherited dive, 31.2 seconds each for the
+rounding arms, with a 480-second construction setting. All algorithms still
+share a root within each map. This supplement measures margins, not a speed
+comparison; the fair equal-arm comparison remains the unchanged full cohort.
+This supersedes the proposed 900-second equal-arm setting above. Inputs stay
+the two predetermined first 229-box maps. No cohort code changes during its run.
+The supplemental dive may retry once, with the **same seed**, within its
+180-second allowance if an early tail failure left time. Only the dive's own
+newly priced pool carries into that retry; its initial point is still the common
+root. This is a stronger baseline for obtaining measured margins, explicitly
+separate from the single timed cohort dive.
+
+## Completed equal-arm `medium12` score run
+
+| Arm / gate | Replay-legal complete maps | Full-checker passes |
+|---|---:|---:|
+| Inherited timed dive + greedy heel balance | 6/12 | 0/12 |
+| Iterated floating-variable rounding + pooled completion + KK | 8/12 | 0/12 |
+| Projected walk + pooled completion + KK | 8/12 | 0/12 |
+| Portfolio, any measured arm | 9/12 | 0/12 |
+
+Mean total score wall time: **198.759 s/map**. No mutual full passes exist, and
+stored 0.9.0 evidence is absent for all twelve maps (0/0 measured); paired mean
+lifts versus 0.9.0 are **unavailable**. The complete-stow count is a weaker gate,
+not a success claim. The preparatory dive already supplied witnesses on the
+eight smaller maps, so 8/12 must not be attributed to a new constructor.
+
+The five complete three-way cohort pairs give mean absolute LCG drift
+2164.2 → 824.9 t m (dive → iterated), vertical drift 457.9 → 150.4 t m, and cargo
+bending-proxy drift 12.91 → 4.37 MN m. Heel drift worsens 355.8 → 396.5 t m and
+maximum bay-load drift worsens 33.6 → 39.4 t. Better selected linear quantities
+do not imply better checker margins. Every complete iterated stow still fails
+securing and visibility (8/8); six fail draft, five trim, four the containership
+second check, three E9, one list and one E6. The walk has two list failures.
+
+Both random-yard 428-box maps have zero LP uncovered slack but no integer stow;
+the capped completion models report INFEASIBLE. This proves only that the
+selected capped pool has no exact cover, not infeasibility of the full priced
+pool or the map. Both simulated-yard 428-box maps exhaust the initial time
+allowance during inherited model setup and have an empty root pool. A later
+dive completes `sim.medium.185100210`; discrepancy is untested there because it
+was supplied no fractional point. Do not generalize this to failure of the
+mathematical idea on every 428-box map.
+
+**Timing limitation:** inherited static-mask setup is not interruptible. It
+alone pushes preparation to 248.3 and 287.5 seconds on those two maps despite
+the 240-second setting; full-check diagnostics add further measured time.
+The run records these overruns rather than hiding them. This experimental
+entry point is not suitable for a strict wall-time service without a setup
+deadline. All process/thread caps were maintained. The complete cohort took
+just over 20 minutes, for the pre-stated all-map/full-check reason above.
+
+Artifacts: `results/medium12/summary.json` is the shared scorecard;
+`MARGINS.md` and `margins.csv` contain before/after native margins and failing
+rule IDs; `comparison.json` has gate/drift aggregates and helper source hashes.
+The numerical tables include explicit missing values for incomplete arms.
+
+## Final six-map numerical before/after table
+
+[Six complete pairs: all per-rule margins](results/paired6/MARGINS.md),
+[CSV](results/paired6/margins.csv),
+[exact row provenance](results/paired6/PROVENANCE.md).
+These are the four first 121-box cohort maps plus the two predetermined
+229-box supplemental maps. The supplement finished all three arms on 2/2 maps,
+with 0/2 full passes; mean total score time was 216.883 s/map. Its inherited
+dive actually took 26.6 and 45.9 seconds, within the 180-second allowance.
+
+Across these six numerical pairs, iterated rounding improves trim and draft
+margins on all six, but all six still fail both limits. Securing improves on
+two and worsens on four; all six still fail securing and sight distance. A new
+list failure appears on one iterated result. Thus there is no cherry-picked
+“balance fixed” claim. No measured complete discrepancy result used a witness
+fallback; CP found an incumbent. The seed/witness remains an essential shared
+feasibility aid, and the walk by itself never resolves the integer obstruction.
+CP-only completion was implemented and toy-tested, but not a real-map arm;
+the cohort cannot isolate the walk's benefit from pooled CP optimization.
+
+**Verdict: drop the tested rounding replacement as a solver improvement.**
+Selected linear moment drift improves, and KK offers useful invariant mirror
+swaps, but neither produces a single full-checker pass. Keep the coefficient
+and margin diagnostics as experimental infrastructure, without promoting a
+performance claim. This is a clean negative for these heuristic transfers,
+capped pools, fixed default tanks and surrogate rows; it does not refute the
+original discrepancy theorems or prove a map infeasible.
+
+Next: put securing/visibility-feasible columns and a coupled liquid/attitude
+linearization into the master before testing rounding again; add an
+interruptible setup deadline first. Exact support+stack equations can block a
+floating walk even after all physical rows are released, so a theory promising
+only bounded physical discrepancy does not by itself solve this hypergraph
+exact-cover obstruction.
+
+All code, notes, test files and result artifacts are under this folder. Changes:
+copy of `pages.py`; new `physics_master.py`, `hydro.py`, `rounding.py`,
+`experiment.py` (score entry), `supplement.py`, `summarize_results.py`, and two
+focused test files. `HYDRO.md` and `ROUNDING.md` give details. Verification is
+recorded in `VERIFICATION.json`: 9 rounding tests passed, checker moment/margin
+checks passed, all nine Python files parsed, all 12 cohort rows and six distinct
+complete pairs validated, and scored method/finish hashes match the final files.
+No source/checker changes, sealed data, commits or foreign process termination.

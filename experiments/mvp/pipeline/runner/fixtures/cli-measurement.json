@@ -1,0 +1,19 @@
+{
+  "measurement": "measured",
+  "status": "checked_plan",
+  "wall_s": 623.4100180829992,
+  "engine_wall_s": 547.5519343339838,
+  "first_incumbent_s": 536.1251680409769,
+  "lifts": 8.0,
+  "admission": {
+    "mask": 4095,
+    "enabled_cores": 12,
+    "load1": 40.52,
+    "reading_age_s": 1.1160800457000732,
+    "waited_s": 30.1057377079851
+  },
+  "outcome_sha256": "93467697f2d5b1d480897c408b92b1f2be1c30d0ca3fd6220a7e6883f7174eac",
+  "load_note": "Shared machine; two own CLI attempts overlapped. Fleet load1 observation reached 75.11. This is not profile calibration.",
+  "event_note": "Raw interleaved stream retained; events.jsonl restored from successful outcome.events after both commands finished.",
+  "spend_this_run_usd": 0
+}

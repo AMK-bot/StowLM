@@ -1,0 +1,2709 @@
+{
+  "synthetic": true,
+  "mode": "recorded",
+  "model": "mock",
+  "cost_usd": 0,
+  "label": "Recorded mock answer; validator exercised; no measured model accuracy",
+  "base_instance": {
+    "path": "experiments/mvp/corpus/val/small/feeder_800/random_yard/seed-040100011.json",
+    "sha256": "dd634e69d9b6bfda657cd9c8eeb9d71a25463d915ae6340739d9a023e96d6419"
+  },
+  "text": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+  "proposal": {
+    "id": "QZXU0000009",
+    "iso_type": "22G1",
+    "length_ft": 20,
+    "gross_mass_kg": 25131.83,
+    "pod": "SGSIN",
+    "reefer": false,
+    "reefer_setpoint_c": null,
+    "dg": null
+  },
+  "result": {
+    "status": "needs_answers",
+    "rows": [
+      {
+        "dg": null,
+        "gross_mass_kg": 25131.83,
+        "id": "QZXU0000009",
+        "iso_type": "22G1",
+        "length_ft": 20,
+        "pod": "SGSIN",
+        "reefer": false,
+        "reefer_setpoint_c": null
+      },
+      {
+        "id": "QZXU0000014"
+      },
+      {
+        "id": "QZXU0000020"
+      },
+      {
+        "id": "QZXU0000035"
+      },
+      {
+        "id": "QZXU0000040"
+      },
+      {
+        "id": "QZXU0000056"
+      },
+      {
+        "id": "QZXU0000061"
+      },
+      {
+        "id": "QZXU0000077"
+      },
+      {
+        "id": "QZXU0000082"
+      },
+      {
+        "id": "QZXU0000098"
+      },
+      {
+        "id": "QZXU0000101"
+      },
+      {
+        "id": "QZXU0000117"
+      },
+      {
+        "id": "QZXU0000122"
+      },
+      {
+        "id": "QZXU0000138"
+      },
+      {
+        "id": "QZXU0000143"
+      },
+      {
+        "id": "QZXU0000159"
+      },
+      {
+        "id": "QZXU0000164"
+      },
+      {
+        "id": "QZXU0000170"
+      }
+    ],
+    "questions": [
+      {
+        "id": "QZXU0000009:height_m:missing_field",
+        "row": 0,
+        "field": "height_m",
+        "prompt": "QZXU0000009: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000009:tare_kg:missing_field",
+        "row": 0,
+        "field": "tare_kg",
+        "prompt": "QZXU0000009: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000009:max_gross_mass_kg:missing_field",
+        "row": 0,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000009: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000009:weight_class:missing_field",
+        "row": 0,
+        "field": "weight_class",
+        "prompt": "QZXU0000009: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000009:pol:missing_field",
+        "row": 0,
+        "field": "pol",
+        "prompt": "QZXU0000009: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000009:empty:missing_field",
+        "row": 0,
+        "field": "empty",
+        "prompt": "QZXU0000009: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000009:direct_delivery:missing_field",
+        "row": 0,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000009: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000009:special_stowage:missing_field",
+        "row": 0,
+        "field": "special_stowage",
+        "prompt": "QZXU0000009: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000009:oog:missing_field",
+        "row": 0,
+        "field": "oog",
+        "prompt": "QZXU0000009: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000009:category:missing_field",
+        "row": 0,
+        "field": "category",
+        "prompt": "QZXU0000009: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:row:missing_row",
+        "row": 1,
+        "field": null,
+        "prompt": "QZXU0000014: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000014:iso_type:missing_field",
+        "row": 1,
+        "field": "iso_type",
+        "prompt": "QZXU0000014: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:length_ft:missing_field",
+        "row": 1,
+        "field": "length_ft",
+        "prompt": "QZXU0000014: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:height_m:missing_field",
+        "row": 1,
+        "field": "height_m",
+        "prompt": "QZXU0000014: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:tare_kg:missing_field",
+        "row": 1,
+        "field": "tare_kg",
+        "prompt": "QZXU0000014: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:gross_mass_kg:missing_vgm",
+        "row": 1,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000014: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000014:max_gross_mass_kg:missing_field",
+        "row": 1,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000014: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:weight_class:missing_field",
+        "row": 1,
+        "field": "weight_class",
+        "prompt": "QZXU0000014: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:pol:missing_field",
+        "row": 1,
+        "field": "pol",
+        "prompt": "QZXU0000014: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:pod:missing_field",
+        "row": 1,
+        "field": "pod",
+        "prompt": "QZXU0000014: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:empty:missing_field",
+        "row": 1,
+        "field": "empty",
+        "prompt": "QZXU0000014: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:reefer:missing_field",
+        "row": 1,
+        "field": "reefer",
+        "prompt": "QZXU0000014: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:reefer_setpoint_c:missing_field",
+        "row": 1,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000014: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:dg:missing_field",
+        "row": 1,
+        "field": "dg",
+        "prompt": "QZXU0000014: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:direct_delivery:missing_field",
+        "row": 1,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000014: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:special_stowage:missing_field",
+        "row": 1,
+        "field": "special_stowage",
+        "prompt": "QZXU0000014: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:oog:missing_field",
+        "row": 1,
+        "field": "oog",
+        "prompt": "QZXU0000014: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000014:category:missing_field",
+        "row": 1,
+        "field": "category",
+        "prompt": "QZXU0000014: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:row:missing_row",
+        "row": 2,
+        "field": null,
+        "prompt": "QZXU0000020: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000020:iso_type:missing_field",
+        "row": 2,
+        "field": "iso_type",
+        "prompt": "QZXU0000020: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:length_ft:missing_field",
+        "row": 2,
+        "field": "length_ft",
+        "prompt": "QZXU0000020: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:height_m:missing_field",
+        "row": 2,
+        "field": "height_m",
+        "prompt": "QZXU0000020: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:tare_kg:missing_field",
+        "row": 2,
+        "field": "tare_kg",
+        "prompt": "QZXU0000020: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:gross_mass_kg:missing_vgm",
+        "row": 2,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000020: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000020:max_gross_mass_kg:missing_field",
+        "row": 2,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000020: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:weight_class:missing_field",
+        "row": 2,
+        "field": "weight_class",
+        "prompt": "QZXU0000020: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:pol:missing_field",
+        "row": 2,
+        "field": "pol",
+        "prompt": "QZXU0000020: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:pod:missing_field",
+        "row": 2,
+        "field": "pod",
+        "prompt": "QZXU0000020: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:empty:missing_field",
+        "row": 2,
+        "field": "empty",
+        "prompt": "QZXU0000020: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:reefer:missing_field",
+        "row": 2,
+        "field": "reefer",
+        "prompt": "QZXU0000020: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:reefer_setpoint_c:missing_field",
+        "row": 2,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000020: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:dg:missing_field",
+        "row": 2,
+        "field": "dg",
+        "prompt": "QZXU0000020: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:direct_delivery:missing_field",
+        "row": 2,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000020: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:special_stowage:missing_field",
+        "row": 2,
+        "field": "special_stowage",
+        "prompt": "QZXU0000020: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:oog:missing_field",
+        "row": 2,
+        "field": "oog",
+        "prompt": "QZXU0000020: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000020:category:missing_field",
+        "row": 2,
+        "field": "category",
+        "prompt": "QZXU0000020: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:row:missing_row",
+        "row": 3,
+        "field": null,
+        "prompt": "QZXU0000035: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000035:iso_type:missing_field",
+        "row": 3,
+        "field": "iso_type",
+        "prompt": "QZXU0000035: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:length_ft:missing_field",
+        "row": 3,
+        "field": "length_ft",
+        "prompt": "QZXU0000035: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:height_m:missing_field",
+        "row": 3,
+        "field": "height_m",
+        "prompt": "QZXU0000035: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:tare_kg:missing_field",
+        "row": 3,
+        "field": "tare_kg",
+        "prompt": "QZXU0000035: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:gross_mass_kg:missing_vgm",
+        "row": 3,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000035: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000035:max_gross_mass_kg:missing_field",
+        "row": 3,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000035: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:weight_class:missing_field",
+        "row": 3,
+        "field": "weight_class",
+        "prompt": "QZXU0000035: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:pol:missing_field",
+        "row": 3,
+        "field": "pol",
+        "prompt": "QZXU0000035: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:pod:missing_field",
+        "row": 3,
+        "field": "pod",
+        "prompt": "QZXU0000035: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:empty:missing_field",
+        "row": 3,
+        "field": "empty",
+        "prompt": "QZXU0000035: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:reefer:missing_field",
+        "row": 3,
+        "field": "reefer",
+        "prompt": "QZXU0000035: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:reefer_setpoint_c:missing_field",
+        "row": 3,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000035: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:dg:missing_field",
+        "row": 3,
+        "field": "dg",
+        "prompt": "QZXU0000035: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:direct_delivery:missing_field",
+        "row": 3,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000035: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:special_stowage:missing_field",
+        "row": 3,
+        "field": "special_stowage",
+        "prompt": "QZXU0000035: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:oog:missing_field",
+        "row": 3,
+        "field": "oog",
+        "prompt": "QZXU0000035: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000035:category:missing_field",
+        "row": 3,
+        "field": "category",
+        "prompt": "QZXU0000035: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:row:missing_row",
+        "row": 4,
+        "field": null,
+        "prompt": "QZXU0000040: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000040:iso_type:missing_field",
+        "row": 4,
+        "field": "iso_type",
+        "prompt": "QZXU0000040: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:length_ft:missing_field",
+        "row": 4,
+        "field": "length_ft",
+        "prompt": "QZXU0000040: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:height_m:missing_field",
+        "row": 4,
+        "field": "height_m",
+        "prompt": "QZXU0000040: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:tare_kg:missing_field",
+        "row": 4,
+        "field": "tare_kg",
+        "prompt": "QZXU0000040: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:gross_mass_kg:missing_vgm",
+        "row": 4,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000040: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000040:max_gross_mass_kg:missing_field",
+        "row": 4,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000040: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:weight_class:missing_field",
+        "row": 4,
+        "field": "weight_class",
+        "prompt": "QZXU0000040: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:pol:missing_field",
+        "row": 4,
+        "field": "pol",
+        "prompt": "QZXU0000040: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:pod:missing_field",
+        "row": 4,
+        "field": "pod",
+        "prompt": "QZXU0000040: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:empty:missing_field",
+        "row": 4,
+        "field": "empty",
+        "prompt": "QZXU0000040: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:reefer:missing_field",
+        "row": 4,
+        "field": "reefer",
+        "prompt": "QZXU0000040: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:reefer_setpoint_c:missing_field",
+        "row": 4,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000040: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:dg:missing_field",
+        "row": 4,
+        "field": "dg",
+        "prompt": "QZXU0000040: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:direct_delivery:missing_field",
+        "row": 4,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000040: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:special_stowage:missing_field",
+        "row": 4,
+        "field": "special_stowage",
+        "prompt": "QZXU0000040: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:oog:missing_field",
+        "row": 4,
+        "field": "oog",
+        "prompt": "QZXU0000040: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000040:category:missing_field",
+        "row": 4,
+        "field": "category",
+        "prompt": "QZXU0000040: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:row:missing_row",
+        "row": 5,
+        "field": null,
+        "prompt": "QZXU0000056: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000056:iso_type:missing_field",
+        "row": 5,
+        "field": "iso_type",
+        "prompt": "QZXU0000056: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:length_ft:missing_field",
+        "row": 5,
+        "field": "length_ft",
+        "prompt": "QZXU0000056: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:height_m:missing_field",
+        "row": 5,
+        "field": "height_m",
+        "prompt": "QZXU0000056: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:tare_kg:missing_field",
+        "row": 5,
+        "field": "tare_kg",
+        "prompt": "QZXU0000056: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:gross_mass_kg:missing_vgm",
+        "row": 5,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000056: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000056:max_gross_mass_kg:missing_field",
+        "row": 5,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000056: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:weight_class:missing_field",
+        "row": 5,
+        "field": "weight_class",
+        "prompt": "QZXU0000056: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:pol:missing_field",
+        "row": 5,
+        "field": "pol",
+        "prompt": "QZXU0000056: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:pod:missing_field",
+        "row": 5,
+        "field": "pod",
+        "prompt": "QZXU0000056: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:empty:missing_field",
+        "row": 5,
+        "field": "empty",
+        "prompt": "QZXU0000056: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:reefer:missing_field",
+        "row": 5,
+        "field": "reefer",
+        "prompt": "QZXU0000056: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:reefer_setpoint_c:missing_field",
+        "row": 5,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000056: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:dg:missing_field",
+        "row": 5,
+        "field": "dg",
+        "prompt": "QZXU0000056: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:direct_delivery:missing_field",
+        "row": 5,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000056: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:special_stowage:missing_field",
+        "row": 5,
+        "field": "special_stowage",
+        "prompt": "QZXU0000056: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:oog:missing_field",
+        "row": 5,
+        "field": "oog",
+        "prompt": "QZXU0000056: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000056:category:missing_field",
+        "row": 5,
+        "field": "category",
+        "prompt": "QZXU0000056: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:row:missing_row",
+        "row": 6,
+        "field": null,
+        "prompt": "QZXU0000061: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000061:iso_type:missing_field",
+        "row": 6,
+        "field": "iso_type",
+        "prompt": "QZXU0000061: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:length_ft:missing_field",
+        "row": 6,
+        "field": "length_ft",
+        "prompt": "QZXU0000061: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:height_m:missing_field",
+        "row": 6,
+        "field": "height_m",
+        "prompt": "QZXU0000061: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:tare_kg:missing_field",
+        "row": 6,
+        "field": "tare_kg",
+        "prompt": "QZXU0000061: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:gross_mass_kg:missing_vgm",
+        "row": 6,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000061: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000061:max_gross_mass_kg:missing_field",
+        "row": 6,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000061: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:weight_class:missing_field",
+        "row": 6,
+        "field": "weight_class",
+        "prompt": "QZXU0000061: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:pol:missing_field",
+        "row": 6,
+        "field": "pol",
+        "prompt": "QZXU0000061: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:pod:missing_field",
+        "row": 6,
+        "field": "pod",
+        "prompt": "QZXU0000061: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:empty:missing_field",
+        "row": 6,
+        "field": "empty",
+        "prompt": "QZXU0000061: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:reefer:missing_field",
+        "row": 6,
+        "field": "reefer",
+        "prompt": "QZXU0000061: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:reefer_setpoint_c:missing_field",
+        "row": 6,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000061: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:dg:missing_field",
+        "row": 6,
+        "field": "dg",
+        "prompt": "QZXU0000061: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:direct_delivery:missing_field",
+        "row": 6,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000061: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:special_stowage:missing_field",
+        "row": 6,
+        "field": "special_stowage",
+        "prompt": "QZXU0000061: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:oog:missing_field",
+        "row": 6,
+        "field": "oog",
+        "prompt": "QZXU0000061: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000061:category:missing_field",
+        "row": 6,
+        "field": "category",
+        "prompt": "QZXU0000061: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:row:missing_row",
+        "row": 7,
+        "field": null,
+        "prompt": "QZXU0000077: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000077:iso_type:missing_field",
+        "row": 7,
+        "field": "iso_type",
+        "prompt": "QZXU0000077: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:length_ft:missing_field",
+        "row": 7,
+        "field": "length_ft",
+        "prompt": "QZXU0000077: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:height_m:missing_field",
+        "row": 7,
+        "field": "height_m",
+        "prompt": "QZXU0000077: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:tare_kg:missing_field",
+        "row": 7,
+        "field": "tare_kg",
+        "prompt": "QZXU0000077: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:gross_mass_kg:missing_vgm",
+        "row": 7,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000077: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000077:max_gross_mass_kg:missing_field",
+        "row": 7,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000077: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:weight_class:missing_field",
+        "row": 7,
+        "field": "weight_class",
+        "prompt": "QZXU0000077: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:pol:missing_field",
+        "row": 7,
+        "field": "pol",
+        "prompt": "QZXU0000077: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:pod:missing_field",
+        "row": 7,
+        "field": "pod",
+        "prompt": "QZXU0000077: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:empty:missing_field",
+        "row": 7,
+        "field": "empty",
+        "prompt": "QZXU0000077: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:reefer:missing_field",
+        "row": 7,
+        "field": "reefer",
+        "prompt": "QZXU0000077: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:reefer_setpoint_c:missing_field",
+        "row": 7,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000077: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:dg:missing_field",
+        "row": 7,
+        "field": "dg",
+        "prompt": "QZXU0000077: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:direct_delivery:missing_field",
+        "row": 7,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000077: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:special_stowage:missing_field",
+        "row": 7,
+        "field": "special_stowage",
+        "prompt": "QZXU0000077: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:oog:missing_field",
+        "row": 7,
+        "field": "oog",
+        "prompt": "QZXU0000077: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000077:category:missing_field",
+        "row": 7,
+        "field": "category",
+        "prompt": "QZXU0000077: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:row:missing_row",
+        "row": 8,
+        "field": null,
+        "prompt": "QZXU0000082: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000082:iso_type:missing_field",
+        "row": 8,
+        "field": "iso_type",
+        "prompt": "QZXU0000082: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:length_ft:missing_field",
+        "row": 8,
+        "field": "length_ft",
+        "prompt": "QZXU0000082: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:height_m:missing_field",
+        "row": 8,
+        "field": "height_m",
+        "prompt": "QZXU0000082: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:tare_kg:missing_field",
+        "row": 8,
+        "field": "tare_kg",
+        "prompt": "QZXU0000082: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:gross_mass_kg:missing_vgm",
+        "row": 8,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000082: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000082:max_gross_mass_kg:missing_field",
+        "row": 8,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000082: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:weight_class:missing_field",
+        "row": 8,
+        "field": "weight_class",
+        "prompt": "QZXU0000082: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:pol:missing_field",
+        "row": 8,
+        "field": "pol",
+        "prompt": "QZXU0000082: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:pod:missing_field",
+        "row": 8,
+        "field": "pod",
+        "prompt": "QZXU0000082: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:empty:missing_field",
+        "row": 8,
+        "field": "empty",
+        "prompt": "QZXU0000082: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:reefer:missing_field",
+        "row": 8,
+        "field": "reefer",
+        "prompt": "QZXU0000082: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:reefer_setpoint_c:missing_field",
+        "row": 8,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000082: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:dg:missing_field",
+        "row": 8,
+        "field": "dg",
+        "prompt": "QZXU0000082: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:direct_delivery:missing_field",
+        "row": 8,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000082: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:special_stowage:missing_field",
+        "row": 8,
+        "field": "special_stowage",
+        "prompt": "QZXU0000082: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:oog:missing_field",
+        "row": 8,
+        "field": "oog",
+        "prompt": "QZXU0000082: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000082:category:missing_field",
+        "row": 8,
+        "field": "category",
+        "prompt": "QZXU0000082: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:row:missing_row",
+        "row": 9,
+        "field": null,
+        "prompt": "QZXU0000098: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000098:iso_type:missing_field",
+        "row": 9,
+        "field": "iso_type",
+        "prompt": "QZXU0000098: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:length_ft:missing_field",
+        "row": 9,
+        "field": "length_ft",
+        "prompt": "QZXU0000098: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:height_m:missing_field",
+        "row": 9,
+        "field": "height_m",
+        "prompt": "QZXU0000098: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:tare_kg:missing_field",
+        "row": 9,
+        "field": "tare_kg",
+        "prompt": "QZXU0000098: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:gross_mass_kg:missing_vgm",
+        "row": 9,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000098: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000098:max_gross_mass_kg:missing_field",
+        "row": 9,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000098: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:weight_class:missing_field",
+        "row": 9,
+        "field": "weight_class",
+        "prompt": "QZXU0000098: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:pol:missing_field",
+        "row": 9,
+        "field": "pol",
+        "prompt": "QZXU0000098: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:pod:missing_field",
+        "row": 9,
+        "field": "pod",
+        "prompt": "QZXU0000098: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:empty:missing_field",
+        "row": 9,
+        "field": "empty",
+        "prompt": "QZXU0000098: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:reefer:missing_field",
+        "row": 9,
+        "field": "reefer",
+        "prompt": "QZXU0000098: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:reefer_setpoint_c:missing_field",
+        "row": 9,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000098: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:dg:missing_field",
+        "row": 9,
+        "field": "dg",
+        "prompt": "QZXU0000098: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:direct_delivery:missing_field",
+        "row": 9,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000098: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:special_stowage:missing_field",
+        "row": 9,
+        "field": "special_stowage",
+        "prompt": "QZXU0000098: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:oog:missing_field",
+        "row": 9,
+        "field": "oog",
+        "prompt": "QZXU0000098: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000098:category:missing_field",
+        "row": 9,
+        "field": "category",
+        "prompt": "QZXU0000098: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:row:missing_row",
+        "row": 10,
+        "field": null,
+        "prompt": "QZXU0000101: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000101:iso_type:missing_field",
+        "row": 10,
+        "field": "iso_type",
+        "prompt": "QZXU0000101: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:length_ft:missing_field",
+        "row": 10,
+        "field": "length_ft",
+        "prompt": "QZXU0000101: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:height_m:missing_field",
+        "row": 10,
+        "field": "height_m",
+        "prompt": "QZXU0000101: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:tare_kg:missing_field",
+        "row": 10,
+        "field": "tare_kg",
+        "prompt": "QZXU0000101: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:gross_mass_kg:missing_vgm",
+        "row": 10,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000101: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000101:max_gross_mass_kg:missing_field",
+        "row": 10,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000101: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:weight_class:missing_field",
+        "row": 10,
+        "field": "weight_class",
+        "prompt": "QZXU0000101: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:pol:missing_field",
+        "row": 10,
+        "field": "pol",
+        "prompt": "QZXU0000101: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:pod:missing_field",
+        "row": 10,
+        "field": "pod",
+        "prompt": "QZXU0000101: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:empty:missing_field",
+        "row": 10,
+        "field": "empty",
+        "prompt": "QZXU0000101: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:reefer:missing_field",
+        "row": 10,
+        "field": "reefer",
+        "prompt": "QZXU0000101: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:reefer_setpoint_c:missing_field",
+        "row": 10,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000101: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:dg:missing_field",
+        "row": 10,
+        "field": "dg",
+        "prompt": "QZXU0000101: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:direct_delivery:missing_field",
+        "row": 10,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000101: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:special_stowage:missing_field",
+        "row": 10,
+        "field": "special_stowage",
+        "prompt": "QZXU0000101: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:oog:missing_field",
+        "row": 10,
+        "field": "oog",
+        "prompt": "QZXU0000101: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000101:category:missing_field",
+        "row": 10,
+        "field": "category",
+        "prompt": "QZXU0000101: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:row:missing_row",
+        "row": 11,
+        "field": null,
+        "prompt": "QZXU0000117: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000117:iso_type:missing_field",
+        "row": 11,
+        "field": "iso_type",
+        "prompt": "QZXU0000117: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:length_ft:missing_field",
+        "row": 11,
+        "field": "length_ft",
+        "prompt": "QZXU0000117: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:height_m:missing_field",
+        "row": 11,
+        "field": "height_m",
+        "prompt": "QZXU0000117: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:tare_kg:missing_field",
+        "row": 11,
+        "field": "tare_kg",
+        "prompt": "QZXU0000117: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:gross_mass_kg:missing_vgm",
+        "row": 11,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000117: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000117:max_gross_mass_kg:missing_field",
+        "row": 11,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000117: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:weight_class:missing_field",
+        "row": 11,
+        "field": "weight_class",
+        "prompt": "QZXU0000117: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:pol:missing_field",
+        "row": 11,
+        "field": "pol",
+        "prompt": "QZXU0000117: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:pod:missing_field",
+        "row": 11,
+        "field": "pod",
+        "prompt": "QZXU0000117: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:empty:missing_field",
+        "row": 11,
+        "field": "empty",
+        "prompt": "QZXU0000117: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:reefer:missing_field",
+        "row": 11,
+        "field": "reefer",
+        "prompt": "QZXU0000117: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:reefer_setpoint_c:missing_field",
+        "row": 11,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000117: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:dg:missing_field",
+        "row": 11,
+        "field": "dg",
+        "prompt": "QZXU0000117: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:direct_delivery:missing_field",
+        "row": 11,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000117: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:special_stowage:missing_field",
+        "row": 11,
+        "field": "special_stowage",
+        "prompt": "QZXU0000117: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:oog:missing_field",
+        "row": 11,
+        "field": "oog",
+        "prompt": "QZXU0000117: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000117:category:missing_field",
+        "row": 11,
+        "field": "category",
+        "prompt": "QZXU0000117: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:row:missing_row",
+        "row": 12,
+        "field": null,
+        "prompt": "QZXU0000122: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000122:iso_type:missing_field",
+        "row": 12,
+        "field": "iso_type",
+        "prompt": "QZXU0000122: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:length_ft:missing_field",
+        "row": 12,
+        "field": "length_ft",
+        "prompt": "QZXU0000122: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:height_m:missing_field",
+        "row": 12,
+        "field": "height_m",
+        "prompt": "QZXU0000122: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:tare_kg:missing_field",
+        "row": 12,
+        "field": "tare_kg",
+        "prompt": "QZXU0000122: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:gross_mass_kg:missing_vgm",
+        "row": 12,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000122: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000122:max_gross_mass_kg:missing_field",
+        "row": 12,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000122: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:weight_class:missing_field",
+        "row": 12,
+        "field": "weight_class",
+        "prompt": "QZXU0000122: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:pol:missing_field",
+        "row": 12,
+        "field": "pol",
+        "prompt": "QZXU0000122: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:pod:missing_field",
+        "row": 12,
+        "field": "pod",
+        "prompt": "QZXU0000122: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:empty:missing_field",
+        "row": 12,
+        "field": "empty",
+        "prompt": "QZXU0000122: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:reefer:missing_field",
+        "row": 12,
+        "field": "reefer",
+        "prompt": "QZXU0000122: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:reefer_setpoint_c:missing_field",
+        "row": 12,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000122: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:dg:missing_field",
+        "row": 12,
+        "field": "dg",
+        "prompt": "QZXU0000122: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:direct_delivery:missing_field",
+        "row": 12,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000122: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:special_stowage:missing_field",
+        "row": 12,
+        "field": "special_stowage",
+        "prompt": "QZXU0000122: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:oog:missing_field",
+        "row": 12,
+        "field": "oog",
+        "prompt": "QZXU0000122: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000122:category:missing_field",
+        "row": 12,
+        "field": "category",
+        "prompt": "QZXU0000122: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:row:missing_row",
+        "row": 13,
+        "field": null,
+        "prompt": "QZXU0000138: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000138:iso_type:missing_field",
+        "row": 13,
+        "field": "iso_type",
+        "prompt": "QZXU0000138: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:length_ft:missing_field",
+        "row": 13,
+        "field": "length_ft",
+        "prompt": "QZXU0000138: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:height_m:missing_field",
+        "row": 13,
+        "field": "height_m",
+        "prompt": "QZXU0000138: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:tare_kg:missing_field",
+        "row": 13,
+        "field": "tare_kg",
+        "prompt": "QZXU0000138: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:gross_mass_kg:missing_vgm",
+        "row": 13,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000138: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000138:max_gross_mass_kg:missing_field",
+        "row": 13,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000138: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:weight_class:missing_field",
+        "row": 13,
+        "field": "weight_class",
+        "prompt": "QZXU0000138: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:pol:missing_field",
+        "row": 13,
+        "field": "pol",
+        "prompt": "QZXU0000138: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:pod:missing_field",
+        "row": 13,
+        "field": "pod",
+        "prompt": "QZXU0000138: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:empty:missing_field",
+        "row": 13,
+        "field": "empty",
+        "prompt": "QZXU0000138: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:reefer:missing_field",
+        "row": 13,
+        "field": "reefer",
+        "prompt": "QZXU0000138: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:reefer_setpoint_c:missing_field",
+        "row": 13,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000138: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:dg:missing_field",
+        "row": 13,
+        "field": "dg",
+        "prompt": "QZXU0000138: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:direct_delivery:missing_field",
+        "row": 13,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000138: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:special_stowage:missing_field",
+        "row": 13,
+        "field": "special_stowage",
+        "prompt": "QZXU0000138: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:oog:missing_field",
+        "row": 13,
+        "field": "oog",
+        "prompt": "QZXU0000138: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000138:category:missing_field",
+        "row": 13,
+        "field": "category",
+        "prompt": "QZXU0000138: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:row:missing_row",
+        "row": 14,
+        "field": null,
+        "prompt": "QZXU0000143: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000143:iso_type:missing_field",
+        "row": 14,
+        "field": "iso_type",
+        "prompt": "QZXU0000143: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:length_ft:missing_field",
+        "row": 14,
+        "field": "length_ft",
+        "prompt": "QZXU0000143: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:height_m:missing_field",
+        "row": 14,
+        "field": "height_m",
+        "prompt": "QZXU0000143: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:tare_kg:missing_field",
+        "row": 14,
+        "field": "tare_kg",
+        "prompt": "QZXU0000143: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:gross_mass_kg:missing_vgm",
+        "row": 14,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000143: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000143:max_gross_mass_kg:missing_field",
+        "row": 14,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000143: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:weight_class:missing_field",
+        "row": 14,
+        "field": "weight_class",
+        "prompt": "QZXU0000143: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:pol:missing_field",
+        "row": 14,
+        "field": "pol",
+        "prompt": "QZXU0000143: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:pod:missing_field",
+        "row": 14,
+        "field": "pod",
+        "prompt": "QZXU0000143: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:empty:missing_field",
+        "row": 14,
+        "field": "empty",
+        "prompt": "QZXU0000143: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:reefer:missing_field",
+        "row": 14,
+        "field": "reefer",
+        "prompt": "QZXU0000143: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:reefer_setpoint_c:missing_field",
+        "row": 14,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000143: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:dg:missing_field",
+        "row": 14,
+        "field": "dg",
+        "prompt": "QZXU0000143: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:direct_delivery:missing_field",
+        "row": 14,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000143: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:special_stowage:missing_field",
+        "row": 14,
+        "field": "special_stowage",
+        "prompt": "QZXU0000143: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:oog:missing_field",
+        "row": 14,
+        "field": "oog",
+        "prompt": "QZXU0000143: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000143:category:missing_field",
+        "row": 14,
+        "field": "category",
+        "prompt": "QZXU0000143: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:row:missing_row",
+        "row": 15,
+        "field": null,
+        "prompt": "QZXU0000159: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000159:iso_type:missing_field",
+        "row": 15,
+        "field": "iso_type",
+        "prompt": "QZXU0000159: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:length_ft:missing_field",
+        "row": 15,
+        "field": "length_ft",
+        "prompt": "QZXU0000159: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:height_m:missing_field",
+        "row": 15,
+        "field": "height_m",
+        "prompt": "QZXU0000159: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:tare_kg:missing_field",
+        "row": 15,
+        "field": "tare_kg",
+        "prompt": "QZXU0000159: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:gross_mass_kg:missing_vgm",
+        "row": 15,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000159: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000159:max_gross_mass_kg:missing_field",
+        "row": 15,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000159: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:weight_class:missing_field",
+        "row": 15,
+        "field": "weight_class",
+        "prompt": "QZXU0000159: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:pol:missing_field",
+        "row": 15,
+        "field": "pol",
+        "prompt": "QZXU0000159: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:pod:missing_field",
+        "row": 15,
+        "field": "pod",
+        "prompt": "QZXU0000159: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:empty:missing_field",
+        "row": 15,
+        "field": "empty",
+        "prompt": "QZXU0000159: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:reefer:missing_field",
+        "row": 15,
+        "field": "reefer",
+        "prompt": "QZXU0000159: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:reefer_setpoint_c:missing_field",
+        "row": 15,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000159: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:dg:missing_field",
+        "row": 15,
+        "field": "dg",
+        "prompt": "QZXU0000159: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:direct_delivery:missing_field",
+        "row": 15,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000159: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:special_stowage:missing_field",
+        "row": 15,
+        "field": "special_stowage",
+        "prompt": "QZXU0000159: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:oog:missing_field",
+        "row": 15,
+        "field": "oog",
+        "prompt": "QZXU0000159: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000159:category:missing_field",
+        "row": 15,
+        "field": "category",
+        "prompt": "QZXU0000159: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:row:missing_row",
+        "row": 16,
+        "field": null,
+        "prompt": "QZXU0000164: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000164:iso_type:missing_field",
+        "row": 16,
+        "field": "iso_type",
+        "prompt": "QZXU0000164: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:length_ft:missing_field",
+        "row": 16,
+        "field": "length_ft",
+        "prompt": "QZXU0000164: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:height_m:missing_field",
+        "row": 16,
+        "field": "height_m",
+        "prompt": "QZXU0000164: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:tare_kg:missing_field",
+        "row": 16,
+        "field": "tare_kg",
+        "prompt": "QZXU0000164: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:gross_mass_kg:missing_vgm",
+        "row": 16,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000164: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000164:max_gross_mass_kg:missing_field",
+        "row": 16,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000164: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:weight_class:missing_field",
+        "row": 16,
+        "field": "weight_class",
+        "prompt": "QZXU0000164: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:pol:missing_field",
+        "row": 16,
+        "field": "pol",
+        "prompt": "QZXU0000164: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:pod:missing_field",
+        "row": 16,
+        "field": "pod",
+        "prompt": "QZXU0000164: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:empty:missing_field",
+        "row": 16,
+        "field": "empty",
+        "prompt": "QZXU0000164: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:reefer:missing_field",
+        "row": 16,
+        "field": "reefer",
+        "prompt": "QZXU0000164: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:reefer_setpoint_c:missing_field",
+        "row": 16,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000164: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:dg:missing_field",
+        "row": 16,
+        "field": "dg",
+        "prompt": "QZXU0000164: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:direct_delivery:missing_field",
+        "row": 16,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000164: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:special_stowage:missing_field",
+        "row": 16,
+        "field": "special_stowage",
+        "prompt": "QZXU0000164: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:oog:missing_field",
+        "row": 16,
+        "field": "oog",
+        "prompt": "QZXU0000164: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000164:category:missing_field",
+        "row": 16,
+        "field": "category",
+        "prompt": "QZXU0000164: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:row:missing_row",
+        "row": 17,
+        "field": null,
+        "prompt": "QZXU0000170: expected load-list row has no supported reading. Supply the full row.",
+        "candidates": [],
+        "reason": "missing_row"
+      },
+      {
+        "id": "QZXU0000170:iso_type:missing_field",
+        "row": 17,
+        "field": "iso_type",
+        "prompt": "QZXU0000170: supply iso_type; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:length_ft:missing_field",
+        "row": 17,
+        "field": "length_ft",
+        "prompt": "QZXU0000170: supply length_ft; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:height_m:missing_field",
+        "row": 17,
+        "field": "height_m",
+        "prompt": "QZXU0000170: supply height_m; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:tare_kg:missing_field",
+        "row": 17,
+        "field": "tare_kg",
+        "prompt": "QZXU0000170: supply tare_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:gross_mass_kg:missing_vgm",
+        "row": 17,
+        "field": "gross_mass_kg",
+        "prompt": "QZXU0000170: supply gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_vgm"
+      },
+      {
+        "id": "QZXU0000170:max_gross_mass_kg:missing_field",
+        "row": 17,
+        "field": "max_gross_mass_kg",
+        "prompt": "QZXU0000170: supply max_gross_mass_kg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:weight_class:missing_field",
+        "row": 17,
+        "field": "weight_class",
+        "prompt": "QZXU0000170: supply weight_class; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:pol:missing_field",
+        "row": 17,
+        "field": "pol",
+        "prompt": "QZXU0000170: supply pol; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:pod:missing_field",
+        "row": 17,
+        "field": "pod",
+        "prompt": "QZXU0000170: supply pod; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:empty:missing_field",
+        "row": 17,
+        "field": "empty",
+        "prompt": "QZXU0000170: supply empty; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:reefer:missing_field",
+        "row": 17,
+        "field": "reefer",
+        "prompt": "QZXU0000170: supply reefer; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:reefer_setpoint_c:missing_field",
+        "row": 17,
+        "field": "reefer_setpoint_c",
+        "prompt": "QZXU0000170: supply reefer_setpoint_c; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:dg:missing_field",
+        "row": 17,
+        "field": "dg",
+        "prompt": "QZXU0000170: supply dg; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:direct_delivery:missing_field",
+        "row": 17,
+        "field": "direct_delivery",
+        "prompt": "QZXU0000170: supply direct_delivery; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:special_stowage:missing_field",
+        "row": 17,
+        "field": "special_stowage",
+        "prompt": "QZXU0000170: supply special_stowage; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:oog:missing_field",
+        "row": 17,
+        "field": "oog",
+        "prompt": "QZXU0000170: supply oog; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      },
+      {
+        "id": "QZXU0000170:category:missing_field",
+        "row": 17,
+        "field": "category",
+        "prompt": "QZXU0000170: supply category; no supported declaration was found.",
+        "candidates": [],
+        "reason": "missing_field"
+      }
+    ],
+    "field_sources": [
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "id",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "iso_type",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "length_ft",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "gross_mass_kg",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "pod",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "reefer",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "reefer_setpoint_c",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      },
+      {
+        "row": 0,
+        "row_id": "QZXU0000009",
+        "field": "dg",
+        "document": "private-text",
+        "quote": "{\"id\":\"QZXU0000009\",\"iso_type\":\"22G1\",\"length_ft\":20,\"gross_mass_kg\":25131.83,\"pod\":\"SGSIN\",\"reefer\":false,\"reefer_setpoint_c\":null,\"dg\":null}",
+        "evidence": "exact_quote",
+        "accepted": true
+      }
+    ],
+    "records": [
+      {
+        "stage": "intake_private",
+        "mode": "recorded",
+        "input_sha256": "bb25143b34ee34b1d7b75b92014378aed86e9abcbc617cb062c3ba7744e028d3",
+        "output_sha256": "f9f814520af645710ec1db107574eea551585063d4368121bc941d3a2ebb4077",
+        "model": "mock-model; preparation only",
+        "adapter_sha256": null,
+        "prompt_sha256": "617cf732739d60b99dad3ae16a795a46fb886bf3a3f60cefa065223d024e5372",
+        "source_sha256": "2d6d437ca831a4fdbc0b261a2f8787f2ce3b47cf6bd94e431068fd75d21f02fe",
+        "wall_s": 0.9013848750037141,
+        "cost_usd": 0.0,
+        "notes": "Local model proposal; deterministic task 1.3 validator required.  Recorded mock proposal, not trained-model inference.",
+        "prev_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "result_sha256": "ab9af0002b19f80664b87485a66c028858f84b7a79bf5a5f682711aa0a918cb0"
+}

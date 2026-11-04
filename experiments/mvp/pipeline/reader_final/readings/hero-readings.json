@@ -1,0 +1,3846 @@
+{
+  "adopted": {
+    "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+    "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+    "name": "swa-last-5",
+    "adapter_path": "/Users/anda/Projects/meta-hackathon-stowage/experiments/mvp/reader/v3/candidates/swa-last-5",
+    "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+    "decoding_policy": "reader-v3-schema-mask/2-d224"
+  },
+  "readings": [
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Do not load any containers in bay 01.",
+      "expected": {
+        "constraint": {
+          "bay": 1,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "0102b17693af96b0ce96e80debb53009f26a0cdfa6a8f771fb047ad5e27881ce",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.6509200409636833
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Do not load any containers in bay 03.",
+      "expected": {
+        "constraint": {
+          "bay": 3,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "835965bade6269bc061a8c0b90d85135eea6a228d0eb6558c609a76c19df28b2",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.602311833004933
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Do not load any containers in bay 09.",
+      "expected": {
+        "constraint": {
+          "bay": 9,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "bbcc75af0337892c3997d609e6ecc16b76c56e03f2bfbdcd3b460c6cec73a040",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.7592984579969198
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Do not load any containers in bay 11.",
+      "expected": {
+        "constraint": {
+          "bay": 11,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 11
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":11}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "370a1dba124d5cac1adab8a996b57bdc2bec936bdb534a1641922e4acb4ea1b3",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.775999874982517
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Do not load any containers in bay 21.",
+      "expected": {
+        "constraint": {
+          "bay": 21,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 21
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":21}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "4e49e3d5d046c317fef0be820c34c8662e50d58f406e83055b555ef2961e0c8a",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.4430472499807365
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Do not load any containers in bay 23.",
+      "expected": {
+        "constraint": {
+          "bay": 23,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 23
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":23}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "aae2c40b9dc4cfc3d3374fc6fd1485acf72aea6e36c74552d71ac865f28de782",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.8611867500003427
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 01, use at most 1 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 1,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 1,
+          "zone": "hold",
+          "max_tiers": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":1,\"zone\":\"hold\",\"max_tiers\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "dd7937210b1b7fe90c429e91b3d01626e262f9475e7db29034bc6331cbe50613",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.636555166973267
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 01, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 1,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 1,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":1,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "ce22ce7327a676922005656ae843337e1c06aaa5d6b778f12b791d2b1495fa5f",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.559121333004441
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 03, use at most 1 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 3,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 3,
+          "zone": "hold",
+          "max_tiers": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":3,\"zone\":\"hold\",\"max_tiers\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "493fa31a5c0fdc87915110530183d6d9a5d68207b399d3c1130ce3f713b280f9",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.242973208019976
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 03, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 3,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 3,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":3,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "dbad6cfe82d96ae24c09b1a0f41fcff420b048703c9936bbabfd82208c75fbad",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.84516354103107
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 09, use at most 2 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 9,
+          "max_tiers": 2,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 9,
+          "zone": "hold",
+          "max_tiers": 2
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":9,\"zone\":\"hold\",\"max_tiers\":2}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "e34533b13ecb08b12bc7d1f19cc987de7e6cb491ee84cb8be890d6f82e2e818d",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.508817333029583
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 09, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 9,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 9,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":9,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "22ecfc10038ac5c36acc3787330fa05610cf46b1e659908056c41d7b661d7c0c",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.710752458020579
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 11, use at most 2 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 11,
+          "max_tiers": 2,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 11,
+          "zone": "hold",
+          "max_tiers": 2
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":11,\"zone\":\"hold\",\"max_tiers\":2}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "82c55463251f00d4fbdd0c6bfa87ec7c535eb8c113f1dbff18e9a300c176b6ad",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.639892207982484
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 11, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 11,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 11,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":11,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "6a41757f22238afd8d9daf0a119275c5a6f294fa5b5def704de8d31010e16ed1",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.819081541965716
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 21, use at most 1 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 21,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 21,
+          "zone": "hold",
+          "max_tiers": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":21,\"zone\":\"hold\",\"max_tiers\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "560f8c35a598240f3575f8081f3e31efcc5acf863a51157f1c57175dfd79c73a",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.685518334037624
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 21, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 21,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 21,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":21,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "cddd955798ad7f9cc77848af91b151daeb29eba55510b03e375895efbb6883b6",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.304193707997911
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 23, use at most 1 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 23,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 23,
+          "zone": "hold",
+          "max_tiers": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":23,\"zone\":\"hold\",\"max_tiers\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "339b5df823d48fa3d4c697dae2486e3fdb9d359ac128459f8496764ded547d6c",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.508139540965203
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In bay 23, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 23,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 23,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":23,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "3d1cd91e5cd5b12af76e3268281ec6747e9d2cec1218119472bc5625a3292a8f",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.503585124970414
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In every bay, use at most 0 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": null,
+          "max_tiers": 0,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": null,
+          "zone": "deck",
+          "max_tiers": 0
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"deck\",\"max_tiers\":0}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "51fff1544448a2f16399807e570254d803a949185aa717a6801f4b831c51ebcc",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.42496808298165
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In every bay, use at most 0 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": null,
+          "max_tiers": 0,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": null,
+          "zone": "hold",
+          "max_tiers": 0
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"hold\",\"max_tiers\":0}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "2e041c0445fac6c4f10643e83979807dcc8b13fc7c4e1ce835bdbd1bb981ef6f",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.645258000004105
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "In every bay, use at most 2 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": null,
+          "max_tiers": 2,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": null,
+          "zone": "hold",
+          "max_tiers": 2
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"hold\",\"max_tiers\":2}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "4cb6b3100658da733eac513bf6bb52b7fd0f077b9a269f14fcdfd6f910422517",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.632724666967988
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 2.2 containers at least 1 20-foot bays away from bay 21.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":21}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "2f9e86e372bcfb3fe1f2667416b4348c221087e5b5d3cdb0d263be1f2418d5b3",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.383976624987554
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 2.2 containers at least 1 20-foot bays away from bay 23.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":23}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "cf739e1655b3f15d9f6044321fb9b4c6b22c92dd6e1f4518b3b96308bfe39fc2",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.525725375046022
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 2.2 containers at least 1 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "2.2",
+          "min_bays": 1,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":1,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "24fce264636180471969451607052955d27b838a14ff9cfcef5e44f660ccb870",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.573276375012938
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 2.2 containers at least 2 20-foot bays away from bay 21.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":21}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "371ad8394e4abaa3dc5b23933d12ebc940575162777e33ddbf2000da01306f3f",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.822361750004347
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 2.2 containers at least 2 20-foot bays away from bay 23.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":23}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "87e52f611b7d881bc16091c06ef16ced57f2786a6f2ad8fbdc9adb505cea996b",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.728363749978598
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 2.2 containers at least 2 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "2.2",
+          "min_bays": 2,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":2,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "9e3bd3696d91a6916efbb4e9956e1c5ffd8ab1be941db5205f1ef96503e3abd4",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.296918541018385
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from bay 21.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":21}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "a3da87689947468b5398c0a186362b4a0b3e2411f5b87e8383452e14c1eb2556",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.274048459017649
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from bay 23.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":23}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "ee43e651168816a3f87e79923bf1b76147abeadea5961094100fd743ccaf56f4",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.100380958989263
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "2.2",
+          "min_bays": 3,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "22a76f39ed0601a6624b57da11b0af13811d0deebfb3f6f8a449701ad3206f54",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.527410915994551
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 1 20-foot bays away from bay 09.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 9
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 9
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":9}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "8149084f9cd265285afba33d155d40414231b7f5a89b34094c2eb7d156369bab",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.821584124991205
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 1 20-foot bays away from bay 11.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 11
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 11
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":11}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "5282e8990411b3d738cefa2e751d4d332290d1d70423d9b20ac021775f894049",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.002069917041808
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 1 20-foot bays away from bay 23.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":23}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "859063703ebe4523d81860039a4c5abceb42b8c585d68b5e0a3b775ab9637984",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.571232250018511
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 1 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "3",
+          "min_bays": 1,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":1,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "ac32d560a7eb48e93df9443b612248ba4f7c8567b14420ed872a5e2b108d1cd8",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.837657249998301
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from bay 09.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 9
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 9
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":9}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "67e746d4c7e2de39360aba11ec83d4be28dbe78f8a9600bd4b17bb94c89832ac",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.49033529200824
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from bay 11.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 11
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 11
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":11}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "72280f42da30ef10892cb687c8ca0a5d8906810d7249626c51bfef35aad554d5",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.504566666029859
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from bay 21.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":21}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "35e8616a96d2864a4ae992383056a3eb9ec510d1badda2f02402250e08efe046",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.184183500008658
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from bay 23.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":23}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "59e676d7fb9f3a9739a74eeb88c4fa40c2b99220833edca260b6e0177f9dac1f",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.1799724999582395
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "3",
+          "min_bays": 2,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":2,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "5c3cbcdf3afe3e5805cca459c77b28cf52b6cd42ecd763126e1d4b9a91c6b8b8",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.470416833006311
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from bay 09.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 9
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 9
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":9}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "c0a87842fae6baadf2af30025ed8fdad57fe0bc196d51d9cf73b47d49956c018",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.0589993330067955
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from bay 11.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 11
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 11
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":11}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "8c62c8db7b6121b44527dfd2bc9d7c6ea28ed298cc547219dbd90226b0f57baf",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.000427125021815
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from bay 21.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":21}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "3bb545c3c5f9b27783c8c699e86731e45ebf16b6737bc1563cdc48764edd5b7a",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.213564582983963
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from bay 23.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":23}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "993ad8e0c7f3e47826b29dc4c12dc1ebbc894e72015a4af403d8540a010550da",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.362846833013464
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 3 containers at least 3 20-foot bays away from the accommodation.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "ea72b0f32d6c4ffc0fef082155639bb847bcc15ac7042b7b31a362f80d6a20ee",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.5163966250256635
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 8 containers at least 1 20-foot bays away from bay 21.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":1,\"away_from\":{\"kind\":\"bay\",\"bay\":21}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "aa3f020b2c1b4249e398780ee9b3647ed7c0c96aee923af979bd30551ee00d4f",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.252950458962005
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 8 containers at least 2 20-foot bays away from bay 21.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":21}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "fb694df708f074d35c23d297749959b31b8aa6854b30531e820f9cee96e9ffc4",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.393003457982559
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 8 containers at least 2 20-foot bays away from bay 23.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":2,\"away_from\":{\"kind\":\"bay\",\"bay\":23}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "c856ccb5ccaf5a90470522e7a5b0715e68c331b6fbe03e05bc23739334dc81ad",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.9755277080112137
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 8 containers at least 2 20-foot bays away from the accommodation.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":2,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "3d2595b9e387a0afc8f9eb4736c14381bd175e47215c741e1c453a99208fdefa",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.095082832966
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 8 containers at least 3 20-foot bays away from bay 21.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 21
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":21}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "50695a1ad97dc29402442407d43466d635222afed28d6bd8492dbb09cfa342ad",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.921801166026853
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 8 containers at least 3 20-foot bays away from bay 23.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "bay",
+            "bay": 23
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":3,\"away_from\":{\"kind\":\"bay\",\"bay\":23}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "41a64c5ac268f3090878a120aa35f8506e83d4a5f9bc18c969002db192a39944",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.9072067079832777
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep all IMDG class 8 containers at least 3 20-foot bays away from the accommodation.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"8\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "819a4ba97adbc57cc747e048714fbe9c6fe54256c63cadfe5b5f26c3f3a05b7c",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.7831253330223262
+      }
+    },
+    {
+      "group": "lattice-hero",
+      "case": "hero",
+      "sentence": "Keep one discharge port per physical hatch cover, across hold and deck.",
+      "expected": {
+        "constraint": {
+          "type": "one_port_per_hatch"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "one_port_per_hatch"
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "a9e45babc31b63f802b92de1babfe63260a02c69cc265a441c63bda2e17afac1",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.812969582970254
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Do not load any containers in bay 01.",
+      "expected": {
+        "constraint": {
+          "bay": 1,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "9bd5ebdb83084da286119288e80f1dcde854911e41c076bb2e0e6a6e8f497346",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.7759891669848002
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Do not load any containers in bay 03.",
+      "expected": {
+        "constraint": {
+          "bay": 3,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "5e562b0a2facd84b1929cd7cca4d3cb22f2d3005094bfcc8e4f7de645aaa85c7",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.8059095829958096
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Do not load any containers in bay 09.",
+      "expected": {
+        "constraint": {
+          "bay": 9,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 9
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":9}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "7146b5e6b22d268b1257de80c4e8b0ad16d0575309ba616b855bcb7b7e20097e",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.8261758749722503
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Do not load any containers in bay 11.",
+      "expected": {
+        "constraint": {
+          "bay": 11,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 11
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":11}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "4d95c8437bfa42faa475c9557b81704c224f034f541be4b3d95328b6d09bcdef",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.73927779099904
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Do not load any containers in bay 21.",
+      "expected": null,
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "unsupported",
+          "reason": "The instruction is outside the supported vessel or vocabulary."
+        }
+      },
+      "correct": null,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "938619ee6bbdfeb9f51f91f2b9e35b9dc4a5c2805781763848329a0b83a6e640",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.344991999969352
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Do not load any containers in bay 23.",
+      "expected": null,
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "unsupported",
+          "reason": "The instruction is outside the supported vessel or vocabulary."
+        }
+      },
+      "correct": null,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "f9d12e481fb46c87583481493f32b95f9a3f5cc804eec6569eccb2408584b660",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.459064416005276
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 01, use at most 1 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 1,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 1,
+          "zone": "hold",
+          "max_tiers": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":1,\"zone\":\"hold\",\"max_tiers\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "98b6dceecbd80e6c57600b4af4bf49b45961a1f58b83ed277c65af4322698fa0",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.3934805410099216
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 01, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 1,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 1,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":1,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "c9f9236674d0fb7d676966214da2ad0a2c52bee26a43bf2a04470aa1c0849fe6",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.3342765829875134
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 03, use at most 1 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 3,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 3,
+          "zone": "hold",
+          "max_tiers": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":3,\"zone\":\"hold\",\"max_tiers\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "e6c23ce0b3ef1a9e5751c980b5dd28ae22cd32f7dba0e28f0bd3ff99e0b7f0e6",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.2270062920288183
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 03, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 3,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 3,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":3,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "34b07ab8829bba710c5004d191d6c66d4692ead9b9bacdfbbe0cf21af2639627",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.257012667017989
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 09, use at most 2 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 9,
+          "max_tiers": 2,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 9,
+          "zone": "hold",
+          "max_tiers": 2
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":9,\"zone\":\"hold\",\"max_tiers\":2}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "56de7029f61e28709f864da9187aff7f55c8bd98ee87154eadbf6bb88962fc47",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.7860647499910556
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 09, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 9,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 9,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":9,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "84a3f9328b0816e727a70aa13a3412e3c88cb2e0a3d77b348640c2355ab2f414",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.616839916969184
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 11, use at most 2 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": 11,
+          "max_tiers": 2,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 11,
+          "zone": "hold",
+          "max_tiers": 2
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":11,\"zone\":\"hold\",\"max_tiers\":2}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "018dddf442046d3e0c577c330c2a903f8288e577deb8bd004f9afbe69fc1f910",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.4242437089560553
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 11, use at most 3 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": 11,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 11,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":11,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "d184f1b69afb722b222e5cc562ef6eecffa7e0d6321ebbcf3d41426fbcfdca73",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.360106874955818
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 21, use at most 1 occupied tiers per hold stack.",
+      "expected": null,
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "unsupported",
+          "reason": "The instruction is outside the supported vessel or vocabulary."
+        }
+      },
+      "correct": null,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "82aa564c38cc0244639084e381fc3b8c72c4938329129bc00484faf0455dba72",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.4951897080172785
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 21, use at most 3 occupied tiers per deck stack.",
+      "expected": null,
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "unsupported",
+          "reason": "The instruction is outside the supported vessel or vocabulary."
+        }
+      },
+      "correct": null,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "90f00c02cbe7cae9ae9dcb308a4225fd2ac1c5f2985c38a72bb6286837f0c249",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.302513041999191
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 23, use at most 1 occupied tiers per hold stack.",
+      "expected": null,
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "unsupported",
+          "reason": "The instruction is outside the supported vessel or vocabulary."
+        }
+      },
+      "correct": null,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "ea26999a7c2d012e727cbac6157105c359fe5b6460d06a13eef44f06c8543c75",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.254655624972656
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In bay 23, use at most 3 occupied tiers per deck stack.",
+      "expected": null,
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "unsupported",
+          "reason": "The instruction is outside the supported vessel or vocabulary."
+        }
+      },
+      "correct": null,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "cbe34696c9b69f244eff6a7b7271c1d5a4bde392aa9de56dc206b180a3c50f96",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.318056707968935
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In every bay, use at most 0 occupied tiers per deck stack.",
+      "expected": {
+        "constraint": {
+          "bay": null,
+          "max_tiers": 0,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": null,
+          "zone": "deck",
+          "max_tiers": 0
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"deck\",\"max_tiers\":0}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "66c4d8f5546c70a66943d16fab9f7a6c6f5ce2599bacdfcf8dd45048920d64ea",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.371092457964551
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In every bay, use at most 0 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": null,
+          "max_tiers": 0,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": null,
+          "zone": "hold",
+          "max_tiers": 0
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"hold\",\"max_tiers\":0}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "f0f6d1ad6094ceb693dd3edf919ab2937074b4d3e95fb56bf575845c83fc7b8c",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.200260665966198
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "In every bay, use at most 2 occupied tiers per hold stack.",
+      "expected": {
+        "constraint": {
+          "bay": null,
+          "max_tiers": 2,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": null,
+          "zone": "hold",
+          "max_tiers": 2
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"hold\",\"max_tiers\":2}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "66fed3f215502a25e5c0621b060b3565a166813a7420c07da4e08f8f04dfdadb",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.1119126249686815
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Keep all IMDG class 2.2 containers at least 1 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "2.2",
+          "min_bays": 1,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":1,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "5f1e5e5a0dc67858cc4c606064c3f6e3f9f1ba5ccd058677e6badbe96d49a9ca",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.303943832986988
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Keep all IMDG class 2.2 containers at least 2 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "2.2",
+          "min_bays": 2,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":2,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "031e38047217cd471bab39f49f6c9328080e9f891b6e9c96698bb9dc9e476c08",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.459747083019465
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Keep all IMDG class 2.2 containers at least 3 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "2.2",
+          "min_bays": 3,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "2.2",
+          "min_bays": 3,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"2.2\",\"min_bays\":3,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "c414c2a769ad341b4593bfd8e4118220673d2f08f9e90413ab42b178bd12a909",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.35285887500504
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Keep all IMDG class 3 containers at least 1 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "3",
+          "min_bays": 1,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":1,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "1a82d3f242b03befce9eda9beb9960e17811ba9d0e1ea2f509fef0c7f15a7a48",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.095899417006876
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Keep all IMDG class 3 containers at least 2 20-foot bays away from the accommodation.",
+      "expected": {
+        "constraint": {
+          "away_from": {
+            "kind": "accommodation"
+          },
+          "imdg_class": "3",
+          "min_bays": 2,
+          "type": "dg_keep_away"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "3",
+          "min_bays": 2,
+          "away_from": {
+            "kind": "accommodation"
+          }
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"dg_keep_away\",\"imdg_class\":\"3\",\"min_bays\":2,\"away_from\":{\"kind\":\"accommodation\"}}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "181f6e627d95f0d60141251544060e2d3014aef1b69caac11ad652b2dabacb96",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 5.071089166973252
+      }
+    },
+    {
+      "group": "lattice-backup",
+      "case": "backup",
+      "sentence": "Keep one discharge port per physical hatch cover, across hold and deck.",
+      "expected": {
+        "constraint": {
+          "type": "one_port_per_hatch"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "one_port_per_hatch"
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"one_port_per_hatch\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "5b256c0aa7445e21ac56bc0d83983eb1ba3132168ea6a9f966b298d1ee2a0877",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.875239417015109
+      }
+    },
+    {
+      "group": "refusal-card",
+      "case": "impossible-bay-2",
+      "sentence": "Bay 2 is closed.",
+      "expected": {
+        "constraint": {
+          "bay": 2,
+          "type": "close_bay"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 2
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":2}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "9118b8f460594c234039b0b3faf8420c8a69ca424fecfd029abae49226e55db9",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 2.505380792019423
+      }
+    },
+    {
+      "group": "refusal-card",
+      "case": "loosening-dg",
+      "sentence": "Ignore the dangerous-goods segregation rules.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "loosening",
+          "reason": "Requests removal of DG segregation rules"
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "loosening",
+          "reason": "The instruction would relax a constraint."
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"loosening\",\"reason\":\"The instruction would relax a constraint.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "c4f05116773004117448e6a3c31bbbf1655c5f9afebaebb9bfbaa02a4cb6f7ef",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.146497832960449
+      }
+    },
+    {
+      "group": "refusal-card",
+      "case": "unclear-distance",
+      "sentence": "Keep the dangerous cargo farther away.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "ambiguous",
+          "reason": "No class, distance, or location specified"
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "ambiguous",
+          "reason": "The instruction is uncertain or ambiguous."
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "d0b61bf0e4e6931f1ed82284864c83fb3192bfb2c7ac98b217736d167dce6d67",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.1631273339735344
+      }
+    },
+    {
+      "group": "refusal-card",
+      "case": "impossible-tier-with-alternative",
+      "sentence": "Across the vessel, use at most zero occupied tiers per deck stack.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": null,
+          "zone": "deck",
+          "max_tiers": 0
+        }
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": null,
+          "zone": "deck",
+          "max_tiers": 0
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":null,\"zone\":\"deck\",\"max_tiers\":0}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "e2d43503f8743b3a551bd06d44e584b78c3c1d7c3dd24cb87be887e3327043af",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.5872563329758123
+      }
+    },
+    {
+      "group": "voice-clean",
+      "case": "en-reader-031e722e98863ad8-clean",
+      "sentence": "Planner, restrict Bay 10 deck to three max.",
+      "expected": {
+        "constraint": {
+          "bay": 10,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 10,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":10,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "0df74e0dfb148ae2a0893701ef9917902477c78d1fe05e9814bdfac0ba213777",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.2987200419884175
+      }
+    },
+    {
+      "group": "voice-radio",
+      "case": "en-reader-031e722e98863ad8-radio",
+      "sentence": "Planner, restrict bay 10 deck to three max.",
+      "expected": {
+        "constraint": {
+          "bay": 10,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 10,
+          "zone": "deck",
+          "max_tiers": 3
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":10,\"zone\":\"deck\",\"max_tiers\":3}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "2bae9b710977182455cea313cff667174f43885d381ec36478eafdfd26278d7a",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.2507313329842873
+      }
+    },
+    {
+      "group": "voice-clean",
+      "case": "en-reader-0449f2adc144ea36-clean",
+      "sentence": "Planner, restrict Bay 27 hold to one max.",
+      "expected": {
+        "constraint": {
+          "bay": 27,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 27,
+          "zone": "hold",
+          "max_tiers": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":27,\"zone\":\"hold\",\"max_tiers\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "30420e79c5ebb76ab81294d189252b6b3944fc52555c9af1509781da2c0b19f8",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.3217981660272926
+      }
+    },
+    {
+      "group": "voice-radio",
+      "case": "en-reader-0449f2adc144ea36-radio",
+      "sentence": "Flanner restrict bay 27 hold to one map",
+      "expected": {
+        "constraint": {
+          "bay": 27,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 27,
+          "zone": "hold",
+          "max_tiers": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":27,\"zone\":\"hold\",\"max_tiers\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "bcfe02219e1904a0b805a6990b77ac063a582a1bbd508f0223237f56543c924c",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.3474452499649487
+      }
+    },
+    {
+      "group": "voice-clean",
+      "case": "th-reader-031e722e98863ad8-clean",
+      "sentence": "บอลดาดฟ้าของเบสิบให้ซ้อนตู้สินค้าได้ไม่เกินสามสามชั้น",
+      "expected": {
+        "constraint": {
+          "bay": 10,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "unsupported",
+          "reason": "The instruction is outside the supported vessel or vocabulary."
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "b6e4238a80bcc420bfc5b6a37bb8362956d0b4661b46cd911dce6d1aa48f5e0a",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.1239802920026705
+      }
+    },
+    {
+      "group": "voice-clean",
+      "case": "th-reader-0449f2adc144ea36-clean",
+      "sentence": "ในระวังใต้ดาดฟ้าของเบย์ยี่สิบเจ็ดให้ซ่อนตู้สินค้าได้ไม่เกินหนึ่งชั้น",
+      "expected": {
+        "constraint": {
+          "bay": 27,
+          "max_tiers": 1,
+          "type": "max_tiers",
+          "zone": "hold"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 27,
+          "zone": "hold",
+          "max_tiers": 1
+        }
+      },
+      "correct": true,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"max_tiers\",\"bay\":27,\"zone\":\"hold\",\"max_tiers\":1}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "30296d8b302206f4203bb2f465c1eefc33701d41775bd3243438df6c35fc4212",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.2623315419768915
+      }
+    }
+  ],
+  "wrong": [
+    {
+      "group": "d211",
+      "case": "max_tiers-05",
+      "sentence": "No containers on deck in bay 2.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "max_tiers",
+          "bay": 2,
+          "zone": "deck",
+          "max_tiers": 0
+        }
+      },
+      "demo": false,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "close_bay",
+          "bay": 2
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"constraint\":{\"type\":\"close_bay\",\"bay\":2}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "cb166c2430294ec67b3aab225caffafd7e147b7544dad6895f7cce90e2a9f7d7",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.3941014999873005
+      }
+    },
+    {
+      "group": "d211",
+      "case": "dg_keep_away-01",
+      "sentence": "Class 3 — sorry, class 8 — one bay from bay 1 at minimum.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 1
+          }
+        }
+      },
+      "demo": false,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "ambiguous",
+          "reason": "The instruction is uncertain or ambiguous."
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "880ac14f15522af9456b326953381caef98109f02f554de68839718e4365c1bd",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.171123790962156
+      }
+    },
+    {
+      "group": "d211",
+      "case": "dg_keep_away-02",
+      "sentence": "Class 3 — sorry, class 8 — one bay from bay 1 at minimum.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 1
+          }
+        }
+      },
+      "demo": false,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "ambiguous",
+          "reason": "The instruction is uncertain or ambiguous."
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "4a31ce4406a5779fdd6a880740fcce41f2ba7a0a04a3306257045813fda806a2",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.083462208043784
+      }
+    },
+    {
+      "group": "d211",
+      "case": "dg_keep_away-04",
+      "sentence": "Class 3 — sorry, class 8 — one bay from bay 1 at minimum.",
+      "expected": {
+        "schema_version": "stowlm.reader/2",
+        "constraint": {
+          "type": "dg_keep_away",
+          "imdg_class": "8",
+          "min_bays": 1,
+          "away_from": {
+            "kind": "bay",
+            "bay": 1
+          }
+        }
+      },
+      "demo": false,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "ambiguous",
+          "reason": "The instruction is uncertain or ambiguous."
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"ambiguous\",\"reason\":\"The instruction is uncertain or ambiguous.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "57f1d6d31b99153c61a3e6fd60831b11ce84d387805d75b8935d73794e0531f0",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 4.1703837079694495
+      }
+    },
+    {
+      "group": "voice-clean",
+      "case": "th-reader-031e722e98863ad8-clean",
+      "sentence": "บอลดาดฟ้าของเบสิบให้ซ้อนตู้สินค้าได้ไม่เกินสามสามชั้น",
+      "expected": {
+        "constraint": {
+          "bay": 10,
+          "max_tiers": 3,
+          "type": "max_tiers",
+          "zone": "deck"
+        },
+        "schema_version": "stowlm.reader/2"
+      },
+      "demo": true,
+      "status": "read",
+      "reading": {
+        "schema_version": "stowlm.reader/2",
+        "refusal": {
+          "refused": true,
+          "code": "unsupported",
+          "reason": "The instruction is outside the supported vessel or vocabulary."
+        }
+      },
+      "correct": false,
+      "label": "StowLM Reader · fine-tuned Muse Glimmer 30B · on this laptop",
+      "evidence": {
+        "parser": "GlimmerParser",
+        "model": "muse-glimmer-30b",
+        "adapter_sha256": "eff712e18a649804fcbd5b19db27baa709fa60701a2970d1fa58593f731c6f57",
+        "raw": "{\"schema_version\":\"stowlm.reader/2\",\"refusal\":{\"refused\":true,\"code\":\"unsupported\",\"reason\":\"The instruction is outside the supported vessel or vocabulary.\"}}",
+        "decoder_sha256": "db55700d4de5562a0a68aa7619c00c4f8ac6b1ab7c87c90544c71d4e501bdb03",
+        "domain_words_sha256": "1cf05a809e00bf540fdc79f77930e1752e4d2c39e1c1fe57cac303999442df0c",
+        "decoding_policy": "reader-v3-schema-mask/2-d224",
+        "masked": true,
+        "prompt_sha256": "b6e4238a80bcc420bfc5b6a37bb8362956d0b4661b46cd911dce6d1aa48f5e0a",
+        "source_sha256": "e7749ea725036f666e69c3c4ffbf729c50a8191c24582fc7f8edbd0a7b2631b7",
+        "wall_s": 3.1239802920026705
+      }
+    }
+  ]
+}
