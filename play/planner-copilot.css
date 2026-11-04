@@ -1,0 +1,25 @@
+.pl-copilot-root { display: grid; gap: 16px; min-width: 0; color: var(--pl-text, #20252d); font: 13px/1.45 var(--pl-font, -apple-system, BlinkMacSystemFont, system-ui, sans-serif); }
+.pl-copilot-prompt, .pl-copilot-card { display: grid; align-content: start; gap: 8px; min-width: 0; padding: 16px; border: 1px solid var(--pl-line, #e3e6eb); border-radius: 8px; background: var(--pl-bg, #fff); }
+.pl-copilot-question-label { display: grid; gap: 8px; color: var(--pl-muted, #606b78); font-size: 12px; }
+.pl-copilot-question { box-sizing: border-box; width: 100%; resize: none; min-height: 80px; padding: 8px; border: 1px solid var(--pl-line, #e3e6eb); border-radius: 4px; color: var(--pl-text, #20252d); background: var(--pl-surface, #f7f8fa); font: inherit; }
+.pl-copilot-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.pl-copilot-button { min-height: 32px; padding: 6px 12px; border: 1px solid var(--pl-line, #e3e6eb); border-radius: 4px; background: var(--pl-bg, #fff); color: var(--pl-text, #20252d); font: inherit; cursor: pointer; }
+.pl-copilot-primary { background: var(--pl-accent, #1665d8); color: var(--pl-white, #fff); border-color: var(--pl-accent, #1665d8); }
+.pl-copilot-button:disabled { opacity: .55; cursor: default; }
+.pl-copilot-button:focus-visible, .pl-copilot-question:focus-visible, .pl-copilot-details > summary:focus-visible { outline: 2px solid var(--pl-accent, #1665d8); outline-offset: 3px; }
+.pl-copilot-result, .pl-copilot-recorded { display: grid; gap: 16px; min-width: 0; }
+.pl-copilot-card-title { margin: 0; font-size: 14px; line-height: 1.45; font-weight: 600; }
+.pl-copilot-copy { margin: 0; overflow-wrap: anywhere; }
+.pl-copilot-meta { margin: 0; color: var(--pl-muted, #606b78); font-size: 11px; overflow-wrap: anywhere; }
+.pl-copilot-actor { margin: 0; color: var(--pl-muted, #606b78); font-size: 12px; font-weight: 600; }
+.pl-copilot-badges, .pl-copilot-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.pl-copilot-badge { display: inline-block; justify-self: start; max-width: 100%; padding: 3px 8px; border: 1px solid var(--pl-line, #e3e6eb); border-radius: 4px; color: var(--pl-muted, #606b78); background: var(--pl-surface, #f7f8fa); font-size: 11px; line-height: 1.45; overflow-wrap: anywhere; }
+.pl-copilot-pass { color: var(--pl-pass, #226b46); }
+.pl-copilot-equation { margin: 0; padding-left: 8px; border-left: 2px solid var(--pl-warn, #ad6800); font-weight: 600; font-variant-numeric: tabular-nums; }
+.pl-copilot-alternatives { display: grid; gap: 8px; }
+.pl-copilot-metric { margin: 0; font-variant-numeric: tabular-nums; }
+.pl-copilot-inspect { justify-self: start; }
+.pl-copilot-details { border-top: 1px solid var(--pl-line, #e3e6eb); padding-top: 8px; }
+.pl-copilot-details > summary { display: list-item; padding: 8px 0; cursor: pointer; color: var(--pl-muted, #606b78); }
+.pl-copilot-detail-content { display: grid; gap: 16px; padding-top: 8px; }
+.pl-copilot-detail-turn { display: grid; gap: 8px; padding-top: 16px; border-top: 1px solid var(--pl-line, #e3e6eb); }

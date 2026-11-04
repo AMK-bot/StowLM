@@ -1,27 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" width="1280" height="820" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 958" width="1280" height="958" role="img" aria-labelledby="t d">
   <title id="t">StowLM pipeline</title>
-  <desc id="d">Voyage documents go to Muse Spark and a planner's spoken words to Muse Voice Transcribe; StowLM Reader, a fine-tuned Muse Glimmer 30B on the laptop with a feasibility decode mask, reads the words into rules; the planner confirms the reading; Frontier Engine 0.13.0 plans; the full checker decides; a signed handover package comes out. All inside one hashed pipeline, manifest v4.</desc>
+  <desc id="d">Voyage documents go to Muse Spark and a planner's spoken words to Muse Voice Transcribe; StowLM Reader, a Muse Glimmer 30B model we fine-tuned locally with LoRA and decode through a feasibility mask on the laptop, reads the words into rules; the planner confirms the reading; Frontier Engine 0.13.0, the reference engine in the engine slot, plans; the full checker decides; a signed handover package comes out. Each software component says how it was developed. All of it is packaged as one app, StowLM user software, for stowage planners and terminal teams.</desc>
   <style>
     svg { --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#64748b; --frame:#94a3b8;
           --cloud-bg:#fff7ea; --cloud:#b45309; --dev-bg:#ecfdf5; --dev:#047857;
           --sw-bg:#f1f5f9; --sw:#334155; --fig-bg:#ffffff; --tab:#e2e8f0; }
-    @media (prefers-color-scheme: dark) {
-      svg { --bg:#050a16; --ink:#f4f6fb; --muted:#c9d2e3; --line:#8ea0bf; --frame:#41506b;
-            --cloud-bg:#2a1d08; --cloud:#ffb547; --dev-bg:#062a20; --dev:#4be0a0;
-            --sw-bg:#0f1a30; --sw:#a9b8d3; --fig-bg:#081022; --tab:#13203a; }
-    }
     text { font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
     .h { font-size: 20px; font-weight: 700; }
     .hb { font-size: 24px; font-weight: 800; }
     .k { font-size: 13px; font-weight: 700; letter-spacing: .06em; }
+    .kb { font-size: 15px; font-weight: 800; letter-spacing: .06em; }
     .s { font-size: 15px; fill: var(--muted); }
+    .s2 { font-size: 14px; fill: var(--muted); }
+    .d { font-size: 14px; font-weight: 700; fill: var(--ink); }
     .f { font-size: 15px; }
     .fb { font-size: 15px; font-weight: 700; }
     .tab { font-size: 16px; font-weight: 700; }
     .note { font-size: 14px; fill: var(--muted); }
     .bg { fill: var(--bg); }
-    .frame { fill: none; stroke: var(--frame); stroke-width: 2; stroke-dasharray: 8 6; }
-    .tabbox { fill: var(--tab); stroke: var(--frame); stroke-width: 1.5; }
+    .win { fill: var(--bg); stroke: var(--sw); stroke-width: 2.5; }
+    .winline { fill: none; stroke: var(--sw); stroke-width: 2.5; }
+    .bar { fill: var(--tab); }
+    .dot { fill: var(--frame); }
+    .app { font-size: 19px; font-weight: 800; }
     .in { fill: var(--sw-bg); stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 4 4; }
     .cloud { fill: var(--cloud-bg); stroke: var(--cloud); stroke-width: 2; }
     .dev { fill: var(--dev-bg); stroke: var(--dev); stroke-width: 3; }
@@ -29,7 +30,6 @@
     .fig { fill: var(--fig-bg); stroke: var(--dev); stroke-width: 1.2; }
     .kc { fill: var(--cloud); } .kd { fill: var(--dev); } .ks { fill: var(--sw); }
     .arrow { fill: none; stroke: var(--line); stroke-width: 2.4; marker-end: url(#a); }
-    .bridge { fill: var(--bg); }
     .head { fill: var(--line); }
   </style>
   <defs>
@@ -38,15 +38,20 @@
     </marker>
   </defs>
 
-  <rect class="bg" x="0" y="0" width="1280" height="820"/>
+  <rect class="bg" x="0" y="0" width="1280" height="958"/>
   <text class="hb" x="40" y="40">StowLM pipeline</text>
-  <text class="note" x="1240" y="40" text-anchor="end">amber: Meta Model API, cloud · green: on this laptop · grey: software</text>
 
-  <!-- one hashed pipeline -->
-  <rect class="frame" x="24" y="64" width="1232" height="688" rx="16"/>
-  <rect class="tabbox" x="44" y="52" width="420" height="28" rx="8"/>
-  <text class="tab" x="58" y="72">One hashed pipeline (manifest v4, acf2f275…)</text>
+  <!-- the app window: everything below is packaged as one piece of software -->
+  <rect class="win" x="24" y="60" width="1232" height="874" rx="14"/>
+  <path class="bar" d="M25.25,104 L25.25,74 Q25.25,61.25 38,61.25 L1242,61.25 Q1254.75,61.25 1254.75,74 L1254.75,104 Z"/>
+  <path class="winline" d="M24,104 L1256,104"/>
+  <circle class="dot" cx="50" cy="82" r="6"/>
+  <circle class="dot" cx="70" cy="82" r="6"/>
+  <circle class="dot" cx="90" cy="82" r="6"/>
+  <text class="app" x="114" y="89">StowLM user software</text>
+  <text class="note" x="1236" y="88" text-anchor="end">one app for stowage planners and terminal teams</text>
 
+  <g transform="translate(0,40)">
   <!-- inputs -->
   <rect class="in" x="48" y="104" width="210" height="96" rx="10"/>
   <text class="k ks" x="62" y="128">INPUT</text>
@@ -54,11 +59,11 @@
   <text class="s" x="62" y="174">typed, or called over</text>
   <text class="s" x="62" y="192">a bad radio line</text>
 
-  <rect class="in" x="48" y="244" width="210" height="96" rx="10"/>
-  <text class="k ks" x="62" y="268">INPUT</text>
-  <text class="h" x="62" y="292">Voyage documents</text>
-  <text class="s" x="62" y="314">tally-sheet photo, email,</text>
-  <text class="s" x="62" y="332">spreadsheet (synthetic)</text>
+  <rect class="in" x="48" y="250" width="210" height="110" rx="10"/>
+  <text class="k ks" x="62" y="274">INPUT</text>
+  <text class="h" x="62" y="298">Voyage documents</text>
+  <text class="s" x="62" y="320">booking papers, photos,</text>
+  <text class="s" x="62" y="338">emails (synthetic)</text>
 
   <!-- cloud models -->
   <rect class="cloud" x="300" y="104" width="270" height="96" rx="10"/>
@@ -67,78 +72,104 @@
   <text class="s" x="314" y="174">speech to an editable transcript;</text>
   <text class="s" x="314" y="192">typed words skip this step</text>
 
-  <rect class="cloud" x="300" y="224" width="270" height="136" rx="10"/>
-  <text class="k kc" x="314" y="248">META MODEL API · CLOUD</text>
-  <text class="h" x="314" y="272">Muse Spark</text>
-  <text class="s" x="314" y="294">reads paper and pictures, finds</text>
-  <text class="s" x="314" y="312">where documents disagree;</text>
-  <text class="s" x="314" y="330">copilot: picks checked tools,</text>
-  <text class="s" x="314" y="348">software does the arithmetic</text>
+  <rect class="cloud" x="300" y="228" width="270" height="172" rx="10"/>
+  <text class="k kc" x="314" y="252">META MODEL API · CLOUD</text>
+  <text class="h" x="314" y="276">Muse Spark</text>
+  <text class="s" x="314" y="298">reads the cargo papers, one call</text>
+  <text class="s" x="314" y="316">per booking; finds where</text>
+  <text class="s" x="314" y="334">documents disagree; copilot</text>
+  <text class="s" x="314" y="352">picks checked tools.</text>
+  <text class="s" x="314" y="376">Also wrote 1,228 of the</text>
+  <text class="s" x="314" y="394">reader's training sentences</text>
 
   <!-- reader -->
-  <rect class="dev" x="612" y="96" width="624" height="330" rx="12"/>
-  <text class="k kd" x="632" y="122">ON THIS LAPTOP · NO CLOUD CALL · FINE-TUNED BY US</text>
-  <text class="hb" x="632" y="152">StowLM Reader</text>
-  <text class="f" x="822" y="152">Muse Glimmer 30B + our LoRA adapter</text>
-  <text class="s" x="632" y="176">Reads the planner's words into rules (four kinds); built to refuse anything else.</text>
-  <text class="s" x="632" y="196">Feasibility decode mask: a logits processor allows only the output format, real bays</text>
-  <text class="s" x="632" y="214">and allowed classes. Legal can still be wrong, so the planner confirms.</text>
-  <rect class="fig" x="632" y="228" width="586" height="86" rx="8"/>
-  <text class="fb" x="646" y="252">118 of 128 on the sealed reader test (92.19 %)</text>
-  <text class="note" x="646" y="274">Untrained Glimmer under the same mask: 60 of 128 (46.88 %)</text>
-  <text class="note" x="646" y="296">Cleared the 90 % gate; missed two stricter ones (one loosening accepted)</text>
-  <rect class="fig" x="632" y="324" width="586" height="86" rx="8"/>
-  <text class="fb" x="646" y="348">Mask overrode the first choice: 182 of 200 before fine-tuning, 2 after</text>
-  <text class="note" x="646" y="370">Validation sentences; almost all were output format, none an illegal bay or tier</text>
-  <text class="note" x="646" y="392">Both of the 2 were sentences it should have refused</text>
+  <rect class="dev" x="612" y="96" width="624" height="448" rx="12"/>
+  <text class="kb kd" x="632" y="124">LOCALLY FINE-TUNED GLIMMER 30B MODEL</text>
+  <text class="hb" x="632" y="156">StowLM Reader</text>
+  <text class="f" x="822" y="156">Muse Glimmer 30B + our LoRA adapter</text>
+  <text class="s" x="632" y="182"><tspan class="d">Does: </tspan>reads the planner's words into strict rules (four kinds); refuses anything</text>
+  <text class="s" x="632" y="202">else. Runs on this laptop with no cloud call.</text>
+  <text class="s" x="632" y="228"><tspan class="d">Trained: </tspan>here, on an M5 Max with MLX: LoRA (rank 8, last 16 blocks) on the 4-bit</text>
+  <text class="s" x="632" y="248">base, in three stages: grammar sentences and 1,228 Muse Spark paraphrases, then</text>
+  <text class="s" x="632" y="268">error and safety examples, then 4,121 domain rows; 5 checkpoints averaged (SWA).</text>
+  <text class="s" x="632" y="294"><tspan class="d">Decodes: </tspan>through a feasibility mask, a logits processor that allows only the</text>
+  <text class="s" x="632" y="314">output schema, real bays and allowed classes. Legal can still be wrong, so the</text>
+  <text class="s" x="632" y="334">planner confirms every reading.</text>
+  <rect class="fig" x="632" y="348" width="586" height="86" rx="8"/>
+  <text class="fb" x="646" y="372">118 of 128 on the sealed reader test (92.19 %)</text>
+  <text class="note" x="646" y="394">Untrained Glimmer under the same mask: 60 of 128 (46.88 %)</text>
+  <text class="note" x="646" y="416">Cleared the 90 % gate; missed two stricter ones (one loosening accepted)</text>
+  <rect class="fig" x="632" y="444" width="586" height="86" rx="8"/>
+  <text class="fb" x="646" y="468">Mask overrode the first choice: 182 of 200 before fine-tuning, 2 after</text>
+  <text class="note" x="646" y="490">Validation sentences; almost all were output format, none an illegal bay or tier</text>
+  <text class="note" x="646" y="512">Both of the 2 were sentences it should have refused</text>
 
   <!-- software row -->
-  <rect class="sw" x="48" y="490" width="270" height="150" rx="10"/>
-  <text class="k ks" x="62" y="514">PERSON</text>
-  <text class="h" x="62" y="540">Planner confirms</text>
-  <text class="h" x="62" y="564">the reading</text>
-  <text class="s" x="62" y="590">sees the rule in plain words;</text>
-  <text class="s" x="62" y="608">nothing binds until confirmed</text>
+  <rect class="sw" x="48" y="590" width="270" height="280" rx="10"/>
+  <text class="k ks" x="62" y="614">PERSON</text>
+  <text class="h" x="62" y="640">Planner confirms</text>
+  <text class="h" x="62" y="664">the reading</text>
+  <text class="s2" x="62" y="690">sees each rule in plain words;</text>
+  <text class="s2" x="62" y="708">nothing binds until confirmed.</text>
+  <text class="s2" x="62" y="732">Intake rows Spark isn't sure of</text>
+  <text class="s2" x="62" y="750">stop for the planner too.</text>
 
-  <rect class="sw" x="356" y="490" width="270" height="150" rx="10"/>
-  <text class="k ks" x="370" y="514">SOFTWARE</text>
-  <text class="h" x="370" y="540">Frontier Engine 0.13.0</text>
-  <text class="s" x="370" y="564">search software plans the</text>
-  <text class="s" x="370" y="582">half-ship section from the load</text>
-  <text class="s" x="370" y="600">list and the confirmed rules</text>
+  <rect class="sw" x="356" y="590" width="270" height="280" rx="10"/>
+  <text class="k ks" x="370" y="614">SOFTWARE · THE ENGINE SLOT</text>
+  <text class="h" x="370" y="640">Frontier Engine 0.13.0</text>
+  <text class="s2" x="370" y="666">Plans the section from the load</text>
+  <text class="s2" x="370" y="684">list and the confirmed rules:</text>
+  <text class="s2" x="370" y="702">search, an assignment LP and a</text>
+  <text class="s2" x="370" y="720">rule-tier ladder.</text>
+  <text class="s2" x="370" y="744"><tspan class="d">Developed</tspan> in a coding-agent</text>
+  <text class="s2" x="370" y="762">improvement loop: each cycle,</text>
+  <text class="s2" x="370" y="780">agents tried changes; reviews and</text>
+  <text class="s2" x="370" y="798">a fixed benchmark kept only</text>
+  <text class="s2" x="370" y="816">measured gains (0.9 → 0.13.0).</text>
+  <text class="s2" x="370" y="840">A firm's own engine can take</text>
+  <text class="s2" x="370" y="858">this slot (design; none ported yet).</text>
 
-  <rect class="sw" x="664" y="490" width="270" height="150" rx="10"/>
-  <text class="k ks" x="678" y="514">SOFTWARE · DECIDES</text>
-  <text class="h" x="678" y="540">Full checker</text>
-  <text class="s" x="678" y="564">54 active rules, in tiers;</text>
-  <text class="s" x="678" y="582">a pass is a full checker pass;</text>
-  <text class="s" x="678" y="600">a relaxed plan names every</text>
-  <text class="s" x="678" y="618">rule it breaks</text>
+  <rect class="sw" x="664" y="590" width="270" height="280" rx="10"/>
+  <text class="k ks" x="678" y="614">SOFTWARE · DECIDES</text>
+  <text class="h" x="678" y="640">Full checker</text>
+  <text class="s2" x="678" y="666">54 active rules in tiers T0–T5:</text>
+  <text class="s2" x="678" y="684">IMDG segregation, stability on</text>
+  <text class="s2" x="678" y="702">the public KCS hull, securing</text>
+  <text class="s2" x="678" y="720">(approximation), expert rules. A</text>
+  <text class="s2" x="678" y="738">relaxed plan names each break.</text>
+  <text class="s2" x="678" y="762"><tspan class="d">Developed</tspan> by coding agents from</text>
+  <text class="s2" x="678" y="780">public regulations and a field</text>
+  <text class="s2" x="678" y="798">expert's rules, with independent</text>
+  <text class="s2" x="678" y="816">code, physics and logic reviews;</text>
+  <text class="s2" x="678" y="834">hydrostatics checked against KCS.</text>
 
-  <rect class="sw" x="972" y="490" width="264" height="150" rx="10"/>
-  <text class="k ks" x="986" y="514">OUTPUT</text>
-  <text class="h" x="986" y="540">Signed handover package</text>
-  <text class="s" x="986" y="564">bay plans, crane sequence,</text>
-  <text class="s" x="986" y="582">note to the master; a receipt</text>
-  <text class="s" x="986" y="600">ties each step to its model,</text>
-  <text class="s" x="986" y="618">hash and verdict</text>
+  <rect class="sw" x="972" y="590" width="264" height="280" rx="10"/>
+  <text class="k ks" x="986" y="614">OUTPUT</text>
+  <text class="h" x="986" y="640">Signed handover package</text>
+  <text class="s2" x="986" y="666">bay plans, crane sequence and a</text>
+  <text class="s2" x="986" y="684">note to the master; an Ed25519-</text>
+  <text class="s2" x="986" y="702">signed receipt ties each step to</text>
+  <text class="s2" x="986" y="720">its model, hash and verdict;</text>
+  <text class="s2" x="986" y="738">verify it offline against our</text>
+  <text class="s2" x="986" y="756">published key.</text>
+  <text class="s2" x="986" y="780"><tspan class="d">Developed</tspan> by coding agents, with</text>
+  <text class="s2" x="986" y="798">independent code and logic</text>
+  <text class="s2" x="986" y="816">reviews.</text>
 
   <!-- arrows -->
   <path class="arrow" d="M258,152 L296,152"/>
-  <path class="arrow" d="M258,292 L296,292"/>
+  <path class="arrow" d="M258,305 L296,305"/>
   <path class="arrow" d="M570,152 L608,152"/>
   <!-- spark load list to the engine -->
-  <path class="arrow" d="M491,360 L491,486"/>
-  <text class="note" x="478" y="404" text-anchor="end">load list; rows it isn't sure of</text>
-  <text class="note" x="478" y="422" text-anchor="end">stop for the planner</text>
+  <path class="arrow" d="M491,400 L491,586"/>
+  <text class="note" x="478" y="452" text-anchor="end">load list; rows it isn't sure of</text>
+  <text class="note" x="478" y="470" text-anchor="end">stop for the planner</text>
   <!-- reader to confirm; hops over the load-list line -->
-  <path class="arrow" d="M760,426 L760,452 L503,452 A12,12 0 0 0 479,452 L183,452 L183,486"/>
-  <text class="note" x="560" y="444">reading</text>
-  <path class="arrow" d="M318,565 L352,565"/>
-  <path class="arrow" d="M626,565 L660,565"/>
-  <path class="arrow" d="M934,565 L968,565"/>
+  <path class="arrow" d="M760,544 L760,566 L503,566 A12,12 0 0 0 479,566 L183,566 L183,586"/>
+  <text class="note" x="560" y="558">reading</text>
+  <path class="arrow" d="M318,700 L352,700"/>
+  <path class="arrow" d="M626,700 L660,700"/>
+  <path class="arrow" d="M934,700 L968,700"/>
 
-  <text class="f" x="48" y="690">Models propose. Software decides.</text>
-  <text class="note" x="48" y="716">Synthetic ships and cargo, simulated port · Designed for up to 195 boxes in a half-ship section of 500–800 TEU feeder ships, up to 70 % fill · Research pilot, not for use on a real ship</text>
-  <text class="note" x="40" y="790">The reader figures are from the sealed v3 reader test (locked before tuning, scored once). Mask counts are on 200 validation sentences, not the locked test.</text>
+  </g>
 </svg>
