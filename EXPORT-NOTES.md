@@ -232,7 +232,7 @@ Counts exclude this note and the JSON report.
 - `experiments/mvp/pipeline/sandbox/fixtures/securing190.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
 - `experiments/mvp/pipeline/sandbox/fixtures/securing190_basewarm.json`: 4 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
 - `experiments/mvp/pipeline/sealed/measurements/d284/archive-receipt.json`: 3089 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
-- `experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
+- `experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json`: 2 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
 - `experiments/mvp/pipeline/sealed/measurements/ext-1/POOL-VERIFICATION.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
 - `experiments/mvp/pipeline/sealed/measurements/ext-1/PRECOMMIT.json`: 63 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
 - `experiments/mvp/pipeline/sealed/measurements/ext-1/REPORT-AUDIT.json`: 3 payload(s) absent at their raw path; incomplete bundle; regenerate or omit before release.
@@ -352,8 +352,8 @@ Licence (user item 140), TTS rights (item 134), labels and fresh-copy execution 
 
 ## Release overlays
 
-- `.gitignore` (953 bytes).
-- `README.md` (31261 bytes).
+- `.gitignore` (1149 bytes).
+- `README.md` (32369 bytes).
 - `NOTICE` (4205 bytes).
 - `LICENSE` (11358 bytes).
 - `hf-reader-bundle/README.md` (1642 bytes).

@@ -321,6 +321,28 @@ Engine 0.13.0 in the slot. They do not establish operational readiness, class
 approval, performance against commercial planners or how another engine would do in
 the slot. Projected benefits must retain their assumptions and projection labels.
 
+## Project notes
+
+The `docs/` folder holds the working notes the project was built on:
+
+- [`docs/headline.md`](docs/headline.md): the claims contract. Every number and
+  label in this repo follows its wording rules.
+- [`docs/evaluation.md`](docs/evaluation.md): metrics, baselines and every results
+  table, each with its label.
+- [`docs/rule-tiers.md`](docs/rule-tiers.md): the five rule tiers, and how
+  enforcement peels back when no plan is found.
+- [`docs/domain.md`](docs/domain.md): a stowage, dangerous-goods and yard primer,
+  the field expert's rules and the constraint catalogue.
+- [`docs/data-sources.md`](docs/data-sources.md): the public sources, their
+  licences, and what is synthesised instead.
+- [`docs/frontier.md`](docs/frontier.md): related research and industry tools.
+- [`docs/impact.md`](docs/impact.md): the low, mid and high impact estimate, with
+  its inputs and caveats.
+
+The notes cite decision ids (D…) and plan task ids from the project's decision
+log and plan, which are not published. Some cite working files that are not in
+this repo; those are marked where they appear.
+
 ## Synthetic data and recorded outputs
 
 **Synthetic ships and cargo, simulated port.** Demo documents, pictures and voices
