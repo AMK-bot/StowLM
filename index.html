@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StowLM</title>
+<meta name="description" content="StowLM: the AI pipeline around a ship-planning engine, as an app. Messy voyage documents and a planner's own words go in, a checked plan and a handover package come out. Research pilot on synthetic ships and cargo.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#050a16">
+<!-- Social cards. The pages_url placeholder is the published GitHub Pages URL (no trailing slash); check.py --release fails until it is filled. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="StowLM: a checked loading plan from messy documents and a planner's own words">
+<meta property="og:description" content="The AI pipeline around a ship-planning engine, as an app: Meta models read the papers and the planner's words, a fine-tuned Muse Glimmer 30B turns them into rules on the laptop, the engine plans and a full checker decides. Research pilot on synthetic ships and cargo, simulated port.">
+<meta property="og:url" content="https://amk-bot.github.io/StowLM/">
+<meta property="og:image" content="https://amk-bot.github.io/StowLM/media/launch-poster.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="StowLM launch video poster frame. Synthetic ships and cargo, simulated port.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="StowLM">
+<meta name="twitter:description" content="The AI pipeline around a ship-planning engine, as an app: messy voyage documents and a planner's own words go in, a checked plan and a handover package come out. Research pilot on synthetic ships and cargo.">
+<meta name="twitter:image" content="https://amk-bot.github.io/StowLM/media/launch-poster.jpg">
+<meta name="twitter:image:alt" content="StowLM launch video poster frame. Synthetic ships and cargo, simulated port.">
+<link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--
+  Wording is bound by docs/headline.md (headline contract v6) and
+  experiments/mvp/video/stowlm-brag/references/honesty.md.
+  Layout adapted from brag's docs page (latent-spaces/brag, MIT):
+  experiments/mvp/video/brag-vendor/docs/. No scripts, no fonts, no network.
+  Held-out numbers: experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json
+    /cohorts/envelope24/arms/pipeline/passes_L0              = 24 (of /cohorts/envelope24/arms/pipeline/rows = 24)
+    /cohorts/envelope24/arms/pipeline/passes_L0_exact95      = [0.8575, 1.0]
+    /cohorts/envelope24/arms/twostep/passes_L0               = 0 (of 24)
+    /cohorts/envelope24/arms/twostep/passes_L0_exact95       = [0.0, 0.1425]
+    /instruction/rule_broken_maps                            = 18
+    /instruction/binding_obedient_passes                     = 13
+    /instruction/binding_obedient_exact95                    = [0.4652, 0.9031]
+    /instruction/already_obeyed                              = 6
+    /lift_claim/quotable                                     = false
+    /run/label                                               = held-out label quoted below
+  Reader figures: docs/headline.md, "Numbers we may quote" (D266).
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="hero">
+  <div class="topbar">
+    <span class="mark">StowLM</span>
+    <nav aria-label="Primary">
+      <a href="#models">Models</a>
+      <a href="#results">Results</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#slot">Engine slot</a>
+      <a href="#impact">Impact</a>
+      <a href="play/index.html">Play</a>
+      <a href="replay/index.html">Replay</a>
+      <a href="https://github.com/AMK-bot/StowLM">Repo</a>
+    </nav>
+  </div>
+
+  <div class="hero-main">
+    <div class="hero-body">
+      <p class="eyebrow">Research pilot · container stowage · Meta hackathon</p>
+      <h1 class="hero-headline">StowLM</h1>
+      <p class="hero-sub">The AI pipeline around a ship-planning engine, as an app. Messy voyage documents and a planner's own words go in, a checked plan and a handover package come out, with a fine-tuned Meta model on the laptop reading every instruction.</p>
+      <p class="hero-tag">Models propose. Software decides.</p>
+    </div>
+
+    <figure class="hero-video" aria-label="StowLM launch video">
+      <div class="video-frame">
+        <div class="video-fallback" aria-hidden="true">
+          <span class="fallback-mark">StowLM</span>
+          <span class="fallback-note">Launch video coming soon</span>
+        </div>
+        <video controls muted playsinline preload="none" poster="media/launch-poster.jpg">
+          <source src="media/launch.mp4" type="video/mp4">
+          <p class="video-text">The launch video isn't published yet. The <a href="replay/index.html">break-it replay</a> works now.</p>
+        </video>
+      </div>
+      <figcaption>Launch cut. Synthetic ships and cargo, simulated port. Music: Sascha Ende, ende.app (CC BY 4.0)</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="band pitch" aria-labelledby="pitch-title">
+    <div class="inner">
+      <h2 id="pitch-title">A forward pilot, built to scale</h2>
+      <p class="lede">A feeder ship's loading plan starts from paper: a tally sheet, an email that contradicts it, a limit called over a bad radio line. StowLM is the AI pipeline that turns that mess into a plan the full checker passes and a handover package for the ship's master, delivered as an app. Muse Spark reads the cargo papers, Muse Voice Transcribe hears the planner, a fine-tuned Muse Glimmer 30B reads the planner's own words into rules on the laptop, the planner confirms each reading, the engine plans the section, and a checker with 54 active rules decides. The engine sits in one slot: ours today, and by design a firm's own planning software. Today's pilot runs the loop on synthetic ships inside a stated design limit. It is a forward pilot, built to scale: more compute for the search, a larger model for reading.</p>
+    </div>
+  </section>
+
+  <section class="band pipeline" id="pipeline" aria-labelledby="pipeline-title">
+    <div class="inner">
+      <h2 id="pipeline-title">How it fits together</h2>
+      <figure class="diagram">
+        <img src="media/pipeline.svg" width="1280" height="820" loading="lazy"
+             alt="Pipeline diagram. Voyage documents go to Muse Spark (cloud), which reads paper and finds where documents disagree; a planner's spoken words go to Muse Voice Transcribe (cloud). StowLM Reader, Muse Glimmer 30B with our LoRA adapter on the laptop, reads the words into rules under a feasibility decode mask: 118 of 128 on the locked reader test, against 60 of 128 untrained under the same mask; it cleared the 90 % gate and missed two stricter ones. The mask overrode the model's first choice on 182 of 200 validation sentences before fine-tuning and 2 after; almost all were output format, none an illegal bay or tier, and both of the 2 were sentences it should have refused. The planner confirms the reading, Frontier Engine 0.13.0 plans, the full checker decides with 54 active rules in tiers, and a signed handover package comes out. All of it is one hashed pipeline, manifest v4.">
+        <figcaption>One hashed pipeline (manifest v4). Amber: Meta Model API, cloud. Green: on this laptop. Grey: software. Synthetic ships and cargo, simulated port.</figcaption>
+      </figure>
+      <figure class="xray">
+        <video controls muted playsinline preload="none" poster="media/xray-poster.jpg" width="1920" height="1080">
+          <source src="media/xray.mp4" type="video/mp4">
+          <p class="video-text">The x-ray clip isn't available here.</p>
+        </video>
+        <figcaption><strong>Inside the reader as it writes.</strong> Before fine-tuning, the mask overrode the model's first choice in 182 of 200 validation sentences. After: 2. Almost all were the output format, not ship facts; none was an illegal bay or tier. Both of the 2 were sentences it should have refused; what's left is legal and still wrong, which is why a person confirms. Recorded answer; 200 validation sentences, not the locked test.</figcaption>
+      </figure>
+
+      <h3 class="sub-title" id="slot">One slot for the engine</h3>
+      <p class="label-chip">Design and potential: only Engine 0.13.0 is wired in; no third-party engine has been ported</p>
+      <div class="fine">
+        <p>Everything around the engine is the pipeline: the paper intake, the instruction readers, the planner's confirmation, the full checker, the rule-tier ladder, the signed handover and both apps. <strong>Frontier Engine 0.13.0</strong>, our search software, is the reference engine in the slot. The design lets a carrier, terminal or stowage-software vendor put its own planning software there and keep everything around it.</p>
+        <p><strong>What the slot is today.</strong> The runner reaches the engine through one binding (<code>execute_brief</code> and <code>plan_with_rules</code>: the instance and the planner's confirmed rules in, a plan in the pipeline's own format out). The runner then checks that plan itself on the original instance, with the full checker and every confirmed instruction, before anything is drawn or packaged, and the binding pins the engine's source manifest. In the held-out evaluation the simple two-step planner's plans went through the same checker and tier classification, so the gate already judges two different planners; that ran in the evaluation harness, not through the app's slot.</p>
+        <p><strong>What a port would take.</strong> The firm's software behind those two functions, its own source pin, and its own way to honour the confirmed rules (today the binding applies them inside Engine 0.13.0). Every result on this page was measured with Engine 0.13.0 in the slot and says nothing about another engine.</p>
+        <p class="source">Code: <code>experiments/mvp/pipeline/binding/adapter.py</code>, called from <code>experiments/mvp/pipeline/runner/core.py</code> (<code>engine_call</code>); plan format <code>src/stowage/model</code>; evaluation gate <code>experiments/mvp/pipeline/sealed/worker.py</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band models" id="models" aria-labelledby="models-title">
+    <div class="inner">
+      <h2 id="models-title">Three Meta models, each with one job</h2>
+      <div class="cards">
+        <article class="card accent-green">
+          <p class="card-kicker">On the laptop · fine-tuned by us</p>
+          <h3>Muse Glimmer 30B, as StowLM Reader</h3>
+          <p>Fine-tuned with LoRA. Reads the planner's words into rules, on device. It reads free wording of four kinds of instruction and is built to refuse anything else; it can slip, so the planner confirms.</p>
+          <p class="figure"><strong>118 of 128</strong> (92.19 %) on a locked reader test, against <strong>60 of 128</strong> (46.88 %) for the untrained Glimmer under the same mask: same model, same laptop, with and without our fine-tune.</p>
+          <p class="small">Named comparison: Muse Spark read 126 of 128 (fixed reference, earlier mask, not rerun). The reader cleared the 90 % gate and missed two stricter ones: it accepted one loosening where none was allowed, and it sits 6 points below Spark where 3 were allowed.</p>
+          <p class="small"><strong>New wording from another model</strong> (100 synthetic sentences, one pre-registered run, not real planner text): 86 of 100 read exactly, against 45 without our fine-tune; 61 of 66 rules, against 18. It also made a rule from 6 of 34 sentences it should have refused, so a person confirms every reading. It read 4 of 5 Thai-English sentences.</p>
+          <!-- source: experiments/review/v6/logic13.md, "Site, short form"; 86 and 61 never appear without the 6 of 34 -->
+        </article>
+        <article class="card accent-amber">
+          <p class="card-kicker">Meta Model API · cloud</p>
+          <h3>Muse Spark</h3>
+          <p>Reads paper and pictures, finds where documents disagree, and chooses tools in the copilot. Spark's raw text gets strict flags, and software holds back every flagged line.</p>
+        </article>
+        <article class="card accent-amber">
+          <p class="card-kicker">Meta Model API · cloud</p>
+          <h3>Muse Voice Transcribe</h3>
+          <p>Turns speech into an editable transcript, so a limit called over the radio reaches the reader as text the planner can fix.</p>
+        </article>
+      </div>
+      <div class="software">
+        <p><strong>Plans come from Frontier Engine 0.13.0</strong>, our search software and the reference engine in the slot, not from a language model. <strong>The full checker decides</strong>: 54 active rules, with 8 catalogue entries off as run. Every plan shown has been through it, and a plan that doesn't pass says which rules it breaks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band results" id="results" aria-labelledby="results-title">
+    <div class="inner">
+      <h2 id="results-title">Held-out test voyages</h2>
+      <p class="label-chip">held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim</p>
+
+      <div class="stats">
+        <div class="stat">
+          <p class="stat-num">24 of 24</p>
+          <p class="stat-text">held-out maps inside the envelope, all full checker passes (exact 95 % interval 85.8–100 %). Held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim.</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">13 of 18</p>
+          <p class="stat-text">Of the 18 voyages whose first plan broke the rule, 13 got a checked plan that obeys it (46.5–90.3 % exact 95 % interval); on the other 6 the first plan already obeyed it, which proves nothing.</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">0 of 24</p>
+          <p class="stat-text">for a simple two-step planner, modelled from one field expert's description (interval 0–14.2 %; 10 relaxed, 14 no plan). It isn't a measure of how good planners work; experienced planners may already block by port.</p>
+        </div>
+      </div>
+
+      <h3 class="sub-title" id="ext-1">Fresh held-out extension</h3>
+      <p class="label-chip">fresh held-out extension, run after the freeze; not the pre-registered sealed claim</p>
+      <div class="stats">
+        <div class="stat">
+          <p class="stat-num">24 of 24</p>
+          <p class="stat-text">On 24 fresh held-out maps, the pipeline returned a full-checker pass on all 24 (exact 95 %: 85.8-100 %). Fresh held-out extension, run after the freeze; not the pre-registered sealed claim.</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">1 of 24</p>
+          <p class="stat-text">for the simple two-step planner (0.1-21.1 %).</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">18 of 22</p>
+          <p class="stat-text">With one instruction, 18 of 22 voyages whose first plan broke the rule got a checked plan that obeys it (59.7-94.8 %).</p>
+        </div>
+      </div>
+      <div class="fine">
+        <p>24 new envelope maps from new seeds, pre-registered (PREREG sha256 ba3dcc46…), run on manifest v4 (planning code byte-identical to v3). The first held-out run above stays the headline result; this extension is reported beside it.</p>
+        <p><strong>Secondary figure, pooled:</strong> Pooled with the first held-out run (secondary figure): 48 of 48 envelope maps passed the full checker (92.6-100 %); binding 31 of 40 (61.5-89.2 %). The two runs are separate experiments, not one.</p>
+        <p class="source">Source: <code>experiments/mvp/pipeline/sealed/measurements/ext-1/FIGURES.json</code>; independent recount <code>experiments/review/v6/code15.md</code>. Wording from <code>docs/headline.md</code>, "Fresh held-out extension (ext-1, D333)".</p>
+      </div>
+
+      <p class="callout"><strong>No lift saving is quotable.</strong> In the first held-out run the two-step baseline never passed the full checker, so there are no mutual passes and no like-for-like lift comparison. In the extension the two-step planner passed 1 of 24, a single mutual pass, too few for a lift comparison, so no lift figure is quoted there either.</p>
+
+      <div class="fine">
+        <p>Two earlier attempts on the same maps stopped early when our own frozen-code guard tripped. In the first, a test rewrote a pinned fixture; in the second, the engine wrote scratch files inside its pinned folder. No planning code changed. They completed 36 and 91 rows; both are published as they are and not pooled with the final run. Where the same rows ran again in the final run, attempt 1 matched the final run on 36 of the 38 rows it opened (status and lifts; 37 of 38 on verdict alone) and attempt 2 on 91 of 91, reported separately.</p>
+        <p><strong>The envelope.</strong> Up to 195 boxes in a half-ship section of feeder ships of 500–800 TEU, up to 70 % of that section: an empty section on a ship whose other bays hold fixed synthetic cargo, one loading call. Outside it, the pipeline says so and gives the reason. The engine isn't competitive at large scale yet. The held-out number is the planning step from a clean load list. Confirmation in this run is exact expected-rule match, not a human planner. Navis and human-planner performance aren't public.</p>
+        <p class="source">Source: <code>experiments/mvp/pipeline/sealed/runs/final-3/story-figures.json</code> (<code>/cohorts/envelope24/arms/pipeline/passes_L0</code>, <code>/cohorts/envelope24/arms/pipeline/passes_L0_exact95</code>, <code>/cohorts/envelope24/arms/twostep/passes_L0_exact95</code>, <code>/instruction/binding_obedient_passes</code>, <code>/instruction/binding_obedient_exact95</code>, <code>/lift_claim/quotable</code>); reader figures and wording from <code>docs/headline.md</code>.</p>
+      </div>
+
+      <h3 class="sub-title" id="charts">The recorded results, charted</h3>
+      <p class="label-chip">Recorded results only; no planning or model rerun. Synthetic ships and cargo, simulated port.</p>
+      <div class="charts">
+        <figure class="chart">
+          <img src="media/charts/pipeline-passes.svg" width="1320" height="1280" loading="lazy"
+               alt="Chart: full-checker passes by cohort and ship size, held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim. Pipeline with no voyage instruction against a simple two-step planner, with exact two-sided 95 % intervals. Tiny, 500 to 800 TEU: pipeline 10 of 10 (69.2 to 100 %), two-step 0 of 10 (0 to 30.8 %). Tiny, 1,700 TEU, outside the envelope wording: 5 of 5 (47.8 to 100 %) against 0 of 5 (0 to 52.2 %). Small, 500 to 800 TEU: 20 of 20 (83.2 to 100 %) against 0 of 20 (0 to 16.8 %). Small, 1,700 TEU, outside the envelope wording: 9 of 10 (55.5 to 99.7 %) against 0 of 10 (0 to 30.8 %). Envelope, 500 TEU: 12 of 12 (73.5 to 100 %) against 0 of 12 (0 to 26.5 %). Envelope, 800 TEU: 12 of 12 (73.5 to 100 %) against 0 of 12 (0 to 26.5 %). Envelope total, same maps: 24 of 24 (85.8 to 100 %) against 0 of 24 (0 to 14.2 %). A pass means a full checker pass, completion and every confirmed instruction obeyed; relaxed plans aren't passes. No like-for-like lift comparison is available.">
+          <figcaption><strong>Full-checker passes by cohort and ship size.</strong> Held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim (two earlier runs stopped on our own guard, both published; see above). 1,700 TEU rows are outside the envelope wording, and tiny and small maps are never pooled with the envelope. Planning step from a clean load list.</figcaption>
+        </figure>
+        <figure class="chart">
+          <img src="media/charts/ext1-passes.svg" width="1320" height="1260" loading="lazy"
+               alt="Chart: envelope full-checker passes, the first held-out run beside the fresh extension. First run: held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; pipeline 24 of 24 (85.8-100 %), simple two-step planner 0 of 24 (0-14.2 %). Fresh held-out extension, run after the freeze; not the pre-registered sealed claim: pipeline 24 of 24 (85.8-100 %), two-step 1 of 24 (0.1-21.1 %). Secondary pooled figure, labelled as such: 48 of 48 (92.6-100 %).">
+          <figcaption><strong>Envelope passes: first held-out run and fresh extension.</strong> First run: held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim. Extension: fresh held-out extension, run after the freeze; not the pre-registered sealed claim. The pooled 48 of 48 is a secondary figure, not one experiment.</figcaption>
+        </figure>
+        <figure class="chart">
+          <img src="media/charts/instruction-binding.svg" width="1320" height="1400" loading="lazy"
+               alt="Chart: instruction binding. First held-out run (held-out maps, frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim): of the 18 voyages whose first plan broke the rule, 13 got a checked plan that obeys it (46.5-90.3 %); on the other 6 the first plan already obeyed it. Fresh held-out extension, run after the freeze; not the pre-registered sealed claim: 18 of 22 (59.7-94.8 %); on 2 the first plan already obeyed it.">
+          <figcaption><strong>Instruction binding.</strong> First held-out run: of the 18 voyages whose first plan broke the rule, 13 got a checked plan that obeys it (46.5–90.3 % exact 95 % interval); on the other 6 the first plan already obeyed it, which proves nothing. Fresh held-out extension, run after the freeze; not the pre-registered sealed claim: 18 of 22 (59.7-94.8 %). By type the samples are small; quoted only with their denominators.</figcaption>
+        </figure>
+        <figure class="chart">
+          <img src="media/charts/reader-exact-match.svg" width="1200" height="910" loading="lazy"
+               alt="Chart: StowLM Reader exact match on its locked test of 128 sentences, locked before tuning and scored once. Adopted v3 reader 118 of 128 (92.19 %); untrained Glimmer under the same mask 60 of 128 (46.88 %); a no-model parser 90 of 128 (70.31 %); Muse Spark reference 126 of 128 (98.44 %), the fixed original reference, not rerun. Gates: passed the 90 % gate; missed both stricter ones, with 1 of 48 loosening sentences accepted where none was allowed, and 6.25 points below Spark where 3 were allowed. Adoption context: v3 118 of 128 with 1 of 48 loosenings accepted; v2 120 of 128 with 2 of 48.">
+          <figcaption><strong>Reader on its locked test.</strong> 118 of 128 against 60 of 128 untrained: same model, same laptop, with and without our fine-tune. Muse Spark read 126 of 128 (fixed reference, earlier mask, not rerun). It cleared the 90 % gate and missed two stricter ones. v2, shown beside it, read 120 of 128 but accepted 2 of 48 loosenings. This set isn't a held-out planning map.</figcaption>
+        </figure>
+        <figure class="chart">
+          <img src="media/charts/decode-mask-overrides.svg" width="1200" height="720" loading="lazy"
+               alt="Chart: decode-mask overrides before and after fine-tuning, on 200 validation sentences. Before fine-tuning, the mask overrode the model's first choice in 182 of 200 sentences. After: 2. Almost all were the output format, not ship facts; none was an illegal bay or tier. Both of the 2 were sentences it should have refused; what's left is legal and still wrong, which is why a person confirms. This measures intervention by the mask, not correctness of the reading; end-token swaps are excluded.">
+          <figcaption><strong>Decode-mask overrides.</strong> Before fine-tuning, the mask overrode the model's first choice in 182 of 200 validation sentences. After: 2. Almost all were the output format, not ship facts; none was an illegal bay or tier. Both of the 2 were sentences it should have refused; what's left is legal and still wrong, which is why a person confirms. Validation sentences, not the locked test.</figcaption>
+        </figure>
+      </div>
+      <p class="source">Charts: <code>experiments/mvp/charts/</code> (sources and SHA-256 hashes in its <code>README.md</code>); copied byte for byte.</p>
+    </div>
+  </section>
+
+  <section class="band impact" id="impact" aria-labelledby="impact-title">
+    <div class="inner">
+      <h2 id="impact-title">Why it matters, if it scales</h2>
+      <p class="lede"><strong>Who it's for:</strong> the planners who load feeder ships at ports like Laem Chabang, where a load plan starts from a tally sheet, an email and a radio call; and, through the engine slot, carriers, terminals and stowage-software vendors who could keep their own planning software and add the pipeline around it (potential; nothing ported yet). A forward pilot, built to scale: more compute for the search, a larger model for reading.</p>
+      <p class="label-chip projection-chip">Projection, not a result. None of it has been measured.</p>
+
+      <div class="impact-figures">
+        <div class="impact-fig exposure">
+          <p class="impact-num">about $90 billion a year</p>
+          <p class="impact-text">of port-call cost worldwide, so every 1 % is about $1 billion. <span class="tag">Projection: exposure</span></p>
+        </div>
+        <div class="impact-fig pool">
+          <p class="impact-num">about $7 billion a year</p>
+          <p class="impact-text">of extra crane work and berth time that a better plan can act on (mid case; low $1.2 billion). <span class="tag">Projection: pool</span></p>
+        </div>
+        <div class="impact-fig check">
+          <p class="impact-num">$63–76 billion a year</p>
+          <p class="impact-text">Check: world terminal revenue, analyst estimates. The mid-case restow line ($5.11 billion) sits inside it, not on top of it.</p>
+        </div>
+      </div>
+
+      <p class="impact-port">About <strong>$125 million a year at Laem Chabang if scaled by its share of calls</strong> (projection; 9,325 of about 520,000 calls, 1.8 %). Lifts scale with TEU, and the port's calls skew to feeders, so this is a share of calls, not a port estimate.</p>
+
+      <div class="impact-cols">
+        <div>
+          <h3>Inputs</h3>
+          <ul>
+            <li>920M TEU handled a year (UNCTAD, 2024)</li>
+            <li>520k container-ship calls a year (UNCTAD, rounded)</li>
+            <li>assumed 10 % restows, at $75 a lift</li>
+            <li>assumed 5 % less berth time if the extra work goes</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What would have to be true</h3>
+          <ul>
+            <li>full-ship, multi-port planning works;</li>
+            <li>these rates hold worldwide;</li>
+            <li>the extra work is avoidable;</li>
+            <li>terms that permit operational use: today's Muse Glimmer usage policy prohibits use related to operating transportation technologies where harm is possible, so a deployment would need Meta's permission or a base model whose terms allow it, plus class approval;</li>
+            <li>none of it has been measured.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small muted">Today's pilot runs the loop on synthetic half-ship sections of 500–800 TEU feeders. The path is more compute for the search and a larger model for reading, toward 1,700, 8,000 and 20,000 TEU ships (projection). The engine isn't competitive at large scale yet. This is a gross opportunity scenario, not a saving achieved.</p>
+      <p class="source">Sources: <code>docs/impact.md</code> (exposure, pool, Laem Chabang projection, terminal-revenue check, what must be true; D254, D256, D316); <code>experiments/mvp/ui/fixtures/film-figures.json</code> (<code>/figures/impact_low_billion</code>, <code>impact_teu_m</code>, <code>impact_calls_k</code>, <code>impact_restow_pct</code>, <code>impact_lift_usd</code>, <code>impact_berth_pct</code>, <code>impact_revenue_low</code>, <code>impact_revenue_high</code>, <code>impact_port_musd</code>, <code>stake_calls</code>).</p>
+    </div>
+  </section>
+
+  <section class="band handover" id="handover" aria-labelledby="handover-title">
+    <div class="inner">
+      <h2 id="handover-title">What the planner hands the master</h2>
+      <p class="label-chip">Stored plan, computed on 2 Nov 2026, checked on 2 Nov 2026 · synthetic ships and cargo, simulated port · our own signature, not a certificate</p>
+      <div class="handover-body">
+        <p>The bay-nine hero: one sentence over the radio, "Nothing goes into bay nine on this call.", read on the laptop by StowLM Reader, then planned by Engine 0.13.0 and passed by the full checker. The handover package that comes out holds:</p>
+        <ul>
+          <li><strong>Bay plans</strong>, one printed A3 page per planned bay: 87 boxes in 6 of 12 bays of a half-ship section, beside 168 fixed synthetic background boxes.</li>
+          <li><strong>The crane sequence</strong> and yard sequence, as CSV files.</li>
+          <li><strong>A note to the master</strong> with the stability figures, dangerous-goods and reefer slots, the tightest limits, and the confirmed instruction.</li>
+          <li><strong>A signed receipt</strong> tying each step to its model, hash and checker verdict. The signed package names the frozen pipeline it came from (v4, acf2f275…). It's our own signature, not a certificate.</li>
+        </ul>
+        <p>The instruction is printed in the note to the master: "Confirmed instruction: Nothing goes into bay nine on this call. Confirmed by: user-authorised batch regeneration, no planner present (demo fixture)." The user authorised the batch rebuild; no planner confirmed it live.</p>
+        <p><a class="button-link" href="media/hero-bay-plan.pdf">Open the printed bay plan (PDF, 6 pages, 3 MB)</a></p>
+      </div>
+      <p class="source">Source: <code>experiments/mvp/pipeline/package/fixtures/hero-run/package/bay-plan.html</code>, printed by <code>experiments/mvp/pipeline/package/print_check.py</code> (6 bay pages, 143 cell labels, no overflow, no console errors, no remote requests); note: <code>note-to-master.md</code> in the same folder. 3.1 was measured on frozen pipeline v3 (a11b4202…); the demo and package run on v4 (acf2f275…), which changes only the package and freeze code.</p>
+    </div>
+  </section>
+
+  <section class="band links" aria-labelledby="links-title">
+    <div class="inner">
+      <h2 id="links-title">See it</h2>
+      <ul class="link-list">
+        <li><a class="link-card" href="play/index.html"><span class="link-title">Watch a recorded run in your browser</span><span class="link-note">The Functional app's own screens on fresh synthetic inputs we precomputed, not the film's call. A recorded run: no API calls and nothing to install. To change any input, install the app. Synthetic ships and cargo, simulated port.</span></a></li>
+        <li><a class="link-card" href="replay/index.html"><span class="link-title">Break it: 25 pinned drags</span><span class="link-note">Recorded verdicts: each drop shows what the fast screen said, then what the full checker ruled. Demo cargo declaration changed for this challenge; no vessel or rule limit tightened. Works offline.</span></a></li>
+        <li class="link-card video-card">
+          <span class="link-title">Watch the launch cut</span>
+          <video controls muted playsinline preload="none" poster="media/launch-poster.jpg" width="1920" height="1080">
+            <source src="media/launch.mp4" type="video/mp4">
+            <p class="video-text">The launch cut isn't available here.</p>
+          </video>
+          <span class="link-note">Launch cut, synthetic ships and cargo, simulated port. The full demo video link comes here when it's hosted: <a class="todo" href="#demo-video-url-pending" data-todo="{{demo_video_url}}">full demo video (link pending)</a>.</span>
+        </li>
+        <li><a class="link-card" href="https://github.com/AMK-bot/StowLM"><span class="link-title">Source code and both apps</span><span class="link-note">github.com/AMK-bot/StowLM. The Demo app replays the filmed call with no key; the Functional app runs the pipeline on a fresh synthetic call with your own Meta Model API key. Tested on an Apple-silicon Mac.</span></a></li>
+        <li><a class="link-card" href="https://huggingface.co/A-M-K/stowlm-reader-v3"><span class="link-title">Fine-tuned adapter</span><span class="link-note">StowLM Reader LoRA for Muse Glimmer 30B on Hugging Face. Apache-2.0; the Muse Glimmer usage policy applies.</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="inner">
+    <p>Synthetic ships and cargo, simulated port. Research demonstration on synthetic data. The Muse Glimmer usage policy prohibits use related to operating transportation technologies where harm is possible; this must not be used to plan or operate real vessels.</p>
+    <p>Code and adapter: Apache-2.0. Copyright 2026 AMK-bot.</p>
+    <p>Uses Muse Glimmer 30B, Muse Spark and Muse Voice Transcribe (Meta); HyperFrames (Apache-2.0); UN/LOCODE (CC BY 4.0); KCS hull data not redistributed. See NOTICE.</p>
+    <p>Built 26 Oct – 4 Nov 2026 for the Meta hackathon.</p>
+    <p>Music: Sascha Ende, <a href="https://ende.app">ende.app</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)</p>
+    <p>Page adapted from brag (<a href="https://github.com/latent-spaces/brag">latent-spaces</a>, MIT)</p>
+  </div>
+</footer>
+</body>
+</html>
