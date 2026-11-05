@@ -2,13 +2,55 @@
 
 **The AI pipeline around a ship-planning engine, as an app. A planner says one sentence; the plan changes, and a checker passes it.**
 
-![StowLM: messy paperwork and a planner's words become a checked loading plan](experiments/mvp/video/readme-hero/out/hero.gif)
+![The Demo app generating a plan: Engine 0.13.0 loads the section move by move and the full checker passes it](experiments/mvp/video/readme-hero/out/plan-generate.gif)
 
-Messy voyage documents and a planner's own words go in; a checked loading plan and a signed handover package come out.
-Muse Spark reads the cargo papers, Muse Voice Transcribe hears the planner, and StowLM Reader (Muse Glimmer 30B,
-fine-tuned by us with LoRA, schema-masked decoding, on the laptop) turns each instruction into a strict rule. The
-planner confirms every reading, the engine plans, the full checker decides, and the rule-tier ladder names any rule a
-relaxed plan breaks. Models propose; software decides.
+*The Demo app generating a plan: Frontier Engine 0.13.0 loads the section move by move, and the full checker passes it.
+A stored plan, rechecked; synthetic ships and cargo, simulated port.*
+
+Demo video (2:58): https://youtu.be/fTb7Hn0OjTY
+
+My family works in the maritime shipping industry, a razor-thin margin business critical to the global economy, where
+every cost saving not only benefits the business, but every producer, consumer and person worldwide. Central to
+shipping logistics, a load plan serves as the schematic for how cargo is loaded, and a bad one means logistical
+inefficiency, crane operation fees, and fire or chemical hazards. My project, the StowLM pipeline, outputs a quality
+load plan while greatly cutting down on the otherwise time-consuming and error-prone process of a load plan's
+development.
+
+Within the pipeline, three Meta models do the heavy lifting. Muse Spark reads paperwork, Muse Voice Transcribe
+transcribes the radio calls, and StowLM Reader, a Muse Glimmer 30B model locally fine-tuned by us, transforms inputs
+into rules the load plan must follow.
+
+For the first set of instructions, the cargo papers: a photographed tally sheet, a booking, a shipping instruction
+sheet. Muse Spark reads them and flags any inconsistencies. Where ambiguous, it pings for a human supervisor. Once
+resolved, the cargo bookings are ready for loading.
+
+In addition to the standard rules of maritime shipping, a planner can add rules through text or through voice. In our
+example, a fuzzy radio call represents an extreme use case. Muse Voice Transcribe transcribes it into text, and the
+StowLM Reader transforms these plain words into rules that our solver software can work with.
+
+For comparison, 47 % of the rules outputted by an untuned Glimmer 30B model were accepted by our solver software. After
+LoRA tuning, this jumped to 92 % (rules read exactly from 128 locked test sentences, 60 against 118; same decode mask,
+same laptop).
+
+Now, we generate the plan: Frontier Engine 0.13.0, the solver software locally developed by coding agents, searches for
+the most move-efficient plan that follows all given rules. In the film's call, it found a 145-move plan that abides by
+all 54 active rules, from dangerous goods to stability and hull strength. It is then verified again by the full
+checker, and a pass is displayed.
+
+Does it hold up? In our test set, all 24 of 24 plans pass the full pipeline (held-out maps; the label and the two-step
+baseline are in the results below).
+
+Here's why it matters. Annually, across its impacts, faulty load plans cost companies an estimated $350 million to
+$6.6 billion. Our research places a moderate estimate at about $2.4 billion, across restow fees, fuel charges, missed
+time slots, delays, and hazard damage from fires, chemicals, and cargo instability, plus 0.03 to 5.6 deaths a year
+(all projection; [`docs/load-plan-losses.md`](docs/load-plan-losses.md)). Given a larger model and additional compute
+to optimize for larger plans, StowLM has the potential to greatly offset these costs as well as significantly reduce
+the likelihood of mid-transit fatalities. For additional confirmation, we consulted a field expert in cargo ship
+planning (Head of Operations at Evergreen Thailand) about how his department could benefit from the pipeline's
+deployment; his answer is in the demo video.
+
+The entire pipeline, as well as the fine-tuned Glimmer adapter
+([A-M-K/stowlm-reader-v3](https://huggingface.co/A-M-K/stowlm-reader-v3)), is open source.
 
 **One slot for the engine.** Frontier Engine 0.13.0, our search software, is the reference engine in the slot. The
 design lets a carrier, terminal or stowage-software vendor put its own planning software there and keep everything
@@ -16,8 +58,6 @@ around it. Only Engine 0.13.0 is wired into the app today; no third-party engine
 design and the potential, not a tested integration (see [The engine slot](#the-engine-slot)).
 
 Research pilot on synthetic ships and cargo at a simulated Laem Chabang-style port.
-
-Demo video (2:58): https://youtu.be/fTb7Hn0OjTY
 
 Watch a recorded run in your browser: https://amk-bot.github.io/StowLM/play/ (the Functional app's own screens on fresh
 synthetic inputs we precomputed, not the film's call; no API calls and nothing to install; to change any input, install
@@ -30,6 +70,26 @@ the app).
 | **Muse Glimmer 30B**, fine-tuned by us (LoRA) as StowLM Reader, on device | Reads the planner's words into strict rules on the laptop. Locked test: 118 of 128 with our fine-tune, 60 of 128 without (same model, same laptop). It passed our 90 % gate and missed two stricter ones (one loosening accepted where none was allowed; 6 points below Muse Spark's 126 of 128, where 3 were allowed), so the planner confirms every reading. |
 | **Muse Spark** (Meta Model API) | Reads the paperwork, finds where documents disagree, chooses the copilot's tools |
 | **Muse Voice Transcribe** (Meta Model API) | Turns a simulated radio call into an editable transcript |
+
+### Why Meta's models
+
+**Muse Glimmer 30B, open weights, fine-tuned locally by us as StowLM Reader.** A 64.5 MB LoRA adapter, trained with MLX
+on 4,121 synthetic (sentence, rule) pairs, runs on a MacBook with no cloud call. It turns a planner's plain words, typed
+or transcribed, into the rules the load plan must follow, in the form our solver software reads. Inside its decoder, our
+logits processor (a feasibility mask) lets through only valid rules, such as real bays and allowed classes. Before our
+fine-tune, the mask had to override the model's first choice on 182 of 200 validation sentences, almost all on output
+format; after it, on 2, both sentences it should have refused. On the locked test, 10 of 128 outputs from the
+fine-tuned model were not read exactly, against 68 for the untuned model. A planner's instructions carry cargo and ship
+details, and the reader should work without a network, so the part that turns words into rules has to train and run on
+hardware the planner controls: a strong open-weights model we could fine-tune was the one that fit.
+
+**Muse Spark, through the Meta Model API,** reads the paperwork (a photographed tally sheet, a booking, a
+shipping-instructions sheet), maps headers and flags where documents disagree; where something is ambiguous, it asks a
+human supervisor. It is the agent that builds the list of cargo to be moved, and it copes with documents that vary from
+country to country.
+
+**Muse Voice Transcribe, through the Meta Model API,** turns a planner's radio call, even a fuzzy one, into an editable
+transcript the reader can work with, so a planner on site can add a rule over the radio instead of typing it.
 
 Plans come from Frontier Engine 0.13.0, our search software and the reference engine in the slot; the full checker (54 active rules) decides. Every planning result below was measured with Engine 0.13.0 in the slot.
 
