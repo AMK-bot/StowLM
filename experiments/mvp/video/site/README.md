@@ -52,7 +52,7 @@ The repo URL (topbar and "Source code and both apps" card) and the Pages URL in 
 
 | Placeholder | Where | Replace with |
 |---|---|---|
-| `{{demo_video_url}}` | `index.html`: the "Watch the launch cut" card's inline "full demo video (link pending)" link (`href="#demo-video-url-pending"`). The card plays `media/launch.mp4` until then | The hosted full demo video URL. Either keep the launch cut and make the link live, or swap the card back to a plain link card; remove `data-todo`, the `todo` class and "link pending" |
+| `{{demo_video_url}}` | Filled 4 Nov 2026: the "Watch the launch cut" card links the demo video, https://youtu.be/fTb7Hn0OjTY (youtu.be is in `check.py`'s allowed hosts). |
 
 If a new external host is added (say, a video host), add it to `ALLOWED_HOSTS` in `check.py` on purpose.
 
@@ -73,8 +73,8 @@ If a new external host is added (say, a video host), add it to `ALLOWED_HOSTS` i
 | Reader 118 of 128 (92.19 %), untrained 60 of 128 (46.88 %), Spark 126 of 128, gates | figures | `docs/headline.md`, "Numbers we may quote" (D266) |
 | 54 active rules, 8 off | counts | `docs/headline.md`, "Who does what" |
 | Music credit, build dates | text | `experiments/mvp/video/stowlm-brag/shots.json` (`music.credit`, `credits.lines`) |
-| Impact: about $90 billion a year exposure, every 1 % about $1 billion; about $7 billion a year pool (mid), low $1.2 billion; $125 million at Laem Chabang (9,325 of about 520,000 calls, 1.8 %); check $63–76 billion; $5.11 billion restow line | projection | `docs/impact.md`; `experiments/mvp/ui/fixtures/film-figures.json` `/figures/impact_*`, `/figures/stake_calls`; wording `docs/headline.md` "Impact (D254)", D256, D286 |
-| Impact inputs (920M TEU, 520k calls, 10 % restows at $75, 5 % less berth time) and what would have to be true | text | same; the terms line per D316 (`docs/decisions.md`) |
+| Impact: about $90 billion a year exposure, every 1 % about $1 billion; about $2.3 billion a year pool (mid), low $0.3 billion; $40 million at Laem Chabang (9,325 of about 520,000 calls, 1.8 %); check $63–76 billion; $0.42 billion restow line | projection | `docs/impact.md`; `experiments/mvp/ui/fixtures/film-figures.json` `/figures/impact_*`, `/figures/stake_calls`; wording `docs/headline.md` "Impact (D254)", D256, D286 |
+| Impact inputs (920M TEU, 520k calls, 0.9 % avoidable restows at $75, 5 % less berth time) and what would have to be true | text | same; the terms line per D316 (`docs/decisions.md`) |
 | Charts | SVG | `experiments/mvp/charts/*.svg`, copied byte for byte (hashes match its README); captions from `docs/headline.md` |
 | Handover sample: 87 boxes in 6 of 12 bays, 168 background boxes, confirmed-instruction line, v4 acf2f275… | text | `experiments/mvp/pipeline/package/fixtures/hero-run/package/` (`note-to-master.md`, `package.json`, `receipt.json`, `bay-plan.html`) |
 | Engine slot: one binding, plan format, recheck on the original instance, manifest pin; two-step plans judged by the same gate in the evaluation; only Engine 0.13.0 wired in | text, no numbers | `experiments/mvp/pipeline/binding/adapter.py` (`execute_brief`, `plan_with_rules`, `verify_manifest`), `experiments/mvp/pipeline/runner/core.py` (`engine_call`, checker and ladder stages), `src/stowage/model`, `experiments/mvp/pipeline/sealed/worker.py` (`_twostep`, `_audit`); D364 |

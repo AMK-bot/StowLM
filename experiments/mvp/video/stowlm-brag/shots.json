@@ -509,7 +509,7 @@
       "title": "Forward pilot",
       "file": "shot-12.webm",
       "dur": 24,
-      "voice": "It's for the planners who load feeder ships at ports like Laem Chabang. Port calls cost about ninety billion dollars a year, so every one percent is about a billion. The pool a better plan can act on: about seven billion a year. That's a projection, not a result. A forward pilot, built to scale: more compute for the search, a larger model for reading.",
+      "voice": "It's for the planners who load feeder ships at ports like Laem Chabang. Port calls cost about ninety billion dollars a year, so every one percent is about a billion. The pool a better plan can act on: about two point three billion a year. That's a projection, not a result. A forward pilot, built to scale: more compute for the search, a larger model for reading.",
       "chips": [
         "Projection"
       ],
@@ -532,12 +532,12 @@
           "source": "docs/impact.md"
         },
         {
-          "text": "seven billion",
+          "text": "two point three billion",
           "means": "mid-case pool, USD a year (projection)",
           "source": "docs/impact.md"
         },
         {
-          "text": "125 million",
+          "text": "40 million",
           "means": "Laem Chabang by share of calls, million USD a year (projection), in the take's lower third",
           "source": "experiments/mvp/ui/fixtures/film-figures.json"
         }

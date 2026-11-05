@@ -85,7 +85,7 @@ window.STAGE_SHOTS = {
           "headline": "≈ ${{impact_mid_billion}} billion a year",
           "sub": "the pool a better plan can act on · mid case · low ${{impact_low_billion}} billion",
           "fine": [
-            "inputs: {{impact_teu_m}}M TEU, {{impact_calls_k}}k calls, assumed {{impact_restow_pct}} % restows at ${{impact_lift_usd}} a lift, {{impact_berth_pct}} % less berth time",
+            "inputs: {{impact_teu_m}}M TEU, {{impact_calls_k}}k calls, assumed {{impact_restow_pct}} % avoidable restows at ${{impact_lift_usd}} a lift, {{impact_berth_pct}} % less berth time",
             "what would have to be true: full-ship, multi-port planning works; these rates hold worldwide; the extra work is avoidable; terms that permit operational use; none of it has been measured",
             "check: world terminal revenue ${{impact_revenue_low}}–{{impact_revenue_high}} billion a year"
           ]

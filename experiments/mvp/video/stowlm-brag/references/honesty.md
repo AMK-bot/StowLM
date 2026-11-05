@@ -4,7 +4,7 @@
 
 ## 1. Numbers
 
-- Every number shown or spoken has an entry in its block's `numbers[]` in `shots.json` (`text`, `means`, `source`), and the source file holds it. Spelled-out numbers ("two", "seven billion") count.
+- Every number shown or spoken has an entry in its block's `numbers[]` in `shots.json` (`text`, `means`, `source`), and the source file holds it. Spelled-out numbers ("two", "two point three billion") count.
 - Sources are repo files: `docs/headline.md`, `fill-v6.json`, `story-figures.json`, `film-figures.json`, `hero-facts-close-bay-9.json`, `docs/impact.md` and the like. "I remember it" is not a source.
 - Development figures are labelled "development", never shown as the claim.
 - Never: "32 of 32", the holdout "58 of 72", a lift saving, a capture figure, the high impact figure, a cost in lifts for obeying a rule.
@@ -86,7 +86,7 @@ The credits say "Built 26 Oct – 4 Nov 2026". Nothing in the film predates the 
 
 ## 10. Impact
 
-"Projection" stays on screen through the whole of shot 12. Lead with exposure (about $90 billion a year of port-call cost), then the mid pool (about $7 billion, projection), Laem Chabang about $125 million by share of calls (projection). The inputs and "what would have to be true" sit beside them. Never present potential as a result.
+"Projection" stays on screen through the whole of shot 12. Lead with exposure (about $90 billion a year of port-call cost), then the mid pool (about $2.3 billion, projection), Laem Chabang about $40 million by share of calls (projection). The inputs and "what would have to be true" sit beside them. Never present potential as a result.
 
 ## Checklist before any render or post
 

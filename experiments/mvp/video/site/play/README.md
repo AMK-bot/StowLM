@@ -18,5 +18,5 @@ To run the app on your own inputs, follow the install steps at https://github.co
     uv run python -m app --functional --port 8794
     # open http://127.0.0.1:8794/planner?live=1
 
-Built by `experiments/mvp/ui/static_play/build.py` on 2026-11-04. Serve this folder with any static server
+Built by `experiments/mvp/ui/static_play/build.py` on 2026-11-05. Serve this folder with any static server
 (`python -m http.server`), or open it on the project's GitHub Pages site.

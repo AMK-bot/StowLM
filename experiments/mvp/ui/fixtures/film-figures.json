@@ -17,7 +17,7 @@
       "named_source": "experiments/mvp/video/STORY-NEEDS-v6.md, fixed facts: BSAA 2024–25, p. 6"
     },
     "impact_low_billion": {
-      "value": "1.2",
+      "value": "0.3",
       "scope": "Projection, low case, USD a year",
       "named_source": "docs/impact.md, total annual prize"
     },
@@ -32,8 +32,8 @@
       "named_source": "experiments/impact-estimate/impact_v6.py, calls/year"
     },
     "impact_restow_pct": {
-      "value": "10",
-      "scope": "Projection input, assumed",
+      "value": "0.9",
+      "scope": "Projection input, assumed avoidable share of ship moves (D376)",
       "named_source": "experiments/mvp/video/script-v6.md, shot 12"
     },
     "impact_lift_usd": {
@@ -57,7 +57,7 @@
       "named_source": "docs/impact.md, verified terminal-revenue range $63–76 billion (TechSci 75.5, rounded); IBISWorld 81.5 is unverified and excluded (logic4 F9)"
     },
     "impact_port_musd": {
-      "value": "125",
+      "value": "40",
       "scope": "Projection, Laem Chabang scaled by its share of calls, million USD a year; not a port estimate",
       "named_source": "docs/impact.md, Laem Chabang projection (logic7 L7, D286)"
     },

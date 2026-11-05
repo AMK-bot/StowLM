@@ -239,22 +239,24 @@
       <p class="lede"><strong>Who it's for:</strong> the planners who load feeder ships at ports like Laem Chabang, where a load plan starts from a tally sheet, an email and a radio call; and, through the engine slot, carriers, terminals and stowage-software vendors who could keep their own planning software and add the pipeline around it (potential; nothing ported yet). A forward pilot, built to scale: more compute for the search, a larger model for reading.</p>
       <p class="label-chip projection-chip">Projection, not a result. None of it has been measured.</p>
 
+      <p class="impact-port">Bad load plans cost <strong>about $0.35 to $6.6 billion a year</strong> worldwide, mid <strong>about $2.4 billion</strong>, across restow fees, fuel, lost slots, delay and safety, and 0.03 to 5.6 deaths a year (mid 0.7) (projection; <code>docs/load-plan-losses.md</code>). The figures below are the narrower part a better plan acts on directly.</p>
+
       <div class="impact-figures">
         <div class="impact-fig exposure">
           <p class="impact-num">about $90 billion a year</p>
           <p class="impact-text">of port-call cost worldwide, so every 1 % is about $1 billion. <span class="tag">Projection: exposure</span></p>
         </div>
         <div class="impact-fig pool">
-          <p class="impact-num">about $7 billion a year</p>
-          <p class="impact-text">of extra crane work and berth time that a better plan can act on (mid case; low $1.2 billion). <span class="tag">Projection: pool</span></p>
+          <p class="impact-num">about $2.3 billion a year</p>
+          <p class="impact-text">of extra crane work and berth time that a better plan can act on (mid case; low $0.3 billion). <span class="tag">Projection: pool</span></p>
         </div>
         <div class="impact-fig check">
           <p class="impact-num">$63–76 billion a year</p>
-          <p class="impact-text">Check: world terminal revenue, analyst estimates. The mid-case restow line ($5.11 billion) sits inside it, not on top of it.</p>
+          <p class="impact-text">Check: world terminal revenue, analyst estimates. The mid-case restow line ($0.42 billion) sits inside it, not on top of it.</p>
         </div>
       </div>
 
-      <p class="impact-port">About <strong>$125 million a year at Laem Chabang if scaled by its share of calls</strong> (projection; 9,325 of about 520,000 calls, 1.8 %). Lifts scale with TEU, and the port's calls skew to feeders, so this is a share of calls, not a port estimate.</p>
+      <p class="impact-port">About <strong>$40 million a year at Laem Chabang if scaled by its share of calls</strong> (projection; 9,325 of about 520,000 calls, 1.8 %). Half the pool is lifts, which scale with TEU, and the port's calls skew to feeders, so this is a share of calls, not a port estimate.</p>
 
       <div class="impact-cols">
         <div>
@@ -262,7 +264,7 @@
           <ul>
             <li>920M TEU handled a year (UNCTAD, 2024)</li>
             <li>520k container-ship calls a year (UNCTAD, rounded)</li>
-            <li>assumed 10 % restows, at $75 a lift</li>
+            <li>assumed 0.9 % avoidable restows, at $75 a lift</li>
             <li>assumed 5 % less berth time if the extra work goes</li>
           </ul>
         </div>
@@ -313,7 +315,7 @@
             <source src="media/launch.mp4" type="video/mp4">
             <p class="video-text">The launch cut isn't available here.</p>
           </video>
-          <span class="link-note">Launch cut, synthetic ships and cargo, simulated port. The full demo video link comes here when it's hosted: <a class="todo" href="#demo-video-url-pending" data-todo="{{demo_video_url}}">full demo video (link pending)</a>.</span>
+          <span class="link-note">Launch cut, synthetic ships and cargo, simulated port. The full demo: <a href="https://youtu.be/fTb7Hn0OjTY">demo video on YouTube (2:58)</a>.</span>
         </li>
         <li><a class="link-card" href="https://github.com/AMK-bot/StowLM"><span class="link-title">Source code and both apps</span><span class="link-note">github.com/AMK-bot/StowLM. The Demo app replays the filmed call with no key; the Functional app runs the pipeline on a fresh synthetic call with your own Meta Model API key. Tested on an Apple-silicon Mac.</span></a></li>
         <li><a class="link-card" href="https://huggingface.co/A-M-K/stowlm-reader-v3"><span class="link-title">Fine-tuned adapter</span><span class="link-note">StowLM Reader LoRA for Muse Glimmer 30B on Hugging Face. Apache-2.0; the Muse Glimmer usage policy applies.</span></a></li>

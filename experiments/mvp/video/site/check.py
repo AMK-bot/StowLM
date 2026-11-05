@@ -37,7 +37,7 @@ CSS_FILES = sorted(SITE.glob("*.css"))
 REPLAY = SITE / "replay" / "index.html"
 README = SITE / "README.md"
 
-ALLOWED_HOSTS = {"ende.app", "creativecommons.org", "github.com", "huggingface.co"}
+ALLOWED_HOSTS = {"ende.app", "creativecommons.org", "github.com", "huggingface.co", "youtu.be"}
 BANNED = [
     "industry level", "industry-level", "industry grade", "industry-grade",
     "production ready", "production-ready", "real-time", "real time", "instant",

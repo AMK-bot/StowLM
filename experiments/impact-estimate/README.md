@@ -46,8 +46,11 @@ Scale means more compute for the search, a larger model for reading.
 at berth valued using the mid-case assumptions. Its roughly $90B headline is
 the lower reference total rounded to the nearest $10B, not waste or savings.
 The improvement pool is inside this exposure; never add the two. The adopted
-logic review sets restow shares to 5/10/15%, ship prices to $30/75/150 and yard
-prices to $10/25/50. Restow shares are assumptions with no Jensen calibration.
+logic review set ship prices to $30/75/150 and yard prices to $10/25/50. D376
+replaced the unsourced 5/10/15% restow shares with avoidable shares of
+0.3/0.9/2.2%: all restows 1.5/3/5.5% of moves (SLPA Colombo measured 1.35-2.9%
+of TEU) times a vendor-claimed 20/30/40% avoidable share. Still assumptions;
+no Jensen calibration.
 
 What is weak: the yard research cases are transferred globally as
 assumptions, public tariffs are charge proxies, and selected charter/wage/time
@@ -66,4 +69,4 @@ The original `impact.py`, `scenario.py`, `ship_time.py`, their results and tests
 remain archival v5 sensitivities. The new calculator imports none of them and
 does not reuse a selected small-map move reduction.
 
-The named-port projection allocates the mid pool by exact call share: Laem Chabang 9,325 / about 520,000 world calls. It assumes the same world-average workload and inputs; eligible feeder calls remain unknown. The about-$125M headline rounds the unrounded $125.565M allocation to the nearest $5M, after applying the exact 1.793269% share. Do not calculate from the displayed 1.8% or add this subset to the world pool.
+The named-port projection allocates the mid pool by exact call share: Laem Chabang 9,325 / about 520,000 world calls. It assumes the same world-average workload and inputs; eligible feeder calls remain unknown. The about-$40M headline rounds the unrounded $41.373M allocation to the nearest $5M, after applying the exact 1.793269% share. Do not calculate from the displayed 1.8% or add this subset to the world pool.

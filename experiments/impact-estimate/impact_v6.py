@@ -90,8 +90,9 @@ def _prize_scenario(index):
     cppi = "https://unctad.org/system/files/official-document/rmt2025ch4_en.pdf"
     return {
         "ship_extra_restow_fraction_of_total_moves": _input(
-            (0.05, 0.10, 0.15)[index], "extra ship lifts/all ship lifts",
-            "Global restow-incidence ASSUMPTION, without an observed world rate or calibration dataset. Some restows are required; this share does not establish avoidable planning waste."),
+            (0.003, 0.009, 0.022)[index], "extra ship lifts/all ship lifts",
+            "Avoidable-restow ASSUMPTION (D376): all restows 1.5/3/5.5% of ship moves x avoidable share 20/30/40%. The only measured port-wide rate is SLPA Colombo, all restows 1.35-2.9% of TEU handled in 2017-2022 (2.7-5.7% if each restow counts two lifts), one transhipment hub; the avoidable share rests on vendor claims (Loadmaster.ai 20-40%, Planner on Duty up to 30%). No world rate or cause-coded restow data is published.",
+            source="https://www.parliament.lk/uploads/documents/paperspresented/annual-report-srilanka-ports-authority-2018.pdf"),
         "yard_extra_rehandles_per_relevant_primary_move": _input(
             (23.67 / 633, 33.24 / 360, 18 / 84)[index], "extra yard lifts/relevant primary retrieval",
             "Worldwide transfer ASSUMPTION: Legato/Mazza WSC2013 Table 2 simulated reshuffles for real loading plans; ratios 23.67/633, 33.24/360, 18/84. Selected case sensitivity, not a global observed distribution.", source=yard),

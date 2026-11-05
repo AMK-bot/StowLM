@@ -1493,7 +1493,7 @@ def _impact_mid() -> tuple:
     step = number(dig(data, "exposure", "headline_one_percent_billion_usd"))  # shot 12: "every 1 % ≈ $N billion", one percent of the rounded frame
     if step is None:
         raise ValueError("no one-percent step of the exposure headline")
-    return IMPACT, "Projection, mid case and port-call exposure, billion USD a year", {"impact_mid_billion": f"{mid:.0f}", "impact_bill_billion": f"{bill:.0f}",
+    return IMPACT, "Projection, mid case and port-call exposure, billion USD a year", {"impact_mid_billion": f"{mid:.1f}", "impact_bill_billion": f"{bill:.0f}",
                                                                                        "impact_bill_step_billion": f"{step:.0f}"}
 
 

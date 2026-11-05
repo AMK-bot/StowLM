@@ -353,7 +353,7 @@ Licence (user item 140), TTS rights (item 134), labels and fresh-copy execution 
 ## Release overlays
 
 - `.gitignore` (1149 bytes).
-- `README.md` (32369 bytes).
+- `README.md` (32890 bytes).
 - `NOTICE` (4205 bytes).
 - `LICENSE` (11358 bytes).
 - `hf-reader-bundle/README.md` (1642 bytes).

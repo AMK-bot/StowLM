@@ -253,7 +253,7 @@
         const exposure = text('p', 'pl-impact-kv');
         exposure.append(text('span', '', 'Port-call cost exposure / year'), text('span', '', '≈ ' + money(amountInBillions(data.global.exposure)) + 'B'));
         const pool = text('p', 'pl-impact-kv');
-        pool.append(text('span', '', 'Pool a better plan can act on / year'), text('span', '', '≈ ' + money(amountInBillions(data.global.prize_mid)) + 'B'));
+        pool.append(text('span', '', 'Pool a better plan can act on / year'), text('span', '', '≈ ' + money(amountInBillions(data.global.prize_mid), 1) + 'B'));
         global.append(exposure, pool, text('p', 'pl-impact-meta', 'Mid case · low ' + money(amountInBillions(data.global.prize_low), 1) + 'B / year'), text('p', 'pl-impact-meta pl-impact-global-check', 'Terminal-revenue check: world terminal revenue ' + data.global.terminal_revenue_check), text('p', 'pl-impact-meta', data.global.input_summary));
 
         const conditions = card('conditions', 'What must be true', data.who_for);

@@ -17,6 +17,8 @@ design and the potential, not a tested integration (see [The engine slot](#the-e
 
 Research pilot on synthetic ships and cargo at a simulated Laem Chabang-style port.
 
+Demo video (2:58): https://youtu.be/fTb7Hn0OjTY
+
 Watch a recorded run in your browser: https://amk-bot.github.io/StowLM/play/ (the Functional app's own screens on fresh
 synthetic inputs we precomputed, not the film's call; no API calls and nothing to install; to change any input, install
 the app).
@@ -263,10 +265,12 @@ own Muse Glimmer for one narrow task, and we read it as not competing (D363).
 
 Potential, labelled as potential (D254).
 
-- **The ship planner at a Laem Chabang feeder operator:** says a limit in their own words, confirms how it was read, and gets a checked plan; a plan that fails says which rules it breaks. Fewer restows is the aim, not a result yet: no lift saving is quotable today.
-- **The terminal:** fewer extra lifts and shorter berth time are the potential, labelled as potential. Worldwide, the mid-case pool is about $7 billion a year of extra crane work and berth time (projection; low $1.2 billion), inside about $90 billion a year of port-call cost; about $125 million a year at Laem Chabang if scaled by its share of calls (projection).
+**What bad load plans cost (projection):** about $0.35 to $6.6 billion a year worldwide, mid about $2.4 billion, across restow fees, fuel, lost slots, delay and safety, and 0.03 to 5.6 deaths a year (mid 0.7); sources and method in [`docs/load-plan-losses.md`](docs/load-plan-losses.md).
 
-    > Projection. Inputs: 920M TEU, 520k calls, assumed 10 % restows at $75 a lift, 5 % less berth time. What would have to be true: full-ship, multi-port planning works; these rates hold worldwide; the extra work is avoidable; operational use needs terms that permit it (D316), plus class approval; none of it has been measured. Check: world terminal revenue is $63–76 billion a year.
+- **The ship planner at a Laem Chabang feeder operator:** says a limit in their own words, confirms how it was read, and gets a checked plan; a plan that fails says which rules it breaks. Fewer restows is the aim, not a result yet: no lift saving is quotable today.
+- **The terminal:** fewer extra lifts and shorter berth time are the potential, labelled as potential. Worldwide, the part a better plan acts on directly, the mid-case pool of extra crane work and berth time, is about $2.3 billion a year (projection; low $0.3 billion), inside about $90 billion a year of port-call cost; about $40 million a year at Laem Chabang if scaled by its share of calls (projection).
+
+    > Projection. Inputs: 920M TEU, 520k calls, assumed 0.9 % avoidable restows at $75 a lift, 5 % less berth time. What would have to be true: full-ship, multi-port planning works; these rates hold worldwide; the extra work is avoidable; operational use needs terms that permit it (D316), plus class approval; none of it has been measured. Check: world terminal revenue is $63–76 billion a year.
 
 - **Carriers, terminals and stowage-software vendors with their own planning engine:** the potential is to keep that engine in the slot and add the pipeline around it: papers read, instructions taken in the planner's own words and confirmed, every plan gated by the full checker, a signed handover. Potential only: no third-party engine has been ported or tested.
 - **The shipper:** on-time departures, if fewer lifts shorten berth time; that isn't verified.
@@ -338,6 +342,8 @@ The `docs/` folder holds the working notes the project was built on:
 - [`docs/frontier.md`](docs/frontier.md): related research and industry tools.
 - [`docs/impact.md`](docs/impact.md): the low, mid and high impact estimate, with
   its inputs and caveats.
+- [`docs/load-plan-losses.md`](docs/load-plan-losses.md): the research report behind
+  the film's loss figures (all projection).
 
 The notes cite decision ids (D…) and plan task ids from the project's decision
 log and plan, which are not published. Some cite working files that are not in

@@ -64,7 +64,7 @@ These are model selections, not additional research findings. No adoption/captur
 
 | Input | Low | Mid | High | Status |
 |---|---:|---:|---:|---|
-| Extra ship-restow share of all ship moves | 5% | 10% | 15% | **Pure assumptions adopted after logic review; no observed global rate and no Jensen calibration** |
+| Avoidable ship-restow share of all ship moves | 0.3% | 0.9% | 2.2% | **Assumption (D376): all restows 1.5/3/5.5% of moves, from the one measured port-wide rate (SLPA Colombo 1.35-2.9% of TEU), times a vendor-claimed 20/30/40% avoidable share; no Jensen calibration.** Replaces the unsourced 5/10/15% |
 | Charge-equivalent USD per extra ship lift | 30 | 75 | 150 | Assumed global price mix; regional tariff context in the anchor audit, not marginal resource costs |
 | Charge-equivalent USD per extra yard lift | 10 | 25 | 50 | Assumed global price mix; published study-cost/tariff context, not a measured world price |
 | World container calls/year | 520,000 | 520,000 | 520,000 | Rounded derived proxy, UNCTAD above |
@@ -79,7 +79,7 @@ These are model selections, not additional research findings. No adoption/captur
 
 Distinguish **total cost/emissions exposure**, **potential physically avoidable amount**, and **potential StowLM capture** in names and tables. Total vessel port-time exposure is `calls × port hours × daily hire / 24`; it includes productive work and required waiting and is **not all waste**. Potential berth benefit is only `exposure × berth share × reducible fraction`. Extra quay-lift exposure may be costed as an inefficiency pool only after an assumed extra-lift ratio and productive/quay coverage are declared; it is not all avoidable. Avoided planner time needs its own explicit improvement fraction. A large total exposure must never be relabelled as the saving obtainable by this product. Charge equivalents, wage opportunities and vessel time can overlap economically; report components and explicit boundaries before presenting any combined total.
 
-The adopted **5% / 10% / 15%** restow sensitivity supersedes any use of the constructed **17.0% / 28.4%** cases as world-rate endpoints. It remains an assumption even where a numerical value happens to resemble a row in that paper. Published tariffs value what a carrier might be charged; avoided resource cost, loss of terminal revenue and carrier benefit are different quantities. Broader vessel and multi-port planning must work before this empty-arrival pilot could reach the ship-restow component. Existing throughput may include restows under some reporting conventions: treating it as entirely productive handling requires an explicit assumption and audit before adding the extra-lift pool.
+The adopted restow sensitivity (5% / 10% / 15% until D376, now 0.3% / 0.9% / 2.2% avoidable) supersedes any use of the constructed **17.0% / 28.4%** cases as world-rate endpoints. It remains an assumption even where a numerical value happens to resemble a row in that paper. Published tariffs value what a carrier might be charged; avoided resource cost, loss of terminal revenue and carrier benefit are different quantities. Broader vessel and multi-port planning must work before this empty-arrival pilot could reach the ship-restow component. Existing throughput may include restows under some reporting conventions: treating it as entirely productive handling requires an explicit assumption and audit before adding the extra-lift pool.
 
 ## What must become true to scale
 

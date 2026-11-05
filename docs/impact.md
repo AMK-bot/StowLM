@@ -1,28 +1,30 @@
-<!-- Figures come from experiments/impact-estimate/impact_v6.py and are checked in its marked draft, experiments/impact-estimate/impact-v6.md. This copy carries later wording edits (D316, D363, D364) that the draft doesn't; no figure differs. v5 is at docs/archive/impact-v5-2026-11-01.md. -->
+<!-- Figures come from experiments/impact-estimate/impact_v6.py and are checked in its marked draft, experiments/impact-estimate/impact-v6.md. This copy carries later wording edits (D316, D363, D364) that the draft doesn't; no figure differs. D376 replaced the unsourced 5/10/15% restow shares with evidence-based avoidable shares of 0.3/0.9/2.2%. v5 is at docs/archive/impact-v5-2026-11-01.md. -->
 
 # The size of the prize
 
 **About $90 billion a year of port-call cost; every 1% is about $1 billion.** *Exposure projection.*
 
-**About $7 billion a year of extra crane work and berth time that a better plan can act on — projection, not a result.**
+**About $2.3 billion a year of extra crane work and berth time that a better plan can act on — projection, not a result.**
+
+**All losses (the film's and the submission's figure):** bad load plans cost about $0.35 to $6.6 billion a year worldwide, mid about $2.4 billion, across restow fees, fuel, lost slots, delay and safety, and 0.03 to 5.6 deaths a year (mid 0.7). All projection; sources and method in [load-plan-losses.md](load-plan-losses.md). The pool below is the narrower part a better plan acts on directly, extra crane work and berth time, and it is the figure the app's Impact panel shows.
 
 The exposure frame combines verified commercial terminal-market estimates with modeled vessel time at berth: **$85.3–98.1 billion/year**. The rounded lower-end frame is separate from the improvement pool below.
 
 | Annual improvement pool, gross USD billions | Low | Mid | High |
 |---|---:|---:|---:|
-| Extra ship-restow lifts | 0.97 | 5.11 | 16.24 |
+| Extra ship-restow lifts | 0.06 | 0.42 | 2.07 |
 | Extra yard-rehandle lifts | 0.11 | 0.71 | 3.29 |
 | Vessel time freed at berth | 0.12 | 1.13 | 7.09 |
 | Carrier planning labor exposed to improvement | 0.02 | 0.05 | 0.09 |
-| **Total annual prize** | **1.2** | **7.0** | **26.7** |
+| **Total annual prize** | **0.3** | **2.3** | **12.5** |
 
-**Laem Chabang projection:** about **$125 million a year at Laem Chabang if scaled by its share of calls** (projection): 9,325 of about 520,000 calls is 1.8% of the mid-case pool, on the same global inputs and average workload per call. The pool's main term is lifts, which scale with TEU rather than calls, and the port's calls skew to feeders, so this is a share of calls, not a port estimate. The [2024 port count](https://thaibsaa.com/images/documents/Annual24-25_Final.pdf) includes all container-vessel sizes, not just eligible feeders.
+**Laem Chabang projection:** about **$40 million a year at Laem Chabang if scaled by its share of calls** (projection): 9,325 of about 520,000 calls is 1.8% of the mid-case pool, on the same global inputs and average workload per call. Half the pool is lifts, which scale with TEU rather than calls, and the port's calls skew to feeders, so this is a share of calls, not a port estimate. The [2024 port count](https://thaibsaa.com/images/documents/Annual24-25_Final.pdf) includes all container-vessel sizes, not just eligible feeders.
 
-| Capture of that prize, USD billions/year | Low prize | Mid prize | High prize |
+| Capture of that prize, USD millions/year | Low prize | Mid prize | High prize |
 |---|---:|---:|---:|
-| 1% | 0.01 | 0.07 | 0.27 |
-| 5% | 0.06 | 0.35 | 1.34 |
-| 20% | 0.24 | 1.40 | 5.34 |
+| 1% | 3 | 23 | 125 |
+| 5% | 15 | 115 | 627 |
+| 20% | 61 | 461 | 2,508 |
 
 ### Terminal-revenue cross-check
 
@@ -30,10 +32,10 @@ The verified terminal-revenue range is **$63–76 billion a year** (unrounded so
 
 | Opened source, 2024 estimate | Revenue, USD billions | Implied USD/primary lift | Mid-case restow line / revenue |
 |---|---:|---:|---:|
-| [360iResearch, reproduced by GII](https://www.giiresearch.com/report/ires1803580-container-terminal-operator-market-by-container.html) | 62.67 | 102 | 8.2% |
-| [TechSci, direct publisher release](https://www.techsciresearch.com/news/24170-container-terminal-operations-market.html) | 75.5 | 123 | 6.8% |
+| [360iResearch, reproduced by GII](https://www.giiresearch.com/report/ires1803580-container-terminal-operator-market-by-container.html) | 62.67 | 102 | 0.7% |
+| [TechSci, direct publisher release](https://www.techsciresearch.com/news/24170-container-terminal-operations-market.html) | 75.5 | 123 | 0.6% |
 
-The mid-case restow line is **$5.11 billion**, inside terminal revenue, not additional to it. Add **$22.6 billion** of full mid-case vessel time at berth to the market-estimate span to build the exposure frame; do not add the improvement pool again. Publisher definitions differ and include storage/intermodal services; these are plausibility benchmarks, not audited world receipts. Maersk reports **USD 337 revenue/move** in its [2024 terminal accounts](https://www.maersk.com/~/media_sc9/maersk/corporate/sustainability/files/resources/2024/maersk-annual-report-2024.pdf?h=576&hash=39BA5083CD82827B64A382757FDF50A8&w=1024), including the whole workflow. The unverified IBISWorld estimate is excluded.
+The mid-case restow line is **$0.42 billion**, inside terminal revenue, not additional to it. Add **$22.6 billion** of full mid-case vessel time at berth to the market-estimate span to build the exposure frame; do not add the improvement pool again. Publisher definitions differ and include storage/intermodal services; these are plausibility benchmarks, not audited world receipts. Maersk reports **USD 337 revenue/move** in its [2024 terminal accounts](https://www.maersk.com/~/media_sc9/maersk/corporate/sustainability/files/resources/2024/maersk-annual-report-2024.pdf?h=576&hash=39BA5083CD82827B64A382757FDF50A8&w=1024), including the whole workflow. The unverified IBISWorld estimate is excluded.
 
 ## The scale path
 
@@ -49,17 +51,17 @@ The path to scale is **more compute for the search, a larger model for reading**
 
 ## Pitch paragraph
 
-Port calls represent about **$90 billion a year in cost exposure**; every **1%** is about **$1 billion**. **Projection:** better plans can act on about **$7 billion a year** of extra crane work and berth time, with **5% capture worth about $350 million a year**. Today's pilot runs the loop on synthetic feeder sections, **24 of 24 held-out voyages passing the full checker** (the planning step, from a clean load list; frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; two earlier attempts stopped on our own guard, both published; report: `experiments/mvp/pipeline/sealed/runs/final-3/REPORT.md`, task 3.1), from messy documents and a planner's words to a checked plan and handover. StowLM delivers that loop as an app with the planning engine in one slot: Engine 0.13.0 today, and by design a firm's own planning software, which no one has ported yet. More compute for the search, a larger model for reading: the path is **half-ship sections of 500–800 TEU feeders today, then 1,700, 8,000 and 20,000 TEU ships** (projection). Check: world terminal revenue $63–76 billion a year · inputs: 920M TEU, 520k calls, 10 % restows at $75, 5 % less berth time.
+Port calls represent about **$90 billion a year in cost exposure**; every **1%** is about **$1 billion**. **Projection:** better plans can act on about **$2.3 billion a year** of extra crane work and berth time, with **5% capture worth about $115 million a year**. Today's pilot runs the loop on synthetic feeder sections, **24 of 24 held-out voyages passing the full checker** (the planning step, from a clean load list; frozen pipeline, run after two interrupted attempts; not the pre-registered sealed claim; two earlier attempts stopped on our own guard, both published; report: `experiments/mvp/pipeline/sealed/runs/final-3/REPORT.md`, task 3.1), from messy documents and a planner's words to a checked plan and handover. StowLM delivers that loop as an app with the planning engine in one slot: Engine 0.13.0 today, and by design a firm's own planning software, which no one has ported yet. More compute for the search, a larger model for reading: the path is **half-ship sections of 500–800 TEU feeders today, then 1,700, 8,000 and 20,000 TEU ships** (projection). Check: world terminal revenue $63–76 billion a year · inputs: 920M TEU, 520k calls, 0.9 % avoidable restows at $75, 5 % less berth time.
 
 ## Video line
 
-“If scaled: $7 billion annually in extra crane work and berth time, inside a $90 billion bill. Projection, not result.”
+“If scaled: $2.3 billion annually in extra crane work and berth time, inside a $90 billion bill. Projection, not result.”
 
 On-screen card:
 
-> PROJECTION $7B/yr pool within ~$90B/yr exposure | 920M TEU; 520k calls; 10% restows at $75/lift.  
+> PROJECTION $2.3B/yr pool in ~$90B/yr exposure | 920M TEU; 520k calls; 0.9% avoidable restows @ $75  
 > Requires full-ship, multi-port planning; rates hold worldwide; avoidable work; terms that permit operational use. No measured saving.
-> Check: world terminal revenue $63–76 billion a year · inputs: 920M TEU, 520k calls, 10 % restows at $75, 5 % less berth time.
+> Check: world terminal revenue $63–76 billion a year · inputs: 920M TEU, 520k calls, 0.9 % avoidable restows at $75, 5 % less berth time.
 
 ## What must be true
 
@@ -71,7 +73,7 @@ On-screen card:
 
 | Input: global transfer/selection assumptions | Low | Mid | High |
 |---|---:|---:|---:|
-| Ship extra-restow share of all ship moves | 5.0% | 10.0% | 15.0% |
+| Avoidable ship-restow share of all ship moves | 0.3% | 0.9% | 2.2% |
 | Extra yard lifts / productive loaded box | 3.74% | 9.23% | 21.43% |
 | Primary throughput needing that yard retrieval | 50% | 50% | 50% |
 | USD per extra ship lift | 30 | 75 | 150 |
@@ -81,10 +83,10 @@ On-screen card:
 | Selected charter assessment, USD/day | 17,855 | 39,725 | 72,722 |
 | Carrier planner hours/call | 2 | 2.5 | 3 |
 | Planner value, USD/hour | 20 | 39.58 | 60 |
-| **Computed extra ship lifts/year, millions** | **32.3** | **68.2** | **108.3** |
+| **Computed extra ship lifts/year, millions** | **1.8** | **5.6** | **13.8** |
 | **Computed extra yard lifts/year, millions** | **11.5** | **28.3** | **65.7** |
 
-**Restow shares of 5/10/15% are assumptions, with no primary observed global rate or Jensen calibration.** Jensen and Ajspur's [constructed stress voyage, 2022 Table 10](https://www.sealytix.com/media/gm4flxf5/revenuemanagementinlinershippingaddressingthevesselcapacitychallenge.pdf) needs **17–28% of all moves as restows even when moves are minimized**; that is required work under fixed cargo conditions, not measured planning waste. Yard ratios use **23.67/633, 33.24/360 and 18/84** simulated reshuffles per loaded container on real terminal plans in [Legato and Mazza, WSC 2013, Table 2](https://informs-sim.org/wsc13papers/includes/files/305.pdf). Yard and ship lifts are distinct equipment operations; the yard model applies only to the assumed loaded half of productive throughput. Auditing whether a terminal's reported throughput already includes restows remains a gate.
+**Avoidable-restow shares of 0.3/0.9/2.2% are assumptions built on the one measured rate (D376).** [Sri Lanka Ports Authority](https://www.parliament.lk/uploads/documents/paperspresented/annual-report-srilanka-ports-authority-2018.pdf) reports restowing at Colombo of **83,935 of 6,209,068 TEU in 2017 (1.35%)** and **101,879 of 7,047,486 TEU in 2018 (1.45%)**, and **196,269 of 6.86 million TEU in 2022 (2.9%)** ([The Morning, citing SLPA data](https://www.themorning.lk/articles/sBZ9a4XsIt2nHTa9Z1xm)). That counts every restow, at one transhipment hub; it is 2.7–5.7% of lifts if each restow counts as two. We take all restows as **1.5/3/5.5%** of ship moves and the avoidable part as **20/30/40%**, a band that rests only on vendor claims ([Loadmaster.ai](https://loadmaster.ai/ai-based-restow-minimization-in-deepsea-container-port-vessel-planning/), [Planner on Duty](https://planneronduty.com/)). The earlier 5/10/15% shares had no source and ran about 8–17 times above this evidence; trade figures of 15–20% of moves trace to a thesis that never mentions restows. Jensen and Ajspur's [constructed stress voyage, 2022 Table 10](https://www.sealytix.com/media/gm4flxf5/revenuemanagementinlinershippingaddressingthevesselcapacitychallenge.pdf) needs **17–28% of all moves as restows even when moves are minimized**; that is required work under fixed cargo conditions, not measured planning waste. Yard ratios use **23.67/633, 33.24/360 and 18/84** simulated reshuffles per loaded container on real terminal plans in [Legato and Mazza, WSC 2013, Table 2](https://informs-sim.org/wsc13papers/includes/files/305.pdf). Yard and ship lifts are distinct equipment operations; the yard model applies only to the assumed loaded half of productive throughput. Auditing whether a terminal's reported throughput already includes restows remains a gate.
 
 ### Prices across regions
 
@@ -111,7 +113,7 @@ For ship time, [CPPI 2020–2024, Figure 3.6 and Table 5.1](https://ppp.worldban
 
 ### Climate potential, separately
 
-[IMO's Fourth GHG Study](https://www.imo.org/en/mediacentre/pages/whatsnew-1596) puts total shipping at **2.89% of global CO2 in 2018**; this is context, not the intervention's emissions denominator. [PEMA, 2011 §3.2](https://pema.org/wp-content/uploads/2022/09/PEMA-IP2-Energy-and-Environmental-Efficiency-in-Ports-and-Terminals.pdf) reports **6 kWh per electric quay move including 2 kWh auxiliaries**; assuming only **4 kWh** disappears, paired with the [IEA 2024 generation factor of 0.445 kg CO2/kWh](https://www.iea.org/reports/electricity-2025/emissions), gives **1.78 kg CO2 per comparable extra quay lift**. [EPA 2022](https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1014J1S.TXT) supplies selected auxiliary loads **340/700/1,320 kW** and **217 g fuel/kWh × 3.206 g CO2/g fuel**. Applying them to the modeled earlier berth departure, plus electric quay lifts removed, gives conditional operational CO2 potential of **0.09 / 0.45 / 2.34 million tonnes/year**. Yard emissions remain unquantified; no emissions dollars are added. Local equipment, grid, shore-power use and added computation must replace these transfer assumptions.
+[IMO's Fourth GHG Study](https://www.imo.org/en/mediacentre/pages/whatsnew-1596) puts total shipping at **2.89% of global CO2 in 2018**; this is context, not the intervention's emissions denominator. [PEMA, 2011 §3.2](https://pema.org/wp-content/uploads/2022/09/PEMA-IP2-Energy-and-Environmental-Efficiency-in-Ports-and-Terminals.pdf) reports **6 kWh per electric quay move including 2 kWh auxiliaries**; assuming only **4 kWh** disappears, paired with the [IEA 2024 generation factor of 0.445 kg CO2/kWh](https://www.iea.org/reports/electricity-2025/emissions), gives **1.78 kg CO2 per comparable extra quay lift**. [EPA 2022](https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1014J1S.TXT) supplies selected auxiliary loads **340/700/1,320 kW** and **217 g fuel/kWh × 3.206 g CO2/g fuel**. Applying them to the modeled earlier berth departure, plus electric quay lifts removed, gives conditional operational CO2 potential of **0.04 / 0.34 / 2.17 million tonnes/year**. Yard emissions remain unquantified; no emissions dollars are added. Local equipment, grid, shore-power use and added computation must replace these transfer assumptions.
 
 ## Today's forward pilot
 

@@ -204,20 +204,20 @@ class ImpactV6Tests(unittest.TestCase):
     def test_reviewed_prize_defaults_do_not_calibrate_restows_from_stress_voyage(self):
         inputs = impact.default_inputs()
         for name, share, ship_price, yard_price in (
-            ("low", 0.05, 30, 10), ("mid", 0.10, 75, 25), ("high", 0.15, 150, 50),
+            ("low", 0.003, 30, 10), ("mid", 0.009, 75, 25), ("high", 0.022, 150, 50),
         ):
             row = inputs["prize"][name]
             restows = row["ship_extra_restow_fraction_of_total_moves"]
             self.assertEqual(restows["value"], share)
             self.assertEqual(restows["status"], "assumption")
-            self.assertIsNone(restows["source"])
+            self.assertIn("srilanka-ports-authority", restows["source"])
             self.assertNotIn("jensen", json.dumps(restows).lower())
             self.assertNotIn("ajspur", json.dumps(restows).lower())
             self.assertNotIn("calibrated", restows["note"].lower())
             self.assertEqual(row["ship_extra_lift_charge_usd"]["value"], ship_price)
             self.assertEqual(row["yard_extra_lift_charge_usd"]["value"], yard_price)
         result = impact.calculate()
-        self.assertEqual([format(result["prize"][name]["total_gross_prize_billion_usd"], ".1f") for name in ("low", "mid", "high")], ["1.2", "7.0", "26.7"])
+        self.assertEqual([format(result["prize"][name]["total_gross_prize_billion_usd"], ".1f") for name in ("low", "mid", "high")], ["0.3", "2.3", "12.5"])
 
     def test_exposure_uses_total_mid_berth_time_and_stays_separate_from_prize(self):
         result = impact.calculate()
@@ -265,8 +265,8 @@ class ImpactV6Tests(unittest.TestCase):
                 self.assertAlmostEqual(ratios["ship_handling_share"], prize["ship_handling_equivalent_usd"] / revenue)
                 self.assertAlmostEqual(ratios["handling_share"], prize["handling_equivalent_usd"] / revenue)
                 self.assertAlmostEqual(ratios["total_prize_share"], prize["total_gross_prize_usd"] / revenue)
-        self.assertGreater(result["revenue_crosscheck"]["mid"]["high"]["ship_handling_share"], 0.06)
-        self.assertLess(result["revenue_crosscheck"]["mid"]["low"]["ship_handling_share"], 0.082)
+        self.assertGreater(result["revenue_crosscheck"]["mid"]["high"]["ship_handling_share"], 0.005)
+        self.assertLess(result["revenue_crosscheck"]["mid"]["low"]["ship_handling_share"], 0.0067)
         for benchmark in ("low", "mid", "high"):
             field = result["inputs"]["context"][f"terminal_revenue_{benchmark}_usd"]
             self.assertEqual(field["status"], "commercial_estimate")
@@ -357,8 +357,9 @@ class ImpactV6Tests(unittest.TestCase):
                 self.assertIn(f"{section}.{name}.{suffix}", paths)
         for case in ("low", "mid", "high"):
             for rate in ("low", "mid", "high"):
-                self.assertIn(f"capture.{case}.{rate}.opportunity_billion_usd", paths)
-        self.assertIn("{{instruction_change_to_checked_plan_median_minutes}}", text)
+                self.assertIn(f"capture.{case}.{rate}.opportunity_million_usd", paths)
+        # The task 3.1 placeholders were filled with measured figures on 2 Nov; none may remain.
+        self.assertNotIn("{{", text)
         self.assertNotIn("@@", text)
         self.assertIn("exposure.headline_billion_usd", paths)
         self.assertIn("exposure.headline_one_percent_billion_usd", paths)
@@ -409,8 +410,8 @@ class ImpactV6Tests(unittest.TestCase):
         self.assertEqual(format(local["share_of_world_calls"], ".1%"), "1.8%")
         expected = (9325 / 520000) * result["prize"]["mid"]["total_gross_prize_usd"]
         self.assertAlmostEqual(local["mid_pool_usd"], expected)
-        self.assertAlmostEqual(local["mid_pool_million_usd"], 125.56536212084736)
-        self.assertEqual(local["headline_mid_pool_million_usd"], 125)
+        self.assertAlmostEqual(local["mid_pool_million_usd"], 41.373419293211136)
+        self.assertEqual(local["headline_mid_pool_million_usd"], 40)
         self.assertNotAlmostEqual(local["mid_pool_usd"], 0.018 * result["prize"]["mid"]["total_gross_prize_usd"])
         inputs = impact.default_inputs()
         inputs["context"]["laem_chabang_container_calls_per_year"]["value"] *= 2
